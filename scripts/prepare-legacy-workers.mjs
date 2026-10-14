@@ -22,8 +22,10 @@ function unifiedPatch(filename, source, changed) {
   const after = changed.split('\n');
   const index = before.findIndex((line, index) => line !== after[index]);
   if (index < 0 || before.length !== after.length) throw new Error('Expected one changed guard line.');
-  const start = Math.max(0, index - 3);
-  const end = Math.min(before.length, index + 4);
+  let start = Math.max(0, index - 3);
+  while (start < index && before[start] === '') start++;
+  let end = Math.min(before.length, index + 4);
+  while (end > index + 1 && before[end - 1] === '') end--;
   const lines = before.slice(start, end).flatMap((line, offset) => {
     if (start + offset === index) return [`-${line}`, `+${after[index]}`];
     return [` ${line}`];
