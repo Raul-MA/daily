@@ -1,10 +1,10 @@
 # Implementation progress
 
-Updated: 2026-10-14. Repository: `/workspaces/daily`, local Git branch `main`. Target: `https://raul-ma.github.io/daily/`. The user created the public repository `https://github.com/Raul-MA/daily`. It is linked locally as `origin`; initial push and diagnostic Pages deployment are in progress.
+Updated: 2026-10-14. Repository: `/workspaces/daily`, local Git branch `main`. Target: `https://raul-ma.github.io/daily/`. The user created the public repository `https://github.com/Raul-MA/daily`. It is linked locally as `origin`. Both normal push and a retry using the authenticated GitHub CLI helper failed with HTTP 403; the current credential lacks push access. Nothing is deployed.
 
 ## Current step
 
-Stage 1 is complete. Stage 2 now has a working EN/ES Readwise diagnostic, a tested version-1 storage recovery prototype and five tested legacy cleanup patches. Next: push the saved branch, configure diagnostic Pages hosting, verify the workflow and collect actual iPhone endpoint outcomes. App modules remain unimplemented; Stage 2 is not yet complete.
+Stage 1 is complete. Stage 2 now has a working EN/ES Readwise diagnostic, a tested version-1 storage recovery prototype and five tested legacy cleanup patches. Next: restore GitHub connection write access to `Raul-MA/daily`, then push the saved branch, configure diagnostic Pages hosting, verify the workflow and collect actual iPhone endpoint outcomes. App modules remain unimplemented; Stage 2 is not yet complete.
 
 ## Completed
 
@@ -51,7 +51,7 @@ Full verification is intentionally failing. No production module, combined manif
 ## Resume
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and `reports/migration-test-inventory.md`.
-2. Use `docs/device-validation.md` and work through Stage 2 sequentially. Existing exports/restores, Time Budget background/restart and Reader operation now have user-reported success; do not ask the user to repeat them. The safe diagnostic is implemented; the user has created the empty public `Raul-MA/daily` repository. `origin` is linked. Push the saved local branch, enable Pages Actions, verify the diagnostic workflow and collect endpoint outcomes; Daily Review is new and cannot have prior app verification. Confirm endpoint behavior from the actual Pages origin on iPhone, validate aggregate byte size/storage during import work, and document background/process restoration checks and legacy worker coexistence. Do not store or request the user's token. See `docs/deployment.md`, `docs/legacy-workers.md` and `docs/storage-and-migrations.md`.
+2. Use `docs/device-validation.md` and work through Stage 2 sequentially. Existing exports/restores, Time Budget background/restart and Reader operation now have user-reported success; do not ask the user to repeat them. The safe diagnostic is implemented; the user has created the empty public `Raul-MA/daily` repository. `origin` is linked, but push is rejected with HTTP 403 even with the authenticated GitHub CLI credential helper. The user must grant the connection access/write permission to this new repo before retrying. Then push the saved local branch, enable Pages Actions, verify the diagnostic workflow and collect endpoint outcomes; Daily Review is new and cannot have prior app verification. Confirm endpoint behavior from the actual Pages origin on iPhone, validate aggregate byte size/storage during import work, and document background/process restoration checks and legacy worker coexistence. Do not store or request the user's token. See `docs/deployment.md`, `docs/legacy-workers.md` and `docs/storage-and-migrations.md`.
 3. Do not mark Stage 2 complete from public docs, dummy-token requests, a small coffee sample or Chromium emulation. Physical device results require user participation.
 4. Only then begin Stage 3 test-first platform work. Author Time Budget/Reader characterization suites before their modules, and replacement piano continuation/cache/route tests before changing inherited assertions.
 
@@ -78,3 +78,5 @@ Full verification is intentionally failing. No production module, combined manif
 - GitHub hosting blocker: `gh repo create Raul-MA/daily --public --source=. --remote=origin ...` failed with `GraphQL: Resource not accessible by integration (createRepository)`. This is a GitHub credential permission limitation, not a missing user authorization or failed local verification. Do not retry repository creation repeatedly or ask for the user's token. Ask the user to create the empty public repository through GitHub, then resume push/Pages setup. No remote was added and nothing was deployed.
 
 - Repository-creation blocker resolved by the user: public `Raul-MA/daily` exists and was verified empty before the initial push. Deployment remains pending until the workflow succeeds.
+
+- Hosting follow-up: repository creation is resolved and `origin` points to `https://github.com/Raul-MA/daily.git`. Both `git push -u origin main` and the explicit `gh auth git-credential` retry failed with HTTP 403 (`Permission to Raul-MA/daily.git denied to Raul-MA`). This is an actual remote access denial, not an automatic approval-review rejection. No remote branch or Pages deployment was created. Next user action: grant the GitHub connection access to the new repository with write permission; then retry the push and configure Pages. Do not repeatedly retry unchanged credentials.

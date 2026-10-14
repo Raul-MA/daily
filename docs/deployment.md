@@ -12,7 +12,7 @@ The configured URL is `https://raul-ma.github.io/daily/diagnostics.html`. The ro
 
 This workflow validates the diagnostic/recovery increment only. It does not skip, weaken or mark passing the copied feature suites: those remain red until their apps are migrated. Before a product release, replace this preview gate with full `npm run verify` and satisfy physical migration/offline/update acceptance.
 
-The user created the public repository `https://github.com/Raul-MA/daily` after the integration could not create repositories. It was verified empty and linked as `origin`. The initial push and Pages Actions setup are in progress; hosted verification still requires a successful workflow.
+The user created the public repository `https://github.com/Raul-MA/daily` after the integration could not create repositories. It was verified empty and linked as `origin`. The initial push is blocked: GitHub returned HTTP 403 for both normal credentials and an explicit authenticated GitHub CLI helper. The current connection must be granted access/write permission to the new repository before pushing. Pages setup and hosted verification have not run.
 
 ## Gotchas
 

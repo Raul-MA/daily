@@ -6,7 +6,7 @@ Static browser behavior and desktop emulation do not establish authenticated COR
 
 ## How It Works
 
-The user selected the GitHub Pages project origin `https://raul-ma.github.io/<repo>`. The local repo name and configured path are `daily`, making the intended URL `https://raul-ma.github.io/daily/`. The user created the public GitHub repository, now linked as `origin`; diagnostic deployment is in progress. See [deployment](./deployment.md). A standalone diagnostic is now built at `/daily/diagnostics.html`. Project paths share the `https://raul-ma.github.io` origin with old apps.
+The user selected the GitHub Pages project origin `https://raul-ma.github.io/<repo>`. The local repo name and configured path are `daily`, making the intended URL `https://raul-ma.github.io/daily/`. The user created the public GitHub repository, now linked as `origin`; the initial push is blocked by a GitHub HTTP 403 access denial, so diagnostic deployment is pending. See [deployment](./deployment.md). A standalone diagnostic is now built at `/daily/diagnostics.html`. Project paths share the `https://raul-ma.github.io` origin with old apps.
 
 Rechecked public [Readwise API documentation](https://readwise.io/api_deets) on 2026-10-13: auth GET returns 204 for a valid token; scheduled Daily Review is GET `/api/v2/review/`, may return 404, and exposes completion and a review URL. Completion is a separate explicit POST `/api/v2/review/complete/`. No authenticated requests or completion mutations were made. The public documentation checked does not establish structured Mastery-card data or the pictured Never/Soon/Later/Someday feedback API; retain the plan's direct-review fallback until capability is demonstrated.
 
