@@ -21,7 +21,8 @@
 ## Deep Dives
 
 - [Testing](docs/testing.md): baseline versus new-app runs and red-stage interpretation.
-- [Constraints](docs/constraints.md): Pages origin, Readwise capabilities and physical iPhone gates.
+- [Constraints](docs/constraints.md): Pages origin and Readwise capabilities.
+- [Physical device checklist](docs/device-validation.md): pending iPhone evidence and dependencies.
 - [Lint policy](docs/pwa-eslint-policy.md): exact required rules.
 
 ## Non-Obvious Patterns

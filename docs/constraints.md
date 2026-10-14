@@ -14,6 +14,8 @@ The [Reader API](https://readwise.io/reader_api) documents GET `/api/v3/list/`, 
 
 Only file-size metadata was read from the existing coffee backup: 20,124 bytes. Its content was not copied into Daily. This small sample does not validate the largest combined installed-app backup or the chosen root-document storage budget.
 
+Follow the [physical device checklist](./device-validation.md) for the evidence still needed.
+
 ## Gotchas
 
 - Check auth, Reader list and Daily Review from a browser at `https://raul-ma.github.io`, with the token entered locally. Never send it through chat or write it into tracked sources/reports. Record status/CORS outcomes without payloads or headers containing credentials. GET-only diagnostics must not mark a review complete.

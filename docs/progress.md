@@ -4,7 +4,7 @@ Updated: 2026-10-14. Repository: `/workspaces/daily`, local Git branch `main`. T
 
 ## Current step
 
-Stage 1 is complete: source suites copied first, baseline preservation verified, runnable new-app red results recorded, and full strict lint passes. Stage 2 is next. No app module implementation has begun.
+Stage 1 is complete: source suites copied first, baseline preservation verified, runnable new-app red results recorded, and full strict lint passes. Stage 2 research/checklist is prepared; physical evidence and diagnostic hosting are pending. No app module implementation has begun.
 
 ## Completed
 
@@ -39,17 +39,22 @@ Full verification is intentionally failing. No production module, combined manif
 ## Resume
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and `reports/migration-test-inventory.md`.
-2. Work through Stage 2 sequentially: confirm endpoint behavior from the actual Pages origin on iPhone, measure largest combined exports/storage, and document background/process restoration checks and legacy worker coexistence. Prepare safe diagnostic steps without storing or requesting the user's token.
+2. Use `docs/device-validation.md` and work through Stage 2 sequentially: confirm endpoint behavior from the actual Pages origin on iPhone, measure largest combined exports/storage, and document background/process restoration checks and legacy worker coexistence. Prepare safe diagnostic steps without storing or requesting the user's token.
 3. Do not mark Stage 2 complete from public docs, dummy-token requests, a small coffee sample or Chromium emulation. Physical device results require user participation.
 4. Only then begin Stage 3 test-first platform work. Author Time Budget/Reader characterization suites before their modules, and replacement piano continuation/cache/route tests before changing inherited assertions.
 
 ## Stages
 
 1. Tests first: complete. Checkpoint commit: `test: bootstrap sequential PWA migration suites`.
-2. Constraints: research started; physical gates pending.
+2. Constraints: public API research and physical checklist prepared; device/hosted-authentication evidence pending.
 3. Platform: pending.
 4. Plants: pending.
 5. Coffee then games: pending.
 6. Time Budget then piano: pending.
 7. Reading then WhatsApp: pending.
 8. Release/migration: pending.
+
+## Saved checkpoints
+
+- `1344b79` — Stage 1 test-first bootstrap, source mapping, baseline passes and new-app red evidence.
+- Stage 2 evidence checklist is in `docs/device-validation.md`. A user availability question is pending. There are no authenticated Readwise results, physical iPhone observations or deployed diagnostic page yet. Resume with these dependencies; do not silently skip the plan's constraint gate.
