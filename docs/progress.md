@@ -4,7 +4,7 @@ Updated: 2026-10-14. Repository: `/workspaces/daily`, local Git branch `main`. T
 
 ## Current step
 
-Stage 1 is complete: source suites copied first, baseline preservation verified, runnable new-app red results recorded, and full strict lint passes. Stage 2 research/checklist is prepared; physical evidence and diagnostic hosting are pending. No app module implementation has begun.
+Stage 1 is complete: source suites copied first, baseline preservation verified, runnable new-app red results recorded, and full strict lint passes. Stage 2 existing-app export/restore, Time Budget restoration and Reader checks are confirmed by the user. Next: prepare authenticated API diagnostics; Daily Review is new and unverified. No app module implementation has begun.
 
 ## Completed
 
@@ -16,6 +16,8 @@ Stage 1 is complete: source suites copied first, baseline preservation verified,
 - User confirmed the project-hosted GitHub Pages origin, recorded in `docs/constraints.md`.
 - Rechecked public Readwise/Reader documentation. Authenticated CORS, structured Q&A and feedback capability remain unverified; direct-review fallback remains required.
 - User reports every app exports successfully and most backups contain fewer than 50 entries. The user reports approximately 20 KB backup size (per-file versus aggregate unspecified). Export and restore are both confirmed working by the user for the existing apps. Aggregate byte size and exported active state/settings remain unverified; combined Daily migration/restore still needs implementation and testing. No backup files were requested or copied.
+
+- User confirms existing Time Budget survives lock, backgrounding and closing/reopening with correct timing. Reader works on the iPhone. Daily Review is new, so no prior verification exists. These old-app checks do not need repeating; Daily API and timer acceptance remain separate.
 
 ## Verification evidence
 
@@ -40,14 +42,14 @@ Full verification is intentionally failing. No production module, combined manif
 ## Resume
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and `reports/migration-test-inventory.md`.
-2. Use `docs/device-validation.md` and work through Stage 2 sequentially. Existing exports and restores now have user-reported success; do not ask the user to repeat them. Confirm endpoint behavior from the actual Pages origin on iPhone, validate aggregate byte size/storage during import work, and document background/process restoration checks and legacy worker coexistence. Prepare safe diagnostic steps without storing or requesting the user's token.
+2. Use `docs/device-validation.md` and work through Stage 2 sequentially. Existing exports/restores, Time Budget background/restart and Reader operation now have user-reported success; do not ask the user to repeat them. Next prepare a safe API diagnostic for the target origin; Daily Review is new and cannot have prior app verification. Confirm endpoint behavior from the actual Pages origin on iPhone, validate aggregate byte size/storage during import work, and document background/process restoration checks and legacy worker coexistence. Prepare safe diagnostic steps without storing or requesting the user's token.
 3. Do not mark Stage 2 complete from public docs, dummy-token requests, a small coffee sample or Chromium emulation. Physical device results require user participation.
 4. Only then begin Stage 3 test-first platform work. Author Time Budget/Reader characterization suites before their modules, and replacement piano continuation/cache/route tests before changing inherited assertions.
 
 ## Stages
 
 1. Tests first: complete. Checkpoint commit: `test: bootstrap sequential PWA migration suites`.
-2. Constraints: public API research and physical checklist prepared; device/hosted-authentication evidence pending.
+2. Constraints: existing-app export/restore, Time Budget restoration and Reader operation confirmed; new Daily Review/authenticated API diagnostics, storage recovery tests and legacy worker coexistence remain pending.
 3. Platform: pending.
 4. Plants: pending.
 5. Coffee then games: pending.
@@ -58,4 +60,4 @@ Full verification is intentionally failing. No production module, combined manif
 ## Saved checkpoints
 
 - `1344b79` — Stage 1 test-first bootstrap, source mapping, baseline passes and new-app red evidence.
-- Stage 2 evidence checklist is in `docs/device-validation.md`. User-reported exports and restores work for the existing apps; most backups contain fewer than 50 entries. Authenticated Readwise results, timer/device observations and a deployed diagnostic page remain pending. Resume with these dependencies; do not silently skip the plan's constraint gate.
+- Stage 2 evidence checklist is in `docs/device-validation.md`. User-reported exports and restores work for the existing apps; most backups contain fewer than 50 entries. The user also confirms Time Budget lock/background/restart timing and Reader operation. Authenticated API diagnostics and new Daily Review verification remain pending, along with Daily-specific lifecycle/storage/cache acceptance. Resume with these dependencies; do not silently skip the plan's constraint gate.

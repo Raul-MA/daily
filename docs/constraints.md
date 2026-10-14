@@ -16,6 +16,8 @@ Only file-size metadata was read from the existing coffee backup: 20,124 bytes. 
 
 The user subsequently reported successful exports from every app, with most backups containing fewer than 50 entries. The user also reported an approximate backup size of 20 KB, without specifying whether this was per-file or aggregate. The user also confirmed restore works. Export and restore of existing app backups are therefore recorded as user-confirmed success. Exact aggregate bytes and exported coverage of active state/settings remain unverified; this does not yet validate the new combined Daily import/restore. No export files are needed from the user at this point.
 
+The user confirms the existing Time Budget survives lock, backgrounding and closing/reopening with correct timing, and that Reader works on the iPhone. Daily Review is new and has not been verified. These observations complete the existing-app checks without establishing authenticated API access or the new Daily activity lifecycle.
+
 Follow the [physical device checklist](./device-validation.md) for the evidence still needed.
 
 ## Gotchas

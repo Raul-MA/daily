@@ -12,8 +12,8 @@ Use the existing installations and keep their data. Daily currently has only a t
 
 1. Record the iPhone model and iOS version, and which old apps are installed as Home Screen PWAs.
 2. Export and restore are confirmed working by the user for the existing apps; most backups contain fewer than 50 entries, with a reported size of approximately 20 KB. This check does not need repeating. Keep the files for later Daily migration validation. Existing Time Budget export covers templates only; record that limitation separately. Missing WhatsApp/Reader/current-budget migration exporters are known implementation work, not failed user checks.
-3. With an existing active Time Budget, note the visible task, remaining time and clock time. Lock the phone for about a minute, reopen the installed app and compare the elapsed time. Repeat after leaving the app and after terminating/reopening it. Do not start another budget over an active one. Record whether the same tasks/timing return and any loss. This characterizes the old app only; repeat against Daily once its timer service exists.
-4. Open the Readwise Daily Review and Reader links from the phone and confirm the expected account/content opens. This checks external handoff only. It does not establish authenticated API access or CORS.
+3. The user confirms the existing Time Budget survives lock, backgrounding and closing/reopening with correct timing. This characterizes the old app; repeat against Daily after its timer service exists. Do not ask the user to repeat the old-app check.
+4. The user confirms Reader works on the iPhone. Daily Review is a new feature and has not been verified. Existing Reader success does not establish authenticated browser API access from Daily; prepare that diagnostic before requesting its results.
 
 ### Checks requiring a hosted diagnostic or implemented feature
 
@@ -37,8 +37,9 @@ Record results in the table below, distinguishing old-app characterization from 
 | --- | --- | --- |
 | Phone / installed-app inventory | Pending user | Model, iOS, installation names |
 | Existing export / restore | User confirms export and restore work | Most backups contain fewer than 50 entries; reported backup size approximately 20 KB. Combined Daily migration and restore remain future acceptance checks |
-| Old Time Budget background / restart | Pending user | Observed elapsed time and preserved tasks |
-| Reader / Daily Review external handoff | Pending user | Links open correctly or error |
+| Old Time Budget background / restart | User confirms success | Lock, background and closing/reopening preserve the active budget with correct timing; Daily acceptance remains deferred |
+| Existing Reader | User confirms it works | Reader works on the iPhone; Daily API integration still needs separate verification |
+| New Daily Review | Not previously available; unverified | Implement the diagnostic/integration or direct-review fallback before requesting verification |
 | Authenticated Pages-origin API calls | Pending diagnostic hosting + user | Three endpoint outcomes, no token/payload |
 | Largest combined backup / storage | User reports small record counts and approximately 20 KB backup size; aggregate measurement and storage tests pending | Aggregate byte size and recovery results |
 | Legacy worker coexistence | Pending worker fixes / release | Cache ownership and coexistence results |
