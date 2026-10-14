@@ -1,10 +1,10 @@
 # Implementation progress
 
-Updated: 2026-10-14. Repository: `/workspaces/daily`, local Git branch `main`. Target: `https://raul-ma.github.io/daily/`. GitHub authentication works, but repository creation was rejected (`Resource not accessible by integration`). No remote or deployment exists yet.
+Updated: 2026-10-14. Repository: `/workspaces/daily`, local Git branch `main`. Target: `https://raul-ma.github.io/daily/`. The user created the public repository `https://github.com/Raul-MA/daily`. It is linked locally as `origin`; initial push and diagnostic Pages deployment are in progress.
 
 ## Current step
 
-Stage 1 is complete. Stage 2 now has a working EN/ES Readwise diagnostic, a tested version-1 storage recovery prototype and five tested legacy cleanup patches. Next: the user must create the empty public `Raul-MA/daily` repository because the integration cannot create repositories; then configure Pages and collect actual iPhone endpoint outcomes. App modules remain unimplemented; Stage 2 is not yet complete.
+Stage 1 is complete. Stage 2 now has a working EN/ES Readwise diagnostic, a tested version-1 storage recovery prototype and five tested legacy cleanup patches. Next: push the saved branch, configure diagnostic Pages hosting, verify the workflow and collect actual iPhone endpoint outcomes. App modules remain unimplemented; Stage 2 is not yet complete.
 
 ## Completed
 
@@ -51,7 +51,7 @@ Full verification is intentionally failing. No production module, combined manif
 ## Resume
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and `reports/migration-test-inventory.md`.
-2. Use `docs/device-validation.md` and work through Stage 2 sequentially. Existing exports/restores, Time Budget background/restart and Reader operation now have user-reported success; do not ask the user to repeat them. The safe diagnostic is implemented; repository creation is blocked by integration permissions. The user needs to create an empty public `Raul-MA/daily` repo (no README/license/gitignore). Then add `origin`, push the saved local branch, enable Pages Actions, verify the diagnostic workflow and collect endpoint outcomes; Daily Review is new and cannot have prior app verification. Confirm endpoint behavior from the actual Pages origin on iPhone, validate aggregate byte size/storage during import work, and document background/process restoration checks and legacy worker coexistence. Do not store or request the user's token. See `docs/deployment.md`, `docs/legacy-workers.md` and `docs/storage-and-migrations.md`.
+2. Use `docs/device-validation.md` and work through Stage 2 sequentially. Existing exports/restores, Time Budget background/restart and Reader operation now have user-reported success; do not ask the user to repeat them. The safe diagnostic is implemented; the user has created the empty public `Raul-MA/daily` repository. `origin` is linked. Push the saved local branch, enable Pages Actions, verify the diagnostic workflow and collect endpoint outcomes; Daily Review is new and cannot have prior app verification. Confirm endpoint behavior from the actual Pages origin on iPhone, validate aggregate byte size/storage during import work, and document background/process restoration checks and legacy worker coexistence. Do not store or request the user's token. See `docs/deployment.md`, `docs/legacy-workers.md` and `docs/storage-and-migrations.md`.
 3. Do not mark Stage 2 complete from public docs, dummy-token requests, a small coffee sample or Chromium emulation. Physical device results require user participation.
 4. Only then begin Stage 3 test-first platform work. Author Time Budget/Reader characterization suites before their modules, and replacement piano continuation/cache/route tests before changing inherited assertions.
 
@@ -76,3 +76,5 @@ Full verification is intentionally failing. No production module, combined manif
 - `565912d` — Readwise diagnostic, storage recovery prototype, legacy ownership tests/patches and diagnostic Pages workflow.
 - `dffda47` — Patch boundary formatting fix; patches remain applicable.
 - GitHub hosting blocker: `gh repo create Raul-MA/daily --public --source=. --remote=origin ...` failed with `GraphQL: Resource not accessible by integration (createRepository)`. This is a GitHub credential permission limitation, not a missing user authorization or failed local verification. Do not retry repository creation repeatedly or ask for the user's token. Ask the user to create the empty public repository through GitHub, then resume push/Pages setup. No remote was added and nothing was deployed.
+
+- Repository-creation blocker resolved by the user: public `Raul-MA/daily` exists and was verified empty before the initial push. Deployment remains pending until the workflow succeeds.
