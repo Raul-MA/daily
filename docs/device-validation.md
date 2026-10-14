@@ -11,7 +11,7 @@ Use the existing installations and keep their data. Daily currently has only a t
 ### Checks available now
 
 1. Record the iPhone model and iOS version, and which old apps are installed as Home Screen PWAs.
-2. In the installed Coffee, Games and Plants apps, export their existing JSON backups into Files. Record export success, file sizes and the visible number of entries/beans, players/games/sessions and plants. Check that an export has readable JSON without sending its contents here. Existing Time Budget export covers templates only; record that limitation separately. Missing WhatsApp/Reader/current-budget migration exporters are known implementation work, not failed user checks.
+2. Export and restore are confirmed working by the user for the existing apps; most backups contain fewer than 50 entries, with a reported size of approximately 20 KB. This check does not need repeating. Keep the files for later Daily migration validation. Existing Time Budget export covers templates only; record that limitation separately. Missing WhatsApp/Reader/current-budget migration exporters are known implementation work, not failed user checks.
 3. With an existing active Time Budget, note the visible task, remaining time and clock time. Lock the phone for about a minute, reopen the installed app and compare the elapsed time. Repeat after leaving the app and after terminating/reopening it. Do not start another budget over an active one. Record whether the same tasks/timing return and any loss. This characterizes the old app only; repeat against Daily once its timer service exists.
 4. Open the Readwise Daily Review and Reader links from the phone and confirm the expected account/content opens. This checks external handoff only. It does not establish authenticated API access or CORS.
 
@@ -36,7 +36,7 @@ Record results in the table below, distinguishing old-app characterization from 
 | Check | Status | Evidence needed |
 | --- | --- | --- |
 | Phone / installed-app inventory | Pending user | Model, iOS, installation names |
-| Existing export feasibility | User reports all apps export successfully | Most backups contain fewer than 50 entries; reported backup size approximately 20 KB. Per-app scope, exported coverage and restore fidelity remain unverified |
+| Existing export / restore | User confirms export and restore work | Most backups contain fewer than 50 entries; reported backup size approximately 20 KB. Combined Daily migration and restore remain future acceptance checks |
 | Old Time Budget background / restart | Pending user | Observed elapsed time and preserved tasks |
 | Reader / Daily Review external handoff | Pending user | Links open correctly or error |
 | Authenticated Pages-origin API calls | Pending diagnostic hosting + user | Three endpoint outcomes, no token/payload |

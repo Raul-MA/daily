@@ -15,7 +15,7 @@ Stage 1 is complete: source suites copied first, baseline preservation verified,
 - Kept coffee uncommitted docs, personal backup and Excel additions untouched and out of Daily. Only its backup file-size metadata was examined (20,124 bytes); the complete storage gate remains pending.
 - User confirmed the project-hosted GitHub Pages origin, recorded in `docs/constraints.md`.
 - Rechecked public Readwise/Reader documentation. Authenticated CORS, structured Q&A and feedback capability remain unverified; direct-review fallback remains required.
-- User reports every app exports successfully and most backups contain fewer than 50 entries. The user reports approximately 20 KB backup size (per-file versus aggregate unspecified). Export feasibility is recorded as user-reported success; aggregate byte size, exported active state/settings and restore fidelity remain unverified. No backup files were requested or copied.
+- User reports every app exports successfully and most backups contain fewer than 50 entries. The user reports approximately 20 KB backup size (per-file versus aggregate unspecified). Export and restore are both confirmed working by the user for the existing apps. Aggregate byte size and exported active state/settings remain unverified; combined Daily migration/restore still needs implementation and testing. No backup files were requested or copied.
 
 ## Verification evidence
 
@@ -40,7 +40,7 @@ Full verification is intentionally failing. No production module, combined manif
 ## Resume
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and `reports/migration-test-inventory.md`.
-2. Use `docs/device-validation.md` and work through Stage 2 sequentially. Existing exports now have user-reported success; do not ask the user to repeat them. Confirm endpoint behavior from the actual Pages origin on iPhone, validate aggregate byte size/storage during import work, and document background/process restoration checks and legacy worker coexistence. Prepare safe diagnostic steps without storing or requesting the user's token.
+2. Use `docs/device-validation.md` and work through Stage 2 sequentially. Existing exports and restores now have user-reported success; do not ask the user to repeat them. Confirm endpoint behavior from the actual Pages origin on iPhone, validate aggregate byte size/storage during import work, and document background/process restoration checks and legacy worker coexistence. Prepare safe diagnostic steps without storing or requesting the user's token.
 3. Do not mark Stage 2 complete from public docs, dummy-token requests, a small coffee sample or Chromium emulation. Physical device results require user participation.
 4. Only then begin Stage 3 test-first platform work. Author Time Budget/Reader characterization suites before their modules, and replacement piano continuation/cache/route tests before changing inherited assertions.
 
@@ -58,4 +58,4 @@ Full verification is intentionally failing. No production module, combined manif
 ## Saved checkpoints
 
 - `1344b79` — Stage 1 test-first bootstrap, source mapping, baseline passes and new-app red evidence.
-- Stage 2 evidence checklist is in `docs/device-validation.md`. User-reported exports succeeded for all apps; most backups contain fewer than 50 entries. Authenticated Readwise results, timer/device observations and a deployed diagnostic page remain pending. Resume with these dependencies; do not silently skip the plan's constraint gate.
+- Stage 2 evidence checklist is in `docs/device-validation.md`. User-reported exports and restores work for the existing apps; most backups contain fewer than 50 entries. Authenticated Readwise results, timer/device observations and a deployed diagnostic page remain pending. Resume with these dependencies; do not silently skip the plan's constraint gate.

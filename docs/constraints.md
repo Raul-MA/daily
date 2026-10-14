@@ -14,7 +14,7 @@ The [Reader API](https://readwise.io/reader_api) documents GET `/api/v3/list/`, 
 
 Only file-size metadata was read from the existing coffee backup: 20,124 bytes. Its content was not copied into Daily. This small sample does not validate the largest combined installed-app backup or the chosen root-document storage budget.
 
-The user subsequently reported successful exports from every app, with most backups containing fewer than 50 entries. The user also reported an approximate backup size of 20 KB, without specifying whether this was per-file or aggregate. This establishes reported export success and small record counts. Exact aggregate bytes, exported coverage of active state/settings, and restore fidelity remain unverified. No export files are needed from the user at this point.
+The user subsequently reported successful exports from every app, with most backups containing fewer than 50 entries. The user also reported an approximate backup size of 20 KB, without specifying whether this was per-file or aggregate. The user also confirmed restore works. Export and restore of existing app backups are therefore recorded as user-confirmed success. Exact aggregate bytes and exported coverage of active state/settings remain unverified; this does not yet validate the new combined Daily import/restore. No export files are needed from the user at this point.
 
 Follow the [physical device checklist](./device-validation.md) for the evidence still needed.
 
