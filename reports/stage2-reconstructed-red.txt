@@ -1,0 +1,334 @@
+✖ diagnostic rejects empty credentials without making requests (2.371587ms)
+✖ diagnostic checks only three GET endpoints sequentially without exposing content (0.656065ms)
+✖ review absence, unauthorized, throttling and server errors stay distinct (0.565571ms)
+✖ network failures stay isolated and raw errors never reach diagnostic results (1.28442ms)
+✖ hung requests time out and remaining endpoint checks still execute (0.682576ms)
+✖ local diagnostics do not claim Pages-origin verification (1.311275ms)
+✖ empty storage loads a fresh value without writing and saved documents round-trip (0.4437ms)
+✖ replacement keeps the previous validated document as recovery (0.49082ms)
+✖ invalid and future documents are rejected without any storage mutation (4.953497ms)
+✖ primary quota failure retains the readable document and reports failure (0.550198ms)
+✖ recovery quota failure prevents a primary replacement (0.403099ms)
+✖ corrupt primary data is preserved and recovery is explicit (0.478221ms)
+✖ unrecoverable corruption never produces an empty collection (0.400596ms)
+✖ missing primary data can recover from an existing valid recovery document (1.885554ms)
+✖ storage preserves Unicode and a synthetic document larger than reported backups (0.426915ms)
+✖ lossy serialization is validated before touching existing records (0.369369ms)
+✖ a future primary schema is rejected without recovery or mutation (0.323561ms)
+✖ failure to preserve corrupt data reports failure without replacing it (0.3358ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 0
+ℹ fail 18
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 52.102823
+
+✖ failing tests:
+
+test at ../../tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs:6:1
+✖ diagnostic rejects empty credentials without making requests (2.371587ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts' imported from /tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs:13:1
+✖ diagnostic checks only three GET endpoints sequentially without exposing content (0.656065ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts' imported from /tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs:46:1
+✖ review absence, unauthorized, throttling and server errors stay distinct (0.565571ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts' imported from /tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs:56:1
+✖ network failures stay isolated and raw errors never reach diagnostic results (1.28442ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts' imported from /tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs:69:1
+✖ hung requests time out and remaining endpoint checks still execute (0.682576ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts' imported from /tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs:77:1
+✖ local diagnostics do not claim Pages-origin verification (1.311275ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts' imported from /tmp/daily-stage2-red/tests/general/readwise-diagnostic.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/apps/daily/src/diagnostics/readwise.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:27:1
+✖ empty storage loads a fresh value without writing and saved documents round-trip (0.4437ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:38:1
+✖ replacement keeps the previous validated document as recovery (0.49082ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:45:1
+✖ invalid and future documents are rejected without any storage mutation (4.953497ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:54:1
+✖ primary quota failure retains the readable document and reports failure (0.550198ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:61:1
+✖ recovery quota failure prevents a primary replacement (0.403099ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:68:1
+✖ corrupt primary data is preserved and recovery is explicit (0.478221ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:78:1
+✖ unrecoverable corruption never produces an empty collection (0.400596ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:84:1
+✖ missing primary data can recover from an existing valid recovery document (1.885554ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:89:1
+✖ storage preserves Unicode and a synthetic document larger than reported backups (0.426915ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:97:1
+✖ lossy serialization is validated before touching existing records (0.369369ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:105:1
+✖ a future primary schema is rejected without recovery or mutation (0.323561ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }
+
+test at ../../tmp/daily-stage2-red/tests/general/storage.test.mjs:112:1
+✖ failure to preserve corrupt data reports failure without replacing it (0.3358ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/tmp/daily-stage2-red/packages/data/src/document-store.ts' imported from /tmp/daily-stage2-red/tests/general/storage.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///tmp/daily-stage2-red/packages/data/src/document-store.ts'
+  }

@@ -1,0 +1,9 @@
+
+> daily-pwa@0.0.0 prepare:legacy-workers
+> node scripts/prepare-legacy-workers.mjs
+
+Prepared stillgreen: 6806e59df1a853e2b913f8288957bf91a5eab3cc9ec36d6b8b72c130bbf58679
+Prepared coffee-tracker: 5ae986788735c6eac485a8834da1a03c21837e7b26a4d274def1a4c209fb5e83
+Prepared game-tracker: 6bc76541000ead1f059f32c0f5e610d5a7b7d480e0ac182d52c6e74e3cdb6e76
+Prepared timeBudget: e5ebddd5833f80403d959c799801f3fa8bfa2d5e2316cfca5cf61af0ae04cb04
+Prepared toniq: 909962cd26df1b7bbc6a28ad0f7293d156ac6f8c8c616f59fdbc1dc482118210

@@ -2,7 +2,7 @@
 
 A test-first migration of seven local apps into one personal EN/ES PWA. The intended deployment is `https://raul-ma.github.io/daily/`.
 
-Implementation is in the test bootstrap stage. The current page is a harness placeholder; it is not an installable or usable replacement for any original app.
+Implementation is in Stage 2 constraint validation. The home page is a harness placeholder; a standalone Readwise diagnostic is available at `/daily/diagnostics.html`. This repository is not an installable or usable replacement for any original app.
 
 ## Setup
 
@@ -11,8 +11,8 @@ Use Node 24 and npm 11. Run `npm ci`, then `npm run dev`. The development page i
 ## Validation
 
 - `npm run lint`: strict policy for all authored JS/TS, including tests, scripts and configs.
-- `npm run typecheck`: new TypeScript declarations; substantive platform code is pending.
-- `npm run test:general`: bootstrap contract checks.
+- `npm run typecheck`: diagnostic and storage TypeScript; the app platform is pending.
+- `npm run test:general`: general unit tests plus the mocked diagnostic browser suite.
 - `npm run test:plants` (or another module): that module's unit and browser checks, sequentially.
 - `npm run test:all`: every suite, one at a time; unfinished modules fail.
 - `npm run build`: static harness output; this does not imply migration completion.

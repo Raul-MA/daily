@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Readwise connection checks</title>
+  <link rel="stylesheet" href="./src/diagnostics/style.css">
+</head>
+<body>
+  <main>
+    <label><span data-copy="language">Language</span> <select id="language"><option value="en">English</option><option value="es">Español</option></select></label>
+    <h1 data-copy="title">Readwise connection checks</h1>
+    <p data-copy="privacy"></p>
+    <p id="origin"></p>
+    <form id="checks" autocomplete="off">
+      <label for="token" data-copy="token">Readwise token</label>
+      <input id="token" type="password" required autocomplete="off" spellcheck="false" autocapitalize="none">
+      <button type="submit" data-copy="submit">Run checks</button>
+    </form>
+    <p id="status" role="status" aria-live="polite"></p>
+    <table><thead><tr><th data-copy="service">Service</th><th data-copy="status">HTTP status</th><th data-copy="result">Result</th></tr></thead><tbody id="results"></tbody></table>
+    <p><a href="https://readwise.io/dailyreview" target="_blank" rel="noopener noreferrer" data-copy="review">Open Daily Review</a></p>
+  </main>
+  <script type="module" src="./src/diagnostics/page.ts"></script>
+</body>
+</html>

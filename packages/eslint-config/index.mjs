@@ -28,7 +28,7 @@ const noComments = {
 export default [
   { files: ['**/e2e/**'], languageOptions: { globals: globals.browser } },
   { files: ['**/*.cjs'], languageOptions: { sourceType: 'commonjs' } },
-  { files: ['**/sw.{js,ts}'], languageOptions: { globals: globals.serviceworker } },
+  { files: ['**/sw.{js,ts}', 'tests/fixtures/legacy-workers/*.js'], languageOptions: { globals: globals.serviceworker } },
   {
     ignores: ['**/node_modules/**', '**/playwright-report/**', '**/test-results/**', '**/dist/**', '**/coverage/**'],
   },

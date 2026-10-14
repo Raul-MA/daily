@@ -1,0 +1,145 @@
+✖ plants worker removes only its old caches (5.948362ms)
+✖ coffee worker removes only its old caches (2.154138ms)
+✖ games worker removes only its old caches (3.769141ms)
+✖ Time Budget worker removes only its old caches (1.902324ms)
+✖ piano worker removes only its old caches (2.059173ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 36.002392
+
+✖ failing tests:
+
+test at tests/general/legacy-workers.test.mjs:18:1
+✖ plants worker removes only its old caches (5.948362ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [
+      'plant-tracker-prior',
+  +   'daily-shell-v1',
+  +   'unrelated',
+  +   'crois-v10',
+  +   'toniq-v6',
+  +   'time-budget-v3.2',
+  +   'board-game-score-tracker-shell-v6'
+    ]
+
+      at verify (file:///workspaces/daily/tests/general/legacy-workers.test.mjs:14:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [Array],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/general/legacy-workers.test.mjs:19:1
+✖ coffee worker removes only its old caches (2.154138ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [
+      'crois-prior',
+  +   'daily-shell-v1',
+  +   'unrelated',
+  +   'toniq-v6',
+  +   'plant-tracker-v3.5',
+  +   'time-budget-v3.2',
+  +   'board-game-score-tracker-shell-v6'
+    ]
+
+      at verify (file:///workspaces/daily/tests/general/legacy-workers.test.mjs:14:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [Array],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/general/legacy-workers.test.mjs:20:1
+✖ games worker removes only its old caches (3.769141ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [
+      'board-game-score-tracker-prior',
+  +   'daily-shell-v1',
+  +   'unrelated',
+  +   'crois-v10',
+  +   'toniq-v6',
+  +   'plant-tracker-v3.5',
+  +   'time-budget-v3.2'
+    ]
+
+      at verify (file:///workspaces/daily/tests/general/legacy-workers.test.mjs:14:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [Array],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/general/legacy-workers.test.mjs:21:1
+✖ Time Budget worker removes only its old caches (1.902324ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [
+      'time-budget-prior',
+  +   'daily-shell-v1',
+  +   'unrelated',
+  +   'crois-v10',
+  +   'toniq-v6',
+  +   'plant-tracker-v3.5',
+  +   'board-game-score-tracker-shell-v6'
+    ]
+
+      at verify (file:///workspaces/daily/tests/general/legacy-workers.test.mjs:14:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [Array],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/general/legacy-workers.test.mjs:22:1
+✖ piano worker removes only its old caches (2.059173ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [
+      'toniq-prior',
+  +   'daily-shell-v1',
+  +   'unrelated',
+  +   'crois-v10',
+  +   'plant-tracker-v3.5',
+  +   'time-budget-v3.2',
+  +   'board-game-score-tracker-shell-v6'
+    ]
+
+      at verify (file:///workspaces/daily/tests/general/legacy-workers.test.mjs:14:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [Array],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

@@ -40,7 +40,7 @@ Record results in the table below, distinguishing old-app characterization from 
 | Old Time Budget background / restart | User confirms success | Lock, background and closing/reopening preserve the active budget with correct timing; Daily acceptance remains deferred |
 | Existing Reader | User confirms it works | Reader works on the iPhone; Daily API integration still needs separate verification |
 | New Daily Review | Not previously available; unverified | Implement the diagnostic/integration or direct-review fallback before requesting verification |
-| Authenticated Pages-origin API calls | Pending diagnostic hosting + user | Three endpoint outcomes, no token/payload |
-| Largest combined backup / storage | User reports small record counts and approximately 20 KB backup size; aggregate measurement and storage tests pending | Aggregate byte size and recovery results |
-| Legacy worker coexistence | Pending worker fixes / release | Cache ownership and coexistence results |
+| Authenticated Pages-origin API calls | Diagnostic implemented and mocked tests pass; hosting + user results pending | Three endpoint outcomes, no token/payload |
+| Largest combined backup / storage | User reports small record counts and approximately 20 KB; 12 recovery tests pass with synthetic data; aggregate/device measurement pending | Aggregate byte size and recovery results |
+| Legacy worker coexistence | Five tested patches prepared; application/release pending | Cache ownership and coexistence results |
 | Daily timer / piano process restore | Deferred until platform and modules | Physical device results against Daily |

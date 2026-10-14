@@ -4,7 +4,7 @@ const module = process.env.DAILY_MODULE || 'coffee';
 const baseline = process.env.DAILY_BASELINE_URL;
 
 export default defineConfig({
-  testDir: `modules/${module}/e2e`,
+  testDir: module === 'general' ? 'tests/e2e' : `modules/${module}/e2e`,
   testMatch: '**/*.spec.js',
   fullyParallel: false,
   workers: 1,

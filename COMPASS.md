@@ -3,13 +3,14 @@
 ## Start Here
 
 - [Working rules](AGENTS.md), then [progress / resume](docs/progress.md).
-- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. This repo currently contains test bootstrap infrastructure, not migrated apps.
+- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. This repo currently contains test infrastructure, a connection diagnostic and storage feasibility code; app modules are not migrated.
 
 ## Commands
 
 - `npm run lint`, `npm run typecheck`, `npm run build`.
 - `npm run test:general`, `npm run test:<module>`, `npm run test:all`: sequential scopes.
 - `npm run verify`: full gate; unfinished feature suites fail.
+- `npm run prepare:legacy-workers`: generate checked patches from the retained sibling repos.
 
 ## Key Files
 
@@ -23,6 +24,9 @@
 - [Testing](docs/testing.md): baseline versus new-app runs and red-stage interpretation.
 - [Constraints](docs/constraints.md): Pages origin and Readwise capabilities.
 - [Physical device checklist](docs/device-validation.md): pending iPhone evidence and dependencies.
+- [Storage and migrations](docs/storage-and-migrations.md): validated document replacement and recovery prototype.
+- [Legacy workers](docs/legacy-workers.md): tested cleanup patches and release requirements.
+- [Deployment](docs/deployment.md): diagnostic-only preview workflow and release gate.
 - [Lint policy](docs/pwa-eslint-policy.md): exact required rules.
 
 ## Non-Obvious Patterns

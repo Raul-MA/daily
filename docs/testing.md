@@ -6,7 +6,7 @@ Copied tests must protect behavior before app code enters this repo. A missing f
 
 ## How It Works
 
-`npm run test:<module>` runs each unit group and then its browser checks. `test:all` visits general, plants, coffee, games, Time Budget, piano, reading and WhatsApp sequentially, accumulates failures and exits nonzero. Playwright uses one worker and no retries. `scripts/discovery.mjs` checks required case counts before execution; Time Budget and Reader currently fail discovery because no characterization suite exists yet.
+`npm run test:<module>` runs each unit group and then its browser checks. `test:all` visits general, plants, coffee, games, Time Budget, piano, reading and WhatsApp sequentially, accumulates failures and exits nonzero. Playwright uses one worker and no retries. `test:general` now includes 25 unit cases and three mocked diagnostic browser tests. `scripts/discovery.mjs` checks required case counts before execution; Time Budget and Reader currently fail discovery because no characterization suite exists yet.
 
 Node tests use a test-only loader under `tests/support/`. Existing source modules are imported normally, including import errors. If the requested file does not exist, each referenced export throws when exercised. This keeps assertions running without adding app implementations or fabricating successful results. Absent asset reads fail inside named tests. The loader is never part of the browser application build.
 
@@ -17,6 +17,8 @@ The new-app browser suites start Vite on 8766 and wait for an HTTP response unde
 Imported workflows were split into helpers/scenarios to satisfy the full lint policy. Game fixture objects were materialized as JSON with `__NOW__` placeholders, substituted with the same runtime timestamp as the source test. The original fixture functions remain documented by provenance. Piano's optional timing skip was removed; every normal suite invocation runs the complete matrix.
 
 Source comments moved to documentation: plant legacy data is migrated before counting the care write; piano's clock advance includes the 200 ms polling interval; deterministic visibility events exercise background handling; WhatsApp tests cover worker ownership and clearing the form before explicit handoff. Legal/source attribution is preserved in the inventory; no original license files were discovered among the migrated repositories.
+
+The initial isolated Node red captures for diagnostic/storage show only file-level failure summaries. An additional reconstruction copied their unchanged tests into an empty temporary source tree and ran without process isolation: all 18 named cases fail inside their callbacks on absent implementations. This is a reconstructed red check, not a claim that the initial transcripts contained case-level output; see `reports/stage2-reconstructed-red.txt`. Current real implementations pass all cases.
 
 ## Gotchas
 

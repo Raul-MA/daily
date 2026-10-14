@@ -1,0 +1,33 @@
+✔ missing modules fail when exercised rather than preventing test discovery (2.039133ms)
+✔ new browser tests target the Pages path and module hash (0.418533ms)
+✔ plants worker removes only its old caches (4.163513ms)
+✔ coffee worker removes only its old caches (1.45879ms)
+✔ games worker removes only its old caches (1.532464ms)
+✔ Time Budget worker removes only its old caches (2.382959ms)
+✔ piano worker removes only its old caches (1.349728ms)
+✔ diagnostic rejects empty credentials without making requests (51.646755ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (40.666959ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (3.206499ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.771647ms)
+✔ hung requests time out and remaining endpoint checks still execute (22.022865ms)
+✔ local diagnostics do not claim Pages-origin verification (1.17283ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (4.233462ms)
+✔ replacement keeps the previous validated document as recovery (0.227669ms)
+✔ invalid and future documents are rejected without any storage mutation (0.39697ms)
+✔ primary quota failure retains the readable document and reports failure (0.333857ms)
+✔ recovery quota failure prevents a primary replacement (0.304633ms)
+✔ corrupt primary data is preserved and recovery is explicit (0.655199ms)
+✔ unrecoverable corruption never produces an empty collection (0.470549ms)
+✔ missing primary data can recover from an existing valid recovery document (0.24158ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (7.165067ms)
+✔ lossy serialization is validated before touching existing records (1.765826ms)
+✔ a future primary schema is rejected without recovery or mutation (0.455948ms)
+✔ failure to preserve corrupt data reports failure without replacing it (0.314998ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 194.132266

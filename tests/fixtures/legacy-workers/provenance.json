@@ -1,0 +1,37 @@
+[
+  {
+    "repo": "stillgreen",
+    "filename": "service-worker.js",
+    "prefix": "plant-tracker-",
+    "sha256": "6806e59df1a853e2b913f8288957bf91a5eab3cc9ec36d6b8b72c130bbf58679",
+    "commit": "86c9b8faedf8c50a41a346778df19e5934c6aecf"
+  },
+  {
+    "repo": "coffee-tracker",
+    "filename": "service-worker.js",
+    "prefix": "crois-",
+    "sha256": "5ae986788735c6eac485a8834da1a03c21837e7b26a4d274def1a4c209fb5e83",
+    "commit": "8711d56c1330d6ce626662bbf98fb440eb2e10c4"
+  },
+  {
+    "repo": "game-tracker",
+    "filename": "service-worker.js",
+    "prefix": "board-game-score-tracker-",
+    "sha256": "6bc76541000ead1f059f32c0f5e610d5a7b7d480e0ac182d52c6e74e3cdb6e76",
+    "commit": "80fe90af080bbe1d3b17778369af011d9b90e897"
+  },
+  {
+    "repo": "timeBudget",
+    "filename": "service-worker.js",
+    "prefix": "time-budget-",
+    "sha256": "e5ebddd5833f80403d959c799801f3fa8bfa2d5e2316cfca5cf61af0ae04cb04",
+    "commit": "fb9e9be86325d900e64aeda59faad4215cc1d5a9"
+  },
+  {
+    "repo": "toniq",
+    "filename": "sw.js",
+    "prefix": "toniq-",
+    "sha256": "909962cd26df1b7bbc6a28ad0f7293d156ac6f8c8c616f59fdbc1dc482118210",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0"
+  }
+]

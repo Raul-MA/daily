@@ -1,0 +1,11 @@
+--- a/service-worker.js
++++ b/service-worker.js
+@@ -24,7 +24,7 @@
+       .then(cacheNames => {
+         return Promise.all(
+           cacheNames.map(cacheName => {
+-            if (cacheName !== CACHE_NAME) {
++            if (cacheName.startsWith('time-budget-') && cacheName !== CACHE_NAME) {
+               return caches.delete(cacheName);
+             }
+           })

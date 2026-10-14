@@ -22,7 +22,8 @@
     "test:time-budget": "node scripts/test.mjs time-budget",
     "test:piano": "node scripts/test.mjs piano",
     "test:whatsapp": "node scripts/test.mjs whatsapp",
-    "test:reading": "node scripts/test.mjs reading"
+    "test:reading": "node scripts/test.mjs reading",
+    "prepare:legacy-workers": "node scripts/prepare-legacy-workers.mjs"
   },
   "devDependencies": {
     "eslint": "9.39.5",

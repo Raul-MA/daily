@@ -1,6 +1,6 @@
 import { withBrowserServer } from './browser-server.mjs';
 import { spawnSync } from 'node:child_process';
-import { discover } from './discovery.mjs';
+import { discover, discoverBrowser } from './discovery.mjs';
 
 const modules = ['general', 'plants', 'coffee', 'games', 'time-budget', 'piano', 'reading', 'whatsapp'];
 const scope = process.argv[2];
@@ -16,7 +16,8 @@ function runNode(module) {
 }
 
 async function runBrowser(module) {
-  if (module === 'coffee' || module === 'games') {
+  if (module === 'general' || module === 'coffee' || module === 'games') {
+    discoverBrowser(module);
     return execute(['node_modules/@playwright/test/cli.js', 'test'], { ...process.env, DAILY_MODULE: module });
   }
   if (module !== 'piano') return 0;
