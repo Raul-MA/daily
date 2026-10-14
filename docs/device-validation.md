@@ -36,10 +36,10 @@ Record results in the table below, distinguishing old-app characterization from 
 | Check | Status | Evidence needed |
 | --- | --- | --- |
 | Phone / installed-app inventory | Pending user | Model, iOS, installation names |
-| Existing export feasibility | Pending user | Counts, file sizes, success/failure only |
+| Existing export feasibility | User reports all apps export successfully | Most backups contain fewer than 50 entries; reported backup size approximately 20 KB. Per-app scope, exported coverage and restore fidelity remain unverified |
 | Old Time Budget background / restart | Pending user | Observed elapsed time and preserved tasks |
 | Reader / Daily Review external handoff | Pending user | Links open correctly or error |
 | Authenticated Pages-origin API calls | Pending diagnostic hosting + user | Three endpoint outcomes, no token/payload |
-| Largest combined backup / storage | Pending exports + storage tests | Aggregate size and recovery results |
+| Largest combined backup / storage | User reports small record counts and approximately 20 KB backup size; aggregate measurement and storage tests pending | Aggregate byte size and recovery results |
 | Legacy worker coexistence | Pending worker fixes / release | Cache ownership and coexistence results |
 | Daily timer / piano process restore | Deferred until platform and modules | Physical device results against Daily |
