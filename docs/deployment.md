@@ -12,7 +12,7 @@ The configured URL is `https://raul-ma.github.io/daily/diagnostics.html`. The ro
 
 This workflow validates the diagnostic/recovery increment only. It does not skip, weaken or mark passing the copied feature suites: those remain red until their apps are migrated. Before a product release, replace this preview gate with full `npm run verify` and satisfy physical migration/offline/update acceptance.
 
-The user created the public repository `https://github.com/Raul-MA/daily` after the integration could not create repositories. It was verified empty and linked as `origin`. The initial push is blocked: GitHub returned HTTP 403 for both normal credentials and an explicit authenticated GitHub CLI helper. The current connection must be granted access/write permission to the new repository before pushing. Pages setup and hosted verification have not run.
+The user created the public repository `https://github.com/Raul-MA/daily` after the integration could not create repositories. It was verified empty and linked as `origin`. Git push now works when `GITHUB_TOKEN` is unset for that command: `env -u GITHUB_TOKEN git push -u origin main`. The other configured Git credentials work; the injected token caused the earlier 403 failures. GitHub CLI has no authenticated session with that variable unset, so API/Pages configuration still needs a separate working authentication path or repository settings. Deployment has not yet been verified.
 
 ## Gotchas
 
