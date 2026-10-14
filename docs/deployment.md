@@ -12,6 +12,8 @@ The configured URL is `https://raul-ma.github.io/daily/diagnostics.html`. The ro
 
 This workflow validates the diagnostic/recovery increment only. It does not skip, weaken or mark passing the copied feature suites: those remain red until their apps are migrated. Before a product release, replace this preview gate with full `npm run verify` and satisfy physical migration/offline/update acceptance.
 
+Repository creation is currently blocked: GitHub authenticated the Raul-MA account but rejected `createRepository` with `Resource not accessible by integration`. The user needs to create an empty public `Raul-MA/daily` repository through GitHub, without initializing a README, license or gitignore. Then link this local repo as `origin`, push `main`, enable Pages with Actions as the source and verify the diagnostic workflow. The prepared workflow has passed local scope checks but has not run in Actions yet.
+
 ## Gotchas
 
 - Pages must use GitHub Actions as its build source, with repository Pages/environment permissions available.
