@@ -1,0 +1,26 @@
+Listing tests:
+  gameplay-2.spec.js:5:1 › keeps history filters collapsed and summarizes active filters
+  gameplay-2.spec.js:24:1 › starts enters edits and finishes a score session
+  gameplay-2.spec.js:83:1 › opens completed game details without editing first
+  gameplay-3.spec.js:7:1 › tracks session duration and game duration analytics
+  gameplay-3.spec.js:41:1 › shows player average scores by game instead of blending scoring systems
+  gameplay-4.spec.js:7:1 › first to points ranks the highest live total as leader
+  gameplay-4.spec.js:25:1 › shows first to points target reached as a toast
+  gameplay-4.spec.js:50:1 › records win loss tie results
+  gameplay-4.spec.js:69:1 › preserves scoring settings while collaborative mode is enabled
+  gameplay-4.spec.js:90:1 › records one team result and keeps collaborative stats separate
+  gameplay.spec.js:5:1 › creates edits and archives a player
+  gameplay.spec.js:20:1 › creates edits and archives a game definition
+  gameplay.spec.js:35:1 › shows only scoring fields required by selected game mode
+  gameplay.spec.js:51:1 › hides game form while a session is active
+  gameplay.spec.js:64:1 › hides play setup form while a session is active
+  gameplay.spec.js:76:1 › excludes archived players from new play setup without deleting history
+  gameplay.spec.js:111:1 › shows app messages as dismissible fixed toasts
+  import-export.spec.js:5:1 › exports full JSON and replace-import restores data
+  import-export.spec.js:37:1 › rejects malformed nested backup data without replacing local data
+  settings.spec.js:4:1 › persists theme and language settings
+  settings.spec.js:18:1 › shows backup reminder before a successful export
+  settings.spec.js:28:1 › shows backup reminder age when the last export is stale
+  smoke.spec.js:4:1 › loads mobile-first primary navigation
+  smoke.spec.js:12:1 › registers service worker path over http
+Total: 24 tests in 7 files

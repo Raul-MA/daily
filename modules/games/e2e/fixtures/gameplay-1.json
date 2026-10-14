@@ -1,0 +1,193 @@
+{
+  "appId": "board-game-score-tracker",
+  "appSlug": "board-game-score-tracker",
+  "schemaVersion": "1.0",
+  "settings": {
+    "theme": "system",
+    "language": "en",
+    "lastExportedAt": null,
+    "backupReminderDays": 7,
+    "defaultRoundCount": 5,
+    "defaultTargetScore": 100,
+    "confirmBeforeFinishingSession": true,
+    "showArchived": false,
+    "historyPageSize": 25
+  },
+  "players": [
+    {
+      "id": "player_ada",
+      "name": "Ada",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    },
+    {
+      "id": "player_grace",
+      "name": "Grace",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    },
+    {
+      "id": "player_majo",
+      "name": "Majo",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    }
+  ],
+  "games": [
+    {
+      "id": "game_dutch",
+      "name": "Dutch Blitz",
+      "scoringMode": "first_to_points",
+      "roundCount": null,
+      "targetScore": 100,
+      "higherScoreWins": true,
+      "minPlayers": null,
+      "maxPlayers": null,
+      "notes": "",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "session_latest",
+      "gameId": "game_dutch",
+      "gameNameSnapshot": "Dutch Blitz",
+      "scoringMode": "first_to_points",
+      "participants": [
+        {
+          "playerId": "player_ada",
+          "nameSnapshot": "Ada",
+          "seatOrder": 0
+        },
+        {
+          "playerId": "player_grace",
+          "nameSnapshot": "Grace",
+          "seatOrder": 1
+        }
+      ],
+      "status": "completed",
+      "startedAt": "2026-07-07T17:00:00.000Z",
+      "completedAt": "2026-07-07T17:10:00.000Z",
+      "durationMinutesOverride": null,
+      "roundCount": null,
+      "targetScore": 100,
+      "higherScoreWins": true,
+      "rounds": [
+        {
+          "id": "session_latest_round_1",
+          "roundNumber": 1,
+          "scores": {
+            "player_ada": 100,
+            "player_grace": 80
+          }
+        }
+      ],
+      "results": [],
+      "winnerPlayerIds": [
+        "player_ada"
+      ],
+      "notes": "",
+      "createdAt": "2026-07-07T17:00:00.000Z",
+      "updatedAt": "2026-07-07T17:10:00.000Z"
+    },
+    {
+      "id": "session_three",
+      "gameId": "game_dutch",
+      "gameNameSnapshot": "Dutch Blitz",
+      "scoringMode": "first_to_points",
+      "participants": [
+        {
+          "playerId": "player_ada",
+          "nameSnapshot": "Ada",
+          "seatOrder": 0
+        },
+        {
+          "playerId": "player_grace",
+          "nameSnapshot": "Grace",
+          "seatOrder": 1
+        },
+        {
+          "playerId": "player_majo",
+          "nameSnapshot": "Majo",
+          "seatOrder": 2
+        }
+      ],
+      "status": "completed",
+      "startedAt": "2026-07-06T17:00:00.000Z",
+      "completedAt": "2026-07-06T17:18:00.000Z",
+      "durationMinutesOverride": null,
+      "roundCount": null,
+      "targetScore": 100,
+      "higherScoreWins": true,
+      "rounds": [
+        {
+          "id": "session_three_round_1",
+          "roundNumber": 1,
+          "scores": {
+            "player_ada": 100,
+            "player_grace": 80,
+            "player_majo": 80
+          }
+        }
+      ],
+      "results": [],
+      "winnerPlayerIds": [
+        "player_ada"
+      ],
+      "notes": "",
+      "createdAt": "2026-07-06T17:00:00.000Z",
+      "updatedAt": "2026-07-06T17:18:00.000Z"
+    },
+    {
+      "id": "session_two",
+      "gameId": "game_dutch",
+      "gameNameSnapshot": "Dutch Blitz",
+      "scoringMode": "first_to_points",
+      "participants": [
+        {
+          "playerId": "player_ada",
+          "nameSnapshot": "Ada",
+          "seatOrder": 0
+        },
+        {
+          "playerId": "player_grace",
+          "nameSnapshot": "Grace",
+          "seatOrder": 1
+        }
+      ],
+      "status": "completed",
+      "startedAt": "2026-07-05T17:00:00.000Z",
+      "completedAt": "2026-07-05T17:17:00.000Z",
+      "durationMinutesOverride": null,
+      "roundCount": null,
+      "targetScore": 100,
+      "higherScoreWins": true,
+      "rounds": [
+        {
+          "id": "session_two_round_1",
+          "roundNumber": 1,
+          "scores": {
+            "player_ada": 100,
+            "player_grace": 80
+          }
+        }
+      ],
+      "results": [],
+      "winnerPlayerIds": [
+        "player_ada"
+      ],
+      "notes": "",
+      "createdAt": "2026-07-05T17:00:00.000Z",
+      "updatedAt": "2026-07-05T17:17:00.000Z"
+    }
+  ],
+  "metadata": {
+    "createdAt": "__NOW__",
+    "updatedAt": "__NOW__"
+  }
+}

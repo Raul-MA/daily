@@ -1,0 +1,142 @@
+
+> daily-pwa@0.0.0 test:plants
+> node scripts/test.mjs plants
+
+Suite: plants
+✖ valid legacy data remains readable when its migration write fails (1.785483ms)
+✖ care log and next-due override are committed in one primary write (0.478013ms)
+✖ validation failures use the storage-error notification path (1.444807ms)
+✖ builds a stable watering title (0.187961ms)
+✖ shortcut URL carries the exact title, date, and project (0.287997ms)
+✖ enabled integration requires a project (0.559014ms)
+✖ settings round-trip and normalize project whitespace (0.196577ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 41.687632
+
+✖ failing tests:
+
+test at modules/plants/test/store.test.mjs:48:1
+✖ valid legacy data remains readable when its migration write fails (1.785483ms)
+  Error: Unimplemented plants: store/store.js:getPlants
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/store.test.mjs:54:26)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)
+
+test at modules/plants/test/store.test.mjs:57:1
+✖ care log and next-due override are committed in one primary write (0.478013ms)
+  Error: Unimplemented plants: store/store.js:getPlants
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/store.test.mjs:69:9)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/plants/test/store.test.mjs:97:1
+✖ validation failures use the storage-error notification path (1.444807ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /registro inválido/. Input:
+
+  'Error: Unimplemented plants: store/store.js:savePlants'
+
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/store.test.mjs:108:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Unimplemented plants: store/store.js:savePlants
+        at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+        at file:///workspaces/daily/modules/plants/test/store.test.mjs:109:17
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/store.test.mjs:108:10)
+        at Test.runInAsyncScope (node:async_hooks:228:14)
+        at Test.run (node:internal/test_runner/test:1118:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+        at Test.postRun (node:internal/test_runner/test:1247:19)
+        at Test.run (node:internal/test_runner/test:1175:12),
+    expected: /registro inválido/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at modules/plants/test/things.test.mjs:13:1
+✖ builds a stable watering title (0.187961ms)
+  Error: Unimplemented plants: integrations/things.js:wateringReminderTitle
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things.test.mjs:14:23)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/plants/test/things.test.mjs:17:1
+✖ shortcut URL carries the exact title, date, and project (0.287997ms)
+  Error: Unimplemented plants: integrations/things.js:buildThingsShortcutURL
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things.test.mjs:18:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/plants/test/things.test.mjs:36:1
+✖ enabled integration requires a project (0.559014ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /nombre del proyecto/. Input:
+
+  'Error: Unimplemented plants: integrations/things.js:saveThingsSettings'
+
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things.test.mjs:38:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Unimplemented plants: integrations/things.js:saveThingsSettings
+        at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+        at file:///workspaces/daily/modules/plants/test/things.test.mjs:39:18
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things.test.mjs:38:10)
+        at Test.runInAsyncScope (node:async_hooks:228:14)
+        at Test.run (node:internal/test_runner/test:1118:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+        at Test.postRun (node:internal/test_runner/test:1247:19)
+        at Test.run (node:internal/test_runner/test:1175:12),
+    expected: /nombre del proyecto/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at modules/plants/test/things.test.mjs:44:1
+✖ settings round-trip and normalize project whitespace (0.196577ms)
+  Error: Unimplemented plants: integrations/things.js:saveThingsSettings
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things.test.mjs:46:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)

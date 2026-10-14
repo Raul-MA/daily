@@ -1,0 +1,257 @@
+[
+  {
+    "module": "plants",
+    "source": "stillgreen/tests/things.test.mjs",
+    "destination": "modules/plants/test/things.test.mjs",
+    "sha256": "3f30fa40b77dc2c167914dc169ab2c1fab9f2c63536b4a0c6a002e8ae3732d14",
+    "commit": "86c9b8faedf8c50a41a346778df19e5934c6aecf",
+    "migratedDestinations": [
+      "modules/plants/test/things.test.mjs"
+    ]
+  },
+  {
+    "module": "plants",
+    "source": "stillgreen/tests/store.test.mjs",
+    "destination": "modules/plants/test/store.test.mjs",
+    "sha256": "0cd849a4f7bc54f006fdbd6a013667203df46fb42c7fb734da584ebfd995875d",
+    "commit": "86c9b8faedf8c50a41a346778df19e5934c6aecf",
+    "migratedDestinations": [
+      "modules/plants/test/store.test.mjs"
+    ]
+  },
+  {
+    "module": "coffee",
+    "source": "coffee-tracker/e2e/history-detail.spec.js",
+    "destination": "modules/coffee/e2e/history-detail.spec.js",
+    "sha256": "a2444b587901ca8f93fed695341d5d65cfb74b0989df275e79fdaddf19214f18",
+    "commit": "8711d56c1330d6ce626662bbf98fb440eb2e10c4",
+    "migratedDestinations": [
+      "modules/coffee/e2e/history-detail.spec.js"
+    ]
+  },
+  {
+    "module": "coffee",
+    "source": "coffee-tracker/e2e/settings-data.spec.js",
+    "destination": "modules/coffee/e2e/settings-data.spec.js",
+    "sha256": "e9fdc83e8b8e31524f6519ccdef5eee04e85262f42aa84037cba53978e132e88",
+    "commit": "8711d56c1330d6ce626662bbf98fb440eb2e10c4",
+    "migratedDestinations": [
+      "modules/coffee/e2e/backup.spec.js",
+      "modules/coffee/e2e/settings-data.spec.js"
+    ]
+  },
+  {
+    "module": "coffee",
+    "source": "coffee-tracker/e2e/helpers.js",
+    "destination": "modules/coffee/e2e/helpers.js",
+    "sha256": "a503e76d75cc89456c699d40da837f97e65d73837584030f3b857afabbaea3ee",
+    "commit": "8711d56c1330d6ce626662bbf98fb440eb2e10c4",
+    "migratedDestinations": [
+      "modules/coffee/e2e/helpers.js"
+    ]
+  },
+  {
+    "module": "coffee",
+    "source": "coffee-tracker/e2e/new-shot.spec.js",
+    "destination": "modules/coffee/e2e/new-shot.spec.js",
+    "sha256": "d4fa04bd87cb871f67eeb253e27ef1dff6d91c1ed4ab7ec0a11557836795cd8f",
+    "commit": "8711d56c1330d6ce626662bbf98fb440eb2e10c4",
+    "migratedDestinations": [
+      "modules/coffee/e2e/new-shot.spec.js"
+    ]
+  },
+  {
+    "module": "coffee",
+    "source": "coffee-tracker/e2e/insights.spec.js",
+    "destination": "modules/coffee/e2e/insights.spec.js",
+    "sha256": "fd0337844e3811ebd364ab8502899b79f07a30d807deea287e86a745384d63f1",
+    "commit": "8711d56c1330d6ce626662bbf98fb440eb2e10c4",
+    "migratedDestinations": [
+      "modules/coffee/e2e/insights.spec.js"
+    ]
+  },
+  {
+    "module": "games",
+    "source": "game-tracker/e2e/helpers.js",
+    "destination": "modules/games/e2e/helpers.js",
+    "sha256": "5106f724edc785ef3d4b716ea0a4846eb68079a413105701cc1724c27c6962d0",
+    "commit": "80fe90af080bbe1d3b17778369af011d9b90e897",
+    "migratedDestinations": [
+      "modules/games/e2e/helpers.js"
+    ]
+  },
+  {
+    "module": "games",
+    "source": "game-tracker/e2e/gameplay.spec.js",
+    "destination": "modules/games/e2e/gameplay.spec.js",
+    "sha256": "31c277ca5027d4e8401015e921ffbca18d251c8ffb05257b8a1e803efc0fd823",
+    "commit": "80fe90af080bbe1d3b17778369af011d9b90e897",
+    "migratedDestinations": [
+      "modules/games/e2e/gameplay-2.spec.js",
+      "modules/games/e2e/gameplay-3.spec.js",
+      "modules/games/e2e/gameplay-4.spec.js",
+      "modules/games/e2e/gameplay.spec.js"
+    ]
+  },
+  {
+    "module": "games",
+    "source": "game-tracker/e2e/import-export.spec.js",
+    "destination": "modules/games/e2e/import-export.spec.js",
+    "sha256": "b36bc8b7a76acc78ee07dd40d5a27307678244fa40d83e3e9a86cfd1181baafa",
+    "commit": "80fe90af080bbe1d3b17778369af011d9b90e897",
+    "migratedDestinations": [
+      "modules/games/e2e/import-export.spec.js"
+    ]
+  },
+  {
+    "module": "games",
+    "source": "game-tracker/e2e/settings.spec.js",
+    "destination": "modules/games/e2e/settings.spec.js",
+    "sha256": "cc144149008e33a9de3311058af35b2c099908ce10be5c6ca3c71cf7fa612fc3",
+    "commit": "80fe90af080bbe1d3b17778369af011d9b90e897",
+    "migratedDestinations": [
+      "modules/games/e2e/settings.spec.js"
+    ]
+  },
+  {
+    "module": "games",
+    "source": "game-tracker/e2e/smoke.spec.js",
+    "destination": "modules/games/e2e/smoke.spec.js",
+    "sha256": "a83506a5a33c8a5e5a02f425445e95f68c184757d247f9f1d8988e5aea51449f",
+    "commit": "80fe90af080bbe1d3b17778369af011d9b90e897",
+    "migratedDestinations": [
+      "modules/games/e2e/smoke.spec.js"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/service-worker-smoke.mjs",
+    "destination": "modules/piano/e2e/service-worker-smoke.mjs",
+    "sha256": "b80f9705b61fdc559aaa320485e7c6f92af9cdce67d926aca85ee334eb6c8182",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/e2e/service-worker-smoke.mjs"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/navigation-data.test.mjs",
+    "destination": "modules/piano/test/navigation-data.test.mjs",
+    "sha256": "314cf5414b8cf3cf03ab7e278244d3bd6b098ad98811bd6a7b999981e25f7b18",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/test/navigation-data.test.mjs"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/keyboard-diagram.test.mjs",
+    "destination": "modules/piano/test/keyboard-diagram.test.mjs",
+    "sha256": "33f4354b83e0c40a66907418df91e4086c8746fa9a8092982d542731f0b1eaae",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/test/keyboard-diagram.test.mjs"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/suspended-chords.test.mjs",
+    "destination": "modules/piano/test/suspended-chords.test.mjs",
+    "sha256": "2b35150c53ce707f79b8b4a1c1bd7b8db7c8f2d6d271d4530dc980b390e4a5eb",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/test/suspended-chords.test.mjs"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/learning-path.test.mjs",
+    "destination": "modules/piano/test/learning-path.test.mjs",
+    "sha256": "c542f8fb533a4c0e1fdffc6b03922430d5c0847461e64d4aeca2f3ea3fde4448",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/test/learning-path.test.mjs"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/browser-smoke.mjs",
+    "destination": "modules/piano/e2e/browser-smoke.mjs",
+    "sha256": "a1e9e7689c44bb43f1d10f679a649910c3f50c0e223bb9906391cade3dbc73ed",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/e2e/browser-smoke.mjs",
+      "modules/piano/e2e/scenarios/"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/service-worker.test.mjs",
+    "destination": "modules/piano/test/service-worker.test.mjs",
+    "sha256": "ad54f5edfb9142908c0e8e1a126835bdab42def4fad8dab185e5d905ccc63ec9",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/test/service-worker.test.mjs"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/rootless-keyboard.test.mjs",
+    "destination": "modules/piano/test/rootless-keyboard.test.mjs",
+    "sha256": "567fd124a9781913084438b3837c933370fb97e5c9c964a2cd4da866a2503730",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/test/rootless-keyboard.test.mjs"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/ear-training.test.mjs",
+    "destination": "modules/piano/test/ear-training.test.mjs",
+    "sha256": "6451766e2b14a68794b7e4f7259d27badc60d976b7be005f6725fa3952d87b08",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/test/ear-training.test.mjs"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/practice-session.test.mjs",
+    "destination": "modules/piano/test/practice-session.test.mjs",
+    "sha256": "4a4b380475830a6f8f82755528d4528df5b3c597d89b434a3a9dfb04eb920c89",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/test/practice-session.test.mjs"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/keyboard-motion.test.mjs",
+    "destination": "modules/piano/test/keyboard-motion.test.mjs",
+    "sha256": "b392ea2c68a5887d7ddc51144d6924f4f8a39cb4d936256f25d2842591876d1f",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/test/keyboard-motion.test.mjs"
+    ]
+  },
+  {
+    "module": "piano",
+    "source": "toniq/tests/music-foundations.test.mjs",
+    "destination": "modules/piano/test/music-foundations.test.mjs",
+    "sha256": "59b7c1c7a5a468bd89f5543e2a48a2a52a0223f27272ca120d523f4b2d871033",
+    "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+    "migratedDestinations": [
+      "modules/piano/test/music-foundations.test.mjs"
+    ]
+  },
+  {
+    "module": "whatsapp",
+    "source": "schedule-whatsapp/tests.js",
+    "destination": "modules/whatsapp/test/tests.cjs",
+    "sha256": "1cfd5b154bee555df780a7548b317794a4a11f0c9f11a29d603b8cc338386c0b",
+    "commit": "941d4cdb71dc38c4512bea836d4292dd8c96e541",
+    "migratedDestinations": [
+      "modules/whatsapp/test/tests.cjs"
+    ]
+  }
+]

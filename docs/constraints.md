@@ -1,0 +1,23 @@
+# Constraints and device gates
+
+## Problem
+
+Static browser behavior and desktop emulation do not establish authenticated CORS, installed iPhone storage access or background/process restoration. Stage 2 evidence must distinguish research, local tests and physical checks.
+
+## How It Works
+
+The user selected the GitHub Pages project origin `https://raul-ma.github.io/<repo>`. The local repo name and configured path are `daily`, making the intended URL `https://raul-ma.github.io/daily/`. There is no remote repository or deployment yet. Project paths share the `https://raul-ma.github.io` origin with old apps.
+
+Rechecked public [Readwise API documentation](https://readwise.io/api_deets) on 2026-10-13: auth GET returns 204 for a valid token; scheduled Daily Review is GET `/api/v2/review/`, may return 404, and exposes completion and a review URL. Completion is a separate explicit POST `/api/v2/review/complete/`. No authenticated requests or completion mutations were made. The public documentation checked does not establish structured Mastery-card data or the pictured Never/Soon/Later/Someday feedback API; retain the plan's direct-review fallback until capability is demonstrated.
+
+The [Reader API](https://readwise.io/reader_api) documents GET `/api/v3/list/`, cursor pagination, location filters and a bounded limit. These documented contracts do not prove authenticated CORS from Pages on iPhone.
+
+Only file-size metadata was read from the existing coffee backup: 20,124 bytes. Its content was not copied into Daily. This small sample does not validate the largest combined installed-app backup or the chosen root-document storage budget.
+
+## Gotchas
+
+- Check auth, Reader list and Daily Review from a browser at `https://raul-ma.github.io`, with the token entered locally. Never send it through chat or write it into tracked sources/reports. Record status/CORS outcomes without payloads or headers containing credentials. GET-only diagnostics must not mark a review complete.
+- Export separately from each installed old PWA into Files and compare record counts. Do not assume a Safari tab can read an installed PWA's storage.
+- Test a running budget and piano session across navigation, lock, background and full process termination on the physical iPhone once persistence exists. Rendering intervals alone cannot certify this.
+- Fix the five broad legacy worker cleanup policies before new and old installations coexist. Limit cleanup to each app's owned prefix; preserve origin storage and unrelated caches. No old workers were changed during test bootstrap.
+- Physical checks remain pending and must not be marked passing based on mock responses or Chromium touch emulation.

@@ -1,0 +1,93 @@
+{
+  "appId": "board-game-score-tracker",
+  "appSlug": "board-game-score-tracker",
+  "schemaVersion": "1.0",
+  "settings": {
+    "theme": "system",
+    "language": "en",
+    "lastExportedAt": null,
+    "backupReminderDays": 7,
+    "defaultRoundCount": 5,
+    "defaultTargetScore": 100,
+    "confirmBeforeFinishingSession": true,
+    "showArchived": false,
+    "historyPageSize": 25
+  },
+  "players": [
+    {
+      "id": "player_raul",
+      "name": "Raul",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    },
+    {
+      "id": "player_majo",
+      "name": "Majo",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    }
+  ],
+  "games": [
+    {
+      "id": "game_dutch_blitz",
+      "name": "Dutch Blitz",
+      "scoringMode": "first_to_points",
+      "roundCount": null,
+      "targetScore": 100,
+      "higherScoreWins": false,
+      "minPlayers": null,
+      "maxPlayers": null,
+      "notes": "",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "session_dutch_blitz",
+      "gameId": "game_dutch_blitz",
+      "gameNameSnapshot": "Dutch Blitz",
+      "scoringMode": "first_to_points",
+      "participants": [
+        {
+          "playerId": "player_raul",
+          "nameSnapshot": "Raul",
+          "seatOrder": 0
+        },
+        {
+          "playerId": "player_majo",
+          "nameSnapshot": "Majo",
+          "seatOrder": 1
+        }
+      ],
+      "status": "active",
+      "startedAt": "__NOW__",
+      "completedAt": null,
+      "roundCount": null,
+      "targetScore": 100,
+      "higherScoreWins": false,
+      "rounds": [
+        {
+          "id": "round_1",
+          "roundNumber": 1,
+          "scores": {
+            "player_raul": 22,
+            "player_majo": 232
+          }
+        }
+      ],
+      "results": [],
+      "winnerPlayerIds": [],
+      "notes": "",
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    }
+  ],
+  "metadata": {
+    "createdAt": "__NOW__",
+    "updatedAt": "__NOW__"
+  }
+}

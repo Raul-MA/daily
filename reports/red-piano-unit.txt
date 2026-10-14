@@ -1,0 +1,588 @@
+✖ audio catalog is chromatic, complete, and backed by actual recordings (3.766149ms)
+✖ recordings, named interval, and exact keyboard keys agree for every interval (0.402581ms)
+✖ fitted keyboards start one white key before the lowest note across octave boundaries (0.388385ms)
+✖ explicit ranges override whole octaves and respect MIDI boundaries (0.30572ms)
+✖ exact notes select C4 and C5 independently; pitch classes repeat (0.206737ms)
+✖ enharmonic spellings cross the scientific-octave boundary correctly (0.208961ms)
+✖ compound intervals retain their distance across the C boundary (0.960986ms)
+✖ every extended chord preserves supplied compound intervals (0.228176ms)
+✖ bass-first inversion stays ascending and retains role metadata (0.282627ms)
+✖ explicit registers take precedence over inferred ascending placement (0.315478ms)
+✖ invalid ranges, notes, labels and out-of-range exact notes are rejected (2.54461ms)
+✖ arbitrary role and display text are preserved with HTML escaping (0.185116ms)
+✖ label settings control rendered labels while retaining accessible descriptions (0.167623ms)
+✖ voicing, rendering and compatibility adapter never mutate their input (0.211395ms)
+✖ exercise keyboards are absent until reveal, including all answer text (1.691287ms)
+✖ guide-tone keyboards preserve each voice’s nearest motion across every root (0.207117ms)
+✖ guide-tone motion crosses B to C without dropping an octave (2.332884ms)
+✖ guided ninth recall and application retain the compound interval (0.190736ms)
+✖ curriculum covers every stage with a continuous prerequisite chain and usable modes (0.186157ms)
+✖ all lesson recall variants produce revealable answers with valid pitch classes (1.10389ms)
+✖ major guide-tone questions follow F, F, E and explain the resolution (0.175037ms)
+✖ transfer prompts change keys only after a complete progression (0.197509ms)
+✖ blues follows the complete twelve-bar form and wraps (0.153617ms)
+✖ minor and modal lessons preserve characteristic spellings (0.158926ms)
+✖ spells intervals by letter in both directions and preserves chromatic transpose (0.175187ms)
+✖ recognizes enharmonics and double accidentals (0.170609ms)
+✖ chord tones and tensions retain theoretical spelling (5.744322ms)
+✖ every chord tone remains on its intended pitch for all standard roots (0.20329ms)
+✖ question root pools and numeric degree filters constrain practice (0.172422ms)
+✖ keyboard maps enharmonic pitches and retains an accessible escaped legend (0.173634ms)
+✖ every catalog destination has exactly one existing page loader (0.605781ms)
+✖ library links and search aliases use canonical destinations (0.247552ms)
+✖ ten-minute sessions reserve time for explanation, recall, application, and review (0.123601ms)
+✖ every supported session duration preserves the budget and includes all four blocks (0.190316ms)
+✖ invalid or unsupported durations cannot produce an unusable session (0.319036ms)
+✖ rootless keyboards preserve exact formula offsets and hand labels for every root and type (0.38057ms)
+✖ half-diminished B keeps its crossing voices instead of ascending them an extra octave (0.188141ms)
+✖ ii–V–I chooses minimum total voice motion while preserving whole chord formulas (0.200193ms)
+✖ G major rootless cadence resolves C down to B across the octave boundary (0.886825ms)
+✖ precache requests are unique and backed by repository assets (0.308977ms)
+✖ suspensions resolve to the target chord while retaining extensions in every key (0.624746ms)
+ℹ tests 41
+ℹ suites 0
+ℹ pass 0
+ℹ fail 41
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 118.357711
+
+✖ failing tests:
+
+test at modules/piano/test/ear-training.test.mjs:9:1
+✖ audio catalog is chromatic, complete, and backed by actual recordings (3.766149ms)
+  Error: Unimplemented piano: js/music/ear-training.js:EAR_TRAINING_NOTES
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/ear-training.test.mjs:10:35)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)
+
+test at modules/piano/test/ear-training.test.mjs:17:1
+✖ recordings, named interval, and exact keyboard keys agree for every interval (0.402581ms)
+  Error: Unimplemented piano: js/music/ear-training.js:randomEarTrainingQuestion
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/ear-training.test.mjs:20:24)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:12:1
+✖ fitted keyboards start one white key before the lowest note across octave boundaries (0.388385ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:14:21)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:24:1
+✖ explicit ranges override whole octaves and respect MIDI boundaries (0.30572ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:26:21)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:33:1
+✖ exact notes select C4 and C5 independently; pitch classes repeat (0.206737ms)
+  Error: Unimplemented piano: js/components/keyboard-diagram.js:drawKeyboard
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:34:33)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:40:1
+✖ enharmonic spellings cross the scientific-octave boundary correctly (0.208961ms)
+  Error: Unimplemented piano: js/music/notes.js:noteToMidi
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:41:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:50:1
+✖ compound intervals retain their distance across the C boundary (0.960986ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:51:19)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:57:1
+✖ every extended chord preserves supplied compound intervals (0.228176ms)
+  Error: Unimplemented piano: js/music/chords.js:EXTENDED_CHORD_TYPE_NAMES
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:59:24)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:69:1
+✖ bass-first inversion stays ascending and retains role metadata (0.282627ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:70:19)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:76:1
+✖ explicit registers take precedence over inferred ascending placement (0.315478ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:77:19)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:82:1
+✖ invalid ranges, notes, labels and out-of-range exact notes are rejected (2.54461ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+
+  Error message:
+
+  Unimplemented piano: js/components/keyboard-diagram.js:drawKeyboard
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:84:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Unimplemented piano: js/components/keyboard-diagram.js:drawKeyboard
+        at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+        at file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:84:25
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:84:12)
+        at Test.runInAsyncScope (node:async_hooks:228:14)
+        at Test.run (node:internal/test_runner/test:1118:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+        at Test.postRun (node:internal/test_runner/test:1247:19)
+        at Test.run (node:internal/test_runner/test:1175:12),
+    expected: [Function: RangeError],
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at modules/piano/test/keyboard-diagram.test.mjs:97:1
+✖ arbitrary role and display text are preserved with HTML escaping (0.185116ms)
+  Error: Unimplemented piano: js/components/keyboard-diagram.js:drawKeyboard
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:98:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:109:1
+✖ label settings control rendered labels while retaining accessible descriptions (0.167623ms)
+  Error: Unimplemented piano: js/components/keyboard-diagram.js:drawKeyboard
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:110:17)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:117:1
+✖ voicing, rendering and compatibility adapter never mutate their input (0.211395ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:121:19)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:128:1
+✖ exercise keyboards are absent until reveal, including all answer text (1.691287ms)
+  Error: Unimplemented piano: js/components/exercise-shell.js:buildExerciseCardHTML
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:130:18)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-motion.test.mjs:7:1
+✖ guide-tone keyboards preserve each voice’s nearest motion across every root (0.207117ms)
+  Error: Unimplemented piano: js/music/notes.js:CHROMATIC_FLATS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-motion.test.mjs:8:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-motion.test.mjs:32:1
+✖ guide-tone motion crosses B to C without dropping an octave (2.332884ms)
+  Error: Unimplemented piano: js/music/voice-leading.js:getKeyboardMotion
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-motion.test.mjs:33:28)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:9:1
+✖ guided ninth recall and application retain the compound interval (0.190736ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:10:26)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:20:1
+✖ curriculum covers every stage with a continuous prerequisite chain and usable modes (0.186157ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:21:32)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:42:1
+✖ all lesson recall variants produce revealable answers with valid pitch classes (1.10389ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:43:24)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:58:1
+✖ major guide-tone questions follow F, F, E and explain the resolution (0.175037ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:59:26)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:66:1
+✖ transfer prompts change keys only after a complete progression (0.197509ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:67:26)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:75:1
+✖ blues follows the complete twelve-bar form and wraps (0.153617ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:76:26)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:82:1
+✖ minor and modal lessons preserve characteristic spellings (0.158926ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:83:25)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:9:1
+✖ spells intervals by letter in both directions and preserves chromatic transpose (0.175187ms)
+  Error: Unimplemented piano: js/music/notes.js:spellInterval
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:10:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:22:1
+✖ recognizes enharmonics and double accidentals (0.170609ms)
+  Error: Unimplemented piano: js/music/notes.js:noteToIndex
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:24:18)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:29:1
+✖ chord tones and tensions retain theoretical spelling (5.744322ms)
+  Error: Unimplemented piano: js/music/chords.js:getChordTones
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:30:20)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:37:1
+✖ every chord tone remains on its intended pitch for all standard roots (0.20329ms)
+  Error: Unimplemented piano: js/music/notes.js:getChromaticNotes
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:38:34)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:45:1
+✖ question root pools and numeric degree filters constrain practice (0.172422ms)
+  Error: Unimplemented piano: js/music/intervals.js:randomIntervalQuestion
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:46:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:55:1
+✖ keyboard maps enharmonic pitches and retains an accessible escaped legend (0.173634ms)
+  Error: Unimplemented piano: js/components/keyboard-diagram.js:buildKeyboardDiagramHTML
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:56:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/navigation-data.test.mjs:7:1
+✖ every catalog destination has exactly one existing page loader (0.605781ms)
+  Error: Unimplemented piano: js/components/navigation-data.js:DESTINATIONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/navigation-data.test.mjs:8:37)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/navigation-data.test.mjs:24:1
+✖ library links and search aliases use canonical destinations (0.247552ms)
+  Error: Unimplemented piano: js/components/navigation-data.js:LIBRARY_GROUPS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/navigation-data.test.mjs:25:32)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/practice-session.test.mjs:6:1
+✖ ten-minute sessions reserve time for explanation, recall, application, and review (0.123601ms)
+  Error: Unimplemented piano: js/components/practice-session.js:allocateSessionSeconds
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/practice-session.test.mjs:7:20)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/practice-session.test.mjs:10:1
+✖ every supported session duration preserves the budget and includes all four blocks (0.190316ms)
+  Error: Unimplemented piano: js/components/practice-session.js:allocateSessionSeconds
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/practice-session.test.mjs:12:20)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/practice-session.test.mjs:21:1
+✖ invalid or unsupported durations cannot produce an unusable session (0.319036ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+
+  Error message:
+
+  Unimplemented piano: js/components/practice-session.js:allocateSessionSeconds
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/practice-session.test.mjs:23:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Unimplemented piano: js/components/practice-session.js:allocateSessionSeconds
+        at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+        at file:///workspaces/daily/modules/piano/test/practice-session.test.mjs:23:25
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/practice-session.test.mjs:23:12)
+        at Test.runInAsyncScope (node:async_hooks:228:14)
+        at Test.run (node:internal/test_runner/test:1118:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+        at Test.postRun (node:internal/test_runner/test:1247:19)
+        at Test.run (node:internal/test_runner/test:1175:12),
+    expected: [Function: RangeError],
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at modules/piano/test/rootless-keyboard.test.mjs:14:1
+✖ rootless keyboards preserve exact formula offsets and hand labels for every root and type (0.38057ms)
+  Error: Unimplemented piano: js/music/notes.js:CHROMATIC_FLATS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:15:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/rootless-keyboard.test.mjs:33:1
+✖ half-diminished B keeps its crossing voices instead of ascending them an extra octave (0.188141ms)
+  Error: Unimplemented piano: js/music/rootless-voicings.js:getRootlessVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at step (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:10:17)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:34:44)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/rootless-keyboard.test.mjs:38:1
+✖ ii–V–I chooses minimum total voice motion while preserving whole chord formulas (0.200193ms)
+  Error: Unimplemented piano: js/music/notes.js:CHROMATIC_FLATS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:39:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/rootless-keyboard.test.mjs:69:1
+✖ G major rootless cadence resolves C down to B across the octave boundary (0.886825ms)
+  Error: Unimplemented piano: js/music/rootless-voicings.js:getRootlessVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at step (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:10:17)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:70:43)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/service-worker.test.mjs:7:1
+✖ precache requests are unique and backed by repository assets (0.308977ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/piano/src/sw.js'
+      at readFileSync (node:fs:440:20)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/service-worker.test.mjs:8:18)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/piano/src/sw.js'
+  }
+
+test at modules/piano/test/suspended-chords.test.mjs:8:1
+✖ suspensions resolve to the target chord while retaining extensions in every key (0.624746ms)
+  Error: Unimplemented piano: js/music/notes.js:CHROMATIC_FLATS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/suspended-chords.test.mjs:10:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)

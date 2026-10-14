@@ -1,0 +1,2129 @@
+Suite: general
+✔ missing modules fail when exercised rather than preventing test discovery (2.924845ms)
+✔ new browser tests target the Pages path and module hash (0.446712ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.905894
+Suite: plants
+✖ valid legacy data remains readable when its migration write fails (1.083616ms)
+✖ care log and next-due override are committed in one primary write (0.230041ms)
+✖ validation failures use the storage-error notification path (0.928906ms)
+✖ builds a stable watering title (0.273545ms)
+✖ shortcut URL carries the exact title, date, and project (0.163773ms)
+✖ enabled integration requires a project (0.310811ms)
+✖ settings round-trip and normalize project whitespace (0.118896ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.265696
+
+✖ failing tests:
+
+test at modules/plants/test/store.test.mjs:48:1
+✖ valid legacy data remains readable when its migration write fails (1.083616ms)
+  Error: Unimplemented plants: store/store.js:getPlants
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/store.test.mjs:54:26)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)
+
+test at modules/plants/test/store.test.mjs:57:1
+✖ care log and next-due override are committed in one primary write (0.230041ms)
+  Error: Unimplemented plants: store/store.js:getPlants
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/store.test.mjs:69:9)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/plants/test/store.test.mjs:97:1
+✖ validation failures use the storage-error notification path (0.928906ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /registro inválido/. Input:
+
+  'Error: Unimplemented plants: store/store.js:savePlants'
+
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/store.test.mjs:108:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Unimplemented plants: store/store.js:savePlants
+        at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+        at file:///workspaces/daily/modules/plants/test/store.test.mjs:109:17
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/store.test.mjs:108:10)
+        at Test.runInAsyncScope (node:async_hooks:228:14)
+        at Test.run (node:internal/test_runner/test:1118:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+        at Test.postRun (node:internal/test_runner/test:1247:19)
+        at Test.run (node:internal/test_runner/test:1175:12),
+    expected: /registro inválido/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at modules/plants/test/things.test.mjs:13:1
+✖ builds a stable watering title (0.273545ms)
+  Error: Unimplemented plants: integrations/things.js:wateringReminderTitle
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things.test.mjs:14:23)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/plants/test/things.test.mjs:17:1
+✖ shortcut URL carries the exact title, date, and project (0.163773ms)
+  Error: Unimplemented plants: integrations/things.js:buildThingsShortcutURL
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things.test.mjs:18:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/plants/test/things.test.mjs:36:1
+✖ enabled integration requires a project (0.310811ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /nombre del proyecto/. Input:
+
+  'Error: Unimplemented plants: integrations/things.js:saveThingsSettings'
+
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things.test.mjs:38:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Unimplemented plants: integrations/things.js:saveThingsSettings
+        at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+        at file:///workspaces/daily/modules/plants/test/things.test.mjs:39:18
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things.test.mjs:38:10)
+        at Test.runInAsyncScope (node:async_hooks:228:14)
+        at Test.run (node:internal/test_runner/test:1118:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+        at Test.postRun (node:internal/test_runner/test:1247:19)
+        at Test.run (node:internal/test_runner/test:1175:12),
+    expected: /nombre del proyecto/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at modules/plants/test/things.test.mjs:44:1
+✖ settings round-trip and normalize project whitespace (0.118896ms)
+  Error: Unimplemented plants: integrations/things.js:saveThingsSettings
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things.test.mjs:46:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+Suite: coffee
+[WebServer] (node:11153) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 21 tests using 1 worker
+
+(node:11245) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 modules/coffee/e2e/backup.spec.js:5:1 › legacy imports keep merge tools and trigger setup after replace (5.6s)
+(node:11528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 modules/coffee/e2e/backup.spec.js:62:1 › exports data and imports merge, replace, and invalid backups (5.4s)
+(node:11785) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 modules/coffee/e2e/history-detail.spec.js:4:1 › sorts, filters, opens, edits, cancels, and deletes history entries (5.4s)
+(node:12024) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 modules/coffee/e2e/history-detail.spec.js:69:1 › switches history between compact and detailed views and remembers the choice (5.4s)
+(node:12276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   5 modules/coffee/e2e/history-detail.spec.js:96:1 › compact history rows fit on mobile (5.5s)
+(node:12516) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 modules/coffee/e2e/history-detail.spec.js:111:1 › new entries created through the UI are listed in history (5.6s)
+(node:12746) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 modules/coffee/e2e/insights.spec.js:4:1 › shows empty insights and updates metrics from stored drinks (5.4s)
+(node:13011) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 modules/coffee/e2e/new-shot.spec.js:4:1 › creates a complete espresso drink, previews ratio, and persists it (5.4s)
+(node:13259) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 modules/coffee/e2e/new-shot.spec.js:33:1 › creates an americano with water to coffee ratio (5.4s)
+(node:13488) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 modules/coffee/e2e/new-shot.spec.js:50:1 › creates a milk drink and clears hidden composition fields after type switch (5.3s)
+(node:13712) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 modules/coffee/e2e/new-shot.spec.js:74:1 › manage button routes to settings and invalid drink shows validation toast (5.4s)
+(node:13972) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  12 modules/coffee/e2e/new-shot.spec.js:89:1 › clear button empties the selected bean (5.4s)
+(node:14194) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  13 modules/coffee/e2e/new-shot.spec.js:102:1 › score slider can be set after skipping (5.4s)
+(node:14413) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  14 modules/coffee/e2e/new-shot.spec.js:117:1 › taste info buttons explain the rating fields (5.4s)
+(node:14685) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  15 modules/coffee/e2e/settings-data.spec.js:6:1 › creates, edits, deletes beans, and blocks deleting a used bean (5.4s)
+(node:14926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  16 modules/coffee/e2e/settings-data.spec.js:38:1 › saves settings and persists theme (5.4s)
+(node:15143) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  17 modules/coffee/e2e/settings-data.spec.js:72:1 › switches to Spanish and persists translated UI (5.4s)
+(node:15371) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  18 modules/coffee/e2e/settings-data.spec.js:95:1 › reminds when data has not been exported recently and records exports (5.4s)
+(node:15637) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  19 modules/coffee/e2e/settings-data.spec.js:114:1 › shows the backup reminder on New and routes it to settings export (5.3s)
+(node:15845) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  20 modules/coffee/e2e/settings-data.spec.js:129:1 › asks for tools once and hides unavailable prep controls (5.3s)
+(node:16096) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  21 modules/coffee/e2e/settings-data.spec.js:157:1 › skip tools setup saves no optional tools and entries keep explicit prep values (5.4s)
+
+
+  1) modules/coffee/e2e/backup.spec.js:5:1 › legacy imports keep merge tools and trigger setup after replace
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      24 |     }
+      25 |   }));
+    > 26 |   await page.getByTestId(testIds.navSettings).click();
+         |                                               ^
+      27 |   await page.getByTestId(testIds.importData).setInputFiles({
+      28 |     name: "legacy-merge.json",
+      29 |     mimeType: "application/json",
+        at /workspaces/daily/modules/coffee/e2e/backup.spec.js:26:47
+
+    Error Context: test-results/backup-legacy-imports-keep-9db42-trigger-setup-after-replace/error-context.md
+
+  2) modules/coffee/e2e/backup.spec.js:62:1 › exports data and imports merge, replace, and invalid backups
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      66 |     entries: [entry({ id: "entry-original", meta: { beanPresetId: house.id } })]
+      67 |   }));
+    > 68 |   await page.getByTestId(testIds.navSettings).click();
+         |                                               ^
+      69 |
+      70 |   const downloadPromise = page.waitForEvent("download");
+      71 |   await page.getByTestId(testIds.exportData).click();
+        at /workspaces/daily/modules/coffee/e2e/backup.spec.js:68:47
+
+    Error Context: test-results/backup-exports-data-and-im-4e6bc-replace-and-invalid-backups/error-context.md
+
+  3) modules/coffee/e2e/history-detail.spec.js:4:1 › sorts, filters, opens, edits, cancels, and deletes history entries
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-history')
+
+
+      14 |   const fields = appLocators(page);
+      15 |
+    > 16 |   await page.getByTestId(testIds.navHistory).click();
+         |                                              ^
+      17 |   await expect(page.getByTestId(testIds.entryRow)).toHaveCount(2);
+      18 |   await expect(page.getByTestId(testIds.historyViewCompact)).toHaveAttribute("aria-pressed", "true");
+      19 |   await expect(page.getByTestId(testIds.entryRow).first()).toContainText("Yield40g");
+        at /workspaces/daily/modules/coffee/e2e/history-detail.spec.js:16:46
+
+    Error Context: test-results/history-detail-sorts-filte-3fb0e-and-deletes-history-entries/error-context.md
+
+  4) modules/coffee/e2e/history-detail.spec.js:69:1 › switches history between compact and detailed views and remembers the choice
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-history')
+
+
+      76 |   }));
+      77 |
+    > 78 |   await page.getByTestId(testIds.navHistory).click();
+         |                                              ^
+      79 |   await expect(page.getByTestId(testIds.historyViewCompact)).toHaveAttribute("aria-pressed", "true");
+      80 |   await expect(page.getByTestId(testIds.entryRow)).toContainText("DF5414.5");
+      81 |   await expect(page.getByTestId(testIds.entryRow)).toContainText("Yield40g");
+        at /workspaces/daily/modules/coffee/e2e/history-detail.spec.js:78:46
+
+    Error Context: test-results/history-detail-switches-hi-8a3f0-ws-and-remembers-the-choice/error-context.md
+
+  5) modules/coffee/e2e/history-detail.spec.js:96:1 › compact history rows fit on mobile ───────────
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-history')
+
+
+      103 |   }));
+      104 |
+    > 105 |   await page.getByTestId(testIds.navHistory).click();
+          |                                              ^
+      106 |   await expect(page.getByTestId(testIds.entryRow)).toContainText("Flat white");
+      107 |   const overflows = await page.getByTestId(testIds.entryRow).evaluate((row) => row.scrollWidth > row.clientWidth);
+      108 |   expect(overflows).toBe(false);
+        at /workspaces/daily/modules/coffee/e2e/history-detail.spec.js:105:46
+
+    Error Context: test-results/history-detail-compact-history-rows-fit-on-mobile/error-context.md
+
+  6) modules/coffee/e2e/history-detail.spec.js:111:1 › new entries created through the UI are listed in history
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-new')
+
+
+       at helpers.js:199
+
+      197 |
+      198 | export async function createShotThroughUi(page, overrides) {
+    > 199 |   await page.getByTestId(testIds.navNew).click();
+          |                                          ^
+      200 |   await fillShotForm(page, overrides);
+      201 |   await page.getByTestId(testIds.saveShot).click();
+      202 |   await expectToast(page, "Drink saved.");
+        at createShotThroughUi (/workspaces/daily/modules/coffee/e2e/helpers.js:199:42)
+        at /workspaces/daily/modules/coffee/e2e/history-detail.spec.js:113:9
+
+    Error Context: test-results/history-detail-new-entries-42ca4-he-UI-are-listed-in-history/error-context.md
+
+  7) modules/coffee/e2e/insights.spec.js:4:1 › shows empty insights and updates metrics from stored drinks
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-insights')
+
+
+      4 | test("shows empty insights and updates metrics from stored drinks", async ({ page }) => {
+      5 |   await gotoApp(page);
+    > 6 |   await page.getByTestId(testIds.navInsights).click();
+        |                                               ^
+      7 |
+      8 |   await expect(page.getByTestId(testIds.insightGrid)).toContainText("Logged drinks0");
+      9 |   await expect(page.getByTestId(testIds.bestCup)).toContainText("No scored drinks yet");
+        at /workspaces/daily/modules/coffee/e2e/insights.spec.js:6:47
+
+    Error Context: test-results/insights-shows-empty-insig-5f101--metrics-from-stored-drinks/error-context.md
+
+  8) modules/coffee/e2e/new-shot.spec.js:4:1 › creates a complete espresso drink, previews ratio, and persists it
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'New Drink' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'New Drink' })
+
+
+       6 |   const fields = appLocators(page);
+       7 |
+    >  8 |   await expect(page.getByRole("heading", { name: "New Drink" })).toBeVisible();
+         |                                                                  ^
+       9 |   await expect(fields.beanSearch).toHaveValue("");
+      10 |   await expect(fields.drinkType).toHaveValue("espresso");
+      11 |
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:8:66
+
+    Error Context: test-results/new-shot-creates-a-complet-dea15-views-ratio-and-persists-it/error-context.md
+
+  9) modules/coffee/e2e/new-shot.spec.js:33:1 › creates an americano with water to coffee ratio ────
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#beanSearch')
+
+
+       at helpers.js:170
+
+      168 |
+      169 |   if (values.beanSearch !== null) {
+    > 170 |     await fields.beanSearch.fill(values.beanSearch);
+          |                             ^
+      171 |     await fields.beanSearch.dispatchEvent("change");
+      172 |   }
+      173 |   await fields.brewedAt.fill(values.brewedAt);
+        at fillShotForm (/workspaces/daily/modules/coffee/e2e/helpers.js:170:29)
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:37:9
+
+    Error Context: test-results/new-shot-creates-an-americano-with-water-to-coffee-ratio/error-context.md
+
+  10) modules/coffee/e2e/new-shot.spec.js:50:1 › creates a milk drink and clears hidden composition fields after type switch
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#beanSearch')
+
+
+       at helpers.js:170
+
+      168 |
+      169 |   if (values.beanSearch !== null) {
+    > 170 |     await fields.beanSearch.fill(values.beanSearch);
+          |                             ^
+      171 |     await fields.beanSearch.dispatchEvent("change");
+      172 |   }
+      173 |   await fields.brewedAt.fill(values.brewedAt);
+        at fillShotForm (/workspaces/daily/modules/coffee/e2e/helpers.js:170:29)
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:54:9
+
+    Error Context: test-results/new-shot-creates-a-milk-dr-bfd0a-on-fields-after-type-switch/error-context.md
+
+  11) modules/coffee/e2e/new-shot.spec.js:74:1 › manage button routes to settings and invalid drink shows validation toast
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('#beanSearch')
+    Expected: ""
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('#beanSearch')
+
+
+      76 |   const fields = appLocators(page);
+      77 |
+    > 78 |   await expect(fields.beanSearch).toHaveValue("");
+         |                                   ^
+      79 |   await page.getByTestId(testIds.manageBeans).click();
+      80 |   await expect(page.getByRole("heading", { name: "Settings" })).toBeVisible();
+      81 |
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:78:35
+
+    Error Context: test-results/new-shot-manage-button-rou-54497-rink-shows-validation-toast/error-context.md
+
+  12) modules/coffee/e2e/new-shot.spec.js:89:1 › clear button empties the selected bean ────────────
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#beanSearch')
+
+
+      91 |   const fields = appLocators(page);
+      92 |
+    > 93 |   await fields.beanSearch.fill("House / First Dial-In");
+         |                           ^
+      94 |   await fields.beanSearch.dispatchEvent("change");
+      95 |   await page.getByTestId(testIds.clearBean).click();
+      96 |
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:93:27
+
+    Error Context: test-results/new-shot-clear-button-empties-the-selected-bean/error-context.md
+
+  13) modules/coffee/e2e/new-shot.spec.js:102:1 › score slider can be set after skipping ───────────
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#beanSearch')
+
+
+       at helpers.js:170
+
+      168 |
+      169 |   if (values.beanSearch !== null) {
+    > 170 |     await fields.beanSearch.fill(values.beanSearch);
+          |                             ^
+      171 |     await fields.beanSearch.dispatchEvent("change");
+      172 |   }
+      173 |   await fields.brewedAt.fill(values.brewedAt);
+        at fillShotForm (/workspaces/daily/modules/coffee/e2e/helpers.js:170:29)
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:106:9
+
+    Error Context: test-results/new-shot-score-slider-can-be-set-after-skipping/error-context.md
+
+  14) modules/coffee/e2e/new-shot.spec.js:117:1 › taste info buttons explain the rating fields ─────
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'About Acidity/brightness' })
+
+
+      118 |   await gotoApp(page);
+      119 |
+    > 120 |   await page.getByRole("button", { name: "About Acidity/brightness" }).click();
+          |                                                                        ^
+      121 |   await expect(page.getByRole("dialog", { name: "Acidity/brightness" })).toBeVisible();
+      122 |   await expect(page.getByRole("dialog")).toContainText("too much can taste sour");
+      123 |   await expect(page.getByRole("dialog")).toContainText("Does it lean unpleasantly sour or sharp?");
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:120:72
+
+    Error Context: test-results/new-shot-taste-info-buttons-explain-the-rating-fields/error-context.md
+
+  15) modules/coffee/e2e/settings-data.spec.js:6:1 › creates, edits, deletes beans, and blocks deleting a used bean
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      10 |     entries: [entry({ meta: { beanPresetId: usedBean.id } })]
+      11 |   }));
+    > 12 |   await page.getByTestId(testIds.navSettings).click();
+         |                                               ^
+      13 |   const fields = appLocators(page);
+      14 |
+      15 |   await fields.beanBrand.fill("Guest");
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:12:47
+
+    Error Context: test-results/settings-data-creates-edit-ac735-blocks-deleting-a-used-bean/error-context.md
+
+  16) modules/coffee/e2e/settings-data.spec.js:38:1 › saves settings and persists theme ────────────
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      38 | test("saves settings and persists theme", async ({ page }) => {
+      39 |   await gotoApp(page);
+    > 40 |   await page.getByTestId(testIds.navSettings).click();
+         |                                               ^
+      41 |
+      42 |   const {
+      43 |     burrTouchReference,
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:40:47
+
+    Error Context: test-results/settings-data-saves-settings-and-persists-theme/error-context.md
+
+  17) modules/coffee/e2e/settings-data.spec.js:72:1 › switches to Spanish and persists translated UI
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      72 | test("switches to Spanish and persists translated UI", async ({ page }) => {
+      73 |   await gotoApp(page);
+    > 74 |   await page.getByTestId(testIds.navSettings).click();
+         |                                               ^
+      75 |
+      76 |   const { html, language } = appLocators(page);
+      77 |   await language.selectOption("es");
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:74:47
+
+    Error Context: test-results/settings-data-switches-to-Spanish-and-persists-translated-UI/error-context.md
+
+  18) modules/coffee/e2e/settings-data.spec.js:95:1 › reminds when data has not been exported recently and records exports
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      100 |     }
+      101 |   }));
+    > 102 |   await page.getByTestId(testIds.navSettings).click();
+          |                                               ^
+      103 |   await expect(page.getByTestId(testIds.exportReminder)).toContainText("Last export was");
+      104 |
+      105 |   const downloadPromise = page.waitForEvent("download");
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:102:47
+
+    Error Context: test-results/settings-data-reminds-when-40381-ecently-and-records-exports/error-context.md
+
+  19) modules/coffee/e2e/settings-data.spec.js:114:1 › shows the backup reminder on New and routes it to settings export
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('new-export-reminder')
+    Expected substring: "No backup export has been recorded"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('new-export-reminder')
+
+
+      120 |   }));
+      121 |
+    > 122 |   await expect(page.getByTestId(testIds.newExportReminder)).toContainText("No backup export has been recorded");
+          |                                                             ^
+      123 |   await expect(page.locator("#app > :first-child")).toHaveAttribute("data-testid", testIds.newExportReminder);
+      124 |   await page.getByTestId(testIds.newExportReminder).click();
+      125 |   await expect(page.getByRole("heading", { name: "Settings" })).toBeVisible();
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:122:61
+
+    Error Context: test-results/settings-data-shows-the-ba-5c0b2-outes-it-to-settings-export/error-context.md
+
+  20) modules/coffee/e2e/settings-data.spec.js:129:1 › asks for tools once and hides unavailable prep controls
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('tools-setup-form')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('tools-setup-form')
+
+
+      137 |
+      138 |   await page.goto(appURL("coffee"));
+    > 139 |   await expect(page.getByTestId(testIds.toolsSetupForm)).toBeVisible();
+          |                                                          ^
+      140 |   await expect(wdtTool).not.toBeChecked();
+      141 |
+      142 |   await setToggle(page, fieldIds.toolWdt, true);
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:139:58
+
+    Error Context: test-results/settings-data-asks-for-too-d168e-s-unavailable-prep-controls/error-context.md
+
+  21) modules/coffee/e2e/settings-data.spec.js:157:1 › skip tools setup saves no optional tools and entries keep explicit prep values
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('skip-tools-setup')
+
+
+      164 |
+      165 |   await page.goto(appURL("coffee"));
+    > 166 |   await page.getByTestId(testIds.skipToolsSetup).click();
+          |                                                  ^
+      167 |   await expectToast(page, "Tools saved.");
+      168 |   await expect(wdtUsed).toHaveCount(0);
+      169 |   await expect(distributorUsed).toHaveCount(0);
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:166:50
+
+    Error Context: test-results/settings-data-skip-tools-s-87327-s-keep-explicit-prep-values/error-context.md
+
+  21 failed
+    modules/coffee/e2e/backup.spec.js:5:1 › legacy imports keep merge tools and trigger setup after replace
+    modules/coffee/e2e/backup.spec.js:62:1 › exports data and imports merge, replace, and invalid backups
+    modules/coffee/e2e/history-detail.spec.js:4:1 › sorts, filters, opens, edits, cancels, and deletes history entries
+    modules/coffee/e2e/history-detail.spec.js:69:1 › switches history between compact and detailed views and remembers the choice
+    modules/coffee/e2e/history-detail.spec.js:96:1 › compact history rows fit on mobile ────────────
+    modules/coffee/e2e/history-detail.spec.js:111:1 › new entries created through the UI are listed in history
+    modules/coffee/e2e/insights.spec.js:4:1 › shows empty insights and updates metrics from stored drinks
+    modules/coffee/e2e/new-shot.spec.js:4:1 › creates a complete espresso drink, previews ratio, and persists it
+    modules/coffee/e2e/new-shot.spec.js:33:1 › creates an americano with water to coffee ratio ─────
+    modules/coffee/e2e/new-shot.spec.js:50:1 › creates a milk drink and clears hidden composition fields after type switch
+    modules/coffee/e2e/new-shot.spec.js:74:1 › manage button routes to settings and invalid drink shows validation toast
+    modules/coffee/e2e/new-shot.spec.js:89:1 › clear button empties the selected bean ──────────────
+    modules/coffee/e2e/new-shot.spec.js:102:1 › score slider can be set after skipping ─────────────
+    modules/coffee/e2e/new-shot.spec.js:117:1 › taste info buttons explain the rating fields ───────
+    modules/coffee/e2e/settings-data.spec.js:6:1 › creates, edits, deletes beans, and blocks deleting a used bean
+    modules/coffee/e2e/settings-data.spec.js:38:1 › saves settings and persists theme ──────────────
+    modules/coffee/e2e/settings-data.spec.js:72:1 › switches to Spanish and persists translated UI ─
+    modules/coffee/e2e/settings-data.spec.js:95:1 › reminds when data has not been exported recently and records exports
+    modules/coffee/e2e/settings-data.spec.js:114:1 › shows the backup reminder on New and routes it to settings export
+    modules/coffee/e2e/settings-data.spec.js:129:1 › asks for tools once and hides unavailable prep controls
+    modules/coffee/e2e/settings-data.spec.js:157:1 › skip tools setup saves no optional tools and entries keep explicit prep values
+Suite: games
+[WebServer] (node:16380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 24 tests using 1 worker
+
+(node:16404) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 modules/games/e2e/gameplay-2.spec.js:5:1 › keeps history filters collapsed and summarizes active filters (5.4s)
+(node:16618) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 modules/games/e2e/gameplay-2.spec.js:24:1 › starts enters edits and finishes a score session (5.6s)
+(node:16897) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 modules/games/e2e/gameplay-2.spec.js:83:1 › opens completed game details without editing first (5.4s)
+(node:17120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 modules/games/e2e/gameplay-3.spec.js:7:1 › tracks session duration and game duration analytics (5.7s)
+(node:17357) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   5 modules/games/e2e/gameplay-3.spec.js:41:1 › shows player average scores by game instead of blending scoring systems (5.4s)
+(node:17634) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 modules/games/e2e/gameplay-4.spec.js:7:1 › first to points ranks the highest live total as leader (5.3s)
+(node:17878) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 modules/games/e2e/gameplay-4.spec.js:25:1 › shows first to points target reached as a toast (5.4s)
+(node:18107) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 modules/games/e2e/gameplay-4.spec.js:50:1 › records win loss tie results (5.3s)
+(node:18330) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 modules/games/e2e/gameplay-4.spec.js:69:1 › preserves scoring settings while collaborative mode is enabled (5.4s)
+(node:18587) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 modules/games/e2e/gameplay-4.spec.js:90:1 › records one team result and keeps collaborative stats separate (5.3s)
+(node:18793) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 modules/games/e2e/gameplay.spec.js:5:1 › creates edits and archives a player (5.4s)
+(node:19047) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  12 modules/games/e2e/gameplay.spec.js:20:1 › creates edits and archives a game definition (5.5s)
+(node:19351) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  13 modules/games/e2e/gameplay.spec.js:35:1 › shows only scoring fields required by selected game mode (5.5s)
+(node:19598) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  14 modules/games/e2e/gameplay.spec.js:51:1 › hides game form while a session is active (5.3s)
+(node:19832) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  15 modules/games/e2e/gameplay.spec.js:64:1 › hides play setup form while a session is active (5.4s)
+(node:20133) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  16 modules/games/e2e/gameplay.spec.js:76:1 › excludes archived players from new play setup without deleting history (5.3s)
+(node:20368) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  17 modules/games/e2e/gameplay.spec.js:111:1 › shows app messages as dismissible fixed toasts (5.3s)
+(node:20645) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  18 modules/games/e2e/import-export.spec.js:5:1 › exports full JSON and replace-import restores data (5.3s)
+(node:20865) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  19 modules/games/e2e/import-export.spec.js:37:1 › rejects malformed nested backup data without replacing local data (5.3s)
+(node:21088) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  20 modules/games/e2e/settings.spec.js:4:1 › persists theme and language settings (5.4s)
+(node:21344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  21 modules/games/e2e/settings.spec.js:18:1 › shows backup reminder before a successful export (5.4s)
+(node:21599) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  22 modules/games/e2e/settings.spec.js:28:1 › shows backup reminder age when the last export is stale (5.4s)
+(node:21864) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  23 modules/games/e2e/smoke.spec.js:4:1 › loads mobile-first primary navigation (5.8s)
+(node:22200) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  24 modules/games/e2e/smoke.spec.js:12:1 › registers service worker path over http (5.6s)
+
+
+  1) modules/games/e2e/gameplay-2.spec.js:5:1 › keeps history filters collapsed and summarizes active filters
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |   await page.evaluate(() => localStorage.clear());
+      68 |   await page.goto(appURL("games"));
+    > 69 |   await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                           ^
+      70 | }
+      71 |
+      72 | export async function createPlayer(page, name) {
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay-2.spec.js:6:3
+
+    Error Context: test-results/gameplay-2-keeps-history-f-f08fc-d-summarizes-active-filters/error-context.md
+
+  2) modules/games/e2e/gameplay-2.spec.js:24:1 › starts enters edits and finishes a score session ──
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |   await page.evaluate(() => localStorage.clear());
+      68 |   await page.goto(appURL("games"));
+    > 69 |   await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                           ^
+      70 | }
+      71 |
+      72 | export async function createPlayer(page, name) {
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay-2.spec.js:25:3
+
+    Error Context: test-results/gameplay-2-starts-enters-edits-and-finishes-a-score-session/error-context.md
+
+  3) modules/games/e2e/gameplay-2.spec.js:83:1 › opens completed game details without editing first
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |   await page.evaluate(() => localStorage.clear());
+      68 |   await page.goto(appURL("games"));
+    > 69 |   await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                           ^
+      70 | }
+      71 |
+      72 | export async function createPlayer(page, name) {
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay-2.spec.js:84:3
+
+    Error Context: test-results/gameplay-2-opens-completed-7458e-tails-without-editing-first/error-context.md
+
+  4) modules/games/e2e/gameplay-3.spec.js:7:1 › tracks session duration and game duration analytics
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('history-item').filter({ hasText: 'Dutch Blitz' }).first().getByTestId('history-duration')
+    Expected substring: "10 min"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('history-item').filter({ hasText: 'Dutch Blitz' }).first().getByTestId('history-duration')
+
+
+      17 |   await page.goto(appURL("games", "history"));
+      18 |   const latest = page.getByTestId(testIds.historyItem).filter({ hasText: "Dutch Blitz" }).first();
+    > 19 |   await expect(latest.getByTestId(testIds.historyDuration)).toContainText("10 min");
+         |                                                             ^
+      20 |
+      21 |   page.once("dialog", (dialog) => dialog.accept());
+      22 |   await latest.getByRole("button", { name: "Edit" }).click();
+        at /workspaces/daily/modules/games/e2e/gameplay-3.spec.js:19:61
+
+    Error Context: test-results/gameplay-3-tracks-session--3a740-and-game-duration-analytics/error-context.md
+
+  5) modules/games/e2e/gameplay-3.spec.js:41:1 › shows player average scores by game instead of blending scoring systems
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.stat-card').filter({ hasText: 'Ada' }).first()
+    Expected substring: "Azul"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('.stat-card').filter({ hasText: 'Ada' }).first()
+
+
+      52 |
+      53 |   const adaCard = page.locator(".stat-card").filter({ hasText: "Ada" }).first();
+    > 54 |   await expect(adaCard).toContainText("Azul");
+         |                         ^
+      55 |   await expect(adaCard).toContainText("75");
+      56 |   await expect(adaCard).toContainText("Dutch Blitz");
+      57 |   await expect(adaCard).toContainText("500");
+        at /workspaces/daily/modules/games/e2e/gameplay-3.spec.js:54:25
+
+    Error Context: test-results/gameplay-3-shows-player-av-7de6e-of-blending-scoring-systems/error-context.md
+
+  6) modules/games/e2e/gameplay-4.spec.js:7:1 › first to points ranks the highest live total as leader
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('session-total').first()
+    Expected substring: "Leader"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('session-total').first()
+
+
+      17 |   await page.goto(appURL("games", "session"));
+      18 |
+    > 19 |   await expect(page.getByTestId(testIds.sessionTotal).first()).toContainText("Leader");
+         |                                                                ^
+      20 |   await expect(page.getByTestId(testIds.sessionTotal).first()).toContainText("232");
+      21 |   await expect(page.getByTestId(testIds.sessionTotal).first()).toContainText("Majo");
+      22 |   await expect(page.getByText("Majo leads with 232 - round total 254")).toBeVisible();
+        at /workspaces/daily/modules/games/e2e/gameplay-4.spec.js:19:64
+
+    Error Context: test-results/gameplay-4-first-to-points-dbf9d-ighest-live-total-as-leader/error-context.md
+
+  7) modules/games/e2e/gameplay-4.spec.js:25:1 › shows first to points target reached as a toast ───
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |   await page.evaluate(() => localStorage.clear());
+      68 |   await page.goto(appURL("games"));
+    > 69 |   await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                           ^
+      70 | }
+      71 |
+      72 | export async function createPlayer(page, name) {
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay-4.spec.js:26:3
+
+    Error Context: test-results/gameplay-4-shows-first-to-points-target-reached-as-a-toast/error-context.md
+
+  8) modules/games/e2e/gameplay-4.spec.js:50:1 › records win loss tie results ──────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |   await page.evaluate(() => localStorage.clear());
+      68 |   await page.goto(appURL("games"));
+    > 69 |   await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                           ^
+      70 | }
+      71 |
+      72 | export async function createPlayer(page, name) {
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay-4.spec.js:51:3
+
+    Error Context: test-results/gameplay-4-records-win-loss-tie-results/error-context.md
+
+  9) modules/games/e2e/gameplay-4.spec.js:69:1 › preserves scoring settings while collaborative mode is enabled
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |   await page.evaluate(() => localStorage.clear());
+      68 |   await page.goto(appURL("games"));
+    > 69 |   await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                           ^
+      70 | }
+      71 |
+      72 | export async function createPlayer(page, name) {
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay-4.spec.js:70:3
+
+    Error Context: test-results/gameplay-4-preserves-scori-0f8ad-llaborative-mode-is-enabled/error-context.md
+
+  10) modules/games/e2e/gameplay-4.spec.js:90:1 › records one team result and keeps collaborative stats separate
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |   await page.evaluate(() => localStorage.clear());
+      68 |   await page.goto(appURL("games"));
+    > 69 |   await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                           ^
+      70 | }
+      71 |
+      72 | export async function createPlayer(page, name) {
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay-4.spec.js:91:3
+
+    Error Context: test-results/gameplay-4-records-one-tea-36939-ollaborative-stats-separate/error-context.md
+
+  11) modules/games/e2e/gameplay.spec.js:5:1 › creates edits and archives a player ─────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |   await page.evaluate(() => localStorage.clear());
+      68 |   await page.goto(appURL("games"));
+    > 69 |   await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                           ^
+      70 | }
+      71 |
+      72 | export async function createPlayer(page, name) {
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:6:3
+
+    Error Context: test-results/gameplay-creates-edits-and-archives-a-player/error-context.md
+
+  12) modules/games/e2e/gameplay.spec.js:20:1 › creates edits and archives a game definition ───────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:21:3
+
+    Error Context: test-results/gameplay-creates-edits-and-archives-a-game-definition/error-context.md
+
+  13) modules/games/e2e/gameplay.spec.js:35:1 › shows only scoring fields required by selected game mode
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:36:3
+
+    Error Context: test-results/gameplay-shows-only-scorin-f6121-uired-by-selected-game-mode/error-context.md
+
+  14) modules/games/e2e/gameplay.spec.js:51:1 › hides game form while a session is active ──────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:52:3
+
+    Error Context: test-results/gameplay-hides-game-form-while-a-session-is-active/error-context.md
+
+  15) modules/games/e2e/gameplay.spec.js:64:1 › hides play setup form while a session is active ────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:65:3
+
+    Error Context: test-results/gameplay-hides-play-setup-form-while-a-session-is-active/error-context.md
+
+  16) modules/games/e2e/gameplay.spec.js:76:1 › excludes archived players from new play setup without deleting history
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:77:3
+
+    Error Context: test-results/gameplay-excludes-archived-6032c-up-without-deleting-history/error-context.md
+
+  17) modules/games/e2e/gameplay.spec.js:111:1 › shows app messages as dismissible fixed toasts ────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:112:3
+
+    Error Context: test-results/gameplay-shows-app-messages-as-dismissible-fixed-toasts/error-context.md
+
+  18) modules/games/e2e/import-export.spec.js:5:1 › exports full JSON and replace-import restores data
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/import-export.spec.js:6:3
+
+    Error Context: test-results/import-export-exports-full-0b941-eplace-import-restores-data/error-context.md
+
+  19) modules/games/e2e/import-export.spec.js:37:1 › rejects malformed nested backup data without replacing local data
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/import-export.spec.js:38:3
+
+    Error Context: test-results/import-export-rejects-malf-a8bb9-ithout-replacing-local-data/error-context.md
+
+  20) modules/games/e2e/settings.spec.js:4:1 › persists theme and language settings ────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/settings.spec.js:5:3
+
+    Error Context: test-results/settings-persists-theme-and-language-settings/error-context.md
+
+  21) modules/games/e2e/settings.spec.js:18:1 › shows backup reminder before a successful export ───
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/settings.spec.js:19:3
+
+    Error Context: test-results/settings-shows-backup-reminder-before-a-successful-export/error-context.md
+
+  22) modules/games/e2e/settings.spec.js:28:1 › shows backup reminder age when the last export is stale
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/settings.spec.js:29:3
+
+    Error Context: test-results/settings-shows-backup-remi-d1ab9-en-the-last-export-is-stale/error-context.md
+
+  23) modules/games/e2e/smoke.spec.js:4:1 › loads mobile-first primary navigation ──────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/smoke.spec.js:5:3
+
+    Error Context: test-results/smoke-loads-mobile-first-primary-navigation/error-context.md
+
+  24) modules/games/e2e/smoke.spec.js:12:1 › registers service worker path over http ───────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:69
+
+      67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+      68 | }
+    > 69 | export async function createPlayer(page, name) {
+         |                                                 ^
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+      71 |     await page.getByTestId(testIds.playerName).fill(name);
+      72 |     await page.getByTestId(testIds.playerSave).click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:69:59)
+        at /workspaces/daily/modules/games/e2e/smoke.spec.js:13:3
+
+    Error Context: test-results/smoke-registers-service-worker-path-over-http/error-context.md
+
+  24 failed
+    modules/games/e2e/gameplay-2.spec.js:5:1 › keeps history filters collapsed and summarizes active filters
+    modules/games/e2e/gameplay-2.spec.js:24:1 › starts enters edits and finishes a score session ───
+    modules/games/e2e/gameplay-2.spec.js:83:1 › opens completed game details without editing first ─
+    modules/games/e2e/gameplay-3.spec.js:7:1 › tracks session duration and game duration analytics ─
+    modules/games/e2e/gameplay-3.spec.js:41:1 › shows player average scores by game instead of blending scoring systems
+    modules/games/e2e/gameplay-4.spec.js:7:1 › first to points ranks the highest live total as leader
+    modules/games/e2e/gameplay-4.spec.js:25:1 › shows first to points target reached as a toast ────
+    modules/games/e2e/gameplay-4.spec.js:50:1 › records win loss tie results ───────────────────────
+    modules/games/e2e/gameplay-4.spec.js:69:1 › preserves scoring settings while collaborative mode is enabled
+    modules/games/e2e/gameplay-4.spec.js:90:1 › records one team result and keeps collaborative stats separate
+    modules/games/e2e/gameplay.spec.js:5:1 › creates edits and archives a player ───────────────────
+    modules/games/e2e/gameplay.spec.js:20:1 › creates edits and archives a game definition ─────────
+    modules/games/e2e/gameplay.spec.js:35:1 › shows only scoring fields required by selected game mode
+    modules/games/e2e/gameplay.spec.js:51:1 › hides game form while a session is active ────────────
+    modules/games/e2e/gameplay.spec.js:64:1 › hides play setup form while a session is active ──────
+    modules/games/e2e/gameplay.spec.js:76:1 › excludes archived players from new play setup without deleting history
+    modules/games/e2e/gameplay.spec.js:111:1 › shows app messages as dismissible fixed toasts ──────
+    modules/games/e2e/import-export.spec.js:5:1 › exports full JSON and replace-import restores data
+    modules/games/e2e/import-export.spec.js:37:1 › rejects malformed nested backup data without replacing local data
+    modules/games/e2e/settings.spec.js:4:1 › persists theme and language settings ──────────────────
+    modules/games/e2e/settings.spec.js:18:1 › shows backup reminder before a successful export ─────
+    modules/games/e2e/settings.spec.js:28:1 › shows backup reminder age when the last export is stale
+    modules/games/e2e/smoke.spec.js:4:1 › loads mobile-first primary navigation ────────────────────
+    modules/games/e2e/smoke.spec.js:12:1 › registers service worker path over http ─────────────────
+Suite: time-budget
+Error: Test discovery mismatch: time-budget, expected characterization suite not yet authored, found 0
+    at discover (file:///workspaces/daily/scripts/discovery.mjs:11:11)
+    at file:///workspaces/daily/scripts/test.mjs:34:5
+Suite: piano
+✖ audio catalog is chromatic, complete, and backed by actual recordings (1.937852ms)
+✖ recordings, named interval, and exact keyboard keys agree for every interval (0.291842ms)
+✖ fitted keyboards start one white key before the lowest note across octave boundaries (0.218083ms)
+✖ explicit ranges override whole octaves and respect MIDI boundaries (0.153588ms)
+✖ exact notes select C4 and C5 independently; pitch classes repeat (0.172867ms)
+✖ enharmonic spellings cross the scientific-octave boundary correctly (0.15498ms)
+✖ compound intervals retain their distance across the C boundary (0.121881ms)
+✖ every extended chord preserves supplied compound intervals (0.139177ms)
+✖ bass-first inversion stays ascending and retains role metadata (0.246676ms)
+✖ explicit registers take precedence over inferred ascending placement (0.301487ms)
+✖ invalid ranges, notes, labels and out-of-range exact notes are rejected (0.895357ms)
+✖ arbitrary role and display text are preserved with HTML escaping (0.141229ms)
+✖ label settings control rendered labels while retaining accessible descriptions (0.123132ms)
+✖ voicing, rendering and compatibility adapter never mutate their input (0.158595ms)
+✖ exercise keyboards are absent until reveal, including all answer text (0.225865ms)
+✖ guide-tone keyboards preserve each voice’s nearest motion across every root (0.225274ms)
+✖ guide-tone motion crosses B to C without dropping an octave (0.148319ms)
+✖ guided ninth recall and application retain the compound interval (0.177463ms)
+✖ curriculum covers every stage with a continuous prerequisite chain and usable modes (0.22951ms)
+✖ all lesson recall variants produce revealable answers with valid pitch classes (0.252584ms)
+✖ major guide-tone questions follow F, F, E and explain the resolution (0.238754ms)
+✖ transfer prompts change keys only after a complete progression (0.123293ms)
+✖ blues follows the complete twelve-bar form and wraps (0.091706ms)
+✖ minor and modal lessons preserve characteristic spellings (0.151865ms)
+✖ spells intervals by letter in both directions and preserves chromatic transpose (1.03296ms)
+✖ recognizes enharmonics and double accidentals (0.194608ms)
+✖ chord tones and tensions retain theoretical spelling (0.16841ms)
+✖ every chord tone remains on its intended pitch for all standard roots (0.176722ms)
+✖ question root pools and numeric degree filters constrain practice (0.11456ms)
+✖ keyboard maps enharmonic pitches and retains an accessible escaped legend (0.146688ms)
+✖ every catalog destination has exactly one existing page loader (0.184153ms)
+✖ library links and search aliases use canonical destinations (0.205174ms)
+✖ ten-minute sessions reserve time for explanation, recall, application, and review (0.081921ms)
+✖ every supported session duration preserves the budget and includes all four blocks (0.112086ms)
+✖ invalid or unsupported durations cannot produce an unusable session (0.180458ms)
+✖ rootless keyboards preserve exact formula offsets and hand labels for every root and type (0.170073ms)
+✖ half-diminished B keeps its crossing voices instead of ascending them an extra octave (0.130654ms)
+✖ ii–V–I chooses minimum total voice motion while preserving whole chord formulas (0.146658ms)
+✖ G major rootless cadence resolves C down to B across the octave boundary (0.086418ms)
+✖ precache requests are unique and backed by repository assets (0.210753ms)
+✖ suspensions resolve to the target chord while retaining extensions in every key (0.265273ms)
+ℹ tests 41
+ℹ suites 0
+ℹ pass 0
+ℹ fail 41
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 46.485498
+
+✖ failing tests:
+
+test at modules/piano/test/ear-training.test.mjs:8:1
+✖ audio catalog is chromatic, complete, and backed by actual recordings (1.937852ms)
+  Error: Unimplemented piano: js/music/ear-training.js:EAR_TRAINING_NOTES
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/ear-training.test.mjs:9:37)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)
+
+test at modules/piano/test/ear-training.test.mjs:15:1
+✖ recordings, named interval, and exact keyboard keys agree for every interval (0.291842ms)
+  Error: Unimplemented piano: js/music/ear-training.js:randomEarTrainingQuestion
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/ear-training.test.mjs:18:30)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:10:1
+✖ fitted keyboards start one white key before the lowest note across octave boundaries (0.218083ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:12:25)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:21:1
+✖ explicit ranges override whole octaves and respect MIDI boundaries (0.153588ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:23:25)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:29:1
+✖ exact notes select C4 and C5 independently; pitch classes repeat (0.172867ms)
+  Error: Unimplemented piano: js/components/keyboard-diagram.js:drawKeyboard
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:30:35)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:35:1
+✖ enharmonic spellings cross the scientific-octave boundary correctly (0.15498ms)
+  Error: Unimplemented piano: js/music/notes.js:noteToMidi
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:36:18)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:44:1
+✖ compound intervals retain their distance across the C boundary (0.121881ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:45:21)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:50:1
+✖ every extended chord preserves supplied compound intervals (0.139177ms)
+  Error: Unimplemented piano: js/music/chords.js:EXTENDED_CHORD_TYPE_NAMES
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:52:28)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:61:1
+✖ bass-first inversion stays ascending and retains role metadata (0.246676ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:62:21)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:67:1
+✖ explicit registers take precedence over inferred ascending placement (0.301487ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:68:21)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:72:1
+✖ invalid ranges, notes, labels and out-of-range exact notes are rejected (0.895357ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+
+  Error message:
+
+  Unimplemented piano: js/components/keyboard-diagram.js:drawKeyboard
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:74:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Unimplemented piano: js/components/keyboard-diagram.js:drawKeyboard
+        at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+        at file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:74:29
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:74:16)
+        at Test.runInAsyncScope (node:async_hooks:228:14)
+        at Test.run (node:internal/test_runner/test:1118:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+        at Test.postRun (node:internal/test_runner/test:1247:19)
+        at Test.run (node:internal/test_runner/test:1175:12),
+    expected: [Function: RangeError],
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at modules/piano/test/keyboard-diagram.test.mjs:86:1
+✖ arbitrary role and display text are preserved with HTML escaping (0.141229ms)
+  Error: Unimplemented piano: js/components/keyboard-diagram.js:drawKeyboard
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:87:18)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:97:1
+✖ label settings control rendered labels while retaining accessible descriptions (0.123132ms)
+  Error: Unimplemented piano: js/components/keyboard-diagram.js:drawKeyboard
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:98:19)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:104:1
+✖ voicing, rendering and compatibility adapter never mutate their input (0.158595ms)
+  Error: Unimplemented piano: js/music/notes.js:getKeyboardVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:108:21)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-diagram.test.mjs:114:1
+✖ exercise keyboards are absent until reveal, including all answer text (0.225865ms)
+  Error: Unimplemented piano: js/components/exercise-shell.js:buildExerciseCardHTML
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-diagram.test.mjs:116:20)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-motion.test.mjs:6:1
+✖ guide-tone keyboards preserve each voice’s nearest motion across every root (0.225274ms)
+  Error: Unimplemented piano: js/music/notes.js:CHROMATIC_FLATS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-motion.test.mjs:7:24)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/keyboard-motion.test.mjs:30:1
+✖ guide-tone motion crosses B to C without dropping an octave (0.148319ms)
+  Error: Unimplemented piano: js/music/voice-leading.js:getKeyboardMotion
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/keyboard-motion.test.mjs:31:30)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:8:1
+✖ guided ninth recall and application retain the compound interval (0.177463ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:9:28)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:18:1
+✖ curriculum covers every stage with a continuous prerequisite chain and usable modes (0.22951ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:19:34)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:41:1
+✖ all lesson recall variants produce revealable answers with valid pitch classes (0.252584ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:42:26)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:58:1
+✖ major guide-tone questions follow F, F, E and explain the resolution (0.238754ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:59:28)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:65:1
+✖ transfer prompts change keys only after a complete progression (0.123293ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:66:28)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:73:1
+✖ blues follows the complete twelve-bar form and wraps (0.091706ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:74:28)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/learning-path.test.mjs:79:1
+✖ minor and modal lessons preserve characteristic spellings (0.151865ms)
+  Error: Unimplemented piano: js/music/learning-path.js:LESSONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/learning-path.test.mjs:80:27)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:8:1
+✖ spells intervals by letter in both directions and preserves chromatic transpose (1.03296ms)
+  Error: Unimplemented piano: js/music/notes.js:spellInterval
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:9:18)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:20:1
+✖ recognizes enharmonics and double accidentals (0.194608ms)
+  Error: Unimplemented piano: js/music/notes.js:noteToIndex
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:22:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:27:1
+✖ chord tones and tensions retain theoretical spelling (0.16841ms)
+  Error: Unimplemented piano: js/music/chords.js:getChordTones
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:28:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:34:1
+✖ every chord tone remains on its intended pitch for all standard roots (0.176722ms)
+  Error: Unimplemented piano: js/music/notes.js:getChromaticNotes
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:35:36)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:41:1
+✖ question root pools and numeric degree filters constrain practice (0.11456ms)
+  Error: Unimplemented piano: js/music/intervals.js:randomIntervalQuestion
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:42:18)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/music-foundations.test.mjs:50:1
+✖ keyboard maps enharmonic pitches and retains an accessible escaped legend (0.146688ms)
+  Error: Unimplemented piano: js/components/keyboard-diagram.js:buildKeyboardDiagramHTML
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/music-foundations.test.mjs:51:18)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/navigation-data.test.mjs:6:1
+✖ every catalog destination has exactly one existing page loader (0.184153ms)
+  Error: Unimplemented piano: js/components/navigation-data.js:DESTINATIONS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/navigation-data.test.mjs:7:39)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/navigation-data.test.mjs:22:1
+✖ library links and search aliases use canonical destinations (0.205174ms)
+  Error: Unimplemented piano: js/components/navigation-data.js:LIBRARY_GROUPS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/navigation-data.test.mjs:23:34)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/practice-session.test.mjs:5:1
+✖ ten-minute sessions reserve time for explanation, recall, application, and review (0.081921ms)
+  Error: Unimplemented piano: js/components/practice-session.js:allocateSessionSeconds
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/practice-session.test.mjs:6:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/practice-session.test.mjs:8:1
+✖ every supported session duration preserves the budget and includes all four blocks (0.112086ms)
+  Error: Unimplemented piano: js/components/practice-session.js:allocateSessionSeconds
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/practice-session.test.mjs:10:24)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/practice-session.test.mjs:18:1
+✖ invalid or unsupported durations cannot produce an unusable session (0.180458ms)
+  AssertionError [ERR_ASSERTION]: The error is expected to be an instance of "RangeError". Received "Error"
+
+  Error message:
+
+  Unimplemented piano: js/components/practice-session.js:allocateSessionSeconds
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/practice-session.test.mjs:20:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Unimplemented piano: js/components/practice-session.js:allocateSessionSeconds
+        at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+        at file:///workspaces/daily/modules/piano/test/practice-session.test.mjs:20:29
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/practice-session.test.mjs:20:16)
+        at Test.runInAsyncScope (node:async_hooks:228:14)
+        at Test.run (node:internal/test_runner/test:1118:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+        at Test.postRun (node:internal/test_runner/test:1247:19)
+        at Test.run (node:internal/test_runner/test:1175:12),
+    expected: [Function: RangeError],
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at modules/piano/test/rootless-keyboard.test.mjs:12:1
+✖ rootless keyboards preserve exact formula offsets and hand labels for every root and type (0.170073ms)
+  Error: Unimplemented piano: js/music/notes.js:CHROMATIC_FLATS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:13:24)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/rootless-keyboard.test.mjs:30:1
+✖ half-diminished B keeps its crossing voices instead of ascending them an extra octave (0.130654ms)
+  Error: Unimplemented piano: js/music/rootless-voicings.js:getRootlessVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at step (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:9:19)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:31:46)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/rootless-keyboard.test.mjs:34:1
+✖ ii–V–I chooses minimum total voice motion while preserving whole chord formulas (0.146658ms)
+  Error: Unimplemented piano: js/music/notes.js:CHROMATIC_FLATS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:35:24)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/rootless-keyboard.test.mjs:65:1
+✖ G major rootless cadence resolves C down to B across the octave boundary (0.086418ms)
+  Error: Unimplemented piano: js/music/rootless-voicings.js:getRootlessVoicing
+      at fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at step (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:9:19)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/rootless-keyboard.test.mjs:66:45)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/piano/test/service-worker.test.mjs:6:1
+✖ precache requests are unique and backed by repository assets (0.210753ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/piano/src/sw.js'
+      at readFileSync (node:fs:440:20)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/service-worker.test.mjs:7:20)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/piano/src/sw.js'
+  }
+
+test at modules/piano/test/suspended-chords.test.mjs:7:1
+✖ suspensions resolve to the target chord while retaining extensions in every key (0.265273ms)
+  Error: Unimplemented piano: js/music/notes.js:CHROMATIC_FLATS
+      at Object.fail [as get] (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/suspended-chords.test.mjs:9:24)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+  VITE v7.3.1  ready in 211 ms
+
+  ➜  Local:   http://127.0.0.1:8766/daily/
+Browser state at failure: { hash: '#/learn', focused: 'BODY', heading: undefined }
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator('.practice-setup') to be visible
+
+    at /workspaces/daily/modules/piano/e2e/scenarios/renderer.mjs:4:39 {
+  log: [ "  - waiting for locator('.practice-setup') to be visible" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.14.0
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('.course-lessons') to be visible
+
+    at /workspaces/daily/modules/piano/e2e/service-worker-smoke.mjs:10:43 {
+  log: [ "  - waiting for locator('.course-lessons') to be visible" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.14.0
+Suite: reading
+Error: Test discovery mismatch: reading, expected characterization suite not yet authored, found 0
+    at discover (file:///workspaces/daily/scripts/discovery.mjs:11:11)
+    at file:///workspaces/daily/scripts/test.mjs:34:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+Suite: whatsapp
+✖ encoding, validation, local time, DST, manifest, icons and asset paths (3.881221ms)
+✖ worker install, cache ownership, offline shell and external bypass (2.954117ms)
+✖ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (1.875018ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30.668779
+
+✖ failing tests:
+
+test at modules/whatsapp/test/tests.cjs:15:1
+✖ encoding, validation, local time, DST, manifest, icons and asset paths (3.881221ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/app.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:8:25)
+      at readFunctions (/workspaces/daily/modules/whatsapp/test/tests.cjs:12:21)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:16:57)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/app.js'
+  }
+
+test at modules/whatsapp/test/tests.cjs:70:1
+✖ worker install, cache ownership, offline shell and external bypass (2.954117ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/sw.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:8:25)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:81:24)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/sw.js'
+  }
+
+test at modules/whatsapp/test/tests.cjs:116:1
+✖ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (1.875018ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/app.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:8:25)
+      at readFunctions (/workspaces/daily/modules/whatsapp/test/tests.cjs:12:21)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:117:45)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/app.js'
+  }

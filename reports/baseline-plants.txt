@@ -1,0 +1,15 @@
+✔ valid legacy data remains readable when its migration write fails (3.614296ms)
+✔ care log and next-due override are committed in one primary write (1.931956ms)
+✔ validation failures use the storage-error notification path (0.838756ms)
+✔ builds a stable watering title (0.271267ms)
+✔ shortcut URL carries the exact title, date, and project (0.529539ms)
+✔ enabled integration requires a project (0.386742ms)
+✔ settings round-trip and normalize project whitespace (0.531832ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 58.116649

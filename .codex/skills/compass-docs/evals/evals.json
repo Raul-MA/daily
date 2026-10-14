@@ -1,0 +1,38 @@
+{
+  "skill_name": "compass-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "The repo docs have drifted. Refresh `COMPASS.md` so it is a short router instead of a long manual, remove stale pointers, and keep only the deep dives that are worth loading first. Consolidate overlap instead of creating parallel docs.",
+      "expected_output": "Updates `COMPASS.md` directly, keeps it concise, preserves the router role, and removes or rewrites stale navigation instead of only describing what should change.",
+      "files": [],
+      "expectations": [
+        "The run edits `COMPASS.md` rather than only giving advice in chat.",
+        "The updated `COMPASS.md` keeps a short navigation-first structure instead of expanding into a long architecture essay.",
+        "The output removes stale or overlapping references instead of preserving duplicate sources of truth."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A new feature was added, but it is mostly straightforward UI with obvious data flow. Decide whether it belongs only in `COMPASS.md` or deserves a new deep dive under `docs/`. Make the documentation change you think is correct, and avoid creating unnecessary files.",
+      "expected_output": "Applies the skill's threshold for deep dives, updates the appropriate documentation surface, and avoids adding a deep dive for shallow UI work.",
+      "files": [],
+      "expectations": [
+        "The run does not create a new deep-dive doc for a shallow or obvious feature.",
+        "The result updates the routing documentation surface that best matches the feature's complexity.",
+        "The output explains or reflects the decision using the skill's criteria for non-obvious invariants, sequencing, or cross-file complexity."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "A code change modified behavior already covered by an existing deep dive. Update the affected deep dive and make any matching `COMPASS.md` adjustments in the same change so the read order and summaries stay accurate.",
+      "expected_output": "Edits the relevant `docs/*.md` file and updates `COMPASS.md` if the covered behavior, scope, or routing summary changed, keeping both layers in sync.",
+      "files": [],
+      "expectations": [
+        "The run updates the existing deep-dive doc instead of creating a parallel replacement for the same concept.",
+        "If the documented behavior changes the read path or deep-dive summary, `COMPASS.md` is updated in the same change.",
+        "The edited deep dive preserves a concise problem / how-it-works / gotchas style or a similarly compact structure."
+      ]
+    }
+  ]
+}

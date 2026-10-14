@@ -1,0 +1,205 @@
+{
+  "appId": "board-game-score-tracker",
+  "appSlug": "board-game-score-tracker",
+  "schemaVersion": "1.0",
+  "settings": {
+    "theme": "system",
+    "language": "en",
+    "lastExportedAt": "__NOW__",
+    "backupReminderDays": 7,
+    "defaultRoundCount": 5,
+    "defaultTargetScore": 100,
+    "confirmBeforeFinishingSession": true,
+    "showArchived": false,
+    "historyPageSize": 25
+  },
+  "players": [
+    {
+      "id": "player_ada",
+      "name": "Ada",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    },
+    {
+      "id": "player_grace",
+      "name": "Grace",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    }
+  ],
+  "games": [
+    {
+      "id": "game_azul",
+      "name": "Azul",
+      "scoringMode": "highest_score_after_rounds",
+      "roundCount": 1,
+      "targetScore": null,
+      "higherScoreWins": true,
+      "minPlayers": null,
+      "maxPlayers": null,
+      "notes": "",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    },
+    {
+      "id": "game_dutch",
+      "name": "Dutch Blitz",
+      "scoringMode": "first_to_points",
+      "roundCount": null,
+      "targetScore": 500,
+      "higherScoreWins": true,
+      "minPlayers": null,
+      "maxPlayers": null,
+      "notes": "",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    },
+    {
+      "id": "game_chess",
+      "name": "Chess",
+      "scoringMode": "win_loss_tie",
+      "roundCount": null,
+      "targetScore": null,
+      "higherScoreWins": true,
+      "minPlayers": null,
+      "maxPlayers": null,
+      "notes": "",
+      "archived": false,
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "session_azul",
+      "gameId": "game_azul",
+      "gameNameSnapshot": "Azul",
+      "scoringMode": "highest_score_after_rounds",
+      "participants": [
+        {
+          "playerId": "player_ada",
+          "nameSnapshot": "Ada",
+          "seatOrder": 0
+        },
+        {
+          "playerId": "player_grace",
+          "nameSnapshot": "Grace",
+          "seatOrder": 1
+        }
+      ],
+      "status": "completed",
+      "startedAt": "__NOW__",
+      "completedAt": "__NOW__",
+      "roundCount": 1,
+      "targetScore": null,
+      "higherScoreWins": true,
+      "rounds": [
+        {
+          "id": "session_azul_round_1",
+          "roundNumber": 1,
+          "scores": {
+            "player_ada": 75,
+            "player_grace": 62
+          }
+        }
+      ],
+      "results": [],
+      "winnerPlayerIds": [
+        "player_ada"
+      ],
+      "notes": "",
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    },
+    {
+      "id": "session_dutch",
+      "gameId": "game_dutch",
+      "gameNameSnapshot": "Dutch Blitz",
+      "scoringMode": "first_to_points",
+      "participants": [
+        {
+          "playerId": "player_ada",
+          "nameSnapshot": "Ada",
+          "seatOrder": 0
+        },
+        {
+          "playerId": "player_grace",
+          "nameSnapshot": "Grace",
+          "seatOrder": 1
+        }
+      ],
+      "status": "completed",
+      "startedAt": "__NOW__",
+      "completedAt": "__NOW__",
+      "roundCount": null,
+      "targetScore": 500,
+      "higherScoreWins": true,
+      "rounds": [
+        {
+          "id": "session_dutch_round_1",
+          "roundNumber": 1,
+          "scores": {
+            "player_ada": 500,
+            "player_grace": 430
+          }
+        }
+      ],
+      "results": [],
+      "winnerPlayerIds": [
+        "player_ada"
+      ],
+      "notes": "",
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    },
+    {
+      "id": "session_chess",
+      "gameId": "game_chess",
+      "gameNameSnapshot": "Chess",
+      "scoringMode": "win_loss_tie",
+      "participants": [
+        {
+          "playerId": "player_ada",
+          "nameSnapshot": "Ada",
+          "seatOrder": 0
+        },
+        {
+          "playerId": "player_grace",
+          "nameSnapshot": "Grace",
+          "seatOrder": 1
+        }
+      ],
+      "status": "completed",
+      "startedAt": "__NOW__",
+      "completedAt": "__NOW__",
+      "roundCount": null,
+      "targetScore": null,
+      "higherScoreWins": true,
+      "rounds": [],
+      "results": [
+        {
+          "playerId": "player_ada",
+          "outcome": "win"
+        },
+        {
+          "playerId": "player_grace",
+          "outcome": "loss"
+        }
+      ],
+      "winnerPlayerIds": [
+        "player_ada"
+      ],
+      "notes": "",
+      "createdAt": "__NOW__",
+      "updatedAt": "__NOW__"
+    }
+  ],
+  "metadata": {
+    "createdAt": "__NOW__",
+    "updatedAt": "__NOW__"
+  }
+}

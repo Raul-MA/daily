@@ -1,0 +1,74 @@
+
+> daily-pwa@0.0.0 test:whatsapp
+> node scripts/test.mjs whatsapp
+
+Suite: whatsapp
+✖ encoding, validation, local time, DST, manifest, icons and asset paths (2.343995ms)
+✖ worker install, cache ownership, offline shell and external bypass (2.13244ms)
+✖ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (1.220869ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 38.506344
+
+✖ failing tests:
+
+test at modules/whatsapp/test/tests.cjs:18:1
+✖ encoding, validation, local time, DST, manifest, icons and asset paths (2.343995ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/app.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:9:25)
+      at readFunctions (/workspaces/daily/modules/whatsapp/test/tests.cjs:14:19)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:19:53)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/app.js'
+  }
+
+test at modules/whatsapp/test/tests.cjs:74:1
+✖ worker install, cache ownership, offline shell and external bypass (2.13244ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/sw.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:9:25)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:85:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/sw.js'
+  }
+
+test at modules/whatsapp/test/tests.cjs:120:1
+✖ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (1.220869ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/app.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:9:25)
+      at readFunctions (/workspaces/daily/modules/whatsapp/test/tests.cjs:14:19)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:121:43)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/app.js'
+  }
