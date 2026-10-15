@@ -12,7 +12,7 @@ Node tests use a test-only loader under `tests/support/`. Existing source module
 
 Baseline runs select original sources with `DAILY_SOURCE_ROOT=/workspaces`. Coffee and games use `DAILY_BASELINE_URL=http://127.0.0.1:8767/<original-repo>/`. Piano uses `TONIQ_URL=http://127.0.0.1:8767/toniq` (a trailing slash for its offline test). Baselines require a static server of `/workspaces` on 8767. Browser contexts have isolated storage; unit fixtures are synthetic. Baseline results prove assertion preservation, not functionality in Daily.
 
-The new-app browser suites start Vite on 8766 and wait for an HTTP response under `/daily/`. Keep this port free. The piano runner starts its own server and closes it after UI/offline checks. Its legacy route and catalog assertions are retained until their documented route and worker adaptations are introduced before feature implementation.
+The new-app browser suites prepare static files, start the local Node HTTP server on 8766 and wait for an HTTP response under `/daily/`. Keep this port free. The piano runner starts its own server and closes it after UI/offline checks. Its legacy route and catalog assertions are retained until their documented route and worker adaptations are introduced before feature implementation.
 
 Imported workflows were split into helpers/scenarios to satisfy the full lint policy. Game fixture objects were materialized as JSON with `__NOW__` placeholders, substituted with the same runtime timestamp as the source test. The original fixture functions remain documented by provenance. Piano's optional timing skip was removed; every normal suite invocation runs the complete matrix.
 

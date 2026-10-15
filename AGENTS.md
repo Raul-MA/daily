@@ -1,6 +1,7 @@
 # Daily working rules
 
 - Read [COMPASS.md](./COMPASS.md), [progress](./docs/progress.md) and the authoritative [implementation plan](./docs/pwa-consolidation-plan.md) before work.
+- Use plain HTML, CSS and JavaScript modules. No Vite, TypeScript or application framework. Node scripts may prepare static assets and run local checks.
 - Work sequentially, one stage and one app at a time. Do not delegate or implement apps in parallel.
 - Work locally only until the user explicitly resumes remote work. Do not add GitHub Actions workflows, push, configure hosting or deploy. Keep documented Readwise/Reader requests available for the user's later token test; unverified live API access does not block local implementation.
 - Tests were copied before application logic. Preserve every source assertion; record replacement acceptance tests before deliberate behavior changes.

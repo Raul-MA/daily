@@ -1,0 +1,25 @@
+# Shared platform
+
+## Problem
+
+Seven apps need one shell and local data boundary without conflicting navigation, styling or timer ownership. The user requires native HTML/CSS/JavaScript and local work only.
+
+## How It Works
+
+- `apps/daily/index.html` and `diagnostics.html` are the two HTML entry points. CSS loads through stylesheet links. JavaScript uses explicit relative `.js` imports supported directly by browsers.
+- `scripts/build.mjs` copies app/shared/module source assets unchanged into `dist/`, preserving directory structure and relative imports. It generates the manifest, icon and service-worker asset list. No bundler or transpiler runs. Tests, reports, sibling repos and personal exports are outside the copied paths.
+- `scripts/serve.mjs` serves only the prepared directory on `127.0.0.1`. `DAILY_BASE` must match preparation and serving. Dev runs preparation once; rebuild and refresh after source edits.
+- `packages/platform/src/router.js` owns the allowlisted hash routes and configurable base. IDs and query values are encoded. Unknown or malformed routes render a focused not-found heading. Routing does not create records.
+- `packages/data/src/daily-state.js` manages one `daily:v1` document. Preferences are separate from versioned module payloads. `module-store.js` validates data before saving, rejects unsupported versions and preserves unrelated modules. Subscribers run only after a successful storage commit.
+- Dashboard cards navigate; settings own widget visibility/order and quick-action visibility. EN/ES changes labels without translating saved user text.
+- `activities.js` owns persisted timestamp activity transitions. Page intervals update text only. Paused time is excluded; suspension and navigation do not pause activities. Countdown expiry does not silently complete an activity. Budget/game/piano each allow one unfinished activity.
+- The single worker precaches the generated local asset list. It bypasses authenticated/external/unknown requests and deletes only `daily-pwa-` cache versions. Static cache matches ignore Vary because these are app-owned assets, never account data.
+- The PWA UI offers installation help and explicit updates. It blocks updates for unfinished activities or dirty forms on the current page; multi-tab dirty-form coordination still needs implementation and acceptance tests.
+
+## Gotchas
+
+- Vite and TypeScript were used for a verified intermediate checkpoint, then replaced after the same general unit/browser checks passed. Their old reports remain historical evidence.
+- `check:js` checks syntax, not types. Runtime schema validation and behavioral tests remain essential. No type-analysis claim applies to plain JavaScript.
+- Generic root validation does not substitute for domain schemas. Each module adapter must validate its own payload, legacy formats and nested references before migration.
+- LocalStorage has no multi-tab compare-and-swap transaction. Module saves re-read the latest document synchronously; same-module simultaneous edits need explicit conflict handling before release.
+- Activity infrastructure and placeholder links are not migrated apps. Full suite and physical-device parity remain incomplete.

@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createDailyState } from '../../packages/data/src/daily-state.ts';
+import { createDailyState } from '../../packages/data/src/daily-state.js';
 
 async function setup() {
-  const { createActivities, activityTime } = await import('../../packages/platform/src/activities.ts');
+  const { createActivities, activityTime } = await import('../../packages/platform/src/activities.js');
   const values = new Map();
   const storage = { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) };
   const state = createDailyState(storage);

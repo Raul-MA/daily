@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-const load = () => import('../../packages/data/src/document-store.ts');
+const load = () => import('../../packages/data/src/document-store.js');
 const key = 'daily-test';
 const initial = () => ({ version: 1, items: [] });
 const valid = value => value?.version === 1 && Array.isArray(value.items) && value.items.every(item => typeof item.id === 'string');

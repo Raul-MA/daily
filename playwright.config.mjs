@@ -21,7 +21,7 @@ export default defineConfig({
   },
   metadata: { module },
   webServer: baseline ? undefined : {
-    command: 'npm run build && npm exec vite preview -- --host 127.0.0.1 --port 8766 --strictPort',
+    command: 'npm run build && node scripts/serve.mjs --port 8766',
     url: 'http://127.0.0.1:8766/daily/',
     reuseExistingServer: false,
   },

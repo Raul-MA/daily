@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-const load = () => import('../../packages/platform/src/router.ts');
+const load = () => import('../../packages/platform/src/router.js');
 
 test('hash routes cover all seven modules and their canonical deep links', async () => {
   const { parseHash } = await load();

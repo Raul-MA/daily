@@ -4,7 +4,7 @@ Updated: 2026-10-15. Local repo: `/workspaces/daily`, branch `main`.
 
 ## Current instruction and next step
 
-The user explicitly requested **local work only, no workflows**, then clarified **HTML/CSS/JavaScript only**. Verify the plain-JavaScript replacement against the same tests before removing Vite/TypeScript. GitHub Actions deployment was removed locally. Do not push, configure Pages, deploy or add workflows until explicitly requested. No remote changes were made for this instruction.
+The user explicitly requested **local work only, no workflows**, then clarified **HTML/CSS/JavaScript only**. The plain-JavaScript replacement passed the same 54 unit and 17 browser checks before Vite/TypeScript were removed. GitHub Actions deployment was removed locally. Do not push, configure Pages, deploy or add workflows until explicitly requested. No remote changes were made for this instruction.
 
 Stage 1 is complete. Stage 2 local preparation is complete; live API checks and installed-device coexistence are deferred, not claimed passing. **Stage 3 platform implementation is in progress locally**, tests first and one module at a time. Routing, preference persistence and shell/dashboard acceptance tests have been added before implementation. Do not ask the user to finish a hosted Readwise check before continuing.
 
@@ -13,7 +13,7 @@ Keep Readwise and Reader API requests wired to the documented endpoints. The use
 ## Completed and user-confirmed
 
 - Initialized this repo and copied all 25 discovered source test/helper files before application code. Source commits, hashes, assertion counts and migrated destinations are in `reports/migration-test-inventory.md` and `reports/source-tests.json`.
-- Strict shared ESLint, TypeScript, Vite, scoped sequential runners and discovery guards are installed. No skipped tests or relaxed lint thresholds.
+- Strict shared ESLint, native JavaScript syntax checks, scoped sequential runners and discovery guards are installed. No skipped tests or relaxed lint thresholds.
 - Original baselines pass: plants 7, coffee browser 21, games browser 24, piano unit 41, piano full browser/offline, WhatsApp 3 groups. New-app feature suites remain red because migration is unfinished.
 - User confirms all existing apps export and restore successfully, most backups have fewer than 50 entries, and backup size is approximately 20 KB. No personal backup files were requested or copied. Existing export/restore checks do not need repeating.
 - User confirms existing Time Budget survives lock/background/closing and reopening with correct timing. Reader works on the iPhone. Daily Review is new and has no prior live verification.
@@ -30,7 +30,10 @@ Keep Readwise and Reader API requests wired to the documented endpoints. The use
 - Generated manifest and offline worker cache built assets only; authenticated/external requests bypass caching. Update UI waits for explicit application and blocks active/paused activities or dirty forms in the current page. Cross-tab unsaved-form update coordination remains pending.
 - **54 general unit tests and 17 browser tests pass**, including production offline reopening of Home, Settings and diagnostics. Lint, TypeScript and build pass for this checkpoint. Evidence: `reports/platform-general.txt`, `reports/platform-lint.txt`, `reports/platform-typecheck.txt`, `reports/platform-build.txt`.
 - This is platform evidence, not module parity. No app modules are migrated. Do not claim full verification passing.
-- Next: prepare a plain-JavaScript candidate while retaining this working implementation; run the same assertions before switching tools. Then continue sequentially with plants.
+- Plain-JavaScript replacement verified in a separate candidate before switching: **54 unit + 17 browser tests pass**, unchanged behavioral assertions, explicit native-module paths adapted. `reports/plain-js-general.txt`, `plain-js-lint.txt`, `plain-js-check.txt`, `plain-js-build.txt` record results. The diagnostic client is now `connections.js`; no authenticated responses enter offline caches.
+- Vite, TypeScript and their dependency/configuration files have been removed. The app runs as native ES modules. Node scripts only prepare static files and serve localhost. See `docs/platform.md`.
+- Main working tree also passes **54 general unit + 17 browser checks** after removal (`reports/plain-js-main-general.txt`); lint, syntax and static preparation pass. Dependencies were pruned offline.
+- Next: harden multi-tab updates/version pinning and static build checks, then begin plants with characterization/browser tests before importing application code.
 
 ## Verification evidence
 
@@ -49,7 +52,7 @@ The initial diagnostic/storage red logs contained file-level summaries; the reco
 ## Resume
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and the authoritative `docs/pwa-consolidation-plan.md`.
-2. Finish the plain HTML/CSS/JavaScript transition using the verified platform checkpoint above. Preserve all assertions, including offline and settings browser checks. Then begin plants, retaining its original appearance and care rules.
+2. Harden multi-tab updates/version pinning and static build checks, then begin plants with care/date characterization and browser tests before implementation. Retain the original appearance and care rules.
 3. Keep the diagnostic and real API endpoints available. Authenticated success is unverified and deferred to the user's token test; it is not a dependency for local platform work.
 4. Run general plus affected module suites for shared changes. Add Time Budget/Reader characterization tests and replacement piano continuation/worker/route contracts before their modules are implemented.
 5. Save local progress after each increment. Do not add workflows or push the local workflow deletion automatically.

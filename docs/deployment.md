@@ -6,7 +6,7 @@ On 2026-10-15 the user requested local work only, with no workflows. Deployment 
 
 ## How It Works
 
-Use `npm run dev` from the repo root. Open `http://localhost:5173/daily/` for the current home or `http://localhost:5173/daily/diagnostics.html` for the Readwise/Reader connection checks. Use the URL printed by Vite if the port differs. `npm run build` produces local files in `dist/`.
+Use `npm run dev` from the repo root. Open `http://localhost:5173/daily/` for the current home or `http://localhost:5173/daily/diagnostics.html` for the Readwise/Reader connection checks. The local Node server prints its URL; pass `--port` when serving if another port is needed. `npm run build` copies unchanged native HTML/CSS/JavaScript into `dist/` and generates offline metadata. No bundler or compiler is used.
 
 The GitHub Actions diagnostic deployment workflow has been removed locally. Do not create another workflow, push, call GitHub configuration APIs or deploy unless the user explicitly resumes remote work. The existing Git remote remains configured; no remote setting, workflow or deployed content was changed as part of this local-only instruction.
 

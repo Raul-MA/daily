@@ -10,12 +10,11 @@
   ],
   "scripts": {
     "lint": "eslint . --max-warnings 0",
-    "typecheck": "tsc --noEmit",
     "test:all": "node scripts/test.mjs all",
     "test:general": "node scripts/test.mjs general",
-    "build": "vite build",
-    "dev": "vite --host 127.0.0.1",
-    "verify": "npm run lint && npm run typecheck && npm run test:all && npm run build",
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "verify": "npm run lint && npm run check:js && npm run test:all && npm run build",
     "test:plants": "node scripts/test.mjs plants",
     "test:coffee": "node scripts/test.mjs coffee",
     "test:games": "node scripts/test.mjs games",
@@ -23,15 +22,12 @@
     "test:piano": "node scripts/test.mjs piano",
     "test:whatsapp": "node scripts/test.mjs whatsapp",
     "test:reading": "node scripts/test.mjs reading",
-    "prepare:legacy-workers": "node scripts/prepare-legacy-workers.mjs"
+    "prepare:legacy-workers": "node scripts/prepare-legacy-workers.mjs",
+    "check:js": "node scripts/check-js.mjs"
   },
   "devDependencies": {
     "eslint": "9.39.5",
     "globals": "16.5.0",
-    "typescript-eslint": "8.57.0",
-    "typescript": "5.9.3",
-    "vite": "7.3.1",
-    "@playwright/test": "1.61.0",
-    "@types/node": "24.10.1"
+    "@playwright/test": "1.61.0"
   }
 }

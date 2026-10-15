@@ -2,7 +2,7 @@ import { spawn } from 'node:child_process';
 
 export async function withBrowserServer(run) {
   if (process.env.TONIQ_URL) return run();
-  const server = spawn(process.execPath, ['node_modules/vite/bin/vite.js', '--host', '127.0.0.1', '--port', '8766', '--strictPort'], { stdio: 'inherit' });
+  const server = spawn(process.execPath, ['scripts/serve.mjs', '--port', '8766'], { stdio: 'inherit' });
   try {
     await ready(server);
     return run();

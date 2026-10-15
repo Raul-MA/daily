@@ -6,7 +6,7 @@ A storage failure must preserve the last readable document and report failure. M
 
 ## How It Works
 
-`packages/data/src/document-store.ts` accepts a storage port, a key, a runtime validator and a fresh-document factory. This prototype supports version 1 documents. Future root versions are rejected without mutation; upgrades require an explicit migration.
+`packages/data/src/document-store.js` accepts a storage port, a key, a runtime validator and a fresh-document factory. This prototype supports version 1 documents. Future root versions are rejected without mutation; upgrades require an explicit migration.
 
 A load reads the primary document first. Invalid data is preserved at `<key>:corrupt` before trying `<key>:recovery`. Recovery returns the explicit `recovered` status and leaves the corrupt primary unchanged. If preservation fails, the error propagates. If no readable document exists, load throws; it returns a fresh value only when both primary and recovery are absent.
 

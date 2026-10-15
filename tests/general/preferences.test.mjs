@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-const load = () => import('../../packages/data/src/daily-state.ts');
+const load = () => import('../../packages/data/src/daily-state.js');
 
 class MemoryStorage {
   values = new Map();

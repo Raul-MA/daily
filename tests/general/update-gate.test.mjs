@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-const load = () => import('../../packages/platform/src/update-gate.ts');
+const load = () => import('../../packages/platform/src/update-gate.js');
 
 test('update activation is held for any unfinished activity or unsaved form', async () => {
   const { updateAllowed } = await load();

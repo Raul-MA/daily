@@ -8,7 +8,7 @@ Status: updated 2026-10-15. Stage 1 and local Stage 2 preparation are complete; 
 2. Add only the minimum test runner, browser harness, route setup, and strict shared ESLint configuration needed to run them. Record the initial red results against the unimplemented apps. Missing behavior should cause failures; broken test discovery or a server that never starts is not adequate red-stage evidence. Already-independent passing tests need not be deliberately broken.
 3. Preserve assertions and coverage while adapting imports, routes, and test organization. Imported tests must also satisfy ESLint: split oversized files/functions and move explanatory comments into documentation. No skipped tests, weaker assertions, blanket exclusions, inline disables, or legacy lint exemptions to manufacture success.
 4. Implement/refactor one module at a time until every test in its suite passes. Add characterization tests first for uncovered behavior and for Time Budget/Reader, which have no discovered suites. Record approved differences, such as piano continuation, with replacement acceptance tests before implementation.
-5. Keep general/platform tests separate from module suites. A coffee-only change can run coffee unit/integration and E2E tests; shared changes require the general and affected module suites. Full verification runs all suites, strict lint, typechecking, and the build before release or declaring the migration complete.
+5. Keep general/platform tests separate from module suites. A coffee-only change can run coffee unit/integration and E2E tests; shared changes require the general and affected module suites. Full verification runs all suites, strict lint, JavaScript syntax checks, and static preparation before release or declaring the migration complete.
 
 ESLint is blocking for **all authored code, imported code, tests, and scripts from the outset**. This replaces the earlier advisory legacy-report proposal. During test-first bootstrap the feature suites are intentionally red and reported honestly; lint remains mandatory. A module is not complete until its tests pass, and the PWA is not complete until all suites pass.
 
@@ -71,7 +71,7 @@ Coffee has existing uncommitted documentation, a backup file, and Excel-related 
 
 ## 3. Recommended architecture
 
-Use a new repository, with npm workspaces, one lockfile, one local build, with deployment deferred. Do not add GitHub Actions workflows or push/configure hosting during local implementation. Use Vite to bundle the existing ES modules and new code. Keep the apps in vanilla JavaScript initially; use TypeScript for new shared contracts, persistence, routing, timers, and integration code. A complete conversion of existing apps is unnecessary.
+Use a new repository, with npm workspaces, one lockfile, one local build, with deployment deferred. Do not add GitHub Actions workflows or push/configure hosting during local implementation. Per the later user clarification, use plain HTML, CSS and JavaScript modules throughout. Do not use Vite, TypeScript or an application framework. Small Node scripts may copy native files, generate offline metadata, serve locally and run checks. Preserve explicit browser-compatible imports and runtime schemas.
 
 The working name below is only a placeholder.
 
@@ -292,7 +292,7 @@ Measured raw file sizes illustrate the refactoring needed: coffee app 1,088 line
 
 Use the existing `compass-docs` skill, staged under `daily/.codex/skills/compass-docs/` with its references. Keep root/module Compass files short routers and complex explanations in focused deep dives; update both when behavior or paths change. Its Anori-specific examples are not rules for this PWA: this project uses root `AGENTS.md`, EN/ES, and the module structure above. This plan and the lint policy now live in the repo's `docs/`, with workspace relocation pointers and one authoritative copy of each.
 
-Move useful explanations from removed source comments into module/shared docs as affected code is refactored. Use clear names and small functions in source. Document types in `.ts` declarations and external docs rather than introducing JSDoc that violates the requested comment ban. Preserve legal notices in appropriate license files; do not delete required attribution merely to satisfy lint.
+Move useful explanations from removed source comments into module/shared docs as affected code is refactored. Use clear names and small functions in source. Document data contracts through runtime validators and external docs rather than introducing JSDoc that violates the requested comment ban. Preserve legal notices in appropriate license files; do not delete required attribution merely to satisfy lint.
 
 Retain the useful existing coffee/game Compass documents, Toniq deep dives, plant Things instructions, and Reader shortcut documentation. Reconcile stale descriptions with the inspected code. Cloud/Azure proposal documents must remain clearly labeled historical proposals, not the current local-only architecture.
 
@@ -321,9 +321,9 @@ These commands are now installed for test bootstrap. Their full product scopes r
 | `npm run test:coffee` | Only coffee unit/integration and coffee E2E workflows mounted through the shell. |
 | `npm run test:plants`, `test:games`, `test:time-budget`, `test:piano`, `test:reading`, `test:whatsapp` | Equivalent isolated suites for each module. |
 | `npm run test:all` | General suite plus every module suite, including all E2E tests. |
-| `npm run verify` | Blocking full lint, typecheck, all tests, and production build. |
+| `npm run verify` | Blocking full lint, JavaScript syntax checks, all tests, and static preparation. |
 
-Module suites own domain behavior; general suites own shared contracts and cross-module behavior. Use isolated storage/browser contexts, deterministic clocks, and mocked external APIs. A coffee change does not require unrelated piano/reading tests during its development loop. Changes to shared storage, routing, i18n, timer contracts, or shell require general plus affected module suites. Full verification is required before merging a completed migration increment or releasing; the initial red bootstrap is explicitly incomplete and must not be labeled release-ready.
+Module suites own domain behavior; general suites own shared contracts and cross-module behavior. Use isolated storage/browser contexts, deterministic clocks, and mocked external APIs. A coffee change does not require unrelated piano/reading tests during its development loop. Changes to shared storage, routing, i18n, timer contracts, or shell require general plus affected module suites. Full verification is required before declaring a completed migration increment or releasing; the initial red bootstrap is explicitly incomplete and must not be labeled release-ready.
 
 Track each source test and its migrated destination, including fixture provenance. Test runners must fail on suite errors and missing expected test discovery. Do not mask failures with expected-failure flags. Document justified behavior changes and retain coverage of the original invariant. Collect full-suite results throughout migration: remaining red app suites are unfinished work, not exemptions.
 
@@ -347,7 +347,6 @@ Implementation evidence now belongs to [progress](./progress.md) and [test inven
 - [Readwise Mastery](https://docs.readwise.io/readwise/guides/mastery): Q&A review and scheduling semantics; not a public API contract for those interactions.
 - [Reader API](https://readwise.io/reader_api): document filtering, pagination, and response metadata.
 - [GitHub Pages setup](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site): static deployment and custom build workflows.
-- [Vite production builds](https://vite.dev/guide/build): static output and deployment base paths.
 - [npm workspaces](https://docs.npmjs.com/cli/using-npm/workspaces/): shared repository package management.
 - [MDN offline/background operation](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation): service-worker lifecycle and background limitations.
 - [WebKit storage policy](https://webkit.org/blog/14403/updates-to-storage-policy/): quotas, persistence, and storage eviction considerations.

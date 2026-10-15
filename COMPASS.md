@@ -3,11 +3,11 @@
 ## Start Here
 
 - [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Local only, no workflows or pushes; API token checks are deferred.
-- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. This repo currently contains test infrastructure, a connection diagnostic and storage feasibility code; app modules are not migrated.
+- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. The shared shell, settings, routing, timestamp activities and offline lifecycle are implemented in plain HTML/CSS/JavaScript; app modules are not migrated.
 
 ## Commands
 
-- `npm run lint`, `npm run typecheck`, `npm run build`.
+- `npm run lint`, `npm run check:js`, `npm run build`.
 - `npm run test:general`, `npm run test:<module>`, `npm run test:all`: sequential scopes.
 - `npm run verify`: full gate; unfinished feature suites fail.
 - `npm run prepare:legacy-workers`: generate checked patches from the retained sibling repos.
@@ -21,6 +21,7 @@
 
 ## Deep Dives
 
+- [Platform and native modules](docs/platform.md): route/state boundaries, local scripts and offline assets.
 - [Testing](docs/testing.md): baseline versus new-app runs and red-stage interpretation.
 - [Constraints](docs/constraints.md): Pages origin and Readwise capabilities.
 - [Physical device checklist](docs/device-validation.md): pending iPhone evidence and dependencies.

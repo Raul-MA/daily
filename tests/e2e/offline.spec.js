@@ -43,7 +43,7 @@ test('offline cache contains generated assets and excludes API responses and cre
     return Promise.all(keys.map(async key => (await (await caches.open(key)).keys()).map(request => request.url)));
   });
   const urls = entries.flat();
-  expect(urls.some(url => /\/assets\/.+\.js$/.test(url))).toBe(true);
+  expect(urls.some(url => /\/apps\/daily\/src\/main\.js$/.test(url))).toBe(true);
   expect(urls.every(url => new URL(url).pathname.startsWith('/daily/'))).toBe(true);
   expect(urls.some(url => /readwise|Token|token=/.test(url))).toBe(false);
 });

@@ -1,6 +1,8 @@
 # Shared lint policy for the daily PWA
 
-Status: mandatory installed policy supporting [the consolidation plan](./pwa-consolidation-plan.md). The exact rules below are installed in `packages/eslint-config/index.mjs`; runtime globs are adapted for this monorepo. Actual check results are recorded in `progress.md`.
+Status: mandatory installed JavaScript policy supporting [the consolidation plan](./pwa-consolidation-plan.md). The exact rules below are installed in `packages/eslint-config/index.mjs`; runtime globs are adapted for this monorepo. Actual check results are recorded in `progress.md`.
+
+The user later required HTML/CSS/JavaScript only. TypeScript and its parser/type-aware lint block are therefore removed from the installed configuration. All JavaScript thresholds and rules below remain unchanged. The original supplied configuration is retained below as historical reference; its TypeScript-only section does not analyze JavaScript. `check:js` replaces the removed `typecheck` command and checks syntax only.
 
 ## Mandatory from the first implementation step
 
@@ -10,7 +12,7 @@ Use one flat configuration and local no-comments plugin across every application
 2. Enforce the full rule set on every authored file entering the new repo, including imported tests, app code, scripts, and configuration. Refactor oversized units and move explanations to docs without weakening assertions.
 3. Implement each module against its copied tests until its whole suite passes. Add tests first for uncovered behavior. No skipped tests, blanket legacy exclusions, relaxed thresholds, or inline disables.
 4. Keep lint blocking even while the initial feature suites are red. Reports may explain failures but must preserve ESLint's failing exit status. Tool/parser/config errors also fail verification.
-5. Run scoped suites for module work and general/affected suites for shared changes. Run full strict lint, typecheck, all tests, and build before declaring the migration complete or releasing.
+5. Run scoped suites for module work and general/affected suites for shared changes. Run full strict lint, JavaScript syntax checks, all tests, and static preparation before declaring the migration complete or releasing.
 
 This supersedes the earlier advisory report and legacy-debt baseline proposal. There is no grandfathered code in the new repository. Preserve required legal attribution in appropriate license files when moving source explanations to documentation.
 
@@ -27,7 +29,7 @@ Keep the exact rule choices below, including the specified TypeScript safe-call 
 - The supplied rules do not include `no-undef` or an ESLint recommended preset. Do not silently claim those checks exist or add a different ruleset under the same name.
 - Blank/comment exclusions do not permit new comments: `local/no-comments` reports every source comment independently, including ESLint disable comments and JSDoc.
 
-## User-supplied configuration
+## Original user-supplied configuration
 
 ```js
 import globals from 'globals';
@@ -120,11 +122,11 @@ export default [
 | --- | --- |
 | `npm run lint:report` | Optional full diagnostic artifact; failures remain blocking. |
 | `npm run lint` | Full-policy ESLint for all authored source/tests/scripts, blocking from day one. |
-| `npm run typecheck` | Typecheck new TypeScript packages and their tests. |
+| `npm run check:js` | Parse every authored JavaScript file using Node; no static type analysis. |
 | `npm run test:general` | Platform/shared tests and whole-PWA integration/E2E. |
 | `npm run test:coffee` | Coffee unit/integration and E2E only; equivalent commands for each module. |
 | `npm run test:all` | General and all module suites, including every E2E suite. |
 | `npm run build` | One deployable static PWA. |
-| `npm run verify` | Strict lint, typecheck, all tests, and build. |
+| `npm run verify` | Strict lint, JavaScript syntax checks, all tests, and static preparation. |
 
 These commands are installed at the root. Unimplemented feature suites intentionally fail; a successful harness build is not a release. Verify nested workspace coverage, browser/Node/worker globals, typed test project ownership, and failure exit codes. Scoped runners must fail if expected tests are not discovered; full verification must include every registered suite. No lint-baseline checker is needed.

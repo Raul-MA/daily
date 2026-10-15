@@ -27,4 +27,4 @@ Apply and release one repo at a time when preparing coexistence. From its repo, 
 - Never broadly unregister workers or clear origin storage as a migration shortcut.
 - The new PWA must use its own worker/cache namespace and cache only owned resources. These legacy patches are not a substitute for its offline/update tests.
 - VM activation tests prove the cleanup filter with synthetic cache keys. Installed iPhone coexistence remains a release/device check after the fixes reach users.
-- The generated patch artifacts are not included in the Vite application build.
+- The generated patch artifacts are not included in the static application output.

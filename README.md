@@ -1,23 +1,27 @@
 # Daily PWA
 
-A test-first migration of seven local apps into one personal EN/ES PWA. Development is local only for now; deployment and GitHub Actions workflows are deferred.
+One local, personal PWA being built from seven existing apps. The app uses plain HTML, CSS and JavaScript modules. All development is local; hosting and workflows are deferred.
 
-Local Stage 2 preparation is complete; shared platform implementation is next. The home page is a harness placeholder; a standalone Readwise diagnostic is available at `/daily/diagnostics.html`. This repository is not an installable or usable replacement for any original app.
+The shared shell works: responsive dashboard, EN/ES, settings, deep links, activity summaries and offline access. The seven app modules are still pending. Keep using the original installations until migration and device checks pass.
 
-## Setup
+## Local use
 
-Use Node 24 and npm 11. Run `npm ci`, then `npm run dev`. The development page is served under `/daily/`. Set `DAILY_BASE` for another deployment path.
+Use Node 24 and npm 11 for development and verification. Run `npm ci`, then `npm run dev`. Open `http://127.0.0.1:5173/daily/`. Re-run `npm run build` after editing, then refresh.
 
-## Validation
+The preparation script copies native browser modules and CSS unchanged into `dist/` and creates the install manifest and offline asset list. It does not bundle or compile application code. Any ordinary static HTTP server can serve the resulting directory. Set `DAILY_BASE=/another/path/` when preparing and serving another path; the default is `/daily/`.
 
-- `npm run lint`: strict policy for all authored JS/TS, including tests, scripts and configs.
-- `npm run typecheck`: diagnostic and storage TypeScript; the app platform is pending.
-- `npm run test:general`: general unit tests plus the mocked diagnostic browser suite.
-- `npm run test:plants` (or another module): that module's unit and browser checks, sequentially.
-- `npm run test:all`: every suite, one at a time; unfinished modules fail.
-- `npm run build`: static harness output; this does not imply migration completion.
-- `npm run verify`: blocking lint, typecheck, all tests and build.
+## Checks
 
-Playwright needs Chromium. Run `npx playwright install chromium` on a fresh development machine. An existing browser can be selected with `PLAYWRIGHT_EXECUTABLE_PATH`. Browser suites start their own local server. Reports record actual results; red feature suites are expected until migration, and remain failures.
+- `npm run lint`: shared strict ESLint for all authored code and tests.
+- `npm run check:js`: JavaScript syntax checks; this is not typechecking.
+- `npm run test:general`: shared logic, shell, diagnostic and offline browser tests.
+- `npm run test:plants` or another module: that module's tests, sequentially.
+- `npm run test:all`: every suite; unfinished modules fail honestly.
+- `npm run build`: prepare static local files.
+- `npm run verify`: lint, syntax checks, every suite and static preparation.
 
-Read [progress](docs/progress.md) to resume, [Compass](COMPASS.md) for navigation and [the authoritative plan](docs/pwa-consolidation-plan.md) for acceptance gates. Preserve old installations and backups until physical iPhone migration is verified. No personal backup or token belongs in this repository.
+Playwright needs Chromium. Use `npx playwright install chromium` on a fresh machine, or set `PLAYWRIGHT_EXECUTABLE_PATH` for an existing browser. Browser tests open a local server and never deploy the app.
+
+Records and preferences stay in localStorage. JSON recovery and export/import are the planned migration path. Tokens remain separate from application backups. Live Readwise/Reader verification is deferred to the user's later token test.
+
+Read [progress](docs/progress.md), [Compass](COMPASS.md) and [the plan](docs/pwa-consolidation-plan.md) to resume. No personal backup or credential belongs in this repository.
