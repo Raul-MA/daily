@@ -1,5 +1,5 @@
 export const apps = [
-    { key: 'plants', page: 'plants', pages: ['plants', 'plant'] },
+    { key: 'plants', page: 'plants', pages: ['plants', 'plant', 'plantNew', 'plantEdit', 'plantSettings'] },
     { key: 'coffee', page: 'coffee', pages: ['coffee', 'coffeeNew'] },
     { key: 'games', page: 'games', pages: ['games', 'gameNew', 'gameSession'] },
     { key: 'time', page: 'time', pages: ['time'] },

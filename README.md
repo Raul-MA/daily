@@ -2,7 +2,7 @@
 
 One local, personal PWA being built from seven existing apps. The app uses plain HTML, CSS and JavaScript modules. All development is local; hosting and workflows are deferred.
 
-The shared shell works: responsive dashboard, EN/ES, settings, deep links, activity summaries and offline access. The seven app modules are still pending. Keep using the original installations until migration and device checks pass.
+The shared shell works: responsive dashboard, EN/ES, settings, deep links, activity summaries and offline access. Plants is connected, including care/history, imports and Things settings. The other six modules are still pending. Keep using the original installations until migration and device checks pass.
 
 ## Local use
 

@@ -1,5 +1,5 @@
 const paths = {
-    home: '/', plants: '/plants', plant: '/plants/:id', coffee: '/coffee', coffeeNew: '/coffee/new',
+    home: '/', plants: '/plants', plantNew: '/plants/new', plantSettings: '/plants/settings', plantEdit: '/plants/:id/edit', plant: '/plants/:id', coffee: '/coffee', coffeeNew: '/coffee/new',
     games: '/games', gameNew: '/games/new', gameSession: '/games/session/:id', time: '/time',
     piano: '/piano', pianoExercise: '/piano/exercises/:id', pianoLearn: '/piano/learn',
     reader: '/reading/picker', review: '/reading/review', whatsapp: '/whatsapp', settings: '/settings',

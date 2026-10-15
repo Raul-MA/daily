@@ -1,0 +1,35 @@
+✔ connected plant storage writes only the shared document and preserves other modules (17.750376ms)
+✔ connected care and due-date changes remain one root commit with no partial state (2.140774ms)
+✔ Things settings live with plant records and survive a plant update (1.711613ms)
+✖ legacy import previews are read-only and confirmation keeps a root recovery copy (2.549597ms)
+✔ migration export includes Things settings and imports without translating user text (2.897395ms)
+✔ unsupported duplicate and invalid plant imports never mutate shared data (1.192525ms)
+✔ quota failure retains plant history and sends no successful shared change (1.118056ms)
+✔ template care refresh preserves names notes history IDs and manual dates (1.370367ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 60.042029
+
+✖ failing tests:
+
+test at modules/plants/test/service.test.mjs:53:1
+✖ legacy import previews are read-only and confirmation keeps a root recovery copy (2.549597ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/service.test.mjs:63:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

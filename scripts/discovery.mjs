@@ -1,6 +1,6 @@
 import { globSync, readFileSync } from 'node:fs';
 
-const expected = { general: 54, plants: 7, coffee: 21, games: 24, piano: 41, whatsapp: 3 };
+const expected = { general: 65, plants: 23, coffee: 21, games: 24, piano: 41, whatsapp: 3 };
 
 export function discover(module) {
   const browser = module === 'coffee' || module === 'games';
@@ -14,9 +14,15 @@ export function discover(module) {
 }
 
 export function discoverBrowser(module) {
+  if (module === 'plants') {
+    const files = globSync('modules/plants/e2e/*.spec.js');
+    const count = files.reduce((sum, file) => sum + [...readFileSync(file, 'utf8').matchAll(/^test\(/gm)].length, 0);
+    if (count !== 11) throw new Error(`Plant browser discovery mismatch: expected 11, found ${count}`);
+    return files;
+  }
   if (module !== 'general') return discover(module);
   const files = globSync('tests/e2e/*.spec.js').sort();
   const count = files.reduce((sum, file) => sum + [...readFileSync(file, 'utf8').matchAll(/^test\(/gm)].length, 0);
-  if (count !== 17) throw new Error(`General browser discovery mismatch: expected 17, found ${count}`);
+  if (count !== 19) throw new Error(`General browser discovery mismatch: expected 19, found ${count}`);
   return files;
 }

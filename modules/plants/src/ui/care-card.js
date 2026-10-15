@@ -1,0 +1,38 @@
+import { getStatus, getEffectiveFertilizerInterval, getEffectiveWateringInterval } from '../care/care.js';
+import { el, button } from './elements.js';
+import { openCareForm } from './care-form.js';
+import { statusText } from './list.js';
+
+function intervalLabel(plant, type, copy) {
+  if (type === 'watering') return `${copy.every} ${getEffectiveWateringInterval(plant)} ${copy.days}`;
+  if (type === 'soil') return `${copy.every} ${plant.schedule.soilIntervalMonths ?? 12} ${copy.months}`;
+  const weeks = getEffectiveFertilizerInterval(plant);
+  return weeks === null ? copy.paused : `${copy.every} ${weeks} ${copy.weeks}`;
+}
+
+function quickActions(context, type) {
+  const section = el('div', 'care-quick-actions');
+  const skip = button(context.copy.skipShort, () => openCareForm(context, type, 'skip'), 'btn btn-ghost btn-sm');
+  skip.setAttribute('aria-label', context.copy.skipAction[type]);
+  const next = button(context.copy.nextShort, () => openCareForm(context, type, 'next'), 'btn btn-ghost btn-sm');
+  next.setAttribute('aria-label', context.copy.nextAction[type]);
+  section.append(skip, next);
+  return section;
+}
+
+export function careCard(context, plant, type) {
+  const info = getStatus(plant, type);
+  const card = el('section', 'care-action-wrap');
+  card.dataset.type = type;
+  const action = button('', () => openCareForm(context, type), 'care-action-btn');
+  action.setAttribute('aria-label', context.copy.record[type]);
+  action.setAttribute('aria-expanded', 'false');
+  const emoji = { watering: '💧', soil: '🌱', fertilizer: '🌿' };
+  const label = el('span', 'care-label');
+  label.append(el('strong', '', context.copy[type]), el('small', 'care-interval', intervalLabel(plant, type, context.copy)), el('small', '', `${context.copy.last}: ${info.lastDate || context.copy.never}`));
+  const meta = el('span', 'care-action-meta');
+  meta.append(el('span', `pill pill-${info.status}`, statusText(info, context.copy)));
+  action.append(el('span', 'care-icon', emoji[type]), label, meta);
+  card.append(action, quickActions(context, type));
+  return card;
+}

@@ -3,7 +3,7 @@
 ## Start Here
 
 - [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Local only, no workflows or pushes; API token checks are deferred.
-- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. The shared shell, settings, routing, timestamp activities and offline lifecycle are implemented in plain HTML/CSS/JavaScript; app modules are not migrated.
+- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. The shared shell, settings, routing, timestamp activities and offline lifecycle are implemented in plain HTML/CSS/JavaScript; plants is connected; the other six modules remain pending.
 
 ## Commands
 

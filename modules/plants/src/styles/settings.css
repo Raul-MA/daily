@@ -1,0 +1,121 @@
+[data-module="plants"] .settings-view{
+  max-width: 520px;
+  margin: 0 auto;
+}
+[data-module="plants"] .settings-section{
+  margin-bottom: 8px;
+}
+[data-module="plants"] .settings-section-label{
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+[data-module="plants"] .settings-card{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 10px;
+}
+[data-module="plants"] .settings-card-info{
+  flex: 1;
+  min-width: 0;
+}
+[data-module="plants"] .settings-card-info strong{
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+[data-module="plants"] .settings-card-info p{
+  font-size: 0.77rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+[data-module="plants"] .settings-card-info em{
+  color: var(--overdue);
+  font-style: normal;
+  font-weight: 500;
+}
+[data-module="plants"] .settings-card-info .backup-status{
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+  font-size: 0.72rem;
+}
+[data-module="plants"] .settings-card .btn{
+  flex-shrink: 0;
+}
+[data-module="plants"] .things-settings-card{
+  align-items: flex-start;
+}
+[data-module="plants"] .things-toggle{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+  font-size: 0.82rem;
+  color: var(--text);
+}
+[data-module="plants"] .things-toggle input{
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+[data-module="plants"] .things-project-label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+[data-module="plants"] .things-setup{
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+[data-module="plants"] .things-setup summary{
+  cursor: pointer;
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+[data-module="plants"] .things-setup ol{
+  margin: 8px 0 6px 18px;
+  line-height: 1.45;
+}
+[data-module="plants"] .things-setup code{
+  font-size: 0.72rem;
+}
+[data-module="plants"] .import-label{
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+[data-module="plants"] .import-label:focus-visible{
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+[data-module="plants"] .settings-about{
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+[data-module="plants"] .settings-about p{
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+[data-module="plants"] .settings-about p:last-child{
+  margin-bottom: 0;
+}
+

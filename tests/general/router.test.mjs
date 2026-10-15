@@ -5,7 +5,7 @@ const load = () => import('../../packages/platform/src/router.js');
 
 test('hash routes cover all seven modules and their canonical deep links', async () => {
   const { parseHash } = await load();
-  const cases = [['', 'home'], ['#/', 'home'], ['#/plants', 'plants'], ['#/plants/plant-1', 'plant'], ['#/coffee/new', 'coffeeNew'], ['#/games/new', 'gameNew'], ['#/games/session/session-1', 'gameSession'], ['#/time', 'time'], ['#/piano/exercises/intervals', 'pianoExercise'], ['#/piano/learn?lesson=lesson-1', 'pianoLearn'], ['#/reading/picker', 'reader'], ['#/reading/review', 'review'], ['#/whatsapp', 'whatsapp'], ['#/settings', 'settings']];
+  const cases = [['', 'home'], ['#/', 'home'], ['#/plants', 'plants'], ['#/plants/new', 'plantNew'], ['#/plants/settings', 'plantSettings'], ['#/plants/plant-1/edit', 'plantEdit'], ['#/plants/plant-1', 'plant'], ['#/coffee/new', 'coffeeNew'], ['#/games/new', 'gameNew'], ['#/games/session/session-1', 'gameSession'], ['#/time', 'time'], ['#/piano/exercises/intervals', 'pianoExercise'], ['#/piano/learn?lesson=lesson-1', 'pianoLearn'], ['#/reading/picker', 'reader'], ['#/reading/review', 'review'], ['#/whatsapp', 'whatsapp'], ['#/settings', 'settings']];
   for (const [hash, page] of cases) assert.equal(parseHash(hash).page, page, hash);
 });
 

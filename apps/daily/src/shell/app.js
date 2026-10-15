@@ -1,3 +1,6 @@
+import { watchCalendar } from '../../../../packages/platform/src/calendar.js';
+import { connectPlants } from '../../../../modules/plants/src/service.js';
+import { committed } from './committed.js';
 import { mountPwa } from './pwa.js';
 import { refreshActivityTimes } from './activity-summary.js';
 import { createDailyState, DAILY_KEY } from '../../../../packages/data/src/daily-state.js';
@@ -6,9 +9,11 @@ import { renderShell } from './render.js';
 import { handleClick, handleChange } from './interactions.js';
 export function mountShell(root, base) {
     const state = createDailyState(localStorage, navigator.language.startsWith('es') ? 'es' : 'en');
-    const context = { root, base, state, route: parseHash(location.hash), error: false, saved: false };
+    const context = { root, base, state, moduleUI: {}, route: parseHash(location.hash), error: false, saved: false };
+    context.plants = connectPlants(state);
     const stopPwa = mountPwa(state, base);
-    const stopState = state.subscribe(() => { context.saved = true; context.error = false; renderShell(context); });
+    const stopCalendar = watchCalendar(window, () => calendarRefresh(context));
+    const stopState = state.subscribe(() => committed(context));
     const perform = (event) => {
         if (event.target instanceof Element && event.target.closest('[data-skip]')) {
             event.preventDefault();
@@ -28,9 +33,12 @@ export function mountShell(root, base) {
     };
     root.addEventListener('click', perform);
     root.addEventListener('change', perform);
-    const stopRouter = startRouter(window, next => { context.route = next; renderShell(context, true); });
-    const storageChanged = (event) => { if (event.key === DAILY_KEY)
-        renderShell(context); };
+    const stopRouter = startRouter(window, next => {
+        context.moduleUI = {};
+        context.route = next;
+        renderShell(context, true);
+    });
+    const storageChanged = event => storageRefresh(event, context);
     window.addEventListener('storage', storageChanged);
     const ticker = window.setInterval(() => refreshActivityTimes(root, state), 1000);
     const visible = () => refreshActivityTimes(root, state);
@@ -38,6 +46,9 @@ export function mountShell(root, base) {
     return () => {
         window.clearInterval(ticker);
         document.removeEventListener('visibilitychange', visible);
+        context.pageCleanup?.();
+        context.plants.stop();
+        stopCalendar();
         stopPwa();
         stopState();
         stopRouter();
@@ -45,4 +56,17 @@ export function mountShell(root, base) {
         root.removeEventListener('change', perform);
         window.removeEventListener('storage', storageChanged);
     };
+}
+
+function storageRefresh(event, context) {
+    if (event.key !== DAILY_KEY && event.key !== null) return;
+    if (context.pageConflict && context.root.querySelector('form[data-unsaved="true"]')) {
+        context.pageConflict();
+        return;
+    }
+    renderShell(context);
+}
+
+function calendarRefresh(context) {
+    if (context.route.page === 'home' || context.route.page === 'plants') renderShell(context);
 }

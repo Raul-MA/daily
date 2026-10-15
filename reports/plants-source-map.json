@@ -1,0 +1,67 @@
+{
+  "commit": "86c9b8faedf8c50a41a346778df19e5934c6aecf",
+  "files": [
+    {
+      "source": "stillgreen/store/store.js",
+      "sha256": "8c33c88177031a7184451a99ff3bf3b33fff74f518aa4eee5e25f37cc1e26dbe",
+      "destinations": [
+        "modules/plants/src/store/constants.js",
+        "modules/plants/src/store/validation.js",
+        "modules/plants/src/store/envelope.js",
+        "modules/plants/src/store/legacy.js",
+        "modules/plants/src/store/metadata.js",
+        "modules/plants/src/store/store.js"
+      ]
+    },
+    {
+      "source": "stillgreen/care/care.js",
+      "sha256": "dae78e5693a536b4a137884b39e3e8c8d36bb3082bf1178713cae5ba72c635ab",
+      "destinations": [
+        "modules/plants/src/care/care.js"
+      ]
+    },
+    {
+      "source": "stillgreen/care/reminders.js",
+      "sha256": "eac3ebc994ae658fc0b435794e977e2c20d91531591e41538b2ef5fe13d8e21c",
+      "destinations": [
+        "modules/plants/src/care/reminders.js"
+      ]
+    },
+    {
+      "source": "stillgreen/utils/utils.js",
+      "sha256": "63e1eaf0f73563866b572ab5380e9c2d063a0e50271f33bffddca4fac891f837",
+      "destinations": [
+        "modules/plants/src/utils/utils.js"
+      ]
+    },
+    {
+      "source": "stillgreen/integrations/things.js",
+      "sha256": "72dd68aac5c37fa0fca848faccb0f7ae206355200ee932e412e24e481160a356",
+      "destinations": [
+        "modules/plants/src/integrations/things.js"
+      ]
+    },
+    {
+      "source": "stillgreen/plants/plant-templates.js",
+      "sha256": "72319334bb4a6d9cb3cee8c0bb19c95b7d991aec6758a20c287294d7426c429e",
+      "destinations": [
+        "modules/plants/src/plants/plant-templates.js",
+        "modules/plants/src/plants/templates/zz-plant.js",
+        "modules/plants/src/plants/templates/chinese-evergreen.js",
+        "modules/plants/src/plants/templates/palo-de-brasil.js",
+        "modules/plants/src/plants/templates/lucky-bamboo.js",
+        "modules/plants/src/plants/templates/dracaena.js",
+        "modules/plants/src/plants/templates/sabila.js",
+        "modules/plants/src/plants/templates/peace-lily.js",
+        "modules/plants/src/plants/templates/snake-plant.js",
+        "modules/plants/src/plants/templates/monstera.js",
+        "modules/plants/src/plants/templates/pothos.js",
+        "modules/plants/src/plants/templates/cast-iron.js",
+        "modules/plants/src/plants/templates/rubber-plant.js",
+        "modules/plants/src/plants/templates/xanadu.js"
+      ]
+    }
+  ],
+  "styles": "Original five stylesheets scoped under [data-module=\"plants\"]; remote font import removed; local fallbacks retained.",
+  "ui": "Native DOM controllers retain domain flows, add EN/ES controls, stable shell routes and import preview/recovery; no old worker registration."
+}

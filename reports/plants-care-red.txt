@@ -1,0 +1,112 @@
+✖ care dates use latest matching care and ignore notes skip and reschedule entries (2.676413ms)
+✖ watering seasons preserve wrap-around dry periods and growth intervals (1.055128ms)
+✖ fertilizer pause is preserved while a manual due date still takes precedence (0.930596ms)
+✖ care status distinguishes overdue today soon and future without mutating plants (0.531481ms)
+✖ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (2.035097ms)
+✖ backdated input uses local noon and today retains the actual event time (0.285833ms)
+✖ reminder counts include overdue and today care once and leave records unchanged (0.524739ms)
+✖ urgency ranking places overdue care ahead of future care (0.897334ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 77.100266
+
+✖ failing tests:
+
+test at modules/plants/test/care.test.mjs:11:1
+✖ care dates use latest matching care and ignore notes skip and reschedule entries (2.676413ms)
+  Error: Unimplemented plants: care/care.js:getLastCareDate
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/care.test.mjs:16:21)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)
+
+test at modules/plants/test/care.test.mjs:20:1
+✖ watering seasons preserve wrap-around dry periods and growth intervals (1.055128ms)
+  Error: Unimplemented plants: care/care.js:getEffectiveWateringInterval
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/care.test.mjs:23:21)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/plants/test/care.test.mjs:30:1
+✖ fertilizer pause is preserved while a manual due date still takes precedence (0.930596ms)
+  Error: Unimplemented plants: care/care.js:getStatus
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/care.test.mjs:33:21)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/plants/test/care.test.mjs:40:1
+✖ care status distinguishes overdue today soon and future without mutating plants (0.531481ms)
+  Error: Unimplemented plants: care/care.js:getStatus
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/care.test.mjs:46:27)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/plants/test/care.test.mjs:51:1
+✖ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (2.035097ms)
+  Error: Unimplemented plants: utils/utils.js:addDays
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/care.test.mjs:56:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/plants/test/care.test.mjs:61:1
+✖ backdated input uses local noon and today retains the actual event time (0.285833ms)
+  Error: Unimplemented plants: utils/utils.js:dateInputToUTC
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/care.test.mjs:63:22)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/plants/test/care.test.mjs:68:1
+✖ reminder counts include overdue and today care once and leave records unchanged (0.524739ms)
+  Error: Unimplemented plants: care/reminders.js:getReminderSummary
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/care.test.mjs:72:30)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/plants/test/care.test.mjs:76:1
+✖ urgency ranking places overdue care ahead of future care (0.897334ms)
+  Error: Unimplemented plants: care/care.js:getUrgencyScore
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/care.test.mjs:80:18)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)

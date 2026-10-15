@@ -1,3 +1,5 @@
+import { captureDrafts, restoreDrafts } from '../../../../packages/ui/src/drafts.js';
+import { mountPlants } from '../../../../modules/plants/src/ui/view.js';
 import { activitySummary } from './activity-summary.js';
 import { shellText } from '../../../../packages/i18n/src/shell.js';
 import { element, link, heading } from './elements.js';
@@ -21,17 +23,28 @@ function failure(root, base) {
     root.replaceChildren(view);
 }
 function pageView(context, preferences) {
+    if (['plants', 'plant', 'plantNew', 'plantEdit', 'plantSettings'].includes(context.route.page)) {
+        const page = mountPlants({ route: context.route, language: preferences.language, base: context.base, service: context.plants, ui: context.moduleUI });
+        context.pageCleanup = page.dispose;
+        context.pageConflict = page.conflict;
+        return page.node;
+    }
     if (context.route.page === 'home')
-        return dashboard(preferences, context.base, context.state);
+        return dashboard(preferences, context.base, { state: context.state, plants: context.plants });
     if (context.route.page === 'settings')
         return settings(preferences);
     return modulePlaceholder(context.route, shellText(preferences.language), context.base);
 }
 export function renderShell(context, changedRoute = false) {
     const key = focusKey();
+    const drafts = changedRoute ? [] : captureDrafts(context.root);
     try {
         const snapshot = context.state.read();
         const preferences = snapshot.value.preferences;
+        context.preferencesKey = JSON.stringify(preferences);
+        context.pageCleanup?.();
+        context.pageCleanup = undefined;
+        context.pageConflict = undefined;
         const copy = shellText(preferences.language);
         document.documentElement.lang = preferences.language;
         const main = element('main', 'shell-main');
@@ -45,6 +58,7 @@ export function renderShell(context, changedRoute = false) {
         skip.dataset.skip = '';
         context.root.replaceChildren(skip, navigation(preferences.language, context.base), activitySummary({ state: context.state, language: preferences.language, base: context.base }, true), main, element('footer', 'shell-footer', copy.local));
         focusAfterRender(context.root, key, changedRoute);
+        restoreDrafts(context.root, drafts);
     }
     catch {
         failure(context.root, context.base);

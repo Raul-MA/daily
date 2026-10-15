@@ -1,0 +1,254 @@
+[data-module="plants"] .care-actions{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+[data-module="plants"] .care-action-wrap{
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition);
+}
+[data-module="plants"] .care-action-wrap.is-open{
+  border-color: var(--primary);
+}
+[data-module="plants"] .care-action-btn{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  transition: background var(--transition);
+}
+[data-module="plants"] .care-action-btn:hover{
+  background: rgba(139, 158, 122, 0.07);
+}
+[data-module="plants"] .care-icon{
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  width: 26px;
+  text-align: center;
+}
+[data-module="plants"] .care-label{
+  flex: 1;
+  min-width: 0;
+}
+[data-module="plants"] .care-label strong{
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+}
+[data-module="plants"] .care-label small{
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+[data-module="plants"] .care-label .care-interval{
+  color: var(--primary-dark);
+}
+[data-module="plants"] .care-action-meta{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+[data-module="plants"] .care-chevron{
+  color: var(--text-muted);
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+[data-module="plants"] .care-action-wrap.is-open .care-chevron{
+  transform: rotate(180deg);
+}
+[data-module="plants"] .care-log-form{
+  display: none;
+  padding: 12px 16px 14px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+[data-module="plants"] .care-log-form.visible{
+  display: block;
+}
+[data-module="plants"] .care-next-date-form{
+  display: none;
+  padding: 0 16px 14px;
+  background: var(--bg);
+}
+[data-module="plants"] .care-skip-form{
+  display: none;
+  padding: 0 16px 14px;
+  background: var(--bg);
+}
+[data-module="plants"] .care-skip-form.visible, [data-module="plants"] .care-next-date-form.visible{
+  display: block;
+}
+[data-module="plants"] .care-log-form .form-row{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+[data-module="plants"] .care-log-form .form-row .form-group{
+  flex: 1;
+  margin-bottom: 0;
+}
+[data-module="plants"] .care-log-form-actions{
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+[data-module="plants"] .care-quick-actions{
+  display: flex;
+  gap: 8px;
+  padding: 0 16px 12px;
+  flex-wrap: wrap;
+}
+[data-module="plants"] .timeline{
+  position: relative;
+  padding-left: 26px;
+}
+[data-module="plants"] .timeline::before{
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 1.5px;
+  background: var(--border);
+  border-radius: 2px;
+}
+[data-module="plants"] .timeline-entry{
+  position: relative;
+  margin-bottom: 18px;
+}
+[data-module="plants"] .timeline-entry:last-child{
+  margin-bottom: 0;
+}
+[data-module="plants"] .timeline-dot{
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+}
+[data-module="plants"] .timeline-entry.type-watering   .timeline-dot{ border-color: #6BA5D8; background: #e8f2fb; }
+[data-module="plants"] .timeline-entry.type-soil       .timeline-dot{ border-color: #9B7A52; background: #f5ede3; }
+[data-module="plants"] .timeline-entry.type-fertilizer .timeline-dot{ border-color: #7A9E6A; background: #eaf3e6; }
+[data-module="plants"] .timeline-entry.type-note       .timeline-dot{ border-color: var(--text-muted); background: var(--bg); }
+[data-module="plants"] .timeline-entry.type-skip       .timeline-dot{ border-color: #C9A84C; background: #f9f3de; }
+[data-module="plants"] .timeline-entry.type-reschedule .timeline-dot{ border-color: #6E8BC7; background: #edf1fb; }
+[data-module="plants"] .tl-view-top{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+[data-module="plants"] .tl-view-meta{
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 0;
+}
+[data-module="plants"] .timeline-entry-type{
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text);
+}
+[data-module="plants"] .timeline-entry-date{
+  font-size: 0.73rem;
+  color: var(--text-muted);
+}
+[data-module="plants"] .timeline-entry-note{
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 5px 10px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--border);
+  line-height: 1.5;
+}
+[data-module="plants"] .tl-actions{
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+[data-module="plants"] .timeline-entry:hover .tl-actions, [data-module="plants"] .timeline-entry:focus-within .tl-actions{
+  opacity: 1;
+}
+@media (hover: none){[data-module="plants"] .tl-actions{ opacity: 1; }
+
+}
+[data-module="plants"] .tl-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: background var(--transition), color var(--transition);
+  flex-shrink: 0;
+}
+[data-module="plants"] .tl-btn:hover{ background: rgba(0,0,0,0.06); color: var(--text); }
+[data-module="plants"] .tl-delete-btn:hover{ color: var(--overdue); background: rgba(193,123,90,0.1); }
+[data-module="plants"] .tl-edit-form{
+  margin-top: 6px;
+  padding: 10px 12px 12px;
+  background: var(--bg);
+  border: 1.5px solid var(--primary);
+  border-radius: var(--radius-sm);
+}
+[data-module="plants"] .tl-edit-row{
+  display: flex;
+  gap: 10px;
+}
+[data-module="plants"] .tl-edit-row .form-group{
+  margin-bottom: 8px;
+}
+[data-module="plants"] .tl-edit-form .form-group{
+  margin-bottom: 8px;
+}
+[data-module="plants"] .tl-edit-form .form-group:last-of-type{
+  margin-bottom: 0;
+}
+[data-module="plants"] .tl-edit-actions{
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+[data-module="plants"] .timeline-empty{
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 8px 0;
+}
+[data-module="plants"] .obs-form-row{
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+[data-module="plants"] .obs-form-row .form-group{
+  margin-bottom: 0;
+}
+[data-module="plants"] .obs-date-group{
+  flex: 0 0 auto;
+}
+[data-module="plants"] .obs-save-btn{
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+

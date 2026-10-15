@@ -1,0 +1,16 @@
+✔ care dates use latest matching care and ignore notes skip and reschedule entries (525.558021ms)
+✔ watering seasons preserve wrap-around dry periods and growth intervals (1.530333ms)
+✔ fertilizer pause is preserved while a manual due date still takes precedence (1.051081ms)
+✔ care status distinguishes overdue today soon and future without mutating plants (3.572767ms)
+✔ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (39.84147ms)
+✔ backdated input uses local noon and today retains the actual event time (0.669329ms)
+✔ reminder counts include overdue and today care once and leave records unchanged (1.302169ms)
+✔ urgency ranking places overdue care ahead of future care (7.458815ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 616.926153

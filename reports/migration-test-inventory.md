@@ -61,3 +61,10 @@ Piano continuation across hidden/navigation states is planned but not implemente
 ## Source working-tree inventory
 
 Coffee commit `8711d56c1330d6ce626662bbf98fb440eb2e10c4` has modified `COMPASS.md`, untracked `docs/`, an untracked personal JSON backup and `standalone_excel/`. These stayed untouched and were excluded. No original license files were found among the copied repositories; source ownership and commits remain recorded. Reader commit `b3892b2417b8167d0cd063c31b2b69da781fd4a9` was researched in the plan; no local Reader suite exists.
+
+## Local platform and plants additions (2026-10-15)
+
+- General suite: 65 unit cases and 19 browser cases. Root documents, router, preferences, activity timestamps, native static output, calendar, worker ownership and coordinated updates are covered. Vite/TypeScript were replaced only after equivalent native-JavaScript checks passed; runtime assertions were retained.
+- Plants: original 7 cases / 14 assertion sites unchanged. Added 8 care/date characterization cases (also passing against original Stillgreen) and 8 shared-document/import cases. Added 11 browser workflows, including offline operation and draft/stale-edit safeguards.
+- The observation browser flow was corrected to retain the source app's inline observation form and keyboard submit, rather than invent an extra reveal step. Stored-text assertions remain.
+- New source mapping: `plants-source-map.json`. Original source files and installed apps remain unchanged. This is local verification, not full migration or physical-device acceptance.

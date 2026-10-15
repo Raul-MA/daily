@@ -1,0 +1,89 @@
+✔ new worker installs owned assets and activation never deletes sibling caches (38.856523ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (3.564981ms)
+✔ offline navigation and built assets use only this app cache (6.729585ms)
+✔ updates wait until explicitly requested and reject unrelated messages (1.84919ms)
+✖ online navigation stays on the cached version until an update is accepted (2.858843ms)
+✖ any blocked tab prevents update activation (1.409921ms)
+✖ unresponsive tabs and malformed state replies keep updates waiting (1.324471ms)
+✔ every same-app tab must explicitly report safe before an update activates (1.345009ms)
+✖ updates from unknown clients are ignored (1.410233ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 5
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 76.782693
+
+✖ failing tests:
+
+test at tests/general/worker.test.mjs:88:1
+✖ online navigation stays on the cached version until an update is accepted (2.858843ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'new version'
+  - '/daily/'
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/tests/general/worker.test.mjs:94:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'new version',
+    expected: '/daily/',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/general/worker.test.mjs:97:1
+✖ any blocked tab prevents update activation (1.409921ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/tests/general/worker.test.mjs:100:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/general/worker.test.mjs:103:1
+✖ unresponsive tabs and malformed state replies keep updates waiting (1.324471ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/tests/general/worker.test.mjs:107:12)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/general/worker.test.mjs:117:1
+✖ updates from unknown clients are ignored (1.410233ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/tests/general/worker.test.mjs:122:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

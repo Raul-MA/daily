@@ -28,3 +28,11 @@ The initial isolated Node red captures for diagnostic/storage show only file-lev
 - Piano originally pauses on hide and tears down render timers on navigation. Before changing those assertions, add replacement acceptance tests for persisted continuation and document the approved difference.
 - Legacy storage-key assertions must be adapted to the shared data boundary when that boundary is implemented, preserving the domain values and reference invariants.
 - Full verification remains failing until every module exists, characterization coverage is added and every copied suite passes against Daily.
+
+## Native platform and plants checkpoint
+
+The current general suite has 65 unit and 19 browser cases; plants has 23 unit and 11 browser cases. `node scripts/test.mjs <scope> --report reports/<name>.txt` writes child output internally and preserves failing exit codes, allowing one approved local test command to be reused. Keep browser suites sequential because static preparation replaces `dist/`.
+
+The initial update red attempt used isolated Node child processes and produced only a file-level runner failure. It did not establish behavioral red. `platform-updates-regression-red.txt` replays the exact worker from `bb4c54e` with the new tests: four guards fail for cached-version pinning, blocked tabs, invalid/unresponsive replies and unknown clients. Current worker/unit/browser reports show those contracts passing.
+
+Plant care characterization first passed against original Stillgreen, then failed against the absent module. Original seven plant cases remain unchanged. Additional UI tests cover imports, offline writes, original theme variables, language drafts and cross-tab stale edits. Screenshot attachments are generated under ignored `test-results/`; they are visual review aids, not evidence of physical iPhone behavior.

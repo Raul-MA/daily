@@ -1,3 +1,4 @@
+import { plantWidget } from '../../../../modules/plants/src/ui/widget.js';
 import { activitySummary } from './activity-summary.js';
 import { href } from '../../../../packages/platform/src/router.js';
 import { shellText } from '../../../../packages/i18n/src/shell.js';
@@ -16,7 +17,7 @@ function quickCard(preferences, base) {
     content.append(arrowLink(copy.scheduleMessage, href({ page: 'whatsapp' }, base)));
     return content;
 }
-function card(id, preferences, base, state) {
+function card(id, preferences, base, services) {
     const copy = shellText(preferences.language);
     const node = element('section', 'dashboard-card');
     node.dataset.widget = id;
@@ -29,14 +30,17 @@ function card(id, preferences, base, state) {
     if (id === 'quick')
         node.append(quickCard(preferences, base));
     else if (id === 'activities')
-        node.append(activitySummary({ state, language: preferences.language, base }));
+        node.append(activitySummary({ state: services.state, language: preferences.language, base }));
+    else if (id === 'plants') {
+        node.append(plantWidget({ service: services.plants, language: preferences.language, base }), arrowLink(copy.openPlants, href({ page: 'plants' }, base)));
+    }
     else {
         const metadata = widgets[id];
         node.append(element('p', 'widget-note', copy[metadata.note]), arrowLink(copy[metadata.label], href({ page: metadata.page }, base)));
     }
     return node;
 }
-export function dashboard(preferences, base, state) {
+export function dashboard(preferences, base, services) {
     const copy = shellText(preferences.language);
     const view = element('div');
     const title = element('div', 'daily-title');
@@ -46,7 +50,7 @@ export function dashboard(preferences, base, state) {
     const grid = element('div', 'dashboard-grid');
     grid.id = 'dashboard';
     for (const id of preferences.widgets)
-        grid.append(card(id, preferences, base, state));
+        grid.append(card(id, preferences, base, services));
     if (!preferences.widgets.length)
         grid.append(element('p', 'empty-note', copy.noWidgets));
     view.append(title, grid);

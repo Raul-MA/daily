@@ -10,8 +10,8 @@ function blocked(context) {
     }
 }
 function copy(context) {
-    const en = { install: 'Install Daily', help: 'On iPhone: Share → Add to Home Screen.', update: 'Update available', apply: 'Apply update', held: 'Finish activities and save forms before updating.', error: 'Offline setup failed. Retry after reconnecting.' };
-    const es = { install: 'Instalar Daily', help: 'En iPhone: Compartir → Añadir a pantalla de inicio.', update: 'Actualización disponible', apply: 'Actualizar', held: 'Termina las actividades y guarda los formularios antes de actualizar.', error: 'No se pudo preparar el modo sin conexión. Reintenta al conectarte.' };
+    const en = { install: 'Install Daily', help: 'On iPhone: Share → Add to Home Screen.', update: 'Update available', apply: 'Apply update', held: 'Finish activities and save forms in all open Daily tabs before updating.', error: 'Offline setup failed. Retry after reconnecting.' };
+    const es = { install: 'Instalar Daily', help: 'En iPhone: Compartir → Añadir a pantalla de inicio.', update: 'Actualización disponible', apply: 'Actualizar', held: 'Termina las actividades y guarda los formularios en todas las pestañas de Daily antes de actualizar.', error: 'No se pudo preparar el modo sin conexión. Reintenta al conectarte.' };
     try {
         return context.state.read().value.preferences.language === 'es' ? es : en;
     }
@@ -35,7 +35,7 @@ function draw(context) {
             context.registration?.waiting?.postMessage({ type: 'ACTIVATE_DAILY_UPDATE' });
         };
         context.host.append(element('p', '', text.update), button);
-        if (button.disabled)
+        if (button.disabled || context.held)
             context.host.append(element('p', '', text.held));
     }
     if (matchMedia('(display-mode: standalone)').matches)
@@ -54,16 +54,32 @@ function draw(context) {
 }
 function watchRegistration(context, registration) {
     context.registration = registration;
+    let watched;
+    const drawUpdate = () => draw(context);
     const found = () => {
-        const worker = registration.installing;
-        if (worker)
-            worker.addEventListener('statechange', () => draw(context));
+        watched?.removeEventListener('statechange', drawUpdate);
+        watched = registration.installing;
+        watched?.addEventListener('statechange', drawUpdate);
     };
     registration.addEventListener('updatefound', found);
     found();
     draw(context);
-    return () => registration.removeEventListener('updatefound', found);
+    return () => {
+        registration.removeEventListener('updatefound', found);
+        watched?.removeEventListener('statechange', drawUpdate);
+    };
 }
+
+function updateReply(event, context) {
+    if (event.data?.type === 'DAILY_UPDATE_CHECK' && event.source) {
+        event.source.postMessage({ type: 'DAILY_UPDATE_STATE', id: event.data.id, blocked: blocked(context) });
+    }
+    if (event.data?.type === 'DAILY_UPDATE_RESULT') {
+        context.held = event.data.allowed !== true;
+        draw(context);
+    }
+}
+
 export function mountPwa(state, base) {
     if (!('serviceWorker' in navigator))
         return () => undefined;
@@ -73,6 +89,10 @@ export function mountPwa(state, base) {
     let active = true;
     let stopRegistration = () => undefined;
     const stopState = state.subscribe(() => draw(context));
+    const formState = () => draw(context);
+    document.addEventListener('daily:form-state', formState);
+    const message = event => updateReply(event, context);
+    navigator.serviceWorker.addEventListener('message', message);
     const install = (event) => { event.preventDefault(); context.prompt = event; draw(context); };
     let controlled = Boolean(navigator.serviceWorker.controller);
     const changed = () => {
@@ -100,6 +120,8 @@ export function mountPwa(state, base) {
     } });
     return () => {
         active = false;
+        navigator.serviceWorker.removeEventListener('message', message);
+        document.removeEventListener('daily:form-state', formState);
         stopState();
         stopRegistration();
         host.remove();

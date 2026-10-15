@@ -1,19 +1,25 @@
-# plants Compass
+# Plants Compass
 
 ## Start Here
 
-- [Root rules](../../AGENTS.md).
-- [Migration inventory](../../reports/migration-test-inventory.md).
+- [Root rules](../../AGENTS.md), [behavior and storage](docs/behavior.md), [progress](../../docs/progress.md).
 
 ## Commands
 
-- `npm run test:plants` runs this module suite.
+- `npm run test:plants`: 23 unit cases and 11 browser cases.
+- `node scripts/test.mjs plants --report reports/plants-ui.txt`: same scope with a report, no shell redirection.
 
 ## Key Files
 
-- `test/` and `e2e/`: tests copied before implementation.
-- `src/`: reserved for module implementation.
+- `src/service.js`: shared-document adapter, import preview, stale-preview guard and migration export.
+- `src/store/store.js`: retained plant operations; `validation.js`, `envelope.js`, `legacy.js`, `metadata.js` split storage responsibilities.
+- `src/care/care.js`: original seasonal/manual-date rules. `src/ui/`: native DOM pages and dashboard provider.
+- `src/plants/templates/`: thirteen unchanged source templates, split into small data modules.
+- `test/` and `e2e/`: original assertions plus care, shared-storage, draft and browser acceptance coverage.
 
 ## Non-Obvious Patterns
 
-- Missing functionality must fail tests; this module is unfinished.
+- `connectPlants(state)` binds the public plant API to `daily:v1`; it does not import legacy keys automatically.
+- The default legacy adapter exists for explicit compatibility and the copied original tests. Mounted UI uses the shared document.
+- Theme variables and selectors stay under `[data-module="plants"]`. No module registers a worker or downloads Google Fonts.
+- UI controls are EN/ES. Original authored guide paragraphs/template descriptions remain Spanish pending the final content-localization pass; saved user text is never translated.

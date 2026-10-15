@@ -1,0 +1,15 @@
+✖ tests/general/worker.test.mjs (141.787169ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 151.989904
+
+✖ failing tests:
+
+test at tests/general/worker.test.mjs:1:1
+✖ tests/general/worker.test.mjs (141.787169ms)
+  'test failed'

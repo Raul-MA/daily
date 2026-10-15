@@ -1,77 +1,58 @@
 # Implementation progress
 
-Updated: 2026-10-15. Local repo: `/workspaces/daily`, branch `main`.
+Updated: 2026-10-15. Repo: `/workspaces/daily`, branch `main`.
 
-## Current instruction and next step
+## Current instruction and exact next step
 
-The user explicitly requested **local work only, no workflows**, then clarified **HTML/CSS/JavaScript only**. The plain-JavaScript replacement passed the same 54 unit and 17 browser checks before Vite/TypeScript were removed. GitHub Actions deployment was removed locally. Do not push, configure Pages, deploy or add workflows until explicitly requested. No remote changes were made for this instruction.
+Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No workflows, pushes, Pages configuration or deployments. Keep real Readwise/Reader API calls for the user's later token test; unverified live access does not block implementation. Do not request personal tokens or backup files.
 
-Stage 1 is complete. Stage 2 local preparation is complete; live API checks and installed-device coexistence are deferred, not claimed passing. **Stage 3 platform implementation is in progress locally**, tests first and one module at a time. Routing, preference persistence and shell/dashboard acceptance tests have been added before implementation. Do not ask the user to finish a hosted Readwise check before continuing.
+The shared platform and local plants acceptance are implemented. **Next: coffee**, preserving the 21 copied workflow cases, its forms/beans/history/insights/backup semantics and original appearance. Coffee Excel remains excluded. Read its module rules/Compass and original source before implementation. Continue sequentially with games, Time Budget, piano, reading, WhatsApp, then complete shared migration/localization/release acceptance.
 
-Keep Readwise and Reader API requests wired to the documented endpoints. The user will enter a token later and observe success or failure. Preserve honest loading/error states and the Daily Review link fallback. Unknown per-card scheduling APIs must not be invented.
+## Verified current work
 
-## Completed and user-confirmed
+| Scope | Result | Evidence |
+| --- | --- | --- |
+| General | 65 unit + 19 browser cases pass | `reports/platform-with-plants.txt` |
+| Plants | 23 unit + 11 browser cases pass | `reports/plants-ui.txt` |
+| Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
+| Strict full-scope lint | Pass | `reports/plants-ui-lint.txt` |
+| Native JS syntax | 157 files pass; this is not typechecking | `reports/plants-ui-syntax.txt` |
+| Static preparation | 81 unchanged native files/assets prepared | `reports/plants-build.txt` |
+| Whole migration | Incomplete; other six modules remain pending | Last full red evidence: `reports/red-all.txt` |
 
-- Initialized this repo and copied all 25 discovered source test/helper files before application code. Source commits, hashes, assertion counts and migrated destinations are in `reports/migration-test-inventory.md` and `reports/source-tests.json`.
-- Strict shared ESLint, native JavaScript syntax checks, scoped sequential runners and discovery guards are installed. No skipped tests or relaxed lint thresholds.
-- Original baselines pass: plants 7, coffee browser 21, games browser 24, piano unit 41, piano full browser/offline, WhatsApp 3 groups. New-app feature suites remain red because migration is unfinished.
-- User confirms all existing apps export and restore successfully, most backups have fewer than 50 entries, and backup size is approximately 20 KB. No personal backup files were requested or copied. Existing export/restore checks do not need repeating.
-- User confirms existing Time Budget survives lock/background/closing and reopening with correct timing. Reader works on the iPhone. Daily Review is new and has no prior live verification.
-- Local EN/ES diagnostic at `/daily/diagnostics.html`: explicit submission, memory-only token, three sequential real GET endpoints, status-only results, timeout/error handling, no response-content persistence, origin label and direct Daily Review link.
-- Version-1 document-store prototype validates serialized data, preserves prior/recovery/corrupt copies and rejects future root versions. Twelve tests pass, including failed writes, Unicode and synthetic data exceeding 140 KB. Combined import UI, domain schemas/reference validation and cross-tab policy remain future work.
-- Five legacy cache-cleanup patches are prepared with source SHA checks; all pass ownership tests and `git apply --check`. The original repos and installed workers are unchanged. Release/coexistence checks are deferred until remote work and installation resume.
+No skipped tests or relaxed lint thresholds. Original plant assertions remain unchanged. New-app parity is not established by original baseline results.
+
+## Implemented
+
+- Accessible hash-router shell, accepted three/two/one-column iOS dashboard, app menu, shared EN/ES, persisted widget order/visibility and quick-action settings. Dashboard links create no records or care events.
+- Validated `daily:v1` root document, per-module adapters, recovery/corrupt preservation, future-version rejection and visible quota failures. Combined restore and remaining domain adapters are still pending.
+- Timestamp activity registry: independent countdowns, singleton budget/game/piano, explicit pause/resume/completion and overdue reconstruction. Rendering/navigation never advances persisted state. Full Time Budget/game/piano modules still need integration.
+- One generated manifest and owned offline asset list. Authenticated/external requests bypass worker caches. Cached HTML remains with its matching asset version. Updates require every open same-app tab to report safe; blocked/unresponsive tabs hold activation. The two-tab browser test preserves settings and unsaved work through update acceptance.
+- Local-midnight/calendar refresh with foreground/timezone checks and daylight-saving tests. In-memory dirty-form snapshots preserve values, file selection and focus through language changes. Plant/history stale edits retain drafts rather than overwriting newer records.
+- Plants: list, stable detail/edit routes, templates, seasonal care, notes/history editing, skip/manual due dates, Things settings/exact shortcut payload, original/migration exports, preview/cancel/recovery before import, scoped source theme and offline care logging. Thirteen original guide/template data objects are preserved. Controls are EN/ES; authored guide paragraphs/descriptions remain Spanish for final content localization. See `modules/plants/docs/behavior.md` and `reports/plants-source-map.json`.
+- Standalone connection diagnostic: explicit submission, memory-only token cleared from input, sequential real GET endpoints, timeout/status-only results and direct Daily Review fallback. Live authenticated access remains unverified.
+- Five legacy worker-cleanup patches prepared and ownership-tested. Originals and installed workers remain unchanged; release/coexistence tests are deferred.
+
+## User-confirmed facts
+
+- All original apps export and restore successfully. Most backups have fewer than 50 entries and are approximately 20 KB. Do not ask to repeat these checks or provide personal exports. Synthetic storage fixtures exceed 140 KB.
+- Existing Time Budget correctly survives lock/background/closing and reopening. Reader works on the iPhone. Daily Review is new and has no previous live verification.
 - Coffee's unrelated documentation, personal backup and Excel additions remain untouched and excluded.
 
-## Platform checkpoint before removing Vite
-
-- Implemented hash routing, accessible shell, responsive navigation-only dashboard, EN/ES, widget order/visibility and quick-action settings.
-- Shared module store validates payloads, preserves unrelated data and emits only after successful commits.
-- Timestamp activities survive reload, support explicit pause/resume/completion, independent countdowns and singleton budget/game/piano rules. Dashboard and shared indicator navigate without timer mutations.
-- Generated manifest and offline worker cache built assets only; authenticated/external requests bypass caching. Update UI waits for explicit application and blocks active/paused activities or dirty forms in the current page. Cross-tab unsaved-form update coordination remains pending.
-- **54 general unit tests and 17 browser tests pass**, including production offline reopening of Home, Settings and diagnostics. Lint, TypeScript and build pass for this checkpoint. Evidence: `reports/platform-general.txt`, `reports/platform-lint.txt`, `reports/platform-typecheck.txt`, `reports/platform-build.txt`.
-- This is platform evidence, not module parity. No app modules are migrated. Do not claim full verification passing.
-- Plain-JavaScript replacement verified in a separate candidate before switching: **54 unit + 17 browser tests pass**, unchanged behavioral assertions, explicit native-module paths adapted. `reports/plain-js-general.txt`, `plain-js-lint.txt`, `plain-js-check.txt`, `plain-js-build.txt` record results. The diagnostic client is now `connections.js`; no authenticated responses enter offline caches.
-- Vite, TypeScript and their dependency/configuration files have been removed. The app runs as native ES modules. Node scripts only prepare static files and serve localhost. See `docs/platform.md`.
-- Main working tree also passes **54 general unit + 17 browser checks** after removal (`reports/plain-js-main-general.txt`); lint, syntax and static preparation pass. Dependencies were pruned offline.
-- Next: harden multi-tab updates/version pinning and static build checks, then begin plants with characterization/browser tests before importing application code.
-
-## Verification evidence
-
-| Check | Result | Evidence |
-| --- | --- | --- |
-| Original suites | Baselines pass | `reports/baseline-*.txt` |
-| Current general unit suite | 25 cases pass | `reports/stage2-unit.txt` |
-| General diagnostic browser suite | 3 mocked cases pass | `reports/readwise-diagnostic-general.txt` |
-| Diagnostic/storage red reconstruction | 18 named cases fail with source absent | `reports/stage2-reconstructed-red.txt` |
-| Legacy ownership regression | Original 5 guards fail; prepared fixes pass | `reports/legacy-workers-red.txt`, `reports/stage2-unit.txt` |
-| Lint / typecheck / build | Pass for Stage 2 implementation | `reports/stage2-lint.txt`, `reports/stage2-typecheck.txt`, `reports/stage2-build.txt` |
-| Whole app suites | Last full run exits 1; missing apps remain unfinished | `reports/red-all.txt` |
-
-The initial diagnostic/storage red logs contained file-level summaries; the reconstruction is additional evidence, not a replacement claim about those initial logs. See `docs/testing.md`.
-
-## Resume
+## Resume and remaining gates
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and the authoritative `docs/pwa-consolidation-plan.md`.
-2. Harden multi-tab updates/version pinning and static build checks, then begin plants with care/date characterization and browser tests before implementation. Retain the original appearance and care rules.
-3. Keep the diagnostic and real API endpoints available. Authenticated success is unverified and deferred to the user's token test; it is not a dependency for local platform work.
-4. Run general plus affected module suites for shared changes. Add Time Budget/Reader characterization tests and replacement piano continuation/worker/route contracts before their modules are implemented.
-5. Save local progress after each increment. Do not add workflows or push the local workflow deletion automatically.
+2. Continue coffee first. Tests were copied before implementation; preserve assertions while adapting native imports, shell routes and the shared-document fixture boundary. General/shared changes require general plus affected suites.
+3. Add Time Budget/Reader characterization before implementation; add replacement piano continuation/worker/route contracts before changing its behavior.
+4. Complete combined backup/import schemas/reference validation, legacy migration exporters, concurrency policy, all-app offline/update checks, full localization (including plant guides), install assets and device checklist. Real iPhone/Things/Readwise acceptance remains deferred and must never be claimed passing from browser mocks.
+5. Run `npm run verify` before claiming the whole migration complete. Until all apps are implemented it must remain red. Save local checkpoints; no remote work.
 
-## Stages
+## Checkpoints and test history
 
-1. Tests first: complete.
-2. Constraints: local preparation complete; live API/device/release evidence explicitly deferred by user.
-3. Platform: in progress, local only. First increment: router, shell, shared language and dashboard customization.
-4. Plants: pending.
-5. Coffee then games: pending.
-6. Time Budget then piano: pending.
-7. Reading then WhatsApp: pending; retain API calls for later token testing.
-8. Release/migration: deferred; full product and physical-device acceptance remain required before completion.
-
-## Saved checkpoints and remote history
-
-- `1344b79`: initial test-first bootstrap.
-- `565912d`: diagnostic, recovery prototype, legacy patches and historical preview workflow.
-- `dffda47`: patch context formatting fix.
-- `f9b9eca`: progress update pushed after unsetting `GITHUB_TOKEN`; remote is `https://github.com/Raul-MA/daily.git`.
-- On 2026-10-14 the preview workflow failed at `configure-pages`: Pages was configured for legacy branch publishing. A proposed switch to Actions was interrupted and is no longer authorized under the local-only instruction. Hosting is unverified and no further remote troubleshooting is needed now.
+- `1344b79`: copied source tests and strict bootstrap; baseline/source mapping in `reports/source-tests.json` and `migration-test-inventory.md`.
+- `565912d`, `dffda47`: diagnostic/recovery prototype and checked legacy patches.
+- `f9b9eca`: last historical pushed checkpoint. Existing remote is `https://github.com/Raul-MA/daily.git`; historical Pages configuration failed and is no longer authorized for troubleshooting.
+- `a78f194`: verified Vite/TypeScript platform checkpoint (54 unit + 17 browser cases).
+- `bb4c54e`: removed Vite/TypeScript only after the same checks passed in a native-JavaScript candidate and again in the main repo. Old typed/build reports are historical evidence. Current scripts copy native files and generate offline metadata; no bundler/transpiler/runtime framework remains.
+- New red/green evidence: `plants-care-red`, `plants-service-red`, `plants-browser-red`, `plants-drafts-red`, `plants-styles-red`, `plants-import-count-red`, `calendar-red`, `calendar-browser-red`, and corresponding current reports. `platform-updates-red.txt` initially contained only a file-level runner failure; `platform-updates-regression-red.txt` explicitly replays the saved prior worker and fails four new guards. See `docs/testing.md`.
+- Test reports use `node scripts/test.mjs <scope> --report reports/<name>.txt`. The reusable command prefix is approved for local browser/server execution; avoid shell redirections or changing command shapes unnecessarily.
