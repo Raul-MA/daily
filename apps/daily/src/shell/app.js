@@ -1,5 +1,6 @@
 import { watchCalendar } from '../../../../packages/platform/src/calendar.js';
 import { connectPlants } from '../../../../modules/plants/src/service.js';
+import { connectCoffee } from '../../../../modules/coffee/src/service.js';
 import { committed } from './committed.js';
 import { mountPwa } from './pwa.js';
 import { refreshActivityTimes } from './activity-summary.js';
@@ -11,6 +12,7 @@ export function mountShell(root, base) {
     const state = createDailyState(localStorage, navigator.language.startsWith('es') ? 'es' : 'en');
     const context = { root, base, state, moduleUI: {}, route: parseHash(location.hash), error: false, saved: false };
     context.plants = connectPlants(state);
+    context.coffee = connectCoffee(state);
     const stopPwa = mountPwa(state, base);
     const stopCalendar = watchCalendar(window, () => calendarRefresh(context));
     const stopState = state.subscribe(() => committed(context));
@@ -48,6 +50,7 @@ export function mountShell(root, base) {
         document.removeEventListener('visibilitychange', visible);
         context.pageCleanup?.();
         context.plants.stop();
+        context.coffee.stop();
         stopCalendar();
         stopPwa();
         stopState();

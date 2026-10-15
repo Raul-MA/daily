@@ -1,6 +1,6 @@
 import { appURL } from '../../../tests/support/app-url.mjs';
 import { expect, test } from "@playwright/test";
-import { appLocators, bean, emptyData, entry, expectToast, fieldIds, fillShotForm, gotoApp, setToggle, STORAGE_KEY, testIds } from "./helpers.js";
+import { appLocators, bean, emptyData, entry, expectToast, fieldIds, fillShotForm, gotoApp, readCoffeeData, setToggle, testIds } from "./helpers.js";
 test("creates, edits, deletes beans, and blocks deleting a used bean", async ({ page }) => {
     const usedBean = bean();
     await gotoApp(page, emptyData({
@@ -82,7 +82,7 @@ test("reminds when data has not been exported recently and records exports", asy
     await page.getByTestId(testIds.exportData).click();
     await downloadPromise;
     await expect(page.getByTestId(testIds.exportReminder)).toHaveCount(0);
-    const settings = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).settings, STORAGE_KEY);
+    const settings = (await readCoffeeData(page)).settings;
     expect(new Date(settings.lastExportedAt).toString()).not.toBe("Invalid Date");
 });
 test("shows the backup reminder on New and routes it to settings export", async ({ page }) => {
@@ -93,7 +93,7 @@ test("shows the backup reminder on New and routes it to settings export", async 
         }
     }));
     await expect(page.getByTestId(testIds.newExportReminder)).toContainText("No backup export has been recorded");
-    await expect(page.locator("#app > :first-child")).toHaveAttribute("data-testid", testIds.newExportReminder);
+    await expect(page.locator(process.env.DAILY_BASELINE_URL ? "#app > :first-child" : "#coffee-content > :first-child")).toHaveAttribute("data-testid", testIds.newExportReminder);
     await page.getByTestId(testIds.newExportReminder).click();
     await expect(page.getByRole("heading", { name: "Settings" })).toBeVisible();
     await expect(page.getByTestId(testIds.exportData)).toBeFocused();
@@ -112,7 +112,7 @@ test("asks for tools once and hides unavailable prep controls", async ({ page })
     await expect(distributorUsed).toHaveCount(0);
     await expect(tampDeviation).toBeVisible();
     await expect(puckScreenUsed).toBeVisible();
-    const settings = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).settings, STORAGE_KEY);
+    const settings = (await readCoffeeData(page)).settings;
     expect(settings.toolsConfigured).toBe(true);
     expect(settings.tools).toEqual({ wdt: true, distributor: false, puckScreen: true });
 });
@@ -128,7 +128,7 @@ test("skip tools setup saves no optional tools and entries keep explicit prep va
     await fillShotForm(page);
     await page.getByTestId(testIds.saveShot).click();
     await expectToast(page, "Drink saved.");
-    const entries = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).entries, STORAGE_KEY);
+    const entries = (await readCoffeeData(page)).entries;
     expect(entries[0].prep).toMatchObject({
         wdtUsed: false,
         distributorUsed: false,

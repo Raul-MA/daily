@@ -6,7 +6,7 @@ Copied tests must protect behavior before app code enters this repo. A missing f
 
 ## How It Works
 
-`npm run test:<module>` runs each unit group and then its browser checks. `test:all` visits general, plants, coffee, games, Time Budget, piano, reading and WhatsApp sequentially, accumulates failures and exits nonzero. Playwright uses one worker and no retries. `test:general` now includes 25 unit cases and three mocked diagnostic browser tests. `scripts/discovery.mjs` checks required case counts before execution; Time Budget and Reader currently fail discovery because no characterization suite exists yet.
+`npm run test:<module>` runs each unit group and then its browser checks. `test:all` visits general, plants, coffee, games, Time Budget, piano, reading and WhatsApp sequentially, accumulates failures and exits nonzero. Playwright uses one worker and no retries. `test:general` includes 65 unit cases and 19 browser cases for the shared platform and diagnostics. `scripts/discovery.mjs` checks required case counts before execution; Time Budget and Reader currently fail discovery because no characterization suite exists yet.
 
 Node tests use a test-only loader under `tests/support/`. Existing source modules are imported normally, including import errors. If the requested file does not exist, each referenced export throws when exercised. This keeps assertions running without adding app implementations or fabricating successful results. Absent asset reads fail inside named tests. The loader is never part of the browser application build.
 
@@ -36,3 +36,8 @@ The current general suite has 65 unit and 19 browser cases; plants has 23 unit a
 The initial update red attempt used isolated Node child processes and produced only a file-level runner failure. It did not establish behavioral red. `platform-updates-regression-red.txt` replays the exact worker from `bb4c54e` with the new tests: four guards fail for cached-version pinning, blocked tabs, invalid/unresponsive replies and unknown clients. Current worker/unit/browser reports show those contracts passing.
 
 Plant care characterization first passed against original Stillgreen, then failed against the absent module. Original seven plant cases remain unchanged. Additional UI tests cover imports, offline writes, original theme variables, language drafts and cross-tab stale edits. Screenshot attachments are generated under ignored `test-results/`; they are visual review aids, not evidence of physical iPhone behavior.
+
+
+## Coffee checkpoint
+
+Coffee's scoped runner discovers 17 unit cases separately from 28 browser cases, preserving the original 21 workflows. The eight domain characterization cases also passed against the original repository. Shared-document test fixtures replace only the storage boundary; original field/history/backup/insight assertions remain. New valid-import steps require preview/recovery/confirmation under the plan; malformed imports still assert the original error. See `modules/coffee/docs/behavior.md` and `reports/coffee-source-map.json` for intentional route/startup changes and source provenance.

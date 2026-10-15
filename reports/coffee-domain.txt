@@ -1,0 +1,16 @@
+✔ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (17.790912ms)
+✔ drink type changes calculate composition and clear irrelevant water and milk fields (2.537715ms)
+✔ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (2.756232ms)
+✔ beans referenced by drinks cannot be deleted while unused beans can be removed (2.670933ms)
+✔ coffee filters and insights retain scored and unscored drink semantics (4.819531ms)
+✔ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (1.976658ms)
+✔ legacy replacement resets setup and normalizes absent drink composition fields (3.618932ms)
+✔ unsupported coffee backups and invalid bean input leave existing records unchanged (1.463019ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 60.464736

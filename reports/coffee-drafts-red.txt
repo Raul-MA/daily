@@ -1,0 +1,119 @@
+Suite: coffee
+✔ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (7.421234ms)
+✔ drink type changes calculate composition and clear irrelevant water and milk fields (1.671699ms)
+✔ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (1.486383ms)
+✔ beans referenced by drinks cannot be deleted while unused beans can be removed (1.870941ms)
+✔ coffee filters and insights retain scored and unscored drink semantics (2.508951ms)
+✔ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (1.620052ms)
+✔ legacy replacement resets setup and normalizes absent drink composition fields (2.06897ms)
+✔ unsupported coffee backups and invalid bean input leave existing records unchanged (1.380376ms)
+✔ coffee reads create no records and saves preserve unrelated shared modules (6.103758ms)
+✔ explicit coffee language changes commit with global language atomically (0.988614ms)
+✔ coffee imports preserve shared language and validate merged bean references (2.302625ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (1.5704ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (1.392527ms)
+✔ coffee rejects a future module payload without silently replacing it (0.520912ms)
+✔ coffee import previews are read-only and cancel leaves the current root intact (0.696159ms)
+✔ coffee import confirmation rejects stale previews and retains recovery on replacement (1.034539ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 68.904612
+[WebServer] (node:124414) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 25 tests using 1 worker
+
+(node:124426) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/coffee/e2e/backup.spec.js:4:1 › legacy imports keep merge tools and trigger setup after replace (1.4s)
+  ✓   2 modules/coffee/e2e/backup.spec.js:60:1 › exports data and imports merge, replace, and invalid backups (1.5s)
+  ✓   3 modules/coffee/e2e/history-detail.spec.js:3:1 › sorts, filters, opens, edits, cancels, and deletes history entries (1.8s)
+  ✓   4 modules/coffee/e2e/history-detail.spec.js:57:1 › switches history between compact and detailed views and remembers the choice (1.2s)
+  ✓   5 modules/coffee/e2e/history-detail.spec.js:80:1 › compact history rows fit on mobile (952ms)
+  ✓   6 modules/coffee/e2e/history-detail.spec.js:93:1 › new entries created through the UI are listed in history (1.9s)
+  ✓   7 modules/coffee/e2e/insights.spec.js:3:1 › shows empty insights and updates metrics from stored drinks (1.3s)
+  ✓   8 modules/coffee/e2e/new-shot.spec.js:3:1 › creates a complete espresso drink, previews ratio, and persists it (2.0s)
+  ✓   9 modules/coffee/e2e/new-shot.spec.js:26:1 › creates an americano with water to coffee ratio (1.5s)
+  ✓  10 modules/coffee/e2e/new-shot.spec.js:40:1 › creates a milk drink and clears hidden composition fields after type switch (1.7s)
+  ✓  11 modules/coffee/e2e/new-shot.spec.js:61:1 › manage button routes to settings and invalid drink shows validation toast (933ms)
+  ✓  12 modules/coffee/e2e/new-shot.spec.js:73:1 › clear button empties the selected bean (833ms)
+  ✓  13 modules/coffee/e2e/new-shot.spec.js:83:1 › score slider can be set after skipping (1.7s)
+  ✓  14 modules/coffee/e2e/new-shot.spec.js:95:1 › taste info buttons explain the rating fields (867ms)
+  ✓  15 modules/coffee/e2e/settings-data.spec.js:4:1 › creates, edits, deletes beans, and blocks deleting a used bean (1.2s)
+  ✓  16 modules/coffee/e2e/settings-data.spec.js:32:1 › saves settings and persists theme (1.4s)
+  ✓  17 modules/coffee/e2e/settings-data.spec.js:53:1 › switches to Spanish and persists translated UI (1.2s)
+  ✓  18 modules/coffee/e2e/settings-data.spec.js:72:1 › reminds when data has not been exported recently and records exports (777ms)
+  ✘  19 modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export (5.8s)
+(node:125070) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  20 modules/coffee/e2e/settings-data.spec.js:101:1 › asks for tools once and hides unavailable prep controls (843ms)
+  ✓  21 modules/coffee/e2e/settings-data.spec.js:119:1 › skip tools setup saves no optional tools and entries keep explicit prep values (1.5s)
+  ✓  22 modules/coffee/e2e/shared.spec.js:4:1 › coffee detail and edit links reload without changing records (1.7s)
+  ✓  23 modules/coffee/e2e/shared.spec.js:19:1 › coffee language changes preserve unsaved values and derived previews (1.1s)
+  ✘  24 modules/coffee/e2e/shared.spec.js:35:1 › coffee stale drink edits retain their draft and preserve the other tab change (6.5s)
+(node:125505) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  25 modules/coffee/e2e/shared.spec.js:54:1 › coffee import cancellation and future backups leave existing data intact (1.0s)
+
+
+  1) modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByTestId('export-data')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" with timeout 5000ms
+      - waiting for getByTestId('export-data')
+        14 × locator resolved to <button type="button" id="export-data" class="secondary" data-testid="export-data">…</button>
+           - unexpected value "inactive"
+
+
+       97 |     await page.getByTestId(testIds.newExportReminder).click();
+       98 |     await expect(page.getByRole("heading", { name: "Settings" })).toBeVisible();
+    >  99 |     await expect(page.getByTestId(testIds.exportData)).toBeFocused();
+          |                                                        ^
+      100 | });
+      101 | test("asks for tools once and hides unavailable prep controls", async ({ page }) => {
+      102 |     const { distributorUsed, puckScreenUsed, tampDeviation, wdtTool, wdtUsed } = appLocators(page);
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:99:56
+
+    Error Context: test-results/settings-data-shows-the-ba-5c0b2-outes-it-to-settings-export/error-context.md
+
+  2) modules/coffee/e2e/shared.spec.js:35:1 › coffee stale drink edits retain their draft and preserve the other tab change 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('#freeNotes')
+    Expected: "Unsaved draft"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('#freeNotes')
+
+
+      48 |   await expect(page.getByTestId(testIds.toast)).toContainText('Data changed');
+      49 |   await page.getByTestId(testIds.saveShot).click();
+    > 50 |   await expect(page.locator('#freeNotes')).toHaveValue('Unsaved draft');
+         |                                            ^
+      51 |   expect((await readCoffeeData(page)).entries[0].taste.freeNotes).toBe('Other tab');
+      52 | });
+      53 |
+        at /workspaces/daily/modules/coffee/e2e/shared.spec.js:50:44
+
+    Error Context: test-results/shared-coffee-stale-drink--3f000-eserve-the-other-tab-change/error-context.md
+
+  2 failed
+    modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export 
+    modules/coffee/e2e/shared.spec.js:35:1 › coffee stale drink edits retain their draft and preserve the other tab change 
+  23 passed (46.2s)

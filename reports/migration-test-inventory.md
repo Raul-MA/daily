@@ -68,3 +68,11 @@ Coffee commit `8711d56c1330d6ce626662bbf98fb440eb2e10c4` has modified `COMPASS.m
 - Plants: original 7 cases / 14 assertion sites unchanged. Added 8 care/date characterization cases (also passing against original Stillgreen) and 8 shared-document/import cases. Added 11 browser workflows, including offline operation and draft/stale-edit safeguards.
 - The observation browser flow was corrected to retain the source app's inline observation form and keyboard submit, rather than invent an extra reveal step. Stored-text assertions remain.
 - New source mapping: `plants-source-map.json`. Original source files and installed apps remain unchanged. This is local verification, not full migration or physical-device acceptance.
+
+## Coffee integration additions (2026-10-15)
+
+- Original 21 browser workflows retain all 147 original assertion sites. Storage fixtures/readback now use `daily:v1.modules.coffee.data`; theme/language target the Coffee region and the reminder's first-child check targets `#coffee-content`.
+- Valid import workflows explicitly preview, download recovery and confirm before the original completion assertions. The shared platform placeholder-heading assertion now checks the Coffee region and its actual first-run Tools heading; navigation-only and storage assertions remain.
+- Eight domain cases passed against original Coffee (`baseline-coffee-domain.txt`), then failed on the absent module (`coffee-domain-red.txt`). Nine new service cases cover atomic language saves, references, duplicates, quota/future data and read-only/stale imports. Seven browser additions cover deep links, drafts, conflicts, cancel/future imports, quota errors, settings export drafts and offline/native appearance.
+- Red evidence: `coffee-service-red.txt`, `coffee-import-red.txt`, `coffee-browser-red.txt`, `coffee-drafts-red.txt`, `coffee-validation-red.txt`, `coffee-offline-quota-red.txt`, `coffee-settings-draft-red.txt`, `coffee-navigation-red.txt`, `coffee-navigation-style-red.txt`. These show different increments; earlier passing subsets are not whole-migration acceptance.
+- `coffee-source-map.json` records application sources and destinations. No original app, installed data, personal export or Excel code was modified/imported.

@@ -27,7 +27,8 @@ test('all modules stay reachable and dashboard navigation creates no records', a
   await page.getByText('Apps', { exact: true }).click();
   await expect(page.getByRole('navigation', { name: 'Apps' }).getByRole('link')).toHaveCount(7);
   await page.getByRole('navigation', { name: 'Apps' }).getByRole('link', { name: 'Coffee', exact: true }).click();
-  await expect(page.getByRole('heading', { name: 'Coffee', exact: true })).toBeVisible();
+  await expect(page.locator('[data-module=coffee]')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Tools', exact: true })).toBeVisible();
   await page.getByRole('link', { name: 'Home', exact: true }).click();
   await page.getByRole('link', { name: 'Log coffee', exact: true }).click();
   await expect(page).toHaveURL(/#\/coffee\/new$/);

@@ -2,7 +2,7 @@ import { appURL } from '../../../tests/support/app-url.mjs';
 import { entryFixture } from './entry-fixture.js';
 import { expect } from "@playwright/test";
 import { testIds } from "./testIds.js";
-export const STORAGE_KEY = "coffee-tracker:v1";
+export const STORAGE_KEY = process.env.DAILY_BASELINE_URL ? "coffee-tracker:v1" : "daily:v1";
 export { testIds };
 export const fieldIds = {
     beanDecaf: "beanDecaf",
@@ -33,7 +33,7 @@ export const selectors = {
     filterDrinkType: "#filterDrinkType",
     freeNotes: "#freeNotes",
     grindSetting: "#grindSetting",
-    html: "html",
+    html: process.env.DAILY_BASELINE_URL ? "html" : "[data-module=coffee]",
     importMode: "#importMode",
     language: "#language",
     milkBrand: "#milkBrand",
@@ -114,7 +114,16 @@ export function entry(overrides = {}) {
     };
 }
 export async function seedStorage(page, data) {
-    await page.evaluate(({ key, value }) => localStorage.setItem(key, JSON.stringify(value)), { key: STORAGE_KEY, value: data });
+    await page.evaluate(async ({ key, value }) => {
+        if (key === 'coffee-tracker:v1') return localStorage.setItem(key, JSON.stringify(value));
+        const { initialDailyDocument } = await import('/daily/packages/data/src/daily-document.js');
+        const { normalizeData } = await import('/daily/modules/coffee/src/backend/core/schema.js');
+        const root = JSON.parse(localStorage.getItem(key)) || initialDailyDocument('en');
+        const coffee = normalizeData(value);
+        root.preferences.language = coffee.settings.language;
+        root.modules.coffee = { version: 1, data: coffee };
+        localStorage.setItem(key, JSON.stringify(root));
+    }, { key: STORAGE_KEY, value: data });
 }
 export async function gotoApp(page, data = emptyData({ beanPresets: [bean()] })) {
     await page.goto(appURL("coffee"));
@@ -211,4 +220,19 @@ async function fillComposition(fields, values) {
         await fields.milkBrand.fill(values.milkBrand);
     if (values.milkType !== "")
         await fields.milkType.fill(values.milkType);
+}
+
+export async function readCoffeeData(page) {
+    return page.evaluate(key => {
+        const data = JSON.parse(localStorage.getItem(key));
+        return key === 'daily:v1' ? data.modules.coffee.data : data;
+    }, STORAGE_KEY);
+}
+export async function confirmCoffeeImport(page) {
+    if (process.env.DAILY_BASELINE_URL) return;
+    await expect(page.locator('[data-coffee-import-preview]')).toBeVisible();
+    const download = page.waitForEvent('download');
+    await page.locator('[data-coffee-recovery]').click();
+    await download;
+    await page.locator('[data-coffee-confirm-import]').click();
 }

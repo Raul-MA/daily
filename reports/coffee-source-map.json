@@ -1,0 +1,150 @@
+{
+  "commit": "8711d56c1330d6ce626662bbf98fb440eb2e10c4",
+  "files": [
+    {
+      "source": "coffee-tracker/backend/core/i18n.js",
+      "sha256": "e492b6818afbf738d999f5b8c3abb3b4caaebf549ca356e57683255a84cb7f76",
+      "destinations": [
+        "modules/coffee/src/backend/core/i18n.js",
+        "modules/coffee/src/backend/core/translations/en.js",
+        "modules/coffee/src/backend/core/translations/es.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/backend/core/id.js",
+      "sha256": "9b04c2a639ef1296ddfe63a8daf4c9ce7dffe010227ed86726fc373688df7934",
+      "destinations": [
+        "modules/coffee/src/backend/core/id.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/backend/core/schema.js",
+      "sha256": "23502e69565a8cc8866d6bb5673887a147196d78bd3ff7f8c5cfe32d6534bd13",
+      "destinations": [
+        "modules/coffee/src/backend/core/schema.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/backend/core/storage.js",
+      "sha256": "e471673e4d012c69404f33276e1dcb298431befbad1f02e8caa7db63d48f6a6e",
+      "destinations": [
+        "modules/coffee/src/backend/core/storage.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/backend/core/validation.js",
+      "sha256": "b81bd1a497906aa9468c4f7032678a831d907984bb76b9706b672d224d2d4041",
+      "destinations": [
+        "modules/coffee/src/backend/core/validation.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/backend/features/beans.js",
+      "sha256": "1df0decc5b5798e1ffc420d60bc28b949609c961a867f11f5ec669f746e6b7a2",
+      "destinations": [
+        "modules/coffee/src/backend/features/beans.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/backend/features/entries.js",
+      "sha256": "8a827d8778fac331f8bca07cbf9220270cc9ec446db60b6b4e26a75108944c24",
+      "destinations": [
+        "modules/coffee/src/backend/features/entries.js",
+        "modules/coffee/src/backend/features/entry-math.js",
+        "modules/coffee/src/backend/features/normalize-entry.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/backend/features/importExport.js",
+      "sha256": "ab56a7918712d1dc94e8f626dc20877890cc3a86f814b62716ec73e5c0719212",
+      "destinations": [
+        "modules/coffee/src/backend/features/importExport.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/backend/features/insights.js",
+      "sha256": "75ca6407dc0928bbe7543697d14ae96540e4979b506e656d3e112c7f0ab43e1b",
+      "destinations": [
+        "modules/coffee/src/backend/features/insights.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/backend/features/settings.js",
+      "sha256": "3ddcad3ca82e2b744af0171297213de21aafb51f3131d40706e4e15c4fbeb829",
+      "destinations": [
+        "modules/coffee/src/backend/features/settings.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/frontend/app/app.js",
+      "sha256": "5ba29090802bf78d9ac95cd281277c6e8412f3bea028f18b55881186bdbbf20e",
+      "destinations": [
+        "modules/coffee/src/frontend/app/composition.js",
+        "modules/coffee/src/frontend/app/conflicts.js",
+        "modules/coffee/src/frontend/app/constants.js",
+        "modules/coffee/src/frontend/app/context.js",
+        "modules/coffee/src/frontend/app/copy.js",
+        "modules/coffee/src/frontend/app/detail.js",
+        "modules/coffee/src/frontend/app/detailBrew.js",
+        "modules/coffee/src/frontend/app/detailGrind.js",
+        "modules/coffee/src/frontend/app/detailMeta.js",
+        "modules/coffee/src/frontend/app/detailPrep.js",
+        "modules/coffee/src/frontend/app/detailTaste.js",
+        "modules/coffee/src/frontend/app/detailVisual.js",
+        "modules/coffee/src/frontend/app/form.js",
+        "modules/coffee/src/frontend/app/formBrew.js",
+        "modules/coffee/src/frontend/app/formGrind.js",
+        "modules/coffee/src/frontend/app/formMeta.js",
+        "modules/coffee/src/frontend/app/formPrep.js",
+        "modules/coffee/src/frontend/app/formTaste.js",
+        "modules/coffee/src/frontend/app/formVisual.js",
+        "modules/coffee/src/frontend/app/format.js",
+        "modules/coffee/src/frontend/app/history.js",
+        "modules/coffee/src/frontend/app/import-preview.js",
+        "modules/coffee/src/frontend/app/input.js",
+        "modules/coffee/src/frontend/app/insights.js",
+        "modules/coffee/src/frontend/app/navigation.js",
+        "modules/coffee/src/frontend/app/notifications.js",
+        "modules/coffee/src/frontend/app/settings.js",
+        "modules/coffee/src/frontend/app/settingsBackup.js",
+        "modules/coffee/src/frontend/app/settingsBeans.js",
+        "modules/coffee/src/frontend/app/settingsPreferences.js",
+        "modules/coffee/src/frontend/app/taste.js",
+        "modules/coffee/src/frontend/app/tools.js",
+        "modules/coffee/src/frontend/app/values.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/frontend/app/testIds.js",
+      "sha256": "720f3c29796b808742f515a846f7ff467fd5880772765db0522fc0a90b1da1a2",
+      "destinations": [
+        "modules/coffee/src/frontend/app/testIds.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/frontend/components/components.js",
+      "sha256": "5f4f9b8f5589fb4e1c8bb41e1497f778a08b0f4cc82f4bdb3782b12a0515aed6",
+      "destinations": [
+        "modules/coffee/src/frontend/components/components.js"
+      ]
+    },
+    {
+      "source": "coffee-tracker/frontend/styles/main.css",
+      "sha256": "32d782d0be6edea95a762c4adfa849530b77fa3f990fbd20cb7e769f552856ec",
+      "destinations": [
+        "modules/coffee/src/style.css"
+      ]
+    }
+  ],
+  "excludes": [
+    "personal JSON backup",
+    "standalone_excel",
+    "unrelated source documentation"
+  ],
+  "handwrittenAdapters": [
+    "modules/coffee/src/service.js",
+    "modules/coffee/src/validation.js",
+    "modules/coffee/src/imports.js",
+    "modules/coffee/src/view.js"
+  ]
+}

@@ -1,0 +1,118 @@
+✖ coffee reads create no records and saves preserve unrelated shared modules (6.019991ms)
+✖ explicit coffee language changes commit with global language atomically (1.172926ms)
+✖ coffee imports preserve shared language and validate merged bean references (2.069643ms)
+✖ coffee duplicate ids broken references and future versions fail without mutation (2.197339ms)
+✖ coffee quota failures retain the previous drink and emit no successful change (0.773313ms)
+✖ coffee rejects a future module payload without silently replacing it (2.622123ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 54.819006
+
+✖ failing tests:
+
+test at modules/coffee/test/service.test.mjs:21:1
+✖ coffee reads create no records and saves preserve unrelated shared modules (6.019991ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/coffee/src/service.js' imported from /workspaces/daily/modules/coffee/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/coffee/src/service.js'
+  }
+
+test at modules/coffee/test/service.test.mjs:34:1
+✖ explicit coffee language changes commit with global language atomically (1.172926ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/coffee/src/service.js' imported from /workspaces/daily/modules/coffee/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/coffee/src/service.js'
+  }
+
+test at modules/coffee/test/service.test.mjs:47:1
+✖ coffee imports preserve shared language and validate merged bean references (2.069643ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/coffee/src/service.js' imported from /workspaces/daily/modules/coffee/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/coffee/src/service.js'
+  }
+
+test at modules/coffee/test/service.test.mjs:60:1
+✖ coffee duplicate ids broken references and future versions fail without mutation (2.197339ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/coffee/src/service.js' imported from /workspaces/daily/modules/coffee/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/coffee/src/service.js'
+  }
+
+test at modules/coffee/test/service.test.mjs:76:1
+✖ coffee quota failures retain the previous drink and emit no successful change (0.773313ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/coffee/src/service.js' imported from /workspaces/daily/modules/coffee/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/coffee/src/service.js'
+  }
+
+test at modules/coffee/test/service.test.mjs:88:1
+✖ coffee rejects a future module payload without silently replacing it (2.622123ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/coffee/src/service.js' imported from /workspaces/daily/modules/coffee/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/coffee/src/service.js'
+  }

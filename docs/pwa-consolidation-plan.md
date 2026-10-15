@@ -1,6 +1,6 @@
 # One daily PWA: research and implementation plan
 
-Status: updated 2026-10-15. Shared platform and local plants acceptance are implemented; coffee is next. All work remains local, using plain HTML/CSS/JavaScript without Vite or TypeScript. Live Readwise/Reader and physical-device checks remain deferred and do not block local implementation. See [progress / resume](./progress.md) for current evidence and the exact next step.
+Status: updated 2026-10-15. Shared platform, plants and Coffee are implemented locally; games is next. All work remains local, using plain HTML/CSS/JavaScript without Vite or TypeScript. Live Readwise/Reader and physical-device checks remain deferred and do not block local implementation. See [progress / resume](./progress.md) for current evidence and the exact next step.
 
 ## Implementation contract: tests first, ESLint required from day one
 
@@ -304,7 +304,7 @@ Retain the useful existing coffee/game Compass documents, Toniq deep dives, plan
 | 2. Prove constraints | Local storage recovery and cache ownership tests; record existing-device observations and retain API calls for later user token testing. | Local preparation is complete. Live Readwise/Reader, installed coexistence and later product/device checks are deferred by the user; unverified API access does not block Stage 3. |
 | 3. Platform foundation (local acceptance passing) | Test-first shell, manifest, router, EN/ES, settings, data boundary, activities/timers, local build, and iOS three-column home. | General suite passes for implemented contracts; deep links/reload work under the real base; all introduced code passes lint; cards navigate without mutations. |
 | 4. Plants and daily home (local acceptance passing; final localization/device gates open) | Full plants module, attention widget, layout settings, import/export, existing Things behavior. | Plant suites pass; reminder taps open the correct plant without completing care; imported schedules and existing appearance are preserved. |
-| 5. Coffee and games | Full coffee/game modules and dashboard quick actions/resume. | Existing workflow suites pass through the shared shell; no coffee/bean/history/scoring/statistics functions are lost. |
+| 5. Coffee and games (Coffee locally verified; games next) | Full coffee/game modules and dashboard quick actions/resume. | Existing workflow suites pass through the shared shell; no coffee/bean/history/scoring/statistics functions are lost. |
 | 6. Time and piano | Full Time Budget and Toniq modules, named countdowns, persistent activities, random/last exercise widgets. | Navigation, lock/resume, explicit pause, reload, and process restart preserve state and calculate elapsed time correctly; piano content/assets work offline. |
 | 7. Reading and WhatsApp | Test-first Reader settings/picker, scheduled Daily Review or direct-link fallback, conditional review UI, WhatsApp draft migration. | Module suites pass; settings survive relaunch/restore; N/time filters and shortcuts work; API errors stay isolated; review scheduling is either verified or handed off to Readwise. |
 | 8. Release migration | Complete localization, legacy exporters, combined backup recovery, offline/update tests, iPhone installation guide. | All seven parity checklists pass, real iPhone migration is verified, and one installation provides every retained function. |
@@ -338,7 +338,7 @@ Track each source test and its migrated destination, including fixture provenanc
 - Verify styles per module, narrow-screen layout, keyboard/focus behavior, safe areas, and both languages. Translation changes must not translate stored plant/player/bean names or saved user text.
 - Verify a Pages subpath deployment, direct hash links, old shortcut compatibility, all-module offline startup, and version upgrades with active sessions and unsaved forms.
 
-Implementation evidence now belongs to [progress](./progress.md) and [test inventory](../reports/migration-test-inventory.md). General and plants suites now pass locally; six app modules, combined migration and final device/release acceptance remain pending. Authenticated API behavior and physical iPhone migration/background checks have not been established.
+Implementation evidence now belongs to [progress](./progress.md) and [test inventory](../reports/migration-test-inventory.md). General, plants and Coffee suites have passing local evidence; five app modules, combined migration and final device/release acceptance remain pending. Authenticated API behavior and physical iPhone migration/background checks have not been established.
 
 ## 10. References
 

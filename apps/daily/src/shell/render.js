@@ -1,5 +1,6 @@
 import { captureDrafts, restoreDrafts } from '../../../../packages/ui/src/drafts.js';
 import { mountPlants } from '../../../../modules/plants/src/ui/view.js';
+import { mountCoffee } from '../../../../modules/coffee/src/view.js';
 import { activitySummary } from './activity-summary.js';
 import { shellText } from '../../../../packages/i18n/src/shell.js';
 import { element, link, heading } from './elements.js';
@@ -23,6 +24,13 @@ function failure(root, base) {
     root.replaceChildren(view);
 }
 function pageView(context, preferences) {
+    if (context.route.page.startsWith('coffee')) {
+        const page = mountCoffee({ route: context.route, base: context.base, service: context.coffee, ui: context.moduleUI });
+        context.pageCleanup = page.dispose;
+        context.pageConflict = page.conflict;
+        context.pageRestore = page.restore;
+        return page.node;
+    }
     if (['plants', 'plant', 'plantNew', 'plantEdit', 'plantSettings'].includes(context.route.page)) {
         const page = mountPlants({ route: context.route, language: preferences.language, base: context.base, service: context.plants, ui: context.moduleUI });
         context.pageCleanup = page.dispose;
@@ -45,6 +53,7 @@ export function renderShell(context, changedRoute = false) {
         context.pageCleanup?.();
         context.pageCleanup = undefined;
         context.pageConflict = undefined;
+        context.pageRestore = undefined;
         const copy = shellText(preferences.language);
         document.documentElement.lang = preferences.language;
         const main = element('main', 'shell-main');
@@ -59,6 +68,8 @@ export function renderShell(context, changedRoute = false) {
         context.root.replaceChildren(skip, navigation(preferences.language, context.base), activitySummary({ state: context.state, language: preferences.language, base: context.base }, true), main, element('footer', 'shell-footer', copy.local));
         focusAfterRender(context.root, key, changedRoute);
         restoreDrafts(context.root, drafts);
+        context.pageRestore?.();
+        document.dispatchEvent(new Event('daily:form-state'));
     }
     catch {
         failure(context.root, context.base);

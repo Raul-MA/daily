@@ -1,0 +1,32 @@
+✔ coffee reads create no records and saves preserve unrelated shared modules (12.175485ms)
+✔ explicit coffee language changes commit with global language atomically (0.954902ms)
+✔ coffee imports preserve shared language and validate merged bean references (3.573266ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (2.248844ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (1.652675ms)
+✔ coffee rejects a future module payload without silently replacing it (0.869672ms)
+✖ coffee import previews are read-only and cancel leaves the current root intact (0.791226ms)
+✖ coffee import confirmation rejects stale previews and retains recovery on replacement (0.743247ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 6
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 74.809731
+
+✖ failing tests:
+
+test at modules/coffee/test/service.test.mjs:97:1
+✖ coffee import previews are read-only and cancel leaves the current root intact (0.791226ms)
+  TypeError: service.previewImport is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/service.test.mjs:101:27)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/coffee/test/service.test.mjs:109:1
+✖ coffee import confirmation rejects stale previews and retains recovery on replacement (0.743247ms)
+  TypeError: service.previewImport is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/service.test.mjs:112:27)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
