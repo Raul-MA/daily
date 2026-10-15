@@ -1,0 +1,222 @@
+{
+  "commit": "80fe90af080bbe1d3b17778369af011d9b90e897",
+  "files": [
+    {
+      "source": "game-tracker/backend/core/i18n.js",
+      "sha256": "2f1b8752b8114aa51b4bafee606128c902edeeb7b0012e77c9a8d728d466a362",
+      "destinations": [
+        "modules/games/src/backend/core/i18n.js"
+      ]
+    },
+    {
+      "source": "game-tracker/backend/core/id.js",
+      "sha256": "b957eec112c0855d0efa10fe0bec9f043fef2f3554ed88fd178d31549575bb41",
+      "destinations": [
+        "modules/games/src/backend/core/id.js"
+      ]
+    },
+    {
+      "source": "game-tracker/backend/core/schema.js",
+      "sha256": "081a7e6cfd307960e37ff5af14b52d51ec00fb3672a7190a8e6cc97d7b047d03",
+      "destinations": [
+        "modules/games/src/backend/core/schema.js"
+      ]
+    },
+    {
+      "source": "game-tracker/backend/core/storage.js",
+      "sha256": "db0836d654147add071b168b8aabc45b109d8fb642f9fcab157369e8db689734",
+      "destinations": [
+        "modules/games/src/backend/core/storage.js"
+      ]
+    },
+    {
+      "source": "game-tracker/backend/core/validation.js",
+      "sha256": "a2a86ba4c1f5c88cdac2bd1f6170ff4821d6120c546e7aee779217259f4baab6",
+      "destinations": [
+        "modules/games/src/backend/core/validation.js",
+        "modules/games/src/backend/core/validation/backup-sessions.js",
+        "modules/games/src/backend/core/validation/backup.js",
+        "modules/games/src/backend/core/validation/common.js",
+        "modules/games/src/backend/core/validation/entities.js",
+        "modules/games/src/backend/core/validation/session.js"
+      ]
+    },
+    {
+      "source": "game-tracker/backend/features/games.js",
+      "sha256": "05dc6bf1c266cad8d96903a7cf66c2fb7f160e2ad6fe0b368f010eafe2bbb750",
+      "destinations": [
+        "modules/games/src/backend/features/games.js"
+      ]
+    },
+    {
+      "source": "game-tracker/backend/features/importExport.js",
+      "sha256": "6cab601971cf6f20c9cf8b9e073767308fde70570ae20ad956e2c3d9b2c815b8",
+      "destinations": [
+        "modules/games/src/backend/features/importExport.js"
+      ]
+    },
+    {
+      "source": "game-tracker/backend/features/players.js",
+      "sha256": "afdadf501ce2d96e29eb363e6b21fa0f84468769a50c82031386b81105a4ab35",
+      "destinations": [
+        "modules/games/src/backend/features/players.js"
+      ]
+    },
+    {
+      "source": "game-tracker/backend/features/sessions.js",
+      "sha256": "eb70344d35cf930f14f5a42897669a8fa14e41a563f52ce3aad2c7761f6d35e6",
+      "destinations": [
+        "modules/games/src/backend/features/sessions.js"
+      ]
+    },
+    {
+      "source": "game-tracker/backend/features/settings.js",
+      "sha256": "37ff8c71d2431e6217a87a1c1885ec7416d5c06868b748671b07206a4695509f",
+      "destinations": [
+        "modules/games/src/backend/features/settings.js"
+      ]
+    },
+    {
+      "source": "game-tracker/backend/features/stats.js",
+      "sha256": "2ee68257e2f3d7b3c954cf5c1d03562aca8d12dd77e60dff823482ab3a8326eb",
+      "destinations": [
+        "modules/games/src/backend/features/stats.js"
+      ]
+    },
+    {
+      "source": "game-tracker/frontend/app/app.js",
+      "sha256": "dc7dbe0b7862a3b7f7922e6d5d4f9c5c33806bce0fa06300dab9b302c593339b",
+      "destinations": [
+        "modules/games/src/frontend/app/applyResult.js",
+        "modules/games/src/frontend/app/applyTheme.js",
+        "modules/games/src/frontend/app/bindEvents.js",
+        "modules/games/src/frontend/app/bindGameDetail.js",
+        "modules/games/src/frontend/app/bindGames.js",
+        "modules/games/src/frontend/app/bindHistory.js",
+        "modules/games/src/frontend/app/bindPlay.js",
+        "modules/games/src/frontend/app/bindPlayers.js",
+        "modules/games/src/frontend/app/bindSession.js",
+        "modules/games/src/frontend/app/bindSettings.js",
+        "modules/games/src/frontend/app/bindStats.js",
+        "modules/games/src/frontend/app/clearToastTimer.js",
+        "modules/games/src/frontend/app/commitScoreInput.js",
+        "modules/games/src/frontend/app/dismissToast.js",
+        "modules/games/src/frontend/app/evaluateScoreExpression.js",
+        "modules/games/src/frontend/app/filterHistory.js",
+        "modules/games/src/frontend/app/focusPendingTarget.js",
+        "modules/games/src/frontend/app/formatDate.js",
+        "modules/games/src/frontend/app/formatDateTimeLocal.js",
+        "modules/games/src/frontend/app/formatDuration.js",
+        "modules/games/src/frontend/app/formatDurationRange.js",
+        "modules/games/src/frontend/app/formatOutcome.js",
+        "modules/games/src/frontend/app/gameInputValue.js",
+        "modules/games/src/frontend/app/getBackupReminderMessage.js",
+        "modules/games/src/frontend/app/getHistoryFilterSummary.js",
+        "modules/games/src/frontend/app/getRoundSummary.js",
+        "modules/games/src/frontend/app/headToHead.js",
+        "modules/games/src/frontend/app/historySortLabel.js",
+        "modules/games/src/frontend/app/iconFor.js",
+        "modules/games/src/frontend/app/isTargetReached.js",
+        "modules/games/src/frontend/app/localDateTimeToIso.js",
+        "modules/games/src/frontend/app/playerDisplayName.js",
+        "modules/games/src/frontend/app/playerName.js",
+        "modules/games/src/frontend/app/pruneSelectedPlayers.js",
+        "modules/games/src/frontend/app/readGameFormDraft.js",
+        "modules/games/src/frontend/app/readGameInput.js",
+        "modules/games/src/frontend/app/readTimingInputs.js",
+        "modules/games/src/frontend/app/render.js",
+        "modules/games/src/frontend/app/renderActiveSession.js",
+        "modules/games/src/frontend/app/renderCollaborativeOutcome.js",
+        "modules/games/src/frontend/app/renderCollaborativeOutcomeContent1.js",
+        "modules/games/src/frontend/app/renderDurationByPlayerCount.js",
+        "modules/games/src/frontend/app/renderGameCatalog.js",
+        "modules/games/src/frontend/app/renderGameDetail.js",
+        "modules/games/src/frontend/app/renderGameEditor.js",
+        "modules/games/src/frontend/app/renderGameRecords.js",
+        "modules/games/src/frontend/app/renderGameScoringFields.js",
+        "modules/games/src/frontend/app/renderGames.js",
+        "modules/games/src/frontend/app/renderHeadToHead.js",
+        "modules/games/src/frontend/app/renderHistory.js",
+        "modules/games/src/frontend/app/renderHistoryFilters.js",
+        "modules/games/src/frontend/app/renderHistoryItem.js",
+        "modules/games/src/frontend/app/renderHistoryItemContent1.js",
+        "modules/games/src/frontend/app/renderNav.js",
+        "modules/games/src/frontend/app/renderNavButtons.js",
+        "modules/games/src/frontend/app/renderOutcomeSession.js",
+        "modules/games/src/frontend/app/renderOutcomeSessionContent1.js",
+        "modules/games/src/frontend/app/renderPlay.js",
+        "modules/games/src/frontend/app/renderPlaySetup.js",
+        "modules/games/src/frontend/app/renderPlayerCatalog.js",
+        "modules/games/src/frontend/app/renderPlayerGameAverages.js",
+        "modules/games/src/frontend/app/renderPlayerRecords.js",
+        "modules/games/src/frontend/app/renderPlayers.js",
+        "modules/games/src/frontend/app/renderRound.js",
+        "modules/games/src/frontend/app/renderRoundScores.js",
+        "modules/games/src/frontend/app/renderRoute.js",
+        "modules/games/src/frontend/app/renderScoreSession.js",
+        "modules/games/src/frontend/app/renderSessionBody.js",
+        "modules/games/src/frontend/app/renderSessionOverrides.js",
+        "modules/games/src/frontend/app/renderSessionTiming.js",
+        "modules/games/src/frontend/app/renderSettings.js",
+        "modules/games/src/frontend/app/renderStats.js",
+        "modules/games/src/frontend/app/renderToast.js",
+        "modules/games/src/frontend/app/selectedScoringMode.js",
+        "modules/games/src/frontend/app/selectedStatPlayer.js",
+        "modules/games/src/frontend/app/showToast.js",
+        "modules/games/src/frontend/app/sortHistory.js",
+        "modules/games/src/frontend/app/statSummary.js",
+        "modules/games/src/frontend/app/syncBackupToast.js",
+        "modules/games/src/frontend/app/updateScorePreview.js",
+        "modules/games/src/frontend/app/visibleItems.js"
+      ]
+    },
+    {
+      "source": "game-tracker/frontend/app/state.js",
+      "sha256": "7dbc34bd013d912728672a45cf573164289bf1ebb46b3c169d5a2a2e847cf597",
+      "destinations": [
+        "modules/games/src/frontend/app/state.js"
+      ]
+    },
+    {
+      "source": "game-tracker/frontend/app/router.js",
+      "sha256": "da9f4021ec23ce16502d22e9b4f2f3326d80894dbb31d5ffb5c9dda7b418f860",
+      "destinations": [
+        "modules/games/src/frontend/app/router.js"
+      ]
+    },
+    {
+      "source": "game-tracker/frontend/app/testIds.js",
+      "sha256": "460f4719040458e51022d0a67d173bb7d08adb07d4d82f42fc80bada106d109a",
+      "destinations": [
+        "modules/games/src/frontend/app/testIds.js"
+      ]
+    },
+    {
+      "source": "game-tracker/frontend/components/components.js",
+      "sha256": "7702dc123f0b985c8ac93031aaccd6c3c02e875a8ceec433fab71c0b22909104",
+      "destinations": [
+        "modules/games/src/frontend/components/components.js"
+      ]
+    },
+    {
+      "source": "game-tracker/frontend/styles/main.css",
+      "sha256": "2d34b9dbf2a08908652cc029b276936d80c14cfb3d62cd29ef420ba5891f95b0",
+      "destinations": [
+        "modules/games/src/style.css"
+      ]
+    }
+  ],
+  "handwrittenAdapters": [
+    "modules/games/src/service.js",
+    "modules/games/src/activity-sync.js",
+    "modules/games/src/imports.js",
+    "modules/games/src/validation.js",
+    "modules/games/src/view.js",
+    "modules/games/src/frontend/app/constants.js",
+    "modules/games/src/frontend/app/context.js",
+    "modules/games/src/frontend/app/drafts.js",
+    "modules/games/src/frontend/app/events.js",
+    "modules/games/src/frontend/app/import-preview.js",
+    "modules/games/src/frontend/app/values.js"
+  ]
+}

@@ -1,0 +1,23 @@
+✔ game sessions snapshot names and configuration and allow only one active session (16.723681ms)
+✔ round scores preserve negatives and shared ties while invalid fractions do not save (1.997265ms)
+✔ removing the final round retains an editable zero round and sequential numbering (1.477608ms)
+✔ first to points always favors the higher score while lowest-score games retain their rule (1.887712ms)
+✔ competitive outcomes require every result and retain separate wins ties and losses (2.119574ms)
+✔ collaborative solo outcomes have no individual winners or competitive head to head (1.300817ms)
+✔ history archives referenced records and duration overrides control derived statistics (1.777947ms)
+✔ full game backups reject broken references duplicates and future major versions without mutation (2.123001ms)
+✔ games read without writes and preserve other modules while sharing explicit language changes (9.515453ms)
+✔ starting a game atomically registers its timestamp activity and retains unrelated countdowns (4.569295ms)
+✔ scores never restart game timing and finishing atomically completes the shared activity (5.26866ms)
+✔ game quota failures leave both the sessions and shared activities unchanged (1.720419ms)
+✔ game stale domain saves reject instead of overwriting a newer module state (1.98887ms)
+✔ game replacement previews preserve shared language and restore active timing with recovery (2.234378ms)
+✔ game future modules and stale import previews remain untouched (2.273913ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 105.184321

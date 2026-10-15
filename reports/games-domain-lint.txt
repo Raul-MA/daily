@@ -1,0 +1,19 @@
+
+> daily-pwa@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+/workspaces/daily/modules/games/src/backend/core/validation/backup.js
+  44:8  error  Function 'backupRootErrors' has a complexity of 9. Maximum allowed is 8  complexity
+
+/workspaces/daily/modules/games/src/backend/core/validation/entities.js
+  3:8  error  Function 'validatePlayer' has a complexity of 9. Maximum allowed is 8  complexity
+
+/workspaces/daily/modules/games/src/backend/core/validation/session.js
+  3:8  error  Function 'validateSession' has a complexity of 10. Maximum allowed is 8  complexity
+
+/workspaces/daily/modules/games/src/backend/features/games.js
+  48:8  error  Function 'normalizeGame' has a complexity of 9. Maximum allowed is 8  complexity
+
+✖ 4 problems (4 errors, 0 warnings)
+

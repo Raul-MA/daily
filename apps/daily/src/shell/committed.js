@@ -7,7 +7,7 @@ export function committed(context) {
   context.error = false;
   const preferences = context.state.read().value.preferences;
   const samePreferences = JSON.stringify(preferences) === context.preferencesKey;
-  const modulePage = context.route.page.startsWith('plant') || context.route.page.startsWith('coffee');
+  const modulePage = ['plant', 'coffee', 'game'].some(prefix => context.route.page.startsWith(prefix));
   if (!modulePage || !samePreferences) {
     renderShell(context);
     return;

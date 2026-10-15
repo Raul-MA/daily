@@ -1,6 +1,7 @@
 import { captureDrafts, restoreDrafts } from '../../../../packages/ui/src/drafts.js';
 import { mountPlants } from '../../../../modules/plants/src/ui/view.js';
 import { mountCoffee } from '../../../../modules/coffee/src/view.js';
+import { mountGames } from '../../../../modules/games/src/view.js';
 import { activitySummary } from './activity-summary.js';
 import { shellText } from '../../../../packages/i18n/src/shell.js';
 import { element, link, heading } from './elements.js';
@@ -24,6 +25,14 @@ function failure(root, base) {
     root.replaceChildren(view);
 }
 function pageView(context, preferences) {
+    if (context.route.page.startsWith('game')) {
+        context.gamesUI ??= {};
+        const page = mountGames({ route: context.route, base: context.base, service: context.games, ui: context.gamesUI });
+        context.pageCleanup = page.dispose;
+        context.pageConflict = page.conflict;
+        context.pageRestore = page.restore;
+        return page.node;
+    }
     if (context.route.page.startsWith('coffee')) {
         const page = mountCoffee({ route: context.route, base: context.base, service: context.coffee, ui: context.moduleUI });
         context.pageCleanup = page.dispose;

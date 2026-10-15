@@ -1,3 +1,4 @@
+import { confirmGameImport } from './shared-data.js';
 import { expect, test } from "@playwright/test";
 import { readFile, writeFile } from "node:fs/promises";
 import { createGame, createPlayer, openApp, testIds } from "./helpers.js";
@@ -20,9 +21,10 @@ test("exports full JSON and replace-import restores data", async ({ page }) => {
     await page.evaluate(() => localStorage.clear());
     await page.reload();
     await expect(page.getByText("Ada")).toHaveCount(0);
-    page.once("dialog", (dialog) => dialog.accept());
+    if (process.env.DAILY_BASELINE_URL) page.once("dialog", (dialog) => dialog.accept());
     await page.getByTestId(testIds.navSettings).first().click();
     await page.getByTestId(testIds.importInput).setInputFiles(path);
+    await confirmGameImport(page);
     await page.getByTestId(testIds.navPlayers).first().click();
     await expect(page.getByTestId(testIds.playerItem).filter({ hasText: "Ada" })).toBeVisible();
     await page.getByTestId(testIds.navGames).first().click();
@@ -48,7 +50,7 @@ test("rejects malformed nested backup data without replacing local data", async 
         games: [null],
         sessions: []
     }));
-    page.once("dialog", (dialog) => dialog.accept());
+    if (process.env.DAILY_BASELINE_URL) page.once("dialog", (dialog) => dialog.accept());
     await page.getByTestId(testIds.navSettings).first().click();
     await page.getByTestId(testIds.importInput).setInputFiles(malformedPath);
     await expect(page.getByTestId(testIds.appToast)).toContainText("Backup game 1 must be an object.");

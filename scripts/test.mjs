@@ -1,7 +1,7 @@
 import { openSync, writeSync, closeSync } from 'node:fs';
 import { withBrowserServer } from './browser-server.mjs';
 import { spawnSync } from 'node:child_process';
-import { discover, discoverBrowser, discoverCoffeeUnit } from './discovery.mjs';
+import { discover, discoverBrowser, discoverDomainUnit } from './discovery.mjs';
 
 const modules = ['general', 'plants', 'coffee', 'games', 'time-budget', 'piano', 'reading', 'whatsapp'];
 const scope = process.argv[2];
@@ -16,7 +16,7 @@ function execute(args, env = process.env) {
 }
 
 function runNode(module) {
-  const files = module === 'coffee' ? discoverCoffeeUnit() : discover(module);
+  const files = ['coffee', 'games'].includes(module) ? discoverDomainUnit(module) : discover(module);
   return execute(['--test', '--test-isolation=none', ...files]);
 }
 
@@ -39,7 +39,7 @@ for (const module of scope === 'all' ? modules : [scope]) {
   if (report !== null) writeSync(report, `Suite: ${module}\n`);
   try {
     discover(module);
-    const unit = module === 'games' ? 0 : runNode(module);
+    const unit = runNode(module);
     const browser = await runBrowser(module);
     if (unit || browser) failed = true;
   } catch (error) {

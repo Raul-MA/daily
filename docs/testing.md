@@ -41,3 +41,8 @@ Plant care characterization first passed against original Stillgreen, then faile
 ## Coffee checkpoint
 
 Coffee's scoped runner discovers 17 unit cases separately from 28 browser cases, preserving the original 21 workflows. The eight domain characterization cases also passed against the original repository. Shared-document test fixtures replace only the storage boundary; original field/history/backup/insight assertions remain. New valid-import steps require preview/recovery/confirmation under the plan; malformed imports still assert the original error. See `modules/coffee/docs/behavior.md` and `reports/coffee-source-map.json` for intentional route/startup changes and source provenance.
+
+
+## Games checkpoint
+
+Games has 15 unit cases (eight original-source characterization plus seven service cases) and 30 browser cases (24 copied workflows plus six shared/offline cases). Its service tests assert a single root write for session/activity transitions and no write during reads/ticks. Source fixtures are wrapped with a shared Games payload/activity before browser startup; field/scoring/history/statistics assertions remain. Deferred focus, source toast overlays, form stamps/drafts and obsolete links have recorded failures followed by fixes. One initial activity-test failure was a fixture selector/clock error, explicitly distinguished in progress/inventory. See `modules/games/docs/behavior.md` and `reports/games-source-map.json`.

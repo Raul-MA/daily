@@ -1,0 +1,136 @@
+✖ games read without writes and preserve other modules while sharing explicit language changes (1.685304ms)
+✖ starting a game atomically registers its timestamp activity and retains unrelated countdowns (0.516153ms)
+✖ scores never restart game timing and finishing atomically completes the shared activity (0.483231ms)
+✖ game quota failures leave both the sessions and shared activities unchanged (0.401489ms)
+✖ game stale domain saves reject instead of overwriting a newer module state (0.577919ms)
+✖ game replacement previews preserve shared language and restore active timing with recovery (0.6219ms)
+✖ game future modules and stale import previews remain untouched (0.783081ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 41.842955
+
+✖ failing tests:
+
+test at modules/games/test/service.test.mjs:28:1
+✖ games read without writes and preserve other modules while sharing explicit language changes (1.685304ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/games/src/service.js' imported from /workspaces/daily/modules/games/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/games/src/service.js'
+  }
+
+test at modules/games/test/service.test.mjs:43:1
+✖ starting a game atomically registers its timestamp activity and retains unrelated countdowns (0.516153ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/games/src/service.js' imported from /workspaces/daily/modules/games/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/games/src/service.js'
+  }
+
+test at modules/games/test/service.test.mjs:62:1
+✖ scores never restart game timing and finishing atomically completes the shared activity (0.483231ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/games/src/service.js' imported from /workspaces/daily/modules/games/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/games/src/service.js'
+  }
+
+test at modules/games/test/service.test.mjs:81:1
+✖ game quota failures leave both the sessions and shared activities unchanged (0.401489ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/games/src/service.js' imported from /workspaces/daily/modules/games/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/games/src/service.js'
+  }
+
+test at modules/games/test/service.test.mjs:92:1
+✖ game stale domain saves reject instead of overwriting a newer module state (0.577919ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/games/src/service.js' imported from /workspaces/daily/modules/games/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/games/src/service.js'
+  }
+
+test at modules/games/test/service.test.mjs:100:1
+✖ game replacement previews preserve shared language and restore active timing with recovery (0.6219ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/games/src/service.js' imported from /workspaces/daily/modules/games/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/games/src/service.js'
+  }
+
+test at modules/games/test/service.test.mjs:115:1
+✖ game future modules and stale import previews remain untouched (0.783081ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/games/src/service.js' imported from /workspaces/daily/modules/games/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/games/src/service.js'
+  }
