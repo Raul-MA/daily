@@ -1,8 +1,10 @@
+import { pwaBuild } from './scripts/pwa-build.mjs';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: 'apps/daily',
+  plugins: [pwaBuild()],
   base: process.env.DAILY_BASE || '/daily/',
   build: {
     outDir: '../../dist',

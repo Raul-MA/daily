@@ -1,0 +1,86 @@
+[WebServer] (node:34447) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34513) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34527) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:34544) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base (5.3s)
+(node:34707) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/offline.spec.js:24:1 › home settings and connection checks reopen offline without losing saved settings (10.2s)
+(node:34984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/e2e/offline.spec.js:37:1 › offline cache contains generated assets and excludes API responses and credentials (10.1s)
+
+
+  1) tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base 
+
+    TimeoutError: locator.getAttribute: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('link[rel="manifest"]')
+
+
+      10 | test('install identity and worker scope use the configured application base', async ({ page }) => {
+      11 |   await page.goto('/daily/#/');
+    > 12 |   const manifestPath = await page.locator('link[rel="manifest"]').getAttribute('href');
+         |                                                                   ^
+      13 |   const response = await page.request.get(manifestPath);
+      14 |   const manifest = await response.json();
+      15 |   expect(manifest.id).toBe('/daily/');
+        at /workspaces/daily/tests/e2e/offline.spec.js:12:67
+
+    Error Context: test-results/offline-install-identity-a-f59b3-configured-application-base/error-context.md
+
+  2) tests/e2e/offline.spec.js:24:1 › home settings and connection checks reopen offline without losing saved settings 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+       5 | async function ready(page) {
+       6 |   await page.goto('/daily/#/');
+    >  7 |   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller)), { timeout: 10000 }).toBe(true);
+         |                                                                                                                 ^
+       8 | }
+       9 |
+      10 | test('install identity and worker scope use the configured application base', async ({ page }) => {
+        at ready (/workspaces/daily/tests/e2e/offline.spec.js:7:113)
+        at /workspaces/daily/tests/e2e/offline.spec.js:25:3
+
+    Error Context: test-results/offline-home-settings-and--e1f4c-thout-losing-saved-settings/error-context.md
+
+  3) tests/e2e/offline.spec.js:37:1 › offline cache contains generated assets and excludes API responses and credentials 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 10000ms exceeded while waiting on the predicate
+
+       5 | async function ready(page) {
+       6 |   await page.goto('/daily/#/');
+    >  7 |   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller)), { timeout: 10000 }).toBe(true);
+         |                                                                                                                 ^
+       8 | }
+       9 |
+      10 | test('install identity and worker scope use the configured application base', async ({ page }) => {
+        at ready (/workspaces/daily/tests/e2e/offline.spec.js:7:113)
+        at /workspaces/daily/tests/e2e/offline.spec.js:38:3
+
+    Error Context: test-results/offline-offline-cache-cont-176a8-I-responses-and-credentials/error-context.md
+
+  3 failed
+    tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base 
+    tests/e2e/offline.spec.js:24:1 › home settings and connection checks reopen offline without losing saved settings 
+    tests/e2e/offline.spec.js:37:1 › offline cache contains generated assets and excludes API responses and credentials 

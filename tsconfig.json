@@ -11,8 +11,10 @@
       "DOM.Iterable"
     ],
     "types": [
-      "node"
-    ]
+      "node",
+      "vite/client"
+    ],
+    "allowImportingTsExtensions": true
   },
   "include": [
     "apps/**/*.ts",

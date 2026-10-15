@@ -1,6 +1,6 @@
 # One daily PWA: research and implementation plan
 
-Status: implementation started 2026-10-13 in the new local `daily/` Git repository. Stage 1 test-first bootstrap is complete; feature implementation and deployment have not started. See [progress / resume](./progress.md) for current evidence and the exact next step.
+Status: updated 2026-10-15. Stage 1 and local Stage 2 preparation are complete; continue with local platform implementation. The user requested local work only, no workflows. Live Readwise/Reader checks are deferred to later user token testing and do not block implementation. See [progress / resume](./progress.md) for current evidence and the exact next step.
 
 ## Implementation contract: tests first, ESLint required from day one
 
@@ -14,7 +14,7 @@ ESLint is blocking for **all authored code, imported code, tests, and scripts fr
 
 ## 1. Agreed outcome
 
-Create a new monorepo that deploys one personal, installable PWA to GitHub Pages. Its home screen is a configurable daily dashboard. All seven existing apps remain available inside the same installation, with their functionality and individual visual styles preserved initially.
+Create a new monorepo for one personal, installable PWA. Work locally for now; GitHub Pages deployment is a future option requiring a renewed user request. Its home screen is a configurable daily dashboard. All seven existing apps remain available inside the same installation, with their functionality and individual visual styles preserved initially.
 
 The primary device is an iPhone. Application records and preferences remain local, with export/import; there is no new account system, application backend, or cross-device sync. Readwise and Reader remain external services accessed directly using the user's token. Existing Things and WhatsApp integrations retain their current behavior.
 
@@ -71,7 +71,7 @@ Coffee has existing uncommitted documentation, a backup file, and Excel-related 
 
 ## 3. Recommended architecture
 
-Use a new repository, with npm workspaces, one lockfile, one build, and one GitHub Pages deployment. Use Vite to bundle the existing ES modules and new code. Keep the apps in vanilla JavaScript initially; use TypeScript for new shared contracts, persistence, routing, timers, and integration code. A complete conversion of existing apps is unnecessary.
+Use a new repository, with npm workspaces, one lockfile, one local build, with deployment deferred. Do not add GitHub Actions workflows or push/configure hosting during local implementation. Use Vite to bundle the existing ES modules and new code. Keep the apps in vanilla JavaScript initially; use TypeScript for new shared contracts, persistence, routing, timers, and integration code. A complete conversion of existing apps is unnecessary.
 
 The working name below is only a placeholder.
 
@@ -205,7 +205,7 @@ Show retrieval freshness, distinguish cached data from current data, and never l
 
 Reuse the existing token model: memory by default, optional persistent saving on the installed PWA. Never include tokens in URLs, Git, bundled assets, logs, routine backups, or service-worker response caches. Re-enter the token after migration/restore. Reader preferences are always persistable independently of whether the token is remembered.
 
-Readwise requests go directly from the iPhone to Readwise. No proxy or cloud database is included. Verify authenticated CORS access for the auth, Reader-list, and Daily-Review endpoints from the actual Pages origin early; inspecting code and API documentation does not verify that behavior. No personal token or authenticated API call was used in this research. If an endpoint cannot be called from the browser, document that constraint and offer an explicit cached-data/Shortcuts-import fallback; a proxy would require changing the local-only architecture.
+Readwise requests go directly from the iPhone to Readwise. No proxy or cloud database is included. Keep the documented auth, Reader-list and Daily-Review API requests implemented with explicit success/failure handling. Per the 2026-10-15 instruction, authenticated connectivity/CORS verification is deferred to the user entering a token later and does not block local implementation. Mocked tests do not prove live access from any origin. No personal token or authenticated API call was used in this research. If an endpoint cannot be called from the browser, document that constraint and offer an explicit cached-data/Shortcuts-import fallback; a proxy would require changing the local-only architecture.
 
 Show local widgets immediately. Reading widgets load independently, honor rate limits, and show cached data with a stale/offline label when necessary. API failures must not block coffee, plants, games, or timers. Cached metadata does not make full Reader documents available offline inside this PWA.
 
@@ -301,8 +301,8 @@ Retain the useful existing coffee/game Compass documents, Toniq deep dives, plan
 | Stage | Deliverable | Done when |
 | --- | --- | --- |
 | 1. Copy tests first; record red | Copy all existing unit/integration and E2E suites with safe fixtures, source mapping, and the minimum runnable harness. Set up mandatory shared lint and docs before application implementation. | Tests are discovered and executed; absent features produce recorded red results; lint passes for imported tests/harness; no assertions are weakened or tests skipped; no personal data/secrets enter tracked sources. |
-| 2. Prove constraints | iPhone tests for Readwise endpoints, exports, background timer restoration, service-worker coexistence; backup-size/storage feasibility check. | Live integration feasibility is known, storage layout validated, and any fallback is recorded before dependent work. |
-| 3. Platform foundation | Test-first shell, manifest, router, EN/ES, settings, data boundary, activities/timers, Pages build, and iOS three-column home. | General suite passes for implemented contracts; deep links/reload work under the real base; all introduced code passes lint; cards navigate without mutations. |
+| 2. Prove constraints | Local storage recovery and cache ownership tests; record existing-device observations and retain API calls for later user token testing. | Local preparation is complete. Live Readwise/Reader, installed coexistence and later product/device checks are deferred by the user; unverified API access does not block Stage 3. |
+| 3. Platform foundation | Test-first shell, manifest, router, EN/ES, settings, data boundary, activities/timers, local build, and iOS three-column home. | General suite passes for implemented contracts; deep links/reload work under the real base; all introduced code passes lint; cards navigate without mutations. |
 | 4. Plants and daily home | Full plants module, attention widget, layout settings, import/export, existing Things behavior. | Plant suites pass; reminder taps open the correct plant without completing care; imported schedules and existing appearance are preserved. |
 | 5. Coffee and games | Full coffee/game modules and dashboard quick actions/resume. | Existing workflow suites pass through the shared shell; no coffee/bean/history/scoring/statistics functions are lost. |
 | 6. Time and piano | Full Time Budget and Toniq modules, named countdowns, persistent activities, random/last exercise widgets. | Navigation, lock/resume, explicit pause, reload, and process restart preserve state and calculate elapsed time correctly; piano content/assets work offline. |

@@ -1,8 +1,8 @@
 # Daily PWA
 
-A test-first migration of seven local apps into one personal EN/ES PWA. The intended deployment is `https://raul-ma.github.io/daily/`.
+A test-first migration of seven local apps into one personal EN/ES PWA. Development is local only for now; deployment and GitHub Actions workflows are deferred.
 
-Implementation is in Stage 2 constraint validation. The home page is a harness placeholder; a standalone Readwise diagnostic is available at `/daily/diagnostics.html`. This repository is not an installable or usable replacement for any original app.
+Local Stage 2 preparation is complete; shared platform implementation is next. The home page is a harness placeholder; a standalone Readwise diagnostic is available at `/daily/diagnostics.html`. This repository is not an installable or usable replacement for any original app.
 
 ## Setup
 

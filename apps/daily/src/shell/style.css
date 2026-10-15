@@ -1,0 +1,67 @@
+:root { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1c1c1e; background: #f2f2f7; }
+body { margin: 0; }
+.daily-shell { max-width: 1280px; margin: auto; padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left)); }
+.shell-header { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 48px; }
+.shell-header a, .dashboard-grid a, .module-placeholder a, .storage-failure a { text-decoration: none; }
+.wordmark { font-size: 25px; font-weight: 750; letter-spacing: -1px; color: #1c1c1e; }
+.brand-dot { color: #007aff; }
+.header-controls { display: flex; gap: 14px; align-items: center; }
+.language-button { border: 0; padding: 10px 2px; background: transparent; font-size: 11px; font-weight: 600; font-family: inherit; color: #68686e; min-height: 44px; cursor: pointer; }
+.language-button[aria-pressed="true"] { color: #1c1c1e; font-weight: 750; }
+.shell-link { display: inline-flex; align-items: center; min-height: 44px; color: #0067d8; font-size: 13px; }
+.app-menu { position: relative; }
+.app-menu summary { color: #0067d8; cursor: pointer; min-height: 44px; display: flex; align-items: center; font-size: 14px; }
+.app-menu-list { position: absolute; top: 48px; right: 0; z-index: 4; width: min(230px, calc(100vw - 70px)); border: 1px solid #e3e3e8; border-radius: 16px; padding: 10px 18px; background: white; box-shadow: 0 12px 30px #00000012; }
+.app-menu-list a { display: flex; }
+.daily-title { padding: 34px 0 24px; }
+.date-label { font-size: 12px; color: #68686e; }
+.daily-heading { font-size: 36px; letter-spacing: -1.3px; line-height: 1.15; margin: 8px 0 0; }
+.daily-heading:focus, .shell-main:focus { outline: none; }
+.dashboard-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; align-items: stretch; }
+.dashboard-card { display: flex; flex-direction: column; min-width: 0; min-height: 220px; padding: 20px; background: white; border-radius: 17px; }
+.card-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+.widget-title { font-size: 14px; font-weight: 700; margin: 0; }
+.widget-icon { display: grid; place-items: center; width: 25px; height: 25px; flex: 0 0 auto; color: white; border-radius: 6px; }
+.widget-icon svg { width: 19px; height: 19px; }
+.icon-plants { background: #34c759; }.icon-activities { background: #ff9500; }.icon-review { background: #af52de; }
+.icon-reader { background: #007aff; }.icon-quick { background: #5ac8fa; }.icon-piano { background: #ff2d55; }
+.widget-note, .empty-note { font-size: 14px; color: #68686e; line-height: 1.7; margin: 8px 0 24px; }
+.module-link { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 44px; margin-top: auto; color: #0067d8; font-size: 13px; }
+.link-arrow { margin-left: 12px; }
+.quick-links { display: flex; flex-direction: column; flex: 1; }
+.quick-links .module-link { padding: 5px 0; margin: 0; border-bottom: 1px solid #eeeef0; }
+.quick-links .module-link:last-child { border: 0; }
+.shell-footer { color: #68686e; font-size: 11px; padding: 28px 0 12px; }
+.settings-view { max-width: 720px; margin-top: 30px; }
+.settings-panel { min-width: 0; margin: 24px 0; padding: 20px; border: 0; border-radius: 17px; background: white; }
+.settings-panel legend { float: left; width: 100%; font-size: 17px; font-weight: 650; margin-bottom: 12px; }
+.settings-panel > .widget-note { clear: both; }
+.setting-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; clear: both; border-bottom: 1px solid #eeeef0; }
+.setting-row:last-child { border: 0; }
+.setting-choice { display: flex; align-items: center; gap: 12px; min-height: 52px; font-size: 14px; cursor: pointer; }
+.setting-choice input { width: 18px; height: 18px; accent-color: #007aff; }
+.move-controls { display: inline-flex; gap: 5px; }
+.move-button { background: #f2f2f7; color: #0067d8; border: 0; border-radius: 8px; min-width: 40px; min-height: 40px; font-size: 20px; cursor: pointer; }
+.move-button:disabled { opacity: .35; cursor: default; }
+.settings-language { display: flex; align-items: center; gap: 16px; }
+.settings-language select { font: inherit; padding: 10px; border: 1px solid #b8b8c0; border-radius: 8px; background: white; color: #1c1c1e; }
+.save-status { color: #68686e; font-size: 13px; min-height: 20px; }
+.save-alert { color: #913000; background: #fff1df; border-radius: 10px; padding: 14px; line-height: 1.6; }
+.module-placeholder, .storage-failure { padding: 36px 0; max-width: 720px; }
+.module-placeholder .shell-link { display: flex; }
+.route-id { overflow-wrap: anywhere; }
+.skip-link { position: fixed; top: 8px; left: -1000px; z-index: 5; padding: 14px; background: white; color: #0067d8; border-radius: 8px; }
+.skip-link:focus { left: 12px; }
+.daily-shell :focus-visible { outline: 3px solid #007aff; outline-offset: 4px; }
+@media (min-width: 720px) { .daily-shell { padding-left: 36px; padding-right: 36px; }.dashboard-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .dashboard-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 390px) { .header-controls { gap: 10px; }.daily-heading { font-size: 32px; }.dashboard-card { padding: 18px; }.shell-link { font-size: 12px; } }
+
+.running-indicator { display: flex; flex-wrap: wrap; gap: 8px 20px; padding-top: 12px; }
+.running-indicator[hidden] { display: none; }
+.activity-link { display: flex; gap: 16px; align-items: center; justify-content: space-between; text-decoration: none; color: #0067d8; font-size: 13px; min-height: 44px; }
+.activity-time { color: #68686e; font-variant-numeric: tabular-nums; }
+
+.daily-system { max-width: 1280px; margin: 0 auto; padding: 0 20px 24px; color: #68686e; font-size: 12px; }
+.pwa-button { min-height: 44px; border: 0; border-radius: 9px; background: #007aff; color: white; padding: 10px 18px; font: inherit; cursor: pointer; }
+.pwa-button:disabled { opacity: .5; cursor: default; }

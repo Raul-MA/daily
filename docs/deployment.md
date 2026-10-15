@@ -1,22 +1,19 @@
-# Deployment
+# Local development and deferred deployment
 
 ## Problem
 
-The new Readwise endpoint checks need the actual Pages origin. This diagnostic preview must remain distinguishable from a complete, installable PWA release.
+On 2026-10-15 the user requested local work only, with no workflows. Deployment and authenticated API verification must not hold up local implementation.
 
 ## How It Works
 
-`.github/workflows/diagnostic-pages.yml` runs a single sequential job: npm install, Chromium setup, strict lint, typecheck, general unit/browser tests, build, artifact upload and Pages deployment. Only `dist/` is published. Legacy patches, fixtures, source reports and private local exports are not deployment assets.
+Use `npm run dev` from the repo root. Open `http://localhost:5173/daily/` for the current home or `http://localhost:5173/daily/diagnostics.html` for the Readwise/Reader connection checks. Use the URL printed by Vite if the port differs. `npm run build` produces local files in `dist/`.
 
-The configured URL is `https://raul-ma.github.io/daily/diagnostics.html`. The root page identifies itself as a test-first placeholder and links to the diagnostic. No manifest or worker is registered, so this preview is not an installation candidate.
+The GitHub Actions diagnostic deployment workflow has been removed locally. Do not create another workflow, push, call GitHub configuration APIs or deploy unless the user explicitly resumes remote work. The existing Git remote remains configured; no remote setting, workflow or deployed content was changed as part of this local-only instruction.
 
-This workflow validates the diagnostic/recovery increment only. It does not skip, weaken or mark passing the copied feature suites: those remain red until their apps are migrated. Before a product release, replace this preview gate with full `npm run verify` and satisfy physical migration/offline/update acceptance.
-
-The user created the public repository `https://github.com/Raul-MA/daily` after the integration could not create repositories. It was verified empty and linked as `origin`. Git push now works when `GITHUB_TOKEN` is unset for that command: `env -u GITHUB_TOKEN git push -u origin main`. The other configured Git credentials work; the injected token caused the earlier 403 failures. GitHub CLI has no authenticated session with that variable unset, so API/Pages configuration still needs a separate working authentication path or repository settings. Deployment has not yet been verified.
+Readwise/Reader use their documented real endpoints. Mocked tests verify local handling of success and failures; the user can later enter a token on their own device to test actual access from that page's origin. Do not claim live success, require a hosted diagnostic before continuing, or request the token in chat.
 
 ## Gotchas
 
-- Pages must use GitHub Actions as its build source, with repository Pages/environment permissions available.
-- GitHub authentication must be checked with network access. A restricted-network `gh auth status` incorrectly reported an invalid token here; the permitted retry confirmed the Raul-MA account works.
-- Do not install or announce a completed PWA from a diagnostic deployment.
-- Live API results still require the user's token entered locally on the phone. Do not put it in Actions secrets, source, logs or chat.
+- `npm run verify` is the local full-product gate; unfinished feature suites still fail. Scoped tests remain useful during sequential implementation.
+- A production install, offline update or physical migration still needs its later acceptance checks. Deferring deployment does not make those checks pass.
+- Historical GitHub detail: Git push worked with `GITHUB_TOKEN` unset per command. That is a resume note for future authorized remote work, not permission to push now.

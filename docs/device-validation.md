@@ -2,7 +2,7 @@
 
 ## Problem
 
-Stage 2 cannot be completed from a container or Chromium emulation. Record observations from the actual iPhone, installed apps and Pages origin before relying on shared storage, authenticated browser access or background timers.
+Local Stage 2 preparation is complete. By the 2026-10-15 user instruction, live API testing and later product/device checks are deferred and do not block local implementation. Keep this ledger for later verification; mocks and desktop emulation do not prove physical-device behavior.
 
 ## How It Works
 
@@ -15,9 +15,9 @@ Use the existing installations and keep their data. Daily currently has only a t
 3. The user confirms the existing Time Budget survives lock, backgrounding and closing/reopening with correct timing. This characterizes the old app; repeat against Daily after its timer service exists. Do not ask the user to repeat the old-app check.
 4. The user confirms Reader works on the iPhone. Daily Review is a new feature and has not been verified. Existing Reader success does not establish authenticated browser API access from Daily; prepare that diagnostic before requesting its results.
 
-### Checks requiring a hosted diagnostic or implemented feature
+### Deferred checks for later user testing or implemented features
 
-- Authenticated GET requests from a page on `https://raul-ma.github.io`: `/api/v2/auth/`, `/api/v3/list/?limit=1`, `/api/v2/review/` on Readwise. Enter the token locally, in memory only; report status or network/CORS failure without response bodies. No POST, PATCH or DELETE is needed for this feasibility check. A 404 Daily Review means no available review, not a failed local app. A 401/403 needs separate credential validation. A dummy-token request does not prove authenticated success.
+- When the user is ready, authenticated GET requests from the local diagnostic page: `/api/v2/auth/`, `/api/v3/list/?limit=1`, `/api/v2/review/` on Readwise. Enter the token locally, in memory only; report status or network/CORS failure without response bodies. No POST, PATCH or DELETE is needed for this feasibility check. A 404 Daily Review means no available review, not a failed local app. A 401/403 needs separate credential validation. A dummy-token request does not prove authenticated success.
 - Measure the largest combined export, validate its schema and referenced IDs, and test quota/corruption/restore handling before choosing a practical root-document budget. The local coffee sample is only 20,124 bytes and cannot represent all installed data.
 - After prefix-scoped cache-cleanup fixes reach the five affected old workers, verify coexistence on the shared origin without deleting unrelated caches. Do not install Daily alongside broad-cleanup workers and call that safe coexistence.
 - After persisted activities exist, repeat lock/background/process-restart checks for a budget, countdown, game and piano session in Daily. For piano, verify the prompt stays stable while elapsed time advances, explicit pause freezes time and no missed prompts replay.
@@ -40,7 +40,7 @@ Record results in the table below, distinguishing old-app characterization from 
 | Old Time Budget background / restart | User confirms success | Lock, background and closing/reopening preserve the active budget with correct timing; Daily acceptance remains deferred |
 | Existing Reader | User confirms it works | Reader works on the iPhone; Daily API integration still needs separate verification |
 | New Daily Review | Not previously available; unverified | Implement the diagnostic/integration or direct-review fallback before requesting verification |
-| Authenticated Pages-origin API calls | Diagnostic implemented and mocked tests pass; hosting + user results pending | Three endpoint outcomes, no token/payload |
+| Authenticated API calls from the actual test origin | Diagnostic implemented; user token testing deferred without blocking local implementation | Three endpoint outcomes, no token/payload |
 | Largest combined backup / storage | User reports small record counts and approximately 20 KB; 12 recovery tests pass with synthetic data; aggregate/device measurement pending | Aggregate byte size and recovery results |
 | Legacy worker coexistence | Five tested patches prepared; application/release pending | Cache ownership and coexistence results |
 | Daily timer / piano process restore | Deferred until platform and modules | Physical device results against Daily |

@@ -2,7 +2,7 @@
 
 ## Start Here
 
-- [Working rules](AGENTS.md), then [progress / resume](docs/progress.md).
+- [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Local only, no workflows or pushes; API token checks are deferred.
 - [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. This repo currently contains test infrastructure, a connection diagnostic and storage feasibility code; app modules are not migrated.
 
 ## Commands
@@ -26,7 +26,7 @@
 - [Physical device checklist](docs/device-validation.md): pending iPhone evidence and dependencies.
 - [Storage and migrations](docs/storage-and-migrations.md): validated document replacement and recovery prototype.
 - [Legacy workers](docs/legacy-workers.md): tested cleanup patches and release requirements.
-- [Deployment](docs/deployment.md): diagnostic-only preview workflow and release gate.
+- [Local development / deferred deployment](docs/deployment.md): local commands and the current no-workflows instruction.
 - [Lint policy](docs/pwa-eslint-policy.md): exact required rules.
 
 ## Non-Obvious Patterns

@@ -1,84 +1,74 @@
 # Implementation progress
 
-Updated: 2026-10-14. Repository: `/workspaces/daily`, local Git branch `main`. Target: `https://raul-ma.github.io/daily/`. The user created the public repository `https://github.com/Raul-MA/daily`. It is linked locally as `origin`. Push succeeds with `GITHUB_TOKEN` unset for the command, using the remaining configured Git credentials. `main` tracks `origin/main`; the initial retry reported everything up to date. Pages deployment is not yet verified.
+Updated: 2026-10-15. Local repo: `/workspaces/daily`, branch `main`.
 
-## Current step
+## Current instruction and next step
 
-Stage 1 is complete. Stage 2 now has a working EN/ES Readwise diagnostic, a tested version-1 storage recovery prototype and five tested legacy cleanup patches. Next: verify/configure diagnostic Pages hosting, verify the workflow and collect actual iPhone endpoint outcomes. Use `env -u GITHUB_TOKEN git ...` for Git operations. App modules remain unimplemented; Stage 2 is not yet complete.
+The user explicitly requested **local work only, no workflows**, then clarified **HTML/CSS/JavaScript only**. Verify the plain-JavaScript replacement against the same tests before removing Vite/TypeScript. GitHub Actions deployment was removed locally. Do not push, configure Pages, deploy or add workflows until explicitly requested. No remote changes were made for this instruction.
 
-## Completed
+Stage 1 is complete. Stage 2 local preparation is complete; live API checks and installed-device coexistence are deferred, not claimed passing. **Stage 3 platform implementation is in progress locally**, tests first and one module at a time. Routing, preference persistence and shell/dashboard acceptance tests have been added before implementation. Do not ask the user to finish a hosted Readwise check before continuing.
 
-- Initialized a fresh local repository; moved authoritative plan/lint policy into `docs/`. Workspace originals are relocation pointers.
-- Copied all 25 discovered test/helper files before application logic. Original source commits/hashes and migrated file mappings are in `reports/source-tests.json` and `reports/migration-test-inventory.md`.
-- Refactored imported workflows into small helpers/scenarios under the unchanged strict ESLint thresholds. No assertions dropped: plants 14, coffee 147, games 136, piano 275, WhatsApp 37 assertion call sites match their sources.
-- Installed pinned npm dependencies and lockfile, shared ESLint config, TypeScript check, Vite harness, scoped runners and expected-discovery guards. Tests run sequentially with one browser worker and no retries.
-- Kept coffee uncommitted docs, personal backup and Excel additions untouched and out of Daily. Only its backup file-size metadata was examined (20,124 bytes); the complete storage gate remains pending.
-- User confirmed the project-hosted GitHub Pages origin, recorded in `docs/constraints.md`.
-- Rechecked public Readwise/Reader documentation. Authenticated CORS, structured Q&A and feedback capability remain unverified; direct-review fallback remains required.
-- User reports every app exports successfully and most backups contain fewer than 50 entries. The user reports approximately 20 KB backup size (per-file versus aggregate unspecified). Export and restore are both confirmed working by the user for the existing apps. Aggregate byte size and exported active state/settings remain unverified; combined Daily migration/restore still needs implementation and testing. No backup files were requested or copied.
+Keep Readwise and Reader API requests wired to the documented endpoints. The user will enter a token later and observe success or failure. Preserve honest loading/error states and the Daily Review link fallback. Unknown per-card scheduling APIs must not be invented.
 
-- User confirms existing Time Budget survives lock, backgrounding and closing/reopening with correct timing. Reader works on the iPhone. Daily Review is new, so no prior verification exists. These old-app checks do not need repeating; Daily API and timer acceptance remain separate.
+## Completed and user-confirmed
 
-- Added diagnostic at `/daily/diagnostics.html`: memory-only token, explicit submission, three sequential GETs, status-only results, 15-second request timeouts, no response parsing or persistence, EN/ES, honest origin label and direct Daily Review link. Unit and browser APIs are mocked; no real token or account content was used.
-- Added storage prototype with serialization validation, one primary replacement, prior-state recovery, explicit corrupt-data preservation/status and future-version rejection. Twelve tests pass, including quota failures and synthetic data exceeding 140 KB. Combined import UI/domain validation and cross-tab conflict policy remain pending.
-- Reproduced broad cache deletion in five original activation fixtures, then tested prefix-only corrections. Generated five patches with source SHA checks; all passed `git apply --check`. Original repos and installed workers remain unchanged. Patches must be applied/released before coexistence.
-- GitHub auth works for Raul-MA when network access is allowed. `Raul-MA/daily` was not found. Creating it with `gh repo create` was rejected by GitHub (`Resource not accessible by integration`), so the user must create it through GitHub. A single-job diagnostic preview workflow is prepared; it runs lint/typecheck/general tests/build, not a product release gate.
+- Initialized this repo and copied all 25 discovered source test/helper files before application code. Source commits, hashes, assertion counts and migrated destinations are in `reports/migration-test-inventory.md` and `reports/source-tests.json`.
+- Strict shared ESLint, TypeScript, Vite, scoped sequential runners and discovery guards are installed. No skipped tests or relaxed lint thresholds.
+- Original baselines pass: plants 7, coffee browser 21, games browser 24, piano unit 41, piano full browser/offline, WhatsApp 3 groups. New-app feature suites remain red because migration is unfinished.
+- User confirms all existing apps export and restore successfully, most backups have fewer than 50 entries, and backup size is approximately 20 KB. No personal backup files were requested or copied. Existing export/restore checks do not need repeating.
+- User confirms existing Time Budget survives lock/background/closing and reopening with correct timing. Reader works on the iPhone. Daily Review is new and has no prior live verification.
+- Local EN/ES diagnostic at `/daily/diagnostics.html`: explicit submission, memory-only token, three sequential real GET endpoints, status-only results, timeout/error handling, no response-content persistence, origin label and direct Daily Review link.
+- Version-1 document-store prototype validates serialized data, preserves prior/recovery/corrupt copies and rejects future root versions. Twelve tests pass, including failed writes, Unicode and synthetic data exceeding 140 KB. Combined import UI, domain schemas/reference validation and cross-tab policy remain future work.
+- Five legacy cache-cleanup patches are prepared with source SHA checks; all pass ownership tests and `git apply --check`. The original repos and installed workers are unchanged. Release/coexistence checks are deferred until remote work and installation resume.
+- Coffee's unrelated documentation, personal backup and Excel additions remain untouched and excluded.
+
+## Platform checkpoint before removing Vite
+
+- Implemented hash routing, accessible shell, responsive navigation-only dashboard, EN/ES, widget order/visibility and quick-action settings.
+- Shared module store validates payloads, preserves unrelated data and emits only after successful commits.
+- Timestamp activities survive reload, support explicit pause/resume/completion, independent countdowns and singleton budget/game/piano rules. Dashboard and shared indicator navigate without timer mutations.
+- Generated manifest and offline worker cache built assets only; authenticated/external requests bypass caching. Update UI waits for explicit application and blocks active/paused activities or dirty forms in the current page. Cross-tab unsaved-form update coordination remains pending.
+- **54 general unit tests and 17 browser tests pass**, including production offline reopening of Home, Settings and diagnostics. Lint, TypeScript and build pass for this checkpoint. Evidence: `reports/platform-general.txt`, `reports/platform-lint.txt`, `reports/platform-typecheck.txt`, `reports/platform-build.txt`.
+- This is platform evidence, not module parity. No app modules are migrated. Do not claim full verification passing.
+- Next: prepare a plain-JavaScript candidate while retaining this working implementation; run the same assertions before switching tools. Then continue sequentially with plants.
 
 ## Verification evidence
 
 | Check | Result | Evidence |
 | --- | --- | --- |
-| Original plants | 7 cases pass | `reports/baseline-plants.txt` |
-| Original coffee browser | 21 cases pass | `reports/baseline-coffee-e2e.txt` |
-| Original games browser | 24 cases pass | `reports/baseline-games-e2e.txt` |
-| Original piano unit | 41 cases pass | `reports/baseline-piano-unit.txt` |
-| Original piano browser | Full desktop/touch/timing matrix exits 0 | `reports/baseline-piano-browser.txt` |
-| Original piano offline | Worker activation, offline reload and guided reveal pass | `reports/baseline-piano-offline.txt` |
-| Original WhatsApp | 3 named groups pass | `reports/baseline-whatsapp.txt` |
-| Stage 1 general harness | 2 cases pass | `reports/bootstrap-general.txt` |
-| Stage 2 general suite | 25 unit cases and 3 mocked browser cases pass | `reports/stage2-unit.txt`, `reports/readwise-diagnostic-general.txt` |
-| Diagnostic/storage reconstructed red | 18 named cases fail with source absent; initial captures were file-level summaries | `reports/stage2-reconstructed-red.txt` |
-| Legacy cleanup reproduction | 5 cases fail against original guards as expected | `reports/legacy-workers-red.txt` |
-| Legacy cleanup patches | 5 ownership cases pass and all patches apply cleanly | `reports/stage2-unit.txt`, `reports/legacy-patches.txt` |
-| New app full run | Exit 1: plants 7, coffee 21, games 24, piano unit 41, WhatsApp 3 fail; piano UI/offline stop on absent UI | `reports/red-all.txt` |
-| Time Budget / Reader | No source suites; explicit discovery failures until characterization tests are authored | `reports/red-all.txt` |
-| Full strict lint | Pass, zero warnings | `reports/lint.txt` |
-| Typecheck | Pass for initial declarations; platform TypeScript still pending | `reports/typecheck.txt` |
-| Build | Pass for 0.29 kB harness page; no product behavior yet | `reports/build.txt` |
+| Original suites | Baselines pass | `reports/baseline-*.txt` |
+| Current general unit suite | 25 cases pass | `reports/stage2-unit.txt` |
+| General diagnostic browser suite | 3 mocked cases pass | `reports/readwise-diagnostic-general.txt` |
+| Diagnostic/storage red reconstruction | 18 named cases fail with source absent | `reports/stage2-reconstructed-red.txt` |
+| Legacy ownership regression | Original 5 guards fail; prepared fixes pass | `reports/legacy-workers-red.txt`, `reports/stage2-unit.txt` |
+| Lint / typecheck / build | Pass for Stage 2 implementation | `reports/stage2-lint.txt`, `reports/stage2-typecheck.txt`, `reports/stage2-build.txt` |
+| Whole app suites | Last full run exits 1; missing apps remain unfinished | `reports/red-all.txt` |
 
-Full verification is intentionally failing. No production module, combined manifest/worker, complete backup/import system, migration exporter or deployment exists yet. The interrupted original offline check was retried with a restarted static server and passed; its initial connection refusal was infrastructure failure, not app failure.
+The initial diagnostic/storage red logs contained file-level summaries; the reconstruction is additional evidence, not a replacement claim about those initial logs. See `docs/testing.md`.
 
 ## Resume
 
-1. Read `AGENTS.md`, `COMPASS.md`, this file and `reports/migration-test-inventory.md`.
-2. Use `docs/device-validation.md` and work through Stage 2 sequentially. Existing exports/restores, Time Budget background/restart and Reader operation now have user-reported success; do not ask the user to repeat them. The safe diagnostic is implemented; the user has created the empty public `Raul-MA/daily` repository. `origin` is linked and the push now works with `env -u GITHUB_TOKEN git push -u origin main`. Do not ask for repository access again based on earlier failures. Next enable Pages Actions, verify the diagnostic workflow and collect endpoint outcomes; Daily Review is new and cannot have prior app verification. Confirm endpoint behavior from the actual Pages origin on iPhone, validate aggregate byte size/storage during import work, and document background/process restoration checks and legacy worker coexistence. Do not store or request the user's token. See `docs/deployment.md`, `docs/legacy-workers.md` and `docs/storage-and-migrations.md`.
-3. Do not mark Stage 2 complete from public docs, dummy-token requests, a small coffee sample or Chromium emulation. Physical device results require user participation.
-4. Only then begin Stage 3 test-first platform work. Author Time Budget/Reader characterization suites before their modules, and replacement piano continuation/cache/route tests before changing inherited assertions.
+1. Read `AGENTS.md`, `COMPASS.md`, this file and the authoritative `docs/pwa-consolidation-plan.md`.
+2. Finish the plain HTML/CSS/JavaScript transition using the verified platform checkpoint above. Preserve all assertions, including offline and settings browser checks. Then begin plants, retaining its original appearance and care rules.
+3. Keep the diagnostic and real API endpoints available. Authenticated success is unverified and deferred to the user's token test; it is not a dependency for local platform work.
+4. Run general plus affected module suites for shared changes. Add Time Budget/Reader characterization tests and replacement piano continuation/worker/route contracts before their modules are implemented.
+5. Save local progress after each increment. Do not add workflows or push the local workflow deletion automatically.
 
 ## Stages
 
-1. Tests first: complete. Checkpoint commit: `test: bootstrap sequential PWA migration suites`.
-2. Constraints: existing-app export/restore, Time Budget restoration and Reader operation confirmed; diagnostic implementation and storage recovery prototype pass tests; live API/device outcomes and legacy patch releases/coexistence remain pending.
-3. Platform: pending.
+1. Tests first: complete.
+2. Constraints: local preparation complete; live API/device/release evidence explicitly deferred by user.
+3. Platform: in progress, local only. First increment: router, shell, shared language and dashboard customization.
 4. Plants: pending.
 5. Coffee then games: pending.
 6. Time Budget then piano: pending.
-7. Reading then WhatsApp: pending.
-8. Release/migration: pending.
+7. Reading then WhatsApp: pending; retain API calls for later token testing.
+8. Release/migration: deferred; full product and physical-device acceptance remain required before completion.
 
-## Saved checkpoints
+## Saved checkpoints and remote history
 
-- `1344b79` — Stage 1 test-first bootstrap, source mapping, baseline passes and new-app red evidence.
-- Stage 2 evidence checklist is in `docs/device-validation.md`. User-reported exports and restores work for the existing apps; most backups contain fewer than 50 entries. The user also confirms Time Budget lock/background/restart timing and Reader operation. Authenticated API diagnostics and new Daily Review verification remain pending, along with Daily-specific lifecycle/storage/cache acceptance. Resume with these dependencies; do not silently skip the plan's constraint gate.
-
-- Stage 2 local preparation is complete: 25 general unit cases and three mocked browser cases pass. Live Pages diagnostic results and old-worker release remain required. Public diagnostic hosting is the next concrete step, with no user data included.
-
-- `565912d` — Readwise diagnostic, storage recovery prototype, legacy ownership tests/patches and diagnostic Pages workflow.
-- `dffda47` — Patch boundary formatting fix; patches remain applicable.
-- GitHub hosting blocker: `gh repo create Raul-MA/daily --public --source=. --remote=origin ...` failed with `GraphQL: Resource not accessible by integration (createRepository)`. This is a GitHub credential permission limitation, not a missing user authorization or failed local verification. Do not retry repository creation repeatedly or ask for the user's token. Ask the user to create the empty public repository through GitHub, then resume push/Pages setup. No remote was added and nothing was deployed.
-
-- Repository-creation blocker resolved by the user: public `Raul-MA/daily` exists and was verified empty before the initial push. Deployment remains pending until the workflow succeeds.
-
-- Hosting follow-up: repository creation is resolved and `origin` points to `https://github.com/Raul-MA/daily.git`. Both `git push -u origin main` and the explicit `gh auth git-credential` retry failed with HTTP 403 (`Permission to Raul-MA/daily.git denied to Raul-MA`). This is an actual remote access denial, not an automatic approval-review rejection. No remote branch or Pages deployment was created. Next user action: grant the GitHub connection access to the new repository with write permission; then retry the push and configure Pages. Do not repeatedly retry unchanged credentials.
-
-- Push blocker resolved following the user's suggestion: `env -u GITHUB_TOKEN git push -u origin main` succeeded and configured tracking, reporting everything up to date. Keep the variable unset per Git command; do not change the user's global environment. GitHub CLI has no authenticated session when that variable is unset, so Git transport success does not establish CLI API/Pages access. Deployment remains unverified.
+- `1344b79`: initial test-first bootstrap.
+- `565912d`: diagnostic, recovery prototype, legacy patches and historical preview workflow.
+- `dffda47`: patch context formatting fix.
+- `f9b9eca`: progress update pushed after unsetting `GITHUB_TOKEN`; remote is `https://github.com/Raul-MA/daily.git`.
+- On 2026-10-14 the preview workflow failed at `configure-pages`: Pages was configured for legacy branch publishing. A proposed switch to Actions was interrupted and is no longer authorized under the local-only instruction. Hosting is unverified and no further remote troubleshooting is needed now.

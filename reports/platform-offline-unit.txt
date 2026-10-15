@@ -1,0 +1,13 @@
+✔ update activation is held for any unfinished activity or unsaved form (51.342433ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (45.431486ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (4.731547ms)
+✔ offline navigation and built assets use only this app cache (4.439371ms)
+✔ updates wait until explicitly requested and reject unrelated messages (3.158109ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 130.882962

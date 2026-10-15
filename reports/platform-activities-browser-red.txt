@@ -1,0 +1,99 @@
+[WebServer] (node:30512) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:30549) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes (5.3s)
+(node:30765) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state (5.5s)
+(node:30959) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard (5.4s)
+
+
+  1) tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-widget="activities"]')
+    Expected substring: "Té 🍵"
+    Received string:    "RunningYour active sessions will appear here.Open Time Budget→"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-widget="activities"]')
+        14 × locator resolved to <section class="dashboard-card" data-widget="activities" aria-labelledby="widget-activities">…</section>
+           - unexpected value "RunningYour active sessions will appear here.Open Time Budget→"
+
+
+      12 |   await page.goto('/daily/#/');
+      13 |   const raw = await page.evaluate(() => localStorage.getItem('daily:v1'));
+    > 14 |   await expect(page.locator('[data-widget="activities"]')).toContainText('Té 🍵');
+         |                                                            ^
+      15 |   await expect(page.locator('[data-widget="activities"]')).toContainText('Overdue');
+      16 |   await expect(page.getByRole('navigation', { name: 'Running activities' }).getByRole('link')).toHaveCount(1);
+      17 |   await expect(page.locator('#dashboard button')).toHaveCount(0);
+        at /workspaces/daily/tests/e2e/activities.spec.js:14:60
+
+    Error Context: test-results/activities-running-summari-e2ac8-time-without-storage-writes/error-context.md
+
+  2) tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('navigation', { name: 'Running activities' })
+    Expected substring: "Té 🍵"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByRole('navigation', { name: 'Running activities' })
+
+
+      29 |   await page.getByRole('link', { name: 'Home', exact: true }).click();
+      30 |   await expect(page.locator('[data-widget="activities"]')).toHaveCount(0);
+    > 31 |   await expect(page.getByRole('navigation', { name: 'Running activities' })).toContainText('Té 🍵');
+         |                                                                              ^
+      32 |   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('daily:v1')).modules.activities.data[0].status)).toBe('running');
+      33 | });
+      34 |
+        at /workspaces/daily/tests/e2e/activities.spec.js:31:78
+
+    Error Context: test-results/activities-removing-the-ac-4f57f-indicator-and-running-state/error-context.md
+
+  3) tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-widget="activities"]')
+    Expected substring: "could not be read"
+    Received string:    "RunningYour active sessions will appear here.Open Time Budget→"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-widget="activities"]')
+        14 × locator resolved to <section class="dashboard-card" data-widget="activities" aria-labelledby="widget-activities">…</section>
+           - unexpected value "RunningYour active sessions will appear here.Open Time Budget→"
+
+
+      39 |   await page.goto('/daily/#/');
+      40 |   await expect(page.getByRole('heading', { name: 'Today', exact: true })).toBeVisible();
+    > 41 |   await expect(page.locator('[data-widget="activities"]')).toContainText('could not be read');
+         |                                                            ^
+      42 |   await expect(page.getByRole('link', { name: 'Log coffee', exact: true })).toBeVisible();
+      43 | });
+      44 |
+        at /workspaces/daily/tests/e2e/activities.spec.js:41:60
+
+    Error Context: test-results/activities-activity-failur-5f7a1-m-the-rest-of-the-dashboard/error-context.md
+
+  3 failed
+    tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes 
+    tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state 
+    tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard 
