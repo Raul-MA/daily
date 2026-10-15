@@ -1,0 +1,14 @@
+
+> daily-pwa@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+/workspaces/daily/modules/piano/src/activity-sync.js
+  12:8  error  Function 'synchronizePianoActivities' has a complexity of 9. Maximum allowed is 8  complexity
+
+/workspaces/daily/modules/piano/src/validation.js
+  20:8  error  Function 'validPractice' has a complexity of 9. Maximum allowed is 8  complexity
+  34:8  error  Function 'validPiano' has a complexity of 9. Maximum allowed is 8     complexity
+
+✖ 3 problems (3 errors, 0 warnings)
+

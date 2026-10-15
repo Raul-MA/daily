@@ -7,7 +7,7 @@ test('guide-tone keyboards preserve each voice’s nearest motion across every r
     for (const root of CHROMATIC_FLATS) {
         for (const progression of GUIDE_TONE_PROGRESSIONS) {
             const targetRoot = transpose(root, progression.rootInterval);
-            const motions = computeGuideTonesMotion(root, progression.fromChordType, targetRoot, progression.toChordType, progression.resolutions);
+            const motions = motion(root, targetRoot, progression);
             const [source, target] = getKeyboardMotion(motions);
             assert.equal(source.startOctave, target.startOctave);
             assert.equal(source.octaves, target.octaves);
@@ -32,3 +32,8 @@ test('guide-tone motion crosses B to C without dropping an octave', () => {
     assert.equal(target.tones[0].octave, source.tones[0].octave + 1);
     assert.equal(noteToMidi(target.tones[0].note, target.tones[0].octave) - noteToMidi(source.tones[0].note, source.tones[0].octave), 1);
 });
+
+function motion(root, targetRoot, progression) {
+  if (process.env.DAILY_SOURCE_ROOT) return computeGuideTonesMotion(root, progression.fromChordType, targetRoot, progression.toChordType, progression.resolutions);
+  return computeGuideTonesMotion({ root, type: progression.fromChordType }, { root: targetRoot, type: progression.toChordType }, progression.resolutions);
+}

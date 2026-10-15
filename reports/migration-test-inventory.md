@@ -96,3 +96,9 @@ Source `timeBudget` at `fb9e9be86325d900e64aeda59faad4215cc1d5a9`; hashes and im
 - `time-budget-shell-red.txt` records the absent countdown interface and an offline fixture that initially blocked service workers. The worker fixture was corrected to permit the shared worker. `time-budget-recovery-red.txt` records the actual negative-reallocation defect (16 browser cases passed, one failed). `time-budget-countdown-backup-red.txt` records the missing countdown backup before its atomic restoration was added.
 - Immediate timer saves replace the original five-second autosave gap; ticks and navigation are read-only. Pending overtime now survives reload. Invalid reductions are rejected. Imports now require preview/recovery/confirmation, and full exports include active state plus countdowns; legacy template export format/filename is preserved.
 - Full translation of original English text and physical iPhone acceptance remain final gates.
+
+## Piano continuation work in progress
+
+Eight new service cases and six browser acceptance cases were authored before implementation, covering the approved persistence/continuation change. They supplement the original 41 unit cases and both original browser scripts. Red is retained in `piano-persistence-red.txt` and `piano-continuation-red.txt`; current core and service results are separate in `piano-core-unit.txt` (38) and `piano-persistence.txt` (8). The full suite remains unfinished.
+
+The music core keeps all source assertions. `computeGuideTonesMotion` now receives `{root,type}` source/target objects plus resolutions to satisfy the four-parameter policy; the source characterization helper preserves the original five-argument baseline call and all its assertions. Interactive practice, worker-inventory replacement, canonical-route browser adapters and the approved hide/navigation assertion changes remain pending.

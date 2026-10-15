@@ -9,6 +9,7 @@ const baselineIndex = process.argv.indexOf('--baseline');
 if (baselineIndex >= 0) {
   process.env.DAILY_BASELINE_URL = process.argv[baselineIndex + 1];
   process.env.DAILY_SOURCE_ROOT = '/workspaces';
+  if (scope === 'piano') process.env.TONIQ_URL = process.env.DAILY_BASELINE_URL;
 }
 const reportIndex = process.argv.indexOf('--report');
 const reportPath = reportIndex < 0 ? null : process.argv[reportIndex + 1];
@@ -31,11 +32,14 @@ async function runBrowser(module) {
     return execute(['node_modules/@playwright/test/cli.js', 'test'], { ...process.env, DAILY_MODULE: module });
   }
   if (module !== 'piano') return 0;
-  return withBrowserServer(() => {
+  discoverBrowser(module);
+  const native = process.env.DAILY_BASELINE_URL ? 0 : execute(['node_modules/@playwright/test/cli.js', 'test'], { ...process.env, DAILY_MODULE: module });
+  const legacy = await withBrowserServer(() => {
     const ui = execute(['modules/piano/e2e/browser-smoke.mjs']);
     const offline = execute(['modules/piano/e2e/service-worker-smoke.mjs']);
     return ui || offline;
   });
+  return native || legacy;
 }
 
 let failed = false;

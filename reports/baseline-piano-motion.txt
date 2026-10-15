@@ -1,0 +1,10 @@
+✔ guide-tone keyboards preserve each voice’s nearest motion across every root (14.414252ms)
+✔ guide-tone motion crosses B to C without dropping an octave (0.41738ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 44.125744

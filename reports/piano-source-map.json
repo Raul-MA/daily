@@ -1,0 +1,400 @@
+{
+  "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
+  "status": "core only; UI integration pending",
+  "files": [
+    {
+      "source": "toniq/js/music/chords.js",
+      "sha256": "0a6d962a928b9a1999613815066de48cc96c51da0656b64c013b4ef9e81e1ab7",
+      "destination": "modules/piano/src/js/music/chords.js"
+    },
+    {
+      "source": "toniq/js/music/ear-training.js",
+      "sha256": "4be8015243c35df90b39f7738ad9c9e48acb97d4355d636a597ad3c2805d6332",
+      "destination": "modules/piano/src/js/music/ear-training.js"
+    },
+    {
+      "source": "toniq/js/music/functions.js",
+      "sha256": "39164af54b499c25cee251c9ad2e35910c3b82f7ee4407b85158f256ed66a0cd",
+      "destination": "modules/piano/src/js/music/functions.js"
+    },
+    {
+      "source": "toniq/js/music/intervals.js",
+      "sha256": "acb1a83c7f1692636f4f748ca14ae8822f9dede6fe2c0f3b32c39b2fd1a5f8ac",
+      "destination": "modules/piano/src/js/music/intervals.js"
+    },
+    {
+      "source": "toniq/js/music/inversions.js",
+      "sha256": "ecc7fd1390c7ecec4938b6dbb4aacd6b085e8de178df20cc8e701b7e3911cb34",
+      "destination": "modules/piano/src/js/music/inversions.js"
+    },
+    {
+      "source": "toniq/js/music/key-signatures.js",
+      "sha256": "6868c6aee5ff31f5e4d3e4f49cb7840cb22ca2b1ecbf01d5cc5baf38941a35df",
+      "destination": "modules/piano/src/js/music/key-signatures.js"
+    },
+    {
+      "source": "toniq/js/music/learning-path.js",
+      "sha256": "93b930ca165b7db3d16d089ce414c4c4f95918c8276681e8b97ea2b349bf8ee8",
+      "destination": "modules/piano/src/js/music/learning-path.js"
+    },
+    {
+      "source": "toniq/js/music/melodic-minor.js",
+      "sha256": "c09d8090c316fb12688dda7e33aadff009ac9f664350e2bb9684106ee9e9f10e",
+      "destination": "modules/piano/src/js/music/melodic-minor.js"
+    },
+    {
+      "source": "toniq/js/music/modal-interchange.js",
+      "sha256": "72eaabbbee83e31f4ed01c55f6c62ef1560102501f3ec9bf7033bc188810e320",
+      "destination": "modules/piano/src/js/music/modal-interchange.js"
+    },
+    {
+      "source": "toniq/js/music/modes.js",
+      "sha256": "74e839e6e0f967dffcc8730d3b8144df0d4aa53882ec73916baf28b4a5e28467",
+      "destination": "modules/piano/src/js/music/modes.js"
+    },
+    {
+      "source": "toniq/js/music/modulations.js",
+      "sha256": "839054f354b59a386cdde3c305bab66c6eacfab0eff665e57f45a8ac831111ff",
+      "destination": "modules/piano/src/js/music/modulations.js"
+    },
+    {
+      "source": "toniq/js/music/notes.js",
+      "sha256": "d1bbf0fbaa8f5ff2f8c82de32b845bcb0246cf672104ce031cdf80d78daad1fe",
+      "destination": "modules/piano/src/js/music/notes.js"
+    },
+    {
+      "source": "toniq/js/music/progressions.js",
+      "sha256": "8a54b8046e15f80935bfc69fbd5a194bc83beb9b6652f707b4eced38e8581813",
+      "destination": "modules/piano/src/js/music/progressions.js"
+    },
+    {
+      "source": "toniq/js/music/rootless-voicings.js",
+      "sha256": "0f0822db4dafd6079136705e211d2985866ca2e859aeb3873f0367ebf7d17c93",
+      "destination": "modules/piano/src/js/music/rootless-voicings.js"
+    },
+    {
+      "source": "toniq/js/music/scales.js",
+      "sha256": "3cffff5ea8a776660112e576107375346a256b13de544a07ab07ad445cff6fe2",
+      "destination": "modules/piano/src/js/music/scales.js"
+    },
+    {
+      "source": "toniq/js/music/secondary-dominants.js",
+      "sha256": "8828f925fd74aec3be8223fd2f80134779d36a1f450121cd51b80fcdd3fefc05",
+      "destination": "modules/piano/src/js/music/secondary-dominants.js"
+    },
+    {
+      "source": "toniq/js/music/shell-chords.js",
+      "sha256": "a7914a6f821ee182f106b6c71507d5d7956afc230d833be64004acbeddb465a8",
+      "destination": "modules/piano/src/js/music/shell-chords.js"
+    },
+    {
+      "source": "toniq/js/music/superimpositions.js",
+      "sha256": "61cbb81d276fa1c4097930d3b4a1a3a98319c08a5f92d1349557fe26e9e5891c",
+      "destination": "modules/piano/src/js/music/superimpositions.js"
+    },
+    {
+      "source": "toniq/js/music/suspended-chords.js",
+      "sha256": "88f5433234dbda52835d655ceb48ddb2b555f6aa2f6538b2c13cfe8feacf2c14",
+      "destination": "modules/piano/src/js/music/suspended-chords.js"
+    },
+    {
+      "source": "toniq/js/music/tritone-sub.js",
+      "sha256": "5630c769ebcc8ef32dc8bd633acf2ac99bae9a335e991bc2e64d63ed9a17886e",
+      "destination": "modules/piano/src/js/music/tritone-sub.js"
+    },
+    {
+      "source": "toniq/js/music/voice-leading.js",
+      "sha256": "da51e770efaafc62d22684cdd9d50442582e66855a35f4487d92dce71329b754",
+      "destination": "modules/piano/src/js/music/voice-leading.js"
+    },
+    {
+      "source": "toniq/js/components/keyboard-diagram.js",
+      "sha256": "9480bb334d98d21bab86c17faf00ed076e90cd57c564317cdefca60fa2c14341",
+      "destination": "modules/piano/src/js/components/keyboard-diagram.js",
+      "status": "keyboard/catalog/pure render helpers/allocation ported; interactive components pending"
+    },
+    {
+      "source": "toniq/js/components/navigation-data.js",
+      "sha256": "6a0a57059e50767540448c5b7f8d99a798236d5507cfec5efb486ee9c22791ae",
+      "destination": "modules/piano/src/js/components/navigation-data.js",
+      "status": "keyboard/catalog/pure render helpers/allocation ported; interactive components pending"
+    },
+    {
+      "source": "toniq/js/components/exercise-shell.js",
+      "sha256": "57063e8d2fc0fdff21191ac6fe84952353c4df57183e11bda9f8df3c3fcfbd94",
+      "destination": "modules/piano/src/js/components/exercise-shell.js",
+      "status": "keyboard/catalog/pure render helpers/allocation ported; interactive components pending"
+    },
+    {
+      "source": "toniq/js/components/practice-session.js",
+      "sha256": "f738b7bff469a697a5b7e21398f24b05fc8e49548a8e8e770df4aa5a2e956e31",
+      "destination": "modules/piano/src/js/components/practice-session.js",
+      "status": "keyboard/catalog/pure render helpers/allocation ported; interactive components pending"
+    },
+    {
+      "source": "toniq/assets/icon.svg",
+      "sha256": "cd4badfd774964b7aa5fb34f98128874a33b68f64d5217acc349a72f8f8f9067",
+      "destination": "modules/piano/src/assets/icon.svg"
+    },
+    {
+      "source": "toniq/assets/key-signatures/A-flat-major.png",
+      "sha256": "fb3122a0ba2d0be887851361644bd268ea2dfa89358dc27ac81d32562e6a6a0b",
+      "destination": "modules/piano/src/assets/key-signatures/A-flat-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/A-major.png",
+      "sha256": "d1e68b28caa34a88fe52577a3dfa2c48f6bd2524a39cccf41471b4490244127b",
+      "destination": "modules/piano/src/assets/key-signatures/A-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/B-flat-major.png",
+      "sha256": "d1e12633de538fe5c5e37c4f28115454cf8d8cc281fde1e88f793543023a4ada",
+      "destination": "modules/piano/src/assets/key-signatures/B-flat-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/B-major.png",
+      "sha256": "fa7705b0cad3bc69b57c1c2b66e43d707122b8053830c37cc7eb9fb3d087c886",
+      "destination": "modules/piano/src/assets/key-signatures/B-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/C-flat-major.png",
+      "sha256": "2c658a71df3893ea517f2925860498f4e2c9662b526ea6153dfb79caa8040c86",
+      "destination": "modules/piano/src/assets/key-signatures/C-flat-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/C-major.png",
+      "sha256": "5cb0c8c25623d6ba7cb379a53c7088428224022a7b081f8e63eac0e30e1578b4",
+      "destination": "modules/piano/src/assets/key-signatures/C-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/C-sharp-major.png",
+      "sha256": "545190a048e2c7a01cf4da83a9f43872724c596829e73f0ea614e7b635bf5bb3",
+      "destination": "modules/piano/src/assets/key-signatures/C-sharp-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/D-flat-major.png",
+      "sha256": "bc3a0922a6335dcd314e8fc7e5f33e0f79a0c7d0a53f7c2d4a63a61c2f8d89d3",
+      "destination": "modules/piano/src/assets/key-signatures/D-flat-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/D-major.png",
+      "sha256": "82dba4b611f8bf5ee30bb48a387a3d5be7245fcc0803e2505a077b01111f299c",
+      "destination": "modules/piano/src/assets/key-signatures/D-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/E-flat-major.png",
+      "sha256": "38e94a19c46c26d95886bf5c59f78c8c3c8b978848c5f1247ab3a54775f9f5eb",
+      "destination": "modules/piano/src/assets/key-signatures/E-flat-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/E-major.png",
+      "sha256": "2d14e922beec356f20eac41022b04eadc36c9c464e15484c0c28c592dbd9f5b0",
+      "destination": "modules/piano/src/assets/key-signatures/E-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/F-major.png",
+      "sha256": "f20a451e73b2f428a5ab9f99b6fd4808cf40daa5a30ba4487ef8fa4a36104b46",
+      "destination": "modules/piano/src/assets/key-signatures/F-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/F-sharp-major.png",
+      "sha256": "c3b78b17e5b64d0a16c2cb37bc4f00d0bac60ceb1b533a96b0ccf066739bd2dc",
+      "destination": "modules/piano/src/assets/key-signatures/F-sharp-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/G-flat-major.png",
+      "sha256": "20744c9808dda2e8fffa8018199c034f8358520ff63704bec69850cf5daf64ac",
+      "destination": "modules/piano/src/assets/key-signatures/G-flat-major.png"
+    },
+    {
+      "source": "toniq/assets/key-signatures/G-major.png",
+      "sha256": "99952b3fa6059d3f2603543dbd934bc791a605376fb34dfa8af137e724e9b050",
+      "destination": "modules/piano/src/assets/key-signatures/G-major.png"
+    },
+    {
+      "source": "toniq/assets/notes/a2.mp3",
+      "sha256": "ec9ce1e63cb3c0d73a5921a9d338b2e1beef64baa6650624c8c4fb27ef9d5c5a",
+      "destination": "modules/piano/src/assets/notes/a2.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/a2sharp.mp3",
+      "sha256": "055a89a0bf3a2d06dc71539fd226c18bbe0c83eacf5f8f2bad5668ef5e3beb3c",
+      "destination": "modules/piano/src/assets/notes/a2sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/a3.mp3",
+      "sha256": "e821397f04218811020885a565fd1fc6795ca9a3f98d4cb725959711fea043d2",
+      "destination": "modules/piano/src/assets/notes/a3.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/a3sharp.mp3",
+      "sha256": "355081ce016c14705806810c9a3e37122153019db69fc40143c47490d9f964ee",
+      "destination": "modules/piano/src/assets/notes/a3sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/a4.mp3",
+      "sha256": "62cf3461fb9ce0b5179aca23d4088fab48af8f9775e2f5f6e2e130dcfbb850f2",
+      "destination": "modules/piano/src/assets/notes/a4.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/a4sharp.mp3",
+      "sha256": "17da00e8e2c46bebcc5a43a13d898b3a67831b318148db429ad92c5cd03b06ff",
+      "destination": "modules/piano/src/assets/notes/a4sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/b2.mp3",
+      "sha256": "e4698d2edde678fd47d84ab46ea53ce7c3c70ef664d7cb3c940f37a497bc14dd",
+      "destination": "modules/piano/src/assets/notes/b2.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/b3.mp3",
+      "sha256": "b03e73dc8f9c1ed907257c88c49972e26932f214e64506f70d572d97caa57ce1",
+      "destination": "modules/piano/src/assets/notes/b3.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/b4.mp3",
+      "sha256": "f1ddf5784351709cd873b838ac1c6c297d12b1caf96ba118f9f4470d863affc7",
+      "destination": "modules/piano/src/assets/notes/b4.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/c2.mp3",
+      "sha256": "70697635c23604d04e2128e9e8b246f18706e41ed49db72cf76bd363548ccedb",
+      "destination": "modules/piano/src/assets/notes/c2.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/c2sharp.mp3",
+      "sha256": "bf09bd04722e17ccf1ce3ba9cd01612bbdd11137020e39c38bf5a15ef10bd77f",
+      "destination": "modules/piano/src/assets/notes/c2sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/c3.mp3",
+      "sha256": "4903e12b7ceaee0c617b37e6d7dfa37752feef2d309cf28bec7f7ceb7989b3e5",
+      "destination": "modules/piano/src/assets/notes/c3.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/c3sharp.mp3",
+      "sha256": "a2c2cd7886b26fde8c279c7388f2c9558faa098269b371a0cb74de10e13446a4",
+      "destination": "modules/piano/src/assets/notes/c3sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/c4.mp3",
+      "sha256": "cbdd38e00244565dc1107b510dce11af820d8859f4c20ae4d3c65ce320a9749e",
+      "destination": "modules/piano/src/assets/notes/c4.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/c4sharp.mp3",
+      "sha256": "423d92fb231c4c5035540d2cd088cdfd4b1cc3ebf8916985c2b7997d2f6e5ffc",
+      "destination": "modules/piano/src/assets/notes/c4sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/c5.mp3",
+      "sha256": "a9e9b8896312ef6eb033baaa2d85b79018c2922ce8ed4dedc08b824e2216b30d",
+      "destination": "modules/piano/src/assets/notes/c5.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/d2.mp3",
+      "sha256": "7d1140a3e59d01a97346a26d0c9d173aec46400064ab928eedebb362b9a740cf",
+      "destination": "modules/piano/src/assets/notes/d2.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/d2sharp.mp3",
+      "sha256": "bb86293f5af9eb66da5ab9965d853c427c293297ba59e19a9ee3c35bee2d0888",
+      "destination": "modules/piano/src/assets/notes/d2sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/d3.mp3",
+      "sha256": "50c10d35f89ce67f48dc814b4d0e333724631066b24c4481b3edcfc3c38fdbeb",
+      "destination": "modules/piano/src/assets/notes/d3.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/d3sharp.mp3",
+      "sha256": "303dca8acec1a7aaf25f09a6f5cc9cdf2e912cd8d44a92f251cca14388b6672b",
+      "destination": "modules/piano/src/assets/notes/d3sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/d4.mp3",
+      "sha256": "ba465251d0e6eee0d692f28925881ebfea14e183afbc31d8d12883b5b09f1314",
+      "destination": "modules/piano/src/assets/notes/d4.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/d4sharp.mp3",
+      "sha256": "6ad1aa9e29acfe6afe395f13af29c326953fdbcfe7d378f0517feddd61f74aed",
+      "destination": "modules/piano/src/assets/notes/d4sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/e2.mp3",
+      "sha256": "a9b90dd79de413af2a7ab673368e882070fcb7c32ad7a2befd6cec4ccaf409c8",
+      "destination": "modules/piano/src/assets/notes/e2.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/e3.mp3",
+      "sha256": "2d3aba4e0f15a76c16737d020dbfcd9eece08a5273a538064db1d4cd61f09ce2",
+      "destination": "modules/piano/src/assets/notes/e3.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/e4.mp3",
+      "sha256": "5f4612e7c0484ee8f7b9e9ab7bd158616105b197f5ebf38374edbb44f15a9380",
+      "destination": "modules/piano/src/assets/notes/e4.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/f2.mp3",
+      "sha256": "1bbb46a0a9530f026b768abae9ae2895a67e7351b004ce17648730e5c75d209f",
+      "destination": "modules/piano/src/assets/notes/f2.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/f2sharp.mp3",
+      "sha256": "00718e071c8329919821d1bc5769a6e0b7acd7597fa3d7aa8218512d8d539c15",
+      "destination": "modules/piano/src/assets/notes/f2sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/f3.mp3",
+      "sha256": "88172f35cdcaad3e208db080c38c41abab23841aa2e0164c325db4abf6cc0974",
+      "destination": "modules/piano/src/assets/notes/f3.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/f3sharp.mp3",
+      "sha256": "da1be51b8edf32e91645dfaf7876c6534d7ba9513fdd2766acc3748c4f1ab55c",
+      "destination": "modules/piano/src/assets/notes/f3sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/f4.mp3",
+      "sha256": "acade3b2cae0311f515a9ff8ed425f0a1b71268ff96c95a79dc7e2e8b2fb93f7",
+      "destination": "modules/piano/src/assets/notes/f4.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/f4sharp.mp3",
+      "sha256": "587494c9fcf3ac1f52b0da2d284a260cb78a77494b39b81e7d565c1028868989",
+      "destination": "modules/piano/src/assets/notes/f4sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/g2.mp3",
+      "sha256": "75132a9c105c07393954cf8f6b20646b0bdcc54a495d70a97b8980ae248534ad",
+      "destination": "modules/piano/src/assets/notes/g2.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/g2sharp.mp3",
+      "sha256": "cf7fcbbb59f95461e5d163668e43f915d7b49989f483e05d7c4eff05c9810d26",
+      "destination": "modules/piano/src/assets/notes/g2sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/g3.mp3",
+      "sha256": "64e22ff1c2a9c8002d3d89687d9ad267d1324ab9dbdf2568bbcb17fe53985293",
+      "destination": "modules/piano/src/assets/notes/g3.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/g3sharp.mp3",
+      "sha256": "badf0a24c36f4302454d2bc62b3189eaa3334887b39a43e87e4956438cb7ed5b",
+      "destination": "modules/piano/src/assets/notes/g3sharp.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/g4.mp3",
+      "sha256": "2b9a42b9ee85464095cf3a7e21a5526f7bddb1ce71c7c8713f325298dc065e35",
+      "destination": "modules/piano/src/assets/notes/g4.mp3"
+    },
+    {
+      "source": "toniq/assets/notes/g4sharp.mp3",
+      "sha256": "db4d1e6b4a7cc8203b2f1756ad4478100a6f9912ebe6780a702d86777eea6253",
+      "destination": "modules/piano/src/assets/notes/g4sharp.mp3"
+    }
+  ]
+}
