@@ -6,21 +6,22 @@ Updated: 2026-10-15. Repo: `/workspaces/daily`, branch `main`.
 
 Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No workflows, pushes, Pages configuration or deployments. Keep real Readwise/Reader API calls for the user's later token test; unverified live access does not block implementation. Do not request personal tokens or backup files.
 
-The shared platform, plants, Coffee and Games have passing local workflow checks. **Next: Time Budget**, starting with its original/module rules and characterization tests because it has no original suite. Preserve template budgeting/reallocation, active tasks/timing, and its appearance; add the migration export for active state. Continue sequentially with piano, reading, WhatsApp, then complete shared migration/localization/release acceptance. Coffee Excel remains excluded.
+The shared platform, plants, Coffee, Games and Time Budget have passing local workflow checks. **Next: piano**, starting with its original/module rules and the copied continuation/worker/route assertions. Add replacement acceptance tests for the approved persisted continuation before changing original pause-on-hide behavior. Then implement reading and WhatsApp sequentially and finish shared migration/localization/release acceptance. Coffee Excel remains excluded.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 65 unit + 19 browser cases pass | `reports/platform-with-games.txt` |
-| Plants | 23 unit + 11 browser cases pass | `reports/plants-with-games.txt` |
+| General | 65 unit + 19 browser cases pass | `reports/platform-with-time-budget.txt` |
+| Plants | 23 unit + 11 browser cases pass | `reports/plants-with-time-budget.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/games-lint.txt` |
-| Native JS syntax | 332 files pass; this is not typechecking | `reports/games-syntax.txt` |
-| Static preparation | 249 unchanged native files/assets prepared | `reports/games-build.txt` |
-| Coffee | 17 unit + 28 browser cases pass | `reports/coffee-with-games.txt` |
-| Games | 15 unit + 30 browser cases pass | `reports/games-ui.txt` |
-| Whole migration | Incomplete; other four modules remain pending | Last full red evidence: `reports/red-all.txt` |
+| Strict full-scope lint | Pass | `reports/time-budget-lint.txt` |
+| Native JS syntax | 412 files pass; this is not typechecking | `reports/time-budget-syntax.txt` |
+| Static preparation | 323 unchanged native files/assets prepared | `reports/time-budget-build.txt` |
+| Coffee | 17 unit + 28 browser cases pass | `reports/coffee-with-time-budget.txt` |
+| Games | 15 unit + 30 browser cases pass | `reports/games-with-time-budget.txt` |
+| Time Budget | 17 unit + 17 browser cases pass | `reports/time-budget-ui.txt` |
+| Whole migration | Incomplete; piano, reading and WhatsApp remain pending | Last full red evidence: `reports/red-all.txt` |
 
 No skipped tests or relaxed lint thresholds. Original plant assertions remain unchanged. New-app parity is not established by original baseline results.
 
@@ -28,7 +29,7 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 
 - Accessible hash-router shell, accepted three/two/one-column iOS dashboard, app menu, shared EN/ES, persisted widget order/visibility and quick-action settings. Dashboard links create no records or care events.
 - Validated `daily:v1` root document, per-module adapters, recovery/corrupt preservation, future-version rejection and visible quota failures. Combined restore and remaining domain adapters are still pending.
-- Timestamp activity registry: independent countdowns, singleton budget/game/piano, explicit pause/resume/completion and overdue reconstruction. Rendering/navigation never advances persisted state. Full Time Budget/game/piano modules still need integration.
+- Timestamp activity registry: independent countdowns, singleton budget/game/piano, explicit pause/resume/completion and overdue reconstruction. Rendering/navigation never advances persisted state. Time Budget and Games are integrated; piano remains pending.
 - One generated manifest and owned offline asset list. Authenticated/external requests bypass worker caches. Cached HTML remains with its matching asset version. Updates require every open same-app tab to report safe; blocked/unresponsive tabs hold activation. The two-tab browser test preserves settings and unsaved work through update acceptance.
 - Local-midnight/calendar refresh with foreground/timezone checks and daylight-saving tests. In-memory dirty-form snapshots preserve values, file selection and focus through language changes. Plant/history stale edits retain drafts rather than overwriting newer records.
 - Plants: list, stable detail/edit routes, templates, seasonal care, notes/history editing, skip/manual due dates, Things settings/exact shortcut payload, original/migration exports, preview/cancel/recovery before import, scoped source theme and offline care logging. Thirteen original guide/template data objects are preserved. Controls are EN/ES; authored guide paragraphs/descriptions remain Spanish for final content localization. See `modules/plants/docs/behavior.md` and `reports/plants-source-map.json`.
@@ -45,8 +46,8 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 ## Resume and remaining gates
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and the authoritative `docs/pwa-consolidation-plan.md`.
-2. Characterize Time Budget against its original before implementation. Preserve original budgeting and template operations, add root/session/activity and migration/recovery acceptance before changes, then port its native UI. Keep one app at a time. General/shared changes require general plus affected suites.
-3. Add Time Budget/Reader characterization before implementation; add replacement piano continuation/worker/route contracts before changing its behavior.
+2. Read original/module piano rules and focused docs, then the copied 41 unit cases and browser/worker workflows. Add replacement continuation, persistence and canonical-route contracts before changing original behavior. Preserve lesson/exercise content, audio/diagrams, source assertions and offline assets.
+3. Time Budget characterization is complete; add Reader characterization before its implementation; add replacement piano continuation/worker/route contracts before changing its behavior.
 4. Complete combined backup/import schemas/reference validation, legacy migration exporters, concurrency policy, all-app offline/update checks, full localization (including plant guides), install assets and device checklist. Real iPhone/Things/Readwise acceptance remains deferred and must never be claimed passing from browser mocks.
 5. Run `npm run verify` before claiming the whole migration complete. Until all apps are implemented it must remain red. Save local checkpoints; no remote work.
 
@@ -84,4 +85,14 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - Coffee: recheck history filter display after language restoration, visible/atomic first tools setup on storage failure, and transient notification expiry across remounts.
 - Games: complete hardcoded English localization and audit duplicate nested round/result IDs during combined restore. Shared Game clocks intentionally derive from the original session start; history timing corrections/overrides remain explicit.
 - Plants: translate preserved authored guide paragraphs for EN/ES, keeping saved user text intact; include derived draft controls in the all-app review.
+- Time Budget: finish English/Spanish text, original active-state exporter, 320px/all-form derived state and explicit stale-draft discard/notification lifecycle audits.
 - Across all apps: finish the documented stale-view/concurrency policy, combined root/per-module restore, legacy exporters, all-module worker/update/draft tests, proper install assets and physical-device checklist. None of these deferred gates is claimed complete by the scoped green reports.
+
+## Time Budget work after Games checkpoint `46e3049`
+
+- Source `timeBudget` at `fb9e9be86325d900e64aeda59faad4215cc1d5a9`; read actual source because its README is outdated about active persistence. Eight domain and eight browser cases pass against the unchanged source (`baseline-time-budget.txt`). The initial exact-minute mismatch was an advancing clock fixture, corrected by pausing it.
+- Missing native app/UI produced recorded red. The original interface was split into native methods with scoped DOM/CSS and delegated allowlisted controls. One manifest/worker remains. Original plan/template/order/timer/queue/notification behavior is retained, with immediate timestamp saves instead of five-second autosaves. Leaving/reloading/ticking does not write or pause.
+- Nine service cases cover read-only startup, atomic session/activity saves, independent countdowns, quota/stale protection, legacy merge/migration restore, preview tampering/future data and countdown backup restoration. A full Time Budget export contains templates, active task/timing and countdowns. Its restore is atomic and leaves other apps/language intact.
+- Nine added browser cases cover Home timing, multiple countdowns, setup/queue language drafts, pending overtime reload, protected imports, negative/fractional reduction rejection, failed saves and phone/offline reopening. Negative reductions first fail visibly in `time-budget-recovery-red.txt` (16 pass, one fail); the correction retains a minimum minute per remaining task.
+- Final updated suite passes (`reports/time-budget-ui.txt`): 17 unit + 17 browser. The active-plan import control is visibly accessible and protected by recovery confirmation. Full lint, 412-file native syntax and preparation of 323 native files/assets pass. The phone screenshot was reviewed with animations disabled. Sequential regressions all pass: General 65 unit + 19 browser, Plants 23 + 11, Coffee 17 + 28, Games 15 + 30. Reports use the `-with-time-budget.txt` suffix.
+- Original template export format/filename is retained; migration/full recovery exports are separate. The new backup import file control is visible while a plan runs. Full translation of the original English interface, legacy active-state exporter, notifications/toast lifecycle audit and physical iPhone acceptance remain final gates.

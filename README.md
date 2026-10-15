@@ -2,7 +2,7 @@
 
 One local, personal PWA being built from seven existing apps. The app uses plain HTML, CSS and JavaScript modules. All development is local; hosting and workflows are deferred.
 
-The shared shell works: responsive dashboard, EN/ES, settings, deep links, activity summaries and offline access. Plants, Coffee and Games are connected, including care/history, Things settings, drink logging, beans, scoring, statistics, shared game timing and import/export. The other four modules are still pending. Keep using the original installations until migration and device checks pass.
+The shared shell works: responsive dashboard, EN/ES, settings, deep links, activity summaries and offline access. Plants, Coffee, Games and Time Budget are connected, including care/history, Things settings, drink logging, beans, scoring, statistics, persisted time budgets, independent countdowns and import/export. Piano, reading and WhatsApp remain pending. Keep using the original installations until migration and device checks pass.
 
 ## Local use
 

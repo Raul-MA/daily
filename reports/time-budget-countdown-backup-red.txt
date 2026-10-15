@@ -1,0 +1,26 @@
+✔ time budget reads are write-free and writes preserve shared language and other modules (10.227422ms)
+✔ time budget start and its paused activity commit atomically beside independent countdowns (2.529615ms)
+✔ running task timestamps reconstruct overtime without writes and explicit completion ends the activity (3.765654ms)
+✔ failed budget writes do not change tasks timestamps activities or the primary root (2.34481ms)
+✔ stale budget views cannot overwrite later task changes (1.902113ms)
+✔ legacy template previews merge only on confirmation while migration exports include active timing (3.626273ms)
+✔ migration imports retain active timestamps and reject stale or changed previews (4.550779ms)
+✔ budget validation rejects future schemas duplicate tasks invalid timers and future root modules without changes (1.489131ms)
+✖ full Time Budget backups restore independent countdowns atomically beside the plan (9.54634ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 82.836305
+
+✖ failing tests:
+
+test at modules/time-budget/test/service.test.mjs:132:1
+✖ full Time Budget backups restore independent countdowns atomically beside the plan (9.54634ms)
+  TypeError: Cannot read properties of undefined (reading 'length')
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/time-budget/test/service.test.mjs:138:36)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)

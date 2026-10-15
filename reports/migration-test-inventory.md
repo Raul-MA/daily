@@ -52,7 +52,7 @@ Counts include Node `assert.*` and Playwright expectation matcher calls, across 
 - Game `fixtures/gameplay-*.json`: original in-test object expressions evaluated with a synthetic `__NOW__` timestamp and the original session fixture functions; runtime substitution preserves timestamps.
 - Piano and plant domain imports: test-only loader; absent exports throw, present files import normally.
 - WhatsApp standalone assertions: wrapped into three discovered Node tests, with source-root-aware reads and the same VM behavior.
-- Time Budget and Reader: no discovered original suites; characterization suites are required before their implementation. No cases are skipped or claimed to exist.
+- Time Budget had no original suite; eight domain and eight browser characterization cases were authored and passed against the original before implementation. Reader characterization remains required. No cases are skipped or claimed to exist.
 
 ## Approved future differences
 
@@ -85,3 +85,14 @@ Coffee commit `8711d56c1330d6ce626662bbf98fb440eb2e10c4` has modified `COMPASS.m
 - Seven service cases first fail against the absent adapter (`games-service-red.txt`), then pass (`games-service.txt`, 15 unit cases including domain). Six new browser cases cover activity resume, language drafts/notification expiry, stale player edits, import cancel/history links, offline score/history/statistics and obsolete session links.
 - Behavioral red evidence includes `games-browser-red.txt`, `games-focus-red.txt`, `games-drafts-red.txt` and `games-offline-links-red.txt`. The activity test's initial `running` widget selector was corrected to the existing `activities` ID, and its clock is paused before start so the 90-second UI assertion is deterministic. This fixture correction is not claimed as an implementation regression.
 - Source code mapping: `games-source-map.json`; data/workflow invariants: `modules/games/docs/behavior.md`. Hardcoded original English labels still need full Stage 8 localization.
+
+## Time Budget characterization and integration
+
+Source `timeBudget` at `fb9e9be86325d900e64aeda59faad4215cc1d5a9`; hashes and implementation destinations are in [time-budget-source-map.json](time-budget-source-map.json). No personal fixtures are used.
+
+- Eight domain cases run the actual original app object in an isolated VM with presentation callbacks stubbed, then the native composed app with the same assertions. They cover strict time input, overnight/reference anchoring, pending/free minutes, pause/resume, exact actual time, explicit completion/reallocation, queue order and template bounds/Unicode.
+- Eight original browser workflows passed before porting (`baseline-time-budget.txt`). An initial run exposed an advancing test clock; pausing the installed clock made the exact minute assertions deterministic. No product assertions were removed. `--baseline` selects those eight original workflows and omits native service tests.
+- Missing native app/UI produced red (`time-budget-ui-red.txt`); the original eight native workflows subsequently passed. Nine service cases and nine additional browser cases cover atomic state/activity writes, stale/failed saves, timestamp reconstruction across Home/reload, multiple countdowns, pending overtime recovery, language drafts, protected imports, phone layout and offline reopening.
+- `time-budget-shell-red.txt` records the absent countdown interface and an offline fixture that initially blocked service workers. The worker fixture was corrected to permit the shared worker. `time-budget-recovery-red.txt` records the actual negative-reallocation defect (16 browser cases passed, one failed). `time-budget-countdown-backup-red.txt` records the missing countdown backup before its atomic restoration was added.
+- Immediate timer saves replace the original five-second autosave gap; ticks and navigation are read-only. Pending overtime now survives reload. Invalid reductions are rejected. Imports now require preview/recovery/confirmation, and full exports include active state plus countdowns; legacy template export format/filename is preserved.
+- Full translation of original English text and physical iPhone acceptance remain final gates.

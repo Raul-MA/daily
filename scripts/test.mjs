@@ -5,6 +5,11 @@ import { discover, discoverBrowser, discoverDomainUnit } from './discovery.mjs';
 
 const modules = ['general', 'plants', 'coffee', 'games', 'time-budget', 'piano', 'reading', 'whatsapp'];
 const scope = process.argv[2];
+const baselineIndex = process.argv.indexOf('--baseline');
+if (baselineIndex >= 0) {
+  process.env.DAILY_BASELINE_URL = process.argv[baselineIndex + 1];
+  process.env.DAILY_SOURCE_ROOT = '/workspaces';
+}
 const reportIndex = process.argv.indexOf('--report');
 const reportPath = reportIndex < 0 ? null : process.argv[reportIndex + 1];
 if (reportPath !== null && !/^reports\/[a-z0-9][a-z0-9.-]*\.txt$/.test(reportPath)) throw new Error('Invalid report path.');
@@ -16,12 +21,12 @@ function execute(args, env = process.env) {
 }
 
 function runNode(module) {
-  const files = ['coffee', 'games'].includes(module) ? discoverDomainUnit(module) : discover(module);
-  return execute(['--test', '--test-isolation=none', ...files]);
+  const files = ['coffee', 'games', 'time-budget'].includes(module) ? discoverDomainUnit(module) : discover(module);
+  return execute(['--test', '--test-isolation=none', ...files.filter(file => !process.env.DAILY_BASELINE_URL || !file.endsWith('service.test.mjs'))]);
 }
 
 async function runBrowser(module) {
-  if (module === 'general' || module === 'plants' || module === 'coffee' || module === 'games') {
+  if (['general', 'plants', 'coffee', 'games', 'time-budget'].includes(module)) {
     discoverBrowser(module);
     return execute(['node_modules/@playwright/test/cli.js', 'test'], { ...process.env, DAILY_MODULE: module });
   }

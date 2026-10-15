@@ -1,0 +1,53 @@
+{
+  "commit": "fb9e9be86325d900e64aeda59faad4215cc1d5a9",
+  "files": [
+    {
+      "source": "timeBudget/app.js",
+      "sha256": "0b4d7f009f206d685d382c0d0d6fd49cdbb1674831f32190c86af027153cf2de",
+      "destinations": [
+        "modules/time-budget/src/app.js",
+        "modules/time-budget/src/methods/",
+        "modules/time-budget/src/persistence.js",
+        "modules/time-budget/src/lifecycle.js"
+      ]
+    },
+    {
+      "source": "timeBudget/index.html",
+      "sha256": "7a872745a42903e39db7620fb32229ab191d4cf0675919c53c326cb78d6509e0",
+      "destinations": [
+        "modules/time-budget/src/template.js"
+      ]
+    },
+    {
+      "source": "timeBudget/style.css",
+      "sha256": "1d8e3c3fd095129edae552bf4b7ec00f64e06a7a35d4eae21d2f1d653d9557d3",
+      "destinations": [
+        "modules/time-budget/src/style.css"
+      ]
+    },
+    {
+      "source": "timeBudget/README.md",
+      "sha256": "f70bd6de66d7c47ba618776f629752a9476538f4e964e1a2aa69872e858ea3b6",
+      "destinations": [
+        "modules/time-budget/docs/behavior.md"
+      ]
+    }
+  ],
+  "characterization": {
+    "domain": 8,
+    "browser": 8,
+    "baseline": "reports/baseline-time-budget.txt"
+  },
+  "native": {
+    "unit": 17,
+    "browser": 17
+  },
+  "deliberate_changes": [
+    "One shared root, manifest and worker; canonical #/time route and scoped DOM/CSS.",
+    "Immediate timestamp saves on start; no five-second autosaves or tick/navigation writes.",
+    "Negative and fractional reallocation rejected; pending overtime restored after reload.",
+    "Read-only import preview, recovery download and explicit confirmation replace immediate import.",
+    "Full migration export includes active state and independent countdowns.",
+    "Dirty/stale view protection and visible atomic save failures."
+  ]
+}

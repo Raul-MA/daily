@@ -1,3 +1,4 @@
+import { mountTimeBudget } from '../../../../modules/time-budget/src/view.js';
 import { captureDrafts, restoreDrafts } from '../../../../packages/ui/src/drafts.js';
 import { mountPlants } from '../../../../modules/plants/src/ui/view.js';
 import { mountCoffee } from '../../../../modules/coffee/src/view.js';
@@ -25,6 +26,7 @@ function failure(root, base) {
     root.replaceChildren(view);
 }
 function pageView(context, preferences) {
+    if (context.route.page === 'time') return timePage(context);
     if (context.route.page.startsWith('game')) {
         context.gamesUI ??= {};
         const page = mountGames({ route: context.route, base: context.base, service: context.games, ui: context.gamesUI });
@@ -96,4 +98,13 @@ function saveStatus(context, copy) {
     const status = element('p', 'save-status', context.saved && !context.error ? copy.saved : '');
     status.setAttribute('role', 'status');
     return status;
+}
+
+function timePage(context) {
+    context.timeUI ??= {};
+    const page = mountTimeBudget({ service: context.timeBudget, ui: context.timeUI });
+    context.pageCleanup = page.dispose;
+    context.pageConflict = page.conflict;
+    context.pageRestore = page.restore;
+    return page.node;
 }

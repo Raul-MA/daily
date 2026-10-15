@@ -46,3 +46,10 @@ Coffee's scoped runner discovers 17 unit cases separately from 28 browser cases,
 ## Games checkpoint
 
 Games has 15 unit cases (eight original-source characterization plus seven service cases) and 30 browser cases (24 copied workflows plus six shared/offline cases). Its service tests assert a single root write for session/activity transitions and no write during reads/ticks. Source fixtures are wrapped with a shared Games payload/activity before browser startup; field/scoring/history/statistics assertions remain. Deferred focus, source toast overlays, form stamps/drafts and obsolete links have recorded failures followed by fixes. One initial activity-test failure was a fixture selector/clock error, explicitly distinguished in progress/inventory. See `modules/games/docs/behavior.md` and `reports/games-source-map.json`.
+
+
+## Time Budget checkpoint
+
+Time Budget adds eight original-source domain and eight original-browser characterization cases, authored and run before its port. The native suite has 17 unit cases (eight characterization plus nine root/import cases) and 17 browser cases (the same eight workflows plus nine new shared/recovery cases). The original source has no test suite to copy. `node scripts/test.mjs time-budget --baseline http://127.0.0.1:8767/timeBudget/ --report reports/baseline-time-budget.txt` explicitly selects the original source and the eight original browser workflows; keep this option out of native validation. A separate local source server must already be running.
+
+Fixed browser clocks preserve exact deadline/elapsed assertions. Navigation/ticks are checked against unchanged primary JSON, and start/pause writes happen immediately. New cases cover independent countdown overtime, pending reallocation reload, language/queue drafts, stale edits, quota failures, protected imports, offline reopening and phone overflow. Red reports distinguish actual missing controls/negative-reallocation behavior from the first offline fixture's blocked service-worker setting. See the module behavior doc and source map for boundaries and intentional improvements.

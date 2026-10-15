@@ -1,0 +1,16 @@
+✔ time input is strict local HH:MM and invalid deadlines are rejected (23.282121ms)
+✔ a deadline at or before the reference rolls to the next local day (0.538847ms)
+✔ session deadlines stay anchored to the original start after midnight and overdue (0.558463ms)
+✔ pending budgets include unfinished current minutes and every later task once (0.333724ms)
+✔ paused task timers resume from elapsed time and pause without losing elapsed time (0.557691ms)
+✔ completing an overrun records exact actual minutes and offers reallocation (0.381623ms)
+✔ early completion advances explicitly and queue reorder never moves the current task (1.102389ms)
+✔ template collections retain Unicode and bounded whole-minute tasks (0.629406ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 54.042032
