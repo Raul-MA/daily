@@ -7,7 +7,7 @@
 
 ## Commands
 
-- `npm run test:reading`: 51 unit and 29 browser cases; local acceptance passes in `reports/reader-shared-regressions.txt`.
+- `npm run test:reading`: 51 unit and 30 browser cases; local acceptance passes; latest import audit is `reports/reading-import-discard.txt`.
 - Source baseline: `node scripts/test.mjs reading --baseline http://127.0.0.1:8767/.daily-reader-source/ --report reports/baseline-reading-browser.txt` with the workspace static server running.
 
 ## Key Files

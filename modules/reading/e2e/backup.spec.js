@@ -53,3 +53,23 @@ test('Reader import previews cancel safely and require recovery before confirmat
   expect(await page.evaluate(() => sessionStorage.getItem('daily:readwise:session:v1'))).toBeNull();
   await expect(page.locator('#tokenInput')).toHaveValue('');
 });
+
+test('Reader invalid import can be canceled after language changes while keeping unsaved token and preference drafts', async ({ page }) => {
+  await prepare(page);
+  const before = await page.evaluate(() => JSON.stringify(JSON.parse(localStorage.getItem('daily:v1') ?? '{"modules":{}}').modules));
+  await settings(page);
+  await page.locator('#tokenInput').fill('fixture-unsaved-private');
+  await page.locator('#progressInput').selectOption('started');
+  await page.locator('#reader-import-file').setInputFiles({ name: 'invalid.json', mimeType: 'application/json', buffer: Buffer.from('invalid JSON') });
+  await expect(page.locator('#reader-import-status')).toContainText(/JSON|Unexpected|Invalid/i);
+  await expect(page.locator('#reader-import-cancel')).toBeVisible();
+  await page.locator('#closeSettings').click();
+  await page.getByRole('button', { name: 'Español', exact: true }).click();
+  await settings(page);
+  await page.locator('#reader-import-cancel').click();
+  await expect(page.locator('#reader-import')).toHaveAttribute('data-unsaved', 'false');
+  await expect(page.locator('#settingsForm')).toHaveAttribute('data-unsaved', 'true');
+  await expect(page.locator('#tokenInput')).toHaveValue('fixture-unsaved-private');
+  await expect(page.locator('#progressInput')).toHaveValue('started');
+  expect(await page.evaluate(() => JSON.stringify(JSON.parse(localStorage.getItem('daily:v1')).modules))).toBe(before);
+});

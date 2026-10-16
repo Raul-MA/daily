@@ -9,12 +9,14 @@ function draw(context, form, copy) {
   const preview = context.ui.readerImportPreview;
   form.querySelector('#reader-import-preview').hidden = !preview;
   form.querySelector('#reader-import-confirm').disabled = !context.ui.readerImportRecovery;
+  form.querySelector('#reader-import-cancel').hidden = !context.ui.readerImportHasFile && !preview;
   if (preview) form.querySelector('[data-reader-import-counts]').textContent = `${preview.counts.picks} ${copy.picks} · ${preview.counts.lastItem} ${copy.last}`;
   document.dispatchEvent(new Event('daily:form-state'));
 }
 function message(form, value) { form.querySelector('#reader-import-status').textContent = value; }
 function cancel(context, form, copy) {
   context.ui.readerImportJob++;
+  context.ui.readerImportHasFile = false;
   context.ui.readerImportPreview = null;
   context.ui.readerImportRecovery = false;
   form.querySelector('input').value = '';
@@ -26,6 +28,7 @@ async function previewFile(context, form, copy) {
   const file = form.querySelector('input').files[0];
   if (!file) return;
   const job = ++context.ui.readerImportJob;
+  context.ui.readerImportHasFile = true;
   context.ui.readerImportPreview = null;
   context.ui.readerImportRecovery = false;
   draw(context, form, copy);
@@ -65,7 +68,7 @@ export function mountReadingBackup(context) {
   context.ui.readerImportJob ??= 0;
   const form = document.createElement('form');
   form.id = 'reader-import';
-  form.innerHTML = `<h2>${copy.title}</h2><button id="reader-export" type="button" class="secondary-button">${copy.export}</button><label class="field">${copy.file}<input id="reader-import-file" type="file" accept=".json,application/json"></label><div id="reader-import-preview" hidden><p data-reader-import-counts></p><button id="reader-import-recovery" type="button" class="secondary-button">${copy.recovery}</button><button id="reader-import-confirm" type="button" class="primary-button" disabled>${copy.confirm}</button><button id="reader-import-cancel" type="button" class="text-button">${copy.cancel}</button></div><p id="reader-import-status" role="status" class="status" aria-live="polite"></p>`;
+  form.innerHTML = `<h2>${copy.title}</h2><button id="reader-export" type="button" class="secondary-button">${copy.export}</button><label class="field">${copy.file}<input id="reader-import-file" type="file" accept=".json,application/json"></label><div id="reader-import-preview" hidden><p data-reader-import-counts></p><button id="reader-import-recovery" type="button" class="secondary-button">${copy.recovery}</button><button id="reader-import-confirm" type="button" class="primary-button" disabled>${copy.confirm}</button></div><button id="reader-import-cancel" type="button" class="text-button" hidden>${copy.cancel}</button><p id="reader-import-status" role="status" class="status" aria-live="polite"></p>`;
   const signal = context.controller.signal;
   form.addEventListener('submit', event => event.preventDefault(), { signal });
   form.querySelector('input').addEventListener('change', () => previewFile(context, form, copy), { signal });

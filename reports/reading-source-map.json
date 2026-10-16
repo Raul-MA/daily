@@ -1,6 +1,6 @@
 {
   "commit": "b3892b2417b8167d0cd063c31b2b69da781fd4a9",
-  "status": "local acceptance passes: 51 unit / 29 browser; General and affected module regressions green; live API/device deferred",
+  "status": "local acceptance: 51 unit / 30 browser after import-cancel audit; all-scope checkpoint green with prior 29-browser set; live API/device deferred",
   "files": [
     {
       "source": "random-readwise/README.md",
