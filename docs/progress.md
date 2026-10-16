@@ -8,18 +8,18 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore pass local checks.** `combined-backup-all.txt` completed successfully across General and every app, including both broad Piano scripts. Strict lint, 688-file syntax and static preparation of 629 assets pass (`combined-backup-final-*`). Reader and WhatsApp earlier Stage 8 fixes are included. Full restore validates all module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** prepare the legacy Plants exporter for plant records plus Things preferences. Work on that app only: inspect original storage/recovery semantics, write safe-fixture export/import and patch contracts before implementation, then preserve original storage and installations. Legacy Time Budget exporter now passes General 76 unit/25 browser and Time Budget 20 unit/17 browser; strict lint, 696-file syntax and static preparation pass. Save its local checkpoint before Plants. Prior checkpoints: install icons `746751f`, combined backup `da523d1`. Next exporters after Plants: Reader preferences/remembered item without credentials, WhatsApp saved draft. Complete EN/ES and remaining schema/concurrency/form/update audits afterward. Actual iPhone/live API/Things validation and original-app releases stay deferred. No pushes, workflows or deployment.
+**Exact next step:** prepare the legacy Reader preferences/remembered-item exporter without credentials, then WhatsApp, sequentially. Plants exporter is accepted locally: General 77 unit/26 browser, Plants 26 unit/11 browser, strict lint, 705-file syntax, static preparation and original-source patch check pass. Save its local checkpoint before Reader. Earlier checkpoints: Time Budget exporter `1d40be5`, install icons `746751f`, combined backup `da523d1`. Complete EN/ES and remaining schema/concurrency/form/update audits afterward. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 76 unit + 25 browser cases pass | `reports/legacy-budget-final-general.txt` |
-| Plants | 23 unit + 11 browser cases pass | `reports/combined-backup-all.txt` |
+| General | 77 unit + 26 browser cases pass | `reports/legacy-plants-general.txt` |
+| Plants | 26 unit + 11 browser cases pass | `reports/legacy-plants-scope.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/legacy-budget-final-lint.txt` |
-| Native JS syntax | 696 files pass; this is not typechecking | `reports/legacy-budget-syntax.txt` |
-| Static preparation | 632 native files/assets prepared; legacy exporters excluded | `reports/legacy-budget-build.txt` |
+| Strict full-scope lint | Pass | `reports/legacy-plants-lint.txt` |
+| Native JS syntax | 705 files pass; this is not typechecking | `reports/legacy-plants-syntax.txt` |
+| Static preparation | 632 native files/assets prepared; legacy exporters excluded | `reports/legacy-plants-build.txt` |
 | Coffee | 17 unit + 28 browser cases pass | `reports/combined-backup-all.txt` |
 | Games | 16 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
 | Time Budget | 20 unit + 17 browser cases pass | `reports/legacy-budget-time.txt` |
@@ -257,3 +257,19 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - The initial implemented browser failure was only a Spanish wording matcher; the final contract passes actual preview, language change, Unicode download, import into Daily, source-storage equality, 320px layout and malformed-data refusal.
 - `legacy/patches/timeBudget-export.patch` is regenerated from the reviewed files and passes `git apply --check` against the unchanged original. Packaging applies only in disposable tests. Product privacy copy uses plain language; documentation retains the exact key/schema details.
 - Next: Plants legacy records plus Things preferences, then Reader and WhatsApp exporters, sequentially. Complete full localization and final schema/concurrency/form/update audits; physical checks and old-app releases remain deferred.
+
+
+## Stage 8: legacy Plants exporter in progress
+
+- Three unit contracts first fail on the missing exporter (`legacy-plants-red.txt`) and now pass (`legacy-plants-unit.txt`). Both bare arrays and checksummed envelopes preserve records, history, manual dates and Things preferences through actual Daily import. Original data and all unrelated keys are untouched.
+- Read-only fallback follows the original priority: primary, pending, backup 1, backup 2. Damaged snapshots never trigger original repair writes. With no readable copy, export fails rather than returning empty data. Unknown/future versions stop before older recovery fallback; invalid Things settings or blocked storage also fail unchanged.
+- General's new phone browser contract first fails on missing page files (`legacy-plants-browser-red.txt`). It now verifies 320px layout, EN/ES preview, project name, credential-free download, actual native import, unchanged source storage and an explicit recovery-copy label. Its current run is pending.
+- `legacy-plants-patch-red.txt` records a named missing-script failure before preparation. `legacy-plants-patch.txt` passes patch application only in a temporary fixture copy. `npm run prepare:legacy-plants` creates `legacy/patches/stillgreen-export.patch`; `git apply --check` against the original Stillgreen exits zero. Original commit/checksum and keys are pinned in exporter provenance. No original files are changed.
+- Native syntax discovery includes all standalone files; copied version-1 constants/envelope/validator must match native schemas before packaging. Artifacts stay outside Daily's static output. See `legacy/exporters/plants/README.md` for the separate installed-context and later-release requirements.
+
+
+## Legacy Plants exporter local acceptance complete
+
+- General passes 77 unit + 26 browser (`legacy-plants-general.txt`); Plants passes 26 unit + 11 browser (`legacy-plants-scope.txt`). Full strict lint, 705-file syntax and static preparation pass. The standalone exporter remains outside Daily's 632 owned runtime assets.
+- The prepared patch passes against original Stillgreen without modifying it. Existing source tests/appearance remain unchanged. Temporary packaging, actual synthetic native import, Things preferences, recovery order, future downgrade rejection and phone/EN-ES behavior are verified locally. Installed migration and release remain deferred.
+- Next: Reader legacy preferences and optional remembered item, with strict field allowlists and no token/cache exports. Then WhatsApp draft. Complete remaining authored-content localization and final schema/concurrency/form/update/device gates before claiming the local implementation complete.

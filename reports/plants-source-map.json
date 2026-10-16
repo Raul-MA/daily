@@ -63,5 +63,13 @@
     }
   ],
   "styles": "Original five stylesheets scoped under [data-module=\"plants\"]; remote font import removed; local fallbacks retained.",
-  "ui": "Native DOM controllers retain domain flows, add EN/ES controls, stable shell routes and import preview/recovery; no old worker registration."
+  "ui": "Native DOM controllers retain domain flows, add EN/ES controls, stable shell routes and import preview/recovery; no old worker registration.",
+  "legacy_export": {
+    "directory": "legacy/exporters/plants",
+    "patch": "legacy/patches/stillgreen-export.patch",
+    "unit_contracts": 3,
+    "browser_contracts": 1,
+    "original_modified": false,
+    "release": "deferred"
+  }
 }

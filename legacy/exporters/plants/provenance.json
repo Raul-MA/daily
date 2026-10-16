@@ -1,0 +1,13 @@
+{
+  "repo": "stillgreen",
+  "commit": "86c9b8faedf8c50a41a346778df19e5934c6aecf",
+  "indexSha256": "f063b815b07ad17ca2bc8a61e438c90954431a39e356ba3ce5d9c795f0950946",
+  "storageKeys": [
+    "plantTracker_plants",
+    "plantTracker_plants_pending",
+    "plantTracker_plants_backup_1",
+    "plantTracker_plants_backup_2",
+    "stillgreen_things_settings"
+  ],
+  "nativeSchemaVersion": 1
+}

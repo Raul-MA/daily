@@ -1,0 +1,9 @@
+export const KEY = 'plantTracker_plants';
+export const PENDING_KEY = 'plantTracker_plants_pending';
+export const BACKUP_KEYS = ['plantTracker_plants_backup_1', 'plantTracker_plants_backup_2'];
+export const CORRUPT_KEY = 'plantTracker_plants_corrupt';
+export const BACKUP_META_KEY = 'plantTracker_backup_meta';
+export const STORAGE_META_KEY = 'plantTracker_storage_meta';
+export const SCHEMA_VERSION = 1;
+export const CARE_TYPES = new Set(['watering', 'soil', 'fertilizer', 'note', 'skip', 'reschedule']);
+export const TASK_TYPES = new Set(['watering', 'soil', 'fertilizer']);

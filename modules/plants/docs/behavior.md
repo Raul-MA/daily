@@ -32,3 +32,8 @@ Retain Stillgreen's care rules, IDs, history and Things handoff inside one PWA w
 - The root is still localStorage: there is no transactional cross-tab compare-and-swap. UI stale-record guards reduce lost-edit risks; truly simultaneous writers still need the shared concurrency policy before release.
 - Original guide paragraphs and template descriptions are retained in Spanish. Final content localization and physical iPhone/Things acceptance remain open. Controls, validation states and page navigation support EN/ES.
 - See `reports/plants-source-map.json` for source hashes and targets. New migration export behavior is not evidence that the old installed PWA already exports Things settings; its migration exporter remains a release-stage task.
+
+
+## Prepared original-app exporter
+
+The existing old-app export contains plant records but omits Things preferences. A separate read-only exporter and checked patch are prepared in [legacy/exporters/plants](../../../legacy/exporters/plants/README.md). It accepts bare arrays and checksummed envelopes, retains full plant/history/schedule data, and includes enabled/project preferences. Recovery reads follow the original primary/pending/backup order, with an explicit preview label and no repair writes. Unreadable data never becomes an empty export; unknown versions stop instead of downgrading to an older backup. Original-app release and physical migration remain deferred.

@@ -6,7 +6,7 @@
 
 ## Commands
 
-- `npm run test:plants`: 23 unit cases and 11 browser cases.
+- `npm run test:plants`: 26 unit cases and 11 browser cases.
 - `node scripts/test.mjs plants --report reports/plants-ui.txt`: same scope with a report, no shell redirection.
 
 ## Key Files
@@ -16,6 +16,7 @@
 - `src/care/care.js`: original seasonal/manual-date rules. `src/ui/`: native DOM pages and dashboard provider.
 - `src/plants/templates/`: thirteen unchanged source templates, split into small data modules.
 - `test/` and `e2e/`: original assertions plus care, shared-storage, draft and browser acceptance coverage.
+- [Prepared legacy exporter](../../legacy/exporters/plants/README.md): original records, recovery reads and Things preferences; original-app release deferred.
 
 ## Non-Obvious Patterns
 
