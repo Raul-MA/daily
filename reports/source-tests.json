@@ -251,7 +251,8 @@
     "sha256": "1cfd5b154bee555df780a7548b317794a4a11f0c9f11a29d603b8cc338386c0b",
     "commit": "941d4cdb71dc38c4512bea836d4292dd8c96e541",
     "migratedDestinations": [
-      "modules/whatsapp/test/tests.cjs"
+      "modules/whatsapp/test/tests.cjs",
+      "modules/whatsapp/test/support/native.cjs"
     ]
   }
 ]

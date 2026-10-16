@@ -9,7 +9,7 @@ const read = file => fs.readFileSync(path.resolve(root, file));
 const exists = file => fs.existsSync(path.resolve(root, file));
 function readFunctions() {
     const context = vm.createContext({});
-    vm.runInContext(read('app.js').toString() + '\nthis.functions = { buildThingsUrl, draftError, localFields };', context);
+    vm.runInContext(read('app.js').toString().replaceAll('export ', '') + '\nthis.functions = { buildThingsUrl, draftError, localFields };', context);
     return { ...context.functions, localFields: date => ({ ...context.functions.localFields(date) }) };
 }
 test('encoding, validation, local time, DST, manifest, icons and asset paths', () => {
@@ -55,6 +55,8 @@ test('encoding, validation, local time, DST, manifest, icons and asset paths', (
         delete process.env.TZ;
     else
         process.env.TZ = originalTimezone;
+    if (!process.env.DAILY_SOURCE_ROOT) require('./support/native.cjs').assertAssets();
+    else {
     const manifest = JSON.parse(read('manifest.webmanifest').toString());
     assert.equal(manifest.display, 'standalone');
     for (const icon of manifest.icons) {
@@ -65,9 +67,11 @@ test('encoding, validation, local time, DST, manifest, icons and asset paths', (
     }
     for (const match of read('index.html').toString().matchAll(/(?:src|href)="(\.\/[^"#]+)"/g))
         assert.ok(exists(match[1]), match[1]);
+    }
     console.log('Passed: encoding, validation, local time in four zones, DST, manifest, icons, and asset paths.');
 });
 test('worker install, cache ownership, offline shell and external bypass', async () => {
+    if (!process.env.DAILY_SOURCE_ROOT) return require('./support/native.cjs').sharedWorker();
     const handlers = {};
     const deleted = [];
     let shell;
@@ -134,13 +138,16 @@ test('handoff clears valid drafts, preserves copy fallback and retains invalid d
         navigator: { clipboard: { writeText: async (value) => { copied = value; } } },
         setInterval() { }
     };
-    vm.runInNewContext(read('app.js').toString(), context);
+    let native;
+    if (process.env.DAILY_SOURCE_ROOT) vm.runInNewContext(read('app.js').toString(), context);
+    else native = await require('./support/native.cjs').mountNative(context, draft);
+    const savedDraft = () => native ? native.read().draft : JSON.parse(stored);
     elements.composer.handlers.submit({ preventDefault() { } });
     const expected = buildThingsUrl(draft.recipient, draft.date, draft.time, draft.message);
     assert.equal(window.location.href, expected);
     assert.equal(elements.recipient.value, '');
     assert.equal(elements.message.value, '');
-    assert.equal(stored, null);
+    assert.equal(savedDraft(), null);
     assert.ok(new Date(`${elements.date.value}T${elements.time.value}`) > new Date());
     assert.equal(elements.create.disabled, true);
     assert.equal(elements.copy.disabled, false);
@@ -149,7 +156,7 @@ test('handoff clears valid drafts, preserves copy fallback and retains invalid d
     elements.recipient.value = 'New draft';
     elements.composer.handlers.input();
     assert.equal(elements.copy.disabled, true);
-    assert.equal(JSON.parse(stored).recipient, 'New draft');
+    assert.equal(savedDraft().recipient, 'New draft');
     window.location.href = '';
     elements.composer.handlers.submit({ preventDefault() { } });
     assert.equal(elements.recipient.value, 'New draft');

@@ -1,0 +1,368 @@
+Suite: whatsapp
+Prepared 613 HTML/CSS/JavaScript/assets at /daily/
+✖ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (1.844115ms)
+✖ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (0.538415ms)
+✖ WhatsApp failed draft saves and clears preserve the previous primary document (0.479295ms)
+✖ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (0.393956ms)
+✖ WhatsApp restore rejects changed stale invalid and future previews before replacing records (0.547664ms)
+✖ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (0.608336ms)
+✖ encoding, validation, local time, DST, manifest, icons and asset paths (1.148616ms)
+✖ worker install, cache ownership, offline shell and external bypass (0.369481ms)
+✖ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (1.165428ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 0
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 36.687333
+
+✖ failing tests:
+
+test at modules/whatsapp/test/service.test.mjs:15:1
+✖ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (1.844115ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/service.test.mjs:26:1
+✖ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (0.538415ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/service.test.mjs:38:1
+✖ WhatsApp failed draft saves and clears preserve the previous primary document (0.479295ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/service.test.mjs:48:1
+✖ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (0.393956ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/service.test.mjs:61:1
+✖ WhatsApp restore rejects changed stale invalid and future previews before replacing records (0.547664ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/service.test.mjs:75:1
+✖ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (0.608336ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/tests.cjs:15:1
+✖ encoding, validation, local time, DST, manifest, icons and asset paths (1.148616ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/app.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:8:25)
+      at readFunctions (/workspaces/daily/modules/whatsapp/test/tests.cjs:12:21)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:16:57)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/app.js'
+  }
+
+test at modules/whatsapp/test/tests.cjs:70:1
+✖ worker install, cache ownership, offline shell and external bypass (0.369481ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/sw.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:8:25)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:81:24)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/sw.js'
+  }
+
+test at modules/whatsapp/test/tests.cjs:116:1
+✖ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (1.165428ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/app.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:8:25)
+      at readFunctions (/workspaces/daily/modules/whatsapp/test/tests.cjs:12:21)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:117:45)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/app.js'
+  }
+[WebServer] (node:4420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:4433) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/whatsapp/e2e/whatsapp.spec.js:10:1 › WhatsApp draft autosaves and survives Home reload and language changes without translating user text (8.5s)
+(node:4850) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 modules/whatsapp/e2e/whatsapp.spec.js:25:1 › WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback (6.0s)
+(node:5130) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 modules/whatsapp/e2e/whatsapp.spec.js:44:1 › WhatsApp expired drafts remain visible and clipboard denial exposes a selectable manual link (6.0s)
+(node:5331) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 modules/whatsapp/e2e/whatsapp.spec.js:60:1 › WhatsApp stale edits and storage failures retain the visible draft and prevent a destructive handoff (6.3s)
+(node:5529) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 modules/whatsapp/e2e/whatsapp.spec.js:78:1 › WhatsApp import is read-only until recovery confirmation and cancel keeps current records (6.1s)
+(node:5717) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  6 modules/whatsapp/e2e/whatsapp.spec.js:100:1 › WhatsApp composer and saved draft reopen under the shared worker offline at narrow phone widths (6.0s)
+
+
+  1) modules/whatsapp/e2e/whatsapp.spec.js:10:1 › WhatsApp draft autosaves and survives Home reload and language changes without translating user text 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#composer')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#composer')
+
+
+      1 | import { test, expect } from '@playwright/test';
+      2 |
+    > 3 | async function open(page) { await page.goto('./#/whatsapp'); await expect(page.locator('#composer')).toBeVisible(); }
+        |                                                                                                      ^
+      4 | async function compose(page) {
+      5 |   await page.locator('#recipient').fill('Family & friends');
+      6 |   await page.locator('#message').fill('Café 👋\nA&B + 100% #yes');
+        at open (/workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:3:102)
+        at /workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:11:3
+
+    Error Context: test-results/whatsapp-WhatsApp-draft-au-8bc2e-thout-translating-user-text/error-context.md
+
+  2) modules/whatsapp/e2e/whatsapp.spec.js:25:1 › WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#composer')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#composer')
+
+
+      1 | import { test, expect } from '@playwright/test';
+      2 |
+    > 3 | async function open(page) { await page.goto('./#/whatsapp'); await expect(page.locator('#composer')).toBeVisible(); }
+        |                                                                                                      ^
+      4 | async function compose(page) {
+      5 |   await page.locator('#recipient').fill('Family & friends');
+      6 |   await page.locator('#message').fill('Café 👋\nA&B + 100% #yes');
+        at open (/workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:3:102)
+        at /workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:27:3
+
+    Error Context: test-results/whatsapp-WhatsApp-Things-h-f716a-ves-the-exact-copy-fallback/error-context.md
+
+  3) modules/whatsapp/e2e/whatsapp.spec.js:44:1 › WhatsApp expired drafts remain visible and clipboard denial exposes a selectable manual link 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#composer')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#composer')
+
+
+      1 | import { test, expect } from '@playwright/test';
+      2 |
+    > 3 | async function open(page) { await page.goto('./#/whatsapp'); await expect(page.locator('#composer')).toBeVisible(); }
+        |                                                                                                      ^
+      4 | async function compose(page) {
+      5 |   await page.locator('#recipient').fill('Family & friends');
+      6 |   await page.locator('#message').fill('Café 👋\nA&B + 100% #yes');
+        at open (/workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:3:102)
+        at /workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:46:3
+
+    Error Context: test-results/whatsapp-WhatsApp-expired--04856-es-a-selectable-manual-link/error-context.md
+
+  4) modules/whatsapp/e2e/whatsapp.spec.js:60:1 › WhatsApp stale edits and storage failures retain the visible draft and prevent a destructive handoff 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#composer')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#composer')
+
+
+      1 | import { test, expect } from '@playwright/test';
+      2 |
+    > 3 | async function open(page) { await page.goto('./#/whatsapp'); await expect(page.locator('#composer')).toBeVisible(); }
+        |                                                                                                      ^
+      4 | async function compose(page) {
+      5 |   await page.locator('#recipient').fill('Family & friends');
+      6 |   await page.locator('#message').fill('Café 👋\nA&B + 100% #yes');
+        at open (/workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:3:102)
+        at /workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:61:3
+
+    Error Context: test-results/whatsapp-WhatsApp-stale-ed-ac5b5-event-a-destructive-handoff/error-context.md
+
+  5) modules/whatsapp/e2e/whatsapp.spec.js:78:1 › WhatsApp import is read-only until recovery confirmation and cancel keeps current records 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#composer')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#composer')
+
+
+      1 | import { test, expect } from '@playwright/test';
+      2 |
+    > 3 | async function open(page) { await page.goto('./#/whatsapp'); await expect(page.locator('#composer')).toBeVisible(); }
+        |                                                                                                      ^
+      4 | async function compose(page) {
+      5 |   await page.locator('#recipient').fill('Family & friends');
+      6 |   await page.locator('#message').fill('Café 👋\nA&B + 100% #yes');
+        at open (/workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:3:102)
+        at /workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:79:3
+
+    Error Context: test-results/whatsapp-WhatsApp-import-i-6c5a7-ancel-keeps-current-records/error-context.md
+
+  6) modules/whatsapp/e2e/whatsapp.spec.js:100:1 › WhatsApp composer and saved draft reopen under the shared worker offline at narrow phone widths 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#composer')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#composer')
+
+
+      1 | import { test, expect } from '@playwright/test';
+      2 |
+    > 3 | async function open(page) { await page.goto('./#/whatsapp'); await expect(page.locator('#composer')).toBeVisible(); }
+        |                                                                                                      ^
+      4 | async function compose(page) {
+      5 |   await page.locator('#recipient').fill('Family & friends');
+      6 |   await page.locator('#message').fill('Café 👋\nA&B + 100% #yes');
+        at open (/workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:3:102)
+        at /workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:103:3
+
+    Error Context: test-results/whatsapp-WhatsApp-composer-aa98f-line-at-narrow-phone-widths/error-context.md
+
+  6 failed
+    modules/whatsapp/e2e/whatsapp.spec.js:10:1 › WhatsApp draft autosaves and survives Home reload and language changes without translating user text 
+    modules/whatsapp/e2e/whatsapp.spec.js:25:1 › WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback 
+    modules/whatsapp/e2e/whatsapp.spec.js:44:1 › WhatsApp expired drafts remain visible and clipboard denial exposes a selectable manual link 
+    modules/whatsapp/e2e/whatsapp.spec.js:60:1 › WhatsApp stale edits and storage failures retain the visible draft and prevent a destructive handoff 
+    modules/whatsapp/e2e/whatsapp.spec.js:78:1 › WhatsApp import is read-only until recovery confirmation and cancel keeps current records 
+    modules/whatsapp/e2e/whatsapp.spec.js:100:1 › WhatsApp composer and saved draft reopen under the shared worker offline at narrow phone widths 

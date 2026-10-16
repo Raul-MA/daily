@@ -1,0 +1,14 @@
+✔ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (5.9839ms)
+✔ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (1.490335ms)
+✔ WhatsApp failed draft saves and clears preserve the previous primary document (0.871178ms)
+✔ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (0.786642ms)
+✔ WhatsApp restore rejects changed stale invalid and future previews before replacing records (2.025414ms)
+✔ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (1.405987ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32.642946

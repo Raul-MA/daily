@@ -22,7 +22,7 @@ function execute(args, env = process.env) {
 }
 
 function runNode(module) {
-  if (module === 'piano' && !process.env.DAILY_BASELINE_URL) {
+  if (['piano', 'whatsapp'].includes(module) && !process.env.DAILY_BASELINE_URL) {
     const build = execute(['scripts/build.mjs']);
     if (build) return build;
   }
@@ -31,7 +31,7 @@ function runNode(module) {
 }
 
 async function runBrowser(module) {
-  if (['general', 'plants', 'coffee', 'games', 'time-budget', 'reading'].includes(module)) {
+  if (['general', 'plants', 'coffee', 'games', 'time-budget', 'reading', 'whatsapp'].includes(module)) {
     discoverBrowser(module);
     return execute(['node_modules/@playwright/test/cli.js', 'test'], { ...process.env, DAILY_MODULE: module });
   }

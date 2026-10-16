@@ -5,7 +5,7 @@ const baseline = process.env.DAILY_BASELINE_URL;
 
 export default defineConfig({
   testDir: module === 'general' ? 'tests/e2e' : `modules/${module}/e2e`,
-  testMatch: baseline && ['time-budget', 'reading'].includes(module) ? `**/${module === 'reading' ? 'reader' : 'time-budget'}.spec.js` : '**/*.spec.js',
+  testMatch: baseline && ['time-budget', 'reading', 'whatsapp'].includes(module) ? `**/${({ reading: 'reader', whatsapp: 'source' })[module] ?? 'time-budget'}.spec.js` : '**/*.spec.js',
   fullyParallel: false,
   workers: 1,
   retries: 0,

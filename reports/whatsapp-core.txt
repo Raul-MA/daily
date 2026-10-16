@@ -1,0 +1,60 @@
+✔ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (5.998859ms)
+✔ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (1.325166ms)
+✔ WhatsApp failed draft saves and clears preserve the previous primary document (1.736745ms)
+✔ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (0.63677ms)
+✔ WhatsApp restore rejects changed stale invalid and future previews before replacing records (4.215006ms)
+✔ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (1.058618ms)
+✖ encoding, validation, local time, DST, manifest, icons and asset paths (37.766859ms)
+✔ worker install, cache ownership, offline shell and external bypass (68.213324ms)
+✖ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (7.225951ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 7
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 154.593692
+
+✖ failing tests:
+
+test at modules/whatsapp/test/tests.cjs:15:1
+✖ encoding, validation, local time, DST, manifest, icons and asset paths (37.766859ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(assets.includes('modules/whatsapp/src/app.js'))
+  
+      at Object.assertAssets (/workspaces/daily/modules/whatsapp/test/native.cjs:25:10)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:58:65)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at modules/whatsapp/test/tests.cjs:120:1
+✖ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (7.225951ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'things:///add?title=WhatsApp%20Family%20%26%20friends&when=2026-10-17%4013%3A08&notes=https%3A%2F%2Fwa.me%2F%3Ftext%3DHello%2520%25F0%259F%2591%258B%250ASee%2520you%2520soon!&reveal=true'
+  
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:147:12)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'things:///add?title=WhatsApp%20Family%20%26%20friends&when=2026-10-17%4013%3A08&notes=https%3A%2F%2Fwa.me%2F%3Ftext%3DHello%2520%25F0%259F%2591%258B%250ASee%2520you%2520soon!&reveal=true',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

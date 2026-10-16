@@ -6,24 +6,25 @@ Updated: 2026-10-16. Repo: `/workspaces/daily`, branch `main`.
 
 Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No workflows, pushes, Pages configuration or deployments. Keep real Readwise/Reader API calls for the user's later token test; unverified live access does not block implementation. Do not request personal tokens or backup files.
 
-The shared platform, plants, Coffee, Games, Time Budget, piano and **Reader now pass local workflow checks**. Reader is ready for a local checkpoint following core `21038b0`: 51 unit + 29 browser cases pass, with all previously completed scopes green in `reader-shared-regressions.txt`. **Next: implement WhatsApp**, starting from its copied source tests and the current three missing-module failures in that report. Read its module rules and original source, add draft/migration/browser contracts before implementation, preserve source validation/local-time/DST/handoff behavior, and mount it under the shared worker/router. Final localization, combined recovery and device gates follow. Coffee Excel remains excluded.
+**All seven apps are implemented and have passing local workflow checks.** Reader is saved as `571bb36`; WhatsApp is ready for its local checkpoint. `all-with-whatsapp.txt` passes every scope, including General and the full Piano source browser scripts. Strict lint, 679-file native syntax and static preparation pass. **Next: Stage 8 final migration audit**, beginning with the known autosave/dirty update-ordering bug and then combined full-PWA backup/schema/recovery. Finish complete EN/ES, legacy exporters, nested reference/concurrency/form/update checks, proper install assets and device guide. Actual iPhone/live API/Things validation remains deferred; do not claim the entire migration finished from local checks. Coffee Excel remains excluded.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 65 unit + 19 browser cases pass | `reports/reader-shared-regressions.txt` |
-| Plants | 23 unit + 11 browser cases pass | `reports/reader-shared-regressions.txt` |
+| General | 65 unit + 19 browser cases pass | `reports/all-with-whatsapp.txt` |
+| Plants | 23 unit + 11 browser cases pass | `reports/all-with-whatsapp.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/reading-final-lint.txt` |
-| Native JS syntax | 666 files pass; this is not typechecking | `reports/reading-final-syntax.txt` |
-| Static preparation | 613 unchanged native files/assets prepared | `reports/reading-final-build.txt` |
-| Coffee | 17 unit + 28 browser cases pass | `reports/reader-shared-regressions.txt` |
-| Games | 15 unit + 30 browser cases pass | `reports/reader-shared-regressions.txt` |
-| Time Budget | 17 unit + 17 browser cases pass | `reports/reader-shared-regressions.txt` |
-| Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/reader-shared-regressions.txt` |
-| Reader | 51 unit + 29 browser cases pass | `reports/reader-shared-regressions.txt` |
-| Whole migration | Incomplete; WhatsApp has three missing-module failures and final migration gates remain pending | `reports/reader-shared-regressions.txt` |
+| Strict full-scope lint | Pass | `reports/whatsapp-final-lint.txt` |
+| Native JS syntax | 679 files pass; this is not typechecking | `reports/whatsapp-final-syntax.txt` |
+| Static preparation | 623 unchanged native files/assets prepared | `reports/whatsapp-final-build.txt` |
+| Coffee | 17 unit + 28 browser cases pass | `reports/all-with-whatsapp.txt` |
+| Games | 15 unit + 30 browser cases pass | `reports/all-with-whatsapp.txt` |
+| Time Budget | 17 unit + 17 browser cases pass | `reports/all-with-whatsapp.txt` |
+| Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/all-with-whatsapp.txt` |
+| Reader | 51 unit + 29 browser cases pass | `reports/all-with-whatsapp.txt` |
+| WhatsApp | Nine unit + seven browser cases pass | `reports/all-with-whatsapp.txt` |
+| Whole migration | Local workflow checks all pass; Stage 8 migration/localization/device gates remain incomplete | `reports/all-with-whatsapp.txt` |
 
 No skipped tests or relaxed lint thresholds. Original plant assertions remain unchanged. New-app parity is not established by original baseline results.
 
@@ -49,8 +50,8 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 ## Resume and remaining gates
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and the authoritative `docs/pwa-consolidation-plan.md`.
-2. Reader is locally accepted. Read WhatsApp source/module docs, then add its missing draft/migration/browser contracts before implementation. Preserve its original time validation, encoding, handoff/copy fallback and appearance.
-3. Implement and locally accept WhatsApp under the shared router/worker, then finish release gates, one app at a time.
+2. All seven modules are locally connected. Start Stage 8 with autosaved WhatsApp dirty-flag ordering and combined backup/schema/recovery contracts before implementation.
+3. Complete localization and remaining per-app audits sequentially; keep source assertions and appearance. All remaining gates are listed below.
 4. Complete combined backup/import schemas/reference validation, legacy migration exporters, concurrency policy, all-app offline/update checks, full localization (including plant guides), install assets and device checklist. Real iPhone/Things/Readwise acceptance remains deferred and must never be claimed passing from browser mocks.
 5. Run `npm run verify` before claiming the whole migration complete. Until all apps are implemented it must remain red. Save local checkpoints; no remote work.
 
@@ -163,3 +164,27 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - Reader source/mounted phone comparison was reviewed. Full-scope strict lint, 666-file native syntax and static preparation of 613 files/assets pass (`reading-final-lint.txt`, `reading-final-syntax.txt`, `reading-final-build.txt`). API requests remain real, but tests use synthetic responses; no authenticated API/iPhone acceptance is claimed.
 - Native interface, settings, shortcuts, metadata cache/freshness, remembered-item revalidation, latest Review/direct feedback, credential/account isolation, offline recovery and protected Reader backups are implemented. Compass/behavior/source-map/inventory are current. Full localization/recovery/concurrency/update audits across all apps remain Stage 8 gates.
 - Exact next step: read WhatsApp's source and copied three tests, establish the unchanged baseline, add draft persistence/import/EN-ES/browser acceptance before implementation. Do not push, add workflows or deploy. Save another local checkpoint after WhatsApp acceptance.
+
+
+## WhatsApp mounted work in progress (after Reader `571bb36`)
+
+- Source commit `941d4cdb71dc38c4512bea836d4292dd8c96e541` at `/workspaces/schedule-whatsapp` is unchanged. All three copied source tests passed (`baseline-whatsapp.txt`) before implementation. New six service and six browser contracts first fail (`whatsapp-contracts-red.txt`); source-assertion adapter failures are retained separately (`whatsapp-adapters-red.txt`).
+- Native pure link/date/text functions preserve nested encoding, Unicode, notes/title limits, future local time, four-zone formatting and DST-gap rejection. Source comments are documented rather than retained as lint exemptions. The source VM baseline still runs unchanged behavior. Native third-case handoff uses the actual controller and actual data service with a memory storage port; saved-draft projection replaces the old private-key assertion.
+- A versioned root module persists incomplete/expired drafts, validates imported date/time structure without requiring future times, protects stale/quota writes and provides read-only/tamper/stale preview plus recovery-required replacement. Other modules and language are retained. Creation validates before clearing the draft atomically, then resets the composer and attempts Things. Failed saves keep draft controls and prevent handoff. Last submitted link remains available for clipboard/manual fallback during the page session, without claiming task creation.
+- Native composer uses scoped source CSS and EN/ES, preserves user text, revalidates visible local time on resume and disposes its 15-second validation timer/listeners. No private worker/manifest is installed. Native worker assertions require shared-owned asset precaching, sibling cache retention, offline matching and external bypass; original PNG/private-worker assertions remain in source baseline. Proper shared PNG install assets remain Stage 8 work.
+- `whatsapp-mounted.txt` passes six browser cases and nine real unit cases (the report also contains an accidental empty helper-file case, now removed from discovery). Full strict lint passes after extracting the shared utility-page map to keep complexity at eight (`whatsapp-mounted-lint.txt`). Phone/source characterization adds one more browser case, total seven. The first source browser attempt hit Chromium sandbox startup failure, not application behavior; the approved local browser command is rerunning it.
+- Exact next step: finish source phone baseline (`baseline-whatsapp-complete.txt`, session `13970`), then rerun native WhatsApp nine-unit/seven-browser suite, inspect source/native phone captures, update Compass/behavior/source mapping/inventory and run full/shared checks sequentially. No remote writes or real Things/iPhone acceptance.
+
+- WhatsApp acceptance update: `baseline-whatsapp-complete.txt` passes three source unit + one phone browser case after restarting the read-only workspace server (session `31948`, port 8767). `whatsapp-final-ui.txt` passes exactly nine native unit + seven browser cases. The scoped source light/dark styles pass at 320/390px; all handoff/copy/expired/stale/quota/import/offline flows pass.
+- The offline Spanish 320px screenshot originally reused the English 390px comparison filename; it now uses `whatsapp-offline-phone.png`. Final root utility-page extraction and backup styling are being verified in `all-with-whatsapp.txt`. No code changes during this sequential full run. General/affected scopes must pass before saving the WhatsApp checkpoint.
+- Exact next step: finish sessions `58650` (lint), `87244` (syntax), and `18546` (all scopes). Inspect the English source/native phone comparison, record full results, update status/docs/source map and commit WhatsApp locally. Then read the Stage 8 audit reminders and implement combined schema/recovery, legacy exporters, complete EN/ES, draft/update/concurrency policies and install assets. Actual iPhone/live API/Things acceptance stays deferred.
+
+- Final audit finding while WhatsApp regressions run: the shell's bubbling `input` listener can mark an already autosaved composer dirty after its own handler clears the flag. This is conservative (navigation/Home and saved draft are safe) but can hold updates unnecessarily. Add a browser assertion and correct the ordering during the Stage 8 form/update audit; do not claim the complete update/form audit already passes. Also provide a clear/discard path after invalid file previews. No application/test code is changing during the current full run.
+
+
+## WhatsApp local acceptance complete (2026-10-16)
+
+- `all-with-whatsapp.txt` passes all scopes sequentially: General 65 unit + 19 browser; Plants 23 + 11; Coffee 17 + 28; Games 15 + 30; Time Budget 17 + 17; Piano 53 + ten native browser plus both original broad scripts; Reader 51 + 29; WhatsApp nine + seven. No skipped cases, softened thresholds or missing-module exceptions remain. This is local workflow evidence, not full Stage 8/device acceptance.
+- `whatsapp-final-lint.txt` passes full-scope strict lint. `whatsapp-final-syntax.txt` checks 679 native JavaScript files. Static preparation passes (`whatsapp-final-build.txt`). The source/native English 390px comparison was reviewed: source layout, controls, colors and spacing are retained, with the added backup section. The Spanish offline 320px image now has its own filename. Source 320/390px light/dark checks also pass.
+- Module behavior/Compass, source hashes/destinations and inventory are updated. Original apps/data remain untouched. No real Things/WhatsApp handoff or live API/iPhone acceptance was performed.
+- Exact next step: Stage 8. Add the missing autosave-clean/failed-dirty update assertion and fix input-bubbling ordering; cover explicit discard after invalid previews. Then implement tested combined full-root export/preview/recovery/restore with all module schemas, references and running activities validated. Complete remaining EN/ES, legacy exporters, concurrency/stale policies, all-app form/update/offline audit and proper install assets. Run final full verification before declaring local implementation complete. No pushes, workflows or deployment.

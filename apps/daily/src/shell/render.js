@@ -1,3 +1,4 @@
+import { mountWhatsApp } from '../../../../modules/whatsapp/src/view.js';
 import { mountReview } from '../../../../modules/reading/src/review/view.js';
 import { mountReader } from '../../../../modules/reading/src/view.js';
 import { mountReaderPreferences } from '../../../../modules/reading/src/preferences.js';
@@ -48,8 +49,8 @@ function pageView(context, preferences) {
     }
     if (context.route.page === 'home')
         return dashboard(preferences, context.base, { state: context.state, plants: context.plants, piano: context.piano, reading: context.reading });
-    if (['reader', 'review', 'settings'].includes(context.route.page))
-        return readingPage(context, preferences);
+    if (['reader', 'review', 'settings', 'whatsapp'].includes(context.route.page))
+        return utilityPage(context, preferences);
     return modulePlaceholder(context.route, shellText(preferences.language), context.base);
 }
 export function renderShell(context, changedRoute = false) {
@@ -124,9 +125,9 @@ function gamePage(context) {
     return page.node;
 }
 
-function readingPage(context, preferences) {
-    const options = { route: context.route, base: context.base, service: context.reading, ui: context.moduleUI };
-    const mounts = { reader: mountReader, review: mountReview, settings: mountReaderPreferences };
+function utilityPage(context, preferences) {
+    const options = { route: context.route, base: context.base, service: context[context.route.page === 'whatsapp' ? 'whatsapp' : 'reading'], ui: context.moduleUI };
+    const mounts = { reader: mountReader, review: mountReview, settings: mountReaderPreferences, whatsapp: mountWhatsApp };
     const page = mounts[context.route.page](options);
     context.pageCleanup = page.dispose;
     context.pageRestore = page.restore;
