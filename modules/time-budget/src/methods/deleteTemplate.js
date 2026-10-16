@@ -10,5 +10,5 @@ export function deleteTemplate() {
         delete templates[name];
         this.saveTemplates(templates);
         this.loadTemplateList();
-        this.notify(`“${name}” deleted.`);
+        this.notify('“{name}” deleted.', 3200, { name });
     }

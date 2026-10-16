@@ -36,8 +36,8 @@ test('queue drafts survive language changes and stale edits cannot overwrite ano
     window.dispatchEvent(new StorageEvent('storage', { key: 'daily:v1', oldValue: old, newValue: next }));
     return next;
   });
-  await page.getByRole('button', { name: 'Save changes' }).click();
-  await expect(page.locator('#toast')).toContainText('changed');
+  await page.getByRole('button', { name: 'Guardar cambios' }).click();
+  await expect(page.locator('#toast')).toContainText('cambiado');
   await expect(page.locator('#remainingTasksList .task-name-input')).toHaveValue('Draft 🌱');
   expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe(other);
 });
@@ -53,6 +53,7 @@ test('confirmed legacy imports preserve active sessions and create a full recove
   expect((await download).suggestedFilename()).toBe('daily-recovery.json');
   await page.locator('[data-time-confirm]').click();
   await expect(page.locator('[data-time-import-preview]')).toBeHidden();
+  await expect(page.locator('[data-time-file]')).toHaveValue('');
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('daily:v1')));
   expect(saved.modules['time-budget'].data.templates['Mañana 🌱'][0].name).toBe('Café');
   expect(saved.modules['time-budget'].data.session.tasks[0].name).toBe('Focus 🌱');

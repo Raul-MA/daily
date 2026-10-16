@@ -3,7 +3,7 @@ export function loadTemplateList() {
         const select = this.dom.getElementById('templateSelect');
         
         
-        select.innerHTML = '<option value="">Choose a template</option>';
+        select.innerHTML = `<option value="">${this.copy("Choose a template")}</option>`;
         
         Object.keys(templates).forEach(name => {
             const option = this.dom.createElement('option');

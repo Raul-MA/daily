@@ -36,7 +36,7 @@ export function updateRemainingAssignedTime() {
         const summary = this.dom.createElement('div');
         summary.className = 'assigned-time-header';
         const label = this.dom.createElement('span');
-        label.textContent = remainingAssigned < 0 ? 'Plan is over by' : 'Unassigned time';
+        label.textContent = remainingAssigned < 0 ? this.copy("Plan is over by") : this.copy("Unassigned time");
         const value = this.dom.createElement('strong');
         value.textContent = `${Math.abs(remainingAssigned)} min`;
         summary.append(label, value);
@@ -48,7 +48,7 @@ export function updateRemainingAssignedTime() {
         if (addButton) {
             if (remainingAssigned <= 0) {
                 addButton.disabled = true;
-                addButton.title = 'No remaining time to assign';
+                addButton.title = this.copy("No remaining time to assign");
             } else {
                 addButton.disabled = false;
                 addButton.title = '';

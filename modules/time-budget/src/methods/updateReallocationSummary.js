@@ -19,11 +19,11 @@ export function updateReallocationSummary(requiredDeficit) {
         
         if (totalReduction === requiredDeficit && valid) {
             summary.className = 'realloc-summary valid';
-            summary.textContent = `✓ Total reduction: ${totalReduction} minutes (matches deficit)`;
+            summary.textContent = this.copy('✓ Total reduction: {total} minutes (matches deficit)', { total: totalReduction });
             applyBtn.disabled = false;
         } else {
             summary.className = 'realloc-summary invalid';
-            summary.textContent = `Total reduction: ${totalReduction} minutes (need ${requiredDeficit})`;
+            summary.textContent = this.copy('Total reduction: {total} minutes (need {required})', { total: totalReduction, required: requiredDeficit });
             applyBtn.disabled = true;
         }
     }

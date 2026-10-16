@@ -4,8 +4,8 @@ export function showNotification() {
         
         if ('Notification' in window && Notification.permission === 'granted') {
             const task = this.state.tasks[this.state.currentTaskIndex];
-            new Notification('Time Budget', {
-                body: `Time’s up for ${task.name}.`
+            new Notification(this.copy("Time Budget"), {
+                body: this.copy('Time’s up for {name}.', { name: task.name })
             });
         }
     }

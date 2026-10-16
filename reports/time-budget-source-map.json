@@ -39,8 +39,8 @@
     "baseline": "reports/baseline-time-budget.txt"
   },
   "native": {
-    "unit": 20,
-    "browser": 17
+    "unit": 22,
+    "browser": 21
   },
   "deliberate_changes": [
     "One shared root, manifest and worker; canonical #/time route and scoped DOM/CSS.",
@@ -48,7 +48,9 @@
     "Negative and fractional reallocation rejected; pending overtime restored after reload.",
     "Read-only import preview, recovery download and explicit confirmation replace immediate import.",
     "Full migration export includes active state and independent countdowns.",
-    "Dirty/stale view protection and visible atomic save failures."
+    "Dirty/stale view protection and visible atomic save failures.",
+    "Explicit authored EN/ES copy; semantic queue drafts, fixed notice expiry, cancellable invalid imports and parent-sized 320px layout.",
+    "Newer import file reads supersede older pending reads; cancellation/disposal prevents late preview updates."
   ],
   "legacy_export": {
     "directory": "legacy/exporters/time-budget",
@@ -57,5 +59,17 @@
     "browser_contracts": 1,
     "original_modified": false,
     "release": "deferred"
+  },
+  "localization": {
+    "keys": 130,
+    "english_markup_sha256": "f95b39baab06f0e3821272e39e9fdf9605b6f069c217bdec0de1129e412bb30f",
+    "authored": [
+      "modules/time-budget/src/i18n.js",
+      "modules/time-budget/src/translations.js",
+      "modules/time-budget/src/notices.js",
+      "modules/time-budget/src/queue-drafts.js"
+    ],
+    "browser_contracts": "modules/time-budget/e2e/localization.spec.js",
+    "preserved": "Original eight source workflow assertions and all persisted task/template/countdown names/timestamps. Native stale-save assertions intentionally translated to Spanish."
   }
 }

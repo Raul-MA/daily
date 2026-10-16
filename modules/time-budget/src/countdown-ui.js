@@ -25,17 +25,17 @@ function card(item, app, render) {
     try { app.service.countdowns.transition(item.id, status); render(); }
     catch (error) { app.notify(error.message); }
   };
-  if (item.status === 'completed') node.append('Completed');
+  if (item.status === 'completed') node.append(app.copy("Completed"));
   else {
-    node.append(button(item.status === 'running' ? 'Pause' : 'Resume', () => change(item.status === 'running' ? 'paused' : 'running')));
-    node.append(button('Complete', () => change('completed')));
+    node.append(button(item.status === 'running' ? app.copy("Pause") : app.copy("Resume"), () => change(item.status === 'running' ? 'paused' : 'running')));
+    node.append(button(app.copy("Complete"), () => change('completed')));
   }
   return node;
 }
 export function mountCountdowns(app) {
   const section = document.createElement('section');
   section.className = 'panel time-countdowns';
-  section.innerHTML = '<h2>Countdowns</h2><form id="time-countdown"><label>Countdown name<input name="label" maxlength="120" required></label><label>Countdown minutes<input name="minutes" type="number" inputmode="numeric" min="1" max="1440" value="5" required></label><button type="submit" class="button primary">Start countdown</button></form><div data-countdown-list></div>';
+  section.innerHTML = `<h2>${app.copy("Countdowns")}</h2><form id="time-countdown"><label>${app.copy("Countdown name")}<input name="label" maxlength="120" required></label><label>${app.copy("Countdown minutes")}<input name="minutes" type="number" inputmode="numeric" min="1" max="1440" value="5" required></label><button type="submit" class="button primary">${app.copy("Start countdown")}</button></form><div data-countdown-list></div>`;
   const list = section.querySelector('[data-countdown-list]');
   function update() {
     for (const item of app.service.countdowns.list()) {

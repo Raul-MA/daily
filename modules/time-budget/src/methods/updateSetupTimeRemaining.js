@@ -14,11 +14,11 @@ export function updateSetupTimeRemaining() {
         const remainingMinutes = Math.floor(diff / 60000);
         
         if (remainingMinutes < 0) {
-            display.textContent = 'Goal time has passed';
+            display.textContent = this.copy("Goal time has passed");
         } else {
             const hours = Math.floor(remainingMinutes / 60);
             const mins = remainingMinutes % 60;
-            display.textContent = `${hours}h ${mins}m available from now`;
+            display.textContent = this.copy('{hours}h {minutes}m available from now', { hours, minutes: mins });
         }
         
         display.classList.remove('hidden');

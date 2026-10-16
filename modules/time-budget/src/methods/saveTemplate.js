@@ -35,5 +35,5 @@ export function saveTemplate() {
         this.dom.getElementById('templateName').value = '';
         this.loadTemplateList();
         this.dom.getElementById('templateSelect').value = name;
-        this.notify(`“${name}” saved.`);
+        this.notify('“{name}” saved.', 3200, { name });
     }

@@ -1,8 +1,6 @@
-export function notify(message, duration = 3200) {
-        const toast = this.dom.getElementById('toast');
-        if (!toast) return;
-        toast.textContent = message;
-        toast.classList.remove('hidden');
-        clearTimeout(this.toastTimeoutId);
-        this.toastTimeoutId = setTimeout(() => toast.classList.add('hidden'), duration);
-    }
+import { restoreNotice } from '../notices.js';
+
+export function notify(message, duration = 3200, params = {}) {
+  this.ui.notice = { message, params, expires: Date.now() + duration, role: 'status' };
+  restoreNotice(this);
+}

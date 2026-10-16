@@ -23,7 +23,7 @@ export function connectTimeBudget(state) {
     });
     return read();
   }
-  const service = { countdowns: createCountdowns(state), read, save, replace: (data, countdowns) => save(data, true, countdowns), stop: () => undefined };
+  const service = { language: () => state.read().value.preferences.language, countdowns: createCountdowns(state), read, save, replace: (data, countdowns) => save(data, true, countdowns), stop: () => undefined };
   return { ...service, ...budgetImports(state, service) };
 }
 function activityBase(existing, countdowns) {

@@ -21,7 +21,7 @@
     padding: 0;
 }
 [data-module="time-budget"] {
-    min-width: 320px;
+    min-width: 0;
     background: var(--canvas);
     scroll-behavior: smooth;
 }
@@ -1046,3 +1046,9 @@ to { opacity: 1; transform: none; }
 [data-module="time-budget"] .countdown-card { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
 [data-module="time-budget"] .countdown-card output { font-variant-numeric: tabular-nums; }
 [data-module="time-budget"] .toast { top: calc(88px + env(safe-area-inset-top)); bottom: auto; }
+
+[data-module="time-budget"] .time-countdowns label { flex: 1 1 180px; min-width: 0; max-width: 100%; }
+[data-module="time-budget"] .time-backup label { display: block; min-width: 0; }
+[data-module="time-budget"] .time-backup input { min-width: 0; max-width: 100%; }
+[data-module="time-budget"] .time-backup .button { max-width: 100%; white-space: normal; padding-block: 12px; }
+[data-module="time-budget"] .countdown-card strong { min-width: 0; overflow-wrap: anywhere; }

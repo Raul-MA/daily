@@ -12,7 +12,7 @@ export function updateClock() {
         const remainingElement = this.dom.getElementById('timeRemaining');
         
         if (diff < 0) {
-            remainingElement.textContent = 'Time\'s up!';
+            remainingElement.textContent = this.copy("Time's up!");
             remainingElement.className = 'time-remaining danger';
         } else {
             const hours = Math.floor(remainingMinutes / 60);

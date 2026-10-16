@@ -19,7 +19,8 @@ async function invoke(app, event) {
   if (!match || !commands.has(match[1])) throw new Error('Unsupported Time Budget action.');
   app.ensureFresh();
   const args = match[2].trim() ? match[2].split(',').map(value => argument(value, node)) : [];
-  await runAction(app, match[1], args);
+  if (match[1] === 'importTemplates') await app.importTemplates(...args);
+  else await runAction(app, match[1], args);
 }
 async function runAction(app, name, args) {
   if (app.pendingActions?.has(name)) return;

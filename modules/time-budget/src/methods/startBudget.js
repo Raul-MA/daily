@@ -32,7 +32,7 @@ export async function startBudget() {
         const availableMinutes = Math.floor((this.getGoalDate(goalTimeInput) - Date.now()) / 60000);
         const plannedMinutes = tasks.reduce((sum, task) => sum + task.allocatedMinutes, 0);
         if (plannedMinutes > availableMinutes) {
-            this.notify(`Your plan is ${plannedMinutes - availableMinutes} minutes over. Shorten a task or move the finish time.`);
+            this.notify('Your plan is {count} minutes over. Shorten a task or move the finish time.', 3200, { count: plannedMinutes - availableMinutes });
             this.dom.getElementById('remainingAssignedTime').scrollIntoView({ behavior: 'smooth', block: 'center' });
             return;
         }

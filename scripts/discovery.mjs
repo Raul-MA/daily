@@ -1,6 +1,6 @@
 import { globSync, readFileSync } from 'node:fs';
 
-const expected = { general: 79, plants: 28, coffee: 34, games: 34, 'time-budget': 17, piano: 53, reading: 54, whatsapp: 12 };
+const expected = { general: 79, plants: 28, coffee: 34, games: 34, 'time-budget': 21, piano: 53, reading: 54, whatsapp: 12 };
 
 export function discover(module) {
   const browser = ['coffee', 'games', 'time-budget'].includes(module);
@@ -30,7 +30,7 @@ export function discoverBrowser(module) {
 }
 
 export function discoverDomainUnit(module) {
-  const expectedCounts = { coffee: 20, games: 17, 'time-budget': 20 };
+  const expectedCounts = { coffee: 20, games: 17, 'time-budget': 22 };
   const files = globSync(`modules/${module}/test/*.test.mjs`).sort();
   const count = files.reduce((sum, file) => sum + [...readFileSync(file, 'utf8').matchAll(/^test\(/gm)].length, 0);
   if (count !== expectedCounts[module]) throw new Error(`${module} unit discovery mismatch: expected ${expectedCounts[module]}, found ${count}`);

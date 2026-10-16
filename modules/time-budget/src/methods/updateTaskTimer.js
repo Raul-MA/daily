@@ -22,7 +22,7 @@ export function updateTaskTimer() {
             progressCircle.classList.add('over');
             timeDisplay.textContent = `+${overMinutes}:${overSecs.toString().padStart(2, '0')}`;
             timeDisplay.classList.add('over');
-            timerLabel.textContent = 'over budget';
+            timerLabel.textContent = this.copy("over budget");
             timerLabel.classList.add('over');
         } else {
             
@@ -38,7 +38,7 @@ export function updateTaskTimer() {
             const remainingSecs = remainingSeconds % 60;
             timeDisplay.textContent = `${remainingMinutes}:${remainingSecs.toString().padStart(2, '0')}`;
             timeDisplay.classList.remove('over');
-            timerLabel.textContent = 'remaining';
+            timerLabel.textContent = this.copy("remaining");
             timerLabel.classList.remove('over');
         }
     }

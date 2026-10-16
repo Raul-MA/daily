@@ -6,23 +6,23 @@ Updated: 2026-10-16. Repo: `/workspaces/daily`, branch `main`.
 
 Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No workflows, pushes, Pages configuration or deployments. Keep real Readwise/Reader API calls for the user's later token test; unverified live access does not block implementation. Do not request personal tokens or backup files.
 
-**All seven apps and combined full-PWA backup/restore pass local checks.** `combined-backup-all.txt` completed successfully across General and every app, including both broad Piano scripts. Strict lint, 688-file syntax and static preparation of 629 assets pass (`combined-backup-final-*`). Reader and WhatsApp earlier Stage 8 fixes are included. Full restore validates all module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
+**All seven apps and combined full-PWA backup/restore are connected and locally tested.** The last complete all-app run is `combined-backup-all.txt` at `da523d1`, including both broad Piano scripts. Later per-app checkpoints appear below; final whole-PWA verification still must run after the remaining localization/audit work. Full restore validates module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** save the accepted Games checkpoint, then audit and finish Time Budget localization. Games passes 17 unit + 34 browser, General 79 unit + 28 browser, full strict lint, 746-file syntax and static preparation of 651 assets (`games-localization-*`). English/Spanish authored copy and persistent translated failed-save messages are accepted; stored names/notes, scoring values and session timestamps are unchanged. Coffee checkpoint `7d03c03` and Plants checkpoint `bdd8af1` are saved. After Time Budget, finish Piano localization, remaining schema/concurrency/form/update/recovery audits and full verification. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
+**Exact next step:** save the accepted Time Budget checkpoint, then finish Piano localization. Time Budget passes 22 unit + 21 browser, General 79 unit + 28 browser, full strict lint, 752-file syntax and static preparation of 655 assets (`time-localization-*`). Its slow-file supersession/cancel contract is red first, then green; timer actions retain duplicate protection. Games checkpoint `34360a3`, Coffee `7d03c03` and Plants `bdd8af1` are saved. After Piano, complete remaining schema/concurrency/form/update/recovery audits and run full verification. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 79 unit + 28 browser cases pass | `reports/games-localization-general.txt` |
+| General | 79 unit + 28 browser cases pass | `reports/time-localization-general.txt` |
 | Plants | 28 unit + 13 browser cases pass | `reports/plants-localization-scope.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/games-localization-lint.txt` |
-| Native JS syntax | 746 files pass; this is not typechecking | `reports/games-localization-syntax.txt` |
-| Static preparation | 651 native files/assets prepared; legacy exporters excluded | `reports/games-localization-build.txt` |
+| Strict full-scope lint | Pass | `reports/time-localization-lint.txt` |
+| Native JS syntax | 752 files pass; this is not typechecking | `reports/time-localization-syntax.txt` |
+| Static preparation | 655 native files/assets prepared; legacy exporters excluded | `reports/time-localization-build.txt` |
 | Coffee | 20 unit + 34 browser cases pass | `reports/coffee-final-audit-unit.txt`, `reports/coffee-final-audit-scope.txt` |
 | Games | 17 unit + 34 browser cases pass | `reports/games-localization-scope.txt` |
-| Time Budget | 20 unit + 17 browser cases pass | `reports/legacy-budget-time.txt` |
+| Time Budget | 22 unit + 21 browser cases pass | `reports/time-localization-scope.txt` |
 | Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/combined-backup-all.txt` |
 | Reader | 54 unit + 30 browser cases pass | `reports/legacy-reader-scope.txt` |
 | WhatsApp | 12 unit + nine browser cases pass | `reports/legacy-whatsapp-scope.txt` |
@@ -33,7 +33,7 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 ## Implemented
 
 - Accessible hash-router shell, accepted three/two/one-column iOS dashboard, app menu, shared EN/ES, persisted widget order/visibility and quick-action settings. Dashboard links create no records or care events.
-- Validated `daily:v1` root document, per-module adapters, recovery/corrupt preservation, future-version rejection and visible quota failures. All domain adapters are connected. Combined restore is implemented and undergoing final shared regression checks.
+- Validated `daily:v1` root document, per-module adapters, recovery/corrupt preservation, future-version rejection and visible quota failures. All domain adapters are connected. Combined restore passes local all-app acceptance.
 - Timestamp activity registry: independent countdowns, singleton budget/game/piano, explicit pause/resume/completion and overdue reconstruction. Rendering/navigation never advances persisted state. Time Budget, Games and piano are integrated.
 - One generated manifest and owned offline asset list. Authenticated/external requests bypass worker caches. Cached HTML remains with its matching asset version. Updates require every open same-app tab to report safe; blocked/unresponsive tabs hold activation. The two-tab browser test preserves settings and unsaved work through update acceptance.
 - Local-midnight/calendar refresh with foreground/timezone checks and daylight-saving tests. In-memory dirty-form snapshots preserve values, file selection and focus through language changes. Plant/history stale edits retain drafts rather than overwriting newer records.
@@ -52,10 +52,10 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 ## Resume and remaining gates
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and the authoritative `docs/pwa-consolidation-plan.md`.
-2. All seven modules are locally connected. Follow the exact next step above for combined backup/restore acceptance; WhatsApp ordering and Reader invalid-import cancellation are verified.
+2. All seven modules and combined backup are locally connected. Follow the exact current step above; completed checkpoints must not be repeated as implementation work.
 3. Complete localization and remaining per-app audits sequentially; keep source assertions and appearance. All remaining gates are listed below.
-4. Complete combined backup/import schemas/reference validation, legacy migration exporters, concurrency policy, all-app offline/update checks, full localization (including plant guides), install assets and device checklist. Real iPhone/Things/Readwise acceptance remains deferred and must never be claimed passing from browser mocks.
-5. Run `npm run verify` before claiming the whole migration complete. Until all apps are implemented it must remain red. Save local checkpoints; no remote work.
+4. Combined backup, legacy exporters, install assets and Plants/Coffee/Games localization are accepted locally. Finish Piano and the remaining schema/concurrency/form/update/recovery audits. Real iPhone/Things/Readwise acceptance and original-app releases remain deferred and cannot be claimed passing from browser mocks.
+5. Run `npm run verify` before claiming the local implementation complete. Keep unfinished acceptance contracts red; never waive them. Save local checkpoints; no remote work.
 
 ## Checkpoints and test history
 
@@ -354,3 +354,22 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - General regression is active in `games-localization-general.txt`; finish it, prepare static output and save Games before starting Time Budget. Full-PWA final verification and physical acceptance remain open.
 
 - Final General regression passes 79 unit + 28 browser (`games-localization-general.txt`). Full strict lint, 746-file syntax and static preparation of 651 assets pass. Games is accepted locally. Next app: Time Budget. Physical/live API/Things/old-app release acceptance remains deferred.
+
+
+## Stage 8: Time Budget localization in progress
+
+- Two new pure/shared-language unit contracts and three browser contracts precede localization (`time-localization-unit-red.txt`, `time-localization-red.txt`). The latter fails the three missing Spanish cases plus the native stale-edit case updated to Spanish; all 16 remaining cases pass. Original eight source browser workflows/assertions remain unchanged. The native replacement keeps the same draft/data protection assertions and deliberately changes Save changes / changed to Guardar cambios / cambiado.
+- Static markup now has explicit translation markers resolved before any user data is inserted. English output exactly matches the previous native markup SHA-256 `f95b39baab06f0e3821272e39e9fdf9605b6f069c217bdec0de1129e412bb30f`. Methods use explicit copy lookups; names/template keys/timestamps/scoring budgets stay verbatim. All 130 EN/ES keys/interpolation parameters and read-only shared-language access are checked.
+- Queue edits/add forms/error state are captured semantically and rebuilt with current-language controls before restoring values; old HTML is no longer pasted back. Notification source messages/parameters/deadlines persist only in UI memory and translate without extending expiry.
+- `time-localization-first.txt` passes 19 of 20 browser cases; the new 320px check exposes the original fixed module minimum inside Daily's padded parent. The region now fits its parent, with constrained backup/file/countdown controls rather than clipping overflow. New invalid/future-import cancellation retains data, cannot enable confirmation before a valid preview, ignores superseded/disposed file reads and clears successful file selections.
+- `time-localization-scope.txt` is running (22 unit + 20 browser). Native syntax/lint are running independently. Do not start Piano or another browser/build until this scope finishes.
+
+- Time Budget additionally has a red-first fourth browser case for slow/superseded/canceled file reads (`time-import-race-red.txt`). The old generic timer-action duplicate guard discarded a newer file selection. Import reads now bypass only this gate and keep request identity validation; other timer actions remain protected. The final 22-unit/21-browser run is active. Three focused recovery cases pass after resuming notice expiry on import reload (`time-reload-notices.txt`).
+
+
+## Time Budget localization and import lifecycle accepted locally
+
+- Final `time-localization-scope.txt` passes all 22 unit + 21 browser cases, including slow-file supersession/cancellation, all original source workflows and the translated native stale-save contract. General passes 79 unit + 28 browser (`time-localization-general.txt`). Full strict lint, 752-file syntax and static preparation of 655 assets pass. No skipped tests or relaxed thresholds.
+- English main-layout bytes remain identical to the prior native template. User names/template keys, timer deadlines/timestamps, numeric budgets and activity semantics are unchanged. Spanish offline 320px controls, overtime/reallocation, semantic queue draft restoration, exact notification expiry, invalid import cancellation and clearing successful selections pass.
+- The import race is reproduced before correction in `time-import-race-red.txt`; only file imports bypass the generic duplicate-click guard. Request identities reject superseded/canceled/disposed reads. The three focused recovery cases additionally pass in `time-reload-notices.txt`.
+- Next: Piano authored-content/control localization, then final schema/concurrency/form/update/recovery audit and full verification. Physical-device/API/Things checks and original-app releases remain deferred.

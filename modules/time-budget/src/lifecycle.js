@@ -27,6 +27,7 @@ export function failure(error) {
     if (this.state.timerRunning) this.state.intervalId = setInterval(() => this.updateTaskTimer(), 1000);
   }
   this.notify(error.message);
+  this.ui.notice.role = 'alert';
   this.host.querySelector('#toast').setAttribute('role', 'alert');
 }
 export function initialize(app) {

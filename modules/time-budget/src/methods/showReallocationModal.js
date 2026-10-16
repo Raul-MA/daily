@@ -1,7 +1,7 @@
 export function showReallocationModal(deficit) {
         this.requiredDeficit = Math.ceil(deficit);
         const modal = this.dom.getElementById('reallocationModal');
-        this.dom.getElementById('deficitAmount').textContent = `${Math.ceil(deficit)} minutes`;
+        this.dom.getElementById('deficitAmount').textContent = this.copy('{count} minutes', { count: Math.ceil(deficit) });
         
         const reallocationList = this.dom.getElementById('reallocationList');
         reallocationList.innerHTML = '';
@@ -16,7 +16,7 @@ export function showReallocationModal(deficit) {
                 <input type="number" min="0" max="${task.allocatedMinutes - 1}" value="0" 
                        class="realloc-input" data-task-index="${i}" 
                        data-time-input="app.updateReallocationSummary(${Math.ceil(deficit)})"
-                       aria-label="Minutes to take from ${this.escapeHTML(task.name)}">
+                       aria-label="${this.copy('Minutes to take from {name}', { name: this.escapeHTML(task.name) })}">
             `;
             reallocationList.appendChild(item);
         }

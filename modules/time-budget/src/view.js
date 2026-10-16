@@ -1,3 +1,4 @@
+import { restoreNotice } from './notices.js';
 import { mountCountdowns } from './countdown-ui.js';
 import { createTimeApp } from './app.js';
 import { template } from './template.js';
@@ -16,8 +17,10 @@ function scopedDocument(host) {
 export function mountTimeBudget(options) {
   const host = document.createElement('section');
   host.dataset.module = 'time-budget';
-  host.innerHTML = template;
-  const app = createTimeApp({ host, dom: scopedDocument(host), service: options.service, ensureFresh, failure, exportTemplates, importTemplates });
+  const language = options.service.language();
+  host.lang = language;
+  host.innerHTML = template(language);
+  const app = createTimeApp({ host, language, ui: options.ui, dom: scopedDocument(host), service: options.service, ensureFresh, failure, exportTemplates, importTemplates });
   app.keyboardAction = action => {
     try { app.ensureFresh(); action(); }
     catch (error) { app.failure(error); }
@@ -25,6 +28,8 @@ export function mountTimeBudget(options) {
   app.cancelNewTask = node => node.closest('.add-task-form').remove();
   app.reload = () => {
     stopPresentation(app);
+    app.importRequest = null;
+    for (const input of host.querySelectorAll('input[type="file"]')) input.value = '';
     app.state.goalTime = null;
     app.documentData = app.service.read();
     app.state = createTimeApp().state;
@@ -32,6 +37,7 @@ export function mountTimeBudget(options) {
     app.dom.getElementById('setupScreen').classList.toggle('hidden', Boolean(app.documentData.session));
     app.dom.getElementById('timerScreen').classList.toggle('hidden', !app.documentData.session);
     initialize(app);
+    restoreNotice(app);
     host.querySelector('[data-time-import-preview]').hidden = true;
     for (const form of host.querySelectorAll('form')) delete form.dataset.unsaved;
     document.dispatchEvent(new Event('daily:form-state'));
@@ -44,10 +50,11 @@ export function mountTimeBudget(options) {
   mountBackupUI(app);
   const stopCountdowns = mountCountdowns(app);
   const unbind = bindEvents(app);
+  restoreNotice(app);
   host.querySelector('h1').tabIndex = -1;
   return {
     node: host,
-    dispose: () => { rememberDrafts(app, options.ui); stopPresentation(app); stopCountdowns(); unbind(); },
+    dispose: () => { app.disposed = true; rememberDrafts(app, options.ui); stopPresentation(app); stopCountdowns(); unbind(); },
     restore: () => restoreForms(app, options.ui),
     conflict: () => app.notify('Data changed in another view. Keep your draft and reopen Time Budget.'),
   };

@@ -1,0 +1,8 @@
+
+Running 3 tests using 1 worker
+
+  ✓  1 modules/time-budget/e2e/recovery.spec.js:4:1 › negative and fractional reallocation never enable confirmation (12.2s)
+  ✓  2 modules/time-budget/e2e/recovery.spec.js:23:1 › queue drafts survive language changes and stale edits cannot overwrite another view (2.4s)
+  ✓  3 modules/time-budget/e2e/recovery.spec.js:45:1 › confirmed legacy imports preserve active sessions and create a full recovery backup (1.7s)
+
+  3 passed (20.2s)

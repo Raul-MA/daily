@@ -1,3 +1,4 @@
+import { captureQueue, restoreQueue, restoreQueueErrors } from './queue-drafts.js';
 import { captureDrafts, restoreDrafts } from '../../../packages/ui/src/drafts.js';
 
 export function prepareForms(app) {
@@ -16,7 +17,7 @@ export function stampForms(app) {
 }
 export function rememberDrafts(app, ui) {
   ui.drafts = captureDrafts(app.host);
-  ui.queue = ui.drafts.some(form => form.id === 'time-queue') ? app.dom.getElementById('remainingTasksList').innerHTML : null;
+  ui.queue = ui.drafts.some(form => form.id === 'time-queue') ? captureQueue(app) : null;
   ui.templatesOpen = app.host.querySelector('details.template-section').open;
   ui.setup = {
     goal: app.dom.getElementById('goalTime').value,
@@ -36,9 +37,11 @@ export function restoreSetup(app, ui) {
   app.updateMoveButtons();
 }
 export function restoreForms(app, ui) {
-  if (ui.queue) app.dom.getElementById('remainingTasksList').innerHTML = ui.queue;
+  restoreQueue(app, ui.queue);
   app.host.querySelector('details.template-section').open = Boolean(ui.templatesOpen);
   restoreDrafts(app.host, ui.drafts ?? []);
+  restoreQueueErrors(app, ui.queue);
+  if (app.requiredDeficit) app.updateReallocationSummary(app.requiredDeficit);
   app.updateSetupTimeRemaining();
   app.updateRemainingAssignedTime();
   const input = app.host.querySelector('[data-time-file]');
