@@ -1,3 +1,4 @@
+import { refreshReadingWidgets } from './reading-widgets.js';
 import { watchCalendar } from '../../../../packages/platform/src/calendar.js';
 import { connectModules, stopModules } from './modules.js';
 import { committed } from './committed.js';
@@ -13,6 +14,7 @@ export function mountShell(root, base) {
     Object.assign(context, connectModules(state));
     const stopPwa = mountPwa(state, base);
     const stopCalendar = watchCalendar(window, () => calendarRefresh(context));
+    const stopReading = context.reading.subscribe(() => refreshReadingWidgets(context));
     const stopState = state.subscribe(() => committed(context));
     const perform = (event) => {
         if (event.target instanceof Element && event.target.closest('[data-skip]')) {
@@ -41,7 +43,7 @@ export function mountShell(root, base) {
     const storageChanged = event => storageRefresh(event, context);
     window.addEventListener('storage', storageChanged);
     const ticker = window.setInterval(() => refreshActivityTimes(root, state), 1000);
-    const visible = () => refreshActivityTimes(root, state);
+    const visible = () => { refreshActivityTimes(root, state); refreshReadingWidgets(context); };
     document.addEventListener('visibilitychange', visible);
     return () => {
         window.clearInterval(ticker);
@@ -51,6 +53,7 @@ export function mountShell(root, base) {
         stopCalendar();
         stopPwa();
         stopState();
+        stopReading();
         stopRouter();
         root.removeEventListener('click', perform);
         root.removeEventListener('change', perform);

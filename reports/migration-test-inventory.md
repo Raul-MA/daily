@@ -52,7 +52,7 @@ Counts include Node `assert.*` and Playwright expectation matcher calls, across 
 - Game `fixtures/gameplay-*.json`: original in-test object expressions evaluated with a synthetic `__NOW__` timestamp and the original session fixture functions; runtime substitution preserves timestamps.
 - Piano and plant domain imports: test-only loader; absent exports throw, present files import normally.
 - WhatsApp standalone assertions: wrapped into three discovered Node tests, with source-root-aware reads and the same VM behavior.
-- Time Budget had no original suite; eight domain and eight browser characterization cases were authored and passed against the original before implementation. Reader characterization remains required. No cases are skipped or claimed to exist.
+- Time Budget had no original suite; eight domain and eight browser characterization cases were authored and passed against the original before implementation. Reader now has additional authored source characterization and native acceptance cases. No cases are skipped or claimed to exist.
 
 ## Approved future differences
 
@@ -60,7 +60,7 @@ Piano continuation across hidden/navigation states is planned but not implemente
 
 ## Source working-tree inventory
 
-Coffee commit `8711d56c1330d6ce626662bbf98fb440eb2e10c4` has modified `COMPASS.md`, untracked `docs/`, an untracked personal JSON backup and `standalone_excel/`. These stayed untouched and were excluded. No original license files were found among the copied repositories; source ownership and commits remain recorded. Reader commit `b3892b2417b8167d0cd063c31b2b69da781fd4a9` was researched in the plan; no local Reader suite exists.
+Coffee commit `8711d56c1330d6ce626662bbf98fb440eb2e10c4` has modified `COMPASS.md`, untracked `docs/`, an untracked personal JSON backup and `standalone_excel/`. These stayed untouched and were excluded. No original license files were found among the copied repositories; source ownership and commits remain recorded. Reader source commit `b3892b2417b8167d0cd063c31b2b69da781fd4a9` is pinned at `/workspaces/.daily-reader-source`; authored characterization now runs against it.
 
 ## Local platform and plants additions (2026-10-15)
 
@@ -110,6 +110,12 @@ The loading placeholder is a status paragraph, so source heading-readiness waits
 `piano-ui-verified.txt` is the complete passing full run. General, Plants, Coffee, Games and Time Budget regressions also pass in the `-with-piano.txt` reports. Source hashes, split destinations and all audio/image assets are recorded in `piano-source-map.json`. Original repos remain untouched. Authored content localization, combined import validation and physical-device acceptance are final gates.
 
 
-## Reader characterization and core (2026-10-16)
+## Reader characterization and mounted integration (2026-10-16)
 
-Source commit `b3892b2417b8167d0cd063c31b2b69da781fd4a9` had no suite. Twelve new characterization cases and five browser flows pass against the unchanged source before UI implementation. Six domain and six persistence/credential/concurrency contracts were added before their code, with retained red reports. Native unit total is 24; the five mounted workflows remain red until the view is integrated. See `modules/reading/docs/behavior.md`, `reading-source-map.json` and progress for exact evidence/remaining work. Shortcut count=2 is now deliberately valid, so the legacy invalid-count fixture uses 21 while preserving fallback assertions. No personal token or authenticated API response is used.
+Source commit `b3892b2417b8167d0cd063c31b2b69da781fd4a9` had no suite. Twelve unit characterization and six browser workflows pass against the unchanged source (`baseline-reading-complete.txt`). Source assertions remain in `test/domain.test.mjs`, `test/network.test.mjs` and `e2e/reader.spec.js`, through the baseline/native adapters in `test/source.mjs` and `e2e/fixtures.js`. Remembered-item revalidation was characterized against source before its native addition. Intentional custom-count support changes the invalid-count fixture from 2 to 21 while preserving fallback assertions and adding valid 2/20 coverage.
+
+Native discovery is now **51 unit and 29 browser cases**. Added contracts cover custom/uniform/unknown-duration selection; strict schemas and bounded scans; root preservation, quota/stale/account cancellation; local request limits, Retry-After and composed deadlines; metadata/review cache isolation; selection versus fetch timestamps; last-item validation; explicit confirmed review completion, feedback handoff and capability-gated Q&A; native/legacy protected backup previews, tamper/stale rejection and credential privacy. Cross-tab account generation rejects obsolete late picks and session credentials after reopening. Review widget freshness refreshes after fifteen minutes without error retry loops.
+
+Native browser additions cover launch-only filters, custom preferences, stable picks across Home/reload, separate token storage/forget, central settings and language/token/invalid drafts, cached offline picks/reviews, stale/quota recovery, recovery-required imports and token-free exports. Request lifecycle contracts cover token-entry shortcuts, stale token-test responses and completion during language changes. The auth fixture originally waited indefinitely on a fulfilled empty-204 response's `finished()`; it now waits for the response event and UI frames. `reading-auth-race-red.txt` records the actual obsolete-draft success defect (27 pass/one fail), rather than treating the earlier fixture timeout as behavioral evidence. The first no-token shortcut also exposed a real detached-dialog mount failure; opening is now deferred until attachment. `reading-request-lifecycle-red.txt` separately records review completion being replaced by a remount refresh.
+
+`reading-backup-ui.txt` passes the earlier 48 unit/25 browser set. `reading-final-ui.txt` passes 51 unit/28 browser before the last shortcut contract. `reader-shared-regressions.txt` passes all 51 unit/29 browser cases and General/affected modules; only unfinished WhatsApp is red. All fixture tokens and API data are synthetic. No live authenticated/browser-origin/iPhone acceptance is claimed. Source phone and native phone screenshots preserve source layout, with the added explicit Refresh control. Source mapping is in `reading-source-map.json`; API, import and shortcut semantics are in `modules/reading/docs/behavior.md`.

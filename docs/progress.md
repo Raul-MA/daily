@@ -6,23 +6,24 @@ Updated: 2026-10-16. Repo: `/workspaces/daily`, branch `main`.
 
 Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No workflows, pushes, Pages configuration or deployments. Keep real Readwise/Reader API calls for the user's later token test; unverified live access does not block implementation. Do not request personal tokens or backup files.
 
-The shared platform, plants, Coffee, Games, Time Budget and piano have passing local workflow checks; piano is saved as `cda9fc0`. **Current: Reader is in progress.** The original 12 unit characterization cases and five browser workflows pass against source. Native domain/persistence has 24 passing unit cases; its mounted UI is absent and the full module remains red. Continue with transport/review/shared-browser contracts, then the Reader UI and shell integration. See the Reader checkpoint below. WhatsApp and final migration/localization gates follow, one app at a time. Coffee Excel remains excluded.
+The shared platform, plants, Coffee, Games, Time Budget, piano and **Reader now pass local workflow checks**. Reader is ready for a local checkpoint following core `21038b0`: 51 unit + 29 browser cases pass, with all previously completed scopes green in `reader-shared-regressions.txt`. **Next: implement WhatsApp**, starting from its copied source tests and the current three missing-module failures in that report. Read its module rules and original source, add draft/migration/browser contracts before implementation, preserve source validation/local-time/DST/handoff behavior, and mount it under the shared worker/router. Final localization, combined recovery and device gates follow. Coffee Excel remains excluded.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 65 unit + 19 browser cases pass | `reports/platform-with-piano.txt` |
-| Plants | 23 unit + 11 browser cases pass | `reports/plants-with-piano.txt` |
+| General | 65 unit + 19 browser cases pass | `reports/reader-shared-regressions.txt` |
+| Plants | 23 unit + 11 browser cases pass | `reports/reader-shared-regressions.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/piano-final-lint.txt` |
-| Native JS syntax | 612 files pass; this is not typechecking | `reports/piano-final-syntax.txt` |
-| Static preparation | 576 unchanged native files/assets prepared | `reports/piano-final-build.txt` |
-| Coffee | 17 unit + 28 browser cases pass | `reports/coffee-with-piano.txt` |
-| Games | 15 unit + 30 browser cases pass | `reports/games-with-piano.txt` |
-| Time Budget | 17 unit + 17 browser cases pass | `reports/time-budget-with-piano.txt` |
-| Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/piano-ui-verified.txt` |
-| Whole migration | Incomplete; reading, WhatsApp and final migration gates remain pending | Last full red evidence: `reports/red-all.txt` |
+| Strict full-scope lint | Pass | `reports/reading-final-lint.txt` |
+| Native JS syntax | 666 files pass; this is not typechecking | `reports/reading-final-syntax.txt` |
+| Static preparation | 613 unchanged native files/assets prepared | `reports/reading-final-build.txt` |
+| Coffee | 17 unit + 28 browser cases pass | `reports/reader-shared-regressions.txt` |
+| Games | 15 unit + 30 browser cases pass | `reports/reader-shared-regressions.txt` |
+| Time Budget | 17 unit + 17 browser cases pass | `reports/reader-shared-regressions.txt` |
+| Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/reader-shared-regressions.txt` |
+| Reader | 51 unit + 29 browser cases pass | `reports/reader-shared-regressions.txt` |
+| Whole migration | Incomplete; WhatsApp has three missing-module failures and final migration gates remain pending | `reports/reader-shared-regressions.txt` |
 
 No skipped tests or relaxed lint thresholds. Original plant assertions remain unchanged. New-app parity is not established by original baseline results.
 
@@ -48,8 +49,8 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 ## Resume and remaining gates
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and the authoritative `docs/pwa-consolidation-plan.md`.
-2. Read Reader source/module docs and author characterization before implementing it. Preserve its settings, filters, picks, shortcuts and original appearance while moving persistence into Daily.
-3. Time Budget and piano characterization/integration pass locally. Reader characterization and WhatsApp migration remain next, one app at a time.
+2. Reader is locally accepted. Read WhatsApp source/module docs, then add its missing draft/migration/browser contracts before implementation. Preserve its original time validation, encoding, handoff/copy fallback and appearance.
+3. Implement and locally accept WhatsApp under the shared router/worker, then finish release gates, one app at a time.
 4. Complete combined backup/import schemas/reference validation, legacy migration exporters, concurrency policy, all-app offline/update checks, full localization (including plant guides), install assets and device checklist. Real iPhone/Things/Readwise acceptance remains deferred and must never be claimed passing from browser mocks.
 5. Run `npm run verify` before claiming the whole migration complete. Until all apps are implemented it must remain red. Save local checkpoints; no remote work.
 
@@ -128,3 +129,37 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - Native service saves settings/picks/last item with module revision checks and preserves unrelated data. Tokens use separate optional credential keys and memory by default; changing/forgetting accounts clears personal picks/cache. Pending results cannot overwrite changed account/preferences. Current metadata cache is memory-only; UI, persisted disposable cache, rate limiting/cooldown, full request timeout composition, last-item revalidation, Daily Review/Q&A/fallback, central settings, widgets, imports and offline acceptance are unfinished.
 - Official API docs rechecked on 2026-10-16. Keep real requests and success/failure handling for the user's later private token test. Public docs still do not establish structured Q&A or per-card feedback semantics; use the agreed direct-review fallback without invented scheduling or content.
 - **Exact next step:** add tests for rate/Retry-After/timeout behavior, last-item revalidation, review/fallback and shared UI contracts, then implement those features and port source HTML/CSS under a scoped Reader wrapper. Run the five source browser assertions through the mounted app before claiming UI parity. `scripts/discovery.mjs` expects 24 unit / five browser cases currently; update counts as contracts are added. The full Reader suite must remain red while the UI is absent. Baseline static server session `45960` serves `/workspaces` on 8767. Original source is not a runtime dependency.
+
+
+## Reader transport and picker UI in progress (after core checkpoint `21038b0`)
+
+- Added four transport contracts before their implementations (`reading-transport-red.txt`): partial-page scan allowances, local 20/minute rolling limit, Retry-After cooldown and deadlines composed with caller cancellation. All 28 native unit cases now pass (`reading-transport.txt`). One initial scan fixture incorrectly repeated its cursor; it now supplies distinct cursors while retaining the exact [100, 1] allowance assertion.
+- Ported source HTML/CSS into a scoped Reader wrapper, preserving all five source-browser assertions. Added five shared UI contracts first (`reading-shared-ui-red.txt`): launch-only overrides, custom controls/policy, persistent picks without reshuffling, account forgetting and central shared preferences/language drafts.
+- `reading-mounted.txt` caught an actual browser-only illegal fetch invocation caused by calling the native function as an options-object method. The default fetch is now bound to the browser global. `reading-picker-ui.txt` passes all 28 unit plus all ten browser cases, including the original five source workflows. Full-scope lint passes in `reading-ui-lint.txt`.
+- Mounted picker and central preferences use the same settings; current picks are persistent and Home summaries navigate without automatically opening Reader. Tokens remain outside root data. Scoped original layout and custom count/time, uniform sampling, unknown-duration preference and ordered locations are present. The source browser baseline still runs against the untouched reference app on 8767.
+- **Exact next work:** finish the required Daily Review client/view, pure capability-gated Q&A presenter and explicit direct-feedback fallback, with tests before implementation. Add last-item revalidation, persistence of disposable account caches, request freshness/truncation display, import/export, English/Spanish reader controls, before/after screenshots, offline/stale/quota coverage. Then run General and affected module regressions for shared mounts/settings/widgets and save a complete Reader checkpoint. Current picker UI is green but the entire reading plan is unfinished; no authenticated API/device acceptance is claimed.
+
+
+## Reader UI / review / recovery checkpoint in progress (2026-10-16)
+
+- Native source baseline now passes 12 unit + six browser cases (`baseline-reading-complete.txt`), including remembered-item revalidation and source phone capture. Native core/UI retains source assertions; custom count 1–20 and finite-budget unknown-duration rules have additional contracts.
+- 48 native unit cases pass (`reading-backup.txt`). Disposable account-scoped Reader metadata and review caches use separate session keys; authoritative picks/preferences/remembered item remain in `daily:v1`. Cache timestamps and partial-scan warnings distinguish selection from fetch time. Forget removes credentials even when canonical record cleanup hits quota. Last-item revalidation removes finished/archived items without discarding prior state on errors.
+- Daily Review uses actual documented GET/latest and explicit server-confirmed completion requests. Ordinary highlights remain ordinary; the pure capability-gated Q&A presenter has synthetic acceptance tests but public response support is not established. Never/Soon/Later/Someday hand off to Readwise; no invented scheduling or deletion. Independent widgets cannot block local apps.
+- Reader and central settings share preferences; English/Spanish controls preserve fetched titles, invalid drafts and unsaved token input through language changes. Cached picks/review reopen offline, with explicit freshness/error labels. Stale settings and quota failures retain drafts and previous saved data. Root mount/widget integration changes are uncommitted and need General/affected module regressions.
+- Native and legacy Reader imports validate before a read-only count preview, require recovery download before confirmation, preserve unrelated modules, reject tampering/stale confirmation and exclude tokens/cache from exports. New backup UI tests first failed on absent controls (`reading-backup-ui-red.txt`: 23 browser pass / two fail); implementation is now being verified.
+- Exact next step: finish `reading-backup-ui.txt`, then record red and fix shortcut token-entry launch overrides, stale token-test responses and review language remount during completion (`e2e/request-lifecycle.spec.js`). Review widget freshness and account concurrency remain to audit. Update Reader Compass/behavior/source-map/test inventory, run full lint/syntax, General and affected regressions sequentially, then save a Reader checkpoint. Do not start WhatsApp before Reader acceptance. No live authentication, physical iPhone or whole-migration acceptance is claimed.
+
+- Reader final verification update: `reading-final-ui.txt` passes all 51 unit and 28 browser cases. Full lint passes (`reading-final-lint.txt`); native syntax passes for 666 files (`reading-final-syntax.txt`). Original/native 390px phone screenshots were reviewed: source geometry/colors match, with the intentional Refresh control addition. `reading-account-freshness-red.txt` records actual cross-tab/TTL failures and `reading-account-freshness.txt` passes all 21 targeted cases. Epoch identity is attached to optional stored credentials so reopening an obsolete session does not revive its account.
+- `reading-auth-race-red.txt` has 27 browser passes / one actual stale token-validation failure, with its corrected fixture. `reading-final-ui.txt` proves the guarded success path passes. Initial no-token dialogs now open only after DOM attachment; review remounts no longer replace a pending completion.
+- Exact next step: finish `reading-shortcut-language-red.txt` (29 browser contracts), mark the resumed shortcut consumed before language remount, then run General and all affected module regressions sequentially. Update current evidence/counts and save the Reader integration checkpoint before WhatsApp.
+
+- `reading-shortcut-language-red.txt` records 28 browser passes and one actual language-triggered reshuffle after a token-entry shortcut. The resumed run now sets the same consumed flag as an already-authenticated launch. `node scripts/test.mjs all --report reports/reader-shared-regressions.txt` is running sequentially (session `30159`). Expect WhatsApp to remain red because it is not implemented; assess each scope separately and do not claim a passing whole migration. Do not rebuild or run another browser suite until this session finishes.
+
+
+## Reader local acceptance complete (2026-10-16)
+
+- `reader-shared-regressions.txt` completed sequentially. General 65 unit + 19 browser, Plants 23 + 11, Coffee 17 + 28, Games 15 + 30, Time Budget 17 + 17, Piano 53 + ten native browser plus both broad original scripts, and Reader 51 + 29 all pass. Piano original scripts include 320/360/390px lesson/exercise pages, 44 library routes, real local audio completion/cancellation, native swipe and shared-worker offline reveal.
+- The command exits nonzero only because WhatsApp's three copied tests fail on its absent `src/app.js` / private-worker replacement. These are unfinished work, not waived failures. No tests were skipped or assertions relaxed.
+- Reader source/mounted phone comparison was reviewed. Full-scope strict lint, 666-file native syntax and static preparation of 613 files/assets pass (`reading-final-lint.txt`, `reading-final-syntax.txt`, `reading-final-build.txt`). API requests remain real, but tests use synthetic responses; no authenticated API/iPhone acceptance is claimed.
+- Native interface, settings, shortcuts, metadata cache/freshness, remembered-item revalidation, latest Review/direct feedback, credential/account isolation, offline recovery and protected Reader backups are implemented. Compass/behavior/source-map/inventory are current. Full localization/recovery/concurrency/update audits across all apps remain Stage 8 gates.
+- Exact next step: read WhatsApp's source and copied three tests, establish the unchanged baseline, add draft persistence/import/EN-ES/browser acceptance before implementation. Do not push, add workflows or deploy. Save another local checkpoint after WhatsApp acceptance.

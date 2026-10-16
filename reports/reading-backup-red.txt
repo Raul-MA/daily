@@ -1,0 +1,50 @@
+✖ Reader exports versioned settings and current picks without credentials or disposable pools (21.031236ms)
+✖ Reader legacy migration preview normalizes aliases and discards credentials without changing saved data (2.169086ms)
+✖ Reader replacement previews reject tampering and stale roots before mutation (1.8823ms)
+✖ Reader confirmed restore preserves other modules and language while requiring token reentry (2.332701ms)
+✖ failed Reader restore retains previous primary records and credentials (1.398448ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 55.698789
+
+✖ failing tests:
+
+test at modules/reading/test/backup.test.mjs:17:1
+✖ Reader exports versioned settings and current picks without credentials or disposable pools (21.031236ms)
+  TypeError: service.exportBackup is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/backup.test.mjs:19:39)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/reading/test/backup.test.mjs:28:1
+✖ Reader legacy migration preview normalizes aliases and discards credentials without changing saved data (2.169086ms)
+  TypeError: service.previewImport is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/backup.test.mjs:32:27)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/reading/test/backup.test.mjs:42:1
+✖ Reader replacement previews reject tampering and stale roots before mutation (1.8823ms)
+  TypeError: service.exportBackup is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/backup.test.mjs:44:49)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/reading/test/backup.test.mjs:56:1
+✖ Reader confirmed restore preserves other modules and language while requiring token reentry (2.332701ms)
+  TypeError: service.exportBackup is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/backup.test.mjs:59:36)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/reading/test/backup.test.mjs:72:1
+✖ failed Reader restore retains previous primary records and credentials (1.398448ms)
+  TypeError: service.exportBackup is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/backup.test.mjs:74:36)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)

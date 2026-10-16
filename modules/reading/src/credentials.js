@@ -26,12 +26,13 @@ function nextIdentity(current, token) { return token === current.token && curren
 export function createCredentials(options) {
   const stores = { local: options.storage ?? globalThis.localStorage, session: options.sessionStorage ?? globalThis.sessionStorage };
   let current = loadCredentials(stores, options.installed);
-  function set(value, mode) {
+  function set(value, mode, accountId) {
     if (typeof value !== 'string' || !['memory', 'session', 'persistent'].includes(mode)) throw new Error('Invalid credential preference.');
     const token = value.trim();
-    const next = { token, accountId: nextIdentity(current, token), mode };
+    const next = { token, accountId: accountId || nextIdentity(current, token), mode };
     saveCredential(stores, next);
     current = next;
   }
-  return { token: () => current.token, accountId: () => current.accountId, mode: () => current.mode, set };
+  function forget() { current = { token: '', accountId: '', mode: 'memory' }; saveCredential(stores, current); }
+  return { forget, token: () => current.token, accountId: () => current.accountId, mode: () => current.mode, set };
 }

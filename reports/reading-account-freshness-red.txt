@@ -1,0 +1,61 @@
+✔ Reader startup is read-only and preference saves preserve other modules and global language (16.888938ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (2.067369ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (3.261257ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (5.176282ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (1.931044ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (1.574349ms)
+✔ Reader revalidates a remembered item by ID and removes archived completed or missing items (4.630673ms)
+✔ Reader remembered-item validation updates progress and keeps the previous item on request failure (1.978192ms)
+✔ Reader picks distinguish selection time from metadata fetch time when picking again from cache (2.471213ms)
+✔ Reader forgetting credentials succeeds even when clearing canonical cached picks hits quota (1.832621ms)
+✖ Reader account changes in another tab reject late picks and require the old tab to reconnect (1.748924ms)
+✔ scheduled review without credentials retains its direct fallback and makes no request (0.59429ms)
+✔ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (0.630427ms)
+✔ absent review is empty while network and authorization failures preserve a previously cached review (0.682033ms)
+✔ review completion is explicit server-confirmed and idempotent with a latest-review preflight (0.829177ms)
+✔ changed latest review or failed completion never reports the displayed review complete (1.078803ms)
+✔ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.42302ms)
+✔ a late review response cannot replace the state after its account changes (0.446373ms)
+✔ Q&A requires explicit structured capability hides answers initially and resets on card changes (0.638291ms)
+✖ review widgets reuse fresh results refresh after fifteen minutes and do not automatically loop after errors (0.73397ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 18
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 75.687327
+
+✖ failing tests:
+
+test at modules/reading/test/persistence.test.mjs:159:1
+✖ Reader account changes in another tab reject late picks and require the old tab to reconnect (1.748924ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/persistence.test.mjs:169:3)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /abort|changed|account/i,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at modules/reading/test/review.test.mjs:126:1
+✖ review widgets reuse fresh results refresh after fifteen minutes and do not automatically loop after errors (0.73397ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/review.test.mjs:136:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -2,7 +2,7 @@
 
 One local, personal PWA being built from seven existing apps. The app uses plain HTML, CSS and JavaScript modules. All development is local; hosting and workflows are deferred.
 
-The shared shell works: responsive dashboard, EN/ES, settings, deep links, activity summaries and offline access. Plants, Coffee, Games and Time Budget are connected, including care/history, Things settings, drink logging, beans, scoring, statistics, persisted time budgets, independent countdowns and import/export. Piano includes the full lesson/exercise library, audio, persistent practice and saved history. Reading and WhatsApp remain pending. Keep using the original installations until migration and device checks pass.
+The shared shell works: responsive dashboard, EN/ES, settings, deep links, activity summaries and offline access. Plants, Coffee, Games and Time Budget are connected, including care/history, Things settings, drink logging, beans, scoring, statistics, persisted time budgets, independent countdowns and import/export. Piano includes the full lesson/exercise library, audio, persistent practice and saved history. Reader now includes the picker, central preferences, saved picks, latest Daily Review/direct handoffs and protected backup imports; its local workflow and shared regression checks pass. WhatsApp remains pending. Keep using the original installations until migration and device checks pass.
 
 ## Local use
 

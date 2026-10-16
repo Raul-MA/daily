@@ -22,14 +22,26 @@ function validTime(value) { return value === null || typeof value === 'string' |
 function validReading(value) {
   return validTime(value.reading_time) && nonnegative(value.word_count) && nonnegative(value.reading_progress) && value.reading_progress <= 1;
 }
+function validScan(value) {
+  if (value === undefined || value === null) return true;
+  return keys(value, ['scanned', 'truncated']) && (value.scanned === null || integer(value.scanned, 0, 6000)) && (value.truncated === null || typeof value.truncated === 'boolean');
+}
+function validSettingsKey(value) { try { return validSettings(JSON.parse(value)); } catch { return false; } }
+function validPickMetadata(value) {
+  if (!Number.isFinite(value.selectedAt) || value.selectedAt < 0 || !validSettingsKey(value.settingsKey)) return false;
+  if (value.fetchedAt !== undefined && value.fetchedAt !== null && !nonnegative(value.fetchedAt)) return false;
+  return validScan(value.scan);
+}
 function validCollection(value) { return Array.isArray(value) && value.length <= 20; }
 function validPicks(value) {
   if (value === null) return true;
-  if (!keys(value, ['documents', 'selectedAt', 'settingsKey']) || !validCollection(value.documents)) return false;
-  if (!Number.isFinite(value.selectedAt) || value.selectedAt < 0 || typeof value.settingsKey !== 'string') return false;
+  if (!keys(value, ['documents', 'selectedAt', 'settingsKey', 'fetchedAt', 'scan']) || !validCollection(value.documents)) return false;
+  if (!validPickMetadata(value)) return false;
   return value.documents.every(validDocument) && new Set(value.documents.map(item => item.id)).size === value.documents.length;
 }
 export function initialReading() { return { settings: structuredClone(DEFAULTS), picks: null, lastItem: null }; }
 export function validReadingData(value) {
-  return keys(value, ['settings', 'picks', 'lastItem']) && validSettings(value.settings) && validPicks(value.picks) && (value.lastItem === null || validDocument(value.lastItem));
+  if (!keys(value, ['settings', 'picks', 'lastItem']) || !validSettings(value.settings)) return false;
+  if (!value.settings.rememberLastItem && value.lastItem !== null) return false;
+  return validPicks(value.picks) && (value.lastItem === null || validDocument(value.lastItem));
 }

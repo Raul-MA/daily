@@ -1,0 +1,39 @@
+✔ Reader startup is read-only and preference saves preserve other modules and global language (15.143485ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (6.125193ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (6.533551ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (8.253263ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (3.075857ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (2.497237ms)
+✔ Reader revalidates a remembered item by ID and removes archived completed or missing items (6.473974ms)
+✔ Reader remembered-item validation updates progress and keeps the previous item on request failure (4.001062ms)
+✔ Reader picks distinguish selection time from metadata fetch time when picking again from cache (4.762713ms)
+✖ Reader forgetting credentials succeeds even when clearing canonical cached picks hits quota (3.577602ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 89.018225
+
+✖ failing tests:
+
+test at modules/reading/test/persistence.test.mjs:147:1
+✖ Reader forgetting credentials succeeds even when clearing canonical cached picks hits quota (3.577602ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'fixture-private'
+  - ''
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/persistence.test.mjs:154:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'fixture-private',
+    expected: '',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

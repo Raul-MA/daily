@@ -1,0 +1,154 @@
+✖ scheduled review without credentials retains its direct fallback and makes no request (4.1234ms)
+✖ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (0.758885ms)
+✖ absent review is empty while network and authorization failures preserve a previously cached review (1.365296ms)
+✖ review completion is explicit server-confirmed and idempotent with a latest-review preflight (0.523416ms)
+✖ changed latest review or failed completion never reports the displayed review complete (0.893897ms)
+✖ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.699966ms)
+✖ a late review response cannot replace the state after its account changes (0.68615ms)
+✖ Q&A requires explicit structured capability hides answers initially and resets on card changes (0.631046ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 45.018948
+
+✖ failing tests:
+
+test at modules/reading/test/review.test.mjs:11:1
+✖ scheduled review without credentials retains its direct fallback and makes no request (4.1234ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/review/service.js' imported from /workspaces/daily/modules/reading/test/review.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/review/service.js'
+  }
+
+test at modules/reading/test/review.test.mjs:20:1
+✖ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (0.758885ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/review/service.js' imported from /workspaces/daily/modules/reading/test/review.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/review/service.js'
+  }
+
+test at modules/reading/test/review.test.mjs:35:1
+✖ absent review is empty while network and authorization failures preserve a previously cached review (1.365296ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/review/service.js' imported from /workspaces/daily/modules/reading/test/review.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/review/service.js'
+  }
+
+test at modules/reading/test/review.test.mjs:49:1
+✖ review completion is explicit server-confirmed and idempotent with a latest-review preflight (0.523416ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/review/service.js' imported from /workspaces/daily/modules/reading/test/review.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/review/service.js'
+  }
+
+test at modules/reading/test/review.test.mjs:64:1
+✖ changed latest review or failed completion never reports the displayed review complete (0.893897ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/review/service.js' imported from /workspaces/daily/modules/reading/test/review.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/review/service.js'
+  }
+
+test at modules/reading/test/review.test.mjs:83:1
+✖ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.699966ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/review/service.js' imported from /workspaces/daily/modules/reading/test/review.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/review/service.js'
+  }
+
+test at modules/reading/test/review.test.mjs:96:1
+✖ a late review response cannot replace the state after its account changes (0.68615ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/review/service.js' imported from /workspaces/daily/modules/reading/test/review.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/review/service.js'
+  }
+
+test at modules/reading/test/review.test.mjs:109:1
+✖ Q&A requires explicit structured capability hides answers initially and resets on card changes (0.631046ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/review/presentation.js' imported from /workspaces/daily/modules/reading/test/review.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/review/presentation.js'
+  }

@@ -1,0 +1,48 @@
+✖ Reader disposable metadata cache survives a new instance but never crosses account identities (5.698908ms)
+✖ scheduled-review cache is separate from backups and reopens as cached data until a successful refresh (3.519944ms)
+✔ Reader startup is read-only and preference saves preserve other modules and global language (7.702635ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (2.265342ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (3.789681ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (4.975159ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (1.621163ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (1.905173ms)
+✖ Reader revalidates a remembered item by ID and removes archived completed or missing items (0.925476ms)
+✖ Reader remembered-item validation updates progress and keeps the previous item on request failure (0.860194ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 6
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 67.358032
+
+✖ failing tests:
+
+test at modules/reading/test/offline.test.mjs:10:1
+✖ Reader disposable metadata cache survives a new instance but never crosses account identities (5.698908ms)
+  TypeError: Cannot read properties of null (reading '0')
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/offline.test.mjs:18:40)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/reading/test/offline.test.mjs:25:1
+✖ scheduled-review cache is separate from backups and reopens as cached data until a successful refresh (3.519944ms)
+  TypeError: Cannot read properties of null (reading 'id')
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/offline.test.mjs:33:39)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/reading/test/persistence.test.mjs:105:1
+✖ Reader revalidates a remembered item by ID and removes archived completed or missing items (0.925476ms)
+  TypeError: service.revalidateLastItem is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/persistence.test.mjs:113:19)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/reading/test/persistence.test.mjs:119:1
+✖ Reader remembered-item validation updates progress and keeps the previous item on request failure (0.860194ms)
+  TypeError: service.revalidateLastItem is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/persistence.test.mjs:126:17)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)

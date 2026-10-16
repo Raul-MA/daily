@@ -1,0 +1,79 @@
+✖ Reader pagination requests only the remaining scan allowance (7.044327ms)
+✖ Reader enforces a local twenty-request rolling limit without automatically retrying (5.146578ms)
+✖ Reader throttling honors Retry-After and rejects retries until the cooldown expires (35.118885ms)
+✖ Reader request deadlines still abort when the caller supplies its own signal (502.111361ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 569.200397
+
+✖ failing tests:
+
+test at modules/reading/test/transport.test.mjs:5:1
+✖ Reader pagination requests only the remaining scan allowance (7.044327ms)
+  Error: Invalid or repeating Reader cursor.
+      at Object.fetchLocation (file:///workspaces/daily/modules/reading/src/client.js:35:77)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/transport.test.mjs:12:18)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/reading/test/transport.test.mjs:18:1
+✖ Reader enforces a local twenty-request rolling limit without automatically retrying (5.146578ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/transport.test.mjs:29:3)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function (anonymous)],
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at modules/reading/test/transport.test.mjs:36:1
+✖ Reader throttling honors Retry-After and rejects retries until the cooldown expires (35.118885ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: Readwise rate limit reached. Try again after a moment or lower the scan limit.
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/transport.test.mjs:44:3)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Readwise rate limit reached. Try again after a moment or lower the scan limit.
+        at requestError (file:///workspaces/daily/modules/reading/src/client.js:5:39)
+        at page (file:///workspaces/daily/modules/reading/src/client.js:15:27)
+        at async Object.fetchLocation (file:///workspaces/daily/modules/reading/src/client.js:29:20)
+        at async waitForActual (node:assert:646:5)
+        at async strict.rejects (node:assert:769:25)
+        at async TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/transport.test.mjs:44:3)
+        at async Test.run (node:internal/test_runner/test:1125:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:787:7),
+    expected: [Function (anonymous)],
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at modules/reading/test/transport.test.mjs:52:1
+✖ Reader request deadlines still abort when the caller supplies its own signal (502.111361ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/transport.test.mjs:60:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

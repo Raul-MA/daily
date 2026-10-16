@@ -7,14 +7,17 @@
 
 ## Commands
 
-- `npm run test:reading`: 24 unit and five browser cases; full UI is still red.
+- `npm run test:reading`: 51 unit and 29 browser cases; local acceptance passes in `reports/reader-shared-regressions.txt`.
 - Source baseline: `node scripts/test.mjs reading --baseline http://127.0.0.1:8767/.daily-reader-source/ --report reports/baseline-reading-browser.txt` with the workspace static server running.
 
 ## Key Files
 
 - `src/service.js`, `src/service-actions.js`, `src/validation.js`: versioned settings/picks and stale/failed-write protection.
 - `src/metadata.js`, `src/selection.js`, `src/config.js`: duration, sampling and shortcut rules.
-- `src/client.js`, `src/cache.js`, `src/credentials.js`: real requests, disposable metadata and separate credential storage.
+- `src/client.js`, `src/request.js`, `src/rate-limit.js`, `src/cache.js`, `src/credentials.js`, `src/account-epoch.js`: real requests, disposable metadata and account isolation.
+- `src/view.js`, `src/ui/`, `src/preferences.js`: source picker appearance, shared preferences and language drafts.
+- `src/review/`: latest-review client, explicit completion, ordinary highlights and conditional Q&A presenter.
+- `src/imports.js`, `src/backup-ui.js`: validated preview/recovery/confirmation and credential-free exports.
 - `test/source.mjs`: unchanged-source VM characterization adapter; `e2e/fixtures.js`: synthetic API fixtures and baseline/native route adapter.
 
 ## Non-Obvious Patterns

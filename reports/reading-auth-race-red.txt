@@ -1,0 +1,129 @@
+Suite: reading
+✔ Reader exports versioned settings and current picks without credentials or disposable pools (19.380615ms)
+✔ Reader legacy migration preview normalizes aliases and discards credentials without changing saved data (3.001021ms)
+✔ Reader replacement previews reject tampering and stale roots before mutation (2.976235ms)
+✔ Reader confirmed restore preserves other modules and language while requiring token reentry (2.666688ms)
+✔ failed Reader restore retains previous primary records and credentials (5.12707ms)
+✔ Reader duration parsing preserves numeric text and word-count estimates (0.657267ms)
+✔ Reader progress is bounded and remaining time rounds upward with a one-minute floor (0.395989ms)
+✔ Reader eligibility deduplicates IDs and applies progress remaining-time and safe-link filters (0.562119ms)
+✔ Reader selection prioritizes started items then configured location order without duplicates (0.543805ms)
+✔ Reader links accept only HTTPS Reader hosts and metadata minimization excludes content and tokens (0.455541ms)
+✔ Reader URL configuration preserves aliases location priority and supported shortcut controls (0.736835ms)
+✔ Reader invalid URL preferences retain defaults and advanced limits remain bounded (0.28942ms)
+✔ Reader generated shortcut URLs preserve picking controls and exclude tokens (0.437036ms)
+✔ Reader paginates locations sequentially using cursor and token headers and excludes children (0.453336ms)
+✔ Reader scan cap bounds returned documents and stops requesting further pages (0.387223ms)
+✔ Reader authorization throttling and service errors reject without successful results (1.021075ms)
+✔ Reader session cache contains minimized metadata and invalidates changed scan configuration (0.340987ms)
+✔ Reader disposable metadata cache survives a new instance but never crosses account identities (0.747625ms)
+✔ scheduled-review cache is separate from backups and reopens as cached data until a successful refresh (1.442171ms)
+✔ Reader scan summary preserves truncation across locations and a fresh cached pool retains its fetch timestamp (3.527945ms)
+✔ Reader startup is read-only and preference saves preserve other modules and global language (0.933222ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (1.294606ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (0.481208ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (2.490609ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (1.136692ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (1.970278ms)
+✔ Reader revalidates a remembered item by ID and removes archived completed or missing items (2.423994ms)
+✔ Reader remembered-item validation updates progress and keeps the previous item on request failure (1.158272ms)
+✔ Reader picks distinguish selection time from metadata fetch time when picking again from cache (1.43345ms)
+✔ Reader forgetting credentials succeeds even when clearing canonical cached picks hits quota (0.883178ms)
+✔ Reader account changes in another tab reject late picks and require the old tab to reconnect (0.991029ms)
+✔ Reader cannot revive an obsolete session token by reopening a tab after another account was selected (0.566327ms)
+✔ scheduled review without credentials retains its direct fallback and makes no request (0.365131ms)
+✔ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (0.356896ms)
+✔ absent review is empty while network and authorization failures preserve a previously cached review (0.593628ms)
+✔ review completion is explicit server-confirmed and idempotent with a latest-review preflight (0.606192ms)
+✔ changed latest review or failed completion never reports the displayed review complete (0.706919ms)
+✔ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.427337ms)
+✔ a late review response cannot replace the state after its account changes (0.395639ms)
+✔ Q&A requires explicit structured capability hides answers initially and resets on card changes (0.722409ms)
+✔ review widgets reuse fresh results refresh after fifteen minutes and do not automatically loop after errors (0.609147ms)
+✔ Reader custom counts support two through twenty and uniform sampling can choose unread before started (1.017219ms)
+✔ Reader finite budgets exclude unknown duration unless enabled and always reject archived completed and child records (0.358168ms)
+✔ Reader scan limits count fetched child records and expose truncation instead of scanning forever (0.334564ms)
+✔ Reader repeating cursors and malformed response shapes fail rather than return misleading complete data (0.603416ms)
+✔ Reader caches are account-specific without serializing tokens or full document content (0.227694ms)
+✔ Reader links reject embedded credentials and cache freshness expires using the configured clock (0.232624ms)
+✔ Reader pagination requests only the remaining scan allowance (0.529418ms)
+✔ Reader enforces a local twenty-request rolling limit without automatically retrying (2.221586ms)
+✔ Reader throttling honors Retry-After and rejects retries until the cooldown expires (27.696497ms)
+✔ Reader request deadlines still abort when the caller supplies its own signal (10.141379ms)
+ℹ tests 51
+ℹ suites 0
+ℹ pass 51
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 142.031221
+[WebServer] (node:19350) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 28 tests using 1 worker
+
+(node:19380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/reading/e2e/backup.spec.js:15:1 › Reader exports persisted preferences without credentials or unsaved token drafts (1.8s)
+  ✓   2 modules/reading/e2e/backup.spec.js:30:1 › Reader import previews cancel safely and require recovery before confirmation and token reentry (1.9s)
+  ✓   3 modules/reading/e2e/localization.spec.js:4:1 › Reader dialog drafts including an unsaved token survive close reopen and a language change (1.5s)
+  ✓   4 modules/reading/e2e/localization.spec.js:20:1 › Reader Spanish controls and metadata preserve fetched article titles and saved picks (1.4s)
+  ✓   5 modules/reading/e2e/offline.spec.js:12:1 › Reader saved picks reopen offline and failed refresh retains the previous selection (3.7s)
+  ✓   6 modules/reading/e2e/offline.spec.js:28:1 › scheduled review metadata reopens offline with a cached label while API responses stay out of worker caches (3.8s)
+  ✓   7 modules/reading/e2e/reader.spec.js:4:1 › Reader retains original time and count controls across reload (2.8s)
+  ✓   8 modules/reading/e2e/reader.spec.js:19:1 › Reader returns distinct started-first picks fitting estimated remaining time (2.0s)
+  ✓   9 modules/reading/e2e/reader.spec.js:31:1 › Reader saves progress location cache and shortcut behavior without leaking tokens into URLs (3.1s)
+  ✓  10 modules/reading/e2e/reader.spec.js:53:1 › Reader pick again reuses fresh metadata rather than making additional requests (2.5s)
+  ✓  11 modules/reading/e2e/reader.spec.js:64:1 › Reader distinguishes rejected tokens and throttled document requests (2.3s)
+  ✓  12 modules/reading/e2e/reader.spec.js:79:1 › Reader remembers opened items and revalidates them before offering unfinished continuation (6.3s)
+  ✓  13 modules/reading/e2e/recovery.spec.js:4:1 › invalid Reader custom-control drafts survive a language change without changing saved preferences (1.9s)
+  ✓  14 modules/reading/e2e/recovery.spec.js:17:1 › Reader stale preference drafts cannot overwrite another tab and quota failures remain visible (3.6s)
+  ✓  15 modules/reading/e2e/request-lifecycle.spec.js:10:1 › a shortcut waiting for token entry retains its launch filters without saving them as defaults (2.6s)
+  ✘  16 modules/reading/e2e/request-lifecycle.spec.js:28:1 › an authentication response cannot validate a replacement token draft (6.5s)
+(node:21177) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  17 modules/reading/e2e/request-lifecycle.spec.js:51:1 › changing language during review completion preserves the pending confirmation (1.6s)
+  ✓  18 modules/reading/e2e/review.spec.js:17:1 › review without credentials offers a direct handoff without issuing requests (1.2s)
+  ✓  19 modules/reading/e2e/review.spec.js:26:1 › latest review shows ordinary highlights and explicit Readwise feedback handoffs without marking completion (1.4s)
+  ✓  20 modules/reading/e2e/review.spec.js:37:1 › explicit review completion waits for server confirmation and then disables repeated completion (1.8s)
+  ✓  21 modules/reading/e2e/review.spec.js:46:1 › failed completion keeps the review unfinished and reports the server failure (1.4s)
+  ✓  22 modules/reading/e2e/review.spec.js:54:1 › missing review and API failure retain the direct fallback and leave local apps usable (1.5s)
+  ✓  23 modules/reading/e2e/review.spec.js:63:1 › capability-gated Q&A component reveals answers accessibly and resets on the next card (1.4s)
+  ✓  24 modules/reading/e2e/shared.spec.js:6:1 › Reader shortcut launch overrides do not replace saved preferences (1.8s)
+  ✓  25 modules/reading/e2e/shared.spec.js:15:1 › Reader custom count time policy and unknown-duration settings persist (4.4s)
+  ✓  26 modules/reading/e2e/shared.spec.js:34:1 › Reader saved picks survive Home and reload without reshuffling or new API calls (5.0s)
+  ✓  27 modules/reading/e2e/shared.spec.js:54:1 › Reader forget removes account picks and credential storage while preserving preferences and other modules (2.3s)
+  ✓  28 modules/reading/e2e/shared.spec.js:74:1 › central Reader preferences and the app edit the same settings and retain language drafts (1.6s)
+
+
+  1) modules/reading/e2e/request-lifecycle.spec.js:28:1 › an authentication response cannot validate a replacement token draft 
+
+    Error: expect(locator).not.toContainText(expected) failed
+
+    Locator: locator('#settingsStatus')
+    Expected substring: not "Token works"
+    Received string: "Token works."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "not toContainText" with timeout 5000ms
+      - waiting for locator('#settingsStatus')
+        14 × locator resolved to <p role="status" aria-live="polite" id="settingsStatus" class="status success">Token works.</p>
+           - unexpected value "Token works."
+
+
+      45 |   await response;
+      46 |   await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+    > 47 |   await expect(page.locator('#settingsStatus')).not.toContainText('Token works');
+         |                                                     ^
+      48 |   await expect(page.locator('#tokenInput')).toHaveValue('fixture-second');
+      49 | });
+      50 |
+        at /workspaces/daily/modules/reading/e2e/request-lifecycle.spec.js:47:53
+
+    Error Context: test-results/request-lifecycle-an-authe-04718-e-a-replacement-token-draft/error-context.md
+
+  1 failed
+    modules/reading/e2e/request-lifecycle.spec.js:28:1 › an authentication response cannot validate a replacement token draft 
+  27 passed (1.3m)

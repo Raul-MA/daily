@@ -1,3 +1,6 @@
+import { mountReview } from '../../../../modules/reading/src/review/view.js';
+import { mountReader } from '../../../../modules/reading/src/view.js';
+import { mountReaderPreferences } from '../../../../modules/reading/src/preferences.js';
 import { mountPiano } from '../../../../modules/piano/src/view.js';
 import { mountTimeBudget } from '../../../../modules/time-budget/src/view.js';
 import { captureDrafts, restoreDrafts } from '../../../../packages/ui/src/drafts.js';
@@ -44,9 +47,9 @@ function pageView(context, preferences) {
         return page.node;
     }
     if (context.route.page === 'home')
-        return dashboard(preferences, context.base, { state: context.state, plants: context.plants, piano: context.piano });
-    if (context.route.page === 'settings')
-        return settings(preferences);
+        return dashboard(preferences, context.base, { state: context.state, plants: context.plants, piano: context.piano, reading: context.reading });
+    if (['reader', 'review', 'settings'].includes(context.route.page))
+        return readingPage(context, preferences);
     return modulePlaceholder(context.route, shellText(preferences.language), context.base);
 }
 export function renderShell(context, changedRoute = false) {
@@ -119,4 +122,17 @@ function gamePage(context) {
     context.pageConflict = page.conflict;
     context.pageRestore = page.restore;
     return page.node;
+}
+
+function readingPage(context, preferences) {
+    const options = { route: context.route, base: context.base, service: context.reading, ui: context.moduleUI };
+    const mounts = { reader: mountReader, review: mountReview, settings: mountReaderPreferences };
+    const page = mounts[context.route.page](options);
+    context.pageCleanup = page.dispose;
+    context.pageRestore = page.restore;
+    context.pageConflict = page.conflict;
+    if (context.route.page !== 'settings') return page.node;
+    const view = settings(preferences);
+    view.append(page.node);
+    return view;
 }

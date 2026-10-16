@@ -3,7 +3,7 @@
 ## Start Here
 
 - [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Local only, no workflows or pushes; API token checks are deferred.
-- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. The shared shell, settings, routing, timestamp activities and offline lifecycle are implemented in plain HTML/CSS/JavaScript; plants, Coffee, Games and Time Budget and piano are connected; reading and WhatsApp remain pending.
+- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. The shared shell, settings, routing, timestamp activities and offline lifecycle are implemented in plain HTML/CSS/JavaScript; plants, Coffee, Games and Time Budget and piano are connected; Reader also passes local workflow checks; WhatsApp remains pending.
 
 ## Commands
 
@@ -34,7 +34,7 @@
 
 - The test-only absent-module loader permits discovery and throws when missing behavior is exercised; it never supplies fake successful behavior.
 - Baseline runs target original code in isolated contexts. They do not prove the new PWA works.
-- Time Budget characterization was authored before its port. Reader characterization now passes against source; its native UI remains pending; unfinished feature scopes fail honestly.
+- Time Budget characterization was authored before its port. Reader source characterization and mounted UI checks pass; General and affected regressions pass in `reader-shared-regressions.txt`. WhatsApp remains an unfinished feature scope and fails honestly.
 
 ## Documentation Rules
 

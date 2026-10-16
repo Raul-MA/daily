@@ -1,0 +1,37 @@
+✔ scheduled review without credentials retains its direct fallback and makes no request (5.091625ms)
+✔ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (1.487233ms)
+✔ absent review is empty while network and authorization failures preserve a previously cached review (1.763909ms)
+✖ review completion is explicit server-confirmed and idempotent with a latest-review preflight (15.254129ms)
+✔ changed latest review or failed completion never reports the displayed review complete (6.066705ms)
+✔ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (6.06824ms)
+✔ a late review response cannot replace the state after its account changes (0.762462ms)
+✔ Q&A requires explicit structured capability hides answers initially and resets on card changes (1.128324ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 60.409812
+
+✖ failing tests:
+
+test at modules/reading/test/review.test.mjs:49:1
+✖ review completion is explicit server-confirmed and idempotent with a latest-review preflight (15.254129ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'ready'
+  - 'completing'
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/review.test.mjs:58:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'ready',
+    expected: 'completing',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

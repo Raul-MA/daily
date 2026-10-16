@@ -1,33 +1,41 @@
-# Reader migration boundaries
+# Reading behavior and recovery
 
-## Current state
+## Problem
 
-Reader is unfinished. Its original behavior is characterized, and native domain/persistence code passes unit tests. The shared UI, Daily Review, dashboard providers and complete local acceptance are pending. The full Reader suite intentionally remains red on its missing mounted interface.
+Reader Picker and the new Daily Review share Daily's routing, preferences and offline lifecycle while keeping credentials outside authoritative records. Source commit `b3892b2417b8167d0cd063c31b2b69da781fd4a9` is pinned at `/workspaces/.daily-reader-source` for baseline tests; it is not a runtime dependency. Source hashes and split destinations are in `reports/reading-source-map.json`. Local acceptance passes; see root progress for completed reports.
 
-Source is Reader Picker commit `b3892b2417b8167d0cd063c31b2b69da781fd4a9`, checked out at `/workspaces/.daily-reader-source` for local baseline tests. It has no original tests or AGENTS file. Source hashes are in `reports/reading-source-map.json`. Original README shortcut/privacy explanations remain the baseline reference; deployment instructions are historical and do not authorize remote work.
+## How It Works
 
-## Data and selection
+`service.js` owns version 1 of `daily:v1.modules.reading`: settings, persistent current picks and optional remembered item. Reads never initialize storage. Revision checks reject stale writes; failed commits preserve the previous root and unrelated modules. Page/widget rendering never reshuffles picks or opens Reader. Picker and global Settings edit the same preferences. Scoped source HTML/CSS preserves the original appearance, with added custom controls and shared navigation. English/Spanish translation leaves fetched titles and user text untouched. Dirty controls, dialogs, invalid custom values and token drafts survive language changes.
 
-`service.js` owns version 1 of `daily:v1.modules.reading`: settings, current picks and optional last item. Reads never initialize storage. Revision checks reject stale changes; failed root writes retain the previous document and other modules. Picks persist separately from preferences, so displaying a page must not reshuffle them.
+`metadata.js` retains `ceil(total minutes × (1 − progress))` and the 238-word estimate. Unknown duration is null. `selection.js` deduplicates IDs, excludes archived/completed/child records and supports counts 1–20. Original policy prioritizes started items, then unread by ordered locations; uniform policy samples the eligible pool uniformly. Finite budgets exclude unknown duration unless enabled. The bounded scan is not whole-library randomness.
 
-`credentials.js` keeps tokens in memory by default. Explicit session saving uses `daily:readwise:session:v1`; installed-app saving uses `daily:readwise:token:v1`. Neither key belongs in ordinary backups or generic worker caches. Account changes/forget clear picks, remembered items and metadata cache. Pending results cannot commit after the account or preferences change.
+`client.js` makes real direct requests with Token headers. It scans locations sequentially, bounds each page by the remaining allowance and rejects malformed/repeated cursors. `rate-limit.js` enforces a rolling local 20/minute cap and Retry-After cooldown; there is no automatic retry. `request.js` combines caller cancellation and a 20-second deadline, with no-store/omit-credentials/no-referrer fetch options. The auth test handles its empty 204 response separately. Actual authenticated/browser-origin success remains deferred to the user.
 
-`metadata.js` preserves the original remaining-time formula and 238-word estimate. Unknown duration is null, never zero minutes. `selection.js` excludes archived/completed/child records, deduplicates IDs, supports custom counts 1–20 and uniform or original started-first/location-priority selection. A finite budget excludes unknown duration unless explicitly enabled. Randomness describes the scanned pool, not the whole library.
+`cache.js` stores minimized metadata in memory and a disposable session key. `review/cache.js` stores a separate account-scoped latest review. Opaque account IDs, not tokens, associate caches. Picks distinguish selection time from fetch time; page and widgets show freshness and truncated-scan notices. Offline reopening retains saved picks/highlights; a failed refresh keeps previous data and reports failure. This does not cache full Reader articles.
 
-`config.js` retains the source shortcut parser and aliases. Native UI must translate compatibility parameters into the shared hash route without saving launch-only overrides. The original count=2 invalid fixture now uses count=21, because supporting custom counts is an explicit plan change; the fallback assertion remains, alongside new acceptance for counts 2 and 20.
+`credentials.js` uses memory by default. Explicit session retention uses `daily:readwise:session:v1`; installed-app retention uses `daily:readwise:token:v1`. Neither belongs in root exports or worker caches. `account-epoch.js` keeps an opaque local account generation outside backups. Changing/forgetting credentials invalidates old tabs, late results and stale session credentials; affected tabs must reconnect. Account/preferences changes reject pending results. Forget removes credentials before attempting root cleanup, so a quota failure cannot silently retain the token. Errors remain visible and previous canonical data is preserved if it cannot be replaced.
 
-`client.js` issues real direct requests with explicit token headers, no-store response handling and bounded cursor scans. Truncation is exposed; malformed/repeating cursors reject. Cache metadata is account-specific and currently in memory. Persisted disposable cache, rate-limit cooldown, full timeout composition, last-item revalidation and review operations still require tests/implementation.
+`service-actions.js` revalidates remembered items by ID. Finished, archived, missing and child items disappear; failed requests retain the prior item. Opening a saved pick remembers it only when enabled. Disabling that preference removes the remembered item.
 
-## API evidence
+`review/service.js` retrieves the latest available scheduled review, not an invented review for today's date. Explicit completion preflights the displayed ID, then POSTs only if it is still current and incomplete; completion requires a matching server confirmation. Language changes retain pending confirmation. Review failures remain isolated from local apps. Home uses independent providers and a fifteen-minute freshness window, without retry loops after errors.
 
-Rechecked official [Reader docs](https://readwise.io/reader_api) and [Readwise docs](https://readwise.io/api_deets) on 2026-10-16. Reader list uses cursor pagination and documents a 20/minute limit with Retry-After on throttling. Scheduled review retrieval and explicit completion have separate endpoints. These public docs do not establish per-card resurfacing feedback or structured Q&A support. Keep the accepted direct-review fallback; never fabricate Q&A or simulate scheduling. No authenticated request was made.
+`review/presentation.js` and `review/cards.js` can present explicitly supported structured Q&A with reveal/focus/next-card reset. The documented API currently supplies ordinary highlights; these never become fabricated questions. Never/Soon/Later/Someday are explicit links to choose feedback in Readwise. No private scheduling/delete endpoint is invented. The direct Daily Review link remains available without a token or when requests fail.
 
-## Tests and next work
+`imports.js` accepts `{app:"daily-reading",schemaVersion:1,data}` and legacy `{app:"reader-picker",schemaVersion:1,settings,lastItem}`. Legacy defaults/aliases normalize through a whitelist; tokens and disposable caches are excluded. Preview is read-only, shows counts and explains replacement, preserves unrelated apps, and requires a recovery download before confirmation. Stale/tampered previews reject. Import restores Reader records atomically and then removes credentials; if credential cleanup fails after the root commit, the UI reports that distinction. Imported picks remain available while the user reenters a token.
 
-- `baseline-reading-characterization.txt`: 12 cases pass against source before implementation.
-- `baseline-reading-browser.txt`: those 12 plus five browser flows pass against unchanged source.
-- `reading-characterization-red.txt`, `reading-contracts-red.txt`, `reading-persistence-red.txt`: missing implementation recorded before each port.
-- `reading-storage.txt`: all 24 native unit cases pass; strict lint passes in `reading-storage-lint.txt`.
-- `reading-ui-red.txt`: native unit core passes while all five mounted UI workflows fail, as expected for the absent view.
+## Gotchas
 
-Next: add missing transport/review/shared-browser contracts, then port the original HTML/CSS and wire Reader/Daily Review through the shell. Preserve baseline assertions, scoped appearance and original shortcuts. Full localization, combined recovery and physical token/iPhone checks remain distinct gates.
+- Only persistent metadata/preferences/selection belong in Reader backup. Root recovery excludes credential/cache keys as well. An unsaved token draft is never exported.
+- Public [Reader docs](https://readwise.io/reader_api) and [Readwise docs](https://readwise.io/api_deets), rechecked 2026-10-16, establish list/latest-review/completion requests but do not establish structured Q&A or per-card scheduling support. Browser fixtures prove request handling, not live access or CORS.
+- Counts 2–20 are an intentional addition. The original invalid-count fixture now uses 21; original fallback assertions remain alongside new custom-count contracts.
+- Worker caching covers owned code/CSS, not authenticated API responses. Original private manifest/worker/icons are replaced by the shared installation assets.
+- Combined whole-app backup validation, legacy exporter delivery, full cross-module release checks and actual iPhone/live API acceptance remain separate gates.
+
+## Shortcuts and evidence
+
+Use `/daily/#/reading/picker?count=1&minutes=10&run=1&open=auto` to open one fitting result. Use `count=3&minutes=15&run=1` for three choices, `progress=started` for started-only, and `locations=inbox,later` for ordered Inbox/Later selection. In iOS Shortcuts use **URL**, then **Open URLs**. Existing search parameters before the hash are also parsed; hash parameters take precedence.
+
+Supported parameters: `count` 1–20, `minutes` 0–10000 (0 = any), `progress` unfinished/started/unread, ordered `locations` inbox/new/later/shortlist, `scan` 100–2000 per location, boolean `run` (alias `auto`), `open` and `refresh`. Launch overrides do not replace saved defaults. An auto-run opened before token entry resumes after Save. Update-URL settings generate a reusable token-free URL; only an explicit single-result picker launch can auto-open Reader. Home widgets never redirect.
+
+`baseline-reading-complete.txt` passes all 12 characterization and six source browser cases. `reading-backup-ui.txt` passes 48 native unit and 25 browser cases. `reader-shared-regressions.txt` passes 51 native unit and 29 browser cases, plus General and every previously completed module. WhatsApp alone remains red in that report. Phone screenshots are `reader-source-phone.png` and `reader-native-phone.png`. All fixtures are synthetic; no personal exports or tokens were used.

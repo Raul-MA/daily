@@ -1,23 +1,18 @@
+import { createRateLimit } from './rate-limit.js';
+import { createReaderRequest } from './request.js';
+
 const API_BASE = 'https://readwise.io/api/v3/list/';
 
-function requestError(response) {
-  if (response.status === 401) return new Error('The saved Readwise token is invalid. Open Settings and update it.');
-  if (response.status === 429) return new Error('Readwise rate limit reached. Try again after a moment or lower the scan limit.');
-  return new Error(`Readwise request failed (${response.status}).`);
-}
-async function page(location, cursor, config, fetcher) {
-  const params = new URLSearchParams({ location, limit: '100' });
-  if (cursor) params.set('pageCursor', cursor);
-  const response = await fetcher(`${API_BASE}?${params}`, {
-    headers: { Authorization: `Token ${config.token}` }, signal: config.signal ?? AbortSignal.timeout(20000),
-    cache: 'no-store', credentials: 'omit', referrerPolicy: 'no-referrer',
-  });
-  if (!response.ok) throw requestError(response);
-  const data = await response.json();
+async function page(input, config, request) {
+  const params = new URLSearchParams({ location: input.location, limit: String(input.limit) });
+  if (input.cursor) params.set('pageCursor', input.cursor);
+  const data = await request(`${API_BASE}?${params}`, config);
   if (!Array.isArray(data?.results)) throw new Error('Invalid Reader response.');
   return data;
 }
-export function createDocumentClient(fetcher) {
+export function createDocumentClient(options) {
+  const limiter = createRateLimit(options.now);
+  const request = createReaderRequest(options, limiter);
   const lastScan = { scanned: 0, truncated: false };
   async function fetchLocation(location, config) {
     const documents = [];
@@ -26,11 +21,11 @@ export function createDocumentClient(fetcher) {
     let scanned = 0;
     let requests = 0;
     do {
-      const data = await page(location, cursor, config, fetcher);
-      requests++;
       const remaining = Math.max(0, config.scanLimit - scanned);
+      const data = await page({ location, cursor, limit: Math.min(100, remaining) }, config, request);
+      requests++;
       documents.push(...data.results.slice(0, remaining).filter(doc => doc && !doc.parent_id));
-      scanned += data.results.length;
+      scanned += Math.min(remaining, data.results.length);
       cursor = data.nextPageCursor ?? null;
       if (cursor && (typeof cursor !== 'string' || seen.has(cursor))) throw new Error('Invalid or repeating Reader cursor.');
       seen.add(cursor);
@@ -38,5 +33,11 @@ export function createDocumentClient(fetcher) {
     Object.assign(lastScan, { scanned, truncated: Boolean(cursor) });
     return documents;
   }
-  return { fetchLocation, lastScan };
+  async function fetchDocument(id, config) {
+    const params = new URLSearchParams({ id });
+    const data = await request(`${API_BASE}?${params}`, config);
+    if (!Array.isArray(data?.results)) throw new Error('Invalid Reader response.');
+    return data.results.find(item => String(item?.id) === id) ?? null;
+  }
+  return { fetchLocation, fetchDocument, lastScan, clearRequests: limiter.reset };
 }

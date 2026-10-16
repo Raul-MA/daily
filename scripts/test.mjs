@@ -27,7 +27,7 @@ function runNode(module) {
     if (build) return build;
   }
   const files = ['coffee', 'games', 'time-budget'].includes(module) ? discoverDomainUnit(module) : discover(module);
-  return execute(['--test', '--test-isolation=none', ...files.filter(file => !process.env.DAILY_BASELINE_URL || !file.endsWith('service.test.mjs') && !file.endsWith('persistence.test.mjs'))]);
+  return execute(['--test', '--test-isolation=none', ...files.filter(file => !process.env.DAILY_BASELINE_URL || !file.endsWith('service.test.mjs') && !file.endsWith('persistence.test.mjs') && !file.endsWith('transport.test.mjs') && !file.endsWith('review.test.mjs') && !file.endsWith('offline.test.mjs') && !file.endsWith('backup.test.mjs'))]);
 }
 
 async function runBrowser(module) {

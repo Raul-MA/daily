@@ -1,0 +1,44 @@
+✔ Reader duration parsing preserves numeric text and word-count estimates (10.842982ms)
+✔ Reader progress is bounded and remaining time rounds upward with a one-minute floor (0.758805ms)
+✔ Reader eligibility deduplicates IDs and applies progress remaining-time and safe-link filters (4.254534ms)
+✔ Reader selection prioritizes started items then configured location order without duplicates (0.951554ms)
+✔ Reader links accept only HTTPS Reader hosts and metadata minimization excludes content and tokens (1.888963ms)
+✔ Reader URL configuration preserves aliases location priority and supported shortcut controls (1.247387ms)
+✔ Reader invalid URL preferences retain defaults and advanced limits remain bounded (0.426475ms)
+✔ Reader generated shortcut URLs preserve picking controls and exclude tokens (0.936045ms)
+✔ Reader paginates locations sequentially using cursor and token headers and excludes children (2.311ms)
+✔ Reader scan cap bounds returned documents and stops requesting further pages (1.070587ms)
+✔ Reader authorization throttling and service errors reject without successful results (2.748045ms)
+✔ Reader session cache contains minimized metadata and invalidates changed scan configuration (0.620127ms)
+✔ Reader startup is read-only and preference saves preserve other modules and global language (7.454312ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (1.791851ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (5.831806ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (6.612862ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (1.723144ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (2.484003ms)
+✔ scheduled review without credentials retains its direct fallback and makes no request (0.661123ms)
+✔ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (0.762281ms)
+✔ absent review is empty while network and authorization failures preserve a previously cached review (0.961954ms)
+✔ review completion is explicit server-confirmed and idempotent with a latest-review preflight (0.861537ms)
+✔ changed latest review or failed completion never reports the displayed review complete (1.016144ms)
+✔ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.580713ms)
+✔ a late review response cannot replace the state after its account changes (0.548994ms)
+✔ Q&A requires explicit structured capability hides answers initially and resets on card changes (0.975359ms)
+✔ Reader custom counts support two through twenty and uniform sampling can choose unread before started (0.40199ms)
+✔ Reader finite budgets exclude unknown duration unless enabled and always reject archived completed and child records (0.56317ms)
+✔ Reader scan limits count fetched child records and expose truncation instead of scanning forever (0.5521ms)
+✔ Reader repeating cursors and malformed response shapes fail rather than return misleading complete data (0.793359ms)
+✔ Reader caches are account-specific without serializing tokens or full document content (0.393002ms)
+✔ Reader links reject embedded credentials and cache freshness expires using the configured clock (0.360673ms)
+✔ Reader pagination requests only the remaining scan allowance (2.566115ms)
+✔ Reader enforces a local twenty-request rolling limit without automatically retrying (11.102064ms)
+✔ Reader throttling honors Retry-After and rejects retries until the cooldown expires (46.332949ms)
+✔ Reader request deadlines still abort when the caller supplies its own signal (10.620086ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 188.828515

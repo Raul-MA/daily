@@ -1,0 +1,11 @@
+
+> daily-pwa@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+/workspaces/daily/modules/reading/src/review/widget.js
+  26:17  error  Do not nest ternary expressions  no-nested-ternary
+  28:15  error  Do not nest ternary expressions  no-nested-ternary
+
+✖ 2 problems (2 errors, 0 warnings)
+
