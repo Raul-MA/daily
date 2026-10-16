@@ -10,11 +10,14 @@ function get(form, suffix) { return form.querySelector(`#whatsapp-import-${suffi
 function show(context, form, copy) {
   get(form, 'preview').hidden = !context.ui.importPreview;
   get(form, 'confirm').disabled = !context.ui.importRecovery;
+  get(form, 'cancel').hidden = !context.ui.importHasFile && !context.ui.importPreview;
   if (context.ui.importPreview) get(form, 'message').textContent = `${context.ui.importPreview.counts.drafts} ${copy.preview}`;
   context.changed();
 }
 function cancel(context, form, copy) {
   context.ui.importJob++;
+  context.ui.importHasFile = false;
+  get(form, 'status').textContent = '';
   context.ui.importPreview = null;
   context.ui.importRecovery = false;
   get(form, 'file').value = '';
@@ -25,6 +28,7 @@ async function select(context, form, copy) {
   const file = get(form, 'file').files[0];
   if (!file) return;
   const job = ++context.ui.importJob;
+  context.ui.importHasFile = true;
   context.ui.importPreview = null;
   context.ui.importRecovery = false;
   show(context, form, copy);
@@ -41,6 +45,7 @@ function confirm(context, form, copy) {
   context.ui.lastThingsUrl = '';
   context.ui.manualURL = '';
   context.ui.expected = undefined;
+  context.ui.saveFailure = null;
   initializeComposer(context);
   context.host.querySelector('#composer').dataset.unsaved = 'false';
   get(form, 'status').textContent = copy.saved;
@@ -52,7 +57,7 @@ export function mountBackup(context) {
   const form = document.createElement('form');
   form.className = 'whatsapp-backup';
   form.id = 'whatsapp-import';
-  form.innerHTML = `<h2>${copy.title}</h2><button type="button" id="whatsapp-export">${copy.export}</button><label>${copy.file}<input type="file" id="whatsapp-import-file" accept=".json,application/json"></label><div id="whatsapp-import-preview" hidden><p id="whatsapp-import-message"></p><button type="button" id="whatsapp-import-recovery">${copy.recovery}</button><button type="button" id="whatsapp-import-confirm" disabled>${copy.confirm}</button><button type="button" id="whatsapp-import-cancel">${copy.cancel}</button></div><p id="whatsapp-import-status" role="status"></p>`;
+  form.innerHTML = `<h2>${copy.title}</h2><button type="button" id="whatsapp-export">${copy.export}</button><label>${copy.file}<input type="file" id="whatsapp-import-file" accept=".json,application/json"></label><div id="whatsapp-import-preview" hidden><p id="whatsapp-import-message"></p><button type="button" id="whatsapp-import-recovery">${copy.recovery}</button><button type="button" id="whatsapp-import-confirm" disabled>${copy.confirm}</button></div><button type="button" id="whatsapp-import-cancel" hidden>${copy.cancel}</button><p id="whatsapp-import-status" role="status"></p>`;
   const guard = operation => () => { try { operation(); } catch (error) { get(form, 'status').textContent = saveError(context.language, error); } };
   const options = { signal: context.signal };
   form.addEventListener('submit', event => event.preventDefault(), options);

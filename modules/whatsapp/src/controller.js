@@ -31,13 +31,23 @@ export function initializeComposer(context) {
   refreshComposer(context);
 }
 function input(context) {
+  clearTimeout(context.cleanTimer);
+  context.saveTurn = (context.saveTurn ?? 0) + 1;
+  const turn = context.saveTurn;
+  context.ui.saveFailure = null;
   context.ui.lastThingsUrl = '';
   context.ui.manualURL = '';
   field(context, 'manual-copy').hidden = true;
   status(context, '');
   refreshComposer(context);
-  try { context.expected = context.service.saveDraft(readDraft(context), context.expected); changed(context); }
-  catch (error) { changed(context, true); status(context, saveError(context.language, error)); }
+  try {
+    context.expected = context.service.saveDraft(readDraft(context), context.expected);
+    context.cleanTimer = setTimeout(() => { if (!context.signal?.aborted && context.saveTurn === turn) changed(context); }, 0);
+  } catch (error) { changed(context, true); failure(context, error); }
+}
+function failure(context, error) {
+  context.ui.saveFailure = { name: error.name, message: error.message };
+  status(context, saveError(context.language, error));
 }
 function submit(context, event) {
   event.preventDefault();
@@ -46,6 +56,7 @@ function submit(context, event) {
     const draft = readDraft(context);
     const url = buildThingsUrl(draft.recipient, draft.date, draft.time, draft.message);
     context.expected = context.service.clearDraft(context.expected);
+    context.ui.saveFailure = null;
     context.ui.lastThingsUrl = url;
     context.ui.manualURL = '';
     resetComposer(context);
@@ -53,7 +64,7 @@ function submit(context, event) {
     changed(context);
     status(context, text(context.language, 'opening'));
     context.navigate(url);
-  } catch (error) { status(context, saveError(context.language, error)); }
+  } catch (error) { failure(context, error); }
 }
 async function copy(context) {
   if (!refreshComposer(context) && !context.ui.lastThingsUrl) return;

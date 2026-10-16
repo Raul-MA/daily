@@ -7,7 +7,7 @@
 
 ## Commands
 
-- `npm run test:whatsapp`: nine unit and seven browser cases.
+- `npm run test:whatsapp`: nine unit and nine browser cases.
 - Source: `node scripts/test.mjs whatsapp --baseline http://127.0.0.1:8767/schedule-whatsapp/ --report reports/baseline-whatsapp-complete.txt`; workspace static server required.
 
 ## Key Files

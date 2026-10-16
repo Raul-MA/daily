@@ -115,3 +115,41 @@ test('WhatsApp composer and saved draft reopen under the shared worker offline a
   await page.locator('[data-module="whatsapp"]').screenshot({ path: 'reports/whatsapp-offline-phone.png' });
   await context.close();
 });
+
+test('WhatsApp autosaved drafts release the update hold while failed saves remain protected through language changes', async ({ page }) => {
+  await open(page);
+  await compose(page);
+  await expect(page.locator('#composer')).toHaveAttribute('data-unsaved', 'false');
+  await page.evaluate(() => {
+    const original = Storage.prototype.setItem;
+    window.fixtureQuota = true;
+    Storage.prototype.setItem = function(key, value) {
+      if (window.fixtureQuota && key === 'daily:v1') throw new DOMException('Full', 'QuotaExceededError');
+      return original.call(this, key, value);
+    };
+  });
+  await page.locator('#message').fill('Unsaved local text');
+  await expect(page.locator('#composer')).toHaveAttribute('data-unsaved', 'true');
+  expect((await root(page)).modules.whatsapp.data.draft.message).toBe('Café 👋\nA&B + 100% #yes');
+  await page.evaluate(() => { window.fixtureQuota = false; });
+  await page.getByRole('button', { name: 'Español', exact: true }).click();
+  await expect(page.locator('#message')).toHaveValue('Unsaved local text');
+  await expect(page.locator('#status')).toContainText('No se pudo guardar');
+  await expect(page.locator('#composer')).toHaveAttribute('data-unsaved', 'true');
+  await page.locator('#message').fill('Recovered draft');
+  await expect(page.locator('#composer')).toHaveAttribute('data-unsaved', 'false');
+  expect((await root(page)).modules.whatsapp.data.draft.message).toBe('Recovered draft');
+});
+
+test('WhatsApp invalid import can be canceled and releases the dirty form without replacing its saved draft', async ({ page }) => {
+  await open(page);
+  await compose(page);
+  const before = await root(page);
+  await page.locator('#whatsapp-import-file').setInputFiles({ name: 'invalid.json', mimeType: 'application/json', buffer: Buffer.from('invalid JSON') });
+  await expect(page.locator('#whatsapp-import-status')).toContainText(/JSON|Unexpected|Invalid/i);
+  await expect(page.locator('#whatsapp-import-cancel')).toBeVisible();
+  await page.locator('#whatsapp-import-cancel').click();
+  await expect(page.locator('#whatsapp-import')).toHaveAttribute('data-unsaved', 'false');
+  expect(await page.locator('#whatsapp-import-file').inputValue()).toBe('');
+  expect(await root(page)).toEqual(before);
+});

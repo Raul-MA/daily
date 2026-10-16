@@ -1,6 +1,6 @@
 {
   "commit": "941d4cdb71dc38c4512bea836d4292dd8c96e541",
-  "status": "local acceptance passes: nine unit / seven browser; all scopes green; physical handoffs deferred",
+  "status": "local acceptance: nine unit / nine browser after form/update audit; all scopes green at previous seven-browser checkpoint; final Stage 8 checks pending",
   "files": [
     {
       "source": "schedule-whatsapp/README.md",
