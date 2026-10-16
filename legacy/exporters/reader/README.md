@@ -4,7 +4,7 @@ These are prepared local artifacts for the pinned `random-readwise` source check
 
 `npm run prepare:legacy-reader` checks the pinned checkout's original HTML and creates `legacy/patches/random-readwise-export.patch`. It adds an Export for Daily link and a standalone EN/ES export page under `daily-migration/`. The default source is `/workspaces/.daily-reader-source`; its public repo, source commit and checksum are in `provenance.json`. Preparation checks copied settings/document validators against their native versions. Packaging tests apply only in a disposable copy, and the patch passes `git apply --check` against the unchanged checkout.
 
-Applying or releasing the patch to the real old app remains deferred until authorized. After that later release, open the export link **inside the original installed Reader app**. A separate Safari tab or downloaded HTML file does not establish access to its installed storage. The page needs an initial online load and is not added to the old worker's install precache.
+See the [shared migration procedure](../../../docs/legacy-exporters.md) for later release, installed-storage context, initial online loading and worker coexistence requirements.
 
 The exporter reads current preferences from `readerPicker.settings.v2`, falling back to `readerPicker.settings.v1` only when the current key is absent. Both formats are flat settings objects; the older object may contain a token. Only known preference fields are copied, with the same numeric/location normalization used by Daily's legacy importer. Unknown fields, token and remember-token options are excluded. An invalid current object fails instead of silently choosing older settings or resetting preferences.
 

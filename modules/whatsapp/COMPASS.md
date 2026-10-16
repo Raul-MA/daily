@@ -7,7 +7,7 @@
 
 ## Commands
 
-- `npm run test:whatsapp`: nine unit and nine browser cases.
+- `npm run test:whatsapp`: 12 unit and nine browser cases; the legacy exporter adds three unit contracts.
 - Source: `node scripts/test.mjs whatsapp --baseline http://127.0.0.1:8767/schedule-whatsapp/ --report reports/baseline-whatsapp-complete.txt`; workspace static server required.
 
 ## Key Files
@@ -16,6 +16,7 @@
 - `src/service.js`, `src/validation.js`, `src/imports.js`: versioned draft, stale/quota guards and protected recovery.
 - `src/view.js`, `src/markup.js`, `src/style.css`, `src/i18n.js`, `src/backup-ui.js`: scoped source interface and EN/ES.
 - `test/tests.cjs`, `test/support/native.cjs`: retained source assertions and explicit native shared-install/controller adapters.
+- [Prepared legacy exporter](../../legacy/exporters/whatsapp/README.md): read-only saved drafts, including expired/incomplete fields; old-app release deferred.
 
 ## Non-Obvious Patterns
 

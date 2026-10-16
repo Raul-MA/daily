@@ -1,0 +1,9 @@
+{
+  "repo": "schedule-whatsapp",
+  "commit": "941d4cdb71dc38c4512bea836d4292dd8c96e541",
+  "indexSha256": "7cfdb6d06d68a5f3471f47a771b2bcace99a5177ba64609b980a64f50a508117",
+  "storageKeys": [
+    "whatsapp-later-draft"
+  ],
+  "nativeSchemaVersion": 1
+}

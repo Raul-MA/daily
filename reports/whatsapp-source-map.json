@@ -1,6 +1,6 @@
 {
   "commit": "941d4cdb71dc38c4512bea836d4292dd8c96e541",
-  "status": "local acceptance: nine unit / nine browser after form/update audit; all scopes green at previous seven-browser checkpoint; final Stage 8 checks pending",
+  "status": "local acceptance: 12 unit / nine browser including legacy exporter; prior combined-backup all-scope checkpoint green at nine/nine; physical handoff/device and old-app release deferred",
   "files": [
     {
       "source": "schedule-whatsapp/README.md",
@@ -78,5 +78,13 @@
   "newFeatures": [
     "modules/whatsapp/src/imports.js",
     "modules/whatsapp/src/backup-ui.js"
-  ]
+  ],
+  "legacyExport": {
+    "directory": "legacy/exporters/whatsapp",
+    "patch": "legacy/patches/schedule-whatsapp-export.patch",
+    "unitContracts": 3,
+    "browserContracts": 1,
+    "sourceModified": false,
+    "release": "deferred"
+  }
 }

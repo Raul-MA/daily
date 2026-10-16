@@ -31,3 +31,8 @@ The submitted Things URL remains in page-session memory for Copy link after clea
 `baseline-whatsapp-complete.txt` passes the three unchanged-source test cases and one source phone characterization. Tests preserve exact encoding, long/invalid Unicode/date/clock cases, four timezones and DST gaps, clear-before-navigation, copy fallback and invalid draft retention. Native VM/controller adapters use the actual functions/controller/service with safe memory storage ports. The original manifest/worker block stays selectable; native checks assert the shared replacement.
 
 Nine native unit cases include six new service/restore contracts. Nine browser cases cover source phone appearance (320/390px, light/dark), autosave/Home/reload/EN-ES, Things/copy/manual fallback, expired drafts, stale/quota failures, protected recovery import and 320px shared-worker offline reopening, successful/failed autosave update protection and invalid-import cancellation. Reports and final shared regressions are tracked in root progress. Original assertions were not skipped; early missing-module reports are retained.
+
+
+## Prepared original-app exporter
+
+A separate read-only export page and checked patch are prepared in [legacy/exporters/whatsapp](../../../legacy/exporters/whatsapp/README.md). It reads only the saved draft, whitelists recipient/date/time/message and preserves expired/incomplete Unicode data through actual native import. Malformed records fail unchanged; unrelated keys and prior handoff fields are excluded. The exporter does not launch Things or clear/send a message. Original source and installations remain untouched; later release and physical migration are deferred.

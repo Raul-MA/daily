@@ -8,24 +8,24 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore pass local checks.** `combined-backup-all.txt` completed successfully across General and every app, including both broad Piano scripts. Strict lint, 688-file syntax and static preparation of 629 assets pass (`combined-backup-final-*`). Reader and WhatsApp earlier Stage 8 fixes are included. Full restore validates all module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** prepare the legacy WhatsApp saved-draft exporter with tests before code, preserving original storage and installed apps. Reader exporter is accepted locally: General 78 unit/27 browser, Reader 54 unit/30 browser, full lint, 714-file syntax, static preparation and unchanged-checkout patch check pass. Save its local checkpoint before WhatsApp. Prior checkpoints: Plants `6fbed98`, Time Budget `1d40be5`, install icons `746751f`, combined backup `da523d1`. Complete EN/ES and remaining schema/concurrency/form/update audits afterward. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
+**Exact next step:** complete app localization sequentially, starting with Plants' authored guides/template descriptions. Add content/EN-ES/browser contracts before translating and keep saved user text unchanged. All four missing legacy exporters are now prepared/tested locally: General 79 unit/28 browser, WhatsApp 12 unit/nine browser, strict lint, 721-file syntax, static preparation and source patch checks pass. Save the WhatsApp exporter checkpoint before localization. Earlier checkpoints: Reader `66830df`, Plants `6fbed98`, Time Budget `1d40be5`, install icons `746751f`, combined backup `da523d1`. Then finish nested-schema/concurrency/form/update/recovery audits and full verification. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 78 unit + 27 browser cases pass | `reports/legacy-reader-general.txt` |
+| General | 79 unit + 28 browser cases pass | `reports/legacy-whatsapp-final-general.txt` |
 | Plants | 26 unit + 11 browser cases pass | `reports/legacy-plants-scope.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/legacy-reader-lint.txt` |
-| Native JS syntax | 714 files pass; this is not typechecking | `reports/legacy-reader-syntax.txt` |
-| Static preparation | 632 native files/assets prepared; legacy exporters excluded | `reports/legacy-reader-build.txt` |
+| Strict full-scope lint | Pass | `reports/legacy-whatsapp-lint.txt` |
+| Native JS syntax | 721 files pass; this is not typechecking | `reports/legacy-whatsapp-syntax.txt` |
+| Static preparation | 632 native files/assets prepared; legacy exporters excluded | `reports/legacy-whatsapp-build.txt` |
 | Coffee | 17 unit + 28 browser cases pass | `reports/combined-backup-all.txt` |
 | Games | 16 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
 | Time Budget | 20 unit + 17 browser cases pass | `reports/legacy-budget-time.txt` |
 | Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/combined-backup-all.txt` |
 | Reader | 54 unit + 30 browser cases pass | `reports/legacy-reader-scope.txt` |
-| WhatsApp | Nine unit + nine browser cases pass | `reports/combined-backup-all.txt` |
+| WhatsApp | 12 unit + nine browser cases pass | `reports/legacy-whatsapp-scope.txt` |
 | Whole migration | Local workflow checks all pass; Stage 8 migration/localization/device gates remain incomplete | `reports/combined-backup-all.txt` |
 
 No skipped tests or relaxed lint thresholds. Original plant assertions remain unchanged. New-app parity is not established by original baseline results.
@@ -289,3 +289,20 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - General passes 78 unit + 27 browser (`legacy-reader-general.txt`); Reader passes 54 unit + 30 browser (`legacy-reader-scope.txt`). Full lint, 714-file syntax, static preparation and pinned-checkout patch check pass. No source assertions were changed.
 - Token/cache keys remain unread, including when old settings contain embedded credential properties. Export retains only preferences and optional minimized remembered metadata; actual native import and safe literal title rendering pass. No token, body or cached response is exported, no API call is made, and original keys remain unchanged.
 - Prepared files and patch remain outside Daily's runtime output and have not been released. Next: WhatsApp saved-draft exporter, then final content localization and schema/concurrency/form/update audit. Physical acceptance stays deferred.
+
+
+## Stage 8: legacy WhatsApp exporter in progress
+
+- Three domain contracts first fail on the missing exporter (`legacy-whatsapp-red.txt`), then pass (`legacy-whatsapp-unit.txt`). Export reads only the original draft key and whitelists its four fields. Expired dates, Unicode/newlines and incomplete values survive real Daily import without rescheduling; empty/null drafts remain absent, extra handoff/credential fields are excluded, invalid data and blocked storage fail unchanged.
+- Phone/EN-ES/plain-text message/download/storage-preservation coverage was authored before UI (`legacy-whatsapp-browser-red.txt`). The implemented General run is pending. No Things URL or external handoff is created by this exporter.
+- Packaging first fails on the absent preparation script (`legacy-whatsapp-patch-red.txt`), then passes (`legacy-whatsapp-patch.txt`) in a disposable copy. `npm run prepare:legacy-whatsapp` produces `legacy/patches/schedule-whatsapp-export.patch`; its original-source dry check passes. A nested display ternary was split to retain strict lint. Source repos remain read-only; artifacts stay outside Daily runtime output.
+- Shared instructions are now routed through `docs/legacy-exporters.md`, with each app's specific contract in its exporter README. Actual installed migration/release stays deferred; no personal files or token are requested.
+
+- WhatsApp's implemented exporter browser contract passes in `legacy-whatsapp-general.txt`, but General exits nonzero on the existing midnight fixture: 27 browser cases pass and the initial pre-midnight assertion fails. Its advancing clock started only two seconds before midnight, allowing a slower navigation to cross the boundary before the first assertion. The fixture now pins UTC and pauses at the original pre-midnight instant until the explicit four-second fast-forward. All original before/after/storage assertions are retained. Runtime calendar code is unchanged; the corrected General run is pending.
+
+
+## All required legacy exporters prepared locally
+
+- WhatsApp passes all 12 unit/nine browser cases (`legacy-whatsapp-scope.txt`); General passes 79 unit/28 browser (`legacy-whatsapp-final-general.txt`). Full strict lint, 721-file syntax, static preparation and unchanged-source patch check pass. The earlier General failure is documented as an advancing midnight fixture race; all domain assertions remain and runtime calendar is unchanged.
+- Time Budget, Plants/Things, Reader preferences/remembered metadata and WhatsApp drafts now have standalone EN/ES exporters and reviewable patches. Originals/installations remain unchanged. Shared release/context instructions live in `docs/legacy-exporters.md`; app-specific contracts stay in their README files. No GitHub workflow, push or deployment was performed.
+- Next: remaining authored-content localization (Plants, then other apps one at a time), final nested-schema/concurrency/form/update/recovery audit and full verification. Real-device/API and original-app release gates remain deferred.

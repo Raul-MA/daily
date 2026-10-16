@@ -6,7 +6,7 @@ These are prepared local artifacts. The original repository and installations ha
 
 The patch passes `git apply --check` against the retained original repo. A test also applies it only in a disposable directory, checks every packaged file and verifies that changed HTML is rejected without replacing an existing patch. Applying or releasing it to the original app is deferred until authorized; preparing the patch does not make the export link appear in an existing installation.
 
-When that later release is available, open the export link **inside the original installed Time Budget app**. Opening a downloaded HTML file or a separate Safari tab does not establish access to that installation's storage. The page needs an initial online load; its files are not added to the original worker's install precache.
+See the [shared migration procedure](../../../docs/legacy-exporters.md) for later release, installed-storage context, initial online loading and worker coexistence requirements.
 
 Preview reads only `timeBudget_templates` and `timeBudget_currentState`. Download reads a fresh saved snapshot again. It never writes, removes or clears storage. The export contains templates and the active or paused session, including task identities/status, original start time and task-clock timing. A stable `legacy-budget:<startTime>` ID supplies the identity absent from the old schema. No original clock is restarted. Unknown fields and unrelated keys are not exported.
 

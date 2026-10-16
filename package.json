@@ -26,6 +26,7 @@
     "prepare:legacy-budget": "node scripts/prepare-legacy-budget.mjs",
     "prepare:legacy-plants": "node scripts/prepare-legacy-plants.mjs",
     "prepare:legacy-reader": "node scripts/prepare-legacy-reader.mjs",
+    "prepare:legacy-whatsapp": "node scripts/prepare-legacy-whatsapp.mjs",
     "check:js": "node scripts/check-js.mjs"
   },
   "devDependencies": {

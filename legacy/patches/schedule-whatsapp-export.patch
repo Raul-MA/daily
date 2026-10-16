@@ -1,0 +1,144 @@
+--- a/index.html
++++ b/index.html
+@@ -57,4 +57,5 @@
+     <noscript><p>Please enable JavaScript to compose a reminder.</p></noscript>
+   </main>
++    <a class="button ghost" href="daily-migration/index.html">Export for Daily / Exportar para Daily</a>
+ </body>
+ </html>
+--- /dev/null
++++ b/daily-migration/index.html
+@@ -0,0 +1,40 @@
++<!doctype html>
++<html lang="en">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
++  <meta name="referrer" content="no-referrer">
++  <title>WhatsApp export for Daily</title>
++  <style>
++    * { box-sizing: border-box; }
++    body { margin: 0; background: #f2f2f7; color: #1c1c1e; font: 1rem/1.6 system-ui, sans-serif; }
++    main { max-width: 42rem; margin: auto; padding: max(1rem, env(safe-area-inset-top)) 1rem 3rem; }
++    p { overflow-wrap: anywhere; }
++    #draft-message { white-space: pre-wrap; }
++    h1 { line-height: 1.2; font-size: 2rem; }
++    button, select { font: inherit; padding: .7rem; border-radius: .7rem; border: 1px solid #8e8e93; }
++    button { margin: .5rem 0; width: 100%; color: #fff; background: #175cd3; }
++    button:disabled { opacity: .5; }
++    a { color: #175cd3; }
++    [hidden] { display: none; }
++    @media (prefers-color-scheme: dark) { body { background: #1c1c1e; color: #f2f2f7; } a { color: #8ebaff; } }
++  </style>
++</head>
++<body>
++  <main>
++    <label><span id="language-label">Language</span> <select id="language"><option value="en">English</option><option value="es">Español</option></select></label>
++    <h1 id="title">Export WhatsApp for Daily</h1>
++    <p id="explain"></p>
++    <p id="privacy"></p>
++    <button id="preview" type="button">Preview saved data</button>
++    <p id="counts" aria-live="polite"></p>
++    <p id="draft-recipient"></p>
++    <p id="draft-time"></p>
++    <p id="draft-message"></p>
++    <button id="download" type="button" disabled>Download migration backup</button>
++    <p id="status" role="status" aria-live="polite"></p>
++    <a id="back" href="../">Back to WhatsApp</a>
++  </main>
++  <script type="module" src="./entry.js"></script>
++</body>
++</html>
+--- /dev/null
++++ b/daily-migration/entry.js
+@@ -0,0 +1,61 @@
++import { exportLegacyWhatsApp } from './export.js';
++
++const copy = {
++  en: { title: 'Export WhatsApp for Daily', 'language-label': 'Language', preview: 'Preview saved draft', download: 'Download migration backup', back: 'Back to WhatsApp',
++    explain: 'Includes the saved recipient, message and reminder date/time. Expired times stay unchanged. Import in Daily → WhatsApp, then check the date before creating a reminder.',
++    privacy: 'Original data stays on this device. Other apps, credentials and previous handoff links are excluded. Keep the original installation and this backup.',
++    counts: '{count} saved draft(s).', recipient: 'Recipient: {value}', time: 'Reminder: {value}', unset: 'Not set',
++    invalid: 'The saved draft is invalid or could not be read. Nothing was changed. Return to the original app to inspect its data.', downloaded: 'Migration backup downloaded. The original draft was kept.' },
++  es: { title: 'Exportar WhatsApp para Daily', 'language-label': 'Idioma', preview: 'Vista previa del borrador guardado', download: 'Descargar copia de migración', back: 'Volver a WhatsApp',
++    explain: 'Incluye el destinatario, mensaje y fecha/hora del recordatorio guardados. Las fechas vencidas se conservan. Importa en Daily → WhatsApp y revisa la fecha antes de crear un recordatorio.',
++    privacy: 'Los datos originales se conservan en este dispositivo. Se excluyen otras aplicaciones, credenciales y enlaces anteriores. Conserva la instalación original y esta copia.',
++    counts: '{count} borrador(es) guardado(s).', recipient: 'Destinatario: {value}', time: 'Recordatorio: {value}', unset: 'Sin definir',
++    invalid: 'Los datos del borrador no son válidos o no se pudieron leer. No se ha cambiado nada. Vuelve a la aplicación original para revisar sus datos.', downloaded: 'Copia de migración descargada. Se conservó el borrador original.' },
++};
++const language = document.getElementById('language');
++const state = { file: null, message: '' };
++function draftDetails(text, draft) {
++  for (const id of ['draft-recipient', 'draft-time', 'draft-message']) document.getElementById(id).textContent = '';
++  if (!draft) return;
++  document.getElementById('draft-recipient').textContent = text.recipient.replace('{value}', draft.recipient || text.unset);
++  document.getElementById('draft-time').textContent = text.time.replace('{value}', `${draft.date || text.unset} ${draft.time || text.unset}`);
++  document.getElementById('draft-message').textContent = draft.message;
++}
++function draw() {
++  const text = copy[language.value];
++  document.documentElement.lang = language.value;
++  document.title = text.title;
++  for (const id of ['title', 'language-label', 'preview', 'download', 'back', 'explain', 'privacy']) document.getElementById(id).textContent = text[id];
++  document.getElementById('download').disabled = !state.file;
++  document.getElementById('status').textContent = text[state.message] ?? '';
++  const data = state.file ? JSON.parse(state.file) : null;
++  const count = data?.draft ? 1 : 0;
++  document.getElementById('counts').textContent = data ? text.counts.replace('{count}', count) : '';
++  draftDetails(text, data?.draft);
++}
++function preview() {
++  state.file = null;
++  state.message = '';
++  try { state.file = exportLegacyWhatsApp(localStorage); }
++  catch { state.message = 'invalid'; }
++  draw();
++}
++function download() {
++  preview();
++  if (!state.file) return;
++  const url = URL.createObjectURL(new Blob([state.file], { type: 'application/json' }));
++  const link = document.createElement('a');
++  link.href = url;
++  link.download = 'whatsapp-daily-migration.json';
++  document.body.append(link);
++  link.click();
++  link.remove();
++  setTimeout(() => URL.revokeObjectURL(url), 1000);
++  state.message = 'downloaded';
++  draw();
++}
++language.value = navigator.language.startsWith('es') ? 'es' : 'en';
++language.addEventListener('change', draw);
++document.getElementById('preview').addEventListener('click', preview);
++document.getElementById('download').addEventListener('click', download);
++draw();
+--- /dev/null
++++ b/daily-migration/export.js
+@@ -0,0 +1,9 @@
++import { validWhatsApp } from './validation.js';
++
++export function exportLegacyWhatsApp(storage) {
++  const raw = storage.getItem('whatsapp-later-draft');
++  const value = raw === null ? null : JSON.parse(raw);
++  const draft = value === null ? null : Object.fromEntries(['recipient', 'date', 'time', 'message'].map(key => [key, value[key]]));
++  if (!validWhatsApp({ draft })) throw new Error('Invalid original WhatsApp draft. Nothing was changed.');
++  return JSON.stringify({ app: 'whatsapp-later', schemaVersion: 1, draft }, null, 2);
++}
+--- /dev/null
++++ b/daily-migration/validation.js
+@@ -0,0 +1,14 @@
++function object(value) { return value !== null && typeof value === 'object' && !Array.isArray(value); }
++function validDate(value) {
++  if (!value) return true;
++  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
++  const date = new Date(`${value}T00:00:00Z`);
++  return Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value;
++}
++export function validDraft(value) {
++  if (!object(value) || Object.keys(value).length !== 4) return false;
++  if (!['recipient', 'date', 'time', 'message'].every(key => typeof value[key] === 'string')) return false;
++  return validDate(value.date) && (!value.time || /^(?:[01]\d|2[0-3]):[0-5]\d$/.test(value.time));
++}
++export function validWhatsApp(value) { return object(value) && Object.keys(value).length === 1 && (value.draft === null || validDraft(value.draft)); }
++export function initialWhatsApp() { return { draft: null }; }

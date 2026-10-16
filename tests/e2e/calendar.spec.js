@@ -1,7 +1,10 @@
 import { test, expect } from '@playwright/test';
 
+test.use({ timezoneId: 'UTC' });
+
 test('dashboard care reminders refresh at midnight without changing records', async ({ page }) => {
-  await page.clock.install({ time: new Date('2026-10-15T23:59:58') });
+  await page.clock.install({ time: new Date('2026-10-15T23:59:57Z') });
+  await page.clock.pauseAt(new Date('2026-10-15T23:59:58Z'));
   await page.addInitScript(() => {
     const plant = { id: 'tomorrow', name: 'Tomorrow fern', dateAdded: '2026-10-15', schedule: { wateringIntervalDays: 7, soilIntervalMonths: 12, fertilizerIntervalWeeks: 4, nextDueOverrides: { watering: '2026-10-16' } }, careLog: [] };
     const data = { plants: [plant], things: { enabled: false, project: '' }, backup: { lastExportAt: null, lastReminderAt: null, changesSinceExport: 0 }, storage: { persistenceRequested: false, persistent: false, checkedAt: null } };

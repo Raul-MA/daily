@@ -6,7 +6,7 @@ These are prepared local artifacts. The original Stillgreen repository and insta
 
 The patch passes `git apply --check` against the retained original repo. Packaging tests apply it only in a disposable copy, compare every file and reject changed HTML without replacing an existing patch. Applying or releasing it to the original installation remains deferred until authorized.
 
-After that later release, open the export link **inside the original installed Stillgreen app**. A separate Safari tab or downloaded HTML file does not establish access to that installation's storage. Initial online loading is required; the new page is not in the old worker's install precache.
+See the [shared migration procedure](../../../docs/legacy-exporters.md) for later release, installed-storage context, initial online loading and worker coexistence requirements.
 
 The exporter includes complete plant records, care history, manual schedule dates and Things reminder preferences. It accepts both the original bare array and the checksummed version-1 envelope. It reads the primary snapshot first, then the original recovery order: pending, backup 1, backup 2. A valid primary wins even if a backup has a different revision. Recovery reads are labeled in the preview and the export's `recoverySource` metadata; they never repair, rewrite, remove or clear original keys. Daily ignores that provenance field when importing the records.
 
