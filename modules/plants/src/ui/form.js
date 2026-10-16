@@ -1,7 +1,7 @@
 import { DataConflictError } from '../../../../packages/data/src/errors.js';
 import { getPlant, addPlant, updatePlant, requestPersistentStorage } from '../store/store.js';
 import { generateId, nowUTC } from '../utils/utils.js';
-import { PLANT_TEMPLATES } from '../plants/plant-templates.js';
+import { plantTemplates } from '../plants/localized.js';
 import { href } from '../../../../packages/platform/src/router.js';
 import { el, field, select, checkbox, submit, anchor, save } from './elements.js';
 
@@ -78,8 +78,8 @@ function schedule(context, plant) {
   return section;
 }
 
-function applyTemplate(form, id) {
-  const template = PLANT_TEMPLATES.find(item => item.id === id);
+function applyTemplate(form, id, language) {
+  const template = plantTemplates(language).find(item => item.id === id);
   if (!template) return;
   const values = { ...scheduleValues(template.schedule), commonName: template.label, species: template.species, notes: template.notes, difficulty: template.difficulty, templateId: template.id };
   for (const [name, value] of Object.entries(values)) {
@@ -128,9 +128,9 @@ export function plantForm(context) {
   templateId.value = existing?.templateId || '';
   form.append(templateId);
   if (!existing) {
-    const options = [['', context.copy.manual], ...PLANT_TEMPLATES.map(item => [item.id, item.label])];
+    const options = [['', context.copy.manual], ...plantTemplates(context.language).map(item => [item.id, item.label])];
     const template = select('template', context.copy.template, options, '');
-    template.querySelector('select').onchange = event => applyTemplate(form, event.target.value);
+    template.querySelector('select').onchange = event => applyTemplate(form, event.target.value, context.language);
     form.append(template);
   }
   form.append(identity(context, existing), schedule(context, existing));

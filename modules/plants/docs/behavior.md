@@ -28,12 +28,17 @@ Retain Stillgreen's care rules, IDs, history and Things handoff inside one PWA w
 
 ## Gotchas
 
-- The original seven test cases remain unchanged; sixteen new unit cases cover care and shared-state integration. Browser coverage includes offline reload, quota failure, migration preview/cancel, draft preservation, stale edits, theme containment and language.
+- The original seven test cases remain unchanged; twenty-one new unit cases cover care, shared-state integration, legacy export and localization. Browser coverage includes offline reload, quota failure, migration preview/cancel, draft preservation, stale edits, theme containment and language.
 - The root is still localStorage: there is no transactional cross-tab compare-and-swap. UI stale-record guards reduce lost-edit risks; truly simultaneous writers still need the shared concurrency policy before release.
-- Original guide paragraphs and template descriptions are retained in Spanish. Final content localization and physical iPhone/Things acceptance remain open. Controls, validation states and page navigation support EN/ES.
-- See `reports/plants-source-map.json` for source hashes and targets. New migration export behavior is not evidence that the old installed PWA already exports Things settings; its migration exporter remains a release-stage task.
+- Controls, validation states, template labels/defaults and all thirteen authored guides support EN/ES. The original Spanish data objects remain unchanged; `plants/localized.js` overlays detached English text or Spanish labels. Unit contracts preserve every numeric care figure and schedule. Physical iPhone/Things acceptance remains open.
+- See `reports/plants-source-map.json` for source hashes and targets. New migration export behavior is not evidence that the old installed PWA already exports Things settings; its prepared migration exporter has not been released to that installation.
 
 
 ## Prepared original-app exporter
 
 The existing old-app export contains plant records but omits Things preferences. A separate read-only exporter and checked patch are prepared in [legacy/exporters/plants](../../../legacy/exporters/plants/README.md). It accepts bare arrays and checksummed envelopes, retains full plant/history/schedule data, and includes enabled/project preferences. Recovery reads follow the original primary/pending/backup order, with an explicit preview label and no repair writes. Unreadable data never becomes an empty export; unknown versions stop instead of downgrading to an older backup. Original-app release and physical migration remain deferred.
+
+
+## Authored text versus user records
+
+Guide content follows the shared interface language and works offline. Selecting a new template explicitly fills its description/type in the current language. Those fields then become the user's form values: later language changes restore them verbatim, just like saved names, types, notes, history and dates. Previously saved Spanish template notes remain saved text; changing language never rewrites them. Template refresh continues to use source schedules without touching user notes.

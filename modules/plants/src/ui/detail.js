@@ -1,7 +1,7 @@
 import { getPlant, deletePlant } from '../store/store.js';
 import { getNextDueDate } from '../care/care.js';
 import { getThingsSettings, buildThingsShortcutURL, wateringReminderTitle } from '../integrations/things.js';
-import { PLANT_TEMPLATES } from '../plants/plant-templates.js';
+import { plantTemplates } from '../plants/localized.js';
 import { href } from '../../../../packages/platform/src/router.js';
 import { el, button, anchor, confirm } from './elements.js';
 import { careCard } from './care-card.js';
@@ -9,8 +9,8 @@ import { observation } from './observation.js';
 import { history } from './history.js';
 import { careTypes } from './list.js';
 
-function guide(plant, copy) {
-  const template = PLANT_TEMPLATES.find(item => item.id === plant.templateId || item.species === plant.species);
+function guide(plant, copy, language) {
+  const template = plantTemplates(language).find(item => item.id === plant.templateId || item.species === plant.species);
   const section = el('details', 'care-guide');
   if (!template?.guide) return null;
   section.append(el('summary', '', copy.guide));
@@ -53,7 +53,7 @@ export function plantDetail(context) {
   const cards = el('div', 'care-actions');
   for (const type of careTypes) cards.append(careCard(context, plant, type));
   view.append(cards, thingsLink(context, plant), el('div', 'divider'));
-  const careGuide = guide(plant, context.copy);
+  const careGuide = guide(plant, context.copy, context.language);
   if (careGuide) view.append(careGuide, el('div', 'divider'));
   view.append(observation(context), el('div', 'divider'), history(context));
   return view;

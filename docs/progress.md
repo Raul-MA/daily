@@ -8,18 +8,18 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore pass local checks.** `combined-backup-all.txt` completed successfully across General and every app, including both broad Piano scripts. Strict lint, 688-file syntax and static preparation of 629 assets pass (`combined-backup-final-*`). Reader and WhatsApp earlier Stage 8 fixes are included. Full restore validates all module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** complete app localization sequentially, starting with Plants' authored guides/template descriptions. Add content/EN-ES/browser contracts before translating and keep saved user text unchanged. All four missing legacy exporters are now prepared/tested locally: General 79 unit/28 browser, WhatsApp 12 unit/nine browser, strict lint, 721-file syntax, static preparation and source patch checks pass. Save the WhatsApp exporter checkpoint before localization. Earlier checkpoints: Reader `66830df`, Plants `6fbed98`, Time Budget `1d40be5`, install icons `746751f`, combined backup `da523d1`. Then finish nested-schema/concurrency/form/update/recovery audits and full verification. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
+**Exact next step:** audit and finish Coffee localization, history-filter display after language restoration, first tools-setup failure handling and notification expiry. Work on Coffee only; add behavioral contracts before fixes, preserve source appearance and user text. Plants localization is accepted locally: 28 unit/13 browser, General 79 unit/28 browser, full lint, 737-file syntax and static preparation pass. Save its local checkpoint before Coffee. All legacy exporters are committed through `e166b42`; combined backup `da523d1` and install icons `746751f` pass. Then finish Games, Time Budget and Piano localization sequentially, remaining nested-schema/concurrency/form/update/recovery audits and full verification. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 79 unit + 28 browser cases pass | `reports/legacy-whatsapp-final-general.txt` |
-| Plants | 26 unit + 11 browser cases pass | `reports/legacy-plants-scope.txt` |
+| General | 79 unit + 28 browser cases pass | `reports/plants-localization-general.txt` |
+| Plants | 28 unit + 13 browser cases pass | `reports/plants-localization-scope.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/legacy-whatsapp-lint.txt` |
-| Native JS syntax | 721 files pass; this is not typechecking | `reports/legacy-whatsapp-syntax.txt` |
-| Static preparation | 632 native files/assets prepared; legacy exporters excluded | `reports/legacy-whatsapp-build.txt` |
+| Strict full-scope lint | Pass | `reports/plants-localization-lint.txt` |
+| Native JS syntax | 737 files pass; this is not typechecking | `reports/plants-localization-syntax.txt` |
+| Static preparation | 646 native files/assets prepared; legacy exporters excluded | `reports/plants-localization-build.txt` |
 | Coffee | 17 unit + 28 browser cases pass | `reports/combined-backup-all.txt` |
 | Games | 16 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
 | Time Budget | 20 unit + 17 browser cases pass | `reports/legacy-budget-time.txt` |
@@ -37,7 +37,7 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - Timestamp activity registry: independent countdowns, singleton budget/game/piano, explicit pause/resume/completion and overdue reconstruction. Rendering/navigation never advances persisted state. Time Budget, Games and piano are integrated.
 - One generated manifest and owned offline asset list. Authenticated/external requests bypass worker caches. Cached HTML remains with its matching asset version. Updates require every open same-app tab to report safe; blocked/unresponsive tabs hold activation. The two-tab browser test preserves settings and unsaved work through update acceptance.
 - Local-midnight/calendar refresh with foreground/timezone checks and daylight-saving tests. In-memory dirty-form snapshots preserve values, file selection and focus through language changes. Plant/history stale edits retain drafts rather than overwriting newer records.
-- Plants: list, stable detail/edit routes, templates, seasonal care, notes/history editing, skip/manual due dates, Things settings/exact shortcut payload, original/migration exports, preview/cancel/recovery before import, scoped source theme and offline care logging. Thirteen original guide/template data objects are preserved. Controls are EN/ES; authored guide paragraphs/descriptions remain Spanish for final content localization. See `modules/plants/docs/behavior.md` and `reports/plants-source-map.json`.
+- Plants: list, stable detail/edit routes, templates, seasonal care, notes/history editing, skip/manual due dates, Things settings/exact shortcut payload, original/migration exports, preview/cancel/recovery before import, scoped source theme and offline care logging. Thirteen original guide/template data objects are preserved. Controls, authored guides and template defaults support EN/ES; saved user text is never translated. See `modules/plants/docs/behavior.md` and `reports/plants-source-map.json`.
 - Coffee: original drink/meta/grind/prep/composition/taste forms, beans, history filters/views/detail editing, insights, tools setup, scoped original theme, shared EN/ES, stable record/edit links, legacy JSON exports and preview/recovery/merge/replace imports. Duplicate/reference/nested-schema validation, read-only startup, quota errors, language draft restoration, stale-record/settings guards and offline checks are implemented. See `modules/coffee/docs/behavior.md` and `reports/coffee-source-map.json`.
 - Piano: the complete Toniq lesson/exercise/reference library, local audio and diagrams, scoped source appearance, stable random/last links, timestamp practice, saved history, async language draft restoration and single-worker offline support. See `modules/piano/docs/behavior.md`. Authored text localization remains a final gate.
 - Standalone connection diagnostic: explicit submission, memory-only token cleared from input, sequential real GET endpoints, timeout/status-only results and direct Daily Review fallback. Live authenticated access remains unverified.
@@ -89,10 +89,10 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 ## Final audit reminders
 
 - Coffee: recheck history filter display after language restoration, visible/atomic first tools setup on storage failure, and transient notification expiry across remounts.
-- Games: complete hardcoded English localization and audit duplicate nested round/result IDs during combined restore. Shared Game clocks intentionally derive from the original session start; history timing corrections/overrides remain explicit.
-- Plants: translate preserved authored guide paragraphs for EN/ES, keeping saved user text intact; include derived draft controls in the all-app review.
-- Time Budget: finish English/Spanish text, original active-state exporter, 320px/all-form derived state and explicit stale-draft discard/notification lifecycle audits.
-- Across all apps: finish the documented stale-view/concurrency policy, combined root/per-module restore, legacy exporters, all-module worker/update/draft tests, proper install assets and physical-device checklist. None of these deferred gates is claimed complete by the scoped green reports.
+- Games: complete hardcoded English localization. Duplicate nested round/result/winner identities are now rejected during app/combined restore; retain that contract in final checks. Shared Game clocks intentionally derive from the original session start; history timing corrections/overrides remain explicit.
+- Plants: authored-content localization and numeric/source-preservation contracts pass; include derived draft controls in the final all-app review.
+- Time Budget: finish English/Spanish text, 320px/all-form derived state and explicit stale-draft discard/notification lifecycle audits. Original active-state exporter is prepared and tested; release is deferred.
+- Across all apps: finish stale-view/concurrency, nested schemas/recovery and worker/update/draft audits. Combined restore, all four legacy exporters and PNG/Apple install assets are locally verified; physical-device and original-app release acceptance remain deferred. Run final full verification after localization/audit changes.
 
 ## Time Budget work after Games checkpoint `46e3049`
 
@@ -306,3 +306,19 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - WhatsApp passes all 12 unit/nine browser cases (`legacy-whatsapp-scope.txt`); General passes 79 unit/28 browser (`legacy-whatsapp-final-general.txt`). Full strict lint, 721-file syntax, static preparation and unchanged-source patch check pass. The earlier General failure is documented as an advancing midnight fixture race; all domain assertions remain and runtime calendar is unchanged.
 - Time Budget, Plants/Things, Reader preferences/remembered metadata and WhatsApp drafts now have standalone EN/ES exporters and reviewable patches. Originals/installations remain unchanged. Shared release/context instructions live in `docs/legacy-exporters.md`; app-specific contracts stay in their README files. No GitHub workflow, push or deployment was performed.
 - Next: remaining authored-content localization (Plants, then other apps one at a time), final nested-schema/concurrency/form/update/recovery audit and full verification. Real-device/API and original-app release gates remain deferred.
+
+
+## Stage 8: Plants authored-content localization in progress
+
+- Two content unit and two browser contracts precede implementation (`plants-localization-red.txt`): missing localized lookup and English defaults/guides fail; existing 26 unit and 11 browser cases remain. Original source assertions and schedules are unchanged.
+- All 13 templates now have complete English notes/guides/alert arrays, with Spanish labels for the selection list. `plants-localization-unit.txt` passes full coverage, exact numeric-care figures, unchanged source Spanish text/schedules and detached-copy protection. Existing source data modules remain byte-for-byte unchanged; the localized lookup overlays authored text only.
+- New template selections use the current interface language. After selection, form values belong to the user's draft and survive later language changes untranslated. Existing saved names/types/notes/history/schedules are never translated or rewritten. Detail guides use the current language without saving records. The new phone/offline contract checks those boundaries; its full module run is pending.
+- Strict lint passes (`plants-localization-lint.txt`); syntax is running. Next: finish Plants and General sequentially, update source map/behavior/Compass/inventory and save a local checkpoint. Other app localization and final audits remain open.
+
+
+## Plants authored localization local acceptance complete
+
+- Plants passes 28 unit + 13 browser (`plants-localization-scope.txt`); General passes 79 unit + 28 browser (`plants-localization-general.txt`). Full strict lint, 737-file syntax and static preparation of 646 assets pass. No original template/source assertion or numeric schedule changed.
+- Every authored note, guide section and alert for all 13 templates has English content; Spanish source content is retained exactly. Selection labels are localized. Detached-copy tests protect source data and check every numeric care figure. New template defaults follow the current language, while saved records and existing drafts remain verbatim through later changes.
+- Offline 320px guides and shared language changes pass. Root module JSON remains unchanged through reading/navigation/localization; language updates affect preferences only. Behavior/Compass/source map/inventory are current.
+- Next: Coffee locale/filter/tools/quota/toast audit, then Games/Time Budget/Piano localization and final cross-app/schema/concurrency/update/recovery verification. No release or physical acceptance is claimed.

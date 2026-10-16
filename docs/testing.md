@@ -31,7 +31,7 @@ The initial isolated Node red captures for diagnostic/storage show only file-lev
 
 ## Native platform and plants checkpoint
 
-The current general suite has 79 unit and 28 browser cases; plants has 26 unit and 11 browser cases. `node scripts/test.mjs <scope> --report reports/<name>.txt` writes child output internally and preserves failing exit codes, allowing one approved local test command to be reused. Keep browser suites sequential because static preparation replaces `dist/`.
+The current general suite has 79 unit and 28 browser cases; plants has 28 unit and 13 browser cases. `node scripts/test.mjs <scope> --report reports/<name>.txt` writes child output internally and preserves failing exit codes, allowing one approved local test command to be reused. Keep browser suites sequential because static preparation replaces `dist/`.
 
 The initial update red attempt used isolated Node child processes and produced only a file-level runner failure. It did not establish behavioral red. `platform-updates-regression-red.txt` replays the exact worker from `bb4c54e` with the new tests: four guards fail for cached-version pinning, blocked tabs, invalid/unresponsive replies and unknown clients. Current worker/unit/browser reports show those contracts passing.
 

@@ -1,0 +1,157 @@
+Suite: plants
+✔ care dates use latest matching care and ignore notes skip and reschedule entries (24.580696ms)
+✔ watering seasons preserve wrap-around dry periods and growth intervals (1.936907ms)
+✔ fertilizer pause is preserved while a manual due date still takes precedence (0.582267ms)
+✔ care status distinguishes overdue today soon and future without mutating plants (1.532111ms)
+✔ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (1.839215ms)
+✔ backdated input uses local noon and today retains the actual event time (0.591103ms)
+✔ reminder counts include overdue and today care once and leave records unchanged (0.691712ms)
+✔ urgency ranking places overdue care ahead of future care (1.206092ms)
+✔ legacy plant export retains records care dates Unicode and Things preferences through actual Daily import (7.124313ms)
+✔ legacy plant exporter reads the first valid recovery in original priority without repairing original keys (1.486836ms)
+✔ legacy plant exporter keeps empty storage read-only and refuses invalid settings checksums or blocked storage (1.263008ms)
+✖ all thirteen authored plant guides and template notes have complete English and Spanish text with unchanged care figures (0.825651ms)
+✖ localized plant templates are detached copies and never rewrite original source notes guides or schedules (0.574312ms)
+✔ connected plant storage writes only the shared document and preserves other modules (2.432673ms)
+✔ connected care and due-date changes remain one root commit with no partial state (1.309635ms)
+✔ Things settings live with plant records and survive a plant update (1.401637ms)
+✔ legacy import previews are read-only and confirmation keeps a root recovery copy (3.392124ms)
+✔ migration export includes Things settings and imports without translating user text (1.958437ms)
+✔ unsupported duplicate and invalid plant imports never mutate shared data (2.219605ms)
+✔ quota failure retains plant history and sends no successful shared change (1.45656ms)
+✔ template care refresh preserves names notes history IDs and manual dates (0.973718ms)
+✔ valid legacy data remains readable when its migration write fails (0.505584ms)
+✔ care log and next-due override are committed in one primary write (0.870706ms)
+✔ validation failures use the storage-error notification path (0.246791ms)
+✔ builds a stable watering title (0.103754ms)
+✔ shortcut URL carries the exact title, date, and project (0.314057ms)
+✔ enabled integration requires a project (0.190756ms)
+✔ settings round-trip and normalize project whitespace (0.171481ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 26
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 119.557246
+
+✖ failing tests:
+
+test at modules/plants/test/localization-service.test.mjs:8:1
+✖ all thirteen authored plant guides and template notes have complete English and Spanish text with unchanged care figures (0.825651ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/plants/src/plants/localized.js' imported from /workspaces/daily/modules/plants/test/localization-service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/plants/src/plants/localized.js'
+  }
+
+test at modules/plants/test/localization-service.test.mjs:37:1
+✖ localized plant templates are detached copies and never rewrite original source notes guides or schedules (0.574312ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/plants/src/plants/localized.js' imported from /workspaces/daily/modules/plants/test/localization-service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/plants/src/plants/localized.js'
+  }
+[WebServer] (node:134014) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 13 tests using 1 worker
+
+(node:134041) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 modules/plants/e2e/localization.spec.js:5:1 › template defaults follow the selected language while existing form text survives later language changes (6.7s)
+(node:134205) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 modules/plants/e2e/localization.spec.js:24:1 › authored plant guides switch language offline without translating saved records or changing care timing (6.5s)
+(node:134444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 modules/plants/e2e/plants.spec.js:23:1 › plant creation edit and deletion use canonical routes and retain other storage (2.4s)
+  ✓   4 modules/plants/e2e/plants.spec.js:41:1 › care logging skip and manual dates keep one history and support editing and deleting entries (3.1s)
+  ✓   5 modules/plants/e2e/plants.spec.js:70:1 › dashboard reminders open the stable plant without completing care or changing legacy keys (2.8s)
+  ✓   6 modules/plants/e2e/plants.spec.js:87:1 › plant import previews can be canceled and replacement requires a recovery download (2.0s)
+  ✓   7 modules/plants/e2e/plants.spec.js:106:1 › Things settings and migration export preserve the exact shortcut integration (1.9s)
+  ✓   8 modules/plants/e2e/plants.spec.js:124:1 › failed care saves retain the visible form and previous stored history (2.0s)
+  ✓   9 modules/plants/e2e/plants.spec.js:142:1 › plant interfaces follow shared Spanish without translating saved names and observations (1.9s)
+  ✓  10 modules/plants/e2e/plants.spec.js:155:1 › plant styles stay scoped and invalid imports leave the current plants intact (2.4s)
+  ✓  11 modules/plants/e2e/plants.spec.js:176:1 › a plant changed in another tab keeps the current draft and refuses a stale edit (3.2s)
+  ✓  12 modules/plants/e2e/plants.spec.js:191:1 › switching language preserves draft plant fields and an open care note (1.9s)
+  ✓  13 modules/plants/e2e/plants.spec.js:205:1 › plant details care logging and settings work after an offline reload (6.5s)
+
+
+  1) modules/plants/e2e/localization.spec.js:5:1 › template defaults follow the selected language while existing form text survives later language changes 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('[name=notes]')
+    Expected pattern: /Stores water in rhizomes/
+    Received string:  "Almacena agua en rizomas — si dudas, no riegues. Tóxica para mascotas. La variedad Raven tiene hojas casi negras."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('[name=notes]')
+        14 × locator resolved to <textarea name="notes" class="form-textarea"></textarea>
+           - unexpected value "Almacena agua en rizomas — si dudas, no riegues. Tóxica para mascotas. La variedad Raven tiene hojas casi negras."
+
+
+       6 |   await page.goto('/daily/#/plants/new');
+       7 |   await page.locator('[name=template]').selectOption('zz-plant');
+    >  8 |   await expect(page.locator('[name=notes]')).toHaveValue(/Stores water in rhizomes/);
+         |                                              ^
+       9 |   await page.getByLabel('Plant name', { exact: true }).fill('Mi ZZ 🌱');
+      10 |   await page.locator('[name=notes]').fill('Mi nota: Water no se traduce');
+      11 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+        at /workspaces/daily/modules/plants/e2e/localization.spec.js:8:46
+
+    Error Context: test-results/localization-template-defa-7c33b-ives-later-language-changes/error-context.md
+
+  2) modules/plants/e2e/localization.spec.js:24:1 › authored plant guides switch language offline without translating saved records or changing care timing 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.care-guide')
+    Expected substring: "Cool season"
+    Received string:    "Care guideWaterÉpoca fresca (oct–feb): revisa una vez al mes. Época cálida (mar–sep): revisa dos veces al mes. Riega únicamente cuando el sustrato se haya secado por completo; sus rizomas y hojas almacenan agua. Una habitación más fría o con menos luz retrasa el secado, aunque esté lloviendo solo afuera.SoilCada 2–3 años en primavera, cuando los rizomas deformen la maceta o salgan raíces por abajo. Usa una mezcla para interior muy drenante, con perlita, piedra pómez o arena gruesa.FertilizerUna o dos aplicaciones ligeras entre marzo y agosto son suficientes. Usa fertilizante balanceado para plantas de interior a media dosis, dejando unas 12 semanas entre aplicaciones. De septiembre a febrero no abones.LightTolera luz muy baja, pero crece mejor con luz indirecta brillante a media. Evita sol directo intenso. Las hojas nuevas de la variedad Raven emergen verdes y se oscurecen durante varias semanas incluso en sombra.Humidity and temperatureTolera bien la humedad habitual de una casa y no necesita nebulización. Crece mejor entre 18–26°C; mantenla por encima de 15°C y lejos de ventanas frías durante la noche.Watch forVarios tallos amarillos y sustrato húmedo → posible exceso de aguaTallos blandos o base oscura → posible pudrición; revisa raíces y drenajeHojas arrugadas con sustrato completamente seco → posible falta de aguaCrecimiento débil o inclinado → puede necesitar más luz indirecta"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('.care-guide')
+        13 × locator resolved to <details class="care-guide">…</details>
+           - unexpected value "Care guideWaterÉpoca fresca (oct–feb): revisa una vez al mes. Época cálida (mar–sep): revisa dos veces al mes. Riega únicamente cuando el sustrato se haya secado por completo; sus rizomas y hojas almacenan agua. Una habitación más fría o con menos luz retrasa el secado, aunque esté lloviendo solo afuera.SoilCada 2–3 años en primavera, cuando los rizomas deformen la maceta o salgan raíces por abajo. Usa una mezcla para interior muy drenante, con perlita, piedra pómez o arena gruesa.FertilizerUna o dos aplicaciones ligeras entre marzo y agosto son suficientes. Usa fertilizante balanceado para plantas de interior a media dosis, dejando unas 12 semanas entre aplicaciones. De septiembre a febrero no abones.LightTolera luz muy baja, pero crece mejor con luz indirecta brillante a media. Evita sol directo intenso. Las hojas nuevas de la variedad Raven emergen verdes y se oscurecen durante varias semanas incluso en sombra.Humidity and temperatureTolera bien la humedad habitual de una casa y no necesita nebulización. Crece mejor entre 18–26°C; mantenla por encima de 15°C y lejos de ventanas frías durante la noche.Watch forVarios tallos amarillos y sustrato húmedo → posible exceso de aguaTallos blandos o base oscura → posible pudrición; revisa raíces y drenajeHojas arrugadas con sustrato completamente seco → posible falta de aguaCrecimiento débil o inclinado → puede necesitar más luz indirecta"
+
+
+      31 |   });
+      32 |   await page.goto('/daily/#/plants/zz-user');
+    > 33 |   await expect(page.locator('.care-guide')).toContainText('Cool season');
+         |                                             ^
+      34 |   await expect(page.locator('.detail-notes')).toHaveText('Mi nota: Water no se traduce');
+      35 |   const before = await page.evaluate(() => JSON.stringify(JSON.parse(localStorage.getItem('daily:v1')).modules));
+      36 |   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBe(true);
+        at /workspaces/daily/modules/plants/e2e/localization.spec.js:33:45
+
+    Error Context: test-results/localization-authored-plan-711b3-rds-or-changing-care-timing/error-context.md
+
+  2 failed
+    modules/plants/e2e/localization.spec.js:5:1 › template defaults follow the selected language while existing form text survives later language changes 
+    modules/plants/e2e/localization.spec.js:24:1 › authored plant guides switch language offline without translating saved records or changing care timing 
+  11 passed (47.5s)

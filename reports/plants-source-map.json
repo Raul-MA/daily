@@ -71,5 +71,14 @@
     "browser_contracts": 1,
     "original_modified": false,
     "release": "deferred"
+  },
+  "localization": {
+    "lookup": "modules/plants/src/plants/localized.js",
+    "englishText": "modules/plants/src/plants/translations/",
+    "templates": 13,
+    "sourceSpanishModified": false,
+    "savedUserTextTranslated": false,
+    "unitContracts": 2,
+    "browserContracts": 2
   }
 }
