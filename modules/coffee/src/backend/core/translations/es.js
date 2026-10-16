@@ -1,4 +1,13 @@
 export default {
+  "validationConflict": "Los datos han cambiado en otra vista.",
+  "validationDuplicate": "Hay identificadores de café duplicados.",
+  "validationMissingBean": "Una bebida hace referencia a un café que falta.",
+  "validationData": "Los datos de café no son válidos.",
+  "validationPreview": "No se reconoce la vista previa de importación de café.",
+  "validationEntryFields": "Los campos de la bebida deben ser objetos.",
+  "validationEntryValidDate": "La bebida requiere una fecha de preparación válida.",
+
+  "toastConflict": "Los datos han cambiado. Conserva tu borrador y vuelve a abrir la vista.",
   "appTitle": "Crois",
   "navNew": "Nuevo",
   "navHistory": "Historial",

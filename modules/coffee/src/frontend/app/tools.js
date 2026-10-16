@@ -1,11 +1,12 @@
-import { getSettings, updateSettings } from '../../backend/features/settings.js';
+import { completeToolSetup } from '../../backend/features/setup.js';
+import { getSettings } from '../../backend/features/settings.js';
 import { coffee } from './context.js';
 import { pageHeader } from './format.js';
 import { tr } from './copy.js';
 import { section, escapeHtml, fieldRow, toggle } from '../components/components.js';
 import { testIds } from './testIds.js';
-import { seedIfEmpty, render } from './navigation.js';
-import { showToastKey } from './notifications.js';
+import { render } from './navigation.js';
+import { showToastKey, attempt } from './notifications.js';
 import { prepTools } from './constants.js';
 
 export function renderToolsSetup() {
@@ -25,16 +26,11 @@ export function renderToolsSetup() {
 
   coffee.host.querySelector("#tools-setup-form").addEventListener("submit", (event) => {
     event.preventDefault();
-    saveToolSettings(new FormData(event.currentTarget));
-    seedIfEmpty();
-    showToastKey("toastToolsSaved");
-    render();
+    const tools = readToolSettings(new FormData(event.currentTarget));
+    attempt(() => finishSetup(tools));
   });
   coffee.host.querySelector("#skip-tools-setup").addEventListener("click", () => {
-    updateSettings({ toolsConfigured: true, tools: emptyTools() });
-    seedIfEmpty();
-    showToastKey("toastToolsSaved");
-    render();
+    attempt(() => finishSetup(emptyTools()));
   });
 }
 
@@ -54,6 +50,8 @@ export function readToolSettings(data) {
   return Object.fromEntries(prepTools.map((tool) => [tool.key, data.get(`tool-${tool.key}`) === "on"]));
 }
 
-export function saveToolSettings(data) {
-  updateSettings({ toolsConfigured: true, tools: readToolSettings(data) });
+function finishSetup(tools) {
+  completeToolSetup(tools);
+  showToastKey("toastToolsSaved");
+  render();
 }

@@ -3,7 +3,7 @@ import { checkEntry } from './conflicts.js';
 import { getBeanPresets } from '../../backend/features/beans.js';
 import { getSettings } from '../../backend/features/settings.js';
 import { getExportReminder } from './settings.js';
-import { tasteOptions, tr, currentLanguage } from './copy.js';
+import { tasteOptions, tr } from './copy.js';
 import { coffee } from './context.js';
 import { testIds } from './testIds.js';
 import { escapeHtml, iconButton, icons } from '../components/components.js';
@@ -20,7 +20,6 @@ import { readEntryForm } from './input.js';
 import { updateEntry, createEntry } from '../../backend/features/entries.js';
 import { showToastKey, showToast } from './notifications.js';
 import { setRoute, goToExportSettings } from './navigation.js';
-import { translateMessage } from '../../backend/core/i18n.js';
 
 export function renderEntryForm(entry = null) {
   const beans = getBeanPresets();
@@ -93,7 +92,7 @@ export function wireEntryForm(entry) {
       showToastKey(entry ? "toastDrinkUpdated" : "toastDrinkSaved");
       setRoute("detail", saved.id);
     } catch (error) {
-      showToast(translateMessage(currentLanguage(), error.message));
+      showToast(error.message);
     }
   });
 

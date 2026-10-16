@@ -1,4 +1,13 @@
 export default {
+  "validationConflict": "Data changed in another view.",
+  "validationDuplicate": "Duplicate coffee record ids.",
+  "validationMissingBean": "Entry references a missing bean.",
+  "validationData": "Invalid coffee data.",
+  "validationPreview": "Unknown coffee import preview.",
+  "validationEntryFields": "Entry fields must be objects.",
+  "validationEntryValidDate": "Entry requires a valid brewed date.",
+
+  "toastConflict": "Data changed. Keep your draft and reopen this view.",
   "appTitle": "Crois",
   "navNew": "New",
   "navHistory": "History",

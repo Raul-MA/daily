@@ -8,19 +8,19 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore pass local checks.** `combined-backup-all.txt` completed successfully across General and every app, including both broad Piano scripts. Strict lint, 688-file syntax and static preparation of 629 assets pass (`combined-backup-final-*`). Reader and WhatsApp earlier Stage 8 fixes are included. Full restore validates all module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** audit and finish Coffee localization, history-filter display after language restoration, first tools-setup failure handling and notification expiry. Work on Coffee only; add behavioral contracts before fixes, preserve source appearance and user text. Plants localization is accepted locally: 28 unit/13 browser, General 79 unit/28 browser, full lint, 737-file syntax and static preparation pass. Save its local checkpoint before Coffee. All legacy exporters are committed through `e166b42`; combined backup `da523d1` and install icons `746751f` pass. Then finish Games, Time Budget and Piano localization sequentially, remaining nested-schema/concurrency/form/update/recovery audits and full verification. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
+**Exact next step:** save the accepted Coffee checkpoint, then audit and finish Games localization. Coffee passes 20 unit + 34 browser, General 79 unit + 28 browser, full strict lint, 740-file syntax and static preparation (`coffee-final-audit-*`). Coffee's final audit fixes filtered results after language restoration, atomic first tools setup, translated notifications with fixed expiry, Spanish import modes/shared errors and visible failures on view/delete/export writes. Plants checkpoint `bdd8af1` is saved. Legacy exporters are committed through `e166b42`; combined backup `da523d1` and install icons `746751f` pass. Then finish Games, Time Budget and Piano localization sequentially, remaining schema/concurrency/form/update/recovery audits and full verification. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 79 unit + 28 browser cases pass | `reports/plants-localization-general.txt` |
+| General | 79 unit + 28 browser cases pass | `reports/coffee-final-audit-general.txt` |
 | Plants | 28 unit + 13 browser cases pass | `reports/plants-localization-scope.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/plants-localization-lint.txt` |
-| Native JS syntax | 737 files pass; this is not typechecking | `reports/plants-localization-syntax.txt` |
-| Static preparation | 646 native files/assets prepared; legacy exporters excluded | `reports/plants-localization-build.txt` |
-| Coffee | 17 unit + 28 browser cases pass | `reports/combined-backup-all.txt` |
+| Strict full-scope lint | Pass | `reports/coffee-final-audit-lint.txt` |
+| Native JS syntax | 740 files pass; this is not typechecking | `reports/coffee-final-audit-syntax.txt` |
+| Static preparation | 647 native files/assets prepared; legacy exporters excluded | `reports/coffee-final-audit-build.txt` |
+| Coffee | 20 unit + 34 browser cases pass | `reports/coffee-final-audit-unit.txt`, `reports/coffee-final-audit-scope.txt` |
 | Games | 16 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
 | Time Budget | 20 unit + 17 browser cases pass | `reports/legacy-budget-time.txt` |
 | Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/combined-backup-all.txt` |
@@ -322,3 +322,19 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - Every authored note, guide section and alert for all 13 templates has English content; Spanish source content is retained exactly. Selection labels are localized. Detached-copy tests protect source data and check every numeric care figure. New template defaults follow the current language, while saved records and existing drafts remain verbatim through later changes.
 - Offline 320px guides and shared language changes pass. Root module JSON remains unchanged through reading/navigation/localization; language updates affect preferences only. Behavior/Compass/source map/inventory are current.
 - Next: Coffee locale/filter/tools/quota/toast audit, then Games/Time Budget/Piano localization and final cross-app/schema/concurrency/update/recovery verification. No release or physical acceptance is claimed.
+
+
+## Stage 8: Coffee final audit in progress
+
+- Five browser contracts fail against the prior implementation while all original 28 cases remain green (`coffee-final-audit-red.txt`). They cover filtered-list restoration, first tools Save/Skip quota handling and single replacement, notification translation/original expiry and Spanish import mode text. Original assertions are unchanged.
+- Eleven service cases pass (`coffee-setup-unit.txt`), including two new atomic setup/quota cases. The standalone isolated child-process red report only identifies the failed test file; browser red evidence above captures the actual missing error UI.
+- Active native Coffee regression is `coffee-final-audit-scope.txt` (19 unit, originally 33 browser). A sixth final browser contract now tests failed history view, deletion and export actions; discovery is updated to 34, but this last contract has not run yet. No acceptance claim until final run finishes.
+
+
+## Coffee final-audit local workflow acceptance
+
+- All 34 browser cases pass (`coffee-final-audit-scope.txt`) including the six new red-first contracts and all original source workflows; 20 unit pass (`coffee-final-audit-unit.txt`). The browser run contains the original 19-unit subset; the later added dictionary/error contract is included in the separate complete unit report.
+- Atomic tools setup retains the original starter bean fields and creates no duplicate on repeat; failed Save/Skip keeps the setup form. Filtered history refreshes actual results, translated status and expanded state after shared-language restoration. Keyed notifications translate but retain their original expiry through remounts. Spanish preview modes/shared errors use dictionary copy; stored personal text is untouched. Failed view/delete/export actions show errors, retain records and emit no fake success/download.
+- Dictionaries have 247 matching keys and matching interpolation parameters. Native validation/error translations fail first in `coffee-error-localization-red.txt`. Strict full lint passes; final shared regression/syntax/static preparation are pending.
+
+- Final shared regression passes 79 unit + 28 browser (`coffee-final-audit-general.txt`). Full strict lint, 740-file syntax and static preparation of 647 assets pass. Coffee is ready for its local checkpoint. Next app: Games. No remote, physical-device or live-API acceptance is claimed.

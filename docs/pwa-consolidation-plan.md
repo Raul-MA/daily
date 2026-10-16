@@ -1,6 +1,6 @@
 # One daily PWA: research and implementation plan
 
-Status: updated 2026-10-16. Shared platform, plants, Coffee, Games, Time Budget and piano are implemented locally; Reader is in progress. All work remains local, using plain HTML/CSS/JavaScript without Vite or TypeScript. Live Readwise/Reader and physical-device checks remain deferred and do not block local implementation. See [progress / resume](./progress.md) for current evidence and the exact next step.
+Status: updated 2026-10-16. Shared platform and all seven apps are implemented locally; final localization and release-migration gates remain in progress. All work remains local, using plain HTML/CSS/JavaScript without Vite or TypeScript. Live Readwise/Reader and physical-device checks remain deferred and do not block local implementation. See [progress / resume](./progress.md) for current evidence and the exact next step.
 
 ## Implementation contract: tests first, ESLint required from day one
 

@@ -4,6 +4,14 @@ import es from './translations/es.js';
 export const dictionaries = { en, es };
 
 const errorMessageKeys = {
+  "Data changed in another view.": "validationConflict",
+  "Duplicate coffee record ids.": "validationDuplicate",
+  "Entry references a missing bean.": "validationMissingBean",
+  "Invalid coffee data.": "validationData",
+  "Unknown coffee import preview.": "validationPreview",
+  "Entry fields must be objects.": "validationEntryFields",
+  "Entry requires a valid brewed date.": "validationEntryValidDate",
+
   "Bean preset must be an object.": "validationBeanObject",
   "Bean preset requires a safe id.": "validationBeanSafeId",
   "Bean preset requires a brand.": "validationBeanBrand",

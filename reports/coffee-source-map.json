@@ -145,6 +145,12 @@
     "modules/coffee/src/service.js",
     "modules/coffee/src/validation.js",
     "modules/coffee/src/imports.js",
-    "modules/coffee/src/view.js"
-  ]
+    "modules/coffee/src/view.js",
+    "modules/coffee/src/backend/features/setup.js"
+  ],
+  "localizationAudit": {
+    "dictionaries": "247 matching EN/ES keys and interpolation parameters; native validation/conflict messages localized, user text unchanged",
+    "newBrowserContracts": "modules/coffee/e2e/final-audit.spec.js",
+    "behavior": "Atomic first setup; restored filtered results; translated notifications with fixed expiry; translated import mode; visible failed-write actions."
+  }
 }

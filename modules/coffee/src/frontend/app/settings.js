@@ -5,7 +5,7 @@ import { attempt } from './notifications.js';
 import { getSettings, updateSettings } from '../../backend/features/settings.js';
 import { coffee } from './context.js';
 import { pageHeader } from './format.js';
-import { tr, currentLanguage } from './copy.js';
+import { tr } from './copy.js';
 import { settingsBeans } from './settingsBeans.js';
 import { settingsPreferences } from './settingsPreferences.js';
 import { settingsBackup } from './settingsBackup.js';
@@ -14,7 +14,6 @@ import { getBeanPresets, getBeanPreset, deleteBeanPreset, updateBeanPreset, crea
 import { testIds } from './testIds.js';
 import { escapeHtml } from '../components/components.js';
 import { showToastKey, showToast, applyTheme, applyLanguage } from './notifications.js';
-import { translateMessage } from '../../backend/core/i18n.js';
 import { readToolSettings } from './tools.js';
 import { renderTabs, render } from './navigation.js';
 import { exportAll } from '../../backend/features/importExport.js';
@@ -36,7 +35,7 @@ export function renderSettings() {
 export function wireSettings() {
 coffee.host.querySelector("#settings-form").addEventListener("submit", savePreferences);
 coffee.host.querySelector("#bean-form").addEventListener("submit", saveBean);
-coffee.host.querySelector("#export-data").addEventListener("click", downloadBackup);
+coffee.host.querySelector("#export-data").addEventListener("click", () => attempt(downloadBackup));
 coffee.host.querySelector("#import-data").addEventListener("change", selectImport);
 }
 
@@ -82,7 +81,7 @@ export function renderBeanList() {
         renderBeanList();
         showToastKey("toastBeanDeleted");
       } catch (error) {
-        showToast(translateMessage(currentLanguage(), error.message));
+        showToast(error.message);
       }
     });
   });
@@ -133,7 +132,7 @@ export function saveBean(event) {
       renderBeanList();
       showToastKey("toastBeanSaved");
     } catch (error) {
-      showToast(translateMessage(currentLanguage(), error.message));
+      showToast(error.message);
     }
   }
 
@@ -166,6 +165,6 @@ export async function selectImport(event) {
       }
       showImportPreview(coffee.service.previewImport(JSON.stringify(data), coffee.host.querySelector("#importMode").value));
     } catch (error) {
-      showToast(translateMessage(currentLanguage(), error.message));
+      showToast(error.message);
     }
   }

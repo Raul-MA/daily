@@ -12,7 +12,7 @@ import { detailBrew } from './detailBrew.js';
 import { detailVisual } from './detailVisual.js';
 import { detailTaste } from './detailTaste.js';
 import { setRoute } from './navigation.js';
-import { showToastKey } from './notifications.js';
+import { showToastKey, attempt } from './notifications.js';
 
 export function renderEntryDetail(id) {
   const entry = getEntry(id);
@@ -40,10 +40,10 @@ export function renderEntryDetail(id) {
   `;
   coffee.host.querySelector("#back-history").addEventListener("click", () => setRoute("history"));
   coffee.host.querySelector("#edit-entry").addEventListener("click", () => setRoute("edit", entry.id));
-  coffee.host.querySelector("#delete-entry").addEventListener("click", () => {
+  coffee.host.querySelector("#delete-entry").addEventListener("click", () => attempt(() => {
     if (!confirm(tr("confirmDeleteDrink"))) return;
     deleteEntry(entry.id);
     showToastKey("toastDrinkDeleted");
     setRoute("history");
-  });
+  }));
 }

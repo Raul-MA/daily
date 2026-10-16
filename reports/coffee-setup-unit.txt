@@ -1,0 +1,19 @@
+✔ coffee reads create no records and saves preserve unrelated shared modules (21.94121ms)
+✔ explicit coffee language changes commit with global language atomically (4.11793ms)
+✔ coffee imports preserve shared language and validate merged bean references (8.206264ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (3.168066ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (3.075653ms)
+✔ coffee rejects a future module payload without silently replacing it (1.001681ms)
+✔ coffee import previews are read-only and cancel leaves the current root intact (1.758093ms)
+✔ coffee import confirmation rejects stale previews and retains recovery on replacement (4.269482ms)
+✔ coffee malformed nested records and invalid settings fail before any shared write (26.146643ms)
+✔ coffee first tools setup saves its starter bean and settings in one root commit (5.797466ms)
+✔ coffee first tools setup quota failure leaves no starter bean or configured flag (2.202783ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 166.867137

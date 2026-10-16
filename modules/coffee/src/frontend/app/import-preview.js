@@ -1,6 +1,7 @@
+import { tr } from './copy.js';
 import { coffee } from './context.js';
 import { render, renderTabs } from './navigation.js';
-import { applyLanguage, showToast, showToastKey } from './notifications.js';
+import { applyLanguage, showToast, showToastKey, attempt } from './notifications.js';
 
 export function downloadJson(text, filename) {
   const url = URL.createObjectURL(new Blob([text], { type: 'application/json' }));
@@ -18,15 +19,16 @@ export function showImportPreview(preview) {
   const heading = document.createElement('h2');
   heading.textContent = spanish ? 'Vista previa de importación' : 'Import preview';
   const summary = document.createElement('p');
-  summary.textContent = `${preview.mode}: ${preview.counts.beans} ${spanish ? 'cafés' : 'beans'}, ${preview.counts.entries} ${spanish ? 'bebidas' : 'drinks'}`;
+  const mode = tr({ merge: 'optionMergeImport', replace: 'optionReplaceImport' }[preview.mode]);
+  summary.textContent = `${mode}: ${preview.counts.beans} ${spanish ? 'cafés' : 'beans'}, ${preview.counts.entries} ${spanish ? 'bebidas' : 'drinks'}`;
   const recovery = button(spanish ? 'Descargar copia de recuperación' : 'Download recovery backup', 'coffeeRecovery');
   const confirm = button(spanish ? 'Confirmar importación' : 'Confirm import', 'coffeeConfirmImport');
   const cancel = button(spanish ? 'Cancelar' : 'Cancel', 'coffeeCancelImport');
   confirm.disabled = true;
-  recovery.addEventListener('click', () => {
+  recovery.addEventListener('click', () => attempt(() => {
     downloadJson(coffee.service.exportRecovery(), 'daily-before-coffee-import.json');
     confirm.disabled = false;
-  });
+  }));
   confirm.addEventListener('click', () => apply(preview, dialog));
   cancel.addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => { dialog.remove(); document.dispatchEvent(new Event('daily:form-state')); });

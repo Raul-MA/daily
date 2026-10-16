@@ -1,6 +1,7 @@
+import { refreshHistory } from './frontend/app/history.js';
 import { coffee } from './frontend/app/context.js';
 import { render, renderTabs } from './frontend/app/navigation.js';
-import { applyLanguage, applyTheme, showToast } from './frontend/app/notifications.js';
+import { applyLanguage, applyTheme, showToastKey, restoreToast } from './frontend/app/notifications.js';
 import { handleTasteHelpKeydown } from './frontend/app/taste.js';
 import { updateCompositionFields, updateRatioPreview } from './frontend/app/composition.js';
 
@@ -21,7 +22,7 @@ export function mountCoffee(options) {
   applyLanguage();
   renderTabs();
   render();
-  if (coffee.message) showToast(coffee.message);
+  restoreToast();
   host.addEventListener('input', markDirty);
   host.addEventListener('change', markDirty);
   host.querySelector('h1')?.setAttribute('tabindex', '-1');
@@ -37,9 +38,10 @@ function dispose() {
   clearTimeout(coffee.timer);
 }
 function conflict() {
-  showToast(coffee.host.lang === 'es' ? 'Los datos han cambiado. Conserva tu borrador y vuelve a abrir la vista.' : 'Data changed. Keep your draft and reopen this view.');
+  showToastKey('toastConflict');
 }
 function restored() {
+  refreshHistory();
   if (!coffee.host.querySelector('#entry-form')) return;
   updateCompositionFields();
   updateRatioPreview();

@@ -134,3 +134,29 @@ test('coffee malformed nested records and invalid settings fail before any share
     assert.deepEqual([...values], before);
   }
 });
+
+test('coffee first tools setup saves its starter bean and settings in one root commit', async t => {
+  const { state } = await setup(t);
+  const api = await import('../src/backend/features/setup.js');
+  const observed = [];
+  state.subscribe(() => observed.push(state.read().value));
+  api.completeToolSetup({ wdt: true, distributor: false, puckScreen: false });
+  assert.equal(observed.length, 1);
+  assert.equal(observed[0].modules.coffee.data.settings.toolsConfigured, true);
+  assert.equal(observed[0].modules.coffee.data.beanPresets.length, 1);
+  const first = beans.getBeanPresets();
+  api.completeToolSetup({ wdt: false, distributor: false, puckScreen: false });
+  assert.deepEqual(beans.getBeanPresets(), first);
+});
+
+test('coffee first tools setup quota failure leaves no starter bean or configured flag', async t => {
+  const { storage, state } = await setup(t);
+  const api = await import('../src/backend/features/setup.js');
+  const before = state.read().value;
+  let events = 0;
+  state.subscribe(() => events++);
+  storage.setItem = () => { throw new Error('QuotaExceededError'); };
+  assert.throws(() => api.completeToolSetup({ wdt: false, distributor: false, puckScreen: false }), /QuotaExceeded/);
+  assert.deepEqual(state.read().value, before);
+  assert.equal(events, 0);
+});

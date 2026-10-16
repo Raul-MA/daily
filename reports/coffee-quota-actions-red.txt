@@ -1,0 +1,35 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 modules/coffee/e2e/final-audit.spec.js:82:1 › coffee history view deletion and export report quota failures without false success (7.5s)
+
+
+  1) modules/coffee/e2e/final-audit.spec.js:82:1 › coffee history view deletion and export report quota failures without false success 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('toast')
+    Expected substring: "QuotaExceededError"
+    Received string:    ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('toast')
+        14 × locator resolved to <div hidden="" class="toast" role="status" id="coffee-toast" data-testid="toast"></div>
+           - unexpected value ""
+
+
+      88 |   await page.getByTestId(testIds.navHistory).click();
+      89 |   await page.getByTestId(testIds.historyViewDetailed).click();
+    > 90 |   await expect(page.getByTestId(testIds.toast)).toContainText('QuotaExceededError');
+         |                                                 ^
+      91 |   await expect(page.getByTestId(testIds.historyViewCompact)).toHaveAttribute('aria-pressed', 'true');
+      92 |   await page.getByTestId(testIds.entryRow).click();
+      93 |   page.on('dialog', dialog => dialog.accept());
+        at /workspaces/daily/modules/coffee/e2e/final-audit.spec.js:90:49
+
+    Error Context: test-results/final-audit-coffee-history-bc14f-lures-without-false-success/error-context.md
+
+  1 failed
+    modules/coffee/e2e/final-audit.spec.js:82:1 › coffee history view deletion and export report quota failures without false success 

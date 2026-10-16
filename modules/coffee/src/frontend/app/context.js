@@ -1,1 +1,1 @@
-export const coffee = { message: '', timer: null };
+export const coffee = { notice: null, timer: null };

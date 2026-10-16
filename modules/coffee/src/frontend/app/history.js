@@ -1,3 +1,4 @@
+import { attempt } from './notifications.js';
 import { getBeanPresets } from '../../backend/features/beans.js';
 import { getSettings, updateSettings } from '../../backend/features/settings.js';
 import { tr, drinkTypeOptions } from './copy.js';
@@ -17,11 +18,11 @@ export function renderHistory() {
   coffee.app.innerHTML = `
     ${pageHeader(tr("pageHistoryTitle"), tr("pageHistorySubtitle"))}
     <div class="history-toolbar">
-      <button class="secondary" type="button" id="toggle-filters" aria-expanded="false" aria-controls="filters" data-testid="${testIds.toggleFilters}">${escapeHtml(tr("buttonFilters"))}</button>
+      <button class="secondary" type="button" id="toggle-filters" aria-expanded="${Boolean(coffee.ui.historyOpen)}" aria-controls="filters" data-testid="${testIds.toggleFilters}">${escapeHtml(tr("buttonFilters"))}</button>
       <span id="filter-status" data-testid="${testIds.filterStatus}">${escapeHtml(tr("optionNewest"))}</span>
       ${historyViewSwitch(settings.historyListView)}
     </div>
-    <form id="filters" class="filter-strip" data-testid="${testIds.filters}" hidden>
+    <form id="filters" class="filter-strip" data-testid="${testIds.filters}" ${coffee.ui.historyOpen ? "" : "hidden"}>
       ${selectInput({ id: "filterBean", options: beanOptions })}
       ${selectInput({ id: "filterDrinkType", options: drinkOptions })}
       ${numberInput({ id: "scoreMin", min: "1", max: "10", step: "1", unit: tr("unitMinimum") })}
@@ -39,31 +40,19 @@ export function renderHistory() {
 
   const form = coffee.host.querySelector("#filters");
   const toggleButton = coffee.host.querySelector("#toggle-filters");
-  const status = coffee.host.querySelector("#filter-status");
-  const renderList = () => {
-    const data = new FormData(form);
-    const entries = sortEntries(filterEntries({
-      beanPresetId: data.get("filterBean"),
-      drinkType: data.get("filterDrinkType"),
-      scoreMin: data.get("scoreMin"),
-      startDate: data.get("startDate"),
-      endDate: data.get("endDate")
-    }), data.get("sortBy"));
-    status.textContent = getHistoryFilterStatus(data);
-    drawEntryList(entries, getSettings().historyListView);
-  };
   toggleButton.addEventListener("click", () => {
     form.hidden = !form.hidden;
+    coffee.ui.historyOpen = !form.hidden;
     toggleButton.setAttribute("aria-expanded", String(!form.hidden));
   });
   coffee.host.querySelectorAll("[data-history-view]").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", () => attempt(() => {
       updateSettings({ historyListView: button.dataset.historyView });
       renderHistory();
-    });
+    }));
   });
-  form.addEventListener("input", renderList);
-  renderList();
+  form.addEventListener("input", refreshHistory);
+  refreshHistory();
 }
 
 export function historyViewSwitch(view) {
@@ -138,4 +127,16 @@ export function compactEntryRow(entry, bean) {
 
 export function compactMetric(label, value) {
   return `<span><em>${escapeHtml(label)}</em><strong>${escapeHtml(value)}</strong></span>`;
+}
+
+export function refreshHistory() {
+  const form = coffee.host.querySelector('#filters');
+  if (!form) return;
+  const data = new FormData(form);
+  const entries = sortEntries(filterEntries({
+    beanPresetId: data.get('filterBean'), drinkType: data.get('filterDrinkType'),
+    scoreMin: data.get('scoreMin'), startDate: data.get('startDate'), endDate: data.get('endDate'),
+  }), data.get('sortBy'));
+  coffee.host.querySelector('#filter-status').textContent = getHistoryFilterStatus(data);
+  drawEntryList(entries, getSettings().historyListView);
 }

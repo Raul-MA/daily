@@ -1,4 +1,3 @@
-import { getBeanPresets, createBeanPreset } from '../../backend/features/beans.js';
 import { href } from '../../../../../packages/platform/src/router.js';
 import { coffee } from './context.js';
 import { currentLanguage } from './copy.js';
@@ -14,16 +13,6 @@ import { renderHistory } from './history.js';
 import { renderEntryDetail } from './detail.js';
 import { renderInsights } from './insights.js';
 import { renderSettings } from './settings.js';
-
-export function seedIfEmpty() {
-  if (getBeanPresets().length) return;
-  createBeanPreset({
-    brand: "House",
-    blend: "First Dial-In",
-    decaf: false,
-    roastOrigin: "Starter preset"
-  });
-}
 
 export function setRoute(name, id = null) {
  if (coffee.route.name === name && (coffee.route.id ?? null) === id) {

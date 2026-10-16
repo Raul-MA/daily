@@ -8,19 +8,30 @@ export function applyTheme() { coffee.host.dataset.theme = getSettings().theme; 
 export function applyLanguage() { coffee.host.lang = currentLanguage(); }
 
 export function showToastKey(key, params = {}) {
-  showToast(tr(key, params));
+  coffee.notice = { key, params, expires: Date.now() + 3200 };
+  restoreToast();
 }
 
 export function showToast(message) {
- coffee.message = message;
- coffee.toast.textContent = message;
- coffee.toast.hidden = false;
- clearTimeout(coffee.timer);
- coffee.timer = setTimeout(() => { coffee.message = ''; coffee.toast.hidden = true; }, 3200);
+  coffee.notice = { message, expires: Date.now() + 3200 };
+  restoreToast();
+}
+
+export function restoreToast() {
+  clearTimeout(coffee.timer);
+  const notice = coffee.notice;
+  if (!notice || notice.expires <= Date.now()) {
+    coffee.notice = null;
+    coffee.toast.hidden = true;
+    return;
+  }
+  coffee.toast.textContent = notice.key ? tr(notice.key, notice.params) : translateMessage(currentLanguage(), notice.message);
+  coffee.toast.hidden = false;
+  coffee.timer = setTimeout(restoreToast, notice.expires - Date.now());
 }
 
 export function attempt(action) {
   try { action(); }
-  catch (error) { showToast(translateMessage(currentLanguage(), error.message)); }
+  catch (error) { showToast(error.message); }
   finally { document.dispatchEvent(new Event('daily:form-state')); }
 }
