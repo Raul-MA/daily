@@ -67,6 +67,9 @@ test('soft practice budgets preserve the active session until explicit finish an
   expect(after.modules.activities.data.find(item => item.kind === 'piano').status).toBe('completed');
   await page.reload();
   expect(JSON.parse(await root(page)).modules.piano.data.history).toHaveLength(1);
+  await page.goto('./#/piano');
+  await expect(page.locator('.piano-history .piano-record')).toHaveCount(1);
+  await expect(page.locator('.piano-history')).toContainText('11:00');
 });
 
 test('opening another lesson offers the persisted practice and never overwrites it', async ({ page }) => {
@@ -86,7 +89,7 @@ test('random and last exercise links use stable IDs and opening an exercise crea
   expect(await root(page)).toBeNull();
   await page.locator('[data-widget="piano"] [data-piano-random]').click();
   await expect(page).toHaveURL(/#\/piano\/exercises\/[^/?]+/);
-  await expect(page.locator('.exercise-shell')).toBeVisible();
+  await expect(page.locator('.exercise-card, #generate-btn').first()).toBeVisible();
   const saved = JSON.parse(await root(page));
   const id = saved.modules.piano.data.lastExerciseId;
   expect(saved.modules.piano.data.practice).toBeNull();
@@ -111,4 +114,57 @@ test('piano practice and keyboard answers resume offline under the shared worker
   await expect(page.locator('[data-clock]')).toContainText('1:30 elapsed');
   await expect(page.locator('.keyboard-key.is-selected').first()).toBeVisible();
   expect(await page.evaluate(async () => (await caches.keys()).every(key => key.startsWith('daily-pwa-')))).toBe(true);
+});
+
+test('running piano links resume the correct lesson and obsolete activity IDs preserve a newer practice', async ({ page }) => {
+  await open(page);
+  await page.goto('./#/piano/learn?lesson=rhythm-and-motif');
+  await start(page);
+  const title = await page.locator('.practice-page h1').textContent();
+  const initial = JSON.parse(await root(page));
+  const id = initial.modules.piano.data.practice.id;
+  await page.getByRole('link', { name: 'Home', exact: true }).click();
+  await page.locator('[data-widget="activities"] .activity-link').click();
+  await expect(page.locator('.practice-page h1')).toHaveText(title);
+  await expect(page.locator('[data-action="pause"]')).toHaveText('Pause');
+  await page.locator('[data-action="finish"]').click();
+  await page.goto('./#/piano/learn?lesson=interval-foundations');
+  await start(page);
+  const before = await root(page);
+  await page.goto(`./#/piano/learn?activity=${encodeURIComponent(id)}`);
+  await expect(page.locator('#page-content h1')).toContainText('no longer active');
+  expect(await root(page)).toBe(before);
+});
+
+
+test('automatic prompts freeze while hidden and away while elapsed practice continues', async ({ page }) => {
+  await open(page);
+  await start(page);
+  await page.locator('[data-action="next"]').click();
+  await page.locator('[data-disclosure="pacing"] summary').click();
+  await page.locator('[name="auto"]').check();
+  await page.locator('[data-action="reveal"]').click();
+  const question = await page.locator('.practice-question').textContent();
+  const answer = await page.locator('.practice-answer').textContent();
+  const saved = await root(page);
+  await page.evaluate(() => {
+    Object.defineProperty(document, 'hidden', { configurable: true, value: true });
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await page.clock.runFor(90000);
+  await page.evaluate(() => { delete document.hidden; document.dispatchEvent(new Event('visibilitychange')); });
+  await expect(page.locator('.practice-question')).toHaveText(question);
+  await expect(page.locator('.practice-answer')).toHaveText(answer);
+  await expect(page.locator('[data-clock]')).toContainText('1:30 elapsed');
+  expect(await root(page)).toBe(saved);
+  await page.getByRole('link', { name: 'Home', exact: true }).click();
+  await page.clock.runFor(90000);
+  await page.goto('./#/piano/learn?lesson=interval-foundations');
+  await expect(page.locator('.practice-question')).toHaveText(question);
+  await expect(page.locator('.practice-answer')).toHaveText(answer);
+  await expect(page.locator('[data-clock]')).toContainText('3:00 elapsed');
+  expect(await root(page)).toBe(saved);
+  await page.reload();
+  await expect(page.locator('.practice-question')).toHaveText(question);
+  await expect(page.locator('.practice-answer')).toHaveText(answer);
 });

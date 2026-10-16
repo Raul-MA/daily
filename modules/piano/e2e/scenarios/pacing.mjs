@@ -1,3 +1,4 @@
+import { baseline } from '../paths.mjs';
 import assert from 'node:assert/strict';
 import { page, screenshot, route, action, countIntervals } from './core.mjs';
 await screenshot('desktop-recall');
@@ -35,13 +36,13 @@ await page.evaluate(() => {
     Object.defineProperty(document, 'hidden', { configurable: true, value: true });
     document.dispatchEvent(new Event('visibilitychange'));
 });
-assert.equal(await action('pause').textContent(), 'Resume');
+assert.equal(await action('pause').textContent(), baseline ? 'Resume' : 'Pause');
 await page.evaluate(() => {
     delete document.hidden;
     document.dispatchEvent(new Event('visibilitychange'));
 });
-assert.equal(await action('pause').textContent(), 'Resume', 'returning does not resume automatically');
-await action('pause').click();
+assert.equal(await action('pause').textContent(), baseline ? 'Resume' : 'Pause', baseline ? 'returning does not resume automatically' : 'returning keeps the persisted session running');
+if (baseline) await action('pause').click();
 await page.locator('[name="auto"]').check();
 assert.equal(await countIntervals(), 1);
 await route('/intervals/exercises', '.exercise-card');
@@ -61,7 +62,11 @@ await page.clock.runFor(29000);
 assert.equal(await page.locator('.exercise-card.revealed').count(), 1);
 await page.clock.runFor(1000);
 assert.equal(await page.locator('.exercise-card.revealed').count(), 0);
-await route('/learn', '.practice-setup');
-assert.equal(await countIntervals(), 0, 'route cleanup stops standalone exercise timers');
+await route('/learn', baseline ? '.practice-setup' : '.practice-session-heading');
+assert.equal(await countIntervals(), baseline ? 0 : 1, 'route cleanup stops standalone pacing; native practice gets one presentation timer');
+if (!baseline) {
+    await action('finish').click();
+    assert.equal(await countIntervals(), 0, 'explicit completion stops the resumed presentation timer');
+}
 assert.equal(await page.locator('#app-shell').evaluate(node => node.classList.contains('exercise-mode')), false);
 console.log('PASS: custom duration, manual/automatic pacing, pause remainder, soft budgets, visibility, route cleanup, standalone keyboard reveal');

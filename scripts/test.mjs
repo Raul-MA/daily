@@ -22,6 +22,10 @@ function execute(args, env = process.env) {
 }
 
 function runNode(module) {
+  if (module === 'piano' && !process.env.DAILY_BASELINE_URL) {
+    const build = execute(['scripts/build.mjs']);
+    if (build) return build;
+  }
   const files = ['coffee', 'games', 'time-budget'].includes(module) ? discoverDomainUnit(module) : discover(module);
   return execute(['--test', '--test-isolation=none', ...files.filter(file => !process.env.DAILY_BASELINE_URL || !file.endsWith('service.test.mjs'))]);
 }

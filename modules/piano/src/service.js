@@ -1,7 +1,7 @@
 import { createModuleStore } from '../../../packages/data/src/module-store.js';
 import { DataConflictError } from '../../../packages/data/src/errors.js';
 import { validateActivities } from '../../../packages/platform/src/activity-types.js';
-import { allocateSessionSeconds } from './js/components/practice-session.js';
+import { allocateSessionSeconds } from './js/components/practice-allocation.js';
 import { DESTINATIONS } from './js/components/navigation-data.js';
 import { initialPiano, validPiano, validExercise } from './validation.js';
 import { lessonFor, persistentPrompt } from './persistent-prompt.js';
@@ -21,7 +21,7 @@ function newPractice(input, now) {
   };
   return { ...record, prompt: persistentPrompt(record) };
 }
-export function connectPiano(state, clock = Date.now) {
+export function connectPiano(state, clock = () => Date.now()) {
   const store = createModuleStore(state, { id: 'piano', version: 1, initial: initialPiano, validate: validPiano });
   const activities = createModuleStore(state, { id: 'activities', version: 1, initial: () => [], validate: validateActivities });
   function read() { return { ...store.read(), [revision]: fingerprint(state.read().value) }; }

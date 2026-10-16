@@ -1,0 +1,55 @@
+
+[data-module="piano"] {
+  
+  --bg:            #f8f7f3;
+  --surface:       #ffffff;
+  --surface-2:     #f0f1eb;
+  --surface-3:     #e5e9e1;
+  --border:        #dce0d7;
+  --border-light:  #bdc7bd;
+  --accent:        #23685d;
+  --accent-hover:  #174e45;
+  --accent-dim:    #e7f0ea;
+  --text:          #242b28;
+  --text-muted:    #59645c;
+  --text-dim:      #657168;
+  --success:       #286846;
+  --warning:       #8a5a12;
+  --danger:        #af3636;
+
+  
+  --font:          -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:     'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  --text-xs:       0.78rem;
+  --text-sm:       0.9rem;
+  --text-base:     1rem;
+  --text-lg:       1.15rem;
+  --text-xl:       1.35rem;
+  --text-2xl:      1.65rem;
+  --text-3xl:      2rem;
+  --text-4xl:      2.5rem;
+
+  
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 64px;
+
+  
+  --sidebar-width:        248px;
+  --topbar-height:        60px;
+  --radius:               8px;
+  --radius-lg:            12px;
+  --radius-sm:            4px;
+
+  
+  --transition:           0.18s ease;
+  --transition-fast:      0.1s ease;
+  --transition-slow:      0.3s ease;
+
+  
+  --shadow:               0 2px 8px rgba(28,45,33,0.05);
+  --shadow-lg:            0 8px 28px rgba(28,45,33,0.12);
+}

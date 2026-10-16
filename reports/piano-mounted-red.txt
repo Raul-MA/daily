@@ -1,0 +1,107 @@
+Suite: piano
+Prepared 573 HTML/CSS/JavaScript/assets at /daily/
+✔ audio catalog is chromatic, complete, and backed by actual recordings (2.938208ms)
+✔ recordings, named interval, and exact keyboard keys agree for every interval (23.522313ms)
+✔ fitted keyboards start one white key before the lowest note across octave boundaries (0.593949ms)
+✔ explicit ranges override whole octaves and respect MIDI boundaries (0.379519ms)
+✔ exact notes select C4 and C5 independently; pitch classes repeat (0.405066ms)
+✔ enharmonic spellings cross the scientific-octave boundary correctly (0.351968ms)
+✔ compound intervals retain their distance across the C boundary (0.377295ms)
+✔ every extended chord preserves supplied compound intervals (3.98912ms)
+✔ bass-first inversion stays ascending and retains role metadata (2.718558ms)
+✔ explicit registers take precedence over inferred ascending placement (0.383536ms)
+✔ invalid ranges, notes, labels and out-of-range exact notes are rejected (0.75496ms)
+✔ arbitrary role and display text are preserved with HTML escaping (0.495135ms)
+✔ label settings control rendered labels while retaining accessible descriptions (0.982004ms)
+✔ voicing, rendering and compatibility adapter never mutate their input (0.542444ms)
+✔ exercise keyboards are absent until reveal, including all answer text (0.309167ms)
+✔ guide-tone keyboards preserve each voice’s nearest motion across every root (4.895744ms)
+✔ guide-tone motion crosses B to C without dropping an octave (0.183153ms)
+✔ guided ninth recall and application retain the compound interval (1.022349ms)
+✔ curriculum covers every stage with a continuous prerequisite chain and usable modes (4.706039ms)
+✔ all lesson recall variants produce revealable answers with valid pitch classes (46.673612ms)
+✔ major guide-tone questions follow F, F, E and explain the resolution (0.515573ms)
+✔ transfer prompts change keys only after a complete progression (1.028481ms)
+✔ blues follows the complete twelve-bar form and wraps (0.362136ms)
+✔ minor and modal lessons preserve characteristic spellings (0.28912ms)
+✔ piano Markdown retains heading emphasis code links and Unicode teaching text (1.33294ms)
+✔ piano Markdown preserves tables blockquotes and escaped code fences (0.917032ms)
+✔ piano Markdown keeps paragraph list and rule boundaries without dropping ordinary pipes (0.33198ms)
+✔ piano Markdown handles blank input and detects an unconsumed malformed heading (0.251219ms)
+✔ spells intervals by letter in both directions and preserves chromatic transpose (0.250157ms)
+✔ recognizes enharmonics and double accidentals (0.175427ms)
+✔ chord tones and tensions retain theoretical spelling (0.28397ms)
+✔ every chord tone remains on its intended pitch for all standard roots (4.660765ms)
+✔ question root pools and numeric degree filters constrain practice (0.350334ms)
+✔ keyboard maps enharmonic pitches and retains an accessible escaped legend (0.31068ms)
+✔ every catalog destination has exactly one existing page loader (1.838123ms)
+✔ library links and search aliases use canonical destinations (0.739311ms)
+✔ ten-minute sessions reserve time for explanation, recall, application, and review (0.167252ms)
+✔ every supported session duration preserves the budget and includes all four blocks (0.372656ms)
+✔ invalid or unsupported durations cannot produce an unusable session (0.219069ms)
+✔ rootless keyboards preserve exact formula offsets and hand labels for every root and type (9.656796ms)
+✔ half-diminished B keeps its crossing voices instead of ascending them an extra octave (0.212687ms)
+✔ ii–V–I chooses minimum total voice motion while preserving whole chord formulas (13.210403ms)
+✔ G major rootless cadence resolves C down to B across the octave boundary (0.324737ms)
+✔ precache requests are unique and backed by repository assets (5.420084ms)
+✔ piano reads and random selection never create a practice record and explicit exercise opening persists the last ID (2.530696ms)
+✔ piano start saves its practice and timestamp activity atomically and offers the existing unfinished session (5.028572ms)
+✔ piano elapsed and current block reconstruct after suspension without writes or automatic completion (2.856041ms)
+✔ piano explicit pause freezes clocks and block changes preserve already practiced time (3.215235ms)
+✔ piano prompt pacing reconstructs missed steps while pause preserves its remainder and reveal (3.885317ms)
+✔ piano explicit finish records practice once and atomically completes its activity (1.15675ms)
+✔ piano failed saves retain the previous practice history and activity without partial commits (1.286112ms)
+✔ piano future data and invalid lessons pacing or blocks reject without changing stored records (1.029172ms)
+✔ suspensions resolve to the target chord while retaining extensions in every key (4.080862ms)
+ℹ tests 53
+ℹ suites 0
+ℹ pass 53
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 244.776299
+[WebServer] (node:79420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:79433) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 modules/piano/e2e/continuation.spec.js:15:1 › piano sessions continue across Home and reload with stable blocks prompts answers and timestamps (3.5s)
+  ✓  2 modules/piano/e2e/continuation.spec.js:34:1 › hiding piano never pauses elapsed time while explicit Pause survives background and reload (5.7s)
+  ✓  3 modules/piano/e2e/continuation.spec.js:54:1 › soft practice budgets preserve the active session until explicit finish and save one history record (18.5s)
+  ✓  4 modules/piano/e2e/continuation.spec.js:72:1 › opening another lesson offers the persisted practice and never overwrites it (1.3s)
+  ✓  5 modules/piano/e2e/continuation.spec.js:84:1 › random and last exercise links use stable IDs and opening an exercise creates no practice (1.3s)
+  ✓  6 modules/piano/e2e/continuation.spec.js:99:1 › piano practice and keyboard answers resume offline under the shared worker (5.4s)
+
+  6 passed (37.8s)
+Browser state at failure: { hash: '#/learn', focused: 'H1', heading: undefined }
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 5000ms exceeded.
+Call log:
+[2m  - waiting for locator('.practice-setup') to be visible[22m
+
+    at /workspaces/daily/modules/piano/e2e/scenarios/renderer.mjs:4:39 {
+  log: [ "  - waiting for locator('.practice-setup') to be visible" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.14.0
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('.course-lessons') to be visible[22m
+
+    at /workspaces/daily/modules/piano/e2e/service-worker-smoke.mjs:10:43 {
+  log: [ "  - waiting for locator('.course-lessons') to be visible" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.14.0

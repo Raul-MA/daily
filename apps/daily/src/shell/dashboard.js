@@ -1,3 +1,4 @@
+import { pianoWidget } from '../../../../modules/piano/src/widget.js';
 import { plantWidget } from '../../../../modules/plants/src/ui/widget.js';
 import { activitySummary } from './activity-summary.js';
 import { href } from '../../../../packages/platform/src/router.js';
@@ -31,6 +32,7 @@ function card(id, preferences, base, services) {
         node.append(quickCard(preferences, base));
     else if (id === 'activities')
         node.append(activitySummary({ state: services.state, language: preferences.language, base }));
+    else if (id === 'piano') node.append(pianoWidget(services.piano, preferences.language, base), arrowLink(copy.openPiano, href({ page: 'piano' }, base)));
     else if (id === 'plants') {
         node.append(plantWidget({ service: services.plants, language: preferences.language, base }), arrowLink(copy.openPlants, href({ page: 'plants' }, base)));
     }

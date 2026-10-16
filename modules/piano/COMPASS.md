@@ -1,23 +1,28 @@
-# piano Compass
+# Piano Compass
 
 ## Start Here
 
 - [Root rules](../../AGENTS.md).
-- [Migration inventory](../../reports/migration-test-inventory.md).
-- [Persistence and core status](docs/behavior.md): timestamp state, deterministic prompts and remaining integration.
+- [Behavior and boundaries](docs/behavior.md): persistence, presentation pacing, native routes and source parity.
+- [Source mapping](../../reports/piano-source-map.json) and [migration inventory](../../reports/migration-test-inventory.md).
+
+## Musical invariants
+
+- [Keyboard placement](docs/keyboard-diagram.md): exact octaves, spelling, ranges and accessible metadata.
+- [Rootless voice leading](docs/rootless-voicings.md), [suspension resolutions](docs/suspended-chords.md) and [ear training](docs/ear-training.md) and [modulation examples](docs/modulations.md): domain calculations and cancellation.
 
 ## Commands
 
-- `npm run test:piano` runs this module suite.
+- `npm run test:piano`: 53 unit cases, ten native browser cases, both retained original browser scripts.
 
 ## Key Files
 
-- `test/`: 41 copied cases plus eight new service cases.
-- `e2e/`: both original browser scripts plus six new continuation cases.
-- `src/js/music/`, `src/js/components/`: musical core and pure rendering; interactive components/pages are pending.
-- `src/service.js`, `src/practice-clock.js`: persisted practice and pure snapshot clock.
+- `src/service.js`, `src/service-actions.js`, `src/practice-clock.js`: atomic practice/history/activity transitions and timestamp snapshots.
+- `src/view.js`, `src/ui-drafts.js`, `src/js/router.js`: async mounting, remount drafts and shared routing.
+- `src/js/music/`, `src/js/pages/`, `src/js/components/`: original musical content and split presentation code.
 
 ## Non-Obvious Patterns
 
-- This module is unfinished: 38 original core and eight service cases pass; full piano UI/navigation/worker acceptance remains red.
-- Scope source DOM/styles and preserve source assertions while replacing the approved hide/navigation behavior. Cleanup stops presentation timers, never the persisted practice.
+- Hidden/absent views retain the saved question while elapsed time continues. Presentation timers never finish practice automatically.
+- Only Daily's generated worker owns offline assets. Original-source baseline and native tests use explicit route/asset adapters.
+- Mounted local acceptance and shared/affected regressions pass; final release gates remain. Consult [progress](../../docs/progress.md) before claiming completion.

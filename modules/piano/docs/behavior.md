@@ -1,21 +1,25 @@
-# Piano persistence and music core
+# Piano practice and source parity
 
-## Problem
+## Behavior and boundaries
 
-Keep Toniq's complete musical content and rendering behavior while making guided practice resumable across navigation and process restart. This deliberately replaces original pause-on-hide/lost-on-navigation behavior. UI integration is still pending; the core alone is not a migrated piano app.
+Toniq's lessons, exercises, theory, cards, music calculations, keyboard diagrams and audio run as native modules inside Daily. Guided practice continues elapsed time across navigation, hiding and restart; only explicit Pause stops its clock. Soft budgets show notices and never advance blocks or finish a session.
 
-## How It Works
+`service.js` owns version 1 of `daily:v1.modules.piano`: last exercise ID, practice, history and settings. Saves atomically synchronize the shared activity while preserving other modules. Starting another practice offers the existing unfinished session. Explicit Finish saves one history record and completes its activity; Course displays those records. Clock refreshes and navigation never save; automatic question changes are explicit persisted transitions.
 
-- Musical models live in `src/js/music/`, preserving source formulas, spelling, curriculum and source assertions. `components/keyboard-diagram.js` retains exact MIDI placement, metadata escaping and fitted ranges. The navigation catalog is split into chunks; the original destination IDs and semantic paths remain intact.
-- `service.js` owns version 1 of `daily:v1.modules.piano`: last opened exercise, practice, history and settings. Its writes update the corresponding shared activity atomically and preserve other modules. Future versions and failed saves never reset records. Starting another session returns the existing unfinished session.
-- Practice snapshots contain total/per-block elapsed milliseconds, a resume timestamp, current block, prompt/application indices, reveal state and pacing remainder. `practice-clock.js` derives time and missed automatic prompts without writes. Pause is explicit; budget boundaries never finish or advance blocks.
-- `persistent-prompt.js` seeds root/interval/quality/degree singleton selections before delegating to the original recall generator. The same practice ID/index therefore recreates the same question after suspension or restart. Progression and blues sequencing retain the original ordered curriculum. Global randomness is not changed.
-- Explicit Finish appends one practice record and completes its shared activity in the same commit. Repeated Finish has no effect. Opening a standalone exercise only remembers its stable ID; selecting a random candidate alone never creates or saves practice.
+`practice-clock.js` reconstructs total/current-block elapsed time from timestamps. Prompt pacing belongs to visible presentation: hidden/absent views do not replay missed questions. A visible automatic question change is a persisted transition, so its prompt/reveal state survives reload. Explicit pause preserves the pacing remainder. Navigation may discard unsaved sub-question countdown progress, while retaining the saved question and answer. `persistent-prompt.js` generates stable questions from the saved practice ID/index using the original musical generators.
 
-## Gotchas
+## Routes and presentation
 
-- Original source is Toniq commit `3fc564302b2c10642315d97a603aeba3c73a6ed0`; source/audio/image hashes are in `reports/piano-source-map.json`.
-- `src/js/components/practice-session.js` currently has allocation only; `exercise-shell.js` currently has its pure HTML builders only. The interactive components, source pages, scoped styles, shared routes/widgets and full browser workflows remain to implement.
-- The original worker-inventory test must become a single shared asset-inventory check after the already-authored offline acceptance is wired. Do not install a Toniq worker in Daily.
-- Retained original smoke assertions for hide/return/setup must be replaced by the agreed continuation assertions, preserving all music, reveal, timing-budget and cleanup coverage. Browser fixture imports and old hashes need explicit adapters.
-- Complete EN/ES content, combined recovery/migration and physical iPhone acceptance remain final gates. Browser clocks cannot establish installed-device acceptance.
+`js/app.js` dynamically loads catalog destinations. `js/router.js` maps source paths into `/piano`, `/piano/library`, `/piano/learn?lesson=<id>`, `/piano/exercises/<stable-id>` and `/piano/reference/<stable-id>` under the shared hash router. A running-activity link includes the practice ID; obsolete IDs cannot accidentally open a newer practice. Random selection alone never saves; opening an exercise remembers its catalog ID without creating practice.
+
+`view.js` owns asynchronous loading, scoped navigation/search, link rewriting, focus and disposal. `ui-drafts.js` restores dirty forms and disclosures after a language remount; practice draft restoration rebuilds derived budget/validation displays. Service revision guards retain drafts on conflicts. Failed saves retain the primary document and restore truthful running/pacing controls.
+
+Source CSS is scoped to `[data-module="piano"]`. Audio/diagrams are local assets covered by the generated shared worker inventory. Piano never installs a private worker. Component disposal removes listeners and presentation timers without pausing the persisted session.
+
+## Tests and remaining acceptance
+
+Source: Toniq commit `3fc564302b2c10642315d97a603aeba3c73a6ed0`; file hashes/destinations are in `reports/piano-source-map.json`. The original 41 unit cases and both original browser scripts remain, with explicit baseline/native route and asset adapters. Four Markdown characterization cases and eight service cases bring the unit total to 53. Ten additional browser cases cover continuation, hidden prompts, offline use, history, drafts, stale activity links and failed saves.
+
+Original automatic pause-on-hide and loss-on-navigation expectations intentionally become continuation assertions. All musical, keyboard, reveal, timing-budget and cleanup assertions remain. The old worker inventory checks the generated single-worker assets in native mode and the original worker in baseline mode.
+
+Full EN/ES authored content, combined recovery, stronger nested restore validation and physical iPhone acceptance remain final gates. Local browser clocks do not establish installed-device acceptance. Current test evidence and exact next work are maintained in `docs/progress.md`.

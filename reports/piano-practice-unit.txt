@@ -1,0 +1,19 @@
+✔ ten-minute sessions reserve time for explanation, recall, application, and review (2.930213ms)
+✔ every supported session duration preserves the budget and includes all four blocks (0.85174ms)
+✔ invalid or unsupported durations cannot produce an unusable session (0.727218ms)
+✔ piano reads and random selection never create a practice record and explicit exercise opening persists the last ID (4.446021ms)
+✔ piano start saves its practice and timestamp activity atomically and offers the existing unfinished session (7.487016ms)
+✔ piano elapsed and current block reconstruct after suspension without writes or automatic completion (2.599736ms)
+✔ piano explicit pause freezes clocks and block changes preserve already practiced time (4.096061ms)
+✔ piano prompt pacing reconstructs missed steps while pause preserves its remainder and reveal (7.895374ms)
+✔ piano explicit finish records practice once and atomically completes its activity (2.308381ms)
+✔ piano failed saves retain the previous practice history and activity without partial commits (4.136526ms)
+✔ piano future data and invalid lessons pacing or blocks reject without changing stored records (3.71574ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 110.721393

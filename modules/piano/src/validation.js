@@ -1,6 +1,6 @@
 import { LESSONS } from './js/music/learning-path.js';
 import { DESTINATIONS } from './js/components/navigation-data.js';
-import { allocateSessionSeconds } from './js/components/practice-session.js';
+import { allocateSessionSeconds } from './js/components/practice-allocation.js';
 
 function nonnegative(value) { return Number.isFinite(value) && value >= 0; }
 function id(value) { return typeof value === 'string' && value.trim().length > 0 && value.length <= 400; }

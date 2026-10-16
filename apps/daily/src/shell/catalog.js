@@ -3,7 +3,7 @@ export const apps = [
     { key: 'coffee', page: 'coffee', pages: ['coffee', 'coffeeNew'] },
     { key: 'games', page: 'games', pages: ['games', 'gameNew', 'gameSession'] },
     { key: 'time', page: 'time', pages: ['time'] },
-    { key: 'piano', page: 'piano', pages: ['piano', 'pianoExercise', 'pianoLearn'] },
+    { key: 'piano', page: 'piano', pages: ['piano', 'pianoExercise', 'pianoLearn', 'pianoLibrary', 'pianoReference'] },
     { key: 'reader', page: 'reader', pages: ['reader', 'review'] },
     { key: 'whatsapp', page: 'whatsapp', pages: ['whatsapp'] },
 ];

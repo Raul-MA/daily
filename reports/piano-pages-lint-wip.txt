@@ -1,0 +1,15 @@
+
+> daily-pwa@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+/workspaces/daily/modules/piano/src/js/components/markdown.js
+  3:8  error  Function 'renderMarkdown' has too many lines (106). Maximum allowed is 60  max-lines-per-function
+  3:8  error  Function 'renderMarkdown' has a complexity of 34. Maximum allowed is 8     complexity
+
+/workspaces/daily/modules/piano/src/js/components/search-shared.js
+  12:1   error  Function 'search' has a complexity of 9. Maximum allowed is 8  complexity
+  23:39  error  Do not nest ternary expressions                                no-nested-ternary
+
+✖ 4 problems (4 errors, 0 warnings)
+

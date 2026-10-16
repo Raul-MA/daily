@@ -1,11 +1,12 @@
+import { hashFor, sourcePrefix } from '../paths.mjs';
 import { page, baseURL } from './core.mjs';
 await page.route('**/favicon.ico', route => route.fulfill({ status: 204 }));
-await page.goto(`${baseURL}/#/learn`);
+await page.goto(`${baseURL}/${hashFor('/learn')}`);
 await page.locator('.practice-setup').waitFor();
-await page.evaluate(async () => {
-    const { LESSONS } = await import('./js/music/learning-path.js');
-    const { getChordTones } = await import('./js/music/chords.js');
-    const { createPracticeSession } = await import('./js/components/practice-session.js');
+await page.evaluate(async prefix => {
+    const { LESSONS } = await import(`${prefix}music/learning-path.js`);
+    const { getChordTones } = await import(`${prefix}music/chords.js`);
+    const { createPracticeSession } = await import(`${prefix}components/practice-session.js`);
     const lesson = LESSONS[0];
     const original = { application: lesson.application, recall: lesson.recall };
     const tones = getChordTones('C', 'maj7');
@@ -43,7 +44,7 @@ await page.evaluate(async () => {
     finally {
         Object.assign(lesson, original);
     }
-});
+}, sourcePrefix);
 const epoch = new Date('2026-10-10T12:00:00Z');
 await page.clock.install({ time: epoch });
 await page.clock.pauseAt(new Date(epoch.getTime() + 1000));

@@ -1,135 +1,220 @@
 {
   "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
-  "status": "core only; UI integration pending",
+  "status": "mounted native UI; full piano suite and shared/affected local regressions pass; final release gates remain",
   "files": [
     {
       "source": "toniq/js/music/chords.js",
       "sha256": "0a6d962a928b9a1999613815066de48cc96c51da0656b64c013b4ef9e81e1ab7",
-      "destination": "modules/piano/src/js/music/chords.js"
+      "destinations": [
+        "modules/piano/src/js/music/chords.js"
+      ]
     },
     {
       "source": "toniq/js/music/ear-training.js",
       "sha256": "4be8015243c35df90b39f7738ad9c9e48acb97d4355d636a597ad3c2805d6332",
-      "destination": "modules/piano/src/js/music/ear-training.js"
+      "destinations": [
+        "modules/piano/src/js/music/ear-training.js"
+      ]
     },
     {
       "source": "toniq/js/music/functions.js",
       "sha256": "39164af54b499c25cee251c9ad2e35910c3b82f7ee4407b85158f256ed66a0cd",
-      "destination": "modules/piano/src/js/music/functions.js"
+      "destinations": [
+        "modules/piano/src/js/music/functions.js"
+      ]
     },
     {
       "source": "toniq/js/music/intervals.js",
       "sha256": "acb1a83c7f1692636f4f748ca14ae8822f9dede6fe2c0f3b32c39b2fd1a5f8ac",
-      "destination": "modules/piano/src/js/music/intervals.js"
+      "destinations": [
+        "modules/piano/src/js/music/intervals.js"
+      ]
     },
     {
       "source": "toniq/js/music/inversions.js",
       "sha256": "ecc7fd1390c7ecec4938b6dbb4aacd6b085e8de178df20cc8e701b7e3911cb34",
-      "destination": "modules/piano/src/js/music/inversions.js"
+      "destinations": [
+        "modules/piano/src/js/music/inversions.js"
+      ]
     },
     {
       "source": "toniq/js/music/key-signatures.js",
       "sha256": "6868c6aee5ff31f5e4d3e4f49cb7840cb22ca2b1ecbf01d5cc5baf38941a35df",
-      "destination": "modules/piano/src/js/music/key-signatures.js"
+      "destinations": [
+        "modules/piano/src/js/music/key-signatures.js"
+      ]
     },
     {
       "source": "toniq/js/music/learning-path.js",
       "sha256": "93b930ca165b7db3d16d089ce414c4c4f95918c8276681e8b97ea2b349bf8ee8",
-      "destination": "modules/piano/src/js/music/learning-path.js"
+      "destinations": [
+        "modules/piano/src/js/music/learning-path.js"
+      ]
     },
     {
       "source": "toniq/js/music/melodic-minor.js",
       "sha256": "c09d8090c316fb12688dda7e33aadff009ac9f664350e2bb9684106ee9e9f10e",
-      "destination": "modules/piano/src/js/music/melodic-minor.js"
+      "destinations": [
+        "modules/piano/src/js/music/melodic-minor.js"
+      ]
     },
     {
       "source": "toniq/js/music/modal-interchange.js",
       "sha256": "72eaabbbee83e31f4ed01c55f6c62ef1560102501f3ec9bf7033bc188810e320",
-      "destination": "modules/piano/src/js/music/modal-interchange.js"
+      "destinations": [
+        "modules/piano/src/js/music/modal-interchange.js"
+      ]
     },
     {
       "source": "toniq/js/music/modes.js",
       "sha256": "74e839e6e0f967dffcc8730d3b8144df0d4aa53882ec73916baf28b4a5e28467",
-      "destination": "modules/piano/src/js/music/modes.js"
+      "destinations": [
+        "modules/piano/src/js/music/modes.js"
+      ]
     },
     {
       "source": "toniq/js/music/modulations.js",
       "sha256": "839054f354b59a386cdde3c305bab66c6eacfab0eff665e57f45a8ac831111ff",
-      "destination": "modules/piano/src/js/music/modulations.js"
+      "destinations": [
+        "modules/piano/src/js/music/modulations.js"
+      ]
     },
     {
       "source": "toniq/js/music/notes.js",
       "sha256": "d1bbf0fbaa8f5ff2f8c82de32b845bcb0246cf672104ce031cdf80d78daad1fe",
-      "destination": "modules/piano/src/js/music/notes.js"
+      "destinations": [
+        "modules/piano/src/js/music/notes.js"
+      ]
     },
     {
       "source": "toniq/js/music/progressions.js",
       "sha256": "8a54b8046e15f80935bfc69fbd5a194bc83beb9b6652f707b4eced38e8581813",
-      "destination": "modules/piano/src/js/music/progressions.js"
+      "destinations": [
+        "modules/piano/src/js/music/progressions.js"
+      ]
     },
     {
       "source": "toniq/js/music/rootless-voicings.js",
       "sha256": "0f0822db4dafd6079136705e211d2985866ca2e859aeb3873f0367ebf7d17c93",
-      "destination": "modules/piano/src/js/music/rootless-voicings.js"
+      "destinations": [
+        "modules/piano/src/js/music/rootless-voicings.js"
+      ]
     },
     {
       "source": "toniq/js/music/scales.js",
       "sha256": "3cffff5ea8a776660112e576107375346a256b13de544a07ab07ad445cff6fe2",
-      "destination": "modules/piano/src/js/music/scales.js"
+      "destinations": [
+        "modules/piano/src/js/music/scales.js"
+      ]
     },
     {
       "source": "toniq/js/music/secondary-dominants.js",
       "sha256": "8828f925fd74aec3be8223fd2f80134779d36a1f450121cd51b80fcdd3fefc05",
-      "destination": "modules/piano/src/js/music/secondary-dominants.js"
+      "destinations": [
+        "modules/piano/src/js/music/secondary-dominants.js"
+      ]
     },
     {
       "source": "toniq/js/music/shell-chords.js",
       "sha256": "a7914a6f821ee182f106b6c71507d5d7956afc230d833be64004acbeddb465a8",
-      "destination": "modules/piano/src/js/music/shell-chords.js"
+      "destinations": [
+        "modules/piano/src/js/music/shell-chords.js"
+      ]
     },
     {
       "source": "toniq/js/music/superimpositions.js",
       "sha256": "61cbb81d276fa1c4097930d3b4a1a3a98319c08a5f92d1349557fe26e9e5891c",
-      "destination": "modules/piano/src/js/music/superimpositions.js"
+      "destinations": [
+        "modules/piano/src/js/music/superimpositions.js"
+      ]
     },
     {
       "source": "toniq/js/music/suspended-chords.js",
       "sha256": "88f5433234dbda52835d655ceb48ddb2b555f6aa2f6538b2c13cfe8feacf2c14",
-      "destination": "modules/piano/src/js/music/suspended-chords.js"
+      "destinations": [
+        "modules/piano/src/js/music/suspended-chords.js"
+      ]
     },
     {
       "source": "toniq/js/music/tritone-sub.js",
       "sha256": "5630c769ebcc8ef32dc8bd633acf2ac99bae9a335e991bc2e64d63ed9a17886e",
-      "destination": "modules/piano/src/js/music/tritone-sub.js"
+      "destinations": [
+        "modules/piano/src/js/music/tritone-sub.js"
+      ]
     },
     {
       "source": "toniq/js/music/voice-leading.js",
       "sha256": "da51e770efaafc62d22684cdd9d50442582e66855a35f4487d92dce71329b754",
-      "destination": "modules/piano/src/js/music/voice-leading.js"
+      "destinations": [
+        "modules/piano/src/js/music/voice-leading.js"
+      ]
     },
     {
       "source": "toniq/js/components/keyboard-diagram.js",
       "sha256": "9480bb334d98d21bab86c17faf00ed076e90cd57c564317cdefca60fa2c14341",
-      "destination": "modules/piano/src/js/components/keyboard-diagram.js",
-      "status": "keyboard/catalog/pure render helpers/allocation ported; interactive components pending"
+      "destinations": [
+        "modules/piano/src/js/components/keyboard-diagram.js"
+      ]
     },
     {
       "source": "toniq/js/components/navigation-data.js",
       "sha256": "6a0a57059e50767540448c5b7f8d99a798236d5507cfec5efb486ee9c22791ae",
-      "destination": "modules/piano/src/js/components/navigation-data.js",
-      "status": "keyboard/catalog/pure render helpers/allocation ported; interactive components pending"
+      "destinations": [
+        "modules/piano/src/js/components/navigation-catalog0.js",
+        "modules/piano/src/js/components/navigation-catalog1.js",
+        "modules/piano/src/js/components/navigation-catalog2.js",
+        "modules/piano/src/js/components/navigation-catalog3.js",
+        "modules/piano/src/js/components/navigation-data.js",
+        "modules/piano/src/js/components/navigation-search-terms.js"
+      ]
     },
     {
       "source": "toniq/js/components/exercise-shell.js",
       "sha256": "57063e8d2fc0fdff21191ac6fe84952353c4df57183e11bda9f8df3c3fcfbd94",
-      "destination": "modules/piano/src/js/components/exercise-shell.js",
-      "status": "keyboard/catalog/pure render helpers/allocation ported; interactive components pending"
+      "destinations": [
+        "modules/piano/src/js/components/exercise-shell.js",
+        "modules/piano/src/js/components/exercise-shell-destroy.js",
+        "modules/piano/src/js/components/exercise-shell-handleOutsideClick.js",
+        "modules/piano/src/js/components/exercise-shell-initialize0.js",
+        "modules/piano/src/js/components/exercise-shell-initialize1.js",
+        "modules/piano/src/js/components/exercise-shell-rebuildChips.js",
+        "modules/piano/src/js/components/exercise-shell-renderCard.js",
+        "modules/piano/src/js/components/exercise-shell-shared.js"
+      ]
     },
     {
       "source": "toniq/js/components/practice-session.js",
       "sha256": "f738b7bff469a697a5b7e21398f24b05fc8e49548a8e8e770df4aa5a2e956e31",
-      "destination": "modules/piano/src/js/components/practice-session.js",
-      "status": "keyboard/catalog/pure render helpers/allocation ported; interactive components pending"
+      "destinations": [
+        "modules/piano/src/js/components/practice-session.js",
+        "modules/piano/src/js/components/practice/answerHTML.js",
+        "modules/piano/src/js/components/practice/blockHTML.js",
+        "modules/piano/src/js/components/practice/button.js",
+        "modules/piano/src/js/components/practice/checks.js",
+        "modules/piano/src/js/components/practice/drafts.js",
+        "modules/piano/src/js/components/practice/finishHTML.js",
+        "modules/piano/src/js/components/practice/focus.js",
+        "modules/piano/src/js/components/practice/format.js",
+        "modules/piano/src/js/components/practice/hasPrompts.js",
+        "modules/piano/src/js/components/practice/index.js",
+        "modules/piano/src/js/components/practice/lesson.js",
+        "modules/piano/src/js/components/practice/links.js",
+        "modules/piano/src/js/components/practice/nextPrompt.js",
+        "modules/piano/src/js/components/practice/onChange.js",
+        "modules/piano/src/js/components/practice/onClick.js",
+        "modules/piano/src/js/components/practice/onInput.js",
+        "modules/piano/src/js/components/practice/onInvalid.js",
+        "modules/piano/src/js/components/practice/onSubmit.js",
+        "modules/piano/src/js/components/practice/onVisibility.js",
+        "modules/piano/src/js/components/practice/persistence.js",
+        "modules/piano/src/js/components/practice/render.js",
+        "modules/piano/src/js/components/practice/sessionHTML.js",
+        "modules/piano/src/js/components/practice/setupHTML.js",
+        "modules/piano/src/js/components/practice/start.js",
+        "modules/piano/src/js/components/practice/stopClock.js",
+        "modules/piano/src/js/components/practice/tick.js",
+        "modules/piano/src/js/components/practice/updateClock.js"
+      ]
     },
     {
       "source": "toniq/assets/icon.svg",
@@ -395,6 +480,470 @@
       "source": "toniq/assets/notes/g4sharp.mp3",
       "sha256": "db4d1e6b4a7cc8203b2f1756ad4478100a6f9912ebe6780a702d86777eea6253",
       "destination": "modules/piano/src/assets/notes/g4sharp.mp3"
+    },
+    {
+      "source": "toniq/js/app.js",
+      "sha256": "17b243b0bcbe48abc8a07f6d7d46320e64629f5af6de5ff26dbce0c61c501bfe",
+      "destinations": [
+        "modules/piano/src/js/app.js"
+      ]
+    },
+    {
+      "source": "toniq/js/components/auto-advance.js",
+      "sha256": "f3a30b2f4e7cd9abd4d3f0a9502f7bab5057f48db78db2b329721f8c4a258e6f",
+      "destinations": [
+        "modules/piano/src/js/components/auto-advance.js"
+      ]
+    },
+    {
+      "source": "toniq/js/components/markdown.js",
+      "sha256": "53fdbd8112e8a8dbfbe5337d0c3273be7a79ceb287e633854a31e99d0b866a1b",
+      "destinations": [
+        "modules/piano/src/js/components/markdown.js"
+      ]
+    },
+    {
+      "source": "toniq/js/components/search.js",
+      "sha256": "d1941f26d2569659b7a3cd3fad1cb8936aa01ae87654d9796c48e8c0bbe52689",
+      "destinations": [
+        "modules/piano/src/js/components/search.js",
+        "modules/piano/src/js/components/search-close.js",
+        "modules/piano/src/js/components/search-highlight.js",
+        "modules/piano/src/js/components/search-initialize0.js",
+        "modules/piano/src/js/components/search-setActive.js",
+        "modules/piano/src/js/components/search-shared.js",
+        "modules/piano/src/js/components/search-showResults.js"
+      ]
+    },
+    {
+      "source": "toniq/js/components/sidebar.js",
+      "sha256": "41b4ef6b9400378281ac4b829844c428f6af57e9dbed3f8c1522c65b26ee39cc",
+      "destinations": [
+        "modules/piano/src/js/components/sidebar.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/available-tensions-cards.js",
+      "sha256": "76627646a8458629c663f4769cc660c06f63d0efb9ee759ec990b9d7eb8d8e85",
+      "destinations": [
+        "modules/piano/src/js/pages/available-tensions-cards.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/available-tensions-exercise.js",
+      "sha256": "9a190fa005e68cbb3585c8ed077670ba7ef1b51b6f9970b8170d0fe9169867aa",
+      "destinations": [
+        "modules/piano/src/js/pages/available-tensions-exercise.js",
+        "modules/piano/src/js/pages/available-tensions-exercise-next.js",
+        "modules/piano/src/js/pages/available-tensions-exercise-shared.js",
+        "modules/piano/src/js/pages/available-tensions-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/available-tensions-theory.js",
+      "sha256": "94e968db3f04a61e432e369a6873aa282cde27413e63d327719e6d5b38b20ddb",
+      "destinations": [
+        "modules/piano/src/js/pages/available-tensions-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/bebop-exercise.js",
+      "sha256": "48adb8532110f43055546ac335eccec8d015ef2062e619241c36711129110e0f",
+      "destinations": [
+        "modules/piano/src/js/pages/bebop-exercise.js",
+        "modules/piano/src/js/pages/bebop-exercise-content.js",
+        "modules/piano/src/js/pages/bebop-exercise-next.js",
+        "modules/piano/src/js/pages/bebop-exercise-shared.js",
+        "modules/piano/src/js/pages/bebop-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/bebop-theory.js",
+      "sha256": "60311e00d141e31b7e8a8ed6c4e1d20cc824bf8dd2f306edba521b6f2ee72984",
+      "destinations": [
+        "modules/piano/src/js/pages/bebop-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/chord-inversions-exercise.js",
+      "sha256": "40066c0dfbf45843f9c0597f819ac968f36b6f4465be8316db1f4ed3ccc0ca64",
+      "destinations": [
+        "modules/piano/src/js/pages/chord-inversions-exercise.js",
+        "modules/piano/src/js/pages/chord-inversions-exercise-next.js",
+        "modules/piano/src/js/pages/chord-inversions-exercise-shared.js",
+        "modules/piano/src/js/pages/chord-inversions-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/chord-progressions-exercise.js",
+      "sha256": "61ed75633c0e05d54f44f91fbe8990a0291b66fff3916c80bb7acd429a32d333",
+      "destinations": [
+        "modules/piano/src/js/pages/chord-progressions-exercise.js",
+        "modules/piano/src/js/pages/chord-progressions-exercise-generate.js",
+        "modules/piano/src/js/pages/chord-progressions-exercise-renderProgression.js",
+        "modules/piano/src/js/pages/chord-progressions-exercise-shared.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/chord-progressions-theory.js",
+      "sha256": "38c7942d03e443d5b80f6dee624171a964fbfc27d27c65adbaa3d5fd550791d7",
+      "destinations": [
+        "modules/piano/src/js/pages/chord-progressions-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/chord-substitution-theory.js",
+      "sha256": "1592ef043a839bdf55ce80b5b71c148af7c20744a427692369ecfe50bc32452b",
+      "destinations": [
+        "modules/piano/src/js/pages/chord-substitution-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/circle-of-fifths-cards.js",
+      "sha256": "77a3ce7c1421268d3b84b736a5d936c76dbbc993d7ccc8072a2e4b9883e2655b",
+      "destinations": [
+        "modules/piano/src/js/pages/circle-of-fifths-cards.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/ear-training-exercise.js",
+      "sha256": "c1f0a3e1e77de7e0d5f381c0f74d0a564c734142e3b89e5ce0c3d2746d772a6a",
+      "destinations": [
+        "modules/piano/src/js/pages/ear-training-exercise.js",
+        "modules/piano/src/js/pages/ear-training-exercise-delay.js",
+        "modules/piano/src/js/pages/ear-training-exercise-next.js",
+        "modules/piano/src/js/pages/ear-training-exercise-playInterval.js",
+        "modules/piano/src/js/pages/ear-training-exercise-playNote.js",
+        "modules/piano/src/js/pages/ear-training-exercise-shared.js",
+        "modules/piano/src/js/pages/ear-training-exercise-stopPlayback.js",
+        "modules/piano/src/js/pages/ear-training-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/extended-chords-exercise.js",
+      "sha256": "21888f8f73f89ffe3e5393f046820c1463b70bc32e996d05ab295b0ac6cc9abd",
+      "destinations": [
+        "modules/piano/src/js/pages/extended-chords-exercise.js",
+        "modules/piano/src/js/pages/extended-chords-exercise-next.js",
+        "modules/piano/src/js/pages/extended-chords-exercise-shared.js",
+        "modules/piano/src/js/pages/extended-chords-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/extended-chords-theory.js",
+      "sha256": "ce757ef8f24a8d665f5f0685eba61af307fccd2bf699c7d22a8a4fac4010d461",
+      "destinations": [
+        "modules/piano/src/js/pages/extended-chords-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/guide-tone-exercise.js",
+      "sha256": "f1afb287c72bc1054f2fb68f78ea5b33f1741e7f97c9749bd63183e8cf543c03",
+      "destinations": [
+        "modules/piano/src/js/pages/guide-tone-exercise.js",
+        "modules/piano/src/js/pages/guide-tone-exercise-next.js",
+        "modules/piano/src/js/pages/guide-tone-exercise-shared.js",
+        "modules/piano/src/js/pages/guide-tone-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/harmonic-function-exercise.js",
+      "sha256": "18e605cfccbced333e2119a5d30741ddeb66e605dc9b89a272a1af635eaf973c",
+      "destinations": [
+        "modules/piano/src/js/pages/harmonic-function-exercise.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/home.js",
+      "sha256": "d43f8983305faa641bb13d110094cade697672890afbf230e2c430b993f01e1d",
+      "destinations": [
+        "modules/piano/src/js/pages/home.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/iivi-exercise.js",
+      "sha256": "86b102d45dba0683d0414844f64583a6e841c10fe406b36fa29fdee057bde558",
+      "destinations": [
+        "modules/piano/src/js/pages/iivi-exercise.js",
+        "modules/piano/src/js/pages/iivi-exercise-next.js",
+        "modules/piano/src/js/pages/iivi-exercise-shared.js",
+        "modules/piano/src/js/pages/iivi-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/intervals-exercise.js",
+      "sha256": "b84fd407324231bc3cda82b404ab30c828bce04a7e04463c60744e96ef0debdd",
+      "destinations": [
+        "modules/piano/src/js/pages/intervals-exercise.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/intervals-theory.js",
+      "sha256": "40fe4d22bdc04316cb760236e6a1903eeb677d3d934798ddaa2d59b3aa8d8ea6",
+      "destinations": [
+        "modules/piano/src/js/pages/intervals-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/key-signatures-cards.js",
+      "sha256": "8ea009da4c1c085a9e04e59c5016ae9ab9b697c33e376691f91b61255f9630ba",
+      "destinations": [
+        "modules/piano/src/js/pages/key-signatures-cards.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/key-signatures-exercise.js",
+      "sha256": "18cd345ec611c3c755328bd777fd90f035f34308ad39940b153bc5e700aa3c73",
+      "destinations": [
+        "modules/piano/src/js/pages/key-signatures-exercise.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/learning-path.js",
+      "sha256": "fffe6a4f0490ca3065716d699b0ff9ba42ef0997f9b1a128e9930757a84bfd51",
+      "destinations": [
+        "modules/piano/src/js/pages/learning-path.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/library.js",
+      "sha256": "a6be77cdafcc8ef2391527060a5f7ee046fbe4e7f10863b18824742fd64604cc",
+      "destinations": [
+        "modules/piano/src/js/pages/library.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/melodic-minor-exercise.js",
+      "sha256": "3ad99814ae06f9d99f58fc935309df017df00754693072fb23b6cd2d9da0edee",
+      "destinations": [
+        "modules/piano/src/js/pages/melodic-minor-exercise.js",
+        "modules/piano/src/js/pages/melodic-minor-exercise-content.js",
+        "modules/piano/src/js/pages/melodic-minor-exercise-next.js",
+        "modules/piano/src/js/pages/melodic-minor-exercise-shared.js",
+        "modules/piano/src/js/pages/melodic-minor-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/melodic-minor-theory.js",
+      "sha256": "31d1f57c454226cb79297548178e8e450a228708cf7c4d1376463437f5a0cbd1",
+      "destinations": [
+        "modules/piano/src/js/pages/melodic-minor-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/modal-characteristics-exercise.js",
+      "sha256": "dfcdf36036ae5834c64e80835329da6ee96053978f34f528568a790267e11f75",
+      "destinations": [
+        "modules/piano/src/js/pages/modal-characteristics-exercise.js",
+        "modules/piano/src/js/pages/modal-characteristics-exercise-next.js",
+        "modules/piano/src/js/pages/modal-characteristics-exercise-shared.js",
+        "modules/piano/src/js/pages/modal-characteristics-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/modal-interchange-exercise.js",
+      "sha256": "39a3d50d2fbe9d713a95855424f16aa0c5d56120d72aa915b8f94e25246a8524",
+      "destinations": [
+        "modules/piano/src/js/pages/modal-interchange-exercise.js",
+        "modules/piano/src/js/pages/modal-interchange-exercise-next.js",
+        "modules/piano/src/js/pages/modal-interchange-exercise-shared.js",
+        "modules/piano/src/js/pages/modal-interchange-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/modes-exercise.js",
+      "sha256": "5370e0392c89e19f322c7b4ff725df6c96ccd66306dcd8d05383228251c5e61d",
+      "destinations": [
+        "modules/piano/src/js/pages/modes-exercise.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/modes-theory.js",
+      "sha256": "2a9f58715b05759a53d50bca9257f42f99f1fdd75ec9fd86d94c52a08ef9a2fb",
+      "destinations": [
+        "modules/piano/src/js/pages/modes-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/modulations-exercise.js",
+      "sha256": "1b66bc4d8767fec44cf586229dc739942568647c13ee2cf452e7ad36c1e4e01f",
+      "destinations": [
+        "modules/piano/src/js/pages/modulations-exercise.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/modulations-theory.js",
+      "sha256": "82690eabb8b1a7905352b3136aee92a7c5494bfff10a7a5f56e90a67e1df4f0f",
+      "destinations": [
+        "modules/piano/src/js/pages/modulations-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/pentatonic-theory.js",
+      "sha256": "63119f9559881cc8be5458b829306f8ba952ec0a5d5c87cebd843950e598978d",
+      "destinations": [
+        "modules/piano/src/js/pages/pentatonic-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/rootless-voicings-exercise.js",
+      "sha256": "e90def8352d554e602edda6d9cd5aa6ea9d6029846f074eda1eeaafe0ce79a2c",
+      "destinations": [
+        "modules/piano/src/js/pages/rootless-voicings-exercise.js",
+        "modules/piano/src/js/pages/rootless-voicings-exercise-content.js",
+        "modules/piano/src/js/pages/rootless-voicings-exercise-next.js",
+        "modules/piano/src/js/pages/rootless-voicings-exercise-shared.js",
+        "modules/piano/src/js/pages/rootless-voicings-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/rootless-voicings-theory.js",
+      "sha256": "f99d56a2a3ab313446cb6a1268c00abb22970ff7bddd41f7094d8e9e327febd1",
+      "destinations": [
+        "modules/piano/src/js/pages/rootless-voicings-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/scales-exercise.js",
+      "sha256": "6730733082c6d8b763ecfbc5f0b5f727d770033fc84a3ee5dc82f61c09e2f603",
+      "destinations": [
+        "modules/piano/src/js/pages/scales-exercise.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/scales-theory.js",
+      "sha256": "885774061a1a6512989abbb9591e82490b5f8617cfc2601483fdff15b0b42640",
+      "destinations": [
+        "modules/piano/src/js/pages/scales-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/secondary-dominants-exercise.js",
+      "sha256": "fb870c13f1f5720572d243621b39d36e5d5198bea9eeef296a2c355bc96baf2f",
+      "destinations": [
+        "modules/piano/src/js/pages/secondary-dominants-exercise.js",
+        "modules/piano/src/js/pages/secondary-dominants-exercise-next.js",
+        "modules/piano/src/js/pages/secondary-dominants-exercise-shared.js",
+        "modules/piano/src/js/pages/secondary-dominants-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/shell-chords-exercise.js",
+      "sha256": "f2661e8f7a2287ed2124ef247b170d5cf731c6bbd17a5a092c987147d9364d3f",
+      "destinations": [
+        "modules/piano/src/js/pages/shell-chords-exercise.js",
+        "modules/piano/src/js/pages/shell-chords-exercise-next.js",
+        "modules/piano/src/js/pages/shell-chords-exercise-shared.js",
+        "modules/piano/src/js/pages/shell-chords-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/shell-chords-theory.js",
+      "sha256": "0f093598f510c08da5584523a04c0214f23f6963ac63be774c55cd9ccdae1337",
+      "destinations": [
+        "modules/piano/src/js/pages/shell-chords-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/superimpositions-exercise.js",
+      "sha256": "a7666b0dec9e12d74ef6d23b1e7f0d8534ad6bb6b7c336267c1c977991474718",
+      "destinations": [
+        "modules/piano/src/js/pages/superimpositions-exercise.js",
+        "modules/piano/src/js/pages/superimpositions-exercise-next.js",
+        "modules/piano/src/js/pages/superimpositions-exercise-shared.js",
+        "modules/piano/src/js/pages/superimpositions-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/superimpositions-theory.js",
+      "sha256": "cedcd6a6b1ac905c7c5c8cc4fb8957b584373c42db472af4431e3cccba15bfcc",
+      "destinations": [
+        "modules/piano/src/js/pages/superimpositions-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/suspended-chords-exercise.js",
+      "sha256": "273428ba204137348b31820aa421035d4d191c87e54e951f41115813e109e1fd",
+      "destinations": [
+        "modules/piano/src/js/pages/suspended-chords-exercise.js",
+        "modules/piano/src/js/pages/suspended-chords-exercise-content.js",
+        "modules/piano/src/js/pages/suspended-chords-exercise-next.js",
+        "modules/piano/src/js/pages/suspended-chords-exercise-shared.js",
+        "modules/piano/src/js/pages/suspended-chords-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/suspended-chords-theory.js",
+      "sha256": "a1dbaaca975b0ea51a166bcf61fd359326c84efab87aa1b4c5eaf1a42d3a00bd",
+      "destinations": [
+        "modules/piano/src/js/pages/suspended-chords-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/tensions-cards.js",
+      "sha256": "7f93e88df0cf2c778e04c087bdc9aedb92791768d2c5a34a33a111ccf0269e99",
+      "destinations": [
+        "modules/piano/src/js/pages/tensions-cards.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/tensions-exercise.js",
+      "sha256": "604d696ca97fcb5131a49c82de7c0650e1d51b65378babc839b3ef2ac2968970",
+      "destinations": [
+        "modules/piano/src/js/pages/tensions-exercise.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/tensions-theory.js",
+      "sha256": "131a102e2187090aa0d8c865942adf805314d36ff7305dc49cb08c5a9b560ad5",
+      "destinations": [
+        "modules/piano/src/js/pages/tensions-theory.js"
+      ]
+    },
+    {
+      "source": "toniq/js/pages/tritone-sub-exercise.js",
+      "sha256": "31f6217baecbf203751bbdfd95a01aee2c3d6f5e3ce8abaaf5deb0fbe4ae18b1",
+      "destinations": [
+        "modules/piano/src/js/pages/tritone-sub-exercise.js",
+        "modules/piano/src/js/pages/tritone-sub-exercise-next.js",
+        "modules/piano/src/js/pages/tritone-sub-exercise-shared.js",
+        "modules/piano/src/js/pages/tritone-sub-exercise-update.js"
+      ]
+    },
+    {
+      "source": "toniq/js/router.js",
+      "sha256": "f405e4191087fd2ec2a81e7fca51abda1eccf30959b7d587f08dd9d38dced6df",
+      "destinations": [
+        "modules/piano/src/js/router.js"
+      ]
+    },
+    {
+      "source": "toniq/css/base.css",
+      "sha256": "aa4bcffcaf690485d4a96f255277b6c055569b1bd0f7e38a4f3b6f993c25094e",
+      "destinations": [
+        "modules/piano/src/css/base.css"
+      ]
+    },
+    {
+      "source": "toniq/css/components.css",
+      "sha256": "8d5f9a55deb02a8c39557f308e8329506dd08a99b899dd8e08e02a9c7eb7e161",
+      "destinations": [
+        "modules/piano/src/css/components.css"
+      ]
+    },
+    {
+      "source": "toniq/css/layout.css",
+      "sha256": "1a28ad9e84aa27601f2d89eeea639ad8815dc4fc44c2eb09a0ec3bf73413087f",
+      "destinations": [
+        "modules/piano/src/css/layout.css"
+      ]
+    },
+    {
+      "source": "toniq/css/variables.css",
+      "sha256": "2b90c6a4c75b620247ee4c5a4a31457fd12f41402b994c775efac47f26f606fd",
+      "destinations": [
+        "modules/piano/src/css/variables.css"
+      ]
     }
   ]
 }

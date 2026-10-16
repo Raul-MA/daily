@@ -1,3 +1,4 @@
+import { mountPiano } from '../../../../modules/piano/src/view.js';
 import { mountTimeBudget } from '../../../../modules/time-budget/src/view.js';
 import { captureDrafts, restoreDrafts } from '../../../../packages/ui/src/drafts.js';
 import { mountPlants } from '../../../../modules/plants/src/ui/view.js';
@@ -26,15 +27,9 @@ function failure(root, base) {
     root.replaceChildren(view);
 }
 function pageView(context, preferences) {
+    if (context.route.page.startsWith('piano')) return pianoPage(context);
     if (context.route.page === 'time') return timePage(context);
-    if (context.route.page.startsWith('game')) {
-        context.gamesUI ??= {};
-        const page = mountGames({ route: context.route, base: context.base, service: context.games, ui: context.gamesUI });
-        context.pageCleanup = page.dispose;
-        context.pageConflict = page.conflict;
-        context.pageRestore = page.restore;
-        return page.node;
-    }
+    if (context.route.page.startsWith('game')) return gamePage(context);
     if (context.route.page.startsWith('coffee')) {
         const page = mountCoffee({ route: context.route, base: context.base, service: context.coffee, ui: context.moduleUI });
         context.pageCleanup = page.dispose;
@@ -49,7 +44,7 @@ function pageView(context, preferences) {
         return page.node;
     }
     if (context.route.page === 'home')
-        return dashboard(preferences, context.base, { state: context.state, plants: context.plants });
+        return dashboard(preferences, context.base, { state: context.state, plants: context.plants, piano: context.piano });
     if (context.route.page === 'settings')
         return settings(preferences);
     return modulePlaceholder(context.route, shellText(preferences.language), context.base);
@@ -103,6 +98,23 @@ function saveStatus(context, copy) {
 function timePage(context) {
     context.timeUI ??= {};
     const page = mountTimeBudget({ service: context.timeBudget, ui: context.timeUI });
+    context.pageCleanup = page.dispose;
+    context.pageConflict = page.conflict;
+    context.pageRestore = page.restore;
+    return page.node;
+}
+
+function pianoPage(context) {
+    const page = mountPiano({ route: context.route, base: context.base, service: context.piano, ui: context.moduleUI });
+    context.pageCleanup = page.dispose;
+    context.pageConflict = page.conflict;
+    context.pageRestore = page.restore;
+    return page.node;
+}
+
+function gamePage(context) {
+    context.gamesUI ??= {};
+    const page = mountGames({ route: context.route, base: context.base, service: context.games, ui: context.gamesUI });
     context.pageCleanup = page.dispose;
     context.pageConflict = page.conflict;
     context.pageRestore = page.restore;

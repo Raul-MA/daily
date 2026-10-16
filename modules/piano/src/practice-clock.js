@@ -11,19 +11,7 @@ export function practiceSnapshot(practice, now) {
     resumedAt: practice.status === 'running' ? now : null,
     blockElapsedMs: practice.blockElapsedMs.map((elapsed, index) => elapsed + (index === practice.block ? delta : 0)),
   };
-  if (snapshot.auto && hasPrompts(snapshot)) advancePacing(snapshot, delta);
   return snapshot;
-}
-function advancePacing(snapshot, delta) {
-  const elapsed = snapshot.promptElapsedMs + delta;
-  const steps = Math.floor(elapsed / (snapshot.pace * 1000));
-  snapshot.promptElapsedMs = elapsed % (snapshot.pace * 1000);
-  if (!steps) return;
-  snapshot.revealed = false;
-  if (snapshot.block === 1) {
-    snapshot.promptIndex += steps;
-    snapshot.prompt = persistentPrompt(snapshot);
-  } else snapshot.applicationIndex += steps;
 }
 export function movePrompt(practice) {
   if (!hasPrompts(practice)) throw new Error('No prompts in this practice block.');

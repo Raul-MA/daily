@@ -73,27 +73,28 @@ test('piano explicit pause freezes clocks and block changes preserve already pra
   assert.deepEqual(service.snapshot().blockElapsedMs, [15000, 15000, 0, 0]);
 });
 
-test('piano prompt pacing reconstructs missed steps while pause preserves its remainder and reveal', async () => {
+test('piano snapshots keep prompt and reveal stable until a presentation transition explicitly advances', async () => {
   const { service, advance, values } = await setup();
   start(service);
   service.setBlock(1);
   service.configurePacing({ auto: true, pace: 30 });
   service.reveal();
-  advance(10000);
-  service.pause();
   const prompt = service.snapshot().prompt;
-  advance(60000);
-  assert.deepEqual(service.snapshot().prompt, prompt);
-  assert.equal(service.snapshot().revealed, true);
-  service.resume();
   const before = [...values];
-  advance(20000);
+  advance(90000);
+  assert.equal(service.snapshot().elapsedMs, 90000);
+  assert.equal(service.snapshot().promptIndex, 0);
+  assert.equal(service.snapshot().revealed, true);
+  assert.deepEqual(service.snapshot().prompt, prompt);
+  assert.deepEqual([...values], before);
+  service.pause(10000);
+  advance(60000);
+  assert.equal(service.snapshot().promptElapsedMs, 10000);
+  service.resume(10000);
+  service.nextPrompt();
   assert.equal(service.snapshot().promptIndex, 1);
   assert.equal(service.snapshot().revealed, false);
-  advance(90000);
-  assert.equal(service.snapshot().promptIndex, 4);
-  assert.deepEqual(service.snapshot().prompt, service.snapshot().prompt);
-  assert.deepEqual([...values], before);
+  assert.equal(service.read().practice.promptIndex, 1);
 });
 
 test('piano explicit finish records practice once and atomically completes its activity', async () => {

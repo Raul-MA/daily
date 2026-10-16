@@ -1,27 +1,28 @@
 # Implementation progress
 
-Updated: 2026-10-15. Repo: `/workspaces/daily`, branch `main`.
+Updated: 2026-10-16. Repo: `/workspaces/daily`, branch `main`.
 
 ## Current instruction and exact next step
 
 Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No workflows, pushes, Pages configuration or deployments. Keep real Readwise/Reader API calls for the user's later token test; unverified live access does not block implementation. Do not request personal tokens or backup files.
 
-The shared platform, plants, Coffee, Games and Time Budget have passing local workflow checks. Time Budget is committed as `b3726a7`. **Current: piano core is ported, UI integration is next.** Its 38 music/rendering cases, one catalog case and eight new persistence cases pass (47 of 49 unit cases); full piano still fails until original navigation/worker acceptance and its mounted UI are integrated. Continue with the native practice component and remaining pages, preserving all source assertions. Then reading, WhatsApp and final shared migration/localization/release acceptance remain. Coffee Excel remains excluded.
+The shared platform, plants, Coffee, Games, Time Budget and piano have passing local workflow checks. Piano passes 53 unit cases, ten native browser cases and both retained original browser scripts; all five shared/affected regressions pass. **Exact next step: read Reader module/source docs and author its characterization tests before implementation.** Then complete Reader/Daily Review, WhatsApp and the final migration/localization gates, one app at a time. Coffee Excel remains excluded.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 65 unit + 19 browser cases pass | `reports/platform-with-time-budget.txt` |
-| Plants | 23 unit + 11 browser cases pass | `reports/plants-with-time-budget.txt` |
+| General | 65 unit + 19 browser cases pass | `reports/platform-with-piano.txt` |
+| Plants | 23 unit + 11 browser cases pass | `reports/plants-with-piano.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/time-budget-lint.txt` |
-| Native JS syntax | 412 files pass; this is not typechecking | `reports/time-budget-syntax.txt` |
-| Static preparation | 323 unchanged native files/assets prepared | `reports/time-budget-build.txt` |
-| Coffee | 17 unit + 28 browser cases pass | `reports/coffee-with-time-budget.txt` |
-| Games | 15 unit + 30 browser cases pass | `reports/games-with-time-budget.txt` |
-| Time Budget | 17 unit + 17 browser cases pass | `reports/time-budget-ui.txt` |
-| Whole migration | Incomplete; piano, reading and WhatsApp remain pending | Last full red evidence: `reports/red-all.txt` |
+| Strict full-scope lint | Pass | `reports/piano-final-lint.txt` |
+| Native JS syntax | 612 files pass; this is not typechecking | `reports/piano-final-syntax.txt` |
+| Static preparation | 576 unchanged native files/assets prepared | `reports/piano-final-build.txt` |
+| Coffee | 17 unit + 28 browser cases pass | `reports/coffee-with-piano.txt` |
+| Games | 15 unit + 30 browser cases pass | `reports/games-with-piano.txt` |
+| Time Budget | 17 unit + 17 browser cases pass | `reports/time-budget-with-piano.txt` |
+| Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/piano-ui-verified.txt` |
+| Whole migration | Incomplete; reading, WhatsApp and final migration gates remain pending | Last full red evidence: `reports/red-all.txt` |
 
 No skipped tests or relaxed lint thresholds. Original plant assertions remain unchanged. New-app parity is not established by original baseline results.
 
@@ -29,11 +30,12 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 
 - Accessible hash-router shell, accepted three/two/one-column iOS dashboard, app menu, shared EN/ES, persisted widget order/visibility and quick-action settings. Dashboard links create no records or care events.
 - Validated `daily:v1` root document, per-module adapters, recovery/corrupt preservation, future-version rejection and visible quota failures. Combined restore and remaining domain adapters are still pending.
-- Timestamp activity registry: independent countdowns, singleton budget/game/piano, explicit pause/resume/completion and overdue reconstruction. Rendering/navigation never advances persisted state. Time Budget and Games are integrated; piano remains pending.
+- Timestamp activity registry: independent countdowns, singleton budget/game/piano, explicit pause/resume/completion and overdue reconstruction. Rendering/navigation never advances persisted state. Time Budget, Games and piano are integrated.
 - One generated manifest and owned offline asset list. Authenticated/external requests bypass worker caches. Cached HTML remains with its matching asset version. Updates require every open same-app tab to report safe; blocked/unresponsive tabs hold activation. The two-tab browser test preserves settings and unsaved work through update acceptance.
 - Local-midnight/calendar refresh with foreground/timezone checks and daylight-saving tests. In-memory dirty-form snapshots preserve values, file selection and focus through language changes. Plant/history stale edits retain drafts rather than overwriting newer records.
 - Plants: list, stable detail/edit routes, templates, seasonal care, notes/history editing, skip/manual due dates, Things settings/exact shortcut payload, original/migration exports, preview/cancel/recovery before import, scoped source theme and offline care logging. Thirteen original guide/template data objects are preserved. Controls are EN/ES; authored guide paragraphs/descriptions remain Spanish for final content localization. See `modules/plants/docs/behavior.md` and `reports/plants-source-map.json`.
 - Coffee: original drink/meta/grind/prep/composition/taste forms, beans, history filters/views/detail editing, insights, tools setup, scoped original theme, shared EN/ES, stable record/edit links, legacy JSON exports and preview/recovery/merge/replace imports. Duplicate/reference/nested-schema validation, read-only startup, quota errors, language draft restoration, stale-record/settings guards and offline checks are implemented. See `modules/coffee/docs/behavior.md` and `reports/coffee-source-map.json`.
+- Piano: the complete Toniq lesson/exercise/reference library, local audio and diagrams, scoped source appearance, stable random/last links, timestamp practice, saved history, async language draft restoration and single-worker offline support. See `modules/piano/docs/behavior.md`. Authored text localization remains a final gate.
 - Standalone connection diagnostic: explicit submission, memory-only token cleared from input, sequential real GET endpoints, timeout/status-only results and direct Daily Review fallback. Live authenticated access remains unverified.
 - Five legacy worker-cleanup patches prepared and ownership-tested. Originals and installed workers remain unchanged; release/coexistence tests are deferred.
 
@@ -46,8 +48,8 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 ## Resume and remaining gates
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and the authoritative `docs/pwa-consolidation-plan.md`.
-2. Read original/module piano rules and focused docs, then the copied 41 unit cases and browser/worker workflows. Add replacement continuation, persistence and canonical-route contracts before changing original behavior. Preserve lesson/exercise content, audio/diagrams, source assertions and offline assets.
-3. Time Budget characterization is complete; add Reader characterization before its implementation; add replacement piano continuation/worker/route contracts before changing its behavior.
+2. Read Reader source/module docs and author characterization before implementing it. Preserve its settings, filters, picks, shortcuts and original appearance while moving persistence into Daily.
+3. Time Budget and piano characterization/integration pass locally. Reader characterization and WhatsApp migration remain next, one app at a time.
 4. Complete combined backup/import schemas/reference validation, legacy migration exporters, concurrency policy, all-app offline/update checks, full localization (including plant guides), install assets and device checklist. Real iPhone/Things/Readwise acceptance remains deferred and must never be claimed passing from browser mocks.
 5. Run `npm run verify` before claiming the whole migration complete. Until all apps are implemented it must remain red. Save local checkpoints; no remote work.
 
@@ -106,3 +108,13 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - New service persists practice/block time, prompt/reveal state, pacing, settings, last exercise and finished practice records atomically with shared activities. Snapshot/tick/read operations never save. Seeded singleton selections reuse the original prompt/music calculations so missed automatic prompts reconstruct consistently without changing global randomness or saving every tick. Paused prompt remainder survives; total/block limits never finish automatically.
 - **Exact next work:** add the native practice UI and remaining source pages/components under `modules/piano/src/js/`, then root mount/router/widget integration. `src/js/components/practice-session.js` currently exports allocation only; `exercise-shell.js` currently exports its two pure render helpers only. Preserve original pedagogical text and all source assertions. Add/adapt worker/canonical-route fixture assertions before removing the original private-worker expectations; replace the four approved hide/return/setup assumptions in `e2e/scenarios/pacing.mjs` with continuation assertions backed by the new acceptance cases. Original browser direct imports/routes and interval instrumentation need native-path/scope adapters, not weaker assertions.
 - Root router currently has piano, pianoLearn and pianoExercise only; add catalog-backed library/reference routes rather than dropping theory/cards. Scope source CSS and clean up search/document listeners. Native legacy browser scripts currently use the default `/daily/` base and old hash routes; adapt explicitly while keeping baseline behavior selectable. Shared changes need general/affected regressions after integration.
+
+
+## Piano mounted UI acceptance (2026-10-16)
+
+- All original pages/components, scoped CSS and 53 audio/image assets are mounted under the shared router. Catalog routes include library/reference pages. Search/listener cleanup, original exercise controls, stable random/last links, practice resume and Course history are implemented. No private bootstrap/worker is installed. Source hashes and split destinations are recorded for all 135 original JS/CSS/assets in `piano-source-map.json`; useful keyboard/rootless/suspension/ear-training/modulation docs are retained under the module.
+- Four Markdown characterization cases passed against source before parser splitting. Native worker inventory verifies generated shared assets; original baseline checks remain selectable. Current discovery is 53 unit and ten new browser cases; both original broad browser scripts also run. Source assertions remain, with native route/import adapters and the approved continuation changes.
+- `piano-drafts-red.txt` records actual language-draft and checkbox rollback defects. Draft restoration now runs after async loading, including disclosures, validation and budget previews. Failed checkbox saves roll back visually; its fixture now clicks then verifies rollback. A loading status paragraph prevents source heading-readiness waits from matching loading text. Canonical phone fixtures reload explicitly to preserve original isolated navigation setup without cache-busting queries breaking hash-only audio cleanup.
+- `piano-frozen-prompts-red.txt` catches the original plan mismatch (three missed automatic question advances while hidden); `piano-frozen-prompts.txt` passes after correction. Elapsed time is timestamp-derived. Visible presentation advances questions through saved transitions; hiding/navigation/reload retain the saved prompt/reveal without writes. Explicit pause preserves prompt remainder. Unsaved sub-question countdown progress may reset on navigation; elapsed practice and the saved question remain intact.
+- `node scripts/test.mjs piano --report reports/piano-ui-verified.txt` completed successfully: 53 unit, ten native browser, original desktop lesson/library flows, phone lessons/exercises at 320/360/390px, local audio completion/cancellation, 360px touch swipe and shared-worker offline reload/reveal. Earlier `piano-ui.txt` and `piano-ui-final.txt` are intermediate failed reports, superseded by this complete green run. These checks do not establish physical iPhone acceptance.
+- Full-scope lint and 612-file syntax checks pass (`piano-final-lint.txt`, `piano-final-syntax.txt`). Sequential regressions all pass: General 65 unit + 19 browser, Plants 23 + 11, Coffee 17 + 28, Games 15 + 30 and Time Budget 17 + 17 (the `-with-piano.txt` reports). Static preparation passes with 576 native files/assets (`piano-final-build.txt`). Reader characterization/implementation is next. Full localization, nested backup validation, legacy exporters and physical-device gates remain open.

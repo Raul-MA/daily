@@ -1,0 +1,10 @@
+@import url('./css/variables.css');
+@import url('./css/base.css');
+@import url('./css/layout.css');
+@import url('./css/components.css');
+[data-module="piano"] { min-width: 0; }
+[data-module="piano"] #app-shell { height: calc(100dvh - 150px); min-height: 560px; }
+
+[data-module="piano"] .piano-history { margin-top: 32px; border-top: 1px solid var(--border); padding-top: 20px; }
+[data-module="piano"] .piano-record { display: flex; flex-direction: column; gap: 4px; padding: 12px 0; }
+[data-module="piano"] .piano-record time { color: var(--text-muted); font-size: var(--text-sm); }

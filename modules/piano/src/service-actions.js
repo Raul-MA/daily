@@ -1,14 +1,14 @@
 import { movePrompt } from './practice-clock.js';
 
 export function practiceActions(service) {
-  function change(transform) {
+  function change(transform, promptElapsedMs) {
     const data = service.read();
     const practice = service.snapshot();
     if (!practice) throw new Error('No active piano practice.');
-    return service.save({ ...data, practice: transform(practice) }).practice;
+    return service.save({ ...data, practice: transform({ ...practice, promptElapsedMs: promptElapsedMs ?? practice.promptElapsedMs }) }).practice;
   }
-  function pause() { return change(practice => ({ ...practice, status: 'paused', resumedAt: null })); }
-  function resume() { return change(practice => ({ ...practice, status: 'running', resumedAt: service.clock() })); }
+  function pause(promptElapsedMs) { return change(practice => ({ ...practice, status: 'paused', resumedAt: null }), promptElapsedMs); }
+  function resume(promptElapsedMs) { return change(practice => ({ ...practice, status: 'running', resumedAt: service.clock() }), promptElapsedMs); }
   function setBlock(block) {
     if (!Number.isInteger(block) || block < 0 || block > 3) throw new Error('Invalid practice block.');
     return change(practice => ({ ...practice, block, revealed: false, promptElapsedMs: 0 }));
@@ -26,5 +26,5 @@ export function practiceActions(service) {
     service.save({ ...data, practice: null, history: [...data.history, record] });
     return record;
   }
-  return { pause, resume, setBlock, configurePacing, finishSession, nextPrompt: () => change(movePrompt), reveal: () => change(practice => ({ ...practice, revealed: true })) };
+  return { pause, resume, setBlock, configurePacing, finishSession, nextPrompt: () => change(movePrompt), reveal: promptElapsedMs => change(practice => ({ ...practice, revealed: true }), promptElapsedMs) };
 }

@@ -1,0 +1,16 @@
+✔ piano reads and random selection never create a practice record and explicit exercise opening persists the last ID (35.480893ms)
+✔ piano start saves its practice and timestamp activity atomically and offers the existing unfinished session (10.387386ms)
+✔ piano elapsed and current block reconstruct after suspension without writes or automatic completion (1.832482ms)
+✔ piano explicit pause freezes clocks and block changes preserve already practiced time (15.831622ms)
+✔ piano snapshots keep prompt and reveal stable until a presentation transition explicitly advances (20.024041ms)
+✔ piano explicit finish records practice once and atomically completes its activity (8.491736ms)
+✔ piano failed saves retain the previous practice history and activity without partial commits (10.302728ms)
+✔ piano future data and invalid lessons pacing or blocks reject without changing stored records (8.882717ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 190.248745

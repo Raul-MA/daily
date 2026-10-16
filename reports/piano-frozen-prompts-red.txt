@@ -1,0 +1,35 @@
+✔ piano reads and random selection never create a practice record and explicit exercise opening persists the last ID (42.540986ms)
+✔ piano start saves its practice and timestamp activity atomically and offers the existing unfinished session (12.952065ms)
+✔ piano elapsed and current block reconstruct after suspension without writes or automatic completion (3.222297ms)
+✔ piano explicit pause freezes clocks and block changes preserve already practiced time (9.926636ms)
+✖ piano snapshots keep prompt and reveal stable until a presentation transition explicitly advances (12.84759ms)
+✔ piano explicit finish records practice once and atomically completes its activity (3.3844ms)
+✔ piano failed saves retain the previous practice history and activity without partial commits (2.57608ms)
+✔ piano future data and invalid lessons pacing or blocks reject without changing stored records (1.790303ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 161.841202
+
+✖ failing tests:
+
+test at modules/piano/test/service.test.mjs:76:1
+✖ piano snapshots keep prompt and reveal stable until a presentation transition explicitly advances (12.84759ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 0
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/service.test.mjs:86:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

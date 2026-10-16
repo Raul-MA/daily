@@ -5,7 +5,7 @@ function activityHref(item, base) {
     if (item.kind === 'game')
         return href({ page: 'gameSession', id: item.reference }, base);
     if (item.kind === 'piano')
-        return href({ page: 'piano', query: { activity: item.id } }, base);
+        return href({ page: 'pianoLearn', query: { activity: item.reference } }, base);
     return href({ page: 'time', query: { activity: item.id } }, base);
 }
 function timeLabel(item, language) {
