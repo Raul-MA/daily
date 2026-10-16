@@ -152,3 +152,8 @@ Legacy exporter acceptance: `legacy-budget-final-general.txt` passes General 76/
 Legacy Plants export adds three domain contracts (`modules/plants/test/legacy-service.test.mjs`), one General packaging contract and one phone workflow. Red reports precede implementation: `legacy-plants-red.txt`, `legacy-plants-patch-red.txt`, `legacy-plants-browser-red.txt`. Safe fixtures use synthetic records and a pinned original HTML snapshot; no personal exports are read. Both old record formats and original recovery priority are tested, with explicit rejection of future-schema downgrade. Packaging is applied only in a disposable copy; original repos are read-only.
 
 Legacy Plants acceptance: `legacy-plants-general.txt` passes General 77/26 and `legacy-plants-scope.txt` passes Plants 26/11. Full lint, 705-file syntax, static preparation and original-repo patch dry check pass. No source assertions were changed, and original storage/installations remain untouched.
+
+
+Legacy Reader export adds three domain contracts, one General patch contract and one 320px browser workflow. Missing behavior is recorded first in `legacy-reader-red.txt`, `legacy-reader-patch-red.txt`, `legacy-reader-browser-red.txt`. Synthetic fixtures cover token properties in old combined settings, separate secret/cache keys, opted-out remembered data and unsafe metadata URLs. Every export is imported through the real native adapter without making an API call; original source assertions are unchanged.
+
+Legacy Reader acceptance: `legacy-reader-general.txt` passes General 78/27 and `legacy-reader-scope.txt` passes Reader 54/30. Strict lint, 714-file syntax, static preparation and unchanged-source patch dry check pass. Physical/live acceptance and original-app release remain deferred.

@@ -8,23 +8,23 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore pass local checks.** `combined-backup-all.txt` completed successfully across General and every app, including both broad Piano scripts. Strict lint, 688-file syntax and static preparation of 629 assets pass (`combined-backup-final-*`). Reader and WhatsApp earlier Stage 8 fixes are included. Full restore validates all module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** prepare the legacy Reader preferences/remembered-item exporter without credentials, then WhatsApp, sequentially. Plants exporter is accepted locally: General 77 unit/26 browser, Plants 26 unit/11 browser, strict lint, 705-file syntax, static preparation and original-source patch check pass. Save its local checkpoint before Reader. Earlier checkpoints: Time Budget exporter `1d40be5`, install icons `746751f`, combined backup `da523d1`. Complete EN/ES and remaining schema/concurrency/form/update audits afterward. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
+**Exact next step:** prepare the legacy WhatsApp saved-draft exporter with tests before code, preserving original storage and installed apps. Reader exporter is accepted locally: General 78 unit/27 browser, Reader 54 unit/30 browser, full lint, 714-file syntax, static preparation and unchanged-checkout patch check pass. Save its local checkpoint before WhatsApp. Prior checkpoints: Plants `6fbed98`, Time Budget `1d40be5`, install icons `746751f`, combined backup `da523d1`. Complete EN/ES and remaining schema/concurrency/form/update audits afterward. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 77 unit + 26 browser cases pass | `reports/legacy-plants-general.txt` |
+| General | 78 unit + 27 browser cases pass | `reports/legacy-reader-general.txt` |
 | Plants | 26 unit + 11 browser cases pass | `reports/legacy-plants-scope.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/legacy-plants-lint.txt` |
-| Native JS syntax | 705 files pass; this is not typechecking | `reports/legacy-plants-syntax.txt` |
-| Static preparation | 632 native files/assets prepared; legacy exporters excluded | `reports/legacy-plants-build.txt` |
+| Strict full-scope lint | Pass | `reports/legacy-reader-lint.txt` |
+| Native JS syntax | 714 files pass; this is not typechecking | `reports/legacy-reader-syntax.txt` |
+| Static preparation | 632 native files/assets prepared; legacy exporters excluded | `reports/legacy-reader-build.txt` |
 | Coffee | 17 unit + 28 browser cases pass | `reports/combined-backup-all.txt` |
 | Games | 16 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
 | Time Budget | 20 unit + 17 browser cases pass | `reports/legacy-budget-time.txt` |
 | Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/combined-backup-all.txt` |
-| Reader | 51 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
+| Reader | 54 unit + 30 browser cases pass | `reports/legacy-reader-scope.txt` |
 | WhatsApp | Nine unit + nine browser cases pass | `reports/combined-backup-all.txt` |
 | Whole migration | Local workflow checks all pass; Stage 8 migration/localization/device gates remain incomplete | `reports/combined-backup-all.txt` |
 
@@ -273,3 +273,19 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - General passes 77 unit + 26 browser (`legacy-plants-general.txt`); Plants passes 26 unit + 11 browser (`legacy-plants-scope.txt`). Full strict lint, 705-file syntax and static preparation pass. The standalone exporter remains outside Daily's 632 owned runtime assets.
 - The prepared patch passes against original Stillgreen without modifying it. Existing source tests/appearance remain unchanged. Temporary packaging, actual synthetic native import, Things preferences, recovery order, future downgrade rejection and phone/EN-ES behavior are verified locally. Installed migration and release remain deferred.
 - Next: Reader legacy preferences and optional remembered item, with strict field allowlists and no token/cache exports. Then WhatsApp draft. Complete remaining authored-content localization and final schema/concurrency/form/update/device gates before claiming the local implementation complete.
+
+
+## Stage 8: legacy Reader exporter in progress
+
+- Three unit contracts first fail on the missing exporter (`legacy-reader-red.txt`), then pass (`legacy-reader-unit.txt`). Both saved-settings formats import through the real Daily adapter. Strict preference/document allowlists omit token properties, cache records and article bodies. Token/cache keys are never read. Remembered metadata is read only when enabled, with a valid safe URL; disabled or missing data is not initialized.
+- Invalid current settings do not fall back to old preferences or reset original data. Malformed JSON/remembered items and blocked storage fail without writes/deletion. The exported wrapper is `reader-picker`, schema version 1. Original transient picks and disposable caches are excluded.
+- Phone/EN-ES/literal-title/download/native-import/storage-preservation browser coverage is authored before UI (`legacy-reader-browser-red.txt`); its implemented run is pending. A separate source HTML fixture and pinned checkout provenance contain no personal records.
+- `legacy-reader-patch-red.txt` records missing preparation. Packaging passes (`legacy-reader-patch.txt`), applies only to a temporary source copy and rejects changed HTML. `npm run prepare:legacy-reader` creates `legacy/patches/random-readwise-export.patch`; the unchanged pinned checkout passes `git apply --check`. No original file is changed or released.
+- Settings/document schemas are copied and checked against native files before preparation; artifacts stay outside Daily runtime output. See `legacy/exporters/reader/README.md` for the later installed-context and private token reentry requirements.
+
+
+## Legacy Reader exporter local acceptance complete
+
+- General passes 78 unit + 27 browser (`legacy-reader-general.txt`); Reader passes 54 unit + 30 browser (`legacy-reader-scope.txt`). Full lint, 714-file syntax, static preparation and pinned-checkout patch check pass. No source assertions were changed.
+- Token/cache keys remain unread, including when old settings contain embedded credential properties. Export retains only preferences and optional minimized remembered metadata; actual native import and safe literal title rendering pass. No token, body or cached response is exported, no API call is made, and original keys remain unchanged.
+- Prepared files and patch remain outside Daily's runtime output and have not been released. Next: WhatsApp saved-draft exporter, then final content localization and schema/concurrency/form/update audit. Physical acceptance stays deferred.

@@ -6,7 +6,7 @@ Copied tests must protect behavior before app code enters this repo. A missing f
 
 ## How It Works
 
-`npm run test:<module>` runs each unit group and then its browser checks. `test:all` visits general, plants, coffee, games, Time Budget, piano, reading and WhatsApp sequentially, accumulates failures and exits nonzero. Playwright uses one worker and no retries. `test:general` includes 77 unit cases and 26 browser cases for the shared platform, diagnostics and combined backup/restore. `scripts/discovery.mjs` checks required case counts before execution; every module has a discovered local suite.
+`npm run test:<module>` runs each unit group and then its browser checks. `test:all` visits general, plants, coffee, games, Time Budget, piano, reading and WhatsApp sequentially, accumulates failures and exits nonzero. Playwright uses one worker and no retries. `test:general` includes 78 unit cases and 27 browser cases for the shared platform, diagnostics and combined backup/restore. `scripts/discovery.mjs` checks required case counts before execution; every module has a discovered local suite.
 
 Node tests use a test-only loader under `tests/support/`. Existing source modules are imported normally, including import errors. If the requested file does not exist, each referenced export throws when exercised. This keeps assertions running without adding app implementations or fabricating successful results. Absent asset reads fail inside named tests. The loader is never part of the browser application build.
 
@@ -31,7 +31,7 @@ The initial isolated Node red captures for diagnostic/storage show only file-lev
 
 ## Native platform and plants checkpoint
 
-The current general suite has 77 unit and 26 browser cases; plants has 26 unit and 11 browser cases. `node scripts/test.mjs <scope> --report reports/<name>.txt` writes child output internally and preserves failing exit codes, allowing one approved local test command to be reused. Keep browser suites sequential because static preparation replaces `dist/`.
+The current general suite has 78 unit and 27 browser cases; plants has 26 unit and 11 browser cases. `node scripts/test.mjs <scope> --report reports/<name>.txt` writes child output internally and preserves failing exit codes, allowing one approved local test command to be reused. Keep browser suites sequential because static preparation replaces `dist/`.
 
 The initial update red attempt used isolated Node child processes and produced only a file-level runner failure. It did not establish behavioral red. `platform-updates-regression-red.txt` replays the exact worker from `bb4c54e` with the new tests: four guards fail for cached-version pinning, blocked tabs, invalid/unresponsive replies and unknown clients. Current worker/unit/browser reports show those contracts passing.
 

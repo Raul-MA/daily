@@ -1,0 +1,11 @@
+✔ legacy Reader export whitelists preferences and remembered metadata through Daily import without tokens or bodies (44.176079ms)
+✔ legacy Reader export initializes no keys and does not read an opted-out remembered item or obsolete settings (3.305793ms)
+✔ legacy Reader invalid preferences remembered URLs JSON and blocked storage fail without deletion or fallback reset (4.9703ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 142.266731

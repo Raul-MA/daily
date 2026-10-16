@@ -7,7 +7,7 @@
 
 ## Commands
 
-- `npm run test:reading`: 51 unit and 30 browser cases; local acceptance passes; latest import audit is `reports/reading-import-discard.txt`.
+- `npm run test:reading`: 54 unit and 30 browser cases; legacy exporter contracts add three unit cases to the prior local acceptance checkpoint.
 - Source baseline: `node scripts/test.mjs reading --baseline http://127.0.0.1:8767/.daily-reader-source/ --report reports/baseline-reading-browser.txt` with the workspace static server running.
 
 ## Key Files
@@ -18,6 +18,7 @@
 - `src/view.js`, `src/ui/`, `src/preferences.js`: source picker appearance, shared preferences and language drafts.
 - `src/review/`: latest-review client, explicit completion, ordinary highlights and conditional Q&A presenter.
 - `src/imports.js`, `src/backup-ui.js`: validated preview/recovery/confirmation and credential-free exports.
+- [Prepared legacy exporter](../../legacy/exporters/reader/README.md): settings and optional remembered metadata; tokens/cache keys are excluded and old-app release is deferred.
 - `test/source.mjs`: unchanged-source VM characterization adapter; `e2e/fixtures.js`: synthetic API fixtures and baseline/native route adapter.
 
 ## Non-Obvious Patterns

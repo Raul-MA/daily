@@ -29,6 +29,7 @@
 - [Legacy workers](docs/legacy-workers.md): tested cleanup patches and release requirements.
 - [Legacy Time Budget export](legacy/exporters/time-budget/README.md): prepared read-only active-session exporter; original-app release deferred.
 - [Legacy Plants export](legacy/exporters/plants/README.md): prepared records/Things preferences exporter with read-only recovery; original-app release deferred.
+- [Legacy Reader export](legacy/exporters/reader/README.md): prepared preferences/remembered-item exporter with credential allowlists; old-app release deferred.
 - [Local development / deferred deployment](docs/deployment.md): local commands and the current no-workflows instruction.
 - [Lint policy](docs/pwa-eslint-policy.md): exact required rules.
 

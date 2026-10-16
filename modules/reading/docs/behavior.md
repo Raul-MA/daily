@@ -41,3 +41,8 @@ Supported parameters: `count` 1–20, `minutes` 0–10000 (0 = any), `progress` 
 `baseline-reading-complete.txt` passes all 12 characterization and six source browser cases. `reading-backup-ui.txt` passes 48 native unit and 25 browser cases. `reader-shared-regressions.txt` passes 51 native unit and 29 browser cases, plus General and every previously completed module. WhatsApp alone remains red in that report. Phone screenshots are `reader-source-phone.png` and `reader-native-phone.png`. All fixtures are synthetic; no personal exports or tokens were used.
 
 Stage 8 import-cancel audit: `reading-import-discard-red.txt` records 29 browser passes and the hidden-Cancel failure. `reading-import-discard.txt` passes 51 unit/30 browser after correction; unsaved token and preference drafts survive invalid-file cancellation across language changes. Full strict lint passes in `reading-import-discard-lint.txt`.
+
+
+## Prepared old-app exporter
+
+A separate read-only page and patch are prepared in [legacy/exporters/reader](../../../legacy/exporters/reader/README.md). It reads v2 preferences, or v1 only when v2 is absent, and whitelists known settings. Legacy token properties and remember-token options are excluded. The remembered-item key is read only when enabled; minimized safe metadata excludes bodies and unknown fields. Separate token/cache keys are never read. Malformed data fails unchanged rather than resetting or falling back to older settings. Import uses the existing protected `reader-picker` format and requires token reentry in Daily. The pinned source checkout and installed apps remain untouched; release and physical migration are deferred.

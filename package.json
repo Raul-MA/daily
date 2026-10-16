@@ -25,6 +25,7 @@
     "prepare:legacy-workers": "node scripts/prepare-legacy-workers.mjs",
     "prepare:legacy-budget": "node scripts/prepare-legacy-budget.mjs",
     "prepare:legacy-plants": "node scripts/prepare-legacy-plants.mjs",
+    "prepare:legacy-reader": "node scripts/prepare-legacy-reader.mjs",
     "check:js": "node scripts/check-js.mjs"
   },
   "devDependencies": {

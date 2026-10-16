@@ -1,0 +1,12 @@
+{
+  "repo": ".daily-reader-source",
+  "publicRepo": "random-readwise",
+  "commit": "b3892b2417b8167d0cd063c31b2b69da781fd4a9",
+  "indexSha256": "b923c3714ddab0eeae5ad8e22bd8cad9be373257c590781b2cd15001e9e3896b",
+  "storageKeys": [
+    "readerPicker.settings.v2",
+    "readerPicker.settings.v1",
+    "readerPicker.lastItem.v1"
+  ],
+  "nativeSchemaVersion": 1
+}

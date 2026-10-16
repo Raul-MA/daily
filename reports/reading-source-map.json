@@ -1,6 +1,6 @@
 {
   "commit": "b3892b2417b8167d0cd063c31b2b69da781fd4a9",
-  "status": "local acceptance: 51 unit / 30 browser after import-cancel audit; all-scope checkpoint green with prior 29-browser set; live API/device deferred",
+  "status": "local acceptance: 54 unit / 30 browser including legacy exporter; combined-backup all-scope checkpoint green with 51/30; live API/device and old-app release deferred",
   "files": [
     {
       "source": "random-readwise/README.md",
@@ -102,5 +102,13 @@
       "apps/daily/src/shell/dashboard.js",
       "apps/daily/src/shell/render.js"
     ]
+  },
+  "legacyExport": {
+    "directory": "legacy/exporters/reader",
+    "patch": "legacy/patches/random-readwise-export.patch",
+    "unitContracts": 3,
+    "browserContracts": 1,
+    "sourceModified": false,
+    "release": "deferred"
   }
 }
