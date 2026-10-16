@@ -1,0 +1,195 @@
+Suite: reading
+✔ Reader duration parsing preserves numeric text and word-count estimates (6.161431ms)
+✔ Reader progress is bounded and remaining time rounds upward with a one-minute floor (5.03896ms)
+✔ Reader eligibility deduplicates IDs and applies progress remaining-time and safe-link filters (4.406407ms)
+✔ Reader selection prioritizes started items then configured location order without duplicates (1.445495ms)
+✔ Reader links accept only HTTPS Reader hosts and metadata minimization excludes content and tokens (0.687563ms)
+✔ Reader URL configuration preserves aliases location priority and supported shortcut controls (0.990006ms)
+✔ Reader invalid URL preferences retain defaults and advanced limits remain bounded (0.919715ms)
+✔ Reader generated shortcut URLs preserve picking controls and exclude tokens (0.762131ms)
+✔ Reader paginates locations sequentially using cursor and token headers and excludes children (3.19593ms)
+✔ Reader scan cap bounds returned documents and stops requesting further pages (2.062968ms)
+✔ Reader authorization throttling and service errors reject without successful results (3.385373ms)
+✔ Reader session cache contains minimized metadata and invalidates changed scan configuration (0.742935ms)
+✔ Reader custom counts support two through twenty and uniform sampling can choose unread before started (1.081206ms)
+✔ Reader finite budgets exclude unknown duration unless enabled and always reject archived completed and child records (1.087258ms)
+✔ Reader scan limits count fetched child records and expose truncation instead of scanning forever (1.647372ms)
+✔ Reader repeating cursors and malformed response shapes fail rather than return misleading complete data (3.172987ms)
+✔ Reader caches are account-specific without serializing tokens or full document content (1.48523ms)
+✔ Reader links reject embedded credentials and cache freshness expires using the configured clock (0.442255ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 92.222169
+[WebServer] (node:15035) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:15054) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/reading/e2e/reader.spec.js:4:1 › Reader retains original time and count controls across reload (6.6s)
+(node:15288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 modules/reading/e2e/reader.spec.js:15:1 › Reader returns distinct started-first picks fitting estimated remaining time (6.5s)
+(node:15462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 modules/reading/e2e/reader.spec.js:27:1 › Reader saves progress location cache and shortcut behavior without leaking tokens into URLs (6.6s)
+(node:15715) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 modules/reading/e2e/reader.spec.js:49:1 › Reader pick again reuses fresh metadata rather than making additional requests (6.3s)
+(node:15903) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 modules/reading/e2e/reader.spec.js:60:1 › Reader distinguishes rejected tokens and throttled document requests (6.4s)
+
+
+  1) modules/reading/e2e/reader.spec.js:4:1 › Reader retains original time and count controls across reload 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#pickButton')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#pickButton')
+
+
+       at fixtures.js:32
+
+      30 |   });
+      31 |   await page.goto(target(options.query));
+    > 32 |   await expect(page.locator('#pickButton')).toBeVisible();
+         |                                             ^
+      33 |   return calls;
+      34 | }
+      35 | export async function settings(page) { await page.locator('#settingsButton').click(); await expect(page.locator('#settingsDialog')).toBeVisible(); }
+        at prepare (/workspaces/daily/modules/reading/e2e/fixtures.js:32:45)
+        at /workspaces/daily/modules/reading/e2e/reader.spec.js:5:3
+
+    Error Context: test-results/reader-Reader-retains-orig-d855a-ount-controls-across-reload/error-context.md
+
+  2) modules/reading/e2e/reader.spec.js:15:1 › Reader returns distinct started-first picks fitting estimated remaining time 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#pickButton')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#pickButton')
+
+
+       at fixtures.js:32
+
+      30 |   });
+      31 |   await page.goto(target(options.query));
+    > 32 |   await expect(page.locator('#pickButton')).toBeVisible();
+         |                                             ^
+      33 |   return calls;
+      34 | }
+      35 | export async function settings(page) { await page.locator('#settingsButton').click(); await expect(page.locator('#settingsDialog')).toBeVisible(); }
+        at prepare (/workspaces/daily/modules/reading/e2e/fixtures.js:32:45)
+        at /workspaces/daily/modules/reading/e2e/reader.spec.js:16:3
+
+    Error Context: test-results/reader-Reader-returns-dist-51e4e-ng-estimated-remaining-time/error-context.md
+
+  3) modules/reading/e2e/reader.spec.js:27:1 › Reader saves progress location cache and shortcut behavior without leaking tokens into URLs 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#pickButton')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#pickButton')
+
+
+       at fixtures.js:32
+
+      30 |   });
+      31 |   await page.goto(target(options.query));
+    > 32 |   await expect(page.locator('#pickButton')).toBeVisible();
+         |                                             ^
+      33 |   return calls;
+      34 | }
+      35 | export async function settings(page) { await page.locator('#settingsButton').click(); await expect(page.locator('#settingsDialog')).toBeVisible(); }
+        at prepare (/workspaces/daily/modules/reading/e2e/fixtures.js:32:45)
+        at /workspaces/daily/modules/reading/e2e/reader.spec.js:28:3
+
+    Error Context: test-results/reader-Reader-saves-progre-ca8b8-ut-leaking-tokens-into-URLs/error-context.md
+
+  4) modules/reading/e2e/reader.spec.js:49:1 › Reader pick again reuses fresh metadata rather than making additional requests 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#pickButton')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#pickButton')
+
+
+       at fixtures.js:32
+
+      30 |   });
+      31 |   await page.goto(target(options.query));
+    > 32 |   await expect(page.locator('#pickButton')).toBeVisible();
+         |                                             ^
+      33 |   return calls;
+      34 | }
+      35 | export async function settings(page) { await page.locator('#settingsButton').click(); await expect(page.locator('#settingsDialog')).toBeVisible(); }
+        at prepare (/workspaces/daily/modules/reading/e2e/fixtures.js:32:45)
+        at /workspaces/daily/modules/reading/e2e/reader.spec.js:50:17
+
+    Error Context: test-results/reader-Reader-pick-again-r-51861--making-additional-requests/error-context.md
+
+  5) modules/reading/e2e/reader.spec.js:60:1 › Reader distinguishes rejected tokens and throttled document requests 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#pickButton')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#pickButton')
+
+
+       at fixtures.js:32
+
+      30 |   });
+      31 |   await page.goto(target(options.query));
+    > 32 |   await expect(page.locator('#pickButton')).toBeVisible();
+         |                                             ^
+      33 |   return calls;
+      34 | }
+      35 | export async function settings(page) { await page.locator('#settingsButton').click(); await expect(page.locator('#settingsDialog')).toBeVisible(); }
+        at prepare (/workspaces/daily/modules/reading/e2e/fixtures.js:32:45)
+        at /workspaces/daily/modules/reading/e2e/reader.spec.js:61:3
+
+    Error Context: test-results/reader-Reader-distinguishe-949df-throttled-document-requests/error-context.md
+
+  5 failed
+    modules/reading/e2e/reader.spec.js:4:1 › Reader retains original time and count controls across reload 
+    modules/reading/e2e/reader.spec.js:15:1 › Reader returns distinct started-first picks fitting estimated remaining time 
+    modules/reading/e2e/reader.spec.js:27:1 › Reader saves progress location cache and shortcut behavior without leaking tokens into URLs 
+    modules/reading/e2e/reader.spec.js:49:1 › Reader pick again reuses fresh metadata rather than making additional requests 
+    modules/reading/e2e/reader.spec.js:60:1 › Reader distinguishes rejected tokens and throttled document requests 

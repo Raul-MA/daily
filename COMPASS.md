@@ -34,7 +34,7 @@
 
 - The test-only absent-module loader permits discovery and throws when missing behavior is exercised; it never supplies fake successful behavior.
 - Baseline runs target original code in isolated contexts. They do not prove the new PWA works.
-- Time Budget characterization was authored before its port. Reader still needs characterization; unfinished feature scopes fail honestly.
+- Time Budget characterization was authored before its port. Reader characterization now passes against source; its native UI remains pending; unfinished feature scopes fail honestly.
 
 ## Documentation Rules
 

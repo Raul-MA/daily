@@ -1,0 +1,67 @@
+{
+  "commit": "b3892b2417b8167d0cd063c31b2b69da781fd4a9",
+  "status": "domain and persistence only; mounted UI and full acceptance pending",
+  "files": [
+    {
+      "source": "random-readwise/README.md",
+      "sha256": "4a6cfbfa6edf285e0534b70f8bb941cd4992170e7130ec1cd2896845acfc19a8",
+      "status": "source reference; native UI/assets adaptation pending"
+    },
+    {
+      "source": "random-readwise/app.js",
+      "sha256": "7791ac3d5a0893d530a083ac7d355a48ad9b234825f8c470db15c3528441a292",
+      "destinations": [
+        "modules/reading/src/cache.js",
+        "modules/reading/src/client.js",
+        "modules/reading/src/config.js",
+        "modules/reading/src/credentials.js",
+        "modules/reading/src/domain.js",
+        "modules/reading/src/metadata.js",
+        "modules/reading/src/selection.js",
+        "modules/reading/src/service-actions.js",
+        "modules/reading/src/service.js",
+        "modules/reading/src/validation.js"
+      ]
+    },
+    {
+      "source": "random-readwise/icons/icon-180.png",
+      "sha256": "d4574561adf957d3f0b8b1eba7ac2cc326c18335721a30a845f009adcc9d041f",
+      "status": "source reference; native UI/assets adaptation pending"
+    },
+    {
+      "source": "random-readwise/icons/icon-192.png",
+      "sha256": "fde4dd3987debf2945630f0d90554cd15a2071d808e24933debb4030452ecdf7",
+      "status": "source reference; native UI/assets adaptation pending"
+    },
+    {
+      "source": "random-readwise/icons/icon-512.png",
+      "sha256": "3cf5ded80f538ade500334a9a7ed5a1dc93f0451a98865da0f0ddac32e45ef05",
+      "status": "source reference; native UI/assets adaptation pending"
+    },
+    {
+      "source": "random-readwise/icons/icon.svg",
+      "sha256": "bf68028c920b6ba6e23ae55f52e2d8f89f05110b1d3a70ce1df4411e27702688",
+      "status": "source reference; native UI/assets adaptation pending"
+    },
+    {
+      "source": "random-readwise/index.html",
+      "sha256": "b923c3714ddab0eeae5ad8e22bd8cad9be373257c590781b2cd15001e9e3896b",
+      "status": "source reference; native UI/assets adaptation pending"
+    },
+    {
+      "source": "random-readwise/manifest.webmanifest",
+      "sha256": "b3fdd32ee4f7a0093dad2a4efc70f200ae455d9115bfc409a7429c8a4ba57d5a",
+      "status": "source reference; native UI/assets adaptation pending"
+    },
+    {
+      "source": "random-readwise/service-worker.js",
+      "sha256": "417ffac5258c69da51c875718dfecc5b907332cddab06ac1956cb0e353086835",
+      "replacement": "shared Daily worker; no private worker is installed"
+    },
+    {
+      "source": "random-readwise/styles.css",
+      "sha256": "2b66a3b2f049e9dc55a568f9afb22ea56b6eaf3c2c11f9f3f5288763c1b09d96",
+      "status": "source reference; native UI/assets adaptation pending"
+    }
+  ]
+}

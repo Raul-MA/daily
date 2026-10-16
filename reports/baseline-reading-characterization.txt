@@ -1,0 +1,20 @@
+✔ Reader duration parsing preserves numeric text and word-count estimates (6.908153ms)
+✔ Reader progress is bounded and remaining time rounds upward with a one-minute floor (1.905754ms)
+✔ Reader eligibility deduplicates IDs and applies progress remaining-time and safe-link filters (2.778682ms)
+✔ Reader selection prioritizes started items then configured location order without duplicates (1.67323ms)
+✔ Reader links accept only HTTPS Reader hosts and metadata minimization excludes content and tokens (1.750474ms)
+✔ Reader URL configuration preserves aliases location priority and supported shortcut controls (2.489994ms)
+✔ Reader invalid URL preferences retain defaults and advanced limits remain bounded (1.67845ms)
+✔ Reader generated shortcut URLs preserve picking controls and exclude tokens (2.129935ms)
+✔ Reader paginates locations sequentially using cursor and token headers and excludes children (2.163304ms)
+✔ Reader scan cap bounds returned documents and stops requesting further pages (2.148397ms)
+✔ Reader authorization throttling and service errors reject without successful results (4.490875ms)
+✔ Reader session cache contains minimized metadata and invalidates changed scan configuration (1.447149ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 112.912146

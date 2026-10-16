@@ -108,3 +108,8 @@ Both original browser scripts remain, with all music/keyboard/reveal/filter/audi
 The loading placeholder is a status paragraph, so source heading-readiness waits only match actual pages. Original mobile fixtures use cache-busting queries for source runs; native runs reload the canonical base without that query. This preserves the original full-navigation test setup while allowing canonical shared hash links to stay in the same document, retaining the audio instrumentation across route cleanup. Product audio cleanup assertions are unchanged.
 
 `piano-ui-verified.txt` is the complete passing full run. General, Plants, Coffee, Games and Time Budget regressions also pass in the `-with-piano.txt` reports. Source hashes, split destinations and all audio/image assets are recorded in `piano-source-map.json`. Original repos remain untouched. Authored content localization, combined import validation and physical-device acceptance are final gates.
+
+
+## Reader characterization and core (2026-10-16)
+
+Source commit `b3892b2417b8167d0cd063c31b2b69da781fd4a9` had no suite. Twelve new characterization cases and five browser flows pass against the unchanged source before UI implementation. Six domain and six persistence/credential/concurrency contracts were added before their code, with retained red reports. Native unit total is 24; the five mounted workflows remain red until the view is integrated. See `modules/reading/docs/behavior.md`, `reading-source-map.json` and progress for exact evidence/remaining work. Shortcut count=2 is now deliberately valid, so the legacy invalid-count fixture uses 21 while preserving fallback assertions. No personal token or authenticated API response is used.

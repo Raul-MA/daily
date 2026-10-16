@@ -1,0 +1,118 @@
+✖ Reader startup is read-only and preference saves preserve other modules and global language (1.904922ms)
+✖ Reader invalid settings future data stale edits and failed writes retain the previous root (0.544075ms)
+✖ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (0.456601ms)
+✖ Reader current picks persist separately from preferences and forget clears account data while retaining settings (0.435412ms)
+✖ Reader token changes cancel obsolete requests and prevent previous-account results from committing (0.612753ms)
+✖ Reader settings changes discard pending picks rather than committing results for obsolete filters (0.733608ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 35.057438
+
+✖ failing tests:
+
+test at modules/reading/test/persistence.test.mjs:18:1
+✖ Reader startup is read-only and preference saves preserve other modules and global language (1.904922ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/service.js' imported from /workspaces/daily/modules/reading/test/persistence.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/service.js'
+  }
+
+test at modules/reading/test/persistence.test.mjs:30:1
+✖ Reader invalid settings future data stale edits and failed writes retain the previous root (0.544075ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/service.js' imported from /workspaces/daily/modules/reading/test/persistence.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/service.js'
+  }
+
+test at modules/reading/test/persistence.test.mjs:44:1
+✖ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (0.456601ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/service.js' imported from /workspaces/daily/modules/reading/test/persistence.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/service.js'
+  }
+
+test at modules/reading/test/persistence.test.mjs:58:1
+✖ Reader current picks persist separately from preferences and forget clears account data while retaining settings (0.435412ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/service.js' imported from /workspaces/daily/modules/reading/test/persistence.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/service.js'
+  }
+
+test at modules/reading/test/persistence.test.mjs:75:1
+✖ Reader token changes cancel obsolete requests and prevent previous-account results from committing (0.612753ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/service.js' imported from /workspaces/daily/modules/reading/test/persistence.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/service.js'
+  }
+
+test at modules/reading/test/persistence.test.mjs:88:1
+✖ Reader settings changes discard pending picks rather than committing results for obsolete filters (0.733608ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/reading/src/service.js' imported from /workspaces/daily/modules/reading/test/persistence.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/reading/src/service.js'
+  }

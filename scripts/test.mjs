@@ -27,11 +27,11 @@ function runNode(module) {
     if (build) return build;
   }
   const files = ['coffee', 'games', 'time-budget'].includes(module) ? discoverDomainUnit(module) : discover(module);
-  return execute(['--test', '--test-isolation=none', ...files.filter(file => !process.env.DAILY_BASELINE_URL || !file.endsWith('service.test.mjs'))]);
+  return execute(['--test', '--test-isolation=none', ...files.filter(file => !process.env.DAILY_BASELINE_URL || !file.endsWith('service.test.mjs') && !file.endsWith('persistence.test.mjs'))]);
 }
 
 async function runBrowser(module) {
-  if (['general', 'plants', 'coffee', 'games', 'time-budget'].includes(module)) {
+  if (['general', 'plants', 'coffee', 'games', 'time-budget', 'reading'].includes(module)) {
     discoverBrowser(module);
     return execute(['node_modules/@playwright/test/cli.js', 'test'], { ...process.env, DAILY_MODULE: module });
   }
