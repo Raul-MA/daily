@@ -1,6 +1,6 @@
 import { globSync, readFileSync } from 'node:fs';
 
-const expected = { general: 74, plants: 23, coffee: 28, games: 30, 'time-budget': 17, piano: 53, reading: 51, whatsapp: 9 };
+const expected = { general: 75, plants: 23, coffee: 28, games: 30, 'time-budget': 17, piano: 53, reading: 51, whatsapp: 9 };
 
 export function discover(module) {
   const browser = ['coffee', 'games', 'time-budget'].includes(module);

@@ -50,3 +50,23 @@ test('invalid static bases fail before replacing any previously prepared files',
   assert.notEqual(retry.status, 0);
   assert.deepEqual(readdirSync(join(root, 'dist')), ['retain']);
 });
+
+test('shared install assets provide PNG sizes maskable identity and a subpath-safe Apple touch icon', t => {
+  const { result, output } = prepare(t);
+  assert.equal(result.status, 0, result.stderr);
+  const manifest = JSON.parse(readFileSync(join(output, 'manifest.webmanifest'), 'utf8'));
+  const assets = JSON.parse(readFileSync(join(output, 'asset-list.json'), 'utf8'));
+  for (const size of [192, 512]) {
+    assert.ok(manifest.icons.some(icon => icon.type === 'image/png' && icon.sizes === `${size}x${size}` && icon.purpose === 'any' && icon.src === `/preview/deep/icon-${size}.png`));
+  }
+  assert.ok(manifest.icons.some(icon => icon.type === 'image/png' && icon.sizes === '512x512' && icon.purpose === 'maskable'));
+  for (const [name, size] of [['icon-192.png', 192], ['icon-512.png', 512], ['apple-touch-icon.png', 180]]) {
+    const png = readFileSync(join(output, name));
+    assert.deepEqual([...png.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+    assert.equal(png.readUInt32BE(16), size);
+    assert.equal(png.readUInt32BE(20), size);
+    assert.ok(assets.includes(name));
+    assert.ok(readFileSync(join(output, 'sw.js'), 'utf8').includes(`/preview/deep/${name}`));
+  }
+  assert.match(readFileSync(join(output, 'index.html'), 'utf8'), /rel="apple-touch-icon"[^>]+href="\/preview\/deep\/apple-touch-icon\.png"/);
+});

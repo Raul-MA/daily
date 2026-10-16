@@ -8,13 +8,13 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore pass local checks.** `combined-backup-all.txt` completed successfully across General and every app, including both broad Piano scripts. Strict lint, 688-file syntax and static preparation of 629 assets pass (`combined-backup-final-*`). Reader and WhatsApp earlier Stage 8 fixes are included. Full restore validates all module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** add test-first shared 192/512px PNG install assets and a 180px Apple touch icon. Remaining gates: complete EN/ES, legacy exporters, nested-reference/concurrency/form/update audit and device instructions. Actual iPhone/live API/Things validation remains deferred. Work locally only; no workflows, pushes or deployments.
+**Exact next step:** save the install-icon checkpoint, then prepare the legacy Time Budget exporter (templates plus active session) without modifying its original repository. Install assets pass General 75 unit/24 browser (`install-icons-offline.txt`) and WhatsApp nine/nine (`install-icons-whatsapp.txt`); full strict lint and 689-file syntax pass. Combined backup acceptance is committed locally as `da523d1`. Remaining gates: complete EN/ES, remaining legacy exporters, nested-reference/concurrency/form/update audit and device instructions. Actual iPhone/live API/Things validation remains deferred. Work locally only; no workflows, pushes or deployments.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 74 unit + 24 browser cases pass | `reports/combined-backup-all.txt` |
+| General | 75 unit + 24 browser cases pass | `reports/install-icons-offline.txt` |
 | Plants | 23 unit + 11 browser cases pass | `reports/combined-backup-all.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
 | Strict full-scope lint | Pass | `reports/combined-backup-final-lint.txt` |
@@ -223,3 +223,20 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - The corrected retained-draft test first fails on the actual old setup value. Successful replacement now resets shared/module, Time Budget and Games UI state, clears obsolete save errors and remounts with imported preferences. Failed replacement retains forms, records and credentials. All earlier source assertions remain.
 - Storage/testing/platform/device docs and source test inventory are updated. The device guide now describes later installation, per-app migration, full restore, token reentry and background/update checks without claiming a deployment or real-device results.
 - Next: shared PNG/Apple install assets, then remaining localization/exporter/schema/concurrency/form/update gates sequentially. Final whole-migration acceptance is not claimed.
+
+
+## Stage 8: install icon contracts
+
+- Combined backup checkpoint: `da523d1`; all-app regression, strict lint, 688-file syntax and preparation of 629 assets pass. No remote writes.
+- New static-output contract requires shared 192/512px PNG icons, a 512px maskable icon, a 180px Apple touch icon, subpath-safe HTML links and owned offline precaching. The browser contract additionally decodes the actual images and verifies opaque square pixels. SVG favicon coverage remains.
+- `install-icons-red.txt` is running before implementation. Expected discovery is 75 General unit + 24 browser cases. Do not weaken original WhatsApp source PNG assertions; its native replacement contract still accepts the shared favicon.
+
+- Install red evidence completed: one new unit contract and the augmented install browser contract fail on absent PNG/Apple assets (`install-icons-red.txt`); the remaining 74 unit and 23 browser cases pass. `scripts/icons.mjs` now generates opaque 192/512px PNGs and a 180px Apple touch icon from the shared geometric d/blue-dot identity using Node built-ins. Manifest includes explicit any/maskable PNG entries and retains the SVG favicon. Every generated icon is included in the owned offline asset list/digest.
+- The rendered 512px icon was visually reviewed. Initial General passes all 75 unit/24 browser cases (`install-icons-general.txt`), including actual browser image decoding and opaque dimensions. Follow-up verification additionally switches offline before decoding and asserts PNG cache entries; no physical iPhone installation claim.
+
+
+## Shared install assets local acceptance complete
+
+- `install-icons-offline.txt` passes General 75 unit + 24 browser cases, including real image decoding with the browser offline, PNG cache ownership and subpath-safe touch links. `install-icons-whatsapp.txt` passes nine unit + nine browser cases, retaining original/native asset and worker assertions.
+- Full strict lint and 689-file native syntax checks pass (`install-icons-final-lint.txt`, `install-icons-syntax.txt`). Static preparation is saved in `install-icons-build.txt`. Rendered 512px icon reviewed; no external generator, browser runtime dependency or branding from a source app was added.
+- The immediately preceding all-app regression remains `combined-backup-all.txt` at `da523d1`; only install generation, HTML metadata and associated contracts/docs changed afterward. Physical installation still requires later iPhone evidence.
