@@ -1,16 +1,17 @@
+import { copy } from './copy.js';
 import { testIds } from './testIds.js';
 import { iconFor } from './iconFor.js';
 import { escapeHtml } from '../components/components.js';
 
 export function renderNavButtons(route, hasActive, compact) {
   const items = [
-    ["play", testIds.navPlay, "Play"],
-    ["session", testIds.navSession, hasActive ? "Session" : "Session"],
-    ["history", testIds.navHistory, "History"],
-    ["games", testIds.navGames, "Games"],
-    ["players", testIds.navPlayers, "Players"],
-    ["stats", testIds.navStats, "Stats"],
-    ["settings", testIds.navSettings, "Settings"]
+    ["play", testIds.navPlay, copy("Play")],
+    ["session", testIds.navSession, hasActive ? copy("Session") : copy("Session")],
+    ["history", testIds.navHistory, copy("History")],
+    ["games", testIds.navGames, copy("Games")],
+    ["players", testIds.navPlayers, copy("Players")],
+    ["stats", testIds.navStats, copy("Stats")],
+    ["settings", testIds.navSettings, copy("Settings")]
   ];
   return items
     .map(

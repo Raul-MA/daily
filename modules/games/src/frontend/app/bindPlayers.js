@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { listen, guard } from './events.js';
 import { testIds } from './testIds.js';
 import { gameUI } from './context.js';
@@ -22,7 +23,7 @@ export function bindPlayers() {
       render();
     }));
     node.querySelector("[data-action='archive-player']")?.addEventListener("click", guard(() => {
-      if (!window.confirm("Archive or delete this player?")) return;
+      if (!window.confirm(copy("Archive or delete this player?"))) return;
       applyResult(removePlayer(getState(), node.dataset.id), "Player updated.");
     }));
   });

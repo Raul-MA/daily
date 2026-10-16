@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { getState } from './state.js';
 import { getActiveSession, addRound, removeRound, updateOutcome, updateCollaborativeOutcome, updateSessionTiming, finishSessionWithTiming } from '../../backend/features/sessions.js';
 import { gameUI } from './context.js';
@@ -45,7 +46,7 @@ export function bindSession() {
     });
   });
   listen(`[data-testid="${testIds.finishSession}"]`, "click", () => {
-    if (data.settings.confirmBeforeFinishingSession && !window.confirm("Finish this session?")) return;
+    if (data.settings.confirmBeforeFinishingSession && !window.confirm(copy("Finish this session?"))) return;
     applyResult(finishSessionWithTiming(getState(), session.id, readTimingInputs({ useNowForMissingEnd: true })), "Session finished.");
     if (!getActiveSession(getState())) navigate("history");
   });

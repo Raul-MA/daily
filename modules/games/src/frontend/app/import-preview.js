@@ -1,3 +1,4 @@
+import { copy, message } from './copy.js';
 import { gameUI } from './context.js';
 import { getState } from './state.js';
 import { showToast } from './showToast.js';
@@ -38,12 +39,12 @@ function showPreview(preview) {
   dialog.dataset.gamesImportPreview = '';
   dialog.dataset.unsaved = 'true';
   const heading = document.createElement('h2');
-  heading.textContent = spanish ? 'Reemplazar datos de juegos' : 'Replace game data';
+  heading.textContent = spanish ? 'Reemplazar datos de juegos' : copy("Replace game data");
   const counts = document.createElement('p');
   counts.textContent = `${preview.counts.players} ${spanish ? 'jugadores' : 'players'}, ${preview.counts.games} ${spanish ? 'juegos' : 'games'}, ${preview.counts.sessions} ${spanish ? 'sesiones' : 'sessions'}`;
-  const recovery = button(spanish ? 'Descargar copia de recuperación' : 'Download recovery backup', 'gamesRecovery');
-  const confirm = button(spanish ? 'Confirmar reemplazo' : 'Confirm replacement', 'gamesConfirmImport');
-  const cancel = button(spanish ? 'Cancelar' : 'Cancel', 'gamesCancelImport');
+  const recovery = button(spanish ? 'Descargar copia de recuperación' : copy("Download recovery backup"), 'gamesRecovery');
+  const confirm = button(spanish ? 'Confirmar reemplazo' : copy("Confirm replacement"), 'gamesConfirmImport');
+  const cancel = button(spanish ? 'Cancelar' : copy("Cancel"), 'gamesCancelImport');
   confirm.disabled = true;
   recovery.addEventListener('click', () => { downloadRecovery(); confirm.disabled = false; });
   cancel.addEventListener('click', () => dialog.close());
@@ -62,7 +63,7 @@ function confirmImport(preview, dialog) {
   } catch (error) {
     const alert = document.createElement('p');
     alert.setAttribute('role', 'alert');
-    alert.textContent = error.message;
+    alert.textContent = message(error.message);
     dialog.append(alert);
   }
 }

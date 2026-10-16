@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { gameUI } from './context.js';
 import { getRoute } from './router.js';
 import { getState } from './state.js';
@@ -62,6 +63,6 @@ export function conflict() {
   const alert = document.createElement('p');
   alert.dataset.gameConflict = '';
   alert.setAttribute('role', 'alert');
-  alert.textContent = gameUI.host.lang === 'es' ? 'Los datos han cambiado. Conserva tu borrador y vuelve a abrir la vista.' : 'Data changed. Keep your draft and reopen this view.';
+  alert.textContent = gameUI.host.lang === 'es' ? 'Los datos han cambiado. Conserva tu borrador y vuelve a abrir la vista.' : copy("Data changed. Keep your draft and reopen this view.");
   gameUI.host.append(alert);
 }

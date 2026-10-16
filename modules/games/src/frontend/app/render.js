@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { getState } from './state.js';
 import { applyTheme } from './applyTheme.js';
 import { syncBackupToast } from './syncBackupToast.js';
@@ -30,7 +31,7 @@ export function render() {
           <span class="brand-mark">#</span>
           <div>
             <strong>${escapeHtml(t(data.settings.language, "appTitle"))}</strong>
-            <span>${active ? "Session in progress" : "Ready to play"}</span>
+            <span>${active ? copy("Session in progress") : copy("Ready to play")}</span>
           </div>
         </div>
         ${renderNav(route, Boolean(active))}

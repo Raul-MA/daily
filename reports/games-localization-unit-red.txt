@@ -1,0 +1,24 @@
+✖ modules/games/test/localization-service.test.mjs (0.836211ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 22.243726
+
+✖ failing tests:
+
+test at modules/games/test/localization-service.test.mjs:1:1
+✖ modules/games/test/localization-service.test.mjs (0.836211ms)
+  file:///workspaces/daily/modules/games/test/localization-service.test.mjs:3
+  import { getAvailableLanguages, translate, translateMessage } from '../src/backend/core/i18n.js';
+                                  ^^^^^^^^^
+  SyntaxError: The requested module '../src/backend/core/i18n.js' does not provide an export named 'translate'
+      at #asyncInstantiate (node:internal/modules/esm/module_job:319:21)
+      at async ModuleJob.run (node:internal/modules/esm/module_job:422:5)
+      at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+      at async node:internal/test_runner/runner:863:15
+      at async runFiles (node:internal/test_runner/runner:829:9)
+      at async runChain (node:internal/test_runner/runner:907:5)

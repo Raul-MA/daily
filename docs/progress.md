@@ -8,20 +8,20 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore pass local checks.** `combined-backup-all.txt` completed successfully across General and every app, including both broad Piano scripts. Strict lint, 688-file syntax and static preparation of 629 assets pass (`combined-backup-final-*`). Reader and WhatsApp earlier Stage 8 fixes are included. Full restore validates all module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** save the accepted Coffee checkpoint, then audit and finish Games localization. Coffee passes 20 unit + 34 browser, General 79 unit + 28 browser, full strict lint, 740-file syntax and static preparation (`coffee-final-audit-*`). Coffee's final audit fixes filtered results after language restoration, atomic first tools setup, translated notifications with fixed expiry, Spanish import modes/shared errors and visible failures on view/delete/export writes. Plants checkpoint `bdd8af1` is saved. Legacy exporters are committed through `e166b42`; combined backup `da523d1` and install icons `746751f` pass. Then finish Games, Time Budget and Piano localization sequentially, remaining schema/concurrency/form/update/recovery audits and full verification. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
+**Exact next step:** save the accepted Games checkpoint, then audit and finish Time Budget localization. Games passes 17 unit + 34 browser, General 79 unit + 28 browser, full strict lint, 746-file syntax and static preparation of 651 assets (`games-localization-*`). English/Spanish authored copy and persistent translated failed-save messages are accepted; stored names/notes, scoring values and session timestamps are unchanged. Coffee checkpoint `7d03c03` and Plants checkpoint `bdd8af1` are saved. After Time Budget, finish Piano localization, remaining schema/concurrency/form/update/recovery audits and full verification. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 79 unit + 28 browser cases pass | `reports/coffee-final-audit-general.txt` |
+| General | 79 unit + 28 browser cases pass | `reports/games-localization-general.txt` |
 | Plants | 28 unit + 13 browser cases pass | `reports/plants-localization-scope.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/coffee-final-audit-lint.txt` |
-| Native JS syntax | 740 files pass; this is not typechecking | `reports/coffee-final-audit-syntax.txt` |
-| Static preparation | 647 native files/assets prepared; legacy exporters excluded | `reports/coffee-final-audit-build.txt` |
+| Strict full-scope lint | Pass | `reports/games-localization-lint.txt` |
+| Native JS syntax | 746 files pass; this is not typechecking | `reports/games-localization-syntax.txt` |
+| Static preparation | 651 native files/assets prepared; legacy exporters excluded | `reports/games-localization-build.txt` |
 | Coffee | 20 unit + 34 browser cases pass | `reports/coffee-final-audit-unit.txt`, `reports/coffee-final-audit-scope.txt` |
-| Games | 16 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
+| Games | 17 unit + 34 browser cases pass | `reports/games-localization-scope.txt` |
 | Time Budget | 20 unit + 17 browser cases pass | `reports/legacy-budget-time.txt` |
 | Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/combined-backup-all.txt` |
 | Reader | 54 unit + 30 browser cases pass | `reports/legacy-reader-scope.txt` |
@@ -338,3 +338,19 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - Dictionaries have 247 matching keys and matching interpolation parameters. Native validation/error translations fail first in `coffee-error-localization-red.txt`. Strict full lint passes; final shared regression/syntax/static preparation are pending.
 
 - Final shared regression passes 79 unit + 28 browser (`coffee-final-audit-general.txt`). Full strict lint, 740-file syntax and static preparation of 647 assets pass. Coffee is ready for its local checkpoint. Next app: Games. No remote, physical-device or live-API acceptance is claimed.
+
+
+## Stage 8: Games localization in progress
+
+- Three new Spanish browser contracts and one pure translation contract precede implementation (`games-localization-red.txt`, `games-localization-unit-red.txt`). Original 30 browser cases remain green. First native attempt passes Spanish offline 320px management/history/stats/settings navigation, but two desktop tests selected the hidden mobile navigation (`games-localization-scope.txt`); corrected to the visible desktop button, with no assertion or runtime weakening.
+- Explicit source-copy translation calls cover authored labels, scoring modes, dynamic round/winner/filter/duration summaries, date locale, confirmation dialogs, notification titles/body and shared/import validation messages. They never scan or translate DOM text or stored player/game names and notes. Notification source messages translate during render while retaining existing expiry deadlines; backup reminder text is regenerated in the current language. Dictionaries and native error fragments are separate small modules.
+- An additional failed-save draft/error remount contract is authored; `games-error-remount-red.txt` is active. Discovery now requires 17 unit + 34 browser. `games-localization-unit.txt` runs all 17 unit, including dictionary/interpolation identity, untranslated literal user names and nested backup diagnostic localization. Finish this app before starting Time Budget.
+
+
+## Games localization local workflow acceptance
+
+- All 17 unit + 34 browser cases pass (`games-localization-scope.txt`), with original source assertions preserved. Full strict lint and 746-file syntax pass. All four new browser contracts pass: Spanish 320px offline route coverage with unchanged module JSON, scoring/finish/detail with English-looking personal names and notes preserved, notification/validation translation with original expiry, and persistent translated failed-save errors with unsaved draft retention.
+- The final native dictionaries have 299 matching EN/ES keys and interpolation parameters. Backend scoring labels, participant snapshots, scoring rules, reference identities and session timestamps are unchanged. The explicit copy helper uses the mounted region language; no DOM text replacement and no translation of user records occurs.
+- General regression is active in `games-localization-general.txt`; finish it, prepare static output and save Games before starting Time Budget. Full-PWA final verification and physical acceptance remain open.
+
+- Final General regression passes 79 unit + 28 browser (`games-localization-general.txt`). Full strict lint, 746-file syntax and static preparation of 651 assets pass. Games is accepted locally. Next app: Time Budget. Physical/live API/Things/old-app release acceptance remains deferred.

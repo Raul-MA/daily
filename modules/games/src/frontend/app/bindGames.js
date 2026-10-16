@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { listen, guard } from './events.js';
 import { testIds } from './testIds.js';
 import { gameUI } from './context.js';
@@ -40,7 +41,7 @@ export function bindGames() {
       render();
     }));
     node.querySelector("[data-action='archive-game']")?.addEventListener("click", guard(() => {
-      if (!window.confirm("Archive or delete this game?")) return;
+      if (!window.confirm(copy("Archive or delete this game?"))) return;
       applyResult(removeGame(getState(), node.dataset.id), "Game updated.");
     }));
   });

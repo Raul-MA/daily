@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { filterHistory } from './filterHistory.js';
 import { getHistoryFilterSummary } from './getHistoryFilterSummary.js';
 import { testIds } from './testIds.js';
@@ -12,16 +13,16 @@ export function renderHistory(data) {
   const historySummary = getHistoryFilterSummary(data);
   return `
     <section class="view-header">
-      <p>History</p>
-      <h1>Completed games</h1>
+      <p>${copy("History")}</p>
+      <h1>${copy("Completed games")}</h1>
     </section>
     <section class="filter-panel">
       <div class="filter-heading">
         <button type="button" data-testid="${testIds.historyFilterToggle}" aria-expanded="${gameUI.ui.historyFiltersOpen ? "true" : "false"}">
-          ${gameUI.ui.historyFiltersOpen ? "Hide filters" : "Show filters"}
+          ${gameUI.ui.historyFiltersOpen ? copy("Hide filters") : copy("Show filters")}
         </button>
         <div class="filter-summary" data-testid="${testIds.historyFilterSummary}">
-          ${historySummary.length ? historySummary.map((item) => `<span>${escapeHtml(item)}</span>`).join("") : "<span>No filters</span>"}
+          ${historySummary.length ? historySummary.map((item) => `<span>${escapeHtml(item)}</span>`).join("") : `<span>${copy("No filters")}</span>`}
         </div>
       </div>
       ${

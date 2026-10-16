@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { listen, guard } from './events.js';
 import { testIds } from './testIds.js';
 import { gameUI } from './context.js';
@@ -48,11 +49,11 @@ export function bindHistory() {
     }));
     node.querySelector("[data-action='view-session']")?.addEventListener("click", guard(openDetails));
     node.querySelector("[data-action='delete-session']")?.addEventListener("click", guard(() => {
-      if (!window.confirm("Delete this completed session?")) return;
+      if (!window.confirm(copy("Delete this completed session?"))) return;
       applyResult(deleteSession(getState(), node.dataset.id), "Session deleted.");
     }));
     node.querySelector("[data-action='edit-session']")?.addEventListener("click", guard(() => {
-      if (!window.confirm("Edit this completed session? Stats will change.")) return;
+      if (!window.confirm(copy("Edit this completed session? Stats will change."))) return;
       applyResult(reopenSession(getState(), node.dataset.id), "Session reopened.");
       navigate("session");
     }));

@@ -1,7 +1,8 @@
+import { copy } from './copy.js';
 import { escapeHtml } from '../components/components.js';
 
 export function renderPlayerGameAverages(stat) {
-  if (!stat.gameAverages.length) return `<p class="subtle">No score averages yet.</p>`;
+  if (!stat.gameAverages.length) return `<p class="subtle">${copy("No score averages yet.")}</p>`;
   return `
     <dl class="stat-facts">
       ${stat.gameAverages

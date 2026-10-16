@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { isExportStale } from '../../backend/features/settings.js';
 import { testIds } from './testIds.js';
 import { escapeHtml, option } from '../components/components.js';
@@ -8,8 +9,8 @@ export function renderSettings(data) {
   const language = data.settings.language;
   return `
     <section class="view-header">
-      <p>Settings</p>
-      <h1>Local data</h1>
+      <p>${copy("Settings")}</p>
+      <h1>${copy("Local data")}</h1>
     </section>
     <section class="ledger-block settings">
       ${isExportStale(data.settings) ? `<p data-testid="${testIds.backupReminder}" class="notice">${escapeHtml(getBackupReminderMessage(data.settings, language))}</p>` : ""}
@@ -28,16 +29,16 @@ export function renderSettings(data) {
         </select>
       </label>
       <label>
-        Backup reminder days
+        ${copy("Backup reminder days")}
         <input data-testid="${testIds.settingsReminderDays}" type="number" min="1" step="1" value="${escapeHtml(data.settings.backupReminderDays)}">
       </label>
       <label class="check-row">
         <input data-setting="confirmBeforeFinishingSession" type="checkbox" ${data.settings.confirmBeforeFinishingSession ? "checked" : ""}>
-        <span class="setting-label">Confirm before finishing a session</span>
+        <span class="setting-label">${copy("Confirm before finishing a session")}</span>
       </label>
       <label class="check-row">
         <input data-setting="showArchived" type="checkbox" ${data.settings.showArchived ? "checked" : ""}>
-        <span class="setting-label">Show archived games and players</span>
+        <span class="setting-label">${copy("Show archived games and players")}</span>
       </label>
       <div class="actions">
         <button data-testid="${testIds.exportButton}" type="button">${escapeHtml(t(language, "exportData"))}</button>

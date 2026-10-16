@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { gameUI } from './context.js';
 import { visibleItems } from './visibleItems.js';
 import { testIds } from './testIds.js';
@@ -9,16 +10,16 @@ export function renderPlayers(data) {
   const players = visibleItems(data.players, data.settings.showArchived);
   return `
     <section class="view-header">
-      <p>Players</p>
-      <h1>People at the table</h1>
+      <p>${copy("Players")}</p>
+      <h1>${copy("People at the table")}</h1>
     </section>
     <section class="ledger-block">
       <form data-testid="${testIds.playerForm}">
         <label>
-          Name
+          ${copy("Name")}
           <input data-testid="${testIds.playerName}" name="name" value="${escapeHtml(current?.name || "")}" required>
         </label>
-        <button class="primary" data-testid="${testIds.playerSave}" type="submit">${current ? "Save player" : "Add player"}</button>
+        <button class="primary" data-testid="${testIds.playerSave}" type="submit">${current ? copy("Save player") : copy("Add player")}</button>
       </form>
     </section>
     <section class="list">

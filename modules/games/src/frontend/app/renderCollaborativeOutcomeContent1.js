@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { testIds } from './testIds.js';
 import { escapeHtml, option } from '../components/components.js';
 import { formatOutcome } from './formatOutcome.js';
@@ -8,11 +9,11 @@ export function renderCollaborativeOutcomeContent1(session, readOnly) {
               ${escapeHtml(formatOutcome(session.collaborativeOutcome))}
             </strong>`
           : `<label>
-              Result
+              ${copy("Result")}
               <select data-testid="${testIds.collaborativeOutcome}">
-                ${option("", "Choose team result", session.collaborativeOutcome)}
-                ${option("win", "Win", session.collaborativeOutcome)}
-                ${option("loss", "Loss", session.collaborativeOutcome)}
+                ${option("", copy("Choose team result"), session.collaborativeOutcome)}
+                ${option("win", copy("Win"), session.collaborativeOutcome)}
+                ${option("loss", copy("Loss"), session.collaborativeOutcome)}
               </select>
             </label>`;
 }

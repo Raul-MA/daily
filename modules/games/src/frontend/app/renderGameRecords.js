@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { escapeHtml } from '../components/components.js';
 import { formatDate } from './formatDate.js';
 import { formatDuration } from './formatDuration.js';
@@ -8,7 +9,7 @@ export function renderGameRecords(data, stats) {
  return stats.games
           .map((stat) => {
             const leader = Object.entries(stat.winnerCounts).sort((a, b) => b[1] - a[1])[0];
-            const leaderName = leader ? data.players.find((player) => player.id === leader[0])?.name || "Unknown player" : "";
+            const leaderName = leader ? data.players.find((player) => player.id === leader[0])?.name || copy("Unknown player") : "";
             return `
               <article class="stat-card">
                 <div class="stat-card-header">
@@ -17,27 +18,27 @@ export function renderGameRecords(data, stats) {
                 </div>
                 <dl class="stat-facts">
                   <div>
-                    <dt>Last played</dt>
-                    <dd>${stat.lastPlayed ? formatDate(stat.lastPlayed) : "Not played yet"}</dd>
+                    <dt>${copy("Last played")}</dt>
+                    <dd>${stat.lastPlayed ? formatDate(stat.lastPlayed) : copy("Not played yet")}</dd>
                   </div>
                   <div>
-                    <dt>Most wins</dt>
-                    <dd>${leaderName ? escapeHtml(leaderName) : "No winner yet"}</dd>
+                    <dt>${copy("Most wins")}</dt>
+                    <dd>${leaderName ? escapeHtml(leaderName) : copy("No winner yet")}</dd>
                   </div>
                   <div>
-                    <dt>Collaborative record</dt>
+                    <dt>${copy("Collaborative record")}</dt>
                     <dd>${stat.collaborativeWins}-${stat.collaborativeLosses}</dd>
                   </div>
                   <div>
-                    <dt>Average duration</dt>
+                    <dt>${copy("Average duration")}</dt>
                     <dd>${escapeHtml(formatDuration(stat.averageDurationMinutes))}</dd>
                   </div>
                   <div>
-                    <dt>Last time</dt>
+                    <dt>${copy("Last time")}</dt>
                     <dd>${escapeHtml(formatDuration(stat.lastDurationMinutes))}</dd>
                   </div>
                   <div>
-                    <dt>Fastest / longest</dt>
+                    <dt>${copy("Fastest / longest")}</dt>
                     <dd>${escapeHtml(formatDurationRange(stat.shortestDurationMinutes, stat.longestDurationMinutes))}</dd>
                   </div>
                 </dl>

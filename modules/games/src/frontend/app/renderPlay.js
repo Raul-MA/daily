@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { getActiveSession } from '../../backend/features/sessions.js';
 import { visibleItems } from './visibleItems.js';
 import { pruneSelectedPlayers } from './pruneSelectedPlayers.js';
@@ -14,8 +15,8 @@ export function renderPlay(data) {
 
   return `
     <section class="view-header">
-      <p>Play</p>
-      <h1>Set the table</h1>
+      <p>${copy("Play")}</p>
+      <h1>${copy("Set the table")}</h1>
     </section>
     ${
       renderPlaySetup({ data, active, games, players, selectedGame })

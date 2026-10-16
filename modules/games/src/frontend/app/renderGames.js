@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { gameUI } from './context.js';
 import { visibleItems } from './visibleItems.js';
 import { getActiveSession } from '../../backend/features/sessions.js';
@@ -14,8 +15,8 @@ export function renderGames(data) {
     draft.isCollaborative !== undefined ? ["on", "true"].includes(draft.isCollaborative) : Boolean(current?.isCollaborative);
   return `
     <section class="view-header">
-      <p>Games</p>
-      <h1>Scoring rules</h1>
+      <p>${copy("Games")}</p>
+      <h1>${copy("Scoring rules")}</h1>
     </section>
     ${
       renderGameEditor({ data, current, active, draft, mode, isCollaborative })

@@ -5,7 +5,8 @@
       "source": "game-tracker/backend/core/i18n.js",
       "sha256": "2f1b8752b8114aa51b4bafee606128c902edeeb7b0012e77c9a8d728d466a362",
       "destinations": [
-        "modules/games/src/backend/core/i18n.js"
+        "modules/games/src/backend/core/i18n.js",
+        "modules/games/src/backend/core/translations/en.js"
       ]
     },
     {
@@ -217,6 +218,16 @@
     "modules/games/src/frontend/app/drafts.js",
     "modules/games/src/frontend/app/events.js",
     "modules/games/src/frontend/app/import-preview.js",
-    "modules/games/src/frontend/app/values.js"
-  ]
+    "modules/games/src/frontend/app/values.js",
+    "modules/games/src/frontend/app/copy.js"
+  ],
+  "localizationAudit": {
+    "authoredDictionaries": [
+      "modules/games/src/backend/core/translations/ui.js",
+      "modules/games/src/backend/core/translations/errors.js"
+    ],
+    "browserContracts": "modules/games/e2e/localization.spec.js",
+    "unitContract": "modules/games/test/localization-service.test.mjs",
+    "preserved": "Original scoring/domain values and every source assertion; no stored user text is translated."
+  }
 }

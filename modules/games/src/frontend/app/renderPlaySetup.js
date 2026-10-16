@@ -1,3 +1,4 @@
+import { copy } from './copy.js';
 import { escapeHtml, option } from '../components/components.js';
 import { testIds } from './testIds.js';
 import { t } from '../../backend/core/i18n.js';
@@ -9,21 +10,21 @@ export function renderPlaySetup({ data, active, games, players, selectedGame }) 
         ? `<section class="ledger-block resume-block">
             <div>
               <strong>${escapeHtml(active.gameNameSnapshot)}</strong>
-              <span>${active.participants.length} players</span>
+              <span>${copy("{count} players", { count: active.participants.length })}</span>
             </div>
             <button type="button" data-action="resume" data-testid="${testIds.navSession}">${escapeHtml(t(data.settings.language, "resume"))}</button>
           </section>`
         : `
           <section class="ledger-block">
             <label>
-              Game
+              ${copy("Game")}
               <select data-testid="${testIds.playGameSelect}">
                 ${games.map((game) => option(game.id, game.name, selectedGame?.id)).join("")}
               </select>
             </label>
             ${renderSessionOverrides(selectedGame)}
             <div class="field-group">
-              <span class="field-label">Players</span>
+              <span class="field-label">${copy("Players")}</span>
               <div class="toggle-list">
                 ${
                   players.length
@@ -37,13 +38,13 @@ export function renderPlaySetup({ data, active, games, players, selectedGame }) 
                           `
                         )
                         .join("")
-                    : `<p class="empty">Add players before starting.</p>`
+                    : `<p class="empty">${copy("Add players before starting.")}</p>`
                 }
               </div>
             </div>
             <div class="inline-form">
-              <input data-testid="${testIds.inlinePlayerName}" placeholder="New player name">
-              <button type="button" data-testid="${testIds.inlinePlayerAdd}">Add</button>
+              <input data-testid="${testIds.inlinePlayerName}" placeholder="${copy("New player name")}">
+              <button type="button" data-testid="${testIds.inlinePlayerAdd}">${copy("Add")}</button>
             </div>
             <button class="primary wide" type="button" data-testid="${testIds.playStart}">${escapeHtml(t(data.settings.language, "startGame"))}</button>
           </section>

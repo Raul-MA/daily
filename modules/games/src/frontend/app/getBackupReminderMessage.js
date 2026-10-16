@@ -1,12 +1,13 @@
-import { t } from '../../backend/core/i18n.js';
+import { t, translate } from '../../backend/core/i18n.js';
 import { formatDate } from './formatDate.js';
 
 export function getBackupReminderMessage(settings, language) {
-  const base = t(language, "backupReminder");
-  if (!settings.lastExportedAt) return `${base} Last export: never.`;
+  const base = t(language, 'backupReminder');
+  if (!settings.lastExportedAt) return `${base} ${translate(language, 'Last export: never.')}`;
   const lastExported = new Date(settings.lastExportedAt);
-  if (Number.isNaN(lastExported.getTime())) return `${base} Last export: unknown.`;
-  const daysSince = Math.max(0, Math.floor((Date.now() - lastExported.getTime()) / (24 * 60 * 60 * 1000)));
-  const dayLabel = daysSince === 1 ? "day" : "days";
-  return `${base} Last export: ${formatDate(settings.lastExportedAt)} (${daysSince} ${dayLabel} ago).`;
+  if (Number.isNaN(lastExported.getTime())) return `${base} ${translate(language, 'Last export: unknown.')}`;
+  const daysSince = Math.max(0, Math.floor((Date.now() - lastExported.getTime()) / 86400000));
+  const dayLabel = translate(language, daysSince === 1 ? 'day' : 'days');
+  const detail = translate(language, 'Last export: {date} ({count} {days} ago).', { date: formatDate(settings.lastExportedAt, language), count: daysSince, days: dayLabel });
+  return `${base} ${detail}`;
 }
