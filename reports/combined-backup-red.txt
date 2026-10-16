@@ -1,0 +1,172 @@
+✖ combined backup exports every module layout language and original running timestamps without credentials or caches (42.836592ms)
+✖ combined preview validates every module and shows counts without changing records (10.661953ms)
+✖ combined restore rejects unknown identities future schemas unknown modules and future module versions (13.931303ms)
+✖ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (8.464717ms)
+✖ combined restore rejects orphan missing and inconsistent active activity mirrors (9.379015ms)
+✖ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (10.281802ms)
+✖ combined failed primary or recovery writes retain records and do not reset credentials (9.370991ms)
+✖ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (6.829912ms)
+✖ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (9.59517ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 0
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 227.200053
+
+✖ failing tests:
+
+test at tests/general/backup.test.mjs:12:1
+✖ combined backup exports every module layout language and original running timestamps without credentials or caches (42.836592ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:27:1
+✖ combined preview validates every module and shows counts without changing records (10.661953ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:43:1
+✖ combined restore rejects unknown identities future schemas unknown modules and future module versions (13.931303ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:57:1
+✖ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (8.464717ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:73:1
+✖ combined restore rejects orphan missing and inconsistent active activity mirrors (9.379015ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:87:1
+✖ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (10.281802ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:102:1
+✖ combined failed primary or recovery writes retain records and do not reset credentials (9.370991ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:117:1
+✖ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (6.829912ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:132:1
+✖ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (9.59517ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }

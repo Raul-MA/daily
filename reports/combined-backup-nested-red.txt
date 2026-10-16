@@ -1,0 +1,33 @@
+✔ combined backup exports every module layout language and original running timestamps without credentials or caches (64.128039ms)
+✔ combined preview validates every module and shows counts without changing records (16.685779ms)
+✔ combined restore rejects unknown identities future schemas unknown modules and future module versions (9.703261ms)
+✖ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (8.207536ms)
+✔ combined restore rejects orphan missing and inconsistent active activity mirrors (14.753851ms)
+✔ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (8.419873ms)
+✔ combined failed primary or recovery writes retain records and do not reset credentials (14.306772ms)
+✔ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (12.325932ms)
+✔ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (9.291341ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 232.458537
+
+✖ failing tests:
+
+test at tests/general/backup.test.mjs:57:1
+✖ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (8.207536ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspaces/daily/tests/general/backup.test.mjs:68:12)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /invalid|duplicate|reference/i,
+    operator: 'throws',
+    diff: 'simple'
+  }

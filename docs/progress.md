@@ -6,32 +6,34 @@ Updated: 2026-10-16. Repo: `/workspaces/daily`, branch `main`.
 
 Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No workflows, pushes, Pages configuration or deployments. Keep real Readwise/Reader API calls for the user's later token test; unverified live access does not block implementation. Do not request personal tokens or backup files.
 
-**All seven apps are implemented and have passing local workflow checks.** Reader is saved as `571bb36`; WhatsApp is ready for its local checkpoint. `all-with-whatsapp.txt` passes every scope, including General and the full Piano source browser scripts. Strict lint, 679-file native syntax and static preparation pass. **Next: Stage 8 final migration audit**, beginning with combined full-PWA backup/schema/recovery; WhatsApp ordering/cancel and Reader invalid-import cancellation now pass. Finish complete EN/ES, legacy exporters, nested reference/concurrency/form/update checks, proper install assets and device guide. Actual iPhone/live API/Things validation remains deferred; do not claim the entire migration finished from local checks. Coffee Excel remains excluded.
+**All seven apps and combined full-PWA backup/restore pass local checks.** `combined-backup-all.txt` completed successfully across General and every app, including both broad Piano scripts. Strict lint, 688-file syntax and static preparation of 629 assets pass (`combined-backup-final-*`). Reader and WhatsApp earlier Stage 8 fixes are included. Full restore validates all module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
+
+**Exact next step:** add test-first shared 192/512px PNG install assets and a 180px Apple touch icon. Remaining gates: complete EN/ES, legacy exporters, nested-reference/concurrency/form/update audit and device instructions. Actual iPhone/live API/Things validation remains deferred. Work locally only; no workflows, pushes or deployments.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 65 unit + 19 browser cases pass | `reports/all-with-whatsapp.txt` |
-| Plants | 23 unit + 11 browser cases pass | `reports/all-with-whatsapp.txt` |
+| General | 74 unit + 24 browser cases pass | `reports/combined-backup-all.txt` |
+| Plants | 23 unit + 11 browser cases pass | `reports/combined-backup-all.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/whatsapp-final-lint.txt` |
-| Native JS syntax | 679 files pass; this is not typechecking | `reports/whatsapp-final-syntax.txt` |
-| Static preparation | 623 unchanged native files/assets prepared | `reports/whatsapp-final-build.txt` |
-| Coffee | 17 unit + 28 browser cases pass | `reports/all-with-whatsapp.txt` |
-| Games | 15 unit + 30 browser cases pass | `reports/all-with-whatsapp.txt` |
-| Time Budget | 17 unit + 17 browser cases pass | `reports/all-with-whatsapp.txt` |
-| Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/all-with-whatsapp.txt` |
-| Reader | 51 unit + 29 browser cases pass | `reports/all-with-whatsapp.txt` |
-| WhatsApp | Nine unit + seven browser cases pass | `reports/all-with-whatsapp.txt` |
-| Whole migration | Local workflow checks all pass; Stage 8 migration/localization/device gates remain incomplete | `reports/all-with-whatsapp.txt` |
+| Strict full-scope lint | Pass | `reports/combined-backup-final-lint.txt` |
+| Native JS syntax | 688 files pass; this is not typechecking | `reports/combined-backup-final-syntax.txt` |
+| Static preparation | 629 native files/assets prepared | `reports/combined-backup-final-build.txt` |
+| Coffee | 17 unit + 28 browser cases pass | `reports/combined-backup-all.txt` |
+| Games | 16 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
+| Time Budget | 17 unit + 17 browser cases pass | `reports/combined-backup-all.txt` |
+| Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/combined-backup-all.txt` |
+| Reader | 51 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
+| WhatsApp | Nine unit + nine browser cases pass | `reports/combined-backup-all.txt` |
+| Whole migration | Local workflow checks all pass; Stage 8 migration/localization/device gates remain incomplete | `reports/combined-backup-all.txt` |
 
 No skipped tests or relaxed lint thresholds. Original plant assertions remain unchanged. New-app parity is not established by original baseline results.
 
 ## Implemented
 
 - Accessible hash-router shell, accepted three/two/one-column iOS dashboard, app menu, shared EN/ES, persisted widget order/visibility and quick-action settings. Dashboard links create no records or care events.
-- Validated `daily:v1` root document, per-module adapters, recovery/corrupt preservation, future-version rejection and visible quota failures. Combined restore and remaining domain adapters are still pending.
+- Validated `daily:v1` root document, per-module adapters, recovery/corrupt preservation, future-version rejection and visible quota failures. All domain adapters are connected. Combined restore is implemented and undergoing final shared regression checks.
 - Timestamp activity registry: independent countdowns, singleton budget/game/piano, explicit pause/resume/completion and overdue reconstruction. Rendering/navigation never advances persisted state. Time Budget, Games and piano are integrated.
 - One generated manifest and owned offline asset list. Authenticated/external requests bypass worker caches. Cached HTML remains with its matching asset version. Updates require every open same-app tab to report safe; blocked/unresponsive tabs hold activation. The two-tab browser test preserves settings and unsaved work through update acceptance.
 - Local-midnight/calendar refresh with foreground/timezone checks and daylight-saving tests. In-memory dirty-form snapshots preserve values, file selection and focus through language changes. Plant/history stale edits retain drafts rather than overwriting newer records.
@@ -50,7 +52,7 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 ## Resume and remaining gates
 
 1. Read `AGENTS.md`, `COMPASS.md`, this file and the authoritative `docs/pwa-consolidation-plan.md`.
-2. All seven modules are locally connected. Start Stage 8 with autosaved WhatsApp dirty-flag ordering and combined backup/schema/recovery contracts before implementation.
+2. All seven modules are locally connected. Follow the exact next step above for combined backup/restore acceptance; WhatsApp ordering and Reader invalid-import cancellation are verified.
 3. Complete localization and remaining per-app audits sequentially; keep source assertions and appearance. All remaining gates are listed below.
 4. Complete combined backup/import schemas/reference validation, legacy migration exporters, concurrency policy, all-app offline/update checks, full localization (including plant guides), install assets and device checklist. Real iPhone/Things/Readwise acceptance remains deferred and must never be claimed passing from browser mocks.
 5. Run `npm run verify` before claiming the whole migration complete. Until all apps are implemented it must remain red. Save local checkpoints; no remote work.
@@ -203,3 +205,21 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - `reading-import-discard-red.txt` records 29 browser passes and an actual hidden-Cancel failure after invalid JSON. The import Cancel control is now independent of preview validity, with owned file-state cleared on cancellation. It survives language remounts and does not clear unsaved token/preference drafts or mutate module records.
 - `reading-import-discard.txt` passes 51 unit + 30 browser cases; full strict lint passes (`reading-import-discard-lint.txt`). WhatsApp's corresponding fix is committed as `a3f8a61`. Shared runtime remains at the all-green `2d42815` checkpoint.
 - Exact next step: implement combined full-PWA export/preview/recovery/restore with runtime validators for all seven modules plus activities, explicit schema/version/unknown-module rejection, nested references and running activity consistency. Add new unit/browser contracts before code. Then complete remaining nested-schema, localization, legacy-exporter, stale/concurrency/form/update/offline and install/device documentation gates. No deployment or real-token/device testing.
+
+
+## Stage 8: combined PWA backup and restore (in progress)
+
+- Nine new unit and four mounted browser contracts were recorded red before implementation (`combined-backup-red.txt`, `combined-backup-browser-red.txt`). Synthetic fixture data covers every module, Unicode, Spanish preferences/layout, running budget/game/piano sessions and a countdown; no personal data or network token is used.
+- The backup service exports all saved root data, omitting separate credentials/caches. Preview validates known root/module schemas, nested domain references and active session/activity mirrors. Private preview identity/content/root fingerprints reject tampering, reuse and newer edits. Restore commits the entire incoming root once and preserves original timer timestamps. Failed primary/recovery writes retain existing records and credentials. Credential cleanup occurs only after commit; a cleanup failure is reported honestly as restored data with a warning.
+- `combined-backup-nested-red.txt` exposed duplicate nested game rounds accepted by the prior validator. Games now rejects duplicate round IDs/numbers, result player IDs and winner IDs. The dedicated contract first failed (`games-nested-ids-red.txt`); all nine combined-backup plus eight Games service tests pass (`combined-backup-service.txt`). Full Games scope is now 16 unit + 30 browser; its complete regression run is pending.
+- Settings provides full backup, recovery download, read-only collection preview, cancellation and explicit replacement confirmation. Recovery download is required before confirmation; changing files resets the requirement. Legacy import links remain app-specific. General 74 unit + 23 browser pass (`combined-backup-ui.txt`), including separate-profile all-app restore, stale/quota failures, credential exclusion and cleanup warning. Full strict lint passes (`combined-backup-ui-lint.txt`).
+- One additional browser contract checks that a confirmed replacement also discards Time Budget's retained setup drafts. The initial report (`combined-backup-drafts-red.txt`) failed because a fresh read-only root was incorrectly obtained from an unwritten localStorage key. The corrected fixture reads the actual state snapshot and demonstrates the old setup reappearing (`combined-backup-drafts-fixture-red.txt`: 23 pass/one fail). Restore now resets every retained app UI object and clears obsolete save errors; the new contract passes in the current full run. Do not treat the fixture failure as a demonstrated product defect.
+- `docs/storage-and-migrations.md` now describes the combined feature, atomic replacement/recovery and limitations. This shared shell change still requires affected/full regressions before a completed checkpoint. Final install/localization/exporter/concurrency/device gates remain open.
+
+
+## Combined backup local acceptance complete
+
+- `node scripts/test.mjs all --report reports/combined-backup-all.txt` exits zero: General 74 unit + 24 browser; Plants 23 + 11; Coffee 17 + 28; Games 16 + 30; Time Budget 17 + 17; Piano 53 + ten native browser cases and both broad original scripts; Reader 51 + 30; WhatsApp nine + nine. No skipped tests or relaxed thresholds.
+- The corrected retained-draft test first fails on the actual old setup value. Successful replacement now resets shared/module, Time Budget and Games UI state, clears obsolete save errors and remounts with imported preferences. Failed replacement retains forms, records and credentials. All earlier source assertions remain.
+- Storage/testing/platform/device docs and source test inventory are updated. The device guide now describes later installation, per-app migration, full restore, token reentry and background/update checks without claiming a deployment or real-device results.
+- Next: shared PNG/Apple install assets, then remaining localization/exporter/schema/concurrency/form/update gates sequentially. Final whole-migration acceptance is not claimed.

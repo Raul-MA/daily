@@ -1,6 +1,6 @@
 # Migration test inventory
 
-Updated 2026-10-14. Original commits and SHA-256 values are in [source-tests.json](source-tests.json). No application logic was copied with these suites. Every fixture comes from source test literals, not personal backups.
+Updated 2026-10-16. Original commits and SHA-256 values are in [source-tests.json](source-tests.json). No application logic was copied with these suites. Every fixture comes from source test literals, not personal backups.
 
 ## Source-to-destination mapping
 
@@ -132,3 +132,10 @@ Six new service cases cover read-only startup, incomplete/expired Unicode drafts
 Stage 8 adds two WhatsApp browser regressions before fixes: autosaved/failed drafts and update safety through language changes, plus cancellation after invalid file selection. `whatsapp-update-forms-red.txt` records seven pass/two fail. A microtask correction remains red in `whatsapp-update-forms-microtask-red.txt`; the guarded task correction passes all nine unit/nine browser cases in `whatsapp-update-forms.txt`. Earlier all-scope report retains the seven-browser checkpoint; current scoped counts are nine/nine. No assertions were relaxed.
 
 Stage 8 adds one Reader browser contract for invalid-import cancellation through language changes while preserving token/preference drafts. `reading-import-discard-red.txt` records 29 pass/one fail; `reading-import-discard.txt` passes all 51 unit/30 browser after making Cancel independent of preview validity. No backend or shared runtime behavior changed.
+
+
+## Combined backup / restore (Stage 8)
+
+Nine unit contracts in `tests/general/backup.test.mjs` and four initial browser contracts in `tests/e2e/backup.spec.js` preceded their implementation (`combined-backup-red.txt`, `combined-backup-browser-red.txt`). Fixtures in `tests/fixtures/backup-data.mjs` use real module services with synthetic values and separate credential storage. They cover all seven apps, activities, Unicode, layout, Spanish preferences and original overdue timestamps; no personal exports or live responses are used.
+
+`combined-backup-ui.txt` passes General 74 unit + 23 browser cases. A fifth backup browser contract demonstrates retained Time Budget setup surviving full restore after correcting its fresh-root fixture (`combined-backup-drafts-fixture-red.txt`: one actual failure). All retained UI state is now reset after replacement; General's 24 browser cases pass in the current full regression run. Games adds one unit case for unique nested round IDs/numbers, result players and winners; it first fails in `games-nested-ids-red.txt` and passes with combined service contracts in `combined-backup-service.txt`. Full all-app regression evidence passes in `combined-backup-all.txt`, including General 74/24, Games 16/30, Reader 51/30, WhatsApp nine/nine and both broad Piano scripts.

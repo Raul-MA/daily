@@ -1,3 +1,4 @@
+import { mountDailyBackup } from '../backup/view.js';
 import { mountWhatsApp } from '../../../../modules/whatsapp/src/view.js';
 import { mountReview } from '../../../../modules/reading/src/review/view.js';
 import { mountReader } from '../../../../modules/reading/src/view.js';
@@ -134,6 +135,19 @@ function utilityPage(context, preferences) {
     context.pageConflict = page.conflict;
     if (context.route.page !== 'settings') return page.node;
     const view = settings(preferences);
-    view.append(page.node);
+    view.append(page.node, backupPage(context));
     return view;
+}
+
+function backupPage(context) {
+    context.backupUI ??= {};
+    const options = {
+        base: context.base, ui: context.backupUI, service: context.backups,
+        restore: preview => { context.restoring = true; try { context.backups.applyImport(preview); } finally { context.restoring = false; } },
+        replaced: message => { Object.assign(context, { backupUI: { message }, moduleUI: {}, timeUI: {}, gamesUI: {}, error: false, saved: true }); renderShell(context, true); },
+    };
+    const page = mountDailyBackup(options);
+    const previous = context.pageCleanup;
+    context.pageCleanup = () => { previous?.(); page.dispose(); };
+    return page.node;
 }

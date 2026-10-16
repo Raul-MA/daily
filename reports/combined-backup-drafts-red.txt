@@ -1,0 +1,149 @@
+Suite: general
+✔ time is derived from timestamps without tick writes or automatic completion (3.854497ms)
+✔ reload and process reconstruction preserve elapsed time and Unicode references (0.448027ms)
+✔ explicit pause excludes background time and resume continues the same activity (1.12453ms)
+✔ countdowns are independent and singleton budgets games and piano resume existing activities (2.217527ms)
+✔ widget removal language changes and navigation do not pause or reset activities (0.673768ms)
+✔ completion is explicit and terminal while a new budget may start afterwards (1.370459ms)
+✔ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (0.528407ms)
+✔ invalid starts duplicate identifiers and unknown transitions never mutate activities (0.683576ms)
+✔ failed activity changes keep the previous status and publish no success (0.602515ms)
+✔ combined backup exports every module layout language and original running timestamps without credentials or caches (38.585079ms)
+✔ combined preview validates every module and shows counts without changing records (11.37445ms)
+✔ combined restore rejects unknown identities future schemas unknown modules and future module versions (14.810495ms)
+✔ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (12.749587ms)
+✔ combined restore rejects orphan missing and inconsistent active activity mirrors (9.376479ms)
+✔ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (11.469827ms)
+✔ combined failed primary or recovery writes retain records and do not reset credentials (9.716544ms)
+✔ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (9.159814ms)
+✔ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (12.025886ms)
+✔ calendar refreshes at local midnight without repeated changes on the same day (2.746388ms)
+✔ foreground resumes recalculate date after suspension and cleanup removes callbacks (0.614868ms)
+✔ calendar deadlines follow daylight-saving local days rather than a fixed 24 hours (1.507885ms)
+✔ missing modules fail when exercised rather than preventing test discovery (0.551981ms)
+✔ new browser tests target the Pages path and module hash (0.363599ms)
+✔ plants worker removes only its old caches (4.564293ms)
+✔ coffee worker removes only its old caches (1.406496ms)
+✔ games worker removes only its old caches (1.365901ms)
+✔ Time Budget worker removes only its old caches (1.292614ms)
+✔ piano worker removes only its old caches (1.535306ms)
+✔ module defaults never write and saved payloads preserve unrelated preferences and records (0.537784ms)
+✔ module reads validate domain shapes and reject future versions without overwriting (0.425494ms)
+✔ module saves re-read current state and publish only committed updates (0.403253ms)
+✔ failed module commits retain previous readable data without success notifications (0.282046ms)
+✔ fresh dashboard defaults put plants and activities first without writing data (0.344593ms)
+✔ language and dashboard order persist across a new state instance (0.290443ms)
+✔ removing a widget preserves module records and their active sessions (0.279562ms)
+✔ invalid language, duplicate widgets and unknown actions never overwrite settings (0.339524ms)
+✔ failed saves publish no committed change and retain the previous preferences (0.245879ms)
+✔ committed preference changes notify subscribers and support cleanup (0.226753ms)
+✔ diagnostic rejects empty credentials without making requests (0.746334ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (31.967736ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (1.153814ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.38534ms)
+✔ hung requests time out and remaining endpoint checks still execute (15.322598ms)
+✔ local diagnostics do not claim Pages-origin verification (0.599189ms)
+✔ hash routes cover all seven modules and their canonical deep links (3.40052ms)
+✔ href builder encodes stable IDs and supports configurable local base paths (0.495826ms)
+✔ query parameters and repeated values survive routing without changing settings (0.344173ms)
+✔ unknown and malformed routes fail safely instead of executing external URLs (0.531513ms)
+✔ browser hash listener supports navigation and removes itself on cleanup (0.329675ms)
+✔ static preparation preserves native modules byte-for-byte and resolves every relative import (381.197671ms)
+✔ static preparation uses the configured base for HTML manifest and worker without shipping tests (362.762217ms)
+✔ invalid static bases fail before replacing any previously prepared files (183.464339ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (2.61898ms)
+✔ replacement keeps the previous validated document as recovery (0.384067ms)
+✔ invalid and future documents are rejected without any storage mutation (0.446704ms)
+✔ primary quota failure retains the readable document and reports failure (0.560566ms)
+✔ recovery quota failure prevents a primary replacement (0.311512ms)
+✔ corrupt primary data is preserved and recovery is explicit (0.470011ms)
+✔ unrecoverable corruption never produces an empty collection (0.282878ms)
+✔ missing primary data can recover from an existing valid recovery document (0.177001ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (3.638525ms)
+✔ lossy serialization is validated before touching existing records (0.250698ms)
+✔ a future primary schema is rejected without recovery or mutation (0.28411ms)
+✔ failure to preserve corrupt data reports failure without replacing it (0.221895ms)
+✔ update activation is held for any unfinished activity or unsaved form (0.534148ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (2.843649ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (3.923196ms)
+✔ offline navigation and built assets use only this app cache (3.006504ms)
+✔ updates wait until explicitly requested and reject unrelated messages (2.83841ms)
+✔ online navigation stays on the cached version until an update is accepted (2.066058ms)
+✔ any blocked tab prevents update activation (1.644788ms)
+✔ unresponsive tabs and malformed state replies keep updates waiting (24.700303ms)
+✔ every same-app tab must explicitly report safe before an update activates (1.157702ms)
+✔ updates from unknown clients are ignored (1.164755ms)
+ℹ tests 74
+ℹ suites 0
+ℹ pass 74
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1292.815637
+[WebServer] (node:9001) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 24 tests using 1 worker
+
+(node:9020) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes (2.6s)
+  ✓   2 tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state (1.2s)
+  ✓   3 tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard (883ms)
+  ✓   4 tests/e2e/backup.spec.js:32:1 › full backup downloads all saved modules and layout without credentials or unsaved settings (2.0s)
+  ✓   5 tests/e2e/backup.spec.js:46:1 › full backup restores every app into a separate browser profile with original overdue clocks and token reentry (2.8s)
+  ✓   6 tests/e2e/backup.spec.js:69:1 › full import invalid cancel stale and quota paths preserve current records and retained credentials (2.3s)
+  ✓   7 tests/e2e/backup.spec.js:99:1 › full import reports restored records honestly when credential cleanup fails after the root commit (1.6s)
+  ✘   8 tests/e2e/backup.spec.js:113:1 › full restore discards setup drafts retained by another app before importing (6.5s)
+(node:10242) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 tests/e2e/calendar.spec.js:3:1 › dashboard care reminders refresh at midnight without changing records (1.3s)
+  ✓  10 tests/e2e/diagnostics.spec.js:5:1 › connection checks require submission and preserve unrelated storage (269ms)
+  ✓  11 tests/e2e/diagnostics.spec.js:28:1 › a missing review and a Reader network failure do not hide other outcomes (286ms)
+  ✓  12 tests/e2e/diagnostics.spec.js:43:1 › diagnostic controls and outcomes support Spanish (306ms)
+  ✓  13 tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base (3.1s)
+  ✓  14 tests/e2e/offline.spec.js:24:1 › home settings and connection checks reopen offline without losing saved settings (4.5s)
+  ✓  15 tests/e2e/offline.spec.js:39:1 › offline cache contains generated assets and excludes API responses and credentials (3.1s)
+  ✓  16 tests/e2e/platform.spec.js:10:1 › dashboard keeps the accepted three, two and one column layouts (1.4s)
+  ✓  17 tests/e2e/platform.spec.js:23:1 › all modules stay reachable and dashboard navigation creates no records (1.2s)
+  ✓  18 tests/e2e/platform.spec.js:40:1 › shared language setting persists and leaves module user text unchanged (1.9s)
+  ✓  19 tests/e2e/platform.spec.js:56:1 › widget visibility and order persist without removing apps or module state (2.1s)
+  ✓  20 tests/e2e/platform.spec.js:70:1 › quick-action visibility persists while its app remains in the menu (2.1s)
+  ✓  21 tests/e2e/platform.spec.js:82:1 › stable deep links reload and unknown routes provide an accessible way home (1.9s)
+  ✓  22 tests/e2e/platform.spec.js:94:1 › failed preference saves report failure and retain the previous language (1.1s)
+  ✓  23 tests/e2e/platform.spec.js:110:1 › unrecoverable storage is retained and never shown as an empty dashboard (860ms)
+  ✓  24 tests/e2e/updates.spec.js:23:1 › updates wait for unsaved work in another tab and then preserve settings across activation (8.4s)
+
+
+  1) tests/e2e/backup.spec.js:113:1 › full restore discards setup drafts retained by another app before importing 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('#daily-backup-preview')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#daily-backup-preview')
+        13 × locator resolved to <div hidden="" id="daily-backup-preview">…</div>
+           - unexpected value "hidden"
+
+
+      22 | async function select(page, data) {
+      23 |   await page.locator('#daily-backup-file').setInputFiles({ name: 'daily.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ app: 'daily-pwa', schemaVersion: 1, data })) });
+    > 24 |   await expect(page.locator('#daily-backup-preview')).toBeVisible();
+         |                                                       ^
+      25 | }
+      26 | async function recovery(page) {
+      27 |   const pending = page.waitForEvent('download');
+        at select (/workspaces/daily/tests/e2e/backup.spec.js:24:55)
+        at /workspaces/daily/tests/e2e/backup.spec.js:119:3
+
+    Error Context: test-results/backup-full-restore-discar-a2dad-nother-app-before-importing/error-context.md
+
+  1 failed
+    tests/e2e/backup.spec.js:113:1 › full restore discards setup drafts retained by another app before importing 
+  23 passed (57.1s)

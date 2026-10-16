@@ -1,0 +1,388 @@
+Suite: general
+✔ time is derived from timestamps without tick writes or automatic completion (8.326299ms)
+✔ reload and process reconstruction preserve elapsed time and Unicode references (1.332822ms)
+✔ explicit pause excludes background time and resume continues the same activity (1.17171ms)
+✔ countdowns are independent and singleton budgets games and piano resume existing activities (3.978082ms)
+✔ widget removal language changes and navigation do not pause or reset activities (0.591035ms)
+✔ completion is explicit and terminal while a new budget may start afterwards (0.878101ms)
+✔ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (0.442246ms)
+✔ invalid starts duplicate identifiers and unknown transitions never mutate activities (0.650375ms)
+✔ failed activity changes keep the previous status and publish no success (0.635779ms)
+✖ combined backup exports every module layout language and original running timestamps without credentials or caches (36.252803ms)
+✖ combined preview validates every module and shows counts without changing records (10.764194ms)
+✖ combined restore rejects unknown identities future schemas unknown modules and future module versions (10.85838ms)
+✖ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (10.985898ms)
+✖ combined restore rejects orphan missing and inconsistent active activity mirrors (13.197669ms)
+✖ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (16.056032ms)
+✖ combined failed primary or recovery writes retain records and do not reset credentials (12.951701ms)
+✖ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (20.808353ms)
+✖ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (27.874105ms)
+✔ calendar refreshes at local midnight without repeated changes on the same day (2.145128ms)
+✔ foreground resumes recalculate date after suspension and cleanup removes callbacks (0.501196ms)
+✔ calendar deadlines follow daylight-saving local days rather than a fixed 24 hours (0.80812ms)
+✔ missing modules fail when exercised rather than preventing test discovery (0.495906ms)
+✔ new browser tests target the Pages path and module hash (0.318826ms)
+✔ plants worker removes only its old caches (4.487064ms)
+✔ coffee worker removes only its old caches (1.798842ms)
+✔ games worker removes only its old caches (1.822426ms)
+✔ Time Budget worker removes only its old caches (1.71266ms)
+✔ piano worker removes only its old caches (1.718731ms)
+✔ module defaults never write and saved payloads preserve unrelated preferences and records (2.101026ms)
+✔ module reads validate domain shapes and reject future versions without overwriting (0.780408ms)
+✔ module saves re-read current state and publish only committed updates (0.632001ms)
+✔ failed module commits retain previous readable data without success notifications (0.439882ms)
+✔ fresh dashboard defaults put plants and activities first without writing data (0.493983ms)
+✔ language and dashboard order persist across a new state instance (0.432037ms)
+✔ removing a widget preserves module records and their active sessions (0.414144ms)
+✔ invalid language, duplicate widgets and unknown actions never overwrite settings (0.536232ms)
+✔ failed saves publish no committed change and retain the previous preferences (0.365182ms)
+✔ committed preference changes notify subscribers and support cleanup (0.372957ms)
+✔ diagnostic rejects empty credentials without making requests (1.2151ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (40.259869ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (1.187409ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.322092ms)
+✔ hung requests time out and remaining endpoint checks still execute (17.286243ms)
+✔ local diagnostics do not claim Pages-origin verification (0.488213ms)
+✔ hash routes cover all seven modules and their canonical deep links (3.290406ms)
+✔ href builder encodes stable IDs and supports configurable local base paths (0.849888ms)
+✔ query parameters and repeated values survive routing without changing settings (0.605932ms)
+✔ unknown and malformed routes fail safely instead of executing external URLs (1.169165ms)
+✔ browser hash listener supports navigation and removes itself on cleanup (0.501166ms)
+✔ static preparation preserves native modules byte-for-byte and resolves every relative import (356.189462ms)
+✔ static preparation uses the configured base for HTML manifest and worker without shipping tests (326.176389ms)
+✔ invalid static bases fail before replacing any previously prepared files (146.079492ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (1.141393ms)
+✔ replacement keeps the previous validated document as recovery (0.923946ms)
+✔ invalid and future documents are rejected without any storage mutation (0.40133ms)
+✔ primary quota failure retains the readable document and reports failure (0.368077ms)
+✔ recovery quota failure prevents a primary replacement (0.241291ms)
+✔ corrupt primary data is preserved and recovery is explicit (0.353761ms)
+✔ unrecoverable corruption never produces an empty collection (0.411759ms)
+✔ missing primary data can recover from an existing valid recovery document (0.304018ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (5.041851ms)
+✔ lossy serialization is validated before touching existing records (0.359652ms)
+✔ a future primary schema is rejected without recovery or mutation (1.372244ms)
+✔ failure to preserve corrupt data reports failure without replacing it (0.756784ms)
+✔ update activation is held for any unfinished activity or unsaved form (0.571829ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (2.253591ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (3.509768ms)
+✔ offline navigation and built assets use only this app cache (2.857419ms)
+✔ updates wait until explicitly requested and reject unrelated messages (2.09275ms)
+✔ online navigation stays on the cached version until an update is accepted (1.402148ms)
+✔ any blocked tab prevents update activation (1.697191ms)
+✔ unresponsive tabs and malformed state replies keep updates waiting (23.368075ms)
+✔ every same-app tab must explicitly report safe before an update activates (1.310068ms)
+✔ updates from unknown clients are ignored (1.637431ms)
+ℹ tests 74
+ℹ suites 0
+ℹ pass 65
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1250.941682
+
+✖ failing tests:
+
+test at tests/general/backup.test.mjs:12:1
+✖ combined backup exports every module layout language and original running timestamps without credentials or caches (36.252803ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:27:1
+✖ combined preview validates every module and shows counts without changing records (10.764194ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:43:1
+✖ combined restore rejects unknown identities future schemas unknown modules and future module versions (10.85838ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:57:1
+✖ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (10.985898ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:73:1
+✖ combined restore rejects orphan missing and inconsistent active activity mirrors (13.197669ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:87:1
+✖ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (16.056032ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:102:1
+✖ combined failed primary or recovery writes retain records and do not reset credentials (12.951701ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:117:1
+✖ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (20.808353ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+
+test at tests/general/backup.test.mjs:132:1
+✖ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (27.874105ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/service.js' imported from /workspaces/daily/tests/general/backup.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/service.js'
+  }
+[WebServer] (node:58705) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 23 tests using 1 worker
+
+(node:58743) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes (2.5s)
+  ✓   2 tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state (1.4s)
+  ✓   3 tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard (1.0s)
+  ✘   4 tests/e2e/backup.spec.js:32:1 › full backup downloads all saved modules and layout without credentials or unsaved settings (6.3s)
+(node:59067) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   5 tests/e2e/backup.spec.js:46:1 › full backup restores every app into a separate browser profile with original overdue clocks and token reentry (6.5s)
+(node:59262) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 tests/e2e/backup.spec.js:69:1 › full import invalid cancel stale and quota paths preserve current records and retained credentials (6.6s)
+(node:59521) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 tests/e2e/backup.spec.js:99:1 › full import reports restored records honestly when credential cleanup fails after the root commit (6.5s)
+(node:59731) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 tests/e2e/calendar.spec.js:3:1 › dashboard care reminders refresh at midnight without changing records (1.2s)
+  ✓   9 tests/e2e/diagnostics.spec.js:5:1 › connection checks require submission and preserve unrelated storage (291ms)
+  ✓  10 tests/e2e/diagnostics.spec.js:28:1 › a missing review and a Reader network failure do not hide other outcomes (259ms)
+  ✓  11 tests/e2e/diagnostics.spec.js:43:1 › diagnostic controls and outcomes support Spanish (236ms)
+  ✓  12 tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base (3.1s)
+  ✓  13 tests/e2e/offline.spec.js:24:1 › home settings and connection checks reopen offline without losing saved settings (4.7s)
+  ✓  14 tests/e2e/offline.spec.js:39:1 › offline cache contains generated assets and excludes API responses and credentials (3.1s)
+  ✓  15 tests/e2e/platform.spec.js:10:1 › dashboard keeps the accepted three, two and one column layouts (1.4s)
+  ✓  16 tests/e2e/platform.spec.js:23:1 › all modules stay reachable and dashboard navigation creates no records (1.2s)
+  ✓  17 tests/e2e/platform.spec.js:40:1 › shared language setting persists and leaves module user text unchanged (2.2s)
+  ✓  18 tests/e2e/platform.spec.js:56:1 › widget visibility and order persist without removing apps or module state (2.1s)
+  ✓  19 tests/e2e/platform.spec.js:70:1 › quick-action visibility persists while its app remains in the menu (2.1s)
+  ✓  20 tests/e2e/platform.spec.js:82:1 › stable deep links reload and unknown routes provide an accessible way home (2.0s)
+  ✓  21 tests/e2e/platform.spec.js:94:1 › failed preference saves report failure and retain the previous language (1.1s)
+  ✓  22 tests/e2e/platform.spec.js:110:1 › unrecoverable storage is retained and never shown as an empty dashboard (967ms)
+  ✓  23 tests/e2e/updates.spec.js:23:1 › updates wait for unsaved work in another tab and then preserve settings across activation (8.6s)
+
+
+  1) tests/e2e/backup.spec.js:32:1 › full backup downloads all saved modules and layout without credentials or unsaved settings 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#daily-backup-export')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#daily-backup-export')
+
+
+      18 |   await page.route('https://readwise.io/api/**', route => route.abort());
+      19 |   await page.goto('./#/settings');
+    > 20 |   await expect(page.locator('#daily-backup-export')).toBeVisible();
+         |                                                      ^
+      21 | }
+      22 | async function select(page, data) {
+      23 |   await page.locator('#daily-backup-file').setInputFiles({ name: 'daily.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ app: 'daily-pwa', schemaVersion: 1, data })) });
+        at open (/workspaces/daily/tests/e2e/backup.spec.js:20:54)
+        at /workspaces/daily/tests/e2e/backup.spec.js:34:3
+
+    Error Context: test-results/backup-full-backup-downloa-3dc98-entials-or-unsaved-settings/error-context.md
+
+  2) tests/e2e/backup.spec.js:46:1 › full backup restores every app into a separate browser profile with original overdue clocks and token reentry 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#daily-backup-export')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#daily-backup-export')
+
+
+      18 |   await page.route('https://readwise.io/api/**', route => route.abort());
+      19 |   await page.goto('./#/settings');
+    > 20 |   await expect(page.locator('#daily-backup-export')).toBeVisible();
+         |                                                      ^
+      21 | }
+      22 | async function select(page, data) {
+      23 |   await page.locator('#daily-backup-file').setInputFiles({ name: 'daily.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ app: 'daily-pwa', schemaVersion: 1, data })) });
+        at open (/workspaces/daily/tests/e2e/backup.spec.js:20:54)
+        at /workspaces/daily/tests/e2e/backup.spec.js:51:5
+
+    Error Context: test-results/backup-full-backup-restore-fe2cd-ue-clocks-and-token-reentry/error-context.md
+
+  3) tests/e2e/backup.spec.js:69:1 › full import invalid cancel stale and quota paths preserve current records and retained credentials 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#daily-backup-export')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#daily-backup-export')
+
+
+      18 |   await page.route('https://readwise.io/api/**', route => route.abort());
+      19 |   await page.goto('./#/settings');
+    > 20 |   await expect(page.locator('#daily-backup-export')).toBeVisible();
+         |                                                      ^
+      21 | }
+      22 | async function select(page, data) {
+      23 |   await page.locator('#daily-backup-file').setInputFiles({ name: 'daily.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ app: 'daily-pwa', schemaVersion: 1, data })) });
+        at open (/workspaces/daily/tests/e2e/backup.spec.js:20:54)
+        at /workspaces/daily/tests/e2e/backup.spec.js:71:3
+
+    Error Context: test-results/backup-full-import-invalid-b43d5-ds-and-retained-credentials/error-context.md
+
+  4) tests/e2e/backup.spec.js:99:1 › full import reports restored records honestly when credential cleanup fails after the root commit 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#daily-backup-export')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#daily-backup-export')
+
+
+      18 |   await page.route('https://readwise.io/api/**', route => route.abort());
+      19 |   await page.goto('./#/settings');
+    > 20 |   await expect(page.locator('#daily-backup-export')).toBeVisible();
+         |                                                      ^
+      21 | }
+      22 | async function select(page, data) {
+      23 |   await page.locator('#daily-backup-file').setInputFiles({ name: 'daily.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ app: 'daily-pwa', schemaVersion: 1, data })) });
+        at open (/workspaces/daily/tests/e2e/backup.spec.js:20:54)
+        at /workspaces/daily/tests/e2e/backup.spec.js:101:3
+
+    Error Context: test-results/backup-full-import-reports-4d593-fails-after-the-root-commit/error-context.md
+
+  4 failed
+    tests/e2e/backup.spec.js:32:1 › full backup downloads all saved modules and layout without credentials or unsaved settings 
+    tests/e2e/backup.spec.js:46:1 › full backup restores every app into a separate browser profile with original overdue clocks and token reentry 
+    tests/e2e/backup.spec.js:69:1 › full import invalid cancel stale and quota paths preserve current records and retained credentials 
+    tests/e2e/backup.spec.js:99:1 › full import reports restored records honestly when credential cleanup fails after the root commit 
+  19 passed (1.2m)

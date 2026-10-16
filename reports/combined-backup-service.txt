@@ -1,0 +1,25 @@
+✔ games read without writes and preserve other modules while sharing explicit language changes (24.865103ms)
+✔ starting a game atomically registers its timestamp activity and retains unrelated countdowns (13.556822ms)
+✔ scores never restart game timing and finishing atomically completes the shared activity (10.167838ms)
+✔ game quota failures leave both the sessions and shared activities unchanged (2.680929ms)
+✔ game stale domain saves reject instead of overwriting a newer module state (2.765247ms)
+✔ game replacement previews preserve shared language and restore active timing with recovery (3.5853ms)
+✔ game future modules and stale import previews remain untouched (7.57246ms)
+✔ game backup previews reject duplicate nested round result and winner identities without replacing records (7.121507ms)
+✔ combined backup exports every module layout language and original running timestamps without credentials or caches (37.969249ms)
+✔ combined preview validates every module and shows counts without changing records (11.572013ms)
+✔ combined restore rejects unknown identities future schemas unknown modules and future module versions (9.163002ms)
+✔ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (9.128437ms)
+✔ combined restore rejects orphan missing and inconsistent active activity mirrors (10.006778ms)
+✔ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (9.153234ms)
+✔ combined failed primary or recovery writes retain records and do not reset credentials (10.213206ms)
+✔ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (9.577315ms)
+✔ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (11.028978ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 315.625103

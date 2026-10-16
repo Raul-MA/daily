@@ -83,3 +83,5 @@ export function connectPlants(state) {
   const stop = bindPlants(binding);
   return { ...binding, ...importActions(store), stop };
 }
+
+export { validPayload as validPlantsData };

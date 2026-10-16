@@ -25,7 +25,7 @@
 - [Testing](docs/testing.md): baseline versus new-app runs and red-stage interpretation.
 - [Constraints](docs/constraints.md): Pages origin and Readwise capabilities.
 - [Physical device checklist](docs/device-validation.md): pending iPhone evidence and dependencies.
-- [Storage and migrations](docs/storage-and-migrations.md): validated document replacement and recovery prototype.
+- [Storage and migrations](docs/storage-and-migrations.md): combined backups, schema/activity validation, atomic replacement and recovery.
 - [Legacy workers](docs/legacy-workers.md): tested cleanup patches and release requirements.
 - [Local development / deferred deployment](docs/deployment.md): local commands and the current no-workflows instruction.
 - [Lint policy](docs/pwa-eslint-policy.md): exact required rules.

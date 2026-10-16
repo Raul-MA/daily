@@ -22,6 +22,6 @@ The preparation script copies native browser modules and CSS unchanged into `dis
 
 Playwright needs Chromium. Use `npx playwright install chromium` on a fresh machine, or set `PLAYWRIGHT_EXECUTABLE_PATH` for an existing browser. Browser tests open a local server and never deploy the app.
 
-Records and preferences stay in localStorage. JSON recovery and export/import are the planned migration path. Tokens remain separate from application backups. Live Readwise/Reader verification is deferred to the user's later token test.
+Records and preferences stay in localStorage. Settings exports and restores a full Daily backup with a read-only preview and recovery download before replacement. Existing single-app exports use their respective app import screens. Tokens remain separate from application backups and must be reentered after restore. Live Readwise/Reader verification is deferred to the user's later token test.
 
 Read [progress](docs/progress.md), [Compass](COMPASS.md) and [the plan](docs/pwa-consolidation-plan.md) to resume. No personal backup or credential belongs in this repository.

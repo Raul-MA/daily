@@ -3,6 +3,7 @@ import { activitySummary } from './activity-summary.js';
 import { shellText } from '../../../../packages/i18n/src/shell.js';
 
 export function committed(context) {
+  if (context.restoring) return;
   context.saved = true;
   context.error = false;
   const preferences = context.state.read().value.preferences;

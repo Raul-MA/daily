@@ -122,3 +122,23 @@ test('game future modules and stale import previews remain untouched', async t =
   assert.throws(() => loadData(), /version/i);
   assert.deepEqual([...values], before);
 });
+
+test('game backup previews reject duplicate nested round result and winner identities without replacing records', async t => {
+  const { service, state } = await setup(t);
+  const data = start(prepared()).data;
+  const before = state.read().value;
+  for (const kind of ['round-id', 'round-number', 'result-player', 'winner-player']) {
+    const incoming = JSON.parse(JSON.stringify(data));
+    const session = incoming.sessions[0];
+    if (kind === 'round-id') session.rounds.push({ ...session.rounds[0], roundNumber: 99 });
+    if (kind === 'round-number') session.rounds.push({ ...session.rounds[0], id: 'different-round' });
+    if (kind === 'result-player') {
+      session.scoringMode = 'win_loss_tie';
+      session.rounds = [];
+      session.results = session.participants.map(() => ({ playerId: session.participants[0].playerId, outcome: '' }));
+    }
+    if (kind === 'winner-player') session.winnerPlayerIds = [session.participants[0].playerId, session.participants[0].playerId];
+    assert.throws(() => service.previewImport(JSON.stringify(incoming)), /invalid|duplicate/i);
+    assert.deepEqual(state.read().value, before);
+  }
+});
