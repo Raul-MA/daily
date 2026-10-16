@@ -39,7 +39,7 @@
     "baseline": "reports/baseline-time-budget.txt"
   },
   "native": {
-    "unit": 17,
+    "unit": 20,
     "browser": 17
   },
   "deliberate_changes": [
@@ -49,5 +49,13 @@
     "Read-only import preview, recovery download and explicit confirmation replace immediate import.",
     "Full migration export includes active state and independent countdowns.",
     "Dirty/stale view protection and visible atomic save failures."
-  ]
+  ],
+  "legacy_export": {
+    "directory": "legacy/exporters/time-budget",
+    "patch": "legacy/patches/timeBudget-export.patch",
+    "unit_contracts": 3,
+    "browser_contracts": 1,
+    "original_modified": false,
+    "release": "deferred"
+  }
 }

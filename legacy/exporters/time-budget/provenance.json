@@ -1,0 +1,10 @@
+{
+  "repo": "timeBudget",
+  "commit": "fb9e9be86325d900e64aeda59faad4215cc1d5a9",
+  "indexSha256": "7a872745a42903e39db7620fb32229ab191d4cf0675919c53c326cb78d6509e0",
+  "storageKeys": [
+    "timeBudget_templates",
+    "timeBudget_currentState"
+  ],
+  "nativeSchemaVersion": 1
+}

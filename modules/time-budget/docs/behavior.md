@@ -24,3 +24,8 @@ Preserve the original deadline/task workflow while its state and running clocks 
 - Dirty setup rows, queue edits, file selections and reallocation controls survive shared-language remounts in memory. Their original module snapshot prevents later saves from overwriting another view. User-authored names are retained verbatim. Complete EN/ES text localization remains a Stage 8 gate.
 - The eight characterization cases and eight baseline browser workflows ran against the original before porting. Native acceptance adds root atomicity, countdowns, imports, drafts, stale views, quota handling and offline/phone checks. Browser simulation does not establish physical iPhone acceptance.
 - Invalid/future module data remains stored and raises an error. It is never silently replaced with an empty plan. `src/validation.js` owns the native persisted contract; runtime interval handles never enter backups.
+
+
+## Prepared original-app exporter
+
+The original app's normal export remains templates-only. A separate read-only migration page and patch are prepared in [legacy/exporters/time-budget](../../../legacy/exporters/time-budget/README.md). It reads the original two storage keys only, exports the current running/paused session with original task/timer timestamps, and supplies a stable session ID absent from the legacy schema. Invalid data prevents download without clearing keys. The patch has only been applied in a disposable test copy; original-app release and installed-iPhone migration are deferred. Use it from within the original installation after a later authorized release, not from a separate downloaded HTML file.

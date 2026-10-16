@@ -1,0 +1,166 @@
+--- a/index.html
++++ b/index.html
+@@ -196,4 +196,5 @@
+     <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+     <script src="app.js"></script>
++    <a class="button ghost" href="daily-migration/index.html">Export for Daily / Exportar para Daily</a>
+ </body>
+ </html>
+--- /dev/null
++++ b/daily-migration/index.html
+@@ -0,0 +1,35 @@
++<!doctype html>
++<html lang="en">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
++  <meta name="referrer" content="no-referrer">
++  <title>Time Budget export for Daily</title>
++  <style>
++    * { box-sizing: border-box; }
++    body { margin: 0; background: #f2f2f7; color: #1c1c1e; font: 1rem/1.6 system-ui, sans-serif; }
++    main { max-width: 42rem; margin: auto; padding: max(1rem, env(safe-area-inset-top)) 1rem 3rem; }
++    h1 { line-height: 1.2; font-size: 2rem; }
++    button, select { font: inherit; padding: .7rem; border-radius: .7rem; border: 1px solid #8e8e93; }
++    button { margin: .5rem 0; width: 100%; color: #fff; background: #175cd3; }
++    button:disabled { opacity: .5; }
++    a { color: #175cd3; }
++    [hidden] { display: none; }
++    @media (prefers-color-scheme: dark) { body { background: #1c1c1e; color: #f2f2f7; } a { color: #8ebaff; } }
++  </style>
++</head>
++<body>
++  <main>
++    <label><span id="language-label">Language</span> <select id="language"><option value="en">English</option><option value="es">Español</option></select></label>
++    <h1 id="title">Export Time Budget for Daily</h1>
++    <p id="explain"></p>
++    <p id="privacy"></p>
++    <button id="preview" type="button">Preview saved data</button>
++    <p id="counts" aria-live="polite"></p>
++    <button id="download" type="button" disabled>Download migration backup</button>
++    <p id="status" role="status" aria-live="polite"></p>
++    <a id="back" href="../">Back to Time Budget</a>
++  </main>
++  <script type="module" src="./entry.js"></script>
++</body>
++</html>
+--- /dev/null
++++ b/daily-migration/entry.js
+@@ -0,0 +1,50 @@
++import { exportLegacyBudget } from './export.js';
++
++const copy = {
++  en: { title: 'Export Time Budget for Daily', 'language-label': 'Language', preview: 'Preview saved data', download: 'Download migration backup', back: 'Back to Time Budget',
++    explain: 'Includes saved templates and the current session. Timers keep their original timestamps and may already be overdue. Import this file in Daily → Time Budget.',
++    privacy: 'Exports saved Time Budget data. Original records stay on this device; other apps and credentials are excluded. Keep the original installation and this backup.',
++    counts: '{templates} template(s), {sessions} current session, {tasks} task(s).', invalid: 'Saved data is invalid or could not be read. Nothing was changed. Return to the original app to inspect its data.', downloaded: 'Migration backup downloaded. The original data was kept.' },
++  es: { title: 'Exportar Time Budget para Daily', 'language-label': 'Idioma', preview: 'Vista previa de datos guardados', download: 'Descargar copia de migración', back: 'Volver a Time Budget',
++    explain: 'Incluye las plantillas guardadas y la sesión actual. Los temporizadores conservan sus horas originales y pueden mostrar tiempo excedido. Importa el archivo en Daily → Time Budget.',
++    privacy: 'Exporta los datos guardados de Time Budget. Los registros originales se conservan en este dispositivo; se excluyen otras aplicaciones y credenciales. Conserva la instalación original y esta copia.',
++    counts: '{templates} plantilla(s), {sessions} sesión actual, {tasks} tarea(s).', invalid: 'Los datos guardados no son válidos o no se pudieron leer. No se ha cambiado nada. Vuelve a la aplicación original para revisar sus datos.', downloaded: 'Copia de migración descargada. Se conservaron los datos originales.' },
++};
++const language = document.getElementById('language');
++const state = { file: null, message: '' };
++function draw() {
++  const text = copy[language.value];
++  document.documentElement.lang = language.value;
++  document.title = text.title;
++  for (const id of ['title', 'language-label', 'preview', 'download', 'back', 'explain', 'privacy']) document.getElementById(id).textContent = text[id];
++  document.getElementById('download').disabled = !state.file;
++  document.getElementById('status').textContent = text[state.message] ?? '';
++  const data = state.file ? JSON.parse(state.file) : null;
++  document.getElementById('counts').textContent = data ? text.counts.replace('{templates}', Object.keys(data.templates).length).replace('{sessions}', data.session ? 1 : 0).replace('{tasks}', data.session?.tasks.length ?? 0) : '';
++}
++function preview() {
++  state.file = null;
++  state.message = '';
++  try { state.file = exportLegacyBudget(localStorage); }
++  catch { state.message = 'invalid'; }
++  draw();
++}
++function download() {
++  preview();
++  if (!state.file) return;
++  const url = URL.createObjectURL(new Blob([state.file], { type: 'application/json' }));
++  const link = document.createElement('a');
++  link.href = url;
++  link.download = 'time-budget-daily-migration.json';
++  document.body.append(link);
++  link.click();
++  link.remove();
++  setTimeout(() => URL.revokeObjectURL(url), 1000);
++  state.message = 'downloaded';
++  draw();
++}
++language.value = navigator.language.startsWith('es') ? 'es' : 'en';
++language.addEventListener('change', draw);
++document.getElementById('preview').addEventListener('click', preview);
++document.getElementById('download').addEventListener('click', download);
++draw();
+--- /dev/null
++++ b/daily-migration/export.js
+@@ -0,0 +1,22 @@
++import { validBudget } from './validation.js';
++
++function read(storage, key, fallback) {
++  const raw = storage.getItem(key);
++  return raw === null ? fallback : JSON.parse(raw);
++}
++function fields(value, names) { return Object.fromEntries(names.map(name => [name, value[name]])); }
++function cleanSession(value) {
++  if (value === null) return null;
++  return { ...fields(value, ['id', 'goalTime', 'startTime', 'currentTaskIndex', 'timerElapsed', 'timerRunning', 'timerStartTime']),
++    tasks: value.tasks.map(task => fields(task, ['id', 'name', 'allocatedMinutes', 'actualMinutes', 'status'])) };
++}
++function cleanTemplates(value) {
++  return Object.fromEntries(Object.entries(value).map(([name, tasks]) => [name, tasks.map(task => fields(task, ['name', 'minutes']))]));
++}
++export function exportLegacyBudget(storage) {
++  const templates = read(storage, 'timeBudget_templates', {});
++  const current = read(storage, 'timeBudget_currentState', null);
++  const session = current === null ? null : { ...current, id: `legacy-budget:${current.startTime}` };
++  if (!validBudget({ templates, session })) throw new Error('Invalid original Time Budget records. Nothing was changed.');
++  return JSON.stringify({ app: 'time-budget', schemaVersion: 1, templates: cleanTemplates(templates), session: cleanSession(session) }, null, 2);
++}
+--- /dev/null
++++ b/daily-migration/validation.js
+@@ -0,0 +1,39 @@
++export function validTime(value) {
++  if (typeof value !== 'string' || !/^\d{2}:\d{2}$/.test(value)) return false;
++  const [hours, minutes] = value.split(':').map(Number);
++  return hours <= 23 && minutes <= 59;
++}
++function text(value, max) { return typeof value === 'string' && value.trim().length > 0 && value.length <= max; }
++function minutes(value) { return Number.isInteger(value) && value >= 1 && value <= 1440; }
++function timestamp(value) { return Number.isFinite(value) && value >= 0; }
++export function validTemplates(value) {
++  return value !== null && typeof value === 'object' && !Array.isArray(value)
++    && Object.entries(value).every(([name, tasks]) => text(name, 60) && Array.isArray(tasks) && tasks.length > 0 && tasks.every(validTemplateTask));
++}
++function validTemplateTask(task) { return task !== null && typeof task === 'object' && text(task.name, 120) && minutes(task.minutes); }
++function validTask(task) {
++  if (!task || !text(task.name, 120) || !minutes(task.allocatedMinutes)) return false;
++  const id = text(task.id, 500) || timestamp(task.id);
++  const actual = task.actualMinutes === null || timestamp(task.actualMinutes);
++  return id && actual && ['pending', 'active', 'completed'].includes(task.status);
++}
++function validTasks(value) {
++  if (!Array.isArray(value) || value.length === 0 || !value.every(validTask)) return false;
++  return new Set(value.map(task => task.id)).size === value.length;
++}
++function validClock(value) {
++  if (typeof value.timerRunning !== 'boolean' || !timestamp(value.timerElapsed)) return false;
++  if (value.timerRunning) return timestamp(value.timerStartTime) && value.timerStartTime > 0;
++  return value.timerStartTime === null || timestamp(value.timerStartTime);
++}
++export function validSession(value) {
++  if (value === null) return true;
++  if (!value || !text(value.id, 500) || !validTime(value.goalTime) || !timestamp(value.startTime)) return false;
++  if (!validTasks(value.tasks) || !validClock(value)) return false;
++  return validIndex(value);
++}
++function validIndex(value) {
++  return Number.isInteger(value.currentTaskIndex) && value.currentTaskIndex >= 0 && value.currentTaskIndex < value.tasks.length;
++}
++export function validBudget(value) { return Boolean(value && validTemplates(value.templates) && validSession(value.session)); }
++export function initialBudget() { return { templates: {}, session: null }; }

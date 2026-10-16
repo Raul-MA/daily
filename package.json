@@ -23,6 +23,7 @@
     "test:whatsapp": "node scripts/test.mjs whatsapp",
     "test:reading": "node scripts/test.mjs reading",
     "prepare:legacy-workers": "node scripts/prepare-legacy-workers.mjs",
+    "prepare:legacy-budget": "node scripts/prepare-legacy-budget.mjs",
     "check:js": "node scripts/check-js.mjs"
   },
   "devDependencies": {

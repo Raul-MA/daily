@@ -8,21 +8,21 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore pass local checks.** `combined-backup-all.txt` completed successfully across General and every app, including both broad Piano scripts. Strict lint, 688-file syntax and static preparation of 629 assets pass (`combined-backup-final-*`). Reader and WhatsApp earlier Stage 8 fixes are included. Full restore validates all module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** save the install-icon checkpoint, then prepare the legacy Time Budget exporter (templates plus active session) without modifying its original repository. Install assets pass General 75 unit/24 browser (`install-icons-offline.txt`) and WhatsApp nine/nine (`install-icons-whatsapp.txt`); full strict lint and 689-file syntax pass. Combined backup acceptance is committed locally as `da523d1`. Remaining gates: complete EN/ES, remaining legacy exporters, nested-reference/concurrency/form/update audit and device instructions. Actual iPhone/live API/Things validation remains deferred. Work locally only; no workflows, pushes or deployments.
+**Exact next step:** prepare the legacy Plants exporter for plant records plus Things preferences. Work on that app only: inspect original storage/recovery semantics, write safe-fixture export/import and patch contracts before implementation, then preserve original storage and installations. Legacy Time Budget exporter now passes General 76 unit/25 browser and Time Budget 20 unit/17 browser; strict lint, 696-file syntax and static preparation pass. Save its local checkpoint before Plants. Prior checkpoints: install icons `746751f`, combined backup `da523d1`. Next exporters after Plants: Reader preferences/remembered item without credentials, WhatsApp saved draft. Complete EN/ES and remaining schema/concurrency/form/update audits afterward. Actual iPhone/live API/Things validation and original-app releases stay deferred. No pushes, workflows or deployment.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 75 unit + 24 browser cases pass | `reports/install-icons-offline.txt` |
+| General | 76 unit + 25 browser cases pass | `reports/legacy-budget-final-general.txt` |
 | Plants | 23 unit + 11 browser cases pass | `reports/combined-backup-all.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/combined-backup-final-lint.txt` |
-| Native JS syntax | 688 files pass; this is not typechecking | `reports/combined-backup-final-syntax.txt` |
-| Static preparation | 629 native files/assets prepared | `reports/combined-backup-final-build.txt` |
+| Strict full-scope lint | Pass | `reports/legacy-budget-final-lint.txt` |
+| Native JS syntax | 696 files pass; this is not typechecking | `reports/legacy-budget-syntax.txt` |
+| Static preparation | 632 native files/assets prepared; legacy exporters excluded | `reports/legacy-budget-build.txt` |
 | Coffee | 17 unit + 28 browser cases pass | `reports/combined-backup-all.txt` |
 | Games | 16 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
-| Time Budget | 17 unit + 17 browser cases pass | `reports/combined-backup-all.txt` |
+| Time Budget | 20 unit + 17 browser cases pass | `reports/legacy-budget-time.txt` |
 | Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/combined-backup-all.txt` |
 | Reader | 51 unit + 30 browser cases pass | `reports/combined-backup-all.txt` |
 | WhatsApp | Nine unit + nine browser cases pass | `reports/combined-backup-all.txt` |
@@ -240,3 +240,20 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - `install-icons-offline.txt` passes General 75 unit + 24 browser cases, including real image decoding with the browser offline, PNG cache ownership and subpath-safe touch links. `install-icons-whatsapp.txt` passes nine unit + nine browser cases, retaining original/native asset and worker assertions.
 - Full strict lint and 689-file native syntax checks pass (`install-icons-final-lint.txt`, `install-icons-syntax.txt`). Static preparation is saved in `install-icons-build.txt`. Rendered 512px icon reviewed; no external generator, browser runtime dependency or branding from a source app was added.
 - The immediately preceding all-app regression remains `combined-backup-all.txt` at `da523d1`; only install generation, HTML metadata and associated contracts/docs changed afterward. Physical installation still requires later iPhone evidence.
+
+
+## Stage 8: legacy Time Budget export preparation
+
+- Three native import/export contracts first fail on the absent exporter (`legacy-budget-red.txt`). They now pass (`legacy-budget-unit.txt`): running/paused original clocks survive actual Daily import, missing keys remain unwritten, stable session identity is supplied, malformed or blocked storage does not reset data, and only the original app's two data keys are read.
+- A new General browser contract first fails on absent standalone files (`legacy-budget-browser-red.txt`). The prepared EN/ES export page passes preview/download, original timing import, source-storage equality and 320px overflow checks. Its first implemented run (`legacy-budget-general.txt`) fails only because the Spanish error matcher expected different wording; it is corrected in the pending final run. Do not label that grammar mismatch a product failure.
+- `legacy-budget-patch-red.txt` records the missing preparation script. The preparation test passes in `legacy-budget-patch.txt`: apply only in a temporary source copy, verify every packaged file, and reject changed HTML without replacing an existing patch. `npm run prepare:legacy-budget` prepares `legacy/patches/timeBudget-export.patch`; a separate `git apply --check` against `/workspaces/timeBudget` exits zero. The original repository is only read.
+- The standalone validator is a version-1 copy of the native validator, checked byte-for-byte before patch preparation. Native syntax checking now includes all legacy JS artifacts. These files do not enter Daily's static/runtime asset output.
+- Use the exporter from inside the old installed app only after a later authorized release of the patch. A separate Safari tab or downloaded HTML file does not establish access to installed storage. Initial online loading is required. No iPhone, original-app release or real-data migration is claimed. See `legacy/exporters/time-budget/README.md`.
+
+
+## Legacy Time Budget exporter local acceptance complete
+
+- `legacy-budget-final-general.txt` passes 76 unit + 25 browser cases. `legacy-budget-time.txt` passes 20 unit + 17 browser cases. Strict lint and 696-file syntax pass; syntax discovery now includes standalone legacy artifacts. Static preparation still contains only Daily's 632 owned assets; the exporter and patch remain outside runtime output.
+- The initial implemented browser failure was only a Spanish wording matcher; the final contract passes actual preview, language change, Unicode download, import into Daily, source-storage equality, 320px layout and malformed-data refusal.
+- `legacy/patches/timeBudget-export.patch` is regenerated from the reviewed files and passes `git apply --check` against the unchanged original. Packaging applies only in disposable tests. Product privacy copy uses plain language; documentation retains the exact key/schema details.
+- Next: Plants legacy records plus Things preferences, then Reader and WhatsApp exporters, sequentially. Complete full localization and final schema/concurrency/form/update audits; physical checks and old-app releases remain deferred.

@@ -27,6 +27,7 @@
 - [Physical device checklist](docs/device-validation.md): pending iPhone evidence and dependencies.
 - [Storage and migrations](docs/storage-and-migrations.md): combined backups, schema/activity validation, atomic replacement and recovery.
 - [Legacy workers](docs/legacy-workers.md): tested cleanup patches and release requirements.
+- [Legacy Time Budget export](legacy/exporters/time-budget/README.md): prepared read-only active-session exporter; original-app release deferred.
 - [Local development / deferred deployment](docs/deployment.md): local commands and the current no-workflows instruction.
 - [Lint policy](docs/pwa-eslint-policy.md): exact required rules.
 

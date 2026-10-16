@@ -142,3 +142,8 @@ Nine unit contracts in `tests/general/backup.test.mjs` and four initial browser 
 
 
 Shared install assets add one static-output contract and extend the existing installation browser contract. `install-icons-red.txt` records missing PNG/Apple assets; `install-icons-offline.txt` passes General 75 unit/24 browser with actual offline image decoding. WhatsApp's original/native manifest/worker assertions also pass (`install-icons-whatsapp.txt`, nine/nine). The SVG favicon remains; generated PNGs add explicit 192/512px any/maskable and 180px Apple representations. Physical iPhone install is unverified.
+
+
+Legacy Time Budget export adds three domain contracts in `modules/time-budget/test/legacy-service.test.mjs`, one General patch packaging contract and one General browser workflow. `legacy-budget-red.txt`, `legacy-budget-patch-red.txt` and `legacy-budget-browser-red.txt` precede implementation. Tests use original schema literals, a pinned source HTML fixture and synthetic Unicode records; no personal storage is read. Original repo commit/checksum and source key names are recorded in `legacy/exporters/time-budget/provenance.json`. Exported data is imported through the real Daily adapter, and generated patches are applied only to a disposable copy during tests. Original source assertions are unchanged.
+
+Legacy exporter acceptance: `legacy-budget-final-general.txt` passes General 76/25 and `legacy-budget-time.txt` passes Time Budget 20/17. The earlier implemented browser run fails only on an overly specific Spanish grammar matcher; final behavior assertions are preserved and pass. Strict lint, syntax and patch check pass. Old apps and real data remain untouched.
