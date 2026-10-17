@@ -34,6 +34,9 @@ Updated 2026-10-16. Original commits and SHA-256 values are in [source-tests.jso
 
 ## Assertion preservation audit
 
+- 2026-10-17 layout follow-up: added two General browser cases for full-width backgrounds across all seven apps plus Daily Review at 1600/900/390/320px, shared header/footer font and colors, dashboard reset, button/link hover, and explicit/system dark-mode changes. General browser discovery increases from 31 to 33; original assertions remain intact. The first width run (`app-width-general.txt`) caught Plants' separate 1200px desktop limit; the shared module boundary now removes it.
+- All scopes and retained Piano scripts pass in `app-width-all.txt`; final shared-theme regressions pass in `app-style-general.txt` (85 unit / 33 browser), `app-style-plants.txt` (28 / 13) and `app-style-coffee.txt` (20 / 34). Current unique totals are 300 unit and 191 browser cases.
+
 Counts include Node `assert.*` and Playwright expectation matcher calls, across helpers and scenarios. They supplement baseline execution; counts alone cannot prove semantic parity.
 
 | Module | Source assertion call sites | Migrated assertion call sites |

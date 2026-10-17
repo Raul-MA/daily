@@ -1,0 +1,59 @@
+Suite: plants
+✔ care dates use latest matching care and ignore notes skip and reschedule entries (16.343947ms)
+✔ watering seasons preserve wrap-around dry periods and growth intervals (0.707599ms)
+✔ fertilizer pause is preserved while a manual due date still takes precedence (0.350843ms)
+✔ care status distinguishes overdue today soon and future without mutating plants (0.936025ms)
+✔ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (1.114327ms)
+✔ backdated input uses local noon and today retains the actual event time (0.456711ms)
+✔ reminder counts include overdue and today care once and leave records unchanged (0.4559ms)
+✔ urgency ranking places overdue care ahead of future care (0.502998ms)
+✔ legacy plant export retains records care dates Unicode and Things preferences through actual Daily import (5.278866ms)
+✔ legacy plant exporter reads the first valid recovery in original priority without repairing original keys (1.465933ms)
+✔ legacy plant exporter keeps empty storage read-only and refuses invalid settings checksums or blocked storage (1.224944ms)
+✔ all thirteen authored plant guides and template notes have complete English and Spanish text with unchanged care figures (5.766118ms)
+✔ localized plant templates are detached copies and never rewrite original source notes guides or schedules (2.051604ms)
+✔ connected plant storage writes only the shared document and preserves other modules (1.563545ms)
+✔ connected care and due-date changes remain one root commit with no partial state (1.194476ms)
+✔ Things settings live with plant records and survive a plant update (1.481061ms)
+✔ legacy import previews are read-only and confirmation keeps a root recovery copy (1.51843ms)
+✔ migration export includes Things settings and imports without translating user text (1.663601ms)
+✔ unsupported duplicate and invalid plant imports never mutate shared data (0.972874ms)
+✔ quota failure retains plant history and sends no successful shared change (1.068312ms)
+✔ template care refresh preserves names notes history IDs and manual dates (1.093058ms)
+✔ valid legacy data remains readable when its migration write fails (0.506284ms)
+✔ care log and next-due override are committed in one primary write (0.730752ms)
+✔ validation failures use the storage-error notification path (0.251088ms)
+✔ builds a stable watering title (0.10221ms)
+✔ shortcut URL carries the exact title, date, and project (0.259634ms)
+✔ enabled integration requires a project (0.143818ms)
+✔ settings round-trip and normalize project whitespace (0.182991ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 92.53035
+[WebServer] (node:43118) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 13 tests using 1 worker
+
+(node:43130) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/plants/e2e/localization.spec.js:5:1 › template defaults follow the selected language while existing form text survives later language changes (1.9s)
+  ✓   2 modules/plants/e2e/localization.spec.js:24:1 › authored plant guides switch language offline without translating saved records or changing care timing (3.7s)
+  ✓   3 modules/plants/e2e/plants.spec.js:23:1 › plant creation edit and deletion use canonical routes and retain other storage (1.7s)
+  ✓   4 modules/plants/e2e/plants.spec.js:41:1 › care logging skip and manual dates keep one history and support editing and deleting entries (2.0s)
+  ✓   5 modules/plants/e2e/plants.spec.js:70:1 › dashboard reminders open the stable plant without completing care or changing legacy keys (2.2s)
+  ✓   6 modules/plants/e2e/plants.spec.js:87:1 › plant import previews can be canceled and replacement requires a recovery download (1.5s)
+  ✓   7 modules/plants/e2e/plants.spec.js:106:1 › Things settings and migration export preserve the exact shortcut integration (1.4s)
+  ✓   8 modules/plants/e2e/plants.spec.js:124:1 › failed care saves retain the visible form and previous stored history (1.3s)
+  ✓   9 modules/plants/e2e/plants.spec.js:142:1 › plant interfaces follow shared Spanish without translating saved names and observations (1.3s)
+  ✓  10 modules/plants/e2e/plants.spec.js:155:1 › plant styles stay scoped and invalid imports leave the current plants intact (1.7s)
+  ✓  11 modules/plants/e2e/plants.spec.js:176:1 › a plant changed in another tab keeps the current draft and refuses a stale edit (2.6s)
+  ✓  12 modules/plants/e2e/plants.spec.js:191:1 › switching language preserves draft plant fields and an open care note (1.4s)
+  ✓  13 modules/plants/e2e/plants.spec.js:205:1 › plant details care logging and settings work after an offline reload (4.3s)
+
+  13 passed (28.9s)

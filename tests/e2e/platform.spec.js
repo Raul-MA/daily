@@ -2,6 +2,20 @@ import { test, expect } from '@playwright/test';
 
 const home = page => page.goto('/daily/#/');
 
+async function shellMatchesApp(page) {
+  const module = page.locator('.shell-main > [data-module]');
+  const styles = await module.evaluate(node => {
+    const style = getComputedStyle(node);
+    return { background: style.backgroundColor, color: style.color, font: style.fontFamily };
+  });
+  await expect(page.locator('html')).toHaveCSS('background-color', styles.background);
+  await expect(page.locator('.shell-header')).toHaveCSS('background-color', styles.background);
+  await expect(page.locator('.shell-footer')).toHaveCSS('background-color', styles.background);
+  await expect(page.locator('.shell-header .wordmark')).toHaveCSS('color', styles.color);
+  await expect(page.locator('.shell-header')).toHaveCSS('font-family', styles.font);
+  await expect(page.locator('.shell-footer')).toHaveCSS('font-family', styles.font);
+}
+
 async function settings(page) {
   await page.getByRole('link', { name: 'Settings', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Settings', exact: true })).toBeVisible();
@@ -35,6 +49,57 @@ test('all modules stay reachable and dashboard navigation creates no records', a
   await page.goBack();
   await expect(page.getByRole('heading', { name: 'Today', exact: true })).toBeVisible();
   expect(await page.evaluate(() => ({ ...localStorage }))).toEqual(before);
+});
+
+test('app backgrounds fill the viewport when switching apps', async ({ page }, testInfo) => {
+  await home(page);
+  const language = page.getByRole('button', { name: 'English', exact: true });
+  await language.hover();
+  await expect(language).toHaveCSS('opacity', '0.78');
+  const settingsLink = page.locator('.shell-header').getByRole('link', { name: 'Settings', exact: true });
+  await settingsLink.hover();
+  await expect(settingsLink).toHaveCSS('text-decoration-line', 'underline');
+  for (const width of [1600, 900, 390, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    for (const route of ['coffee/new', 'plants', 'games', 'time', 'piano', 'reading/picker', 'reading/review', 'whatsapp']) {
+      await page.evaluate(route => { location.hash = `#/${route}`; }, route);
+      const module = page.locator('.shell-main > [data-module]');
+      const expected = ({ time: 'time-budget', reading: 'reading' })[route.split('/')[0]] ?? route.split('/')[0];
+      await expect(module).toHaveAttribute('data-module', expected);
+      await expect(module).toBeVisible();
+      await shellMatchesApp(page);
+      await expect(async () => {
+        const bounds = await module.boundingBox();
+        expect(bounds.x).toBe(0);
+        expect(bounds.width).toBe(width);
+        expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width);
+      }).toPass();
+      if (route === 'coffee/new' && [1600, 390].includes(width)) await page.screenshot({ path: testInfo.outputPath(`coffee-${width}.png`) });
+    }
+    await page.evaluate(() => { location.hash = '#/'; });
+    await expect(page.locator('#dashboard')).toBeVisible();
+    await expect(page.locator('html')).toHaveCSS('background-color', 'rgb(242, 242, 247)');
+    expect(await page.locator('#dashboard').evaluate(node => node.getBoundingClientRect().left)).toBeGreaterThan(0);
+  }
+});
+
+test('shared header and footer follow app theme changes and system dark mode', async ({ page }) => {
+  for (const route of ['coffee/new', 'games', 'whatsapp']) {
+    await page.goto(`/daily/#/${route}`);
+    const module = page.locator('.shell-main > [data-module]');
+    await expect(module).toBeVisible();
+    if (route !== 'whatsapp') {
+      await module.evaluate(node => { node.dataset.theme = 'dark'; });
+      await shellMatchesApp(page);
+      await module.evaluate(node => { node.dataset.theme = 'light'; });
+      await shellMatchesApp(page);
+      await module.evaluate(node => { node.dataset.theme = 'system'; });
+    }
+    await page.emulateMedia({ colorScheme: 'dark' });
+    await shellMatchesApp(page);
+    await page.emulateMedia({ colorScheme: 'light' });
+    await shellMatchesApp(page);
+  }
 });
 
 test('shared language setting persists and leaves module user text unchanged', async ({ page }) => {

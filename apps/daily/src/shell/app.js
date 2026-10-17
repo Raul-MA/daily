@@ -8,6 +8,7 @@ import { createDailyState, DAILY_KEY } from '../../../../packages/data/src/daily
 import { startRouter, parseHash } from '../../../../packages/platform/src/router.js';
 import { renderShell } from './render.js';
 import { handleClick, handleChange } from './interactions.js';
+import { watchShellTheme } from './theme.js';
 export function mountShell(root, base) {
     const state = createDailyState(localStorage, navigator.language.startsWith('es') ? 'es' : 'en');
     const context = { root, base, state, moduleUI: {}, route: parseHash(location.hash), error: false, saved: false };
@@ -16,6 +17,7 @@ export function mountShell(root, base) {
     const stopCalendar = watchCalendar(window, () => calendarRefresh(context));
     const stopReading = context.reading.subscribe(() => refreshReadingWidgets(context));
     const stopState = state.subscribe(() => committed(context));
+    const stopTheme = watchShellTheme(root);
     const perform = (event) => {
         if (event.target instanceof Element && event.target.closest('[data-skip]')) {
             event.preventDefault();
@@ -55,6 +57,7 @@ export function mountShell(root, base) {
         stopState();
         stopReading();
         stopRouter();
+        stopTheme();
         root.removeEventListener('click', perform);
         root.removeEventListener('change', perform);
         window.removeEventListener('storage', storageChanged);

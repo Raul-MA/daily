@@ -25,7 +25,7 @@ export function discoverBrowser(module) {
   if (module !== 'general') return discover(module);
   const files = globSync('tests/e2e/*.spec.js').sort();
   const count = files.reduce((sum, file) => sum + [...readFileSync(file, 'utf8').matchAll(/^test\(/gm)].length, 0);
-  if (count !== 31) throw new Error(`General browser discovery mismatch: expected 31, found ${count}`);
+  if (count !== 33) throw new Error(`General browser discovery mismatch: expected 33, found ${count}`);
   return files;
 }
 

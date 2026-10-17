@@ -4,7 +4,7 @@ Updated: 2026-10-17. Repo: `/workspaces/daily`, branch `main`.
 
 ## Current status and resume
 
-**All planned local implementation and required verification are complete.** `npm run verify` finished with exit code 0. There are no active verification jobs or outstanding local implementation steps.
+**All planned local implementation and the preview styling follow-up are complete.** Required checks pass. No verification jobs or local implementation steps remain active.
 
 Work remains **local only**, using **plain HTML/CSS/JavaScript**. No workflows, pushes, Pages configuration or deployments are authorized. Preserve real Readwise/Reader requests for the user's later private-token checks. Do not request personal tokens or exports.
 
@@ -12,7 +12,14 @@ Work remains **local only**, using **plain HTML/CSS/JavaScript**. No workflows, 
 
 Local preview: `npm run dev`, then `http://127.0.0.1:5173/daily/`. Preparation copies native assets; rebuild after source edits.
 
-## Final verification
+## Preview feedback follow-up
+
+- 2026-10-17: standalone apps now fill the viewport width instead of sitting inside the gray shell frame. Internal app content sizing and dashboard/settings padding remain intact. Enabled buttons/menu summaries dim on mouse hover; links underline. Touch hover is excluded.
+- Shared header/footer colors and font follow the mounted app, including explicit and system dark-mode changes; Home restores the dashboard style. Theme observation excludes timer text updates.
+- Added two General browser cases covering all apps plus Daily Review at 1600/900/390/320px, dashboard reset, hover feedback and theme changes. General browser count is now 33 (191 total); unit count remains 300. All app suites and both retained Piano scripts pass in [sequential regression](../reports/app-width-all.txt). The final shared theme is also covered by fresh [General](../reports/app-style-general.txt), [Plants](../reports/app-style-plants.txt) and [Coffee](../reports/app-style-coffee.txt) runs, each exiting 0. Strict lint and syntax checks pass (787 JavaScript files); static preparation includes 680 assets.
+- The first new width check caught Plants' separate desktop limit; it is fixed without weakening assertions. WhatsApp's regenerated module captures were reviewed and their date/time-only churn discarded. Next: refresh the running local preview and review appearance; physical-device/API/release acceptance remains deferred as above.
+
+## Original full verification
 
 Complete evidence: [full verification](../reports/final-verification.txt) and [machine-readable summary](../reports/final-verification-summary.json). Tested runtime checkpoint: `83926e9`; subsequent changes are documentation/report updates only.
 

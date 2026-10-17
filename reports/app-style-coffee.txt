@@ -1,0 +1,72 @@
+Suite: coffee
+✔ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (7.844913ms)
+✔ drink type changes calculate composition and clear irrelevant water and milk fields (1.683829ms)
+✔ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (1.585256ms)
+✔ beans referenced by drinks cannot be deleted while unused beans can be removed (2.048028ms)
+✔ coffee filters and insights retain scored and unscored drink semantics (2.622177ms)
+✔ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (1.580035ms)
+✔ legacy replacement resets setup and normalizes absent drink composition fields (1.703325ms)
+✔ unsupported coffee backups and invalid bean input leave existing records unchanged (1.665044ms)
+✔ coffee dictionaries cover shared errors and preserve user text in either language (1.443ms)
+✔ coffee reads create no records and saves preserve unrelated shared modules (4.025704ms)
+✔ explicit coffee language changes commit with global language atomically (0.662094ms)
+✔ coffee imports preserve shared language and validate merged bean references (2.225058ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (1.28762ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (1.24423ms)
+✔ coffee rejects a future module payload without silently replacing it (0.520811ms)
+✔ coffee import previews are read-only and cancel leaves the current root intact (0.663597ms)
+✔ coffee import confirmation rejects stale previews and retains recovery on replacement (0.86377ms)
+✔ coffee malformed nested records and invalid settings fail before any shared write (1.563695ms)
+✔ coffee first tools setup saves its starter bean and settings in one root commit (1.704147ms)
+✔ coffee first tools setup quota failure leaves no starter bean or configured flag (0.657966ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 71.032493
+[WebServer] (node:43918) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 34 tests using 1 worker
+
+(node:43931) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/coffee/e2e/backup.spec.js:4:1 › legacy imports keep merge tools and trigger setup after replace (2.4s)
+  ✓   2 modules/coffee/e2e/backup.spec.js:60:1 › exports data and imports merge, replace, and invalid backups (2.5s)
+  ✓   3 modules/coffee/e2e/final-audit.spec.js:35:1 › coffee restored history filters refresh the translated status and actual list (2.0s)
+  ✓   4 modules/coffee/e2e/final-audit.spec.js:48:1 › coffee failed first tools Save retains setup and retries with one root replacement (1.9s)
+  ✓   5 modules/coffee/e2e/final-audit.spec.js:52:1 › coffee failed first tools Skip retains setup and retries with one root replacement (1.8s)
+  ✓   6 modules/coffee/e2e/final-audit.spec.js:56:1 › coffee notifications translate and expire at the original deadline through remounts (2.0s)
+  ✓   7 modules/coffee/e2e/final-audit.spec.js:72:1 › coffee Spanish import preview translates its merge mode without altering bean names (1.9s)
+  ✓   8 modules/coffee/e2e/final-audit.spec.js:82:1 › coffee history view deletion and export report quota failures without false success (2.1s)
+  ✓   9 modules/coffee/e2e/history-detail.spec.js:3:1 › sorts, filters, opens, edits, cancels, and deletes history entries (2.6s)
+  ✓  10 modules/coffee/e2e/history-detail.spec.js:57:1 › switches history between compact and detailed views and remembers the choice (2.6s)
+  ✓  11 modules/coffee/e2e/history-detail.spec.js:80:1 › compact history rows fit on mobile (1.8s)
+  ✓  12 modules/coffee/e2e/history-detail.spec.js:93:1 › new entries created through the UI are listed in history (2.8s)
+  ✓  13 modules/coffee/e2e/insights.spec.js:3:1 › shows empty insights and updates metrics from stored drinks (3.1s)
+  ✓  14 modules/coffee/e2e/new-shot.spec.js:3:1 › creates a complete espresso drink, previews ratio, and persists it (3.4s)
+  ✓  15 modules/coffee/e2e/new-shot.spec.js:26:1 › creates an americano with water to coffee ratio (2.7s)
+  ✓  16 modules/coffee/e2e/new-shot.spec.js:40:1 › creates a milk drink and clears hidden composition fields after type switch (2.5s)
+  ✓  17 modules/coffee/e2e/new-shot.spec.js:61:1 › manage button routes to settings and invalid drink shows validation toast (2.2s)
+  ✓  18 modules/coffee/e2e/new-shot.spec.js:73:1 › clear button empties the selected bean (1.8s)
+  ✓  19 modules/coffee/e2e/new-shot.spec.js:83:1 › score slider can be set after skipping (2.5s)
+  ✓  20 modules/coffee/e2e/new-shot.spec.js:95:1 › taste info buttons explain the rating fields (1.8s)
+  ✓  21 modules/coffee/e2e/offline.spec.js:6:1 › coffee forms history insights and beans remain available offline (4.4s)
+  ✓  22 modules/coffee/e2e/settings-data.spec.js:4:1 › creates, edits, deletes beans, and blocks deleting a used bean (2.1s)
+  ✓  23 modules/coffee/e2e/settings-data.spec.js:32:1 › saves settings and persists theme (2.8s)
+  ✓  24 modules/coffee/e2e/settings-data.spec.js:53:1 › switches to Spanish and persists translated UI (2.7s)
+  ✓  25 modules/coffee/e2e/settings-data.spec.js:72:1 › reminds when data has not been exported recently and records exports (1.9s)
+  ✓  26 modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export (1.7s)
+  ✓  27 modules/coffee/e2e/settings-data.spec.js:101:1 › asks for tools once and hides unavailable prep controls (1.0s)
+  ✓  28 modules/coffee/e2e/settings-data.spec.js:119:1 › skip tools setup saves no optional tools and entries keep explicit prep values (1.5s)
+  ✓  29 modules/coffee/e2e/shared.spec.js:4:1 › coffee detail and edit links reload without changing records (3.4s)
+  ✓  30 modules/coffee/e2e/shared.spec.js:23:1 › coffee language changes preserve unsaved values and derived previews (1.9s)
+  ✓  31 modules/coffee/e2e/shared.spec.js:39:1 › coffee stale drink edits retain their draft and preserve the other tab change (3.0s)
+  ✓  32 modules/coffee/e2e/shared.spec.js:58:1 › coffee import cancellation and future backups leave existing data intact (1.8s)
+  ✓  33 modules/coffee/e2e/shared.spec.js:71:1 › coffee failed preference saves keep the draft and previous persisted settings (1.8s)
+  ✓  34 modules/coffee/e2e/shared.spec.js:89:1 › coffee exporting preserves unsaved settings and stale settings cannot overwrite another tab (2.6s)
+
+  34 passed (1.4m)
