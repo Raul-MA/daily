@@ -1,0 +1,31 @@
+# Imported exercise player
+
+## Problem
+
+Deliberate practice needs reusable musical data, independent practice preferences and precise audio timing. Open **Piano → Library → Your music → Exercise player**, or `#/piano/reference/exercise-player`. The collection starts empty. Import via file picker, drop, or pasted JSON. No exercise is bundled or loaded automatically.
+
+Read the [format contract](exercise-player/format.md), [Schema](exercise-player/exercise.schema.json), [application types](exercise-player/types.md), [documentation example](exercise-player/example.json), and [ChatGPT transcription prompt](exercise-player/transcription-prompt.md).
+
+## How It Works
+
+- `src/player/schema.js` is the runtime structural source of truth; `types.js` exports its matching named JavaScript runtime types. `shape-validator.js` checks its supported schema vocabulary; `validator.js` adds IDs, references, bounds, maps and measure arithmetic. `scripts/piano-player-contract.mjs` generates documentation, types and the exact-schema transcription prompt.
+- `library.js` stores optional `playerLibrary` inside the existing version-1 Piano data. Older records remain valid. Content, selection, preferences and attachment references are separate. The existing service validates and commits atomically with Daily revision guards and shared backup/restore. Failed import/save preserves the existing selection and collection. Duplicate exercise IDs reject, avoiding silent replacement.
+- `attachments.js` stores image/PDF blobs in IndexedDB `daily-piano-scores-v1`. The key combines exercise ID and stable attachment ID. Attaching a file also records a generic scoreReference on the selected variant, with no note mapping. JSON and Daily backups contain references only. Use Download score to keep original files separately. Missing files never prevent playback. Deleting an exercise removes its preferences, references and associated blobs.
+- `timing.js` integrates the written tempo map without mutation. `transport.js` uses AudioContext time for position, pause/resume, rescheduling and loop transitions. `schedule.js` schedules sample sources and clicks at audio-clock times. Written tempo relationships remain intact at every speed.
+- `audio.js` reuses Piano's original MP3 recordings, choosing the nearest sample and transposing for MIDI pitches outside their range. A recording's tail is looped for long sustained events; very long notes and extreme transposition may sound less natural than a dedicated sampled instrument. Stop/disposal disconnects scheduled sources, releases pedal-derived holds and closes the context. Audio errors are visible.
+- Play/pause/stop, a tick seek field and selectable timeline events control position. Exact loops use quarter-beat coordinates from zero (one quarter = ticksPerQuarter); endpoints round to the nearest tick. Measure selection includes complete selected measures, including pickups. Stop resets to zero; Play enters the configured loop start if the position lies outside it.
+- Acceleration starts at its configured speed and adds percentage points after the configured number of repetitions, capped at target. Speed increments occur only at repetition boundaries; enabling acceleration sets the starting speed even for the first pass. Manual speed is used when acceleration is off. Written tempo is never edited. A silent gap precedes each subsequent count-in. Resume retains musical position and repetition, retriggers held notes for their remainder and omits a fresh count-in. Pausing during a count-in/gap resumes at the passage start.
+- `display.js` uses the shared exact-octave keyboard and an event timeline. Track names and accent labels supplement colors. Fingerings and imported subdivision labels are shown. Score files are reference previews; there is no claimed note-level score tracking. Loop and current-position overlays use the musical timeline.
+- Practice options persist per exercise: variant, speed, track levels/mutes, accents, metronome, count-in, gap, loop and acceleration. Musical JSON export excludes them; practice-settings export is separate. Rename and note corrections revalidate the entire exercise before saving.
+
+## Gotchas
+
+This audio player pauses when hidden and cancels on navigation/remount. It does not alter the existing timestamp-based guided practice session or its background continuation behavior. Playback never resumes automatically after reload. Musical content and settings survive reload; current playback position is transient.
+
+The original score can be replaced by attaching a file under a new attachment ID; duplicate IDs reject. Set the ID to an imported scoreReference's attachmentId to associate it. Without positional mapping, an attachment is never highlighted as though notes were tracked.
+
+The app remains plain JavaScript with no build framework, external audio library or new runtime dependency. Schema-shaped runtime types are documented as generated structural declarations. Photo transcription, MusicXML/MIDI adapters, input devices and scoring can later produce the same validated exercise model or consume the transport timeline.
+
+Verification includes domain tests in `test/player.test.mjs` and mounted browser tests in `e2e/player.spec.js`. Samples and player code enter the generated shared worker; documentation/example files remain outside the worker and collection. Physical iPhone audio/background behavior still requires device acceptance.
+
+The [user-supplied timing fixture](../test/fixtures/timing-test.json) adapts a truncated paste: thirteen complete events are preserved verbatim, with an assumed 960 TPQ, two 4/4 measures, a constant quarter-note tempo of 120, and length 7680. The dangling opening note fragment is omitted. Tests verify its leading rest, chord, octave, overlapping hands, accented triplet and final half-beat silence at normal/slow timing. The fixture stays outside the app and is imported only in isolated tests.

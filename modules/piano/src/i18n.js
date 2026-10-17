@@ -1,3 +1,4 @@
+import player from './translations/player.js';
 import fragments from './translations/fragments.js';
 import symbolic from './translations/symbolic.js';
 import corrections from './translations/corrections.js';
@@ -14,7 +15,7 @@ import { patterns } from './translations/patterns.js';
 import { pianoContext } from './js/context.js';
 import { interpolate, translatePattern } from './phrase-patterns.js';
 
-const spanish = { ...copy0, ...copy1, ...copy2, ...copy3, ...copy4, ...copy5, ...extra, ...controls, ...terms, ...corrections, ...symbolic, ...fragments, ...Object.fromEntries(patterns) };
+const spanish = { ...player, ...copy0, ...copy1, ...copy2, ...copy3, ...copy4, ...copy5, ...extra, ...controls, ...terms, ...corrections, ...symbolic, ...fragments, ...Object.fromEntries(patterns) };
 export const dictionaries = { en: Object.fromEntries(Object.keys(spanish).map(key => [key, key])), es: spanish };
 const folded = new Map(Object.keys(spanish).map(key => [key.toLowerCase(), key]));
 

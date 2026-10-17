@@ -1,0 +1,27 @@
+# Exercise format v1
+
+## Problem
+
+One import contract must work for arbitrary future exercises without code changes. [JSON Schema](exercise.schema.json), [matching application types](types.md), [complete example](example.json), and [paste-ready transcription prompt](transcription-prompt.md) share the runtime source `src/player/schema.js`. Regenerate them with `node scripts/piano-player-contract.mjs`. Documentation and test examples are never copied into the app's collection or asset inventory.
+
+## How It Works
+
+Use schemaVersion 1. IDs are nonempty strings (max 200 characters); unique exercise IDs in a collection, track IDs per exercise, variant IDs per exercise, and IDs within each event/region/measure/reference list. Every variant is a complete arrangement. Only schema fields are permitted outside free-form notation objects. Optional fields may be omitted, never null. ticksPerQuarter defaults to 960, integer 1–15360. All ticks are safe integers. quarterBpm is quarter notes per minute, positive and <=1000. Convert printed beat units before storing: quarterBpm = printed BPM multiplied by the number of quarters in its beat unit (eighth=100 becomes quarterBpm 50; dotted-quarter=60 becomes 90; half=60 becomes 120). Supported meter numerators are 1–32; denominators are 1,2,4,8,16,32.
+
+Timing is musical and independent of practice speed. Notes occupy [startTick,startTick+durationTicks); lengthTicks includes all trailing silence. Rests are gaps. Simultaneous events represent chords/octaves; hands overlap independently. Ties become ONE sustained event with optional notation metadata preserving written tie segments. Sustain pedal is separate per-track down/up events; pedal release extends sounding time until up, or variant end. Copy a global piano pedal marking to every affected track, not just the staff where it is printed. At a note release exactly coincident with pedal change, the new pedal state applies. No duplicate pedal track/tick positions. Pedal may occur at lengthTicks; notes may end there but cannot start there.
+
+Use 960 ticks per quarter normally: triplets 320, sixteenths 240, explicit triplet swing pairs 640/320. Choose another integer ticksPerQuarter when needed for exact tuplets. Store actual onset and duration; never ask the app to infer swing or apply it again. Include every sounded note in the selected variant. Expand repeats (including endings, D.C., D.S., coda and repeat-dependent tempo changes) into one linear playable timeline; preserve printed symbols only in notation metadata. Do not create hidden repeat instructions.
+
+Tempo and time-signature maps must start at tick 0 and be strictly increasing, with ticks < lengthTicks. Time-signature changes occur on measure boundaries. Measures are ordered, adjacent, nonoverlapping and cover [0,lengthTicks); each has a unique ID and display label. A full measure has numerator * ticksPerQuarter * 4 / denominator ticks. Set incomplete:true explicitly for pickups, short final bars, or other incomplete measures. Never pad a pickup to a full measure. Give repeated printed measures distinct IDs and sensible display labels.
+
+Subdivision regions are ordered, nonoverlapping [startTick,endTick), with positive integer stepTicks and a nonempty repeating labels array. For triplets, labels may be ["1","trip","LET"] per quarter or the complete counted phrase; labels are guidance only. Accents come ONLY from each note's boolean accent field, never from a label such as LET. Compound meter counting is separate from the quarter-note tempo unit: numerators greater than 3 and divisible by 3 group denominator units in threes. Thus 6/8, 9/8, 12/8 count dotted-quarter beats, and 6/4 counts dotted-half beats. Other meters count denominator beats.
+
+Pitch is integer MIDI 0–127 (C4=60). Velocity is integer 1–127; imported velocity remains meaningful with zero practice accent strength. Fingering is optional string (e.g. "1", "3-1"); voice and pitchSpelling are optional strings. notation is an optional JSON object for source-specific details, ties, written repeats, clefs, articulations and future positional score mapping. scoreReferences optionally identify an attachmentId, measureId and 1-based PDF page. Attachments live outside the exercise JSON; a missing attachment does not invalidate playback. Reference track IDs, variant IDs and measure IDs must exist.
+
+Practice preferences are NOT exercise content: speed, hand volume/mute, accent strength, metronome, count-in, loop range, gap and acceleration must not appear in exercise JSON. Only create alternate variants if explicitly requested; preserve printed musical facts in the written variant. Each alternate variant contains its own complete maps, measures and notes.
+
+## Gotchas
+
+The example has two 4/4 measures (0–3840 and 3840–7680), both hands, a simultaneous left-hand octave, a right-hand triplet with only its final note accented, a rest from 960 to 1920 in the right hand, sixteenths in measure 2, and trailing silence from 5760 to 7680. Quarter-note tempo changes from 120 to 100 at tick 3840. At 50% practice speed those tempi become 60 and 50; the entire timeline lasts 8.8 seconds.
+
+All event intervals and loops are half-open. A note at the loop end belongs to the next passage. Boundary-crossing sounds are cut exactly at the loop end; entering mid-note retriggers the sample for its remaining audible duration, including prior pedal holds. Loop gaps are fixed seconds and precede count-in. No audio, pedal or metronome state crosses a repetition boundary.

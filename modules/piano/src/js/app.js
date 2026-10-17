@@ -1,5 +1,6 @@
 import { validateRouteLoaders } from './components/navigation-data.js';
 export const routeLoaders = {
+  'exercise-player': () => import('../player/page.js'),
   'course': () => import('./pages/home.js'),
   'library': () => import('./pages/library.js'),
   'learn': () => import('./pages/learning-path.js'),

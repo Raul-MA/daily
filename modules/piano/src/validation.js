@@ -1,3 +1,4 @@
+import { validLibrary } from './player/library.js';
 import { validPrompt } from './prompt-validation.js';
 import { LESSONS } from './js/music/learning-path.js';
 import { DESTINATIONS } from './js/components/navigation-data.js';
@@ -33,7 +34,7 @@ function validHistory(value) { return validBasics(value) && nonnegative(value.co
 export function initialPiano() { return { lastExerciseId: null, practice: null, history: [], settings: { minutes: 10, piano: true } }; }
 function validSettings(value) { return Boolean(value && validMinutes(value.minutes) && typeof value.piano === 'boolean'); }
 export function validPiano(value) {
-  if (!value || !validPractice(value.practice) || !validSettings(value.settings)) return false;
+  if (!value || !validLibrary(value.playerLibrary) || !validPractice(value.practice) || !validSettings(value.settings)) return false;
   return validIdentity(value);
 }
 function validIdentity(value) {

@@ -1,0 +1,24 @@
+[data-module="piano"] .player-page { display: grid; gap: 1rem; max-width: 1100px; margin: auto; }
+[data-module="piano"] .player-page .card { padding: 1rem; min-width: 0; }
+[data-module="piano"] .player-row { display: flex; flex-wrap: wrap; align-items: end; gap: .8rem; margin-block: .7rem; }
+[data-module="piano"] .player-page label { display: grid; gap: .3rem; min-width: 0; max-width: 100%; }
+[data-module="piano"] .player-page :is(input, select, textarea) { color: var(--text); background: var(--surface); font: inherit; max-width: 100%; box-sizing: border-box; border: 1px solid var(--border); border-radius: .4rem; padding: .5rem; }
+[data-module="piano"] .player-page input[type="number"] { width: 10rem; }
+[data-module="piano"] .player-page textarea { width: 100%; }
+[data-module="piano"] .player-page .player-check { display: flex; align-items: center; gap: .4rem; }
+[data-module="piano"] .player-page button { min-height: 44px; }
+[data-module="piano"] .player-page fieldset { min-width: 0; padding: .6rem; }
+[data-module="piano"] .player-page summary { cursor: pointer; min-height: 44px; }
+[data-module="piano"] .player-page [role="alert"] { white-space: pre-wrap; overflow-wrap: anywhere; color: #b33f31; }
+[data-module="piano"] .player-timeline { position: relative; height: 130px; overflow: auto; border: 1px solid #999; border-radius: .5rem; margin-block: 1rem; }
+[data-module="piano"] .player-event { position: absolute; min-height: 28px !important; height: 28px; min-width: 14px; overflow: hidden; border: 1px solid currentColor; padding: 0; border-radius: 3px; }
+[data-module="piano"] .player-track-0 { color: #fff; background: #326d88; }
+[data-module="piano"] .player-track-1 { color: #fff; background: #875237; }
+[data-module="piano"] .player-loop { position: absolute; top: 0; bottom: 0; background: #79947725; border-inline: 2px solid #637e63; pointer-events: none; }
+[data-module="piano"] [data-player-cursor] { position: absolute; top: 0; bottom: 0; border-left: 2px solid #ad4329; pointer-events: none; }
+[data-module="piano"] [data-player-score] :is(img, object) { display: block; max-width: 100%; width: 100%; margin-top: .5rem; }
+[data-module="piano"] [data-player-score] object { height: 70vh; }
+@media (max-width: 480px) { [data-module="piano"] .player-row > label { flex: 1 1 125px; } [data-module="piano"] .player-page { gap: .6rem; } }
+[data-module="piano"] .player-page { min-width: 0; width: 100%; grid-template-columns: minmax(0, 1fr); }
+[data-module="piano"] .player-page label { grid-template-columns: minmax(0, 1fr); }
+[data-module="piano"] .player-page input[type="file"] { width: 100%; min-width: 0; }

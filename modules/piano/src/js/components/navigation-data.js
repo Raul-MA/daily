@@ -2,8 +2,8 @@ import { catalog0 } from './navigation-catalog0.js';
 import { catalog1 } from './navigation-catalog1.js';
 import { catalog2 } from './navigation-catalog2.js';
 import { catalog3 } from './navigation-catalog3.js';
-export const ACTIVITY_LABELS = { theory: 'Theory', practice: 'Practice', cards: 'Cards' };
-export const DESTINATIONS = [...catalog0, ...catalog1, ...catalog2, ...catalog3];
+export const ACTIVITY_LABELS = { theory: 'Theory', practice: 'Practice', cards: 'Cards', player: 'Open' };
+export const DESTINATIONS = [...catalog0, ...catalog1, ...catalog2, ...catalog3, { id: 'exercise-player', activity: 'player', title: 'Exercise player', path: '/exercise-player', module: 'Practice', keywords: 'import JSON score deliberate practice loops slow piano' }];
 
 
 const destinationsById = new Map(DESTINATIONS.map(destination => [destination.id, destination]))
@@ -42,6 +42,7 @@ export const PRIMARY_LINKS = [
 ]
 
 export const LIBRARY_GROUPS = [
+  { label: 'Your music', description: 'Import and practice your own exercises.', topics: [{ label: 'Exercise player', links: [{ id: 'exercise-player', kind: 'Open', path: '/exercise-player' }] }] },
   {
     label: 'Foundations',
     description: 'Get to know notes, intervals, and scales.',

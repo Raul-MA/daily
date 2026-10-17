@@ -1,0 +1,68 @@
+{
+  "scope": "Daily imported Piano player; local only",
+  "piano": {
+    "unit": {
+      "passed": 78,
+      "report": "piano-player-unit.txt"
+    },
+    "nativeBrowser": {
+      "existingPassed": 14,
+      "playerPassed": 5,
+      "total": 19,
+      "reports": [
+        "piano-player-regression.txt",
+        "piano-player-browser.txt"
+      ]
+    },
+    "retainedBrowserScripts": {
+      "passed": true,
+      "libraryRoutes": 45,
+      "phoneWidths": [
+        320,
+        360,
+        390
+      ],
+      "offlineReload": true,
+      "report": "piano-player-regression.txt"
+    }
+  },
+  "general": {
+    "unitPassed": 85,
+    "nativeBrowserPassed": 33,
+    "report": "piano-player-general.txt"
+  },
+  "lint": {
+    "passed": true,
+    "report": "piano-player-lint.txt"
+  },
+  "syntax": {
+    "passed": true,
+    "files": 812,
+    "report": "piano-player-syntax.txt"
+  },
+  "build": {
+    "passed": true,
+    "assets": 701,
+    "report": "piano-player-build.txt"
+  },
+  "userFixture": {
+    "path": "modules/piano/test/fixtures/timing-test.json",
+    "completeEventsPreserved": 13,
+    "adaptation": {
+      "ticksPerQuarter": 960,
+      "quarterBpm": 120,
+      "meter": "4/4",
+      "lengthTicks": 7680,
+      "incompleteOpeningFragment": "omitted"
+    },
+    "unitTimingSpeed": 0.5,
+    "browserPracticeSpeed": 0.25,
+    "includedInAppAssets": false
+  },
+  "limits": [
+    "Physical iPhone audio/background acceptance remains deferred.",
+    "Headless audio scheduling and source cancellation were verified; human listening quality was not assessed.",
+    "Unaffected app-specific suites were not rerun; shared Daily integration was rerun."
+  ],
+  "remoteChanges": false
+}

@@ -1,6 +1,6 @@
 {
   "commit": "3fc564302b2c10642315d97a603aeba3c73a6ed0",
-  "status": "mounted native UI; full piano suite and shared/affected local regressions pass; final release gates remain",
+  "status": "native Piano and imported player complete locally; Piano plus shared General checks pass; physical/release acceptance remains deferred",
   "files": [
     {
       "source": "toniq/js/music/chords.js",
@@ -957,5 +957,17 @@
     "intentionalCorrections": "Four modal parent-key descriptions now say below, consistent with existing examples; transpose-based red/green test.",
     "acceptance": "58 unit and 14 native browser cases plus both retained original broad scripts; current evidence in docs/progress.md"
   },
-  "validation": "Keyboard payloads use original voicing calculations; invalid pitches/offsets and out-of-range timestamps reject without regenerating saved prompts."
+  "validation": "Keyboard payloads use original voicing calculations; invalid pitches/offsets and out-of-range timestamps reject without regenerating saved prompts.",
+  "authoredPlayer": {
+    "source": "native Daily feature; no legacy source copy",
+    "runtime": "modules/piano/src/player/",
+    "contract": "modules/piano/docs/exercise-player/",
+    "unit": [
+      "modules/piano/test/player.test.mjs",
+      "modules/piano/test/player-invariants.test.mjs",
+      "modules/piano/test/player-user-timing.test.mjs"
+    ],
+    "browser": "modules/piano/e2e/player.spec.js",
+    "userTimingFixture": "modules/piano/test/fixtures/timing-test.json"
+  }
 }

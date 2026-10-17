@@ -6,6 +6,8 @@
 - [Behavior and boundaries](docs/behavior.md): persistence, presentation pacing, native routes and source parity.
 - [Source mapping](../../reports/piano-source-map.json) and [migration inventory](../../reports/migration-test-inventory.md).
 
+- [Imported exercise player](docs/exercise-player.md): JSON contract, transcription prompt, audio timeline, loops, preferences and score attachments.
+
 ## Musical invariants
 
 - [Keyboard placement](docs/keyboard-diagram.md): exact octaves, spelling, ranges and accessible metadata.
@@ -13,7 +15,7 @@
 
 ## Commands
 
-- `npm run test:piano`: 58 unit cases, fourteen native browser cases, both retained original browser scripts.
+- `npm run test:piano`: 78 unit cases, nineteen native browser cases, both retained original browser scripts.
 
 ## Key Files
 
