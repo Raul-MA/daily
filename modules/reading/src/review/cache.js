@@ -1,3 +1,4 @@
+import { validTimestamp } from '../timestamps.js';
 import { readCache, writeCache, removeCache } from '../cache-storage.js';
 import { emptyReview, normalizeReview } from './model.js';
 
@@ -6,7 +7,7 @@ export function createReviewCache(options) {
   const identity = options.accountId ?? (() => '');
   function read() {
     const saved = readCache(options.cacheStorage, KEY, identity());
-    if (!saved || !Number.isFinite(saved.fetchedAt)) return emptyReview();
+    if (!saved || !validTimestamp(saved.fetchedAt) || saved.fetchedAt > (options.now ?? Date.now)()) return emptyReview();
     try {
       const record = saved.value;
       const value = normalizeReview({ review_id: record.id, review_url: record.url, review_completed: record.completed, highlights: record.highlights });

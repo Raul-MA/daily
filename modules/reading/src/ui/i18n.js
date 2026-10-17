@@ -1,3 +1,4 @@
+import { authoredReaderError } from './errors.js';
 const staticSpanish = {
   'Reader Picker home': 'Inicio de Reader', 'Open settings': 'Abrir configuración', Settings: 'Configuración',
   'Pick something to finish.': 'Elige algo para terminar.',
@@ -29,6 +30,7 @@ const staticSpanish = {
   'Maximum remaining minutes (0 = any)': 'Máximo de minutos restantes (0 = sin límite)', 'Save Reader preferences': 'Guardar preferencias de Reader',
 };
 const en = {
+  clearConfirm: 'Remove Reader token, cached documents, and saved Reader preferences? Other apps are kept.', invalidJSON: 'The file is not valid JSON. Nothing has been replaced.',
   summary: 'Get {count} with {time}, prioritizing started items, then {locations}.', uniformSummary: 'Get {count} with {time}, choosing uniformly within the scanned pool.', oneItem: 'one item', options: '{count} options', window: '{minutes} minutes or less remaining', any: 'any amount of time remaining',
   left: '{count} min left', progress: '{count}% read', unread: 'Unread', unknown: 'Unknown duration', total: '{count} min total', open: 'Open in Reader ↗',
   inbox: 'Inbox', later: 'Later', shortlist: 'Shortlist', loading: 'Finding unfinished items…', found: '{count} items found.',
@@ -40,6 +42,7 @@ const en = {
   storage: 'Saving failed. The previous saved data has been kept.', aborted: 'Request canceled or timed out.',
 };
 const es = {
+  clearConfirm: '¿Eliminar el token, los documentos en caché y las preferencias de Reader? Se conserva el resto de las aplicaciones.', invalidJSON: 'El archivo no es JSON válido. No se ha reemplazado nada.',
   summary: 'Elige {count} con {time}, priorizando las iniciadas y luego {locations}.', uniformSummary: 'Elige {count} con {time}, al azar entre las lecturas consultadas.', oneItem: 'una lectura', options: '{count} opciones', window: '{minutes} minutos restantes como máximo', any: 'cualquier duración restante',
   left: '{count} min restantes', progress: '{count}% leído', unread: 'Sin leer', unknown: 'Duración desconocida', total: '{count} min en total', open: 'Abrir en Reader ↗',
   inbox: 'Entrada', later: 'Más tarde', shortlist: 'Selección', loading: 'Buscando lecturas pendientes…', found: '{count} lecturas encontradas.',
@@ -70,11 +73,16 @@ export function translateMarkup(host, language) {
   }
 }
 export function readerError(language, error) {
+  return transportError(language, error) ?? authoredReaderError(language, error.message) ?? categorizedError(language, error) ?? error.message;
+}
+function transportError(language, error) {
   if (error.retryAfterSeconds) return readerText(language, 'rate', { seconds: error.retryAfterSeconds });
   if (error.status) return readerText(language, error.status === 401 ? 'invalidToken' : 'failed', { status: error.status });
+}
+function categorizedError(language, error) {
+  if (error.name === 'SyntaxError') return readerText(language, 'invalidJSON');
   if (/changed|conflict/i.test(error.message)) return readerText(language, 'conflict');
-  if (/quota|storage/i.test(error.message)) return readerText(language, 'storage');
+  if (/quota|storage|full|security/i.test(`${error.name} ${error.message}`)) return readerText(language, 'storage');
   if (/Failed to fetch|NetworkError/i.test(error.message)) return readerText(language, 'network');
   if (/abort|time.*out/i.test(error.message)) return readerText(language, 'aborted');
-  return error.message;
 }

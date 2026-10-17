@@ -1,3 +1,4 @@
+import { readerError } from './ui/i18n.js';
 import { readingMetadataText } from './ui/freshness.js';
 import { element } from './ui/cards.js';
 
@@ -14,7 +15,7 @@ export function readerWidget(service, language) {
         const link = element('a', 'module-link', document.title);
         link.href = document.url;
         link.rel = 'noopener noreferrer';
-        link.addEventListener('click', event => { try { service.remember(document); } catch (error) { event.preventDefault(); const alert = element('p', 'save-alert', error.message); alert.setAttribute('role', 'alert'); node.append(alert); } });
+        link.addEventListener('click', event => { try { service.remember(document); } catch (error) { event.preventDefault(); const alert = element('p', 'save-alert', readerError(language, error)); alert.setAttribute('role', 'alert'); node.append(alert); } });
         node.append(link);
       }
     }

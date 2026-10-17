@@ -38,7 +38,9 @@ async function previewFile(context, form, copy) {
     context.ui.readerImportPreview = context.service.previewImport(text);
     message(form, copy.preview);
     draw(context, form, copy);
-  } catch (error) { message(form, readerError(context.language, error)); }
+  } catch (error) {
+    if (!context.disposed && job === context.ui.readerImportJob) message(form, readerError(context.language, error));
+  }
 }
 function confirmed(context, form, copy) {
   try {
@@ -77,9 +79,11 @@ export function mountReadingBackup(context) {
     catch (error) { message(form, readerError(context.language, error)); }
   }, { signal });
   form.querySelector('#reader-import-recovery').addEventListener('click', () => {
-    downloadJSON(context.service.exportRecovery(), 'daily-recovery.json');
-    context.ui.readerImportRecovery = true;
-    draw(context, form, copy);
+    try {
+      downloadJSON(context.service.exportRecovery(), 'daily-recovery.json');
+      context.ui.readerImportRecovery = true;
+      draw(context, form, copy);
+    } catch (error) { message(form, readerError(context.language, error)); }
   }, { signal });
   form.querySelector('#reader-import-confirm').addEventListener('click', () => confirmed(context, form, copy), { signal });
   form.querySelector('#reader-import-cancel').addEventListener('click', () => cancel(context, form, copy), { signal });

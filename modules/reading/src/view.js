@@ -10,7 +10,7 @@ import { initialReading } from './validation.js';
 
 function isInstalled() { return window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true; }
 function clear(context) {
-  if (!window.confirm('Remove Reader token, cached documents, and saved Reader preferences? Other apps are kept.')) return;
+  if (!window.confirm(readerText(context.language, 'clearConfirm'))) return;
   context.service.save({ ...context.service.read(), ...initialReading() });
   forget(context);
   context.config = { ...context.service.read().settings, open: false };

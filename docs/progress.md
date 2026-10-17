@@ -8,7 +8,7 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore are connected and locally tested.** The last complete all-app run is `combined-backup-all.txt` at `da523d1`, including both broad Piano scripts. Later per-app checkpoints appear below; final whole-PWA verification still must run after the remaining localization/audit work. Full restore validates module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** Piano `6788dc2` and the final Time Budget lifecycle fixes are accepted locally. `time-permission-lifecycle-scope.txt` passes all 23 unit/23 browser; strict lint passes. Continue with Reader's remaining authored error/confirmation localization and timestamp bounds, with red contracts before fixes. Then finish shared raw-storage recovery, persistent-storage request, activity bounds and concurrency/form/update audit, and run full verification. Device/live API/Things checks and original-app releases remain deferred. No remote work.
+**Exact next step:** Reader final audit is accepted: `reader-final-audit-scope.txt` passes all 57 unit/31 browser cases; strict lint passes. Piano `6788dc2` and Budget `82835e8` are also accepted locally. Continue the shared storage recovery/persistence/activity-bound audit: add red contracts for raw recovery from the attention screen, preserve only the three owned root keys, require a recovery download and validated preview before replacement, retain invalid/future/blocked/quota/stale data, and request durable storage where available. Finish concurrency/form/update documentation against actual guarantees, then run full verification. Device/live API/Things checks and original-app releases remain deferred. No remote work.
 
 ## Verified current work
 
@@ -24,7 +24,7 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 | Games | 17 unit + 34 browser cases pass | `reports/games-localization-scope.txt` |
 | Time Budget | 23 unit + 23 browser cases pass | `reports/time-permission-lifecycle-scope.txt` |
 | Piano | 58 unit + 14 native browser cases; both original broad scripts pass | `reports/piano-localization-scope.txt` |
-| Reader | 54 unit + 30 browser cases pass | `reports/legacy-reader-scope.txt` |
+| Reader | 57 unit + 31 browser cases pass | `reports/reader-final-audit-scope.txt` |
 | WhatsApp | 12 unit + nine browser cases pass | `reports/legacy-whatsapp-scope.txt` |
 | Whole migration | Local workflow checks all pass; Stage 8 migration/localization/device gates remain incomplete | `reports/combined-backup-all.txt` |
 
@@ -406,3 +406,14 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - Next: wait for session 85819 to finish before running `node scripts/test.mjs time-budget --report reports/time-permission-lifecycle-scope.txt`. Update module docs/mapping, save this local checkpoint, then continue remaining Reader/activity timestamp bounds and shared recovery/persistence/concurrency audit.
 
 - Final Budget acceptance: `time-permission-lifecycle-scope.txt` passes 23 unit and 23 browser cases; lint passes. The first correction caught disposal but not a URL change before hashchange cleanup; `time-permission-navigation-race-red.txt` preserves that genuine remaining failure (22 existing cases pass). Capturing/checking the start route closes that gap; no assertions were weakened. Sessions 85819, 99385 and 93407 have all finished. Next: Reader final audit, sequentially.
+
+## Reader final audit after Budget `82835e8`
+
+- Three new unit contracts reproduce untranslated authored failures, acceptance of unrenderable saved pick timestamps and invalid/future disposable cache timestamps (`reader-final-audit-unit-red.txt`). All three pass after implementation in `reader-final-audit-unit.txt`; strict lint passes.
+- The new browser contract first fails genuinely on raw “full” after a quota-blocked item save; all 30 existing browser cases pass (`reader-final-audit-red.txt`). It additionally checks Home, localized cancel-only destructive confirmation, guarded recovery download, unchanged root and no uncaught errors.
+- Initial new-file naming collided with the existing two-case localization file. Restored that file byte-for-byte from HEAD before the browser red and put the new case in `final-audit.spec.js`. `reader-final-audit-discovery-red.txt` is harness evidence, not behavioral red. No original assertions were removed.
+- Current final scope is session 19053, `reader-final-audit-scope.txt`, requiring 57 unit/31 browser. Docs/source mapping are updated. Wait before any other browser/build; save accepted checkpoint after green, then continue shared storage recovery/persistence/activity bounds and final concurrency/form/update audit.
+
+- Reader verification follow-up: 57 unit pass and all 30 retained browser cases pass. The new browser case passes Reader/Home error localization and Spanish confirmation, then exposed its own missing setup: the recovery button is intentionally hidden until a valid import preview exists. `reader-recovery-fixture-red.txt` records this fixture failure; the test now selects the valid synthetic Reader backup and asserts preview visibility before blocking reads. No product assertions were weakened. Final rerun is session 19053. The original behavioral red remains `reader-final-audit-red.txt` (raw “full” error).
+
+- Reader final acceptance: session 19053 finished successfully; `reader-final-audit-scope.txt` passes all 57 unit/31 browser. Strict lint passes. Original localization assertions are byte-for-byte unchanged. Real Readwise endpoints and private-token/physical acceptance remain untouched and deferred. Next: shared recovery/persistence/activity-bound audit, then full verification.

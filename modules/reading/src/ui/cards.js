@@ -1,5 +1,5 @@
 import { readingMetadataText } from './freshness.js';
-import { readerText } from './i18n.js';
+import { readerText, readerError } from './i18n.js';
 import { getRemainingMinutes, parseReadingMinutes, normalizeProgressValue, validateReaderUrl } from '../metadata.js';
 import { field } from './fields.js';
 
@@ -20,7 +20,7 @@ export function card(context, doc, index) {
   const link = element('a', 'result-card');
   link.href = validateReaderUrl(doc.url);
   link.rel = 'noopener noreferrer';
-  link.addEventListener('click', event => { try { context.service.remember(doc); } catch (error) { event.preventDefault(); status(context, error.message, 'error'); } });
+  link.addEventListener('click', event => { try { context.service.remember(doc); } catch (error) { event.preventDefault(); status(context, readerError(context.language, error), 'error'); } });
   const top = element('div', 'result-top');
   top.append(element('h2', 'result-title', doc.title));
   if (Number.isInteger(index)) top.append(element('span', 'result-index', String(index + 1).padStart(2, '0')));

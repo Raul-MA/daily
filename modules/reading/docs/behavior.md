@@ -46,3 +46,11 @@ Stage 8 import-cancel audit: `reading-import-discard-red.txt` records 29 browser
 ## Prepared old-app exporter
 
 A separate read-only page and patch are prepared in [legacy/exporters/reader](../../../legacy/exporters/reader/README.md). It reads v2 preferences, or v1 only when v2 is absent, and whitelists known settings. Legacy token properties and remember-token options are excluded. The remembered-item key is read only when enabled; minimized safe metadata excludes bodies and unknown fields. Separate token/cache keys are never read. Malformed data fails unchanged rather than resetting or falling back to older settings. Import uses the existing protected `reader-picker` format and requires token reentry in Daily. The pinned source checkout and installed apps remain untouched; release and physical migration are deferred.
+
+## Final locale and recovery boundaries
+
+Authored request/import/review errors have exact EN/ES presentation. Status codes and throttling retain their structured messages; the changed-latest-review error explicitly requests refresh rather than claiming a form conflict. Unknown external error detail and fetched article titles remain verbatim. Item-save failures use the same translator in Reader and Home, prevent navigation and retain the previous root. The destructive Reader-only confirmation follows the shared language.
+
+Persisted pick timestamps reject finite values outside the JavaScript Date range. Disposable metadata/review caches with invalid, negative or future timestamps are ignored; saved picks remain unchanged. A clock moving backward therefore cannot keep a cached pool fresh indefinitely. Recovery downloads report storage failures visibly and set the recovery gate only after a successful download. Superseded/disposed file-read failures cannot replace a current preview message.
+
+These local checks use mocked Readwise responses. Real endpoint requests and fallback links remain unchanged; private-token and installed-iPhone acceptance remain deferred.

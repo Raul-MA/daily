@@ -110,5 +110,18 @@
     "browserContracts": 1,
     "sourceModified": false,
     "release": "deferred"
+  },
+  "finalAudit": {
+    "contracts": "57 unit / 31 native browser cases; original 30 browser assertions retained.",
+    "changes": [
+      "Exact authored error and Reader-only confirmation localization; item-save failures localized in Reader and Home.",
+      "Bounded saved pick timestamps and invalid/future disposable cache rejection.",
+      "Guard recovery downloads and superseded/disposed file-read failures."
+    ],
+    "redEvidence": [
+      "reports/reader-final-audit-unit-red.txt",
+      "reports/reader-final-audit-red.txt"
+    ],
+    "harnessCorrection": "Initial new test file name collided with an existing file; existing file restored byte-for-byte from HEAD, new contract moved to final-audit.spec.js before browser red."
   }
 }

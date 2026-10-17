@@ -7,7 +7,7 @@
 
 ## Commands
 
-- `npm run test:reading`: 54 unit and 30 browser cases; legacy exporter contracts add three unit cases to the prior local acceptance checkpoint.
+- `npm run test:reading`: 57 unit and 31 browser cases; legacy exporter contracts add three unit cases to the prior local acceptance checkpoint.
 - Source baseline: `node scripts/test.mjs reading --baseline http://127.0.0.1:8767/.daily-reader-source/ --report reports/baseline-reading-browser.txt` with the workspace static server running.
 
 ## Key Files
@@ -15,6 +15,7 @@
 - `src/service.js`, `src/service-actions.js`, `src/validation.js`: versioned settings/picks and stale/failed-write protection.
 - `src/metadata.js`, `src/selection.js`, `src/config.js`: duration, sampling and shortcut rules.
 - `src/client.js`, `src/request.js`, `src/rate-limit.js`, `src/cache.js`, `src/credentials.js`, `src/account-epoch.js`: real requests, disposable metadata and account isolation.
+- `src/timestamps.js`, `src/ui/errors.js`: bounded persisted/cache timestamps and exact authored error translations.
 - `src/view.js`, `src/ui/`, `src/preferences.js`: source picker appearance, shared preferences and language drafts.
 - `src/review/`: latest-review client, explicit completion, ordinary highlights and conditional Q&A presenter.
 - `src/imports.js`, `src/backup-ui.js`: validated preview/recovery/confirmation and credential-free exports.
