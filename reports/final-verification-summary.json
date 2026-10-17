@@ -1,0 +1,61 @@
+{
+  "command": "npm run verify",
+  "exitCode": 0,
+  "date": "2026-10-17",
+  "runtimeCheckpoint": "83926e9",
+  "syntaxFiles": 786,
+  "assets": 679,
+  "unit": 300,
+  "browser": 189,
+  "pianoBroadScripts": 2,
+  "scopes": [
+    {
+      "scope": "general",
+      "unit": 85,
+      "unitFailures": 0,
+      "browser": 31
+    },
+    {
+      "scope": "plants",
+      "unit": 28,
+      "unitFailures": 0,
+      "browser": 13
+    },
+    {
+      "scope": "coffee",
+      "unit": 20,
+      "unitFailures": 0,
+      "browser": 34
+    },
+    {
+      "scope": "games",
+      "unit": 17,
+      "unitFailures": 0,
+      "browser": 34
+    },
+    {
+      "scope": "time-budget",
+      "unit": 23,
+      "unitFailures": 0,
+      "browser": 23
+    },
+    {
+      "scope": "piano",
+      "unit": 58,
+      "unitFailures": 0,
+      "browser": 14
+    },
+    {
+      "scope": "reading",
+      "unit": 57,
+      "unitFailures": 0,
+      "browser": 31
+    },
+    {
+      "scope": "whatsapp",
+      "unit": 12,
+      "unitFailures": 0,
+      "browser": 9
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 ## Start Here
 
 - [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Local only, no workflows or pushes; API token checks are deferred.
-- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. The shared shell, settings, routing, timestamp activities and offline lifecycle are implemented in plain HTML/CSS/JavaScript; plants, Coffee, Games and Time Budget and piano are connected; Reader also passes local workflow checks; WhatsApp also passes local workflow checks. Stage 8 final whole-PWA verification/device gates remain open.
+- [Implementation plan](docs/pwa-consolidation-plan.md) defines the gates. All seven native apps, shared shell, timestamp activities, EN/ES, recovery and offline updates pass full local verification. Stage 8 physical-device/API/coexistence and release acceptance remain deferred.
 
 ## Commands
 
@@ -14,6 +14,7 @@
 
 ## Key Files
 
+- [Checkpoint history](docs/implementation-history.md): archived evidence; current instructions remain in progress.
 - [Source test mapping](reports/migration-test-inventory.md) and [provenance](reports/source-tests.json).
 - `scripts/test.mjs`: sequential orchestration; `scripts/discovery.mjs`: required test counts.
 - `packages/eslint-config/index.mjs`: one shared blocking policy.
@@ -35,7 +36,7 @@
 
 - The test-only absent-module loader permits discovery and throws when missing behavior is exercised; it never supplies fake successful behavior.
 - Baseline runs target original code in isolated contexts. They do not prove the new PWA works.
-- Time Budget characterization was authored before its port. Reader source characterization and mounted UI checks pass; General and affected regressions pass in `reader-shared-regressions.txt`. All feature scopes pass local checks in `all-with-whatsapp.txt`; this does not complete Stage 8.
+- Time Budget characterization was authored before its port. Reader source characterization and mounted UI checks pass; General and affected regressions pass in `reader-shared-regressions.txt`. All feature scopes pass local checks in `reports/final-verification.txt`; physical/release Stage 8 acceptance remains deferred.
 
 ## Documentation Rules
 
