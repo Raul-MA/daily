@@ -1,9 +1,11 @@
+import { exerciseState, resumeExercise, exerciseCleanup } from '../../exercise-state.js';
+import { copy } from '../../i18n.js';
 import { getKeyboardVoicing } from '../music/notes.js'
 import { createExerciseShell, buildExerciseCardHTML } from '../components/exercise-shell.js'
 import { randomIntervalQuestion, INTERVAL_NAMES } from '../music/intervals.js'
 
 export default function render(container) {
-  let state = { question: null, revealed: false }
+  let state = exerciseState({ question: null, revealed: false })
 
   function next(filter) {
     state = { question: randomIntervalQuestion(filter), revealed: false }
@@ -15,16 +17,16 @@ export default function render(container) {
     if (!q) return
 
     const questionHTML = `
-      <span class="label">Starting note</span>
-      <span class="note-display">${q.root}</span>
-      <span class="label">Find:</span>
-      <span class="question">${q.interval.name}</span>
+      <span class="label">${copy("Starting note")}</span>
+      <span class="note-display">${copy(q.root)}</span>
+      <span class="label">${copy("Find:")}</span>
+      <span class="question">${copy(q.interval.name)}</span>
     `
 
     const answerHTML = `
-      <span class="answer-label">Result</span>
-      <span class="answer-main">${q.result}</span>
-      <span class="answer-sub">${q.interval.semitones} semitones &nbsp;·&nbsp; ${q.interval.abbr}</span>
+      <span class="answer-label">${copy("Result")}</span>
+      <span class="answer-main">${copy(q.result)}</span>
+      <span class="answer-sub">${copy(q.interval.semitones)} ${copy("semitones &nbsp;·&nbsp;")} ${copy(q.interval.abbr)}</span>
     `
 
     shell.renderCard(buildExerciseCardHTML({
@@ -47,6 +49,7 @@ export default function render(container) {
     onRandom: (filter) => next(filter),
   })
 
-  next([])
-  return () => shell.destroy()
+  const view = { container, get state() { return state }, next, update };
+  resumeExercise(view)
+  return exerciseCleanup(view, () => shell.destroy())
 }

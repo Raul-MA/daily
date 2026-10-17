@@ -55,5 +55,5 @@ export function connectPiano(state, clock = () => Date.now()) {
     if (!pool[index]) throw new Error('Invalid random piano exercise selection.');
     return pool[index].id;
   }
-  return { read, save, snapshot, startSession, openExercise, pickExercise, stop: () => undefined, ...practiceActions({ read, save, snapshot, clock }) };
+  return { language: () => state.read().value.preferences.language, read, save, snapshot, startSession, openExercise, pickExercise, stop: () => undefined, ...practiceActions({ read, save, snapshot, clock }) };
 }

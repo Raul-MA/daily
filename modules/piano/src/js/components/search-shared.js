@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { LESSONS } from '../music/learning-path.js'
 import { DESTINATION_SEARCH_ENTRIES, getDestination } from './navigation-data.js'
 const SEARCH_INDEX = [
@@ -11,13 +12,14 @@ const SEARCH_INDEX = [
 ]
 function search(query) {
   if (!query || query.trim().length < 1) return []
-  const q = query.trim().toLowerCase()
+  const q = normalized(query.trim())
   const results = []
 
-  for (const entry of SEARCH_INDEX) {
-    const titleMatch    = entry.title.toLowerCase().includes(q)
-    const moduleMatch   = entry.module.toLowerCase().includes(q)
-    const keywordMatch  = entry.keywords.toLowerCase().includes(q)
+  for (const source of SEARCH_INDEX) {
+    const entry = localizedEntry(source);
+    const titleMatch    = normalized(entry.title).includes(q)
+    const moduleMatch   = normalized(entry.module).includes(q)
+    const keywordMatch  = normalized(entry.keywords).includes(q)
 
     if (titleMatch || moduleMatch || keywordMatch) {
       results.push({ ...entry, score: resultScore(titleMatch, moduleMatch) })
@@ -32,4 +34,10 @@ export { LESSONS, DESTINATION_SEARCH_ENTRIES, getDestination, SEARCH_INDEX, sear
 function resultScore(titleMatch, moduleMatch) {
   if (titleMatch) return 2;
   return moduleMatch ? 1 : 0;
+}
+
+function normalized(text) { return text.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase(); }
+function localizedEntry(entry) {
+  const terms = entry.keywords.split(/\s+/).map(word => copy(word)).join(' ');
+  return { ...entry, title: copy(entry.title), module: copy(entry.module), keywords: `${entry.keywords} ${copy(entry.keywords)} ${terms}` };
 }

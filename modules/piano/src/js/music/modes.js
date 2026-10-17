@@ -21,7 +21,7 @@ export const MODES = [
     formula: '1 2 ♭3 4 5 6 ♭7',
     feel: 'Minor / Cool',
     characteristic: 'Natural 6 — brighter than Aeolian despite sharing ♭3 and ♭7',
-    parentKeyDesc: 'Parent major key is a whole step (M2) above the root — e.g., D Dorian → C major.',
+    parentKeyDesc: 'Parent major key is a whole step (M2) below the root — e.g., D Dorian → C major.',
     jazzContext: 'ii m7 chords in major-key ii–V–I progressions; tonic minor in modal jazz (e.g. "So What").',
   },
   {
@@ -31,7 +31,7 @@ export const MODES = [
     formula: '1 ♭2 ♭3 4 5 ♭6 ♭7',
     feel: 'Minor / Dark / Spanish',
     characteristic: '♭2 — the defining Phrygian sound',
-    parentKeyDesc: 'Parent major key is a major 3rd (M3) above the root — e.g., E Phrygian → C major.',
+    parentKeyDesc: 'Parent major key is a major 3rd (M3) below the root — e.g., E Phrygian → C major.',
     jazzContext: 'iii m7 chords; also used in Spanish/Flamenco contexts and as a tense colour over altered dominants.',
   },
   {
@@ -41,7 +41,7 @@ export const MODES = [
     formula: '1 2 3 ♯4 5 6 7',
     feel: 'Major / Dreamy',
     characteristic: '♯4 — the Lydian sound',
-    parentKeyDesc: 'Parent major key is a perfect 4th (P4) above the root — e.g., F Lydian → C major.',
+    parentKeyDesc: 'Parent major key is a perfect 4th (P4) below the root — e.g., F Lydian → C major.',
     jazzContext: 'IVΔ7 and IΔ7 chords; the ♯4 avoids the tritone clash, making it favoured over major 7th chords.',
   },
   {
@@ -51,7 +51,7 @@ export const MODES = [
     formula: '1 2 3 4 5 6 ♭7',
     feel: 'Dominant / Bluesy',
     characteristic: '♭7 — like major but with a lowered 7th',
-    parentKeyDesc: 'Parent major key is a perfect 5th (P5) above the root — e.g., G Mixolydian → C major.',
+    parentKeyDesc: 'Parent major key is a perfect 5th (P5) below the root — e.g., G Mixolydian → C major.',
     jazzContext: 'Dominant 7th chords (V7) in major-key ii–V–I progressions.',
   },
   {

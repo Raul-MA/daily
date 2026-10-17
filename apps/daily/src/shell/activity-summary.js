@@ -1,3 +1,4 @@
+import { pianoActivityLabel } from '../../../../modules/piano/src/widget.js';
 import { createActivities, activityTime } from '../../../../packages/platform/src/activities.js';
 import { href } from '../../../../packages/platform/src/router.js';
 import { element, link } from './elements.js';
@@ -53,7 +54,8 @@ function activityEntry(item, context) {
     const entry = link('', activityHref(item, context.base), 'activity-link');
     const time = element('span', 'activity-time', timeLabel(item, context.language));
     time.dataset.activityTime = item.id;
-    entry.append(element('span', '', item.label), time);
+    const label = item.kind === 'piano' ? pianoActivityLabel(item.label, context.language) : item.label;
+    entry.append(element('span', '', label), time);
     return entry;
 }
 function fillActivities(section, context, compact) {

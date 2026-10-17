@@ -1,1 +1,1 @@
-export const pianoContext = { service: null, base: '/daily/' };
+export const pianoContext = { service: null, language: 'en', ui: {}, base: '/daily/' };

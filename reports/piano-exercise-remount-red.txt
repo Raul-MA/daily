@@ -1,0 +1,35 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 modules/piano/e2e/localization.spec.js:84:1 › piano language remounts preserve the ordinary exercise question answer and filters (7.5s)
+
+
+  1) modules/piano/e2e/localization.spec.js:84:1 › piano language remounts preserve the ordinary exercise question answer and filters 
+
+    Error: expect(locator).toHaveClass(expected) failed
+
+    Locator: locator('.exercise-card')
+    Expected pattern: /revealed/
+    Received string:  "exercise-card"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveClass" with timeout 5000ms
+      - waiting for locator('.exercise-card')
+        14 × locator resolved to <div tabindex="0" role="button" class="exercise-card" aria-label="Mostrar respuesta">…</div>
+           - unexpected value "exercise-card"
+
+
+      92 |   const before = await saved(page);
+      93 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+    > 94 |   await expect(page.locator('.exercise-card')).toHaveClass(/revealed/);
+         |                                                ^
+      95 |   expect(await page.locator('.keyboard-key.is-selected').evaluateAll(nodes => nodes.map(node => [node.dataset.note, node.dataset.octave]))).toEqual(notes);
+      96 |   expect(await page.locator('.multi-select').evaluate(node => Array.from(node.selectedOptions, option => option.value))).toEqual(['3', '7']);
+      97 |   expect(await saved(page)).toBe(before);
+        at /workspaces/daily/modules/piano/e2e/localization.spec.js:94:48
+
+    Error Context: test-results/localization-piano-languag-41b59-question-answer-and-filters/error-context.md
+
+  1 failed
+    modules/piano/e2e/localization.spec.js:84:1 › piano language remounts preserve the ordinary exercise question answer and filters 

@@ -1,3 +1,5 @@
+import { exerciseState, resumeExercise, exerciseCleanup } from '../../exercise-state.js';
+import { copy } from '../../i18n.js';
 import { getKeyboardVoicing } from '../music/notes.js'
 import { createExerciseShell, buildExerciseCardHTML, buildChordTonesTableHTML } from '../components/exercise-shell.js'
 import { randomHarmonicFunctionQuestion, HARMONIC_FUNCTIONS } from "../music/functions.js";
@@ -10,7 +12,7 @@ const FUNCTION_COLORS = {
 }
 
 export default function render(container) {
-  let state = { question: null, revealed: false }
+  let state = exerciseState({ question: null, revealed: false })
 
   function next(filter) {
     state = {
@@ -30,18 +32,18 @@ export default function render(container) {
     )
 
     const questionHTML = `
-      <span class="label">Key</span>
-      <span class="note-display">${q.keyRoot} ${q.scaleName === 'Major' ? 'major' : 'minor'}</span>
-      <span class="label">What is the harmonic function of</span>
-      <span class="question">${q.chordName}</span>
+      <span class="label">${copy("Key")}</span>
+      <span class="note-display">${copy(q.keyRoot)} ${copy(q.scaleName === 'Major' ? 'major' : 'minor')}</span>
+      <span class="label">${copy("What is the harmonic function of")}</span>
+      <span class="question">${copy(q.chordName)}</span>
     `
 
     const color = FUNCTION_COLORS[q.function] || 'var(--success)'
     const answerHTML = `
-      <span class="answer-label">${q.roman} in ${q.keyRoot} ${q.scaleName === 'Major' ? 'major' : 'minor'}</span>
-      <span class="answer-main" style="font-size:var(--text-xl);color:${color}">${q.function}</span>
-      <span class="answer-sub">${q.chordName}</span>
-      ${tonesTable}
+      <span class="answer-label">${copy(q.roman)} ${copy("in")} ${copy(q.keyRoot)} ${copy(q.scaleName === 'Major' ? 'major' : 'minor')}</span>
+      <span class="answer-main" style="font-size:var(--text-xl);color:${color}">${copy(q.function)}</span>
+      <span class="answer-sub">${copy(q.chordName)}</span>
+      ${copy(tonesTable)}
     `
 
     shell.renderCard(buildExerciseCardHTML({
@@ -65,6 +67,7 @@ export default function render(container) {
     onRandom: (filter) => next(filter),
   })
 
-  next([])
-  return () => shell.destroy()
+  const view = { container, get state() { return state }, next, update };
+  resumeExercise(view)
+  return exerciseCleanup(view, () => shell.destroy())
 }

@@ -196,3 +196,11 @@ Plants localization acceptance: `plants-localization-scope.txt` passes 28/13 and
 - A fourth Time Budget browser case is added before the async selection correction: `time-import-race-red.txt` fails when the generic action guard ignores a newer selected file while the first is reading. Import reads now bypass only that duplicate-action gate and retain their request identities; the case also cancels an unresolved read. Discovery requires 21 browser cases. The three focused recovery cases additionally pass after resuming notice expiry on successful import reload (`time-reload-notices.txt`).
 
 - Final Time Budget evidence is `time-localization-scope.txt` (22 unit/21 browser), `time-localization-general.txt` (79/28), full strict lint, 752-file syntax and 655-asset static preparation. No original source assertion or numeric timing rule was weakened.
+
+## Piano EN/ES presentation and language remounts
+
+Four additional unit contracts bring Piano to 58: authored-copy coverage, immutable lesson overlays, canonical prompt presentation and transpose-verified modal parent-key descriptions. Four native browser contracts bring it to 14: guided Spanish prompts with unchanged saved records/timestamps and Home titles, all 44 Spanish destinations offline at 320px, bilingual search and ordinary question/filter/reveal/mode/progression preservation through language remounts. The original 41 unit cases and both broad browser scripts remain intact.
+
+Red evidence: `piano-localization-unit-red.txt`, `piano-localization-red.txt`, `piano-parent-key-directions-red.txt`, `piano-symbolic-copy-red.txt`, `piano-widget-localization-red.txt` and `piano-exercise-remount-red.txt`. Stronger Spanish text coverage exposed embedded modulation HTML in the first full localized run. The authored HTML overlay translates only those source blocks; canonical saved prompts and music data remain unchanged. Final accepted evidence is recorded in progress after the complete rerun.
+
+Piano's nested restore audit adds a fifth new unit contract (58 total): all ten lessons × three prompts and legacy saved wording remain valid; null/unknown keyboard tones, malformed offsets, out-of-range pitches and unrenderable timestamps reject. `piano-nested-validation-red.txt` reproduces acceptance of a null tone before correction; `piano-nested-validation-unit.txt` passes all five new contracts.

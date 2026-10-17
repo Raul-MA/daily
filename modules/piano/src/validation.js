@@ -1,8 +1,9 @@
+import { validPrompt } from './prompt-validation.js';
 import { LESSONS } from './js/music/learning-path.js';
 import { DESTINATIONS } from './js/components/navigation-data.js';
 import { allocateSessionSeconds } from './js/components/practice-allocation.js';
 
-function nonnegative(value) { return Number.isFinite(value) && value >= 0; }
+function nonnegative(value) { return Number.isFinite(value) && value >= 0 && value <= 8640000000000000; }
 function id(value) { return typeof value === 'string' && value.trim().length > 0 && value.length <= 400; }
 export function validLesson(value) { return LESSONS.some(item => item.id === value); }
 export function validExercise(value) { return DESTINATIONS.some(item => item.id === value && item.activity === 'practice'); }
@@ -11,7 +12,6 @@ function validBlocks(value) { return Array.isArray(value) && value.length === 4 
 function validBasics(value) {
   return Boolean(value && id(value.id) && validLesson(value.lessonId) && validMinutes(value.minutes) && typeof value.piano === 'boolean' && nonnegative(value.startedAt));
 }
-function validPrompt(value) { return Boolean(value && typeof value.question === 'string' && typeof value.answer === 'string' && value.keyboard && Array.isArray(value.keyboard.tones)); }
 function validPacing(value) {
   return typeof value.auto === 'boolean' && typeof value.revealed === 'boolean'
     && Number.isInteger(value.pace) && value.pace >= 1 && value.pace <= 300 && nonnegative(value.promptElapsedMs);

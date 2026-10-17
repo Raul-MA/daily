@@ -1,6 +1,7 @@
+import { copy } from '../../i18n.js';
 import { mountMarkdown } from '../components/markdown.js'
 
-const THEORY_MD = `
+export const THEORY_MD = `
 ## Chord Progressions Theory
 
 ### ii-V-I — The Core Jazz Cadence
@@ -93,14 +94,14 @@ export default function render(container) {
   const content = document.createElement('div')
   content.className = 'theory-content'
 
-  container.innerHTML = `
+  container.innerHTML = copy(`
     <div class="page-header">
-      <h1>Chord Progressions</h1>
+      <h1>${copy("Chord Progressions")}</h1>
       <div class="page-nav-links">
-        <a href="#/chord-substitution/theory">Substitution</a>
+        <a href="#/chord-substitution/theory">${copy("Substitution")}</a>
       </div>
     </div>
-  `
+  `)
   mountMarkdown(content, THEORY_MD)
   container.appendChild(content)
 }

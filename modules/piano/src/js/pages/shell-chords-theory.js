@@ -1,7 +1,8 @@
+import { copy } from '../../i18n.js';
 import { mountMarkdown } from '../components/markdown.js'
 import { SHELL_CHORD_TYPE_KEYS, SHELL_CHORD_TYPES } from '../music/shell-chords.js'
 
-const THEORY_MD = `
+export const THEORY_MD = `
 ## Shell Chords (Voicings)
 
 A **shell voicing** keeps only the **3rd and 7th** of a 7th chord.
@@ -32,8 +33,8 @@ function buildTypeItems() {
     const item = SHELL_CHORD_TYPES[type]
     return `
       <div class="theory-item">
-        <div class="theory-item-title">${item.label} &nbsp;<code>${item.symbol}</code></div>
-        <p class="text-muted">Shell = <strong>3rd + 7th</strong> (or 7th + 3rd) for this chord quality.</p>
+        <div class="theory-item-title">${copy(item.label)} ${copy("&nbsp;")}<code>${copy(item.symbol)}</code></div>
+        <p class="text-muted">${copy("Shell =")} <strong>${copy("3rd + 7th")}</strong> ${copy("(or 7th + 3rd) for this chord quality.")}</p>
       </div>
     `
   }).join('')
@@ -46,17 +47,17 @@ export default function render(container) {
 
   const list = document.createElement('div')
   list.className = 'theory-list'
-  list.innerHTML = buildTypeItems()
+  list.innerHTML = copy(buildTypeItems())
   content.appendChild(list)
 
-  container.innerHTML = `
+  container.innerHTML = copy(`
     <div class="page-header">
-      <h1>Shell Chords — Theory</h1>
+      <h1>${copy("Shell Chords — Theory")}</h1>
       <div class="page-nav-links">
-        <a href="#/shell-chords/exercises">Exercises →</a>
-        <a href="#/voice-leading/exercises">Guide Tones →</a>
+        <a href="#/shell-chords/exercises">${copy("Exercises →")}</a>
+        <a href="#/voice-leading/exercises">${copy("Guide Tones →")}</a>
       </div>
     </div>
-  `
+  `)
   container.appendChild(content)
 }

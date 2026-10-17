@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { getKeyboardVoicing, buildExerciseCardHTML, buildChordTonesTableHTML, CHORD_TYPES, getChordTones } from './secondary-dominants-exercise-shared.js';
 export function update(ctx) {
     const q = ctx.state.question
@@ -8,28 +9,28 @@ export function update(ctx) {
     if (!ctx.state.inverse) {
       
       questionHTML = `
-        <span class="label">Key</span>
-        <span class="note-display">${q.keyRoot} major</span>
-        <span class="label">Find the secondary dominant of</span>
-        <span class="question">${q.targetRoman} — ${q.targetChordName}</span>
+        <span class="label">${copy("Key")}</span>
+        <span class="note-display">${copy(q.keyRoot)} ${copy("major")}</span>
+        <span class="label">${copy("Find the secondary dominant of")}</span>
+        <span class="question">${copy(q.targetRoman)} ${copy("—")} ${copy(q.targetChordName)}</span>
       `
       const tonesTable = buildChordTonesTableHTML(
         q.secDomNotes.map((note, i) => ({ degree: ['1','3','5','♭7'][i], note }))
       )
       answerHTML = `
-        <span class="answer-label">${q.symbol}</span>
-        <span class="answer-main" style="font-size:var(--text-xl)">${q.secDomChordName}</span>
-        ${tonesTable}
-        <span class="answer-sub" style="margin-top:var(--space-sm)">Resolves to: ${q.targetChordName}</span>
+        <span class="answer-label">${copy(q.symbol)}</span>
+        <span class="answer-main" style="font-size:var(--text-xl)">${copy(q.secDomChordName)}</span>
+        ${copy(tonesTable)}
+        <span class="answer-sub" style="margin-top:var(--space-sm)">${copy("Resolves to:")} ${copy(q.targetChordName)}</span>
       `
     } else {
       
       questionHTML = `
-        <span class="label">Key</span>
-        <span class="note-display">${q.keyRoot} major</span>
-        <span class="label">This chord is a secondary dominant:</span>
-        <span class="question">${q.secDomChordName}</span>
-        <span class="card-hint" style="margin-top:var(--space-sm)">Which degree does it tonicise?</span>
+        <span class="label">${copy("Key")}</span>
+        <span class="note-display">${copy(q.keyRoot)} ${copy("major")}</span>
+        <span class="label">${copy("This chord is a secondary dominant:")}</span>
+        <span class="question">${copy(q.secDomChordName)}</span>
+        <span class="card-hint" style="margin-top:var(--space-sm)">${copy("Which degree does it tonicise?")}</span>
       `
       const targetDegrees = CHORD_TYPES[q.targetChordType]?.degrees ?? q.targetNotes.map((_, i) => String(i + 1))
       const targetTable = buildChordTonesTableHTML(
@@ -39,10 +40,10 @@ export function update(ctx) {
         }))
       )
       answerHTML = `
-        <span class="answer-label">${q.secDomChordName} = ${q.symbol}</span>
-        <span class="answer-main" style="font-size:var(--text-xl)">Tonicises ${q.targetRoman}</span>
-        <span class="answer-sub">Target: ${q.targetChordName}</span>
-        ${targetTable}
+        <span class="answer-label">${copy(q.secDomChordName)} = ${copy(q.symbol)}</span>
+        <span class="answer-main" style="font-size:var(--text-xl)">${copy("Tonicises")} ${copy(q.targetRoman)}</span>
+        <span class="answer-sub">${copy("Target:")} ${copy(q.targetChordName)}</span>
+        ${copy(targetTable)}
       `
     }
 

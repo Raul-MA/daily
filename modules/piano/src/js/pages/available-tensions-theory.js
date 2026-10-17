@@ -1,6 +1,7 @@
+import { copy } from '../../i18n.js';
 import { mountMarkdown } from '../components/markdown.js'
 
-const THEORY_MD = `
+export const THEORY_MD = `
 ## Available Tensions
 
 A **tension** is a note added to a 7th chord beyond the four basic chord tones. Tensions create color and motion.
@@ -42,15 +43,15 @@ export default function render(container) {
   const content = document.createElement('div')
   content.className = 'theory-content'
 
-  container.innerHTML = `
+  container.innerHTML = copy(`
     <div class="page-header">
-      <h1>Available Tensions — Theory</h1>
+      <h1>${copy("Available Tensions — Theory")}</h1>
       <div class="page-nav-links">
-        <a href="#/available-tensions/exercises">Exercises →</a>
-        <a href="#/available-tensions/cards">Cards →</a>
+        <a href="#/available-tensions/exercises">${copy("Exercises →")}</a>
+        <a href="#/available-tensions/cards">${copy("Cards →")}</a>
       </div>
     </div>
-  `
+  `)
   mountMarkdown(content, THEORY_MD)
   container.appendChild(content)
 }

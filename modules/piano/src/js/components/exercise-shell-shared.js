@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { createAutoAdvance } from './auto-advance.js'
 import { buildKeyboardDiagramHTML } from './keyboard-diagram.js'
 function buildExerciseCardHTML({ questionHTML, answerHTML, revealed = false, keyboards = [] }) {
@@ -5,8 +6,8 @@ function buildExerciseCardHTML({ questionHTML, answerHTML, revealed = false, key
     return `
       <div class="exercise-card">
         <div class="card-question">
-          ${questionHTML}
-          <span class="card-hint">tap to reveal answer</span>
+          ${copy(questionHTML)}
+          <span class="card-hint">${copy("tap to reveal answer")}</span>
         </div>
       </div>
     `
@@ -14,11 +15,11 @@ function buildExerciseCardHTML({ questionHTML, answerHTML, revealed = false, key
   return `
     <div class="exercise-card revealed">
       <div class="card-answer">
-        ${answerHTML}
-        <span class="card-hint">tap to see question</span>
+        ${copy(answerHTML)}
+        <span class="card-hint">${copy("tap to see question")}</span>
       </div>
     </div>
-    ${keyboards.length ? `<div class="exercise-keyboards">${keyboards.map(({ tones, ...options }) => buildKeyboardDiagramHTML(tones, options)).join('')}</div>` : ''}
+    ${copy(keyboards.length ? `<div class="exercise-keyboards">${copy(keyboards.map(({ tones, ...options }) => buildKeyboardDiagramHTML(tones, options)).join(''))}</div>` : '')}
   `
 }
 function buildChordTonesTableHTML(tones, bassNote) {
@@ -26,8 +27,8 @@ function buildChordTonesTableHTML(tones, bassNote) {
     const isBass = bassNote && t.note === bassNote
     return `
       <tr${isBass ? ' style="background:var(--accent-dim)"' : ''}>
-        <td class="text-muted">${t.degree}</td>
-        <td style="color:${isBass ? 'var(--accent)' : 'var(--success)'};font-weight:700;font-size:var(--text-lg)">${t.note}${isBass ? ' ♩' : ''}</td>
+        <td class="text-muted">${copy(t.degree)}</td>
+        <td style="color:${isBass ? 'var(--accent)' : 'var(--success)'};font-weight:700;font-size:var(--text-lg)">${copy(t.note)}${copy(isBass ? ' ♩' : '')}</td>
       </tr>
     `
   }).join('')
@@ -36,11 +37,11 @@ function buildChordTonesTableHTML(tones, bassNote) {
     <table class="chord-tones-table" style="min-width:180px;margin-top:var(--space-sm)">
       <thead>
         <tr>
-          <th>Degree</th>
-          <th>Note${bassNote ? ' (♩ = bass)' : ''}</th>
+          <th>${copy("Degree")}</th>
+          <th>${copy("Note")}${copy(bassNote ? ' (♩ = bass)' : '')}</th>
         </tr>
       </thead>
-      <tbody>${rows}</tbody>
+      <tbody>${copy(rows)}</tbody>
     </table>
   `
 }

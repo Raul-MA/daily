@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { content } from './bebop-exercise-content.js';
 import { buildExerciseCardHTML, getKeyboardVoicing } from './bebop-exercise-shared.js';
 export function update(ctx) {
@@ -12,9 +13,9 @@ export function update(ctx) {
       const passingMark = isPassing ? ' ★' : ''
       return `
         <tr${isPassing ? ' style="background:rgba(240,165,0,0.08)"' : ''}>
-          <td class="text-muted">${i + 1}</td>
-          <td style="${noteStyle}">${note}${passingMark}</td>
-          <td class="text-muted" style="font-size:var(--text-sm)">${isPassing ? 'passing tone' : ''}</td>
+          <td class="text-muted">${copy(i + 1)}</td>
+          <td style="${noteStyle}">${copy(note)}${copy(passingMark)}</td>
+          <td class="text-muted" style="font-size:var(--text-sm)">${copy(isPassing ? 'passing tone' : '')}</td>
         </tr>
       `
     }).join('')

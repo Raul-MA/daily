@@ -1,0 +1,30 @@
+✖ piano Spanish copy covers the authored corpus and preserves interpolation and notation (2.594054ms)
+✔ all ten localized piano lessons retain their musical and structural data without mutating source (5.174974ms)
+✔ piano prompt presentation translates its text without changing saved prompts or keyboard notes (2.166536ms)
+✔ modal parent-key direction descriptions agree with their C-major examples (0.506756ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 99.418081
+
+✖ failing tests:
+
+test at modules/piano/test/localization-service.test.mjs:12:1
+✖ piano Spanish copy covers the authored corpus and preserves interpolation and notation (2.594054ms)
+  AssertionError [ERR_ASSERTION]: ♭2 with a natural 6 — Phrygian feeling but brighter than standard Phrygian
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/localization-service.test.mjs:14:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,0 +1,18 @@
+
+Running 13 tests using 1 worker
+
+  ✓   1 modules/piano/e2e/continuation.spec.js:15:1 › piano sessions continue across Home and reload with stable blocks prompts answers and timestamps (4.3s)
+  ✓   2 modules/piano/e2e/continuation.spec.js:34:1 › hiding piano never pauses elapsed time while explicit Pause survives background and reload (6.8s)
+  ✓   3 modules/piano/e2e/continuation.spec.js:54:1 › soft practice budgets preserve the active session until explicit finish and save one history record (19.5s)
+  ✓   4 modules/piano/e2e/continuation.spec.js:75:1 › opening another lesson offers the persisted practice and never overwrites it (1.7s)
+  ✓   5 modules/piano/e2e/continuation.spec.js:87:1 › random and last exercise links use stable IDs and opening an exercise creates no practice (1.7s)
+  ✓   6 modules/piano/e2e/continuation.spec.js:102:1 › piano practice and keyboard answers resume offline under the shared worker (6.9s)
+  ✓   7 modules/piano/e2e/continuation.spec.js:119:1 › running piano links resume the correct lesson and obsolete activity IDs preserve a newer practice (2.0s)
+  ✓   8 modules/piano/e2e/continuation.spec.js:140:1 › automatic prompts freeze while hidden and away while elapsed practice continues (6.5s)
+  ✓   9 modules/piano/e2e/drafts.spec.js:3:1 › piano language remounts retain setup and pacing drafts with their derived controls (1.8s)
+  ✓  10 modules/piano/e2e/drafts.spec.js:25:1 › piano failed pause or pacing saves preserve the running record and truthful controls (1.5s)
+  ✓  11 modules/piano/e2e/localization.spec.js:9:1 › piano Spanish lessons and running prompts preserve canonical English records and timestamps (4.6s)
+  ✓  12 modules/piano/e2e/localization.spec.js:31:1 › piano Spanish library and every destination open offline at 320px (6.3s)
+  ✓  13 modules/piano/e2e/localization.spec.js:56:1 › piano Spanish search finds translated lessons and reference topics (1.8s)
+
+  13 passed (1.2m)

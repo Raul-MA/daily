@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { getKeyboardVoicing, buildExerciseCardHTML } from './shell-chords-exercise-shared.js';
 export function update(ctx) {
     const q = ctx.state.question
@@ -10,33 +11,33 @@ export function update(ctx) {
 
     if (ctx.state.promptMode === 'build') {
       questionHTML = `
-        <span class="label">Build the shell voicing</span>
-        <span class="note-display">${q.chordName}</span>
-        <span class="label">Key</span>
-        <span class="question">${q.key}</span>
-        <span class="label">Position</span>
-        <span class="chip chip-accent">${q.position}</span>
+        <span class="label">${copy("Build the shell voicing")}</span>
+        <span class="note-display">${copy(q.chordName)}</span>
+        <span class="label">${copy("Key")}</span>
+        <span class="question">${copy(q.key)}</span>
+        <span class="label">${copy("Position")}</span>
+        <span class="chip chip-accent">${copy(q.position)}</span>
       `
 
       answerHTML = `
-        <span class="answer-label">${q.chordLabel} shell (${q.position})</span>
-        <span class="answer-main" style="font-size:var(--text-2xl)">${shellNotes}</span>
+        <span class="answer-label">${copy(q.chordLabel)} ${copy("shell (")}${copy(q.position)})</span>
+        <span class="answer-main" style="font-size:var(--text-2xl)">${copy(shellNotes)}</span>
         <div style="margin-top:var(--space-xs)">
-          <span class="chip">${shellDegrees}</span>
+          <span class="chip">${copy(shellDegrees)}</span>
         </div>
       `
     } else {
       questionHTML = `
-        <span class="label">Identify the shell position</span>
-        <span class="note-display">${q.chordName}</span>
-        <span class="label">Shell notes</span>
-        <span class="question" style="font-size:var(--text-xl)">${shellNotes}</span>
+        <span class="label">${copy("Identify the shell position")}</span>
+        <span class="note-display">${copy(q.chordName)}</span>
+        <span class="label">${copy("Shell notes")}</span>
+        <span class="question" style="font-size:var(--text-xl)">${copy(shellNotes)}</span>
       `
 
       answerHTML = `
-        <span class="answer-label">${q.chordLabel}</span>
-        <span class="answer-main">${q.position}</span>
-        <span class="answer-sub">${shellDegrees}</span>
+        <span class="answer-label">${copy(q.chordLabel)}</span>
+        <span class="answer-main">${copy(q.position)}</span>
+        <span class="answer-sub">${copy(shellDegrees)}</span>
       `
     }
 

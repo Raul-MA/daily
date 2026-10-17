@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { getChordTones, getKeyboardVoicing, buildExerciseCardHTML, buildChordTonesTableHTML } from './tritone-sub-exercise-shared.js';
 export function update(ctx) {
     const q = ctx.state.question
@@ -11,8 +12,8 @@ export function update(ctx) {
     )
 
     const questionHTML = `
-      <span class="label">Find the tritone substitute of</span>
-      <span class="note-display">${q.chordName}</span>
+      <span class="label">${copy("Find the tritone substitute of")}</span>
+      <span class="note-display">${copy(q.chordName)}</span>
     `
 
     let contextHTML = ''
@@ -21,28 +22,28 @@ export function update(ctx) {
       const sub  = q.context.withSub.map(c => c.chordName).join(' – ')
       contextHTML = `
         <div style="margin-top:var(--space-md);text-align:left;width:100%">
-          <div class="text-muted" style="font-size:var(--text-sm);margin-bottom:4px">Original ii-V-I in ${q.context.keyRoot}:</div>
-          <div style="font-weight:600">${orig}</div>
-          <div class="text-muted" style="font-size:var(--text-sm);margin:var(--space-sm) 0 4px">With tritone sub (chromatic bass ↓):</div>
-          <div style="font-weight:600;color:var(--accent)">${sub}</div>
+          <div class="text-muted" style="font-size:var(--text-sm);margin-bottom:4px">${copy("Original ii-V-I in")} ${copy(q.context.keyRoot)}:</div>
+          <div style="font-weight:600">${copy(orig)}</div>
+          <div class="text-muted" style="font-size:var(--text-sm);margin:var(--space-sm) 0 4px">${copy("With tritone sub (chromatic bass ↓):")}</div>
+          <div style="font-weight:600;color:var(--accent)">${copy(sub)}</div>
         </div>
       `
     }
 
     const answerHTML = `
-      <span class="answer-label">Tritone sub of ${q.chordName}</span>
-      <span class="answer-main" style="font-size:var(--text-xl)">${q.subChordName}</span>
+      <span class="answer-label">${copy("Tritone sub of")} ${copy(q.chordName)}</span>
+      <span class="answer-main" style="font-size:var(--text-xl)">${copy(q.subChordName)}</span>
       <div style="display:flex;gap:var(--space-lg);justify-content:center;flex-wrap:wrap;margin-top:var(--space-sm)">
         <div>
-          <div class="text-muted" style="font-size:var(--text-sm);margin-bottom:4px">${q.chordName}</div>
-          ${origTable}
+          <div class="text-muted" style="font-size:var(--text-sm);margin-bottom:4px">${copy(q.chordName)}</div>
+          ${copy(origTable)}
         </div>
         <div>
-          <div class="text-muted" style="font-size:var(--text-sm);margin-bottom:4px">${q.subChordName}</div>
-          ${subTable}
+          <div class="text-muted" style="font-size:var(--text-sm);margin-bottom:4px">${copy(q.subChordName)}</div>
+          ${copy(subTable)}
         </div>
       </div>
-      ${contextHTML}
+      ${copy(contextHTML)}
     `
 
     const keyboards = [

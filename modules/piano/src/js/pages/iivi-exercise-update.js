@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { getChordTones, getKeyboardVoicing, buildExerciseCardHTML } from './iivi-exercise-shared.js';
 export function update(ctx) {
     const q = ctx.state.question
@@ -12,30 +13,30 @@ export function update(ctx) {
     if (!ctx.state.inverse) {
       
       questionHTML = `
-        <span class="label">Build the ii-V-I in</span>
-        <span class="note-display">${q.root} ${q.mode}</span>
+        <span class="label">${copy("Build the ii-V-I in")}</span>
+        <span class="note-display">${copy(q.root)} ${copy(q.mode)}</span>
       `
       const chordsHTML = q.chords.map(c => `
         <div class="progression-chord">
-          <div class="roman">${c.roman}</div>
-          <div class="chord-name">${c.chordName}</div>
-          <div style="font-size:var(--text-xs);color:var(--text-muted);margin-top:4px">${c.notes.join(' ')}${c.b9 ? ` · ♭9: ${c.b9}` : ''}</div>
+          <div class="roman">${copy(c.roman)}</div>
+          <div class="chord-name">${copy(c.chordName)}</div>
+          <div style="font-size:var(--text-xs);color:var(--text-muted);margin-top:4px">${copy(c.notes.join(' '))}${copy(c.b9 ? ` · ♭9: ${c.b9}` : '')}</div>
         </div>
       `).join('')
       answerHTML = `
-        <span class="answer-label">${q.root} ${modeLabel}</span>
-        <div class="progression-display" style="justify-content:center;gap:var(--space-md)">${chordsHTML}</div>
+        <span class="answer-label">${copy(q.root)} ${copy(modeLabel)}</span>
+        <div class="progression-display" style="justify-content:center;gap:var(--space-md)">${copy(chordsHTML)}</div>
       `
     } else {
       
       questionHTML = `
-        <span class="label">Identify the key and Roman numerals</span>
-        <span class="question" style="font-size:var(--text-lg)">${chordsLine}</span>
+        <span class="label">${copy("Identify the key and Roman numerals")}</span>
+        <span class="question" style="font-size:var(--text-lg)">${copy(chordsLine)}</span>
       `
       answerHTML = `
-        <span class="answer-label">ii-V-I in ${q.root} ${modeLabel}</span>
-        <span class="answer-main" style="font-size:var(--text-xl)">${romansLine}</span>
-        <span class="answer-sub">${chordsLine}</span>
+        <span class="answer-label">${copy("ii-V-I in")} ${copy(q.root)} ${copy(modeLabel)}</span>
+        <span class="answer-main" style="font-size:var(--text-xl)">${copy(romansLine)}</span>
+        <span class="answer-sub">${copy(chordsLine)}</span>
       `
     }
 

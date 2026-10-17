@@ -1,9 +1,11 @@
+import { exerciseState, resumeExercise, exerciseCleanup } from '../../exercise-state.js';
+import { copy } from '../../i18n.js';
 import { getKeyboardVoicing } from '../music/notes.js'
 import { createExerciseShell, buildExerciseCardHTML } from '../components/exercise-shell.js'
 import { randomScaleQuestion, SCALE_NAMES } from '../music/scales.js'
 
 export default function render(container) {
-  let state = { question: null, revealed: false }
+  let state = exerciseState({ question: null, revealed: false })
 
   function next(filter) {
     state = { question: randomScaleQuestion(filter.length > 0 ? filter : null), revealed: false }
@@ -15,28 +17,28 @@ export default function render(container) {
     if (!q) return
 
     const questionHTML = `
-      <span class="label">Root note</span>
-      <span class="note-display">${q.root}</span>
-      <span class="label">Scale type:</span>
-      <span class="question">${q.scaleName}</span>
+      <span class="label">${copy("Root note")}</span>
+      <span class="note-display">${copy(q.root)}</span>
+      <span class="label">${copy("Scale type:")}</span>
+      <span class="question">${copy(q.scaleName)}</span>
     `
 
     const rows = q.notes.map((note, i) => `
       <tr>
-        <td class="text-muted">${i + 1}</td>
-        <td style="color:var(--success);font-weight:700;font-size:var(--text-lg)">${note}</td>
+        <td class="text-muted">${copy(i + 1)}</td>
+        <td style="color:var(--success);font-weight:700;font-size:var(--text-lg)">${copy(note)}</td>
       </tr>
     `).join('')
 
     const answerHTML = `
-      <span class="answer-label">${q.root} ${q.scaleName}</span>
+      <span class="answer-label">${copy(q.root)} ${copy(q.scaleName)}</span>
       <table class="chord-tones-table" style="min-width:180px;margin-top:var(--space-sm)">
         <thead>
-          <tr><th>Degree</th><th>Note</th></tr>
+          <tr><th>${copy("Degree")}</th><th>${copy("Note")}</th></tr>
         </thead>
-        <tbody>${rows}</tbody>
+        <tbody>${copy(rows)}</tbody>
       </table>
-      <span class="answer-sub" style="margin-top:var(--space-sm)">Steps: ${q.pattern}</span>
+      <span class="answer-sub" style="margin-top:var(--space-sm)">${copy("Steps:")} ${copy(q.pattern)}</span>
     `
 
     shell.renderCard(buildExerciseCardHTML({
@@ -59,6 +61,7 @@ export default function render(container) {
     onRandom: (filter) => next(filter),
   })
 
-  next([])
-  return () => shell.destroy()
+  const view = { container, get state() { return state }, next, update };
+  resumeExercise(view)
+  return exerciseCleanup(view, () => shell.destroy())
 }

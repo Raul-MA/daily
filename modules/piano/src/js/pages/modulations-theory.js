@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { mountMarkdown } from '../components/markdown.js'
 import { MODULATION_TYPES } from '../music/modulations.js'
 
@@ -69,7 +70,7 @@ ${exampleMd}
 `
 }
 
-const THEORY_MD =
+export const THEORY_MD =
   `## Modulation
 
 **Modulation** is a change of key / tonal centre that is established clearly enough for the listener to perceive a new tonic.
@@ -86,14 +87,14 @@ export default function render(container) {
   const content = document.createElement('div')
   content.className = 'theory-content'
 
-  container.innerHTML = `
+  container.innerHTML = copy(`
     <div class="page-header">
-      <h1>Modulation — Theory</h1>
+      <h1>${copy("Modulation — Theory")}</h1>
       <div class="page-nav-links">
-        <a href="#/modulations/exercises">Exercises →</a>
+        <a href="#/modulations/exercises">${copy("Exercises →")}</a>
       </div>
     </div>
-  `
+  `)
   mountMarkdown(content, THEORY_MD)
   container.appendChild(content)
 }

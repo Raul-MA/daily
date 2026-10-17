@@ -1,6 +1,6 @@
 # Implementation progress
 
-Updated: 2026-10-16. Repo: `/workspaces/daily`, branch `main`.
+Updated: 2026-10-17. Repo: `/workspaces/daily`, branch `main`.
 
 ## Current instruction and exact next step
 
@@ -8,22 +8,22 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore are connected and locally tested.** The last complete all-app run is `combined-backup-all.txt` at `da523d1`, including both broad Piano scripts. Later per-app checkpoints appear below; final whole-PWA verification still must run after the remaining localization/audit work. Full restore validates module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** save the accepted Time Budget checkpoint, then finish Piano localization. Time Budget passes 22 unit + 21 browser, General 79 unit + 28 browser, full strict lint, 752-file syntax and static preparation of 655 assets (`time-localization-*`). Its slow-file supersession/cancel contract is red first, then green; timer actions retain duplicate protection. Games checkpoint `34360a3`, Coffee `7d03c03` and Plants `bdd8af1` are saved. After Piano, complete remaining schema/concurrency/form/update/recovery audits and run full verification. Actual iPhone/live API/Things validation and old-app releases stay deferred. No pushes, workflows or deployment.
+**Exact next step:** Piano localization and nested prompt validation are accepted locally: `piano-localization-scope.txt` passes 58 unit/14 native browser plus both retained broad scripts; General passes 79/28 in `piano-localization-general.txt`, lint passes, syntax checks 774 files, static preparation copies 674 assets. Continue sequentially with Budget's delayed notification-permission start/disposal: author a browser contract that leaves the page before permission resolves, capture red, then guard disposal and recheck freshness after the await. Next audit remaining finite timestamp bounds, unrecoverable-root recovery UI and concurrency/form/update policy, then run full verification. Device/live API/Things checks and original-app releases remain deferred. No remote work.
 
 ## Verified current work
 
 | Scope | Result | Evidence |
 | --- | --- | --- |
-| General | 79 unit + 28 browser cases pass | `reports/time-localization-general.txt` |
+| General | 79 unit + 28 browser cases pass | `reports/piano-localization-general.txt` |
 | Plants | 28 unit + 13 browser cases pass | `reports/plants-localization-scope.txt` |
 | Original plant care characterization | 8 additional cases pass against Stillgreen | `reports/baseline-plants-care.txt` |
-| Strict full-scope lint | Pass | `reports/time-localization-lint.txt` |
-| Native JS syntax | 752 files pass; this is not typechecking | `reports/time-localization-syntax.txt` |
-| Static preparation | 655 native files/assets prepared; legacy exporters excluded | `reports/time-localization-build.txt` |
+| Strict full-scope lint | Pass | `reports/piano-localization-lint.txt` |
+| Native JS syntax | 774 files pass; this is not typechecking | `reports/piano-localization-syntax.txt` |
+| Static preparation | 674 native files/assets prepared; legacy exporters excluded | `reports/piano-localization-build.txt` |
 | Coffee | 20 unit + 34 browser cases pass | `reports/coffee-final-audit-unit.txt`, `reports/coffee-final-audit-scope.txt` |
 | Games | 17 unit + 34 browser cases pass | `reports/games-localization-scope.txt` |
 | Time Budget | 22 unit + 21 browser cases pass | `reports/time-localization-scope.txt` |
-| Piano | 53 unit + ten native browser cases; original lesson/library/phone/audio and worker scripts pass | `reports/combined-backup-all.txt` |
+| Piano | 58 unit + 14 native browser cases; both original broad scripts pass | `reports/piano-localization-scope.txt` |
 | Reader | 54 unit + 30 browser cases pass | `reports/legacy-reader-scope.txt` |
 | WhatsApp | 12 unit + nine browser cases pass | `reports/legacy-whatsapp-scope.txt` |
 | Whole migration | Local workflow checks all pass; Stage 8 migration/localization/device gates remain incomplete | `reports/combined-backup-all.txt` |
@@ -39,7 +39,7 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - Local-midnight/calendar refresh with foreground/timezone checks and daylight-saving tests. In-memory dirty-form snapshots preserve values, file selection and focus through language changes. Plant/history stale edits retain drafts rather than overwriting newer records.
 - Plants: list, stable detail/edit routes, templates, seasonal care, notes/history editing, skip/manual due dates, Things settings/exact shortcut payload, original/migration exports, preview/cancel/recovery before import, scoped source theme and offline care logging. Thirteen original guide/template data objects are preserved. Controls, authored guides and template defaults support EN/ES; saved user text is never translated. See `modules/plants/docs/behavior.md` and `reports/plants-source-map.json`.
 - Coffee: original drink/meta/grind/prep/composition/taste forms, beans, history filters/views/detail editing, insights, tools setup, scoped original theme, shared EN/ES, stable record/edit links, legacy JSON exports and preview/recovery/merge/replace imports. Duplicate/reference/nested-schema validation, read-only startup, quota errors, language draft restoration, stale-record/settings guards and offline checks are implemented. See `modules/coffee/docs/behavior.md` and `reports/coffee-source-map.json`.
-- Piano: the complete Toniq lesson/exercise/reference library, local audio and diagrams, scoped source appearance, stable random/last links, timestamp practice, saved history, async language draft restoration and single-worker offline support. See `modules/piano/docs/behavior.md`. Authored text localization remains a final gate.
+- Piano: the complete Toniq lesson/exercise/reference library, local audio and diagrams, scoped source appearance, stable random/last links, timestamp practice, saved history, async language draft restoration and single-worker offline support. See `modules/piano/docs/behavior.md`. Full authored EN/ES presentation and language-only ordinary exercise snapshots pass local acceptance.
 - Standalone connection diagnostic: explicit submission, memory-only token cleared from input, sequential real GET endpoints, timeout/status-only results and direct Daily Review fallback. Live authenticated access remains unverified.
 - Five legacy worker-cleanup patches prepared and ownership-tested. Originals and installed workers remain unchanged; release/coexistence tests are deferred.
 
@@ -373,3 +373,27 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - English main-layout bytes remain identical to the prior native template. User names/template keys, timer deadlines/timestamps, numeric budgets and activity semantics are unchanged. Spanish offline 320px controls, overtime/reallocation, semantic queue draft restoration, exact notification expiry, invalid import cancellation and clearing successful selections pass.
 - The import race is reproduced before correction in `time-import-race-red.txt`; only file imports bypass the generic duplicate-click guard. Request identities reject superseded/canceled/disposed reads. The three focused recovery cases additionally pass in `time-reload-notices.txt`.
 - Next: Piano authored-content/control localization, then final schema/concurrency/form/update/recovery audit and full verification. Physical-device/API/Things checks and original-app releases remain deferred.
+
+
+## Stage 8: Piano localization in progress
+
+- Three unit contracts and three browser contracts precede implementation (`piano-localization-unit-red.txt`, active `piano-localization-red.txt`). They require authored-copy coverage, all ten localized lessons preserving musical/structural data and source immutability, canonical prompt preservation, Spanish running practice/elapsed timing, every destination offline at 320px and Spanish lesson/reference search. Discovery now requires 56 unit and 13 native browser cases, plus both original scripts. No original assertion changed.
+- Initial inventory has 931 source-copy keys (`reports/piano-copy-inventory.json`). Dictionaries `src/translations/copy0.js`–`copy3.js` contain the first 640 Spanish entries; more copy and runtime integration are still missing. Preserve originals/generators and translate only owned presentation data; note spellings, keyboard pitches/ranges, formulas, route/filter IDs and saved prompt/timestamp records stay canonical.
+- Found existing incorrect parent-key directions in four authored mode hints: E Phrygian→C is down M3, F Lydian→C down P4, G Mixolydian→C down P5, D Dorian→C down M2. B Locrian→C up m2 and A Aeolian→C up m3 are already correct. Add explicit regression coverage before correcting the four English fork descriptions; Spanish copy already uses the correct directions.
+- Planned integration: explicit copy lookups for static presentation; immutable localized lesson overlays; pattern-aware presentation of canonical prompt strings; localized navigation/search terms. Markdown-authored theory needs extra inventory/translation without changing links/code notation. Nonguided-card state and remaining failure/draft/lifecycle checks still need audit.
+
+## Piano localization implementation and active verification
+
+- Complete authored EN/ES dictionaries, immutable localized lesson overlays, pattern-aware canonical prompt presentation, nine formatted Markdown theory modules, accessible controls, bilingual accent-insensitive search and Home authored lesson titles are implemented. The source-copy inventory records the reviewed corpus; unknown/custom activity names remain verbatim.
+- Four modal parent-key descriptions now agree with their own existing examples (below rather than above); the transpose-based contract failed first. No numeric musical calculations changed.
+- `piano-localization-all-unit.txt` passes 57 cases. The first full browser run passed all 13 then-current native cases. Stronger coverage found the inversion checkbox source label (fixed), Home activity title (red before fix), ordinary exercise state loss (red before fix) and embedded modulation HTML (first complete localized scope remains red until rerun).
+- `exercise-state.js` retains ordinary question/reveal/mode/filter/pacing state and generated progressions only across language remounts. Route changes clear the snapshot; audio remains canceled. Active control styling now follows restored mode values. The new browser contract covers real selected keys, filters, reveal, inversion mode and generated progression identity.
+- The current full scope is `piano-localization-scope.txt`, session 24490: 57 unit pass, 13/14 native browser pass with one embedded-modulation-copy failure fixed after that run built its assets; both broad original scripts are still running. Wait before rerunning the final scope. `piano-authored-html-unit.txt` passes the expanded authored-HTML structure/copy contract. Strict lint was passing before the last small presentation/contract changes; rerun it.
+
+- Final Piano rerun: all 58 unit and 14 native browser cases pass. Both broad original scripts remain active in session 78295. `piano-modulation-copy-red.txt` preserves the prior genuine failure and passing broad scripts. The fifth new unit contract accepts every lesson prompt plus saved legacy wording, rejecting malformed tones/offsets/pitches and unrenderable timestamps. Current syntax checks 774 files; strict lint passes.
+
+## Piano accepted local checkpoint
+
+- `piano-localization-scope.txt` completes with all 58 unit, all 14 native browser cases and both original broad scripts passing. All 44 library routes, exact-octave reveals, three phone widths, all ten lesson flows, touch swipe, audio completion/cancellation and generated-worker offline reload pass. No original assertions were changed or skipped.
+- `piano-localization-general.txt` passes General 79 unit/28 browser, including two-tab update protection. `piano-localization-lint.txt` passes; `piano-localization-syntax.txt` checks 774 files; `piano-localization-build.txt` prepares 674 assets. All sessions described as active in the historical Piano notes above have finished.
+- Next: the Budget pending-permission lifecycle contract, remaining timestamp/recovery/concurrency audits and whole-PWA verification. Physical device/API/Things/coexistence acceptance remains deferred.

@@ -1,7 +1,8 @@
+import { copy } from '../../i18n.js';
 import { mountMarkdown } from '../components/markdown.js'
 import { CHORD_TYPES, EXTENDED_CHORD_TYPES } from '../music/chords.js'
 
-const THEORY_MD = `
+export const THEORY_MD = `
 ## Extended Chords
 
 An **extended chord** starts with a 7th chord and keeps stacking thirds above it. Once the stack goes past the octave, the new chord tones are named **9th**, **11th**, and **13th** instead of 2nd, 4th, and 6th.
@@ -27,22 +28,22 @@ function buildChordItem(extChord) {
 
   return `
     <div class="theory-item">
-      <div class="theory-item-title">${extChord.fullName} &nbsp;<code>${extChord.symbol}</code></div>
+      <div class="theory-item-title">${copy(extChord.fullName)} ${copy("&nbsp;")}<code>${copy(extChord.symbol)}</code></div>
       <p class="text-muted">
-        Built from <strong>${baseChord.fullName}</strong> by adding <strong>${addedLabel}</strong>.
+        ${copy("Built from")} <strong>${copy(baseChord.fullName)}</strong> ${copy("by adding")} <strong>${copy(addedLabel)}</strong>.
       </p>
       <table class="chord-tones-table mt-sm">
-        <thead><tr><th>Degree</th><th>Interval</th></tr></thead>
+        <thead><tr><th>${copy("Degree")}</th><th>${copy("Interval")}</th></tr></thead>
         <tbody>
-          ${extChord.degrees.map((degree, i) => `
+          ${copy(extChord.degrees.map((degree, i) => `
             <tr>
-              <td>${degree}</td>
-              <td>${extChord.intervals[i]} semitones</td>
+              <td>${copy(degree)}</td>
+              <td>${copy(extChord.intervals[i])} ${copy("semitones")}</td>
             </tr>
-          `).join('')}
+          `).join(''))}
         </tbody>
       </table>
-      ${extChord.omitNote ? `<p class="text-muted mt-sm"><strong>Voicing note:</strong> ${extChord.omitNote}.</p>` : ''}
+      ${copy(extChord.omitNote ? `<p class="text-muted mt-sm"><strong>${copy("Voicing note:")}</strong> ${copy(extChord.omitNote)}.</p>` : '')}
     </div>
   `
 }
@@ -54,18 +55,18 @@ export default function render(container) {
 
   const chordList = document.createElement('div')
   chordList.className = 'theory-list'
-  chordList.innerHTML = Object.values(EXTENDED_CHORD_TYPES).map(buildChordItem).join('')
+  chordList.innerHTML = copy(Object.values(EXTENDED_CHORD_TYPES).map(buildChordItem).join(''))
   content.appendChild(chordList)
 
-  container.innerHTML = `
+  container.innerHTML = copy(`
     <div class="page-header">
-      <h1>Extended Chords — Theory</h1>
+      <h1>${copy("Extended Chords — Theory")}</h1>
       <div class="page-nav-links">
-        <a href="#/extended-chords/exercises">Exercises →</a>
-        <a href="#/available-tensions/theory">Available Tensions →</a>
+        <a href="#/extended-chords/exercises">${copy("Exercises →")}</a>
+        <a href="#/available-tensions/theory">${copy("Available Tensions →")}</a>
       </div>
     </div>
-  `
+  `)
 
   container.appendChild(content)
 }

@@ -1,27 +1,28 @@
+import { copy } from '../../i18n.js';
 
 export function createAutoAdvance(container, onChange, { seconds: initialSeconds = 3 } = {}) {
   let intervalId = null
   let destroyed = false
   const el = document.createElement('div')
   el.className = 'auto-advance'
-  el.innerHTML = `
-    <label>Seconds per prompt
+  el.innerHTML = copy(`
+    <label>${copy("Seconds per prompt")}
       <input class="auto-advance-seconds" type="number" min="1" max="300" value="${initialSeconds}" aria-label="Auto-advance interval in seconds" />
     </label>
-    <button class="btn btn-ghost btn-sm auto-advance-toggle" type="button">Start</button>
-  `
+    <button class="btn btn-ghost btn-sm auto-advance-toggle" type="button">${copy("Start")}</button>
+  `)
   const input = el.querySelector('input')
   const button = el.querySelector('button')
   function stop() {
     clearInterval(intervalId)
     intervalId = null
-    button.textContent = 'Start'
+    button.textContent = copy('Start')
     button.classList.replace('btn-primary', 'btn-ghost')
   }
   function start() {
     if (destroyed || document.hidden || !input.checkValidity() || !input.value) return
     stop()
-    button.textContent = 'Stop'
+    button.textContent = copy('Stop')
     button.classList.replace('btn-ghost', 'btn-primary')
     intervalId = setInterval(onChange, Number(input.value) * 1000)
   }

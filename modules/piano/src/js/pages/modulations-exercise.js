@@ -1,3 +1,5 @@
+import { exerciseState, resumeExercise, exerciseCleanup } from '../../exercise-state.js';
+import { copy, presentAuthoredHTML } from '../../i18n.js';
 import { createExerciseShell, buildExerciseCardHTML } from '../components/exercise-shell.js'
 import { MODULATION_TYPES, MODULATION_QUESTIONS } from '../music/modulations.js'
 
@@ -13,7 +15,7 @@ function pickRandom(arr) {
 }
 
 export default function render(container) {
-  let state = { question: null, revealed: false }
+  let state = exerciseState({ question: null, revealed: false })
 
   function next(filter) {
     const pool = filter.length > 0
@@ -29,10 +31,10 @@ export default function render(container) {
 
     const typeLabel = TYPE_LABELS[q.type] ?? q.type
 
-    const questionHTML = q.questionHTML
+    const questionHTML = presentAuthoredHTML(q.questionHTML)
     const answerHTML = `
-      ${q.answerHTML}
-      <span class="answer-sub text-muted" style="margin-top:var(--space-sm)">Category: ${typeLabel}</span>
+      ${presentAuthoredHTML(q.answerHTML)}
+      <span class="answer-sub text-muted" style="margin-top:var(--space-sm)">${copy("Category:")} ${copy(typeLabel)}</span>
     `
 
     shell.renderCard(buildExerciseCardHTML({
@@ -57,6 +59,7 @@ export default function render(container) {
     onRandom: (filter) => next(filter),
   })
 
-  next([])
-  return () => shell.destroy()
+  const view = { container, get state() { return state }, next, update };
+  resumeExercise(view)
+  return exerciseCleanup(view, () => shell.destroy())
 }

@@ -1,3 +1,4 @@
+import { copy } from '../../../i18n.js';
 import { createDailyState } from '../../../../../../packages/data/src/daily-state.js';
 import { connectPiano } from '../../../service.js';
 import { practiceSnapshot } from '../../../practice-clock.js';
@@ -53,11 +54,11 @@ export function showError(context, error) {
     alert.setAttribute('role', 'alert');
     context.container.append(alert);
   }
-  alert.textContent = error.message;
+  alert.textContent = copy(error.message);
 }
 function offerExisting(context, practice) {
   if (!practice || practice.lessonId === context.lesson().id) return false;
-  context.container.innerHTML = '<h1>Practice already in progress</h1><p data-piano-existing>Your current practice has been kept.</p><a class="btn btn-primary" data-piano-resume>Resume practice</a>';
+  context.container.innerHTML = copy(`<h1>${copy("Practice already in progress")}</h1><p data-piano-existing>${copy("Your current practice has been kept.")}</p><a class="btn btn-primary" data-piano-resume>${copy("Resume practice")}</a>`);
   context.container.querySelector('a').href = `${pianoContext.base}#/piano/learn?lesson=${encodeURIComponent(practice.lessonId)}`;
   return true;
 }

@@ -1,3 +1,4 @@
+import { exerciseState, resumeExercise, exerciseCleanup } from '../../exercise-state.js';
 import { createExerciseShell, INTERVAL_NAMES } from './ear-training-exercise-shared.js';
 import { stopPlayback } from './ear-training-exercise-stopPlayback.js';
 import { playInterval } from './ear-training-exercise-playInterval.js';
@@ -13,7 +14,7 @@ ctx.playNote = playNote;
 ctx.delay = delay;
 ctx.next = next.bind(null, ctx);
 ctx.update = update.bind(null, ctx);
-ctx.state = { question: null, revealed: false, playing: false, status: 'Press "Play" to start' };
+ctx.state = exerciseState({ question: null, revealed: false, playing: false, status: 'Press "Play" to start' });
 ctx.playback = null;
 ctx.shell = createExerciseShell(ctx.container, {
     title: 'Ear Training — Intervals',
@@ -23,9 +24,9 @@ ctx.shell = createExerciseShell(ctx.container, {
     buttonLabel: 'New interval',
     onRandom: (filter) => ctx.next(filter),
   });
-ctx.next([])
-return () => {
+resumeExercise(ctx)
+return exerciseCleanup(ctx, () => {
     ctx.stopPlayback()
     ctx.shell.destroy()
-  }
+  })
 }

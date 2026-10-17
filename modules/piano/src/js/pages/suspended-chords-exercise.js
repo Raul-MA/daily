@@ -1,3 +1,5 @@
+import { exerciseState, resumeExercise, exerciseCleanup } from '../../exercise-state.js';
+import { copy } from '../../i18n.js';
 import { createExerciseShell, SUSPENDED_CHORD_TYPE_KEYS, SUSPENDED_CHORD_TYPES } from './suspended-chords-exercise-shared.js';
 import { next } from './suspended-chords-exercise-next.js';
 import { update } from './suspended-chords-exercise-update.js';
@@ -5,7 +7,7 @@ export default function render(container) {
 const ctx = { container };
 ctx.next = next.bind(null, ctx);
 ctx.update = update.bind(null, ctx);
-ctx.state = { question: null, revealed: false, mode: 'mixed', promptMode: 'spell', filter: [] };
+ctx.state = exerciseState({ question: null, revealed: false, mode: 'mixed', promptMode: 'spell', filter: [] });
 ctx.shell = createExerciseShell(ctx.container, {
     title: 'Suspended Chords',
     links: [{ label: 'Theory', path: '/suspended-chords/theory' }],
@@ -29,8 +31,8 @@ ctx.modes = [
   ];
 ctx.modes.forEach((m, idx) => {
     const btn = document.createElement('button')
-    btn.className = `btn btn-sm ${idx === 0 ? 'btn-primary' : 'btn-ghost'}`
-    btn.textContent = m.label
+    btn.className = `btn btn-sm ${m.value === ctx.state.mode ? 'btn-primary' : 'btn-ghost'}`
+    btn.textContent = copy(m.label)
     btn.addEventListener('click', () => {
       ctx.state.mode = m.value
       ctx.modeGroup.querySelectorAll('button').forEach((b, i) => {
@@ -41,6 +43,6 @@ ctx.modes.forEach((m, idx) => {
     ctx.modeGroup.appendChild(btn)
   })
 ctx.controls.appendChild(ctx.modeGroup)
-ctx.next([])
-return () => ctx.shell.destroy()
+resumeExercise(ctx)
+return exerciseCleanup(ctx, () => ctx.shell.destroy())
 }

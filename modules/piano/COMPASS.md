@@ -13,11 +13,13 @@
 
 ## Commands
 
-- `npm run test:piano`: 53 unit cases, ten native browser cases, both retained original browser scripts.
+- `npm run test:piano`: 58 unit cases, fourteen native browser cases, both retained original browser scripts.
 
 ## Key Files
 
 - `src/service.js`, `src/service-actions.js`, `src/practice-clock.js`: atomic practice/history/activity transitions and timestamp snapshots.
+- `src/i18n.js`, `src/translations/`, `src/localized-lessons.js`: EN/ES presentation overlays; canonical musical data remains unchanged.
+- `src/exercise-state.js`: language-only question/filter/pacing snapshots, cleared by route changes.
 - `src/view.js`, `src/ui-drafts.js`, `src/js/router.js`: async mounting, remount drafts and shared routing.
 - `src/js/music/`, `src/js/pages/`, `src/js/components/`: original musical content and split presentation code.
 

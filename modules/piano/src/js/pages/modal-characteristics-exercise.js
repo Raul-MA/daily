@@ -1,3 +1,5 @@
+import { exerciseState, resumeExercise, exerciseCleanup } from '../../exercise-state.js';
+import { copy } from '../../i18n.js';
 import { createExerciseShell, MODES } from './modal-characteristics-exercise-shared.js';
 import { next } from './modal-characteristics-exercise-next.js';
 import { update } from './modal-characteristics-exercise-update.js';
@@ -6,7 +8,7 @@ const ctx = { container };
 ctx.next = next.bind(null, ctx);
 ctx.update = update.bind(null, ctx);
 ctx.drillMode = 'forward';
-ctx.state = { question: null, revealed: false };
+ctx.state = exerciseState({ question: null, revealed: false });
 ctx.shell = createExerciseShell(ctx.container, {
     title: 'Modal Characteristics',
     links: [{ label: 'Theory', path: '/modes/theory' }],
@@ -17,12 +19,12 @@ ctx.shell = createExerciseShell(ctx.container, {
   });
 ctx.controls = ctx.container.querySelector('.exercise-controls');
 if (ctx.controls) {
-    ctx.controls.innerHTML = `
+    ctx.controls.innerHTML = copy(`
       <div style="display:flex;gap:var(--space-sm);justify-content:center;flex-wrap:wrap;padding:var(--space-sm) 0">
-        <button id="drill-forward" class="btn btn-sm btn-primary">Name → Characteristics</button>
-        <button id="drill-reverse" class="btn btn-sm btn-ghost">Context → Name</button>
+        <button id="drill-forward" class="btn btn-sm btn-primary">${copy("Name → Characteristics")}</button>
+        <button id="drill-reverse" class="btn btn-sm btn-ghost">${copy("Context → Name")}</button>
       </div>
-    `
+    `)
     ctx.container.querySelector('#drill-forward').addEventListener('click', () => {
       ctx.drillMode = 'forward'
       ctx.container.querySelector('#drill-forward').classList.remove('btn-ghost')
@@ -42,6 +44,6 @@ if (ctx.controls) {
       ctx.update()
     })
   }
-ctx.next([])
-return () => ctx.shell.destroy()
+resumeExercise(ctx)
+return exerciseCleanup(ctx, () => ctx.shell.destroy())
 }

@@ -1,3 +1,5 @@
+import { exerciseState, resumeExercise, exerciseCleanup } from '../../exercise-state.js';
+import { copy } from '../../i18n.js';
 import { createExerciseShell, BEBOP_SCALE_NAMES, EXERCISE_MODES } from './bebop-exercise-shared.js';
 import { next } from './bebop-exercise-next.js';
 import { update } from './bebop-exercise-update.js';
@@ -5,7 +7,7 @@ export default function render(container) {
 const ctx = { container };
 ctx.next = next.bind(null, ctx);
 ctx.update = update.bind(null, ctx);
-ctx.state = { question: null, revealed: false, mode: 'spell' };
+ctx.state = exerciseState({ question: null, revealed: false, mode: 'spell' });
 ctx.shell = createExerciseShell(ctx.container, {
     title: 'Bebop Scales',
     links: [{ label: 'Theory', path: '/bebop/theory' }],
@@ -16,14 +18,14 @@ ctx.shell = createExerciseShell(ctx.container, {
   });
 ctx.controls = ctx.container.querySelector('.exercise-controls');
 if (ctx.controls) {
-    ctx.controls.innerHTML = `
+    ctx.controls.innerHTML = copy(`
       <div style="display:flex;gap:var(--space-sm);flex-wrap:wrap;justify-content:center;padding:var(--space-sm) 0">
-        ${EXERCISE_MODES.map(m => `
+        ${copy(EXERCISE_MODES.map(m => `
           <button class="btn btn-sm bebop-mode-btn${m.value === ctx.state.mode ? ' btn-primary' : ' btn-ghost'}"
-            data-mode="${m.value}">${m.label}</button>
-        `).join('')}
+            data-mode="${m.value}">${copy(m.label)}</button>
+        `).join(''))}
       </div>
-    `
+    `)
     ctx.controls.querySelectorAll('.bebop-mode-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         ctx.state.mode = btn.dataset.mode
@@ -32,6 +34,6 @@ if (ctx.controls) {
       })
     })
   }
-ctx.next([])
-return () => ctx.shell.destroy()
+resumeExercise(ctx)
+return exerciseCleanup(ctx, () => ctx.shell.destroy())
 }

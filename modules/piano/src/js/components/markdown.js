@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 export function renderMarkdown(md) {
   if (!md) return '';
   const state = { lines: md.split('\n'), index: 0, html: '', steps: 0 };
@@ -21,7 +22,7 @@ function fence(state) {
     code += escapeHtml(state.lines[state.index]) + '\n';
     state.index++;
   }
-  state.html += `<pre><code class="language-${escapeHtml(lang)}">${code}</code></pre>\n`;
+  state.html += `<pre><code class="language-${escapeHtml(lang)}">${copy(code)}</code></pre>\n`;
   state.index++;
   return true;
 }
@@ -29,7 +30,7 @@ function heading(state) {
   const match = state.lines[state.index].match(/^(#{1,6})\s+(.+)/);
   if (!match) return false;
   const level = match[1].length;
-  state.html += `<h${level}>${inlineMarkdown(match[2])}</h${level}>\n`;
+  state.html += `<h${level}>${copy(inlineMarkdown(match[2]))}</h${level}>\n`;
   state.index++;
   return true;
 }
@@ -46,7 +47,7 @@ function quote(state) {
     content += state.lines[state.index].slice(2) + '\n';
     state.index++;
   }
-  state.html += `<blockquote>${renderMarkdown(content.trim())}</blockquote>\n`;
+  state.html += `<blockquote>${copy(renderMarkdown(content.trim()))}</blockquote>\n`;
   return true;
 }
 function table(state) {
@@ -56,18 +57,18 @@ function table(state) {
   let rows = '';
   while (state.index < state.lines.length && state.lines[state.index].includes('|')) {
     const cells = parseTableRow(state.lines[state.index]);
-    rows += '<tr>' + cells.map(cell => `<td>${inlineMarkdown(cell)}</td>`).join('') + '</tr>\n';
+    rows += '<tr>' + cells.map(cell => `<td>${copy(inlineMarkdown(cell))}</td>`).join('') + '</tr>\n';
     state.index++;
   }
-  const headerHTML = '<tr>' + header.map(cell => `<th>${inlineMarkdown(cell)}</th>`).join('') + '</tr>';
-  state.html += `<table><thead>${headerHTML}</thead><tbody>${rows}</tbody></table>\n`;
+  const headerHTML = '<tr>' + header.map(cell => `<th>${copy(inlineMarkdown(cell))}</th>`).join('') + '</tr>';
+  state.html += `<table><thead>${copy(headerHTML)}</thead><tbody>${copy(rows)}</tbody></table>\n`;
   return true;
 }
 function list(state, pattern, tag) {
   if (!pattern.test(state.lines[state.index])) return false;
   state.html += `<${tag}>\n`;
   while (state.index < state.lines.length && pattern.test(state.lines[state.index])) {
-    state.html += `<li>${inlineMarkdown(state.lines[state.index].replace(pattern, ''))}</li>\n`;
+    state.html += `<li>${copy(inlineMarkdown(state.lines[state.index].replace(pattern, '')))}</li>\n`;
     state.index++;
   }
   state.html += `</${tag}>\n`;
@@ -92,7 +93,7 @@ function paragraph(state) {
     state.index++;
   }
   if (!text) return false;
-  state.html += `<p>${inlineMarkdown(text)}</p>\n`;
+  state.html += `<p>${copy(inlineMarkdown(text))}</p>\n`;
   return true;
 }
 
@@ -109,7 +110,7 @@ function parseTableRow(line) {
 }
 
 function inlineMarkdown(text) {
-  return text
+  return copy(text
     
     .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
     
@@ -121,7 +122,7 @@ function inlineMarkdown(text) {
     
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
     
-    .replace(/~~(.+?)~~/g, '<del>$1</del>')
+    .replace(/~~(.+?)~~/g, '<del>$1</del>'))
 }
 
 function escapeHtml(str) {
@@ -134,5 +135,5 @@ function escapeHtml(str) {
 
 
 export function mountMarkdown(element, md) {
-  element.innerHTML = renderMarkdown(md)
+  element.innerHTML = copy(renderMarkdown(md))
 }

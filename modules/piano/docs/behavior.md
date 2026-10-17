@@ -18,8 +18,18 @@ Source CSS is scoped to `[data-module="piano"]`. Audio/diagrams are local assets
 
 ## Tests and remaining acceptance
 
-Source: Toniq commit `3fc564302b2c10642315d97a603aeba3c73a6ed0`; file hashes/destinations are in `reports/piano-source-map.json`. The original 41 unit cases and both original browser scripts remain, with explicit baseline/native route and asset adapters. Four Markdown characterization cases and eight service cases bring the unit total to 53. Ten additional browser cases cover continuation, hidden prompts, offline use, history, drafts, stale activity links and failed saves.
+Source: Toniq commit `3fc564302b2c10642315d97a603aeba3c73a6ed0`; file hashes/destinations are in `reports/piano-source-map.json`. The original 41 unit cases and both original browser scripts remain, with explicit baseline/native route and asset adapters. Four Markdown characterization cases, eight service cases four localization contracts and one nested restore contract bring the unit total to 58. Fourteen native browser cases cover continuation, hidden prompts, offline use, history, drafts, stale activity links, failed saves, EN/ES presentation and all 44 destinations at 320px.
 
 Original automatic pause-on-hide and loss-on-navigation expectations intentionally become continuation assertions. All musical, keyboard, reveal, timing-budget and cleanup assertions remain. The old worker inventory checks the generated single-worker assets in native mode and the original worker in baseline mode.
 
-Full EN/ES authored content, combined recovery, stronger nested restore validation and physical iPhone acceptance remain final gates. Local browser clocks do not establish installed-device acceptance. Current test evidence and exact next work are maintained in `docs/progress.md`.
+Physical iPhone acceptance and the final whole-PWA audit remain final gates. Local browser clocks do not establish installed-device acceptance. Current test evidence and exact next work are maintained in `docs/progress.md`.
+
+## Language and transient exercise state
+
+`i18n.js` resolves owned authored copy, parameterized questions and accessible labels. `localized-lessons.js` clones the lesson presentation while retaining IDs, roots, recall data, keyboard definitions and links. Nine theory Markdown modules use translated formatted blocks with the original links and notation. Search matches both English aliases and accent-insensitive Spanish labels. Saved canonical prompts, music formulas, note spelling, numeric offsets and user-entered text are not rewritten. Home translates only exact authored lesson titles; custom activity names remain verbatim.
+
+`exercise-state.js` captures ordinary question/reveal/mode state, filter values, pacing input and the running presentation timer on disposal. The shared shell retains this in-memory object across language remounts and replaces it on route changes. Progression generation retains its chords and selection. Audio is canceled and never resumes automatically. These snapshots do not create persistence writes; guided practice remains controlled by the timestamp service. Active filter types and mode buttons must agree with restored state.
+
+Four source parent-key descriptions are corrected from “above” to “below” (Dorian, Phrygian, Lydian and Mixolydian); a transpose-based contract verifies their existing C-major examples. Numeric musical calculations are unchanged. Original source hashes remain provenance, not claims of byte identity after the native split/localization.
+
+`prompt-validation.js` validates each persisted keyboard tone using the original note/voicing calculations before display. Null/unknown notes, malformed offsets and pitches outside MIDI 0–127 reject, without regenerating or replacing saved questions. Timestamps and elapsed counters remain finite, nonnegative and within the JavaScript Date range. The nested restore contract fails before implementation (`piano-nested-validation-red.txt`) and accepts every lesson prompt plus legacy saved wording after the correction.

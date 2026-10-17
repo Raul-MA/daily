@@ -1,3 +1,5 @@
+import { restoreExerciseShell } from '../../exercise-state.js';
+import { copy } from '../../i18n.js';
 import { createAutoAdvance } from './exercise-shell-shared.js';
 import { initialize0 } from './exercise-shell-initialize0.js';
 import { initialize1 } from './exercise-shell-initialize1.js';
@@ -17,7 +19,7 @@ ctx.destroy = destroy.bind(null, ctx);
 Object.assign(ctx, optionsFor(ctx.opts));
 ctx.selectedFilter = [];
 ctx.linksHtml = ctx.links.map(l =>
-    `<a href="#${l.path}">${l.label}</a>`
+    `<a href="#${l.path}">${copy(l.label)}</a>`
   ).join('');
 ctx.initialize0();
 ctx.initialize1();
@@ -32,6 +34,7 @@ if (ctx.appShell) ctx.appShell.classList.add('exercise-mode')
 ctx.timer = createAutoAdvance(ctx.container.querySelector('.timer-group'), () => {
     ctx.onRandom(ctx.selectedFilter)
   });
+restoreExerciseShell(ctx);
 if (ctx.selectEl) {
     ctx.selectEl.addEventListener('change', () => {
       ctx.selectedFilter = Array.from(ctx.selectEl.selectedOptions).map(o => {

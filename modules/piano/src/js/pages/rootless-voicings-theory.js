@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { mountMarkdown } from '../components/markdown.js'
 import {
   ROOTLESS_CHORD_TYPE_KEYS,
@@ -5,7 +6,7 @@ import {
   getRootlessVoicing,
 } from '../music/rootless-voicings.js'
 
-const THEORY_MD = `
+export const THEORY_MD = `
 ## Rootless Voicings (A & B)
 
 **Rootless voicings** omit the root and keep the color tones that define function and movement.
@@ -33,11 +34,11 @@ function buildQualityItems() {
 
     return `
       <div class="theory-item">
-        <div class="theory-item-title">${info.label} &nbsp;<code>${info.symbol}</code></div>
-        <p class="text-muted">${info.usage}</p>
+        <div class="theory-item-title">${copy(info.label)} ${copy("&nbsp;")}<code>${copy(info.symbol)}</code></div>
+        <p class="text-muted">${copy(info.usage)}</p>
         <div style="margin-top:var(--space-xs)">
-          <span class="chip chip-accent">A: ${aDegrees}</span>
-          <span class="chip">B: ${bDegrees}</span>
+          <span class="chip chip-accent">${copy("A:")} ${copy(aDegrees)}</span>
+          <span class="chip">${copy("B:")} ${copy(bDegrees)}</span>
         </div>
       </div>
     `
@@ -51,15 +52,15 @@ function buildTwoFiveOneExample() {
 
   return `
     <div class="theory-item">
-      <div class="theory-item-title">C major ii–V–I (A→B→A)</div>
+      <div class="theory-item-title">${copy("C major ii–V–I (A→B→A)")}</div>
       <table class="chord-tones-table mt-sm">
         <thead>
-          <tr><th>Chord</th><th>Voicing</th><th>Notes</th></tr>
+          <tr><th>${copy("Chord")}</th><th>${copy("Voicing")}</th><th>${copy("Notes")}</th></tr>
         </thead>
         <tbody>
-          <tr><td>Dm7</td><td>A</td><td>${ii}</td></tr>
-          <tr><td>G7</td><td>B</td><td>${v}</td></tr>
-          <tr><td>Cmaj7</td><td>A</td><td>${i}</td></tr>
+          <tr><td>${copy("Dm7")}</td><td>${copy("A")}</td><td>${copy(ii)}</td></tr>
+          <tr><td>${copy("G7")}</td><td>${copy("B")}</td><td>${copy(v)}</td></tr>
+          <tr><td>${copy("Cmaj7")}</td><td>${copy("A")}</td><td>${copy(i)}</td></tr>
         </tbody>
       </table>
     </div>
@@ -73,18 +74,18 @@ export default function render(container) {
 
   const list = document.createElement('div')
   list.className = 'theory-list'
-  list.innerHTML = buildQualityItems() + buildTwoFiveOneExample()
+  list.innerHTML = copy(buildQualityItems() + buildTwoFiveOneExample())
   content.appendChild(list)
 
-  container.innerHTML = `
+  container.innerHTML = copy(`
     <div class="page-header">
-      <h1>Rootless Voicings — Theory</h1>
+      <h1>${copy("Rootless Voicings — Theory")}</h1>
       <div class="page-nav-links">
-        <a href="#/rootless-voicings/exercises">Exercises →</a>
-        <a href="#/shell-chords/theory">Shell Chords →</a>
+        <a href="#/rootless-voicings/exercises">${copy("Exercises →")}</a>
+        <a href="#/shell-chords/theory">${copy("Shell Chords →")}</a>
       </div>
     </div>
-  `
+  `)
 
   container.appendChild(content)
 }

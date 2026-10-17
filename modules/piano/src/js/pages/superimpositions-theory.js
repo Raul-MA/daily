@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { mountMarkdown } from '../components/markdown.js'
 import { SUPERIMPOSITIONS } from '../music/superimpositions.js'
 import { transpose } from '../music/notes.js'
@@ -67,7 +68,7 @@ const QUICK_REF_MD = `
 | D♭/C | ♭II | ♭9, 11, ♭13 | Phrygian / pedal |
 `
 
-const THEORY_MD =
+export const THEORY_MD =
   INTRO_MD +
   SUPERIMPOSITIONS.map(buildUSTSection).join('\n') +
   QUICK_REF_MD
@@ -76,15 +77,15 @@ export default function render(container) {
   const content = document.createElement('div')
   content.className = 'theory-content'
 
-  container.innerHTML = `
+  container.innerHTML = copy(`
     <div class="page-header">
-      <h1>Upper Structures — Theory</h1>
+      <h1>${copy("Upper Structures — Theory")}</h1>
       <div class="page-nav-links">
-        <a href="#/superimpositions/exercises">Exercises →</a>
-        <a href="#/modes/theory">Modes →</a>
+        <a href="#/superimpositions/exercises">${copy("Exercises →")}</a>
+        <a href="#/modes/theory">${copy("Modes →")}</a>
       </div>
     </div>
-  `
+  `)
   mountMarkdown(content, THEORY_MD)
   container.appendChild(content)
 }

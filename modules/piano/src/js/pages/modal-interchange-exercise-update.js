@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { getKeyboardVoicing, buildExerciseCardHTML, buildChordTonesTableHTML, CHORD_TYPES } from './modal-interchange-exercise-shared.js';
 export function update(ctx) {
     const q = ctx.state.question
@@ -13,32 +14,32 @@ export function update(ctx) {
     if (!ctx.state.inverse) {
       
       questionHTML = `
-        <span class="label">Key</span>
-        <span class="note-display">${q.keyRoot} major</span>
-        <span class="label">Find the borrowed chord</span>
-        <span class="question">${q.romanBorrowed}</span>
+        <span class="label">${copy("Key")}</span>
+        <span class="note-display">${copy(q.keyRoot)} ${copy("major")}</span>
+        <span class="label">${copy("Find the borrowed chord")}</span>
+        <span class="question">${copy(q.romanBorrowed)}</span>
       `
       answerHTML = `
-        <span class="answer-label">${q.romanBorrowed} in ${q.keyRoot} major</span>
-        <span class="answer-main" style="font-size:var(--text-xl)">${q.chordName}</span>
-        <span class="answer-sub">Source: parallel ${q.source}</span>
-        <span class="answer-sub text-muted">${q.description}</span>
-        ${tonesTable}
+        <span class="answer-label">${copy(q.romanBorrowed)} ${copy("in")} ${copy(q.keyRoot)} ${copy("major")}</span>
+        <span class="answer-main" style="font-size:var(--text-xl)">${copy(q.chordName)}</span>
+        <span class="answer-sub">${copy("Source: parallel")} ${copy(q.source)}</span>
+        <span class="answer-sub text-muted">${copy(q.description)}</span>
+        ${copy(tonesTable)}
       `
     } else {
       
       questionHTML = `
-        <span class="label">Key</span>
-        <span class="note-display">${q.keyRoot} major</span>
-        <span class="label">Identify this borrowed chord:</span>
-        <span class="question">${q.chordName}</span>
+        <span class="label">${copy("Key")}</span>
+        <span class="note-display">${copy(q.keyRoot)} ${copy("major")}</span>
+        <span class="label">${copy("Identify this borrowed chord:")}</span>
+        <span class="question">${copy(q.chordName)}</span>
       `
       answerHTML = `
-        <span class="answer-label">${q.chordName} in ${q.keyRoot} major</span>
-        <span class="answer-main" style="font-size:var(--text-xl)">${q.romanBorrowed}</span>
-        <span class="answer-sub">Source: parallel ${q.source}</span>
-        <span class="answer-sub text-muted">${q.description}</span>
-        ${tonesTable}
+        <span class="answer-label">${copy(q.chordName)} ${copy("in")} ${copy(q.keyRoot)} ${copy("major")}</span>
+        <span class="answer-main" style="font-size:var(--text-xl)">${copy(q.romanBorrowed)}</span>
+        <span class="answer-sub">${copy("Source: parallel")} ${copy(q.source)}</span>
+        <span class="answer-sub text-muted">${copy(q.description)}</span>
+        ${copy(tonesTable)}
       `
     }
 

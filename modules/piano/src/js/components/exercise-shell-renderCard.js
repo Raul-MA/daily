@@ -1,5 +1,6 @@
+import { copy } from '../../i18n.js';
 export function renderCard(ctx, html) {
-    ctx.cardArea.innerHTML = html
+    ctx.cardArea.innerHTML = copy(html)
     const card = ctx.cardArea.querySelector('.exercise-card')
     if (card) {
       card.tabIndex = 0

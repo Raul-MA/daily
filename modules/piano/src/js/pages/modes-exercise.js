@@ -1,9 +1,11 @@
+import { exerciseState, resumeExercise, exerciseCleanup } from '../../exercise-state.js';
+import { copy } from '../../i18n.js';
 import { getKeyboardVoicing } from '../music/notes.js'
 import { createExerciseShell, buildExerciseCardHTML } from '../components/exercise-shell.js'
 import { randomModeQuestion, MODE_NAMES } from '../music/modes.js'
 
 export default function render(container) {
-  let state = { question: null, revealed: false }
+  let state = exerciseState({ question: null, revealed: false })
 
   function next(filter) {
     state = { question: randomModeQuestion(filter.length > 0 ? filter : null), revealed: false }
@@ -15,17 +17,17 @@ export default function render(container) {
     if (!q) return
 
     const questionHTML = `
-      <span class="label">Root note</span>
-      <span class="note-display">${q.root}</span>
-      <span class="label">Mode:</span>
-      <span class="question">${q.mode.name}</span>
+      <span class="label">${copy("Root note")}</span>
+      <span class="note-display">${copy(q.root)}</span>
+      <span class="label">${copy("Mode:")}</span>
+      <span class="question">${copy(q.mode.name)}</span>
     `
 
     const answerHTML = `
-      <span class="answer-label">Notes</span>
-      <span class="answer-main" style="font-size:var(--text-xl)">${q.notes.join(' — ')}</span>
-      <span class="answer-sub">Degree: ${q.mode.degree} &nbsp;·&nbsp; ${q.mode.feel}</span>
-      <span class="answer-sub" style="font-size:var(--text-sm)">${q.mode.formula}</span>
+      <span class="answer-label">${copy("Notes")}</span>
+      <span class="answer-main" style="font-size:var(--text-xl)">${copy(q.notes.join(' — '))}</span>
+      <span class="answer-sub">${copy("Degree:")} ${copy(q.mode.degree)} ${copy("&nbsp;·&nbsp;")} ${copy(q.mode.feel)}</span>
+      <span class="answer-sub" style="font-size:var(--text-sm)">${copy(q.mode.formula)}</span>
     `
 
     shell.renderCard(buildExerciseCardHTML({
@@ -48,6 +50,7 @@ export default function render(container) {
     onRandom: (filter) => next(filter),
   })
 
-  next([])
-  return () => shell.destroy()
+  const view = { container, get state() { return state }, next, update };
+  resumeExercise(view)
+  return exerciseCleanup(view, () => shell.destroy())
 }

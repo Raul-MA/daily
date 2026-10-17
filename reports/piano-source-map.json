@@ -945,5 +945,17 @@
         "modules/piano/src/css/variables.css"
       ]
     }
-  ]
+  ],
+  "localization": {
+    "inventory": "reports/piano-copy-inventory.json",
+    "presentation": [
+      "modules/piano/src/i18n.js",
+      "modules/piano/src/localized-lessons.js",
+      "modules/piano/src/exercise-state.js"
+    ],
+    "sourceData": "Canonical prompts, formulas, note spelling, roots and keyboard offsets preserved.",
+    "intentionalCorrections": "Four modal parent-key descriptions now say below, consistent with existing examples; transpose-based red/green test.",
+    "acceptance": "58 unit and 14 native browser cases plus both retained original broad scripts; current evidence in docs/progress.md"
+  },
+  "validation": "Keyboard payloads use original voicing calculations; invalid pitches/offsets and out-of-range timestamps reject without regenerating saved prompts."
 }

@@ -1,3 +1,4 @@
+import { translate } from './i18n.js';
 import { href } from '../../../packages/platform/src/router.js';
 import { LESSONS } from './js/music/learning-path.js';
 
@@ -17,9 +18,13 @@ export function pianoWidget(service, language, base) {
     node.append(item(spanish ? 'Ejercicio al azar' : 'Random exercise', { page: 'piano', query: { random: '1' } }, base, 'data-piano-random'));
     if (data.lastExerciseId) node.append(item(spanish ? 'Último ejercicio' : 'Last exercise', { page: 'pianoExercise', id: data.lastExerciseId }, base, 'data-piano-last'));
     if (data.practice) {
-      const title = LESSONS.find(lesson => lesson.id === data.practice.lessonId).title;
+      const title = translate(language, LESSONS.find(lesson => lesson.id === data.practice.lessonId).title);
       node.append(item(`${spanish ? 'Continuar' : 'Resume'}: ${title}`, { page: 'pianoLearn', query: { lesson: data.practice.lessonId } }, base, 'data-piano-practice'));
     }
   } catch { node.textContent = language === 'es' ? 'No se pudo leer el estado del piano.' : 'Could not read piano state.'; }
   return node;
+}
+
+export function pianoActivityLabel(label, language) {
+  return LESSONS.some(lesson => lesson.title === label) ? translate(language, label) : label;
 }

@@ -1,3 +1,4 @@
+import { copy } from '../../i18n.js';
 import { getChromaticNotes, noteToIndex, noteToMidi } from '../music/notes.js';
 
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
@@ -33,7 +34,7 @@ function keyMarkup(key) {
   const { midi, note, octave, selected, black, position } = key;
   const role = selected[0]?.role || 'tone';
   const text = keyText(selected, note, octave);
-  return `<span class="keyboard-key${black ? ' is-black' : ''}${selected.length ? ' is-selected' : ''}" data-midi="${midi}" data-note="${note}" data-octave="${octave}"${selected.length ? ` data-role="${escapeHTML(role)}"` : ''}${position}>${selected.length ? '<span class="keyboard-marker">●</span>' : ''}${key.showLabel ? `<span class="keyboard-key-label">${escapeHTML(text)}</span>` : ''}</span>`;
+  return `<span class="keyboard-key${black ? ' is-black' : ''}${selected.length ? ' is-selected' : ''}" data-midi="${midi}" data-note="${note}" data-octave="${octave}"${selected.length ? ` data-role="${escapeHTML(role)}"` : ''}${position}>${copy(selected.length ? '<span class="keyboard-marker">●</span>' : '')}${copy(key.showLabel ? `<span class="keyboard-key-label">${copy(escapeHTML(text))}</span>` : '')}</span>`;
 }
 function renderKeys(span, tones, options) {
   const pitches = Array.from({ length: span.end - span.first }, (_, index) => span.first + index);
@@ -56,7 +57,7 @@ function legendHTML(tones) {
   return tones.map(tone => {
     const description = tone.label ?? tone.degree;
     const note = `${tone.note}${tone.octave ?? ''}`;
-    return `<span${tone.role ? ` data-role="${escapeHTML(tone.role)}"` : ''}>${description ? `${escapeHTML(description)}: ` : ''}${escapeHTML(note)}</span>`;
+    return `<span${tone.role ? ` data-role="${escapeHTML(tone.role)}"` : ''}>${copy(description ? `${escapeHTML(description)}: ` : '')}${copy(escapeHTML(note))}</span>`;
   }).join(' ');
 }
 function rangeDescription(options, span, tones) {
@@ -76,9 +77,9 @@ export function drawKeyboard(input = {}) {
   const keys = renderKeys(span, tones, options);
   return `<figure class="keyboard-diagram" aria-label="${escapeHTML(options.label)}" data-octaves="${Math.ceil((span.end - span.first) / 12)}" style="--keyboard-white-count:${keys.whiteCount};--keyboard-min-width:${Math.max(160, keys.whiteCount * 32)}px">
     <div class="keyboard-scroll" tabindex="0" role="region" aria-label="${escapeHTML(options.label)} — scroll to explore the keys">
-      <div class="keyboard-keys" aria-hidden="true">${keys.html}</div>
+      <div class="keyboard-keys" aria-hidden="true">${copy(keys.html)}</div>
     </div>
-    <figcaption class="keyboard-legend${options.showLegend ? '' : ' sr-only'}"><strong class="keyboard-caption">${escapeHTML(options.label)}</strong>${legendHTML(tones)}<small>${rangeDescription(options, span, tones)}</small></figcaption>
+    <figcaption class="keyboard-legend${options.showLegend ? '' : ' sr-only'}"><strong class="keyboard-caption">${copy(escapeHTML(options.label))}</strong>${copy(legendHTML(tones))}<small>${copy(rangeDescription(options, span, tones))}</small></figcaption>
   </figure>`;
 }
 export function buildKeyboardDiagramHTML(tones = [], options = {}) { return drawKeyboard({ ...options, notes: tones }); }

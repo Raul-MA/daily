@@ -1,13 +1,14 @@
+import { copy } from '../../i18n.js';
 export function rebuildChips(ctx) {
     if (!ctx.filterChipsEl || !ctx.selectEl) return
     const selected = Array.from(ctx.selectEl.selectedOptions)
 
-    ctx.filterChipsEl.innerHTML = selected.map(o => `
+    ctx.filterChipsEl.innerHTML = copy(selected.map(o => `
       <span class="chip chip-accent filter-chip-active" data-value="${o.value}">
-        ${o.label}
-        <button class="chip-remove" aria-label="Remove ${o.label}">&times;</button>
+        ${copy(o.label)}
+        <button class="chip-remove" aria-label="Remove ${o.label}">${copy("&times;")}</button>
       </span>
-    `).join('')
+    `).join(''))
 
     ctx.filterChipsEl.querySelectorAll('.chip-remove').forEach(btn => {
       btn.addEventListener('click', (e) => {

@@ -1,3 +1,5 @@
+import { exerciseState, resumeExercise, exerciseCleanup } from '../../exercise-state.js';
+import { copy } from '../../i18n.js';
 import { createExerciseShell, ROOTLESS_CHORD_TYPE_KEYS, ROOTLESS_CHORD_TYPES } from './rootless-voicings-exercise-shared.js';
 import { next } from './rootless-voicings-exercise-next.js';
 import { update } from './rootless-voicings-exercise-update.js';
@@ -5,12 +7,12 @@ export default function render(container) {
 const ctx = { container };
 ctx.next = next.bind(null, ctx);
 ctx.update = update.bind(null, ctx);
-ctx.state = {
+ctx.state = exerciseState({
     question: null,
     revealed: false,
     mode: 'both',
     promptMode: 'build',
-  };
+  });
 ctx.shell = createExerciseShell(ctx.container, {
     title: 'Rootless Voicings',
     links: [
@@ -37,8 +39,8 @@ ctx.modes = [
   ];
 ctx.modes.forEach((m, idx) => {
     const btn = document.createElement('button')
-    btn.className = `btn btn-sm ${idx === 0 ? 'btn-primary' : 'btn-ghost'}`
-    btn.textContent = m.label
+    btn.className = `btn btn-sm ${m.value === ctx.state.mode ? 'btn-primary' : 'btn-ghost'}`
+    btn.textContent = copy(m.label)
     btn.addEventListener('click', () => {
       ctx.state.mode = m.value
       ctx.modeGroup.querySelectorAll('button').forEach((b, i) => {
@@ -50,6 +52,6 @@ ctx.modes.forEach((m, idx) => {
     ctx.modeGroup.appendChild(btn)
   })
 ctx.controls.appendChild(ctx.modeGroup)
-ctx.next([])
-return () => ctx.shell.destroy()
+resumeExercise(ctx)
+return exerciseCleanup(ctx, () => ctx.shell.destroy())
 }

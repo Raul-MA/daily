@@ -3,7 +3,7 @@
 ## Start Here
 
 - [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Local only, no workflows or pushes; API token checks are deferred.
-- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. The shared shell, settings, routing, timestamp activities and offline lifecycle are implemented in plain HTML/CSS/JavaScript; plants, Coffee, Games and Time Budget and piano are connected; Reader also passes local workflow checks; WhatsApp also passes local workflow checks. Stage 8 combined recovery/localization/device gates remain open.
+- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. The shared shell, settings, routing, timestamp activities and offline lifecycle are implemented in plain HTML/CSS/JavaScript; plants, Coffee, Games and Time Budget and piano are connected; Reader also passes local workflow checks; WhatsApp also passes local workflow checks. Stage 8 final lifecycle/storage/device gates remain open.
 
 ## Commands
 
