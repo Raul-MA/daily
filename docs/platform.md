@@ -17,6 +17,8 @@ Seven apps need one shell and local data boundary without conflicting navigation
 - Dashboard cards navigate; settings own widget visibility/order and quick-action visibility. EN/ES changes labels without translating saved user text.
 - `activities.js` owns persisted timestamp activity transitions. Page intervals update text only. Paused time is excluded; suspension and navigation do not pause activities. Countdown expiry does not silently complete an activity. Budget/game/piano each allow one unfinished activity.
 - The single worker precaches the generated local asset list. It bypasses authenticated/external/unknown requests and deletes only `daily-pwa-` cache versions. Static cache matches ignore Vary because these are app-owned assets, never account data.
+- `persistence.js` requests durable storage where available without domain writes or a retention guarantee.
+- The attention screen preserves unreadable root snapshots and accepts a validated full backup after a recovery download; it never resets damaged data to empty. See [Storage and migrations](storage-and-migrations.md).
 - The PWA UI offers installation help and explicit updates. It asks every open same-app tab to report its activity/form state before explicit activation. Blocked, malformed or missing replies keep the update waiting, with an explanation. Cached HTML stays pinned to its matching assets until activation.
 
 ## Gotchas
@@ -24,5 +26,5 @@ Seven apps need one shell and local data boundary without conflicting navigation
 - Vite and TypeScript were used for a verified intermediate checkpoint, then replaced after the same general unit/browser checks passed. Their old reports remain historical evidence.
 - `check:js` checks syntax, not types. Runtime schema validation and behavioral tests remain essential. No type-analysis claim applies to plain JavaScript.
 - Generic root validation does not substitute for domain schemas. Each module adapter must validate its own payload, legacy formats and nested references before migration.
-- LocalStorage has no multi-tab compare-and-swap transaction. Module saves re-read the latest document synchronously; same-module simultaneous edits need explicit conflict handling before release.
-- All seven apps are connected to the shared document. Game, budget and piano sessions save atomically with timestamp activities. Countdown controls use the registry independently. Reader credentials and disposable account caches stay outside the root; WhatsApp persists its draft before external handoff. Final localization/migration audits and physical-device acceptance remain incomplete.
+- LocalStorage has no multi-tab compare-and-swap transaction. Module saves re-read the latest document synchronously; module/form revision checks reject ordinary stale saves. The current policy supports one editing tab at a time; simultaneous cross-tab writes are unsupported. Update activation still checks every open tab.
+- All seven apps are connected to the shared document. Game, budget and piano sessions save atomically with timestamp activities. Countdown controls use the registry independently. Reader credentials and disposable account caches stay outside the root; WhatsApp persists its draft before external handoff. Final whole-PWA verification and physical-device acceptance are tracked separately in progress.

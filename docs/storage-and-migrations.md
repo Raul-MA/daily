@@ -18,6 +18,12 @@ Settings offers a read-only count preview and replacement/timer warnings. A reco
 
 Private WeakMap records protect preview identity, contents and the current root fingerprint. Confirmation rejects changed, reused or stale previews, validates the retained incoming snapshot again, and replaces the root once. IDs and clock timestamps remain intact; elapsed time is reconstructed rather than restarted. Successful full restore explicitly discards prior form drafts.
 
+When the root cannot be read, the attention screen offers `backup/recovery.js` through the same preview/download/confirm/cancel controls. Its recovery file is `{app:'daily-storage-recovery', schemaVersion:1, entries}` and preserves the exact primary/recovery/corrupt strings. This is a manual-recovery artifact, not a normal full-PWA backup to import. No other storage keys are enumerated or exported. Select a supported full Daily backup to restore; download the preserved data before confirming. Stored future root versions are exportable but cannot be downgraded through this screen.
+
+The recovery adapter validates the full incoming domain document, retains private preview identity/content, and compares all three raw snapshots before applying. It writes the validated primary once and leaves prior recovery/corrupt keys intact. Credential cleanup follows replacement, with the same honest `rootApplied` reporting as ordinary restore. The shell ignores non-preference input changes rather than attempting to read a damaged root and discarding the preview. Leaving the attention screen disposes its file job/listeners.
+
+The platform requests durable storage when the browser provides it. Unsupported, refused and failed requests are tolerated without claiming guaranteed retention. User-exported backups remain the recovery mechanism.
+
 Readwise credentials and disposable metadata/review caches use separate keys and never enter the export. Credential release happens only after successful root replacement. A cleanup error reports a completed data restore with a credential warning, rather than claiming rollback. A failed root write does not release credentials.
 
 `tests/general/backup.test.mjs` covers schema/reference validation and atomicity. `tests/e2e/backup.spec.js` covers downloads, separate-profile restore, cancellation, stale/quota failures, prior drafts and cleanup reporting. Existing storage tests also exercise Unicode and a synthetic document above 140 KB, compared with the approximate 20 KB backups reported by the user. These fixtures do not establish an actual iPhone quota.
@@ -26,7 +32,7 @@ Readwise credentials and disposable metadata/review caches use separate keys and
 
 - Existing apps' export and restore are user-confirmed working. Do not request personal files to test the combined importer; all repository fixtures are synthetic.
 - Generic root validation and the combined domain registry have different responsibilities. Recovery export preserves a readable generic root even when domain validation rejects a module.
-- Module revisions and whole-root preview fingerprints reject stale confirmations against the latest readable document. Synchronous localStorage is not a cross-tab transaction or compare-and-swap; simultaneous writers remain in the final concurrency audit.
+- Module revisions and whole-root preview fingerprints reject stale confirmations against the latest readable document. The current write policy is one editing tab at a time. Synchronous localStorage is not a cross-tab transaction or compare-and-swap; simultaneous writes across tabs are unsupported. A second tab may display data, but optimistic revision checks do not serialize competing writers.
 - Credential storage failures can leave an old saved credential behind. Report the cleanup warning explicitly; do not claim successful removal after such errors.
 - Actual iPhone migration and authenticated browser-origin Readwise checks remain deferred.
 - No user records or Readwise token are written by the diagnostic page; it does not use this store.

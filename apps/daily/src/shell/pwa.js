@@ -1,3 +1,4 @@
+import { requestPersistence } from '../../../../packages/platform/src/persistence.js';
 import { createActivities } from '../../../../packages/platform/src/activities.js';
 import { updateAllowed } from '../../../../packages/platform/src/update-gate.js';
 import { element } from './elements.js';
@@ -16,7 +17,7 @@ function copy(context) {
         return context.state.read().value.preferences.language === 'es' ? es : en;
     }
     catch {
-        return en;
+        return navigator.language.startsWith('es') ? es : en;
     }
 }
 function draw(context) {
@@ -81,6 +82,7 @@ function updateReply(event, context) {
 }
 
 export function mountPwa(state, base) {
+    void requestPersistence(navigator.storage);
     if (!('serviceWorker' in navigator))
         return () => undefined;
     const host = element('aside', 'daily-system');

@@ -1,3 +1,6 @@
+import { parseHash } from '../../../../packages/platform/src/router.js';
+import { connectRecoveryBackups } from '../backup/recovery.js';
+import { mountStorageRecovery } from '../backup/recovery-view.js';
 import { mountDailyBackup } from '../backup/view.js';
 import { mountWhatsApp } from '../../../../modules/whatsapp/src/view.js';
 import { mountReview } from '../../../../modules/reading/src/review/view.js';
@@ -11,7 +14,7 @@ import { mountCoffee } from '../../../../modules/coffee/src/view.js';
 import { mountGames } from '../../../../modules/games/src/view.js';
 import { activitySummary } from './activity-summary.js';
 import { shellText } from '../../../../packages/i18n/src/shell.js';
-import { element, link, heading } from './elements.js';
+import { element, link } from './elements.js';
 import { navigation } from './navigation.js';
 import { dashboard } from './dashboard.js';
 import { settings } from './settings.js';
@@ -25,12 +28,25 @@ function focusAfterRender(root, key, changedRoute) {
     else if (key)
         root.querySelector(`[data-focus="${CSS.escape(key)}"]`)?.focus();
 }
-function failure(root, base) {
-    const copy = shellText(navigator.language.startsWith('es') ? 'es' : 'en');
-    const view = element('main', 'storage-failure');
-    view.append(heading(copy.storageTitle), element('p', '', copy.storageError), link(copy.diagnostic, `${base}diagnostics.html`));
-    root.replaceChildren(view);
+function failure(context) {
+    context.pageCleanup?.();
+    context.pageCleanup = undefined;
+    context.pageRestore = undefined;
+    const service = connectRecoveryBackups(localStorage, { afterRestore: context.reading.releaseCredentials });
+    const page = mountStorageRecovery({
+        base: context.base, language: navigator.language.startsWith('es') ? 'es' : 'en', service,
+        restore: preview => service.applyImport(preview),
+        replaced: message => {
+            context.route = parseHash('#/settings');
+            history.replaceState(null, '', `${context.base}#/settings`);
+            replaced(context, message);
+        },
+    });
+    context.pageCleanup = page.dispose;
+    context.pageConflict = page.conflict;
+    context.root.replaceChildren(page.node);
 }
+
 function pageView(context, preferences) {
     if (context.route.page.startsWith('piano')) return pianoPage(context);
     if (context.route.page === 'time') return timePage(context);
@@ -83,7 +99,7 @@ export function renderShell(context, changedRoute = false) {
         document.dispatchEvent(new Event('daily:form-state'));
     }
     catch {
-        failure(context.root, context.base);
+        failure(context);
     }
 }
 function appendAlert(main, context, recovered) {
@@ -144,10 +160,15 @@ function backupPage(context) {
     const options = {
         base: context.base, ui: context.backupUI, service: context.backups,
         restore: preview => { context.restoring = true; try { context.backups.applyImport(preview); } finally { context.restoring = false; } },
-        replaced: message => { Object.assign(context, { backupUI: { message }, moduleUI: {}, timeUI: {}, gamesUI: {}, error: false, saved: true }); renderShell(context, true); },
+        replaced: message => replaced(context, message),
     };
     const page = mountDailyBackup(options);
     const previous = context.pageCleanup;
     context.pageCleanup = () => { previous?.(); page.dispose(); };
     return page.node;
+}
+
+function replaced(context, message) {
+    Object.assign(context, { backupUI: { message }, moduleUI: {}, timeUI: {}, gamesUI: {}, error: false, saved: true });
+    renderShell(context, true);
 }

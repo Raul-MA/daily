@@ -5,7 +5,7 @@ import { createDailyState } from '../../packages/data/src/daily-state.js';
 import { connectReading } from '../../modules/reading/src/service.js';
 
 async function sourcePage(page) {
-  const names = ['index.html', 'entry.js', 'export.js', 'validation.js', 'config.js', 'metadata.js'];
+  const names = ['index.html', 'entry.js', 'export.js', 'validation.js', 'config.js', 'metadata.js', 'timestamps.js'];
   for (const name of names) expect(existsSync(resolve('legacy/exporters/reader', name)), name).toBe(true);
   await page.route('**/legacy-reader-export/**', route => {
     const name = new URL(route.request().url()).pathname.split('/').pop();

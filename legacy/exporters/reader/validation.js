@@ -1,3 +1,4 @@
+import { validTimestamp } from './timestamps.js';
 import { DEFAULTS } from './config.js';
 import { validateReaderUrl } from './metadata.js';
 
@@ -28,8 +29,8 @@ function validScan(value) {
 }
 function validSettingsKey(value) { try { return validSettings(JSON.parse(value)); } catch { return false; } }
 function validPickMetadata(value) {
-  if (!Number.isFinite(value.selectedAt) || value.selectedAt < 0 || !validSettingsKey(value.settingsKey)) return false;
-  if (value.fetchedAt !== undefined && value.fetchedAt !== null && !nonnegative(value.fetchedAt)) return false;
+  if (!validTimestamp(value.selectedAt) || !validSettingsKey(value.settingsKey)) return false;
+  if (value.fetchedAt !== undefined && value.fetchedAt !== null && !validTimestamp(value.fetchedAt)) return false;
   return validScan(value.scan);
 }
 function validCollection(value) { return Array.isArray(value) && value.length <= 20; }

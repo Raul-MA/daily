@@ -22,7 +22,7 @@ test('legacy Reader patch packages a working export link without modifying origi
   const applied = spawnSync('git', ['apply', output], { cwd: source, encoding: 'utf8' });
   assert.equal(applied.status, 0, applied.stderr);
   assert.match(readFileSync(join(source, 'index.html'), 'utf8'), /href="daily-migration\/index.html"/);
-  for (const name of ['index.html', 'entry.js', 'export.js', 'validation.js', 'config.js', 'metadata.js']) {
+  for (const name of ['index.html', 'entry.js', 'export.js', 'validation.js', 'config.js', 'metadata.js', 'timestamps.js']) {
     assert.equal(readFileSync(join(source, 'daily-migration', name), 'utf8'), readFileSync(join('legacy/exporters/reader', name), 'utf8'));
   }
   assert.equal(readFileSync(join(source, 'daily-migration/validation.js'), 'utf8'), readFileSync('modules/reading/src/validation.js', 'utf8'));

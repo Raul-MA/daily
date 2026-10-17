@@ -13,3 +13,5 @@ The remembered-item key is read only when Remember last item is enabled. Its met
 Download reads a fresh saved snapshot again. Keep the original installation and this backup. Import in Daily → Reader → Backups, preview, download recovery and confirm. Enter the token privately again in Daily. The old app's transient current picks and disposable caches are not migration records; Daily can generate fresh picks after authentication.
 
 The exporter and patch stay outside Daily's runtime/static output. Local synthetic tests cover both old settings keys, actual native import, privacy allowlists, opted-out remembered data, malformed/blocked storage, EN/ES, safe literal titles and 320px layout. Physical iPhone migration, live connectivity and release remain deferred.
+
+The standalone validator and its local `timestamps.js` dependency match the native Reader schema. Preparation checks both files byte-for-byte and includes the helper in the generated patch. Saved pick timestamps are bounded by the JavaScript Date range; the legacy export still reads only its three documented source keys.

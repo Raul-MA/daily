@@ -144,7 +144,8 @@
 +}
 --- /dev/null
 +++ b/daily-migration/validation.js
-@@ -0,0 +1,47 @@
+@@ -0,0 +1,48 @@
++import { validTimestamp } from './timestamps.js';
 +import { DEFAULTS } from './config.js';
 +import { validateReaderUrl } from './metadata.js';
 +
@@ -175,8 +176,8 @@
 +}
 +function validSettingsKey(value) { try { return validSettings(JSON.parse(value)); } catch { return false; } }
 +function validPickMetadata(value) {
-+  if (!Number.isFinite(value.selectedAt) || value.selectedAt < 0 || !validSettingsKey(value.settingsKey)) return false;
-+  if (value.fetchedAt !== undefined && value.fetchedAt !== null && !nonnegative(value.fetchedAt)) return false;
++  if (!validTimestamp(value.selectedAt) || !validSettingsKey(value.settingsKey)) return false;
++  if (value.fetchedAt !== undefined && value.fetchedAt !== null && !validTimestamp(value.fetchedAt)) return false;
 +  return validScan(value.scan);
 +}
 +function validCollection(value) { return Array.isArray(value) && value.length <= 20; }
@@ -279,4 +280,10 @@
 +}
 +function textFields(doc) {
 +  return Object.fromEntries(['title', 'author', 'source', 'site_name', 'category', 'location'].map(key => [key, String(doc[key] || '')]));
++}
+--- /dev/null
++++ b/daily-migration/timestamps.js
+@@ -0,0 +1,3 @@
++export function validTimestamp(value) {
++  return Number.isFinite(value) && value >= 0 && value <= 8640000000000000;
 +}

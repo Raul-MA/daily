@@ -32,13 +32,14 @@ export function handleChange(event, state) {
     languageChange(input, state);
     if (!(input instanceof HTMLInputElement))
         return;
-    const preferences = state.read().value.preferences;
     const widget = input.dataset.widgetChoice;
+    const quick = input.dataset.quickChoice;
+    if (!widgetIds.includes(widget) && !quickIds.includes(quick)) return;
+    const preferences = state.read().value.preferences;
     if (widgetIds.includes(widget)) {
         const list = preferences.widgets.filter(id => id !== widget);
         state.updatePreferences({ widgets: input.checked ? [...list, widget] : list });
     }
-    const quick = input.dataset.quickChoice;
     if (quickIds.includes(quick)) {
         const list = preferences.quickActions.filter(id => id !== quick);
         state.updatePreferences({ quickActions: input.checked ? [...list, quick] : list });

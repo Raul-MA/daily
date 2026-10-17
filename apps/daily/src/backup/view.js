@@ -45,9 +45,10 @@ export function mountDailyBackup(options) {
   options.ui.job ??= 0;
   const context = { ...options, form, copy, signal: controller.signal };
   context.draw = () => draw(context);
+  if (options.recoveryOnly) form.querySelector('#daily-backup-export').hidden = true;
   bindBackup(context);
   host.append(form);
-  legacyLinks(context, host);
+  if (!options.recoveryOnly) legacyLinks(context, host);
   draw(context);
   return { node: host, dispose: () => controller.abort() };
 }

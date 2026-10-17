@@ -132,7 +132,7 @@
 +}
 +function text(value, max) { return typeof value === 'string' && value.trim().length > 0 && value.length <= max; }
 +function minutes(value) { return Number.isInteger(value) && value >= 1 && value <= 1440; }
-+function timestamp(value) { return Number.isFinite(value) && value >= 0; }
++function timestamp(value) { return Number.isFinite(value) && value >= 0 && value <= 8640000000000000; }
 +export function validTemplates(value) {
 +  return value !== null && typeof value === 'object' && !Array.isArray(value)
 +    && Object.entries(value).every(([name, tasks]) => text(name, 60) && Array.isArray(tasks) && tasks.length > 0 && tasks.every(validTemplateTask));

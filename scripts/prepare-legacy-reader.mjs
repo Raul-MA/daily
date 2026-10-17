@@ -8,11 +8,11 @@ const source = resolve(process.argv[2] ?? '..', provenance.repo);
 const output = resolve(process.argv[3] ?? 'legacy/patches/random-readwise-export.patch');
 const html = readFileSync(join(source, 'index.html'), 'utf8');
 if (createHash('sha256').update(html).digest('hex') !== provenance.indexSha256) throw new Error('Original Reader HTML changed. Review it before updating export provenance.');
-for (const name of ['validation.js', 'config.js', 'metadata.js']) {
+for (const name of ['validation.js', 'config.js', 'metadata.js', 'timestamps.js']) {
   const copied = readFileSync(join(directory, name), 'utf8');
   if (copied !== readFileSync(join('modules/reading/src', name), 'utf8')) throw new Error('Review the Reader schemas before updating the standalone exporter.');
 }
-const patches = [linkPatch(html), ...['index.html', 'entry.js', 'export.js', 'validation.js', 'config.js', 'metadata.js'].map(name => newFilePatch(name))];
+const patches = [linkPatch(html), ...['index.html', 'entry.js', 'export.js', 'validation.js', 'config.js', 'metadata.js', 'timestamps.js'].map(name => newFilePatch(name))];
 mkdirSync(dirname(output), { recursive: true });
 writeFileSync(output, patches.join(''));
 console.log(`Prepared ${output}. Original files were only read.`);

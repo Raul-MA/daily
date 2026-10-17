@@ -1,0 +1,16 @@
+✔ legacy budget patch packages a working export link without modifying originals and refuses changed source HTML (93.328272ms)
+✔ legacy Reader patch packages a working export link without modifying originals and refuses changed source HTML (98.810454ms)
+✔ activity schemas reject unrenderable finite clocks and durations before creating the root (2.061293ms)
+✔ durable storage is requested where available and refusal or failure never claims retention (1.180681ms)
+✔ attention-screen raw recovery preserves only the three owned root snapshots without scanning storage (7.285905ms)
+✔ attention-screen restore validates full backups and replaces only the primary after a successful write (47.611753ms)
+✔ attention-screen restore rejects stale or tampered previews and future stored root versions (11.290471ms)
+✔ attention-screen recovery propagates blocked reads and reports cleanup failure only after replacement (12.779357ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 342.562121

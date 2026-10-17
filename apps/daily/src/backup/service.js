@@ -1,7 +1,7 @@
 import { DataConflictError } from '../../../../packages/data/src/errors.js';
 import { assertRestoreDocument, backupCounts } from './schema.js';
 
-function parse(text) {
+export function parseDailyBackup(text) {
   const input = JSON.parse(text);
   if (input?.app !== undefined) {
     if (input.app !== 'daily-pwa') throw new Error('Unsupported Daily backup format. Choose an app import for a legacy backup.');
@@ -15,7 +15,7 @@ function parse(text) {
 export function connectDailyBackups(state, options = {}) {
   const previews = new WeakMap();
   function previewImport(text) {
-    const data = parse(text);
+    const data = parseDailyBackup(text);
     const preview = { data, counts: backupCounts(data) };
     previews.set(preview, { root: JSON.stringify(state.read().value), preview: JSON.stringify(preview), data: JSON.stringify(data) });
     return preview;

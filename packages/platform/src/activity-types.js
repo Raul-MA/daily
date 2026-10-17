@@ -1,4 +1,4 @@
-function finite(value) { return typeof value === 'number' && Number.isFinite(value) && value >= 0; }
+function finite(value) { return typeof value === 'number' && Number.isFinite(value) && value >= 0 && value <= 8640000000000000; }
 function text(value) { return typeof value === 'string' && value.trim().length > 0 && value.length <= 500; }
 export function activityStatus(value) { return value === 'running' || value === 'paused' || value === 'completed'; }
 export function validDuration(value) { return value === null || finite(value); }

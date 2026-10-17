@@ -1,0 +1,389 @@
+Suite: general
+✔ time is derived from timestamps without tick writes or automatic completion (4.394364ms)
+✔ reload and process reconstruction preserve elapsed time and Unicode references (0.450059ms)
+✔ explicit pause excludes background time and resume continues the same activity (0.682071ms)
+✔ countdowns are independent and singleton budgets games and piano resume existing activities (0.872096ms)
+✔ widget removal language changes and navigation do not pause or reset activities (0.540297ms)
+✔ completion is explicit and terminal while a new budget may start afterwards (0.845115ms)
+✔ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (0.39707ms)
+✔ invalid starts duplicate identifiers and unknown transitions never mutate activities (0.658608ms)
+✔ failed activity changes keep the previous status and publish no success (0.657136ms)
+✔ combined backup exports every module layout language and original running timestamps without credentials or caches (41.923577ms)
+✔ combined preview validates every module and shows counts without changing records (14.019369ms)
+✔ combined restore rejects unknown identities future schemas unknown modules and future module versions (12.348474ms)
+✔ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (18.992342ms)
+✔ combined restore rejects orphan missing and inconsistent active activity mirrors (9.335246ms)
+✔ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (8.217792ms)
+✔ combined failed primary or recovery writes retain records and do not reset credentials (11.488059ms)
+✔ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (10.800318ms)
+✔ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (9.751902ms)
+✔ calendar refreshes at local midnight without repeated changes on the same day (1.551893ms)
+✔ foreground resumes recalculate date after suspension and cleanup removes callbacks (0.523155ms)
+✔ calendar deadlines follow daylight-saving local days rather than a fixed 24 hours (0.800914ms)
+✔ missing modules fail when exercised rather than preventing test discovery (0.41856ms)
+✔ new browser tests target the Pages path and module hash (0.305059ms)
+✖ legacy budget patch packages a working export link without modifying originals and refuses changed source HTML (47.47626ms)
+✔ legacy plants patch packages a working export link without modifying originals and refuses changed source HTML (94.515092ms)
+✖ legacy Reader patch packages a working export link without modifying originals and refuses changed source HTML (41.301129ms)
+✔ legacy WhatsApp patch packages a working export link without modifying originals and refuses changed source HTML (128.39262ms)
+✔ plants worker removes only its old caches (3.462887ms)
+✔ coffee worker removes only its old caches (3.589159ms)
+✔ games worker removes only its old caches (11.054543ms)
+✔ Time Budget worker removes only its old caches (6.31678ms)
+✔ piano worker removes only its old caches (1.078391ms)
+✔ module defaults never write and saved payloads preserve unrelated preferences and records (0.543754ms)
+✔ module reads validate domain shapes and reject future versions without overwriting (0.442665ms)
+✔ module saves re-read current state and publish only committed updates (0.38055ms)
+✔ failed module commits retain previous readable data without success notifications (0.284229ms)
+✖ activity schemas reject unrenderable finite clocks and durations before creating the root (0.334003ms)
+✖ durable storage is requested where available and refusal or failure never claims retention (0.615338ms)
+✔ fresh dashboard defaults put plants and activities first without writing data (0.341847ms)
+✔ language and dashboard order persist across a new state instance (0.264584ms)
+✔ removing a widget preserves module records and their active sessions (0.254274ms)
+✔ invalid language, duplicate widgets and unknown actions never overwrite settings (0.327801ms)
+✔ failed saves publish no committed change and retain the previous preferences (0.274241ms)
+✔ committed preference changes notify subscribers and support cleanup (0.292796ms)
+✔ diagnostic rejects empty credentials without making requests (0.859833ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (33.11841ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (1.184118ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.374398ms)
+✔ hung requests time out and remaining endpoint checks still execute (16.150961ms)
+✔ local diagnostics do not claim Pages-origin verification (0.470107ms)
+✔ hash routes cover all seven modules and their canonical deep links (2.802846ms)
+✔ href builder encodes stable IDs and supports configurable local base paths (0.374959ms)
+✔ query parameters and repeated values survive routing without changing settings (0.231352ms)
+✔ unknown and malformed routes fail safely instead of executing external URLs (0.517214ms)
+✔ browser hash listener supports navigation and removes itself on cleanup (0.345384ms)
+✔ static preparation preserves native modules byte-for-byte and resolves every relative import (826.762629ms)
+✔ static preparation uses the configured base for HTML manifest and worker without shipping tests (552.358721ms)
+✔ invalid static bases fail before replacing any previously prepared files (159.139616ms)
+✔ shared install assets provide PNG sizes maskable identity and a subpath-safe Apple touch icon (576.790483ms)
+✖ attention-screen raw recovery preserves only the three owned root snapshots without scanning storage (1.044337ms)
+✖ attention-screen restore validates full backups and replaces only the primary after a successful write (0.819928ms)
+✖ attention-screen restore rejects stale or tampered previews and future stored root versions (0.495353ms)
+✖ attention-screen recovery propagates blocked reads and reports cleanup failure only after replacement (0.475627ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (0.991628ms)
+✔ replacement keeps the previous validated document as recovery (0.368026ms)
+✔ invalid and future documents are rejected without any storage mutation (0.484372ms)
+✔ primary quota failure retains the readable document and reports failure (1.819122ms)
+✔ recovery quota failure prevents a primary replacement (0.392853ms)
+✔ corrupt primary data is preserved and recovery is explicit (0.45033ms)
+✔ unrecoverable corruption never produces an empty collection (0.396299ms)
+✔ missing primary data can recover from an existing valid recovery document (0.387662ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (5.290715ms)
+✔ lossy serialization is validated before touching existing records (0.286645ms)
+✔ a future primary schema is rejected without recovery or mutation (0.33791ms)
+✔ failure to preserve corrupt data reports failure without replacing it (0.359139ms)
+✔ update activation is held for any unfinished activity or unsaved form (0.667594ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (2.628351ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (3.455125ms)
+✔ offline navigation and built assets use only this app cache (5.285512ms)
+✔ updates wait until explicitly requested and reject unrelated messages (4.4192ms)
+✔ online navigation stays on the cached version until an update is accepted (2.469035ms)
+✔ any blocked tab prevents update activation (2.755808ms)
+✔ unresponsive tabs and malformed state replies keep updates waiting (24.523384ms)
+✔ every same-app tab must explicitly report safe before an update activates (1.887897ms)
+✔ updates from unknown clients are ignored (1.832838ms)
+ℹ tests 85
+ℹ suites 0
+ℹ pass 77
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2853.733918
+
+✖ failing tests:
+
+test at tests/general/legacy-budget-patch.test.mjs:8:1
+✖ legacy budget patch packages a working export link without modifying originals and refuses changed source HTML (47.47626ms)
+  AssertionError [ERR_ASSERTION]: file:///workspaces/daily/scripts/prepare-legacy-budget.mjs:12
+  if (validation !== readFileSync('modules/time-budget/src/validation.js', 'utf8')) throw new Error('Review the Time Budget schema before updating the standalone exporter.');
+                                                                                          ^
+  
+  Error: Review the Time Budget schema before updating the standalone exporter.
+      at file:///workspaces/daily/scripts/prepare-legacy-budget.mjs:12:89
+      at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+      at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+      at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+  
+  Node.js v24.14.0
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/tests/general/legacy-budget-patch.test.mjs:18:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/general/legacy-reader-patch.test.mjs:8:1
+✖ legacy Reader patch packages a working export link without modifying originals and refuses changed source HTML (41.301129ms)
+  AssertionError [ERR_ASSERTION]: file:///workspaces/daily/scripts/prepare-legacy-reader.mjs:13
+    if (copied !== readFileSync(join('modules/reading/src', name), 'utf8')) throw new Error('Review the Reader schemas before updating the standalone exporter.');
+                                                                                  ^
+  
+  Error: Review the Reader schemas before updating the standalone exporter.
+      at file:///workspaces/daily/scripts/prepare-legacy-reader.mjs:13:81
+      at ModuleJob.run (node:internal/modules/esm/module_job:430:25)
+      at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26)
+      at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+  
+  Node.js v24.14.0
+  
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/tests/general/legacy-reader-patch.test.mjs:18:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/general/platform-boundaries.test.mjs:7:1
+✖ activity schemas reject unrenderable finite clocks and durations before creating the root (0.334003ms)
+  AssertionError [ERR_ASSERTION]: elapsedMs
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/tests/general/platform-boundaries.test.mjs:11:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/general/platform-boundaries.test.mjs:21:1
+✖ durable storage is requested where available and refusal or failure never claims retention (0.615338ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/persistence.js' imported from /workspaces/daily/tests/general/platform-boundaries.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/persistence.js'
+  }
+
+test at tests/general/storage-recovery.test.mjs:18:1
+✖ attention-screen raw recovery preserves only the three owned root snapshots without scanning storage (1.044337ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/recovery.js' imported from /workspaces/daily/tests/general/storage-recovery.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/recovery.js'
+  }
+
+test at tests/general/storage-recovery.test.mjs:33:1
+✖ attention-screen restore validates full backups and replaces only the primary after a successful write (0.819928ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/recovery.js' imported from /workspaces/daily/tests/general/storage-recovery.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/recovery.js'
+  }
+
+test at tests/general/storage-recovery.test.mjs:57:1
+✖ attention-screen restore rejects stale or tampered previews and future stored root versions (0.495353ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/recovery.js' imported from /workspaces/daily/tests/general/storage-recovery.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/recovery.js'
+  }
+
+test at tests/general/storage-recovery.test.mjs:76:1
+✖ attention-screen recovery propagates blocked reads and reports cleanup failure only after replacement (0.475627ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/apps/daily/src/backup/recovery.js' imported from /workspaces/daily/tests/general/storage-recovery.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/apps/daily/src/backup/recovery.js'
+  }
+[WebServer] (node:39743) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 31 tests using 1 worker
+
+(node:39756) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes (2.6s)
+  ✓   2 tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state (1.2s)
+  ✓   3 tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard (1.1s)
+  ✓   4 tests/e2e/backup.spec.js:32:1 › full backup downloads all saved modules and layout without credentials or unsaved settings (1.9s)
+  ✓   5 tests/e2e/backup.spec.js:46:1 › full backup restores every app into a separate browser profile with original overdue clocks and token reentry (3.1s)
+  ✓   6 tests/e2e/backup.spec.js:69:1 › full import invalid cancel stale and quota paths preserve current records and retained credentials (1.8s)
+  ✓   7 tests/e2e/backup.spec.js:99:1 › full import reports restored records honestly when credential cleanup fails after the root commit (1.6s)
+  ✓   8 tests/e2e/backup.spec.js:113:1 › full restore discards setup drafts retained by another app before importing (1.6s)
+  ✓   9 tests/e2e/calendar.spec.js:5:1 › dashboard care reminders refresh at midnight without changing records (1.3s)
+  ✓  10 tests/e2e/diagnostics.spec.js:5:1 › connection checks require submission and preserve unrelated storage (264ms)
+  ✓  11 tests/e2e/diagnostics.spec.js:28:1 › a missing review and a Reader network failure do not hide other outcomes (211ms)
+  ✓  12 tests/e2e/diagnostics.spec.js:43:1 › diagnostic controls and outcomes support Spanish (271ms)
+  ✓  13 tests/e2e/legacy-budget.spec.js:35:1 › legacy Time Budget exporter previews and downloads original active timing without changing source storage (328ms)
+  ✓  14 tests/e2e/legacy-plants.spec.js:37:1 › legacy plant exporter preserves plant records and Things preferences through phone preview and Daily import (294ms)
+  ✓  15 tests/e2e/legacy-reader.spec.js:36:1 › legacy Reader export previews optional remembered metadata and imports preferences without credentials or cached bodies (300ms)
+  ✓  16 tests/e2e/legacy-whatsapp.spec.js:34:1 › legacy WhatsApp export preserves expired reminder fields and safe literal message text without handoff or storage changes (285ms)
+  ✓  17 tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base (3.4s)
+  ✓  18 tests/e2e/offline.spec.js:46:1 › home settings and connection checks reopen offline without losing saved settings (4.9s)
+  ✓  19 tests/e2e/offline.spec.js:61:1 › offline cache contains generated assets and excludes API responses and credentials (4.0s)
+  ✓  20 tests/e2e/platform.spec.js:10:1 › dashboard keeps the accepted three, two and one column layouts (1.3s)
+  ✓  21 tests/e2e/platform.spec.js:23:1 › all modules stay reachable and dashboard navigation creates no records (1.3s)
+  ✓  22 tests/e2e/platform.spec.js:40:1 › shared language setting persists and leaves module user text unchanged (2.3s)
+  ✓  23 tests/e2e/platform.spec.js:56:1 › widget visibility and order persist without removing apps or module state (2.4s)
+  ✓  24 tests/e2e/platform.spec.js:70:1 › quick-action visibility persists while its app remains in the menu (2.4s)
+  ✓  25 tests/e2e/platform.spec.js:82:1 › stable deep links reload and unknown routes provide an accessible way home (2.0s)
+  ✓  26 tests/e2e/platform.spec.js:94:1 › failed preference saves report failure and retain the previous language (1.1s)
+  ✓  27 tests/e2e/platform.spec.js:110:1 › unrecoverable storage is retained and never shown as an empty dashboard (1.0s)
+  ✘  28 tests/e2e/storage-recovery.spec.js:31:1 › unreadable storage can be preserved and restored through a validated recovery-first preview at 320px (6.5s)
+(node:41129) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  29 tests/e2e/storage-recovery.spec.js:54:1 › future stored root versions remain exportable and are never downgraded by the recovery screen (6.6s)
+(node:41312) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  30 tests/e2e/storage-recovery.spec.js:67:1 › recovery quota and stale-preview failures preserve unreadable records and allow cancellation (6.6s)
+(node:41642) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  31 tests/e2e/updates.spec.js:23:1 › updates wait for unsaved work in another tab and then preserve settings across activation (9.5s)
+
+
+  1) tests/e2e/storage-recovery.spec.js:31:1 › unreadable storage can be preserved and restored through a validated recovery-first preview at 320px 
+
+    TimeoutError: locator.setInputFiles: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#daily-backup-file')
+
+
+      19 | }
+      20 | async function select(page) {
+    > 21 |   await page.locator('#daily-backup-file').setInputFiles({ name: 'daily.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ app: 'daily-pwa', schemaVersion: 1, data: incoming() })) });
+         |   ^
+      22 | }
+      23 | async function recovery(page) {
+      24 |   const downloading = page.waitForEvent('download');
+        at select (/workspaces/daily/tests/e2e/storage-recovery.spec.js:21:3)
+        at /workspaces/daily/tests/e2e/storage-recovery.spec.js:35:3
+
+    Error Context: test-results/storage-recovery-unreadabl-535cc-very-first-preview-at-320px/error-context.md
+
+  2) tests/e2e/storage-recovery.spec.js:54:1 › future stored root versions remain exportable and are never downgraded by the recovery screen 
+
+    TimeoutError: page.waitForEvent: Timeout 5000ms exceeded while waiting for event "download"
+    =========================== logs ===========================
+    waiting for event "download"
+    ============================================================
+
+      22 | }
+      23 | async function recovery(page) {
+    > 24 |   const downloading = page.waitForEvent('download');
+         |                            ^
+      25 |   await page.locator('#daily-backup-recovery').click();
+      26 |   let text = '';
+      27 |   for await (const chunk of await (await downloading).createReadStream()) text += chunk.toString();
+        at recovery (/workspaces/daily/tests/e2e/storage-recovery.spec.js:24:28)
+        at /workspaces/daily/tests/e2e/storage-recovery.spec.js:57:22
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#daily-backup-recovery')
+
+
+      23 | async function recovery(page) {
+      24 |   const downloading = page.waitForEvent('download');
+    > 25 |   await page.locator('#daily-backup-recovery').click();
+         |                                                ^
+      26 |   let text = '';
+      27 |   for await (const chunk of await (await downloading).createReadStream()) text += chunk.toString();
+      28 |   return JSON.parse(text);
+        at recovery (/workspaces/daily/tests/e2e/storage-recovery.spec.js:25:48)
+        at /workspaces/daily/tests/e2e/storage-recovery.spec.js:57:22
+
+    Error Context: test-results/storage-recovery-future-st-8121c-aded-by-the-recovery-screen/error-context.md
+
+  3) tests/e2e/storage-recovery.spec.js:67:1 › recovery quota and stale-preview failures preserve unreadable records and allow cancellation 
+
+    TimeoutError: locator.setInputFiles: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#daily-backup-file')
+
+
+      19 | }
+      20 | async function select(page) {
+    > 21 |   await page.locator('#daily-backup-file').setInputFiles({ name: 'daily.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ app: 'daily-pwa', schemaVersion: 1, data: incoming() })) });
+         |   ^
+      22 | }
+      23 | async function recovery(page) {
+      24 |   const downloading = page.waitForEvent('download');
+        at select (/workspaces/daily/tests/e2e/storage-recovery.spec.js:21:3)
+        at /workspaces/daily/tests/e2e/storage-recovery.spec.js:69:3
+
+    Error Context: test-results/storage-recovery-recovery--8c14e-ords-and-allow-cancellation/error-context.md
+
+  3 failed
+    tests/e2e/storage-recovery.spec.js:31:1 › unreadable storage can be preserved and restored through a validated recovery-first preview at 320px 
+    tests/e2e/storage-recovery.spec.js:54:1 › future stored root versions remain exportable and are never downgraded by the recovery screen 
+    tests/e2e/storage-recovery.spec.js:67:1 › recovery quota and stale-preview failures preserve unreadable records and allow cancellation 
+  28 passed (1.3m)

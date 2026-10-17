@@ -3,7 +3,7 @@
 ## Start Here
 
 - [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Local only, no workflows or pushes; API token checks are deferred.
-- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. The shared shell, settings, routing, timestamp activities and offline lifecycle are implemented in plain HTML/CSS/JavaScript; plants, Coffee, Games and Time Budget and piano are connected; Reader also passes local workflow checks; WhatsApp also passes local workflow checks. Stage 8 final lifecycle/storage/device gates remain open.
+- [Implementation plan](docs/pwa-consolidation-plan.md) defines the stage gates. The shared shell, settings, routing, timestamp activities and offline lifecycle are implemented in plain HTML/CSS/JavaScript; plants, Coffee, Games and Time Budget and piano are connected; Reader also passes local workflow checks; WhatsApp also passes local workflow checks. Stage 8 final whole-PWA verification/device gates remain open.
 
 ## Commands
 
@@ -25,7 +25,7 @@
 - [Testing](docs/testing.md): baseline versus new-app runs and red-stage interpretation.
 - [Constraints](docs/constraints.md): Pages origin and Readwise capabilities.
 - [Physical device checklist](docs/device-validation.md): pending iPhone evidence and dependencies.
-- [Storage and migrations](docs/storage-and-migrations.md): combined backups, schema/activity validation, atomic replacement and recovery.
+- [Storage and migrations](docs/storage-and-migrations.md): combined backups, schema/activity validation, atomic replacement, unreadable-root export/restore and the one-editing-tab policy.
 - [Legacy workers](docs/legacy-workers.md): tested cleanup patches and release requirements.
 - [Legacy exporters](docs/legacy-exporters.md): prepared Time Budget, Plants, Reader and WhatsApp migration patches; originals/releases untouched.
 - [Local development / deferred deployment](docs/deployment.md): local commands and the current no-workflows instruction.
