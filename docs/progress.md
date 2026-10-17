@@ -8,7 +8,7 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 
 **All seven apps and combined full-PWA backup/restore are connected and locally tested.** The last complete all-app run is `combined-backup-all.txt` at `da523d1`, including both broad Piano scripts. Later per-app checkpoints appear below; final whole-PWA verification still must run after the remaining localization/audit work. Full restore validates module schemas/activity mirrors, retains original timer timestamps, requires a recovery download and clears old app drafts only after replacement.
 
-**Exact next step:** Piano localization and nested prompt validation are accepted locally: `piano-localization-scope.txt` passes 58 unit/14 native browser plus both retained broad scripts; General passes 79/28 in `piano-localization-general.txt`, lint passes, syntax checks 774 files, static preparation copies 674 assets. Continue sequentially with Budget's delayed notification-permission start/disposal: author a browser contract that leaves the page before permission resolves, capture red, then guard disposal and recheck freshness after the await. Next audit remaining finite timestamp bounds, unrecoverable-root recovery UI and concurrency/form/update policy, then run full verification. Device/live API/Things checks and original-app releases remain deferred. No remote work.
+**Exact next step:** Piano `6788dc2` and the final Time Budget lifecycle fixes are accepted locally. `time-permission-lifecycle-scope.txt` passes all 23 unit/23 browser; strict lint passes. Continue with Reader's remaining authored error/confirmation localization and timestamp bounds, with red contracts before fixes. Then finish shared raw-storage recovery, persistent-storage request, activity bounds and concurrency/form/update audit, and run full verification. Device/live API/Things checks and original-app releases remain deferred. No remote work.
 
 ## Verified current work
 
@@ -22,7 +22,7 @@ Work **locally only**, **plain HTML/CSS/JavaScript**, **one app at a time**. No 
 | Static preparation | 674 native files/assets prepared; legacy exporters excluded | `reports/piano-localization-build.txt` |
 | Coffee | 20 unit + 34 browser cases pass | `reports/coffee-final-audit-unit.txt`, `reports/coffee-final-audit-scope.txt` |
 | Games | 17 unit + 34 browser cases pass | `reports/games-localization-scope.txt` |
-| Time Budget | 22 unit + 21 browser cases pass | `reports/time-localization-scope.txt` |
+| Time Budget | 23 unit + 23 browser cases pass | `reports/time-permission-lifecycle-scope.txt` |
 | Piano | 58 unit + 14 native browser cases; both original broad scripts pass | `reports/piano-localization-scope.txt` |
 | Reader | 54 unit + 30 browser cases pass | `reports/legacy-reader-scope.txt` |
 | WhatsApp | 12 unit + nine browser cases pass | `reports/legacy-whatsapp-scope.txt` |
@@ -397,3 +397,12 @@ No skipped tests or relaxed lint thresholds. Original plant assertions remain un
 - `piano-localization-scope.txt` completes with all 58 unit, all 14 native browser cases and both original broad scripts passing. All 44 library routes, exact-octave reveals, three phone widths, all ten lesson flows, touch swipe, audio completion/cancellation and generated-worker offline reload pass. No original assertions were changed or skipped.
 - `piano-localization-general.txt` passes General 79 unit/28 browser, including two-tab update protection. `piano-localization-lint.txt` passes; `piano-localization-syntax.txt` checks 774 files; `piano-localization-build.txt` prepares 674 assets. All sessions described as active in the historical Piano notes above have finished.
 - Next: the Budget pending-permission lifecycle contract, remaining timestamp/recovery/concurrency audits and whole-PWA verification. Physical device/API/Things/coexistence acceptance remains deferred.
+
+## Final Time Budget lifecycle audit (after Piano `6788dc2`)
+
+- Two new browser contracts fail genuinely before correction: pending notification permission followed by Home navigation or a language remount starts a budget from the disposed page. `time-permission-lifecycle-red.txt` is still running in session 85819; both new cases failed while prior cases are passing.
+- `startBudget.js` now checks disposal and data freshness after permission completes, before changing any session state. The existing request behavior is factored into a small helper to retain strict complexity limits. Strict lint passes in `time-permission-lifecycle-lint.txt`.
+- A new native storage contract rejects finite but unrenderable timestamp/counter values before writes. `time-timestamp-bounds-red.txt` fails before the bound; `time-timestamp-bounds-unit.txt` passes all ten service contracts after correction. Discovery now requires 23 domain unit and 23 browser cases.
+- Next: wait for session 85819 to finish before running `node scripts/test.mjs time-budget --report reports/time-permission-lifecycle-scope.txt`. Update module docs/mapping, save this local checkpoint, then continue remaining Reader/activity timestamp bounds and shared recovery/persistence/concurrency audit.
+
+- Final Budget acceptance: `time-permission-lifecycle-scope.txt` passes 23 unit and 23 browser cases; lint passes. The first correction caught disposal but not a URL change before hashchange cleanup; `time-permission-navigation-race-red.txt` preserves that genuine remaining failure (22 existing cases pass). Capturing/checking the start route closes that gap; no assertions were weakened. Sessions 85819, 99385 and 93407 have all finished. Next: Reader final audit, sequentially.

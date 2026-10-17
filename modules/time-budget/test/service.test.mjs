@@ -149,3 +149,15 @@ test('full Time Budget backups restore independent countdowns atomically beside 
   assert.throws(() => service.previewImport(JSON.stringify(exported)), /invalid/i);
   assert.deepEqual(state.read().value, primary);
 });
+
+test('time budget rejects unrenderable saved timestamps and counters before any root write', async () => {
+  const { service, values } = await setup();
+  const saved = session();
+  for (const [key, number] of [['startTime', 1e100], ['timerStartTime', 8640000000000001], ['timerElapsed', 1e100]]) {
+    const invalid = { ...saved, [key]: number };
+    assert.throws(() => saveSession(service, invalid), /invalid/i, key);
+    assert.equal(values.size, 0);
+  }
+  saveSession(service, saved);
+  assert.equal(service.read().session.startTime, saved.startTime);
+});

@@ -71,5 +71,16 @@
     ],
     "browser_contracts": "modules/time-budget/e2e/localization.spec.js",
     "preserved": "Original eight source workflow assertions and all persisted task/template/countdown names/timestamps. Native stale-save assertions intentionally translated to Spanish."
+  },
+  "finalLifecycleAudit": {
+    "changes": [
+      "Cancel delayed notification-permission starts after disposal or revision changes.",
+      "Reject finite timestamps/counters outside the JavaScript Date range."
+    ],
+    "contracts": "23 domain unit cases and 23 browser cases; original eight browser workflows and eight characterization cases unchanged.",
+    "redEvidence": [
+      "reports/time-permission-lifecycle-red.txt",
+      "reports/time-timestamp-bounds-red.txt"
+    ]
   }
 }

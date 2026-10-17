@@ -1,4 +1,5 @@
 export async function startBudget() {
+        const route = window.location.hash;
         const goalTimeInput = this.dom.getElementById('goalTime').value;
         if (!goalTimeInput) {
             this.notify('Choose a finish time first.');
@@ -38,10 +39,10 @@ export async function startBudget() {
         }
 
         
-        if (!this.state.notificationPermissionRequested && 'Notification' in window && Notification.permission === 'default') {
-            await this.requestNotificationPermission();
-        }
+        await preparePermission(this);
 
+        if (this.disposed || window.location.hash !== route) return;
+        this.ensureFresh();
         this.state.goalTime = goalTimeInput;
         this.state.tasks = tasks;
         this.state.startTime = Date.now();
@@ -54,3 +55,9 @@ export async function startBudget() {
         this.saveState();
         this.showTimerScreen();
     }
+
+async function preparePermission(app) {
+    if (!app.state.notificationPermissionRequested && 'Notification' in window && Notification.permission === 'default') {
+        await app.requestNotificationPermission();
+    }
+}

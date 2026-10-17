@@ -1,0 +1,87 @@
+Suite: time-budget
+✔ time input is strict local HH:MM and invalid deadlines are rejected (2.652609ms)
+✔ a deadline at or before the reference rolls to the next local day (0.448366ms)
+✔ session deadlines stay anchored to the original start after midnight and overdue (0.849945ms)
+✔ pending budgets include unfinished current minutes and every later task once (0.49886ms)
+✔ paused task timers resume from elapsed time and pause without losing elapsed time (0.595992ms)
+✔ completing an overrun records exact actual minutes and offers reallocation (0.54689ms)
+✔ early completion advances explicitly and queue reorder never moves the current task (1.077609ms)
+✔ template collections retain Unicode and bounded whole-minute tasks (0.47759ms)
+✔ legacy budget export preserves original running and paused clocks and imports through Daily without credentials (4.774302ms)
+✔ legacy budget export assigns a stable session identity without initializing absent storage (0.611711ms)
+✔ legacy budget malformed records or blocked storage fail without resetting any original data (0.918883ms)
+✔ time budget dictionaries retain interpolation and literal task names (1.495699ms)
+✔ time budget reads its shared language without initializing or changing a session (0.439359ms)
+✔ time budget reads are write-free and writes preserve shared language and other modules (1.063223ms)
+✔ time budget start and its paused activity commit atomically beside independent countdowns (1.15818ms)
+✔ running task timestamps reconstruct overtime without writes and explicit completion ends the activity (0.885281ms)
+✔ failed budget writes do not change tasks timestamps activities or the primary root (0.85837ms)
+✔ stale budget views cannot overwrite later task changes (1.433884ms)
+✔ legacy template previews merge only on confirmation while migration exports include active timing (1.015263ms)
+✔ migration imports retain active timestamps and reject stale or changed previews (0.769846ms)
+✔ budget validation rejects future schemas duplicate tasks invalid timers and future root modules without changes (0.733017ms)
+✔ full Time Budget backups restore independent countdowns atomically beside the plan (1.771063ms)
+✔ time budget rejects unrenderable saved timestamps and counters before any root write (0.67603ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 80.351158
+[WebServer] (node:20934) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 23 tests using 1 worker
+
+(node:20952) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/time-budget/e2e/localization.spec.js:10:1 › time budget Spanish setup countdowns and backup controls work offline without rewriting draft text (4.0s)
+  ✓   2 modules/time-budget/e2e/localization.spec.js:40:1 › time budget running clocks queue drafts and overtime controls translate without changing saved timing (9.7s)
+  ✓   3 modules/time-budget/e2e/localization.spec.js:66:1 › time budget notifications translate through remounts and keep their original expiry (1.8s)
+  ✓   4 modules/time-budget/e2e/localization.spec.js:79:1 › time budget ignores a slow previous backup after a newer file selection or cancel (1.6s)
+  ✘   5 modules/time-budget/e2e/permission-lifecycle.spec.js:18:1 › leaving a plan during notification permission never starts an off-screen budget (1.7s)
+(node:21471) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 modules/time-budget/e2e/permission-lifecycle.spec.js:29:1 › changing language during notification permission keeps the setup draft without starting the disposed plan (1.5s)
+  ✓   7 modules/time-budget/e2e/recovery.spec.js:4:1 › negative and fractional reallocation never enable confirmation (10.3s)
+  ✓   8 modules/time-budget/e2e/recovery.spec.js:23:1 › queue drafts survive language changes and stale edits cannot overwrite another view (2.3s)
+  ✓   9 modules/time-budget/e2e/recovery.spec.js:45:1 › confirmed legacy imports preserve active sessions and create a full recovery backup (1.5s)
+  ✓  10 modules/time-budget/e2e/shell.spec.js:10:1 › focus starts persist immediately and Home navigation never changes its saved timestamps (2.4s)
+  ✓  11 modules/time-budget/e2e/shell.spec.js:24:1 › two named countdowns pause independently and remain overdue until explicit completion (4.5s)
+  ✓  12 modules/time-budget/e2e/shell.spec.js:47:1 › language changes retain added setup rows names minutes goal and template drafts (1.8s)
+  ✓  13 modules/time-budget/e2e/shell.spec.js:65:1 › pending overtime survives reload and canceled imports preserve the active plan (11.2s)
+  ✓  14 modules/time-budget/e2e/shell.spec.js:84:1 › quota failures retain the setup draft and create no successful-looking plan (1.4s)
+  ✓  15 modules/time-budget/e2e/shell.spec.js:95:1 › phone layout and offline reopening preserve the running budget (5.4s)
+  ✓  16 modules/time-budget/e2e/time-budget.spec.js:5:1 › setup is read-only and shows available and assigned minutes (1.8s)
+  ✓  17 modules/time-budget/e2e/time-budget.spec.js:12:1 › overallocated plans remain editable and do not start (2.0s)
+  ✓  18 modules/time-budget/e2e/time-budget.spec.js:21:1 › task order is editable and a plan starts with a paused first task (2.2s)
+  ✓  19 modules/time-budget/e2e/time-budget.spec.js:31:1 › running focus restores timestamp elapsed after reload and paused focus stays paused (7.2s)
+  ✓  20 modules/time-budget/e2e/time-budget.spec.js:46:1 › overtime stays active until explicit completion and accepts exact rounded reallocation (10.1s)
+  ✓  21 modules/time-budget/e2e/time-budget.spec.js:64:1 › keeping budgets advances and editing the plan retains task names and allocations (9.4s)
+  ✓  22 modules/time-budget/e2e/time-budget.spec.js:77:1 › templates save load and export the original name-to-task format (1.5s)
+  ✓  23 modules/time-budget/e2e/time-budget.spec.js:94:1 › task completion advances once and finishing returns to the retained setup (1.8s)
+
+
+  1) modules/time-budget/e2e/permission-lifecycle.spec.js:18:1 › leaving a plan during notification permission never starts an off-screen budget 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: null
+    Received: "{\"version\":1,\"preferences\":{\"language\":\"en\",\"widgets\":[\"plants\",\"activities\",\"review\",\"reader\",\"quick\",\"piano\"],\"quickActions\":[\"coffee\",\"games\",\"countdown\",\"budget\"]},\"modules\":{\"time-budget\":{\"version\":1,\"data\":{\"templates\":{},\"session\":{\"id\":\"f2bda315-f695-4fa6-b865-85fdd5278bc9\",\"goalTime\":\"13:00\",\"startTime\":1792065600000,\"tasks\":[{\"id\":1792065600000.0732,\"name\":\"Focus 🌱\",\"allocatedMinutes\":5,\"actualMinutes\":null,\"status\":\"active\"},{\"id\":1792065600000.9688,\"name\":\"Read ☕\",\"allocatedMinutes\":10,\"actualMinutes\":null,\"status\":\"pending\"}],\"currentTaskIndex\":0,\"timerElapsed\":0,\"timerRunning\":false,\"timerStartTime\":null}}},\"activities\":{\"version\":1,\"data\":[{\"id\":\"budget:f2bda315-f695-4fa6-b865-85fdd5278bc9\",\"kind\":\"budget\",\"reference\":\"f2bda315-f695-4fa6-b865-85fdd5278bc9\",\"label\":\"Focus 🌱\",\"durationMs\":300000,\"startedAt\":1792065600000,\"updatedAt\":1792065600000,\"status\":\"paused\",\"elapsedMs\":0,\"resumedAt\":null}]}}}"
+
+      21 |   const before = await root(page);
+      22 |   await page.evaluate(() => window.resolveBudgetPermission('granted'));
+    > 23 |   expect(await root(page)).toBe(before);
+         |                            ^
+      24 |   await expect(page.locator('[data-widget=activities]')).not.toContainText('Focus 🌱');
+      25 |   await page.goto('./#/time');
+      26 |   await expect(page.locator('#setupScreen')).toBeVisible();
+        at /workspaces/daily/modules/time-budget/e2e/permission-lifecycle.spec.js:23:28
+
+    Error Context: test-results/permission-lifecycle-leavi-1e794-starts-an-off-screen-budget/error-context.md
+
+  1 failed
+    modules/time-budget/e2e/permission-lifecycle.spec.js:18:1 › leaving a plan during notification permission never starts an off-screen budget 
+  22 passed (1.7m)

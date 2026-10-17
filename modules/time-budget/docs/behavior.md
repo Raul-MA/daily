@@ -37,3 +37,9 @@ The original app's normal export remains templates-only. A separate read-only mi
 - Local locale evidence: `reports/time-localization-red.txt` fails the three new Spanish browser cases plus the native stale-save case intentionally changed to Spanish; 16 other cases pass. All original eight source workflows/assertions remain unchanged. `time-localization-first.txt` catches the old fixed 320px minimum (19 pass/one fail); `time-localization-scope.txt` passes 22 unit + 21 browser after correction. `time-localization-unit.txt` additionally verifies the exact English markup hash. Physical acceptance remains deferred.
 
 - Imports bypass the timer-action duplicate-click guard so a newer file selection can supersede a slow read. Per-import request identity still rejects the old result. `time-import-race-red.txt` catches the previously ignored newer file; the added browser case also cancels a still-pending read without reopening preview or writing records. Timer actions retain their duplicate protection. `time-reload-notices.txt` additionally passes all three recovery cases after resuming notice expiry on successful import reload.
+
+## Pending permission and numeric bounds
+
+Starting a plan requests the existing notification permission before committing. After the asynchronous response, the mounted app checks disposal and pending route changes, then rechecks the latest document/draft revision. Leaving the route or changing language cancels that old start; the new view retains its setup draft. No off-screen budget or activity is created. The original permission behavior is unchanged for a current view.
+
+Persisted timestamps and elapsed counters must be finite, nonnegative and within the JavaScript Date range, so malformed backups cannot create unrenderable deadlines or clocks. Original timestamp-based numeric task IDs remain accepted. The new service contract verifies rejection before any write and acceptance of a valid session.

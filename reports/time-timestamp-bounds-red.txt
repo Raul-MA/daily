@@ -1,0 +1,34 @@
+✔ time budget reads are write-free and writes preserve shared language and other modules (7.563662ms)
+✔ time budget start and its paused activity commit atomically beside independent countdowns (2.545667ms)
+✔ running task timestamps reconstruct overtime without writes and explicit completion ends the activity (1.056549ms)
+✔ failed budget writes do not change tasks timestamps activities or the primary root (1.431489ms)
+✔ stale budget views cannot overwrite later task changes (1.213683ms)
+✔ legacy template previews merge only on confirmation while migration exports include active timing (3.495086ms)
+✔ migration imports retain active timestamps and reject stale or changed previews (1.378612ms)
+✔ budget validation rejects future schemas duplicate tasks invalid timers and future root modules without changes (0.882886ms)
+✔ full Time Budget backups restore independent countdowns atomically beside the plan (5.804009ms)
+✖ time budget rejects unrenderable saved timestamps and counters before any root write (1.93083ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 56.410347
+
+✖ failing tests:
+
+test at modules/time-budget/test/service.test.mjs:153:1
+✖ time budget rejects unrenderable saved timestamps and counters before any root write (1.93083ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception: startTime
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/time-budget/test/service.test.mjs:158:12)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /invalid/i,
+    operator: 'throws',
+    diff: 'simple'
+  }
