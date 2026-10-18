@@ -19,7 +19,7 @@ export function statusText(info, copy) {
 }
 
 export function plantList(context) {
-  const view = el('div');
+  const view = el('div', 'plant-list-view');
   const plants = getPlants().sort((a, b) => getUrgencyScore(b) - getUrgencyScore(a));
   if (!plants.length) {
     view.append(el('p', 'empty-state-text', context.copy.empty), anchor(context.copy.add, href({ page: 'plantNew' }, context.base), 'btn btn-primary'));

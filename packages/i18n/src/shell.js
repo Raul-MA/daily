@@ -1,4 +1,5 @@
 const en = {
+    menu: 'Navigation menu', sections: 'In this app', switchApps: 'Switch apps', closeMenu: 'Close menu', collapseSidebar: 'Collapse sidebar',
     home: 'Home', apps: 'Apps', settings: 'Settings', today: 'Today', language: 'Language',
     plants: 'Plants', activities: 'Running', review: 'Readwise', reader: 'Reader', quick: 'Quick actions', piano: 'Piano',
     coffee: 'Coffee', games: 'Games', time: 'Time Budget', whatsapp: 'WhatsApp Later',
@@ -15,6 +16,7 @@ const en = {
     diagnostic: 'Connection checks', skip: 'Skip to content', reading: 'Reading',
 };
 const es = {
+    menu: 'Menú de navegación', sections: 'En esta app', switchApps: 'Cambiar de app', closeMenu: 'Cerrar menú', collapseSidebar: 'Contraer menú lateral',
     home: 'Inicio', apps: 'Apps', settings: 'Ajustes', today: 'Hoy', language: 'Idioma',
     plants: 'Plantas', activities: 'En marcha', review: 'Readwise', reader: 'Reader', quick: 'Acciones rápidas', piano: 'Piano',
     coffee: 'Café', games: 'Juegos', time: 'Time Budget', whatsapp: 'WhatsApp para después',

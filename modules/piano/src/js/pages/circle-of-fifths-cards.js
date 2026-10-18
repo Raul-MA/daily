@@ -24,7 +24,7 @@ export default function render(container) {
       </div>
     </div>
 
-    <div class="theory-item mt-lg" style="max-width:600px">
+    <div class="theory-item mt-lg">
       <div class="theory-item-title">${copy("Key relationships")}</div>
       <p class="text-muted">${copy("Keys adjacent on the circle of fifths are closely related — they share 6 of 7 notes. This makes them good candidates for modulation.")}</p>
       <p class="text-muted">${copy("The circle of fourths is simply the circle of fifths traversed in the opposite direction.")}</p>

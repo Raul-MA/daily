@@ -1,7 +1,7 @@
 export const apps = [
     { key: 'plants', page: 'plants', pages: ['plants', 'plant', 'plantNew', 'plantEdit', 'plantSettings'] },
-    { key: 'coffee', page: 'coffee', pages: ['coffee', 'coffeeNew'] },
-    { key: 'games', page: 'games', pages: ['games', 'gameNew', 'gameSession'] },
+    { key: 'coffee', page: 'coffee', pages: ['coffee', 'coffeeNew', 'coffeeHistory', 'coffeeInsights', 'coffeeSettings', 'coffeeEntry', 'coffeeEntryEdit'] },
+    { key: 'games', page: 'games', pages: ['games', 'gameNew', 'gameSession', 'gamesSession', 'gamesHistory', 'gameDetail', 'gamesCatalog', 'gamesPlayers', 'gamesStats', 'gamesSettings'] },
     { key: 'time', page: 'time', pages: ['time'] },
     { key: 'piano', page: 'piano', pages: ['piano', 'pianoExercise', 'pianoLearn', 'pianoLibrary', 'pianoReference'] },
     { key: 'reader', page: 'reader', pages: ['reader', 'review'] },

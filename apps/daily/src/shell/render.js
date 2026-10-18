@@ -19,6 +19,9 @@ import { navigation } from './navigation.js';
 import { dashboard } from './dashboard.js';
 import { settings } from './settings.js';
 import { modulePlaceholder } from './module-placeholder.js';
+import { sidebar, menuBackdrop } from './sidebar.js';
+import { syncSidebar } from './sidebar-controls.js';
+import { shellFooter } from './footer.js';
 function focusKey() {
     return document.activeElement instanceof HTMLElement ? document.activeElement.dataset.focus : undefined;
 }
@@ -45,6 +48,7 @@ function failure(context) {
     context.pageCleanup = page.dispose;
     context.pageConflict = page.conflict;
     context.root.replaceChildren(page.node);
+    document.dispatchEvent(new Event('daily:form-state'));
 }
 
 function pageView(context, preferences) {
@@ -89,10 +93,10 @@ export function renderShell(context, changedRoute = false) {
         appendAlert(main, context, snapshot.status === 'recovered');
         main.append(pageView(context, preferences));
         document.title = `${main.querySelector('h1')?.textContent ?? 'Daily'} · Daily`;
-        main.append(saveStatus(context, copy));
         const skip = link(copy.skip, '#content', 'skip-link');
         skip.dataset.skip = '';
-        context.root.replaceChildren(skip, navigation(preferences.language, context.base), activitySummary({ state: context.state, language: preferences.language, base: context.base }, true), main, element('footer', 'shell-footer', copy.local));
+        context.root.replaceChildren(skip, navigation(preferences.language, context.base), sidebar(context, copy), menuBackdrop(copy), activitySummary({ state: context.state, language: preferences.language, base: context.base }, true), main, shellFooter(context, copy));
+        syncSidebar(context);
         focusAfterRender(context.root, key, changedRoute);
         restoreDrafts(context.root, drafts);
         context.pageRestore?.();
@@ -109,11 +113,6 @@ function appendAlert(main, context, recovered) {
     const alert = element('p', 'save-alert', context.error ? copy.saveError : copy.recovered);
     alert.setAttribute('role', 'alert');
     main.append(alert);
-}
-function saveStatus(context, copy) {
-    const status = element('p', 'save-status', context.saved && !context.error ? copy.saved : '');
-    status.setAttribute('role', 'status');
-    return status;
 }
 
 function timePage(context) {

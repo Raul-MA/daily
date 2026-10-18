@@ -22,6 +22,7 @@
 }
 [data-module="time-budget"] {
     min-width: 0;
+    padding-inline: 20px;
     background: var(--canvas);
     scroll-behavior: smooth;
 }
@@ -73,7 +74,7 @@
     border: 0;
 }
 [data-module="time-budget"] .app-shell {
-    width: min(1120px, calc(100% - 40px));
+    width: 100%;
     margin: 0 auto;
     padding: max(20px, env(safe-area-inset-top)) 0 max(48px, env(safe-area-inset-bottom));
 }
@@ -133,7 +134,7 @@ from { opacity: 0; transform: translateY(8px); }
 to { opacity: 1; transform: none; }
 }
 [data-module="time-budget"] .hero {
-    max-width: 720px;
+    max-width: none;
     margin: clamp(54px, 9vw, 104px) auto 42px;
     text-align: center;
 }
@@ -152,19 +153,19 @@ to { opacity: 1; transform: none; }
     letter-spacing: -0.035em;
 }
 [data-module="time-budget"] .hero h1 {
-    max-width: 680px;
+    max-width: none;
     margin: 0 auto;
     font-size: clamp(44px, 7vw, 76px);
     font-weight: 780;
 }
 [data-module="time-budget"] .hero-copy {
-    max-width: 560px;
+    max-width: none;
     margin: 22px auto 0;
     color: var(--ink-soft);
     font-size: clamp(16px, 2vw, 19px);
 }
 [data-module="time-budget"] .setup-grid {
-    width: min(720px, 100%);
+    width: 100%;
     margin: 0 auto;
 }
 [data-module="time-budget"] .panel {
@@ -486,7 +487,7 @@ to { opacity: 1; transform: none; }
 }
 [data-module="time-budget"] .install-prompt {
     display: flex;
-    width: min(720px, 100%);
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -556,7 +557,7 @@ to { opacity: 1; transform: none; }
     box-shadow: 0 0 0 5px rgba(188, 232, 41, 0.18);
 }
 [data-module="time-budget"] .focus-panel h1 {
-    max-width: 600px;
+    max-width: none;
     margin: 18px 0 8px;
     overflow-wrap: anywhere;
     font-size: clamp(32px, 5vw, 54px);
@@ -628,7 +629,7 @@ to { opacity: 1; transform: none; }
 }
 [data-module="time-budget"] .task-controls {
     display: grid;
-    width: min(440px, 100%);
+    width: 100%;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
@@ -920,8 +921,9 @@ to { opacity: 1; transform: none; }
 }
 
 @media (max-width: 600px) {
+[data-module="time-budget"] { padding-inline: 12px; }
 [data-module="time-budget"] .app-shell {
-        width: min(100% - 24px, 720px);
+        width: 100%;
         padding-top: max(12px, env(safe-area-inset-top));
     }
 [data-module="time-budget"] .privacy-note {
@@ -1041,7 +1043,7 @@ to { opacity: 1; transform: none; }
 }
 
 [data-module="time-budget"] .time-countdowns,
-[data-module="time-budget"] .time-backup { max-width: 1100px; margin: 24px auto; padding: 24px; }
+[data-module="time-budget"] .time-backup { width: 100%; max-width: none; margin: 24px auto; padding: 24px; }
 [data-module="time-budget"] .time-countdowns form,
 [data-module="time-budget"] .countdown-card { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
 [data-module="time-budget"] .countdown-card output { font-variant-numeric: tabular-nums; }

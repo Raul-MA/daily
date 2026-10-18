@@ -1,6 +1,6 @@
 import { refreshHistory } from './frontend/app/history.js';
 import { coffee } from './frontend/app/context.js';
-import { render, renderTabs } from './frontend/app/navigation.js';
+import { render } from './frontend/app/navigation.js';
 import { applyLanguage, applyTheme, showToastKey, restoreToast } from './frontend/app/notifications.js';
 import { handleTasteHelpKeydown } from './frontend/app/taste.js';
 import { updateCompositionFields, updateRatioPreview } from './frontend/app/composition.js';
@@ -16,11 +16,10 @@ function markDirty(event) {
 export function mountCoffee(options) {
   const host = document.createElement('section');
   host.dataset.module = 'coffee';
-  host.innerHTML = '<div class="app-shell" id="coffee-content"></div><nav class="bottom-tabs" id="coffee-tabs"></nav><div class="toast" id="coffee-toast" role="status" hidden data-testid="toast"></div>';
-  Object.assign(coffee, { ...options, host, app: host.querySelector('#coffee-content'), tabs: host.querySelector('#coffee-tabs'), toast: host.querySelector('#coffee-toast'), route: { name: routes[options.route.page], id: options.route.id }, editingBeanId: options.ui.editingBeanId ?? null });
+  host.innerHTML = '<div class="app-shell" id="coffee-content"></div><div class="toast" id="coffee-toast" role="status" hidden data-testid="toast"></div>';
+  Object.assign(coffee, { ...options, host, app: host.querySelector('#coffee-content'), toast: host.querySelector('#coffee-toast'), route: { name: routes[options.route.page], id: options.route.id }, editingBeanId: options.ui.editingBeanId ?? null });
   applyTheme();
   applyLanguage();
-  renderTabs();
   render();
   restoreToast();
   host.addEventListener('input', markDirty);

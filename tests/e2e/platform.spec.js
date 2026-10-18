@@ -21,6 +21,20 @@ async function settings(page) {
   await expect(page.getByRole('heading', { name: 'Settings', exact: true })).toBeVisible();
 }
 
+async function pianoScrollsWithPage(page) {
+  const content = page.locator('[data-module="piano"] #page-content');
+  await expect(content.locator('h1')).toBeVisible();
+  expect(await content.evaluate(node => node.scrollHeight <= node.clientHeight)).toBe(true);
+  await content.hover();
+  await page.mouse.wheel(0, 500);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
+  expect(await page.locator('.shell-header').evaluate(node => node.getBoundingClientRect().bottom)).toBeLessThan(0);
+  await page.locator('.shell-footer').scrollIntoViewIfNeeded();
+  await expect(page.locator('.shell-footer')).toBeInViewport();
+  expect(await content.evaluate(node => node.scrollTop)).toBe(0);
+  await page.evaluate(() => window.scrollTo(0, 0));
+}
+
 test('dashboard keeps the accepted three, two and one column layouts', async ({ page }, testInfo) => {
   await home(page);
   await expect(page.getByRole('heading', { name: 'Today', exact: true })).toBeVisible();
@@ -38,7 +52,7 @@ test('all modules stay reachable and dashboard navigation creates no records', a
   await home(page);
   await page.evaluate(() => localStorage.setItem('unrelated-app', 'preserve'));
   const before = await page.evaluate(() => ({ ...localStorage }));
-  await page.getByText('Apps', { exact: true }).click();
+  await page.getByRole('button', { name: 'Apps', exact: true }).click();
   await expect(page.getByRole('navigation', { name: 'Apps' }).getByRole('link')).toHaveCount(7);
   await page.getByRole('navigation', { name: 'Apps' }).getByRole('link', { name: 'Coffee', exact: true }).click();
   await expect(page.locator('[data-module=coffee]')).toBeVisible();
@@ -48,6 +62,15 @@ test('all modules stay reachable and dashboard navigation creates no records', a
   await expect(page).toHaveURL(/#\/coffee\/new$/);
   await page.goBack();
   await expect(page.getByRole('heading', { name: 'Today', exact: true })).toBeVisible();
+  for (const [id, route] of [['plants', 'plants'], ['activities', 'time'], ['review', 'reading/review'], ['reader', 'reading/picker'], ['piano', 'piano']]) {
+    const title = page.locator(`[data-widget="${id}"] .card-heading-link`);
+    await expect(title).toHaveAttribute('href', `/daily/#/${route}`);
+    await title.click();
+    await expect(page).toHaveURL(new RegExp(`#/${route}$`));
+    if (id === 'reader') await page.getByRole('button', { name: 'Close settings', exact: true }).click();
+    await page.getByRole('link', { name: 'Home', exact: true }).click();
+    await expect(page.locator('#dashboard')).toBeVisible();
+  }
   expect(await page.evaluate(() => ({ ...localStorage }))).toEqual(before);
 });
 
@@ -68,10 +91,12 @@ test('app backgrounds fill the viewport when switching apps', async ({ page }, t
       await expect(module).toHaveAttribute('data-module', expected);
       await expect(module).toBeVisible();
       await shellMatchesApp(page);
+      if (route === 'piano') await pianoScrollsWithPage(page);
       await expect(async () => {
         const bounds = await module.boundingBox();
-        expect(bounds.x).toBe(0);
-        expect(bounds.width).toBe(width);
+        const offset = await page.evaluate(() => Number.parseFloat(getComputedStyle(document.body).getPropertyValue('--sidebar-offset')) || 0);
+        expect(bounds.x).toBe(offset);
+        expect(bounds.width).toBe(width - offset);
         expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(width);
       }).toPass();
       if (route === 'coffee/new' && [1600, 390].includes(width)) await page.screenshot({ path: testInfo.outputPath(`coffee-${width}.png`) });
@@ -128,7 +153,7 @@ test('widget visibility and order persist without removing apps or module state'
   await expect(page.locator('[data-widget]').first()).toHaveAttribute('data-widget', 'review');
   await page.reload();
   await expect(page.locator('[data-widget="plants"]')).toHaveCount(0);
-  await page.getByText('Apps', { exact: true }).click();
+  await page.getByRole('button', { name: 'Apps', exact: true }).click();
   await expect(page.getByRole('navigation', { name: 'Apps' }).getByRole('link', { name: 'Plants', exact: true })).toBeVisible();
 });
 
@@ -140,7 +165,7 @@ test('quick-action visibility persists while its app remains in the menu', async
   await expect(page.getByRole('link', { name: 'Log coffee', exact: true })).toHaveCount(0);
   await page.reload();
   await expect(page.getByRole('link', { name: 'Log coffee', exact: true })).toHaveCount(0);
-  await page.getByText('Apps', { exact: true }).click();
+  await page.getByRole('button', { name: 'Apps', exact: true }).click();
   await expect(page.getByRole('navigation', { name: 'Apps' }).getByRole('link', { name: 'Coffee', exact: true })).toBeVisible();
 });
 

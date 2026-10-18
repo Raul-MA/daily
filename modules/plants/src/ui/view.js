@@ -1,9 +1,8 @@
 import { captureDrafts, restoreDrafts } from '../../../../packages/ui/src/drafts.js';
 import { openCareForm } from './care-form.js';
-import { href } from '../../../../packages/platform/src/router.js';
 import { getPlant } from '../store/store.js';
 import { plantText } from './copy.js';
-import { el, anchor, announce } from './elements.js';
+import { el, announce } from './elements.js';
 import { plantList } from './list.js';
 import { plantForm } from './form.js';
 import { plantDetail } from './detail.js';
@@ -27,10 +26,6 @@ function pageBody(context) {
 function render(context) {
   const drafts = captureDrafts(context.host);
   context.host.replaceChildren();
-  const nav = el('nav', 'plant-navigation');
-  nav.setAttribute('aria-label', context.copy.title);
-  for (const [label, page] of [[context.copy.mine, 'plants'], [context.copy.add, 'plantNew'], [context.copy.settings, 'plantSettings']]) nav.append(anchor(label, href({ page }, context.base)));
-  context.host.append(nav);
   try {
     const title = el('h1', 'plant-page-title', pageTitle(context));
     title.tabIndex = -1;

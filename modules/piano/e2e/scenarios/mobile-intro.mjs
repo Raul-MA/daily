@@ -1,9 +1,10 @@
-import { hashFor, hrefFor } from '../paths.mjs';
+import { hashFor, hrefFor, baseline } from '../paths.mjs';
 import { checkLayout } from './mobile-checks.mjs';
 export async function checkIntro(state) {
     const { mobilePage, mobileRoute } = state;
     await mobileRoute('/', '.course-lessons');
     await checkLayout(state, 'course');
+    if (!baseline) await mobilePage.getByRole('button', { name: 'Apps', exact: true }).tap();
     await mobilePage.locator(`.nav-link[href="${hrefFor('/library')}"]`).tap();
     await mobilePage.locator('.library-grid').waitFor();
     await checkLayout(state, 'library');

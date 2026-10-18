@@ -62,6 +62,7 @@ test("switches history between compact and detailed views and remembers the choi
             entry({ id: "entry-alpha", meta: { beanPresetId: house.id }, grind: { doseG: 18 }, brew: { shotTimeSeconds: 28, yieldValue: 40, yieldUnit: "g", ratio: 2.22 }, taste: { overallScore: 9 } })
         ]
     }));
+    await page.getByRole('button', { name: 'Apps', exact: true }).click();
     await page.getByTestId(testIds.navHistory).click();
     await expect(page.getByTestId(testIds.historyViewCompact)).toHaveAttribute("aria-pressed", "true");
     await expect(page.getByTestId(testIds.entryRow)).toContainText("DF5414.5");
@@ -85,6 +86,7 @@ test("compact history rows fit on mobile", async ({ page }) => {
             entry({ meta: { beanPresetId: "bean-house" }, brew: { drinkType: "flat_white", shotTimeSeconds: 29, yieldValue: 42, yieldUnit: "g", ratio: 2.33 }, taste: { overallScore: 8 } })
         ]
     }));
+    await page.getByRole('button', { name: 'Apps', exact: true }).click();
     await page.getByTestId(testIds.navHistory).click();
     await expect(page.getByTestId(testIds.entryRow)).toContainText("Flat white");
     const overflows = await page.getByTestId(testIds.entryRow).evaluate((row) => row.scrollWidth > row.clientWidth);

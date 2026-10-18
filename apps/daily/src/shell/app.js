@@ -9,6 +9,7 @@ import { startRouter, parseHash } from '../../../../packages/platform/src/router
 import { renderShell } from './render.js';
 import { handleClick, handleChange } from './interactions.js';
 import { watchShellTheme } from './theme.js';
+import { handleSidebarClick, watchSidebar } from './sidebar-controls.js';
 export function mountShell(root, base) {
     const state = createDailyState(localStorage, navigator.language.startsWith('es') ? 'es' : 'en');
     const context = { root, base, state, moduleUI: {}, route: parseHash(location.hash), error: false, saved: false };
@@ -18,7 +19,9 @@ export function mountShell(root, base) {
     const stopReading = context.reading.subscribe(() => refreshReadingWidgets(context));
     const stopState = state.subscribe(() => committed(context));
     const stopTheme = watchShellTheme(root);
+    const stopSidebar = watchSidebar(context);
     const perform = (event) => {
+        if (event.type === 'click' && handleSidebarClick(event, context)) return;
         if (event.target instanceof Element && event.target.closest('[data-skip]')) {
             event.preventDefault();
             root.querySelector('#content')?.focus();
@@ -38,9 +41,11 @@ export function mountShell(root, base) {
     root.addEventListener('click', perform);
     root.addEventListener('change', perform);
     const stopRouter = startRouter(window, next => {
+        context.menuOpen = false;
         context.moduleUI = {};
         context.route = next;
         renderShell(context, true);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     });
     const storageChanged = event => storageRefresh(event, context);
     window.addEventListener('storage', storageChanged);
@@ -58,6 +63,7 @@ export function mountShell(root, base) {
         stopReading();
         stopRouter();
         stopTheme();
+        stopSidebar();
         root.removeEventListener('click', perform);
         root.removeEventListener('change', perform);
         window.removeEventListener('storage', storageChanged);

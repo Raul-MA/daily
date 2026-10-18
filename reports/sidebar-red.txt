@@ -1,0 +1,81 @@
+[WebServer] (node:66368) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:66430) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/sidebar.spec.js:3:1 › shared sidebar separates app sections from app switching and keeps app colors (6.3s)
+(node:66748) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/sidebar.spec.js:22:1 › desktop sidebar collapses without remounting the app or losing a draft (6.4s)
+(node:67056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/e2e/sidebar.spec.js:34:1 › phone drawer traps focus closes with escape and navigates without overflow (6.2s)
+
+
+  1) tests/e2e/sidebar.spec.js:3:1 › shared sidebar separates app sections from app switching and keeps app colors
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.shell-sidebar')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('.shell-sidebar')
+
+
+      4 |   await page.goto('/daily/#/');
+      5 |   const sidebar = page.locator('.shell-sidebar');
+    > 6 |   await expect(sidebar).toBeVisible();
+        |                         ^
+      7 |   await expect(sidebar.locator('[data-app-sections]')).toHaveCount(0);
+      8 |   await expect(sidebar.getByRole('navigation', { name: 'Apps', exact: true }).getByRole('link')).toHaveCount(7);
+      9 |   for (const route of ['plants', 'coffee', 'games', 'time', 'piano', 'whatsapp']) {
+        at /workspaces/daily/tests/e2e/sidebar.spec.js:6:25
+
+    Error Context: test-results/sidebar-shared-sidebar-sep-934f4-tching-and-keeps-app-colors/error-context.md
+
+  2) tests/e2e/sidebar.spec.js:22:1 › desktop sidebar collapses without remounting the app or losing a draft
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Collapse sidebar', exact: true })
+
+
+      24 |   await page.locator('#recipient').fill('Draft contact');
+      25 |   const before = await page.evaluate(() => localStorage.getItem('daily:v1'));
+    > 26 |   await page.getByRole('button', { name: 'Collapse sidebar', exact: true }).click();
+         |                                                                             ^
+      27 |   await expect(page.locator('.shell-sidebar')).not.toBeVisible();
+      28 |   await page.getByRole('button', { name: 'Apps', exact: true }).click();
+      29 |   await expect(page.locator('.shell-sidebar')).toBeVisible();
+        at /workspaces/daily/tests/e2e/sidebar.spec.js:26:77
+
+    Error Context: test-results/sidebar-desktop-sidebar-co-9a3cc-g-the-app-or-losing-a-draft/error-context.md
+
+  3) tests/e2e/sidebar.spec.js:34:1 › phone drawer traps focus closes with escape and navigates without overflow
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Apps', exact: true })
+
+
+      38 |   const toggle = page.getByRole('button', { name: 'Apps', exact: true });
+      39 |   await expect(sidebar).not.toBeVisible();
+    > 40 |   await toggle.click();
+         |                ^
+      41 |   await expect(sidebar).toHaveAttribute('aria-modal', 'true');
+      42 |   await expect(page.getByRole('button', { name: 'Close menu', exact: true })).toBeFocused();
+      43 |   await page.keyboard.press('Shift+Tab');
+        at /workspaces/daily/tests/e2e/sidebar.spec.js:40:16
+
+    Error Context: test-results/sidebar-phone-drawer-traps-338d7--navigates-without-overflow/error-context.md
+
+  3 failed
+    tests/e2e/sidebar.spec.js:3:1 › shared sidebar separates app sections from app switching and keeps app colors
+    tests/e2e/sidebar.spec.js:22:1 › desktop sidebar collapses without remounting the app or losing a draft
+    tests/e2e/sidebar.spec.js:34:1 › phone drawer traps focus closes with escape and navigates without overflow

@@ -15,7 +15,7 @@ import { testIds } from './testIds.js';
 import { escapeHtml } from '../components/components.js';
 import { showToastKey, showToast, applyTheme, applyLanguage } from './notifications.js';
 import { readToolSettings } from './tools.js';
-import { renderTabs, render } from './navigation.js';
+import { render } from './navigation.js';
 import { exportAll } from '../../backend/features/importExport.js';
 
 export function renderSettings() {
@@ -105,7 +105,6 @@ function persistPreferences(event) {
     });
     applyTheme();
     applyLanguage();
-    renderTabs();
     renderSettings();
     showToastKey("toastSettingsSaved");
   }

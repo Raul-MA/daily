@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-18",
+  "status": "pass",
+  "uniqueUnits": 320,
+  "uniqueBrowserCases": 199,
+  "scopes": {
+    "general": {
+      "unit": 85,
+      "browser": 36,
+      "report": "reports/sidebar-all.txt",
+      "status": "pass"
+    },
+    "plants": {
+      "unit": 28,
+      "browser": 13,
+      "report": "reports/plants-column-regression.txt",
+      "status": "pass"
+    },
+    "coffee": {
+      "unit": 20,
+      "browser": 34,
+      "report": "reports/sidebar-coffee.txt",
+      "status": "pass"
+    },
+    "games": {
+      "unit": 17,
+      "browser": 34,
+      "report": "reports/sidebar-all.txt",
+      "status": "pass"
+    },
+    "time-budget": {
+      "unit": 23,
+      "browser": 23,
+      "report": "reports/sidebar-time-budget.txt",
+      "status": "pass"
+    },
+    "piano": {
+      "unit": 78,
+      "browser": 19,
+      "report": "reports/sidebar-all.txt",
+      "status": "pass"
+    },
+    "reading": {
+      "unit": 57,
+      "browser": 31,
+      "report": "reports/sidebar-all.txt",
+      "status": "pass"
+    },
+    "whatsapp": {
+      "unit": 12,
+      "browser": 9,
+      "report": "reports/sidebar-all.txt",
+      "status": "pass"
+    }
+  },
+  "finalSharedLayoutCases": 13,
+  "finalSharedLayoutReport": "reports/sidebar-platform.txt",
+  "pianoRetainedScripts": "pass: all lessons, 45 Library routes, phone widths 320/360/390, audio cleanup, offline reload",
+  "initialFailures": {
+    "report": "reports/sidebar-all.txt",
+    "coffee": "duplicate New-route remount; resolved and full Coffee rerun passes",
+    "time-budget": "two ambiguous Templates selectors; scoped to the original summary; full rerun passes"
+  },
+  "plantsFollowup": {
+    "red": "reports/plants-column-red.txt",
+    "regression": "reports/plants-column-regression.txt",
+    "widths": [
+      1280,
+      900,
+      320
+    ]
+  },
+  "lint": "reports/sidebar-lint.txt",
+  "syntax": {
+    "files": 818,
+    "report": "reports/sidebar-syntax.txt"
+  },
+  "build": "reports/sidebar-build.txt",
+  "remoteWork": false
+}

@@ -144,7 +144,8 @@
 }
 [data-module="games"] .workspace {
   margin: 0 auto;
-  max-width: 920px;
+  max-width: none;
+  width: 100%;
   padding: 1rem 1rem 7.5rem;
 }
 [data-module="games"] .toast-stack {
@@ -730,7 +731,7 @@
 @media (min-width: 900px) {
 [data-module="games"] .app-shell {
     display: grid;
-    grid-template-columns: 17rem minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
   }
 [data-module="games"] .sidebar {
     background: var(--surface);
@@ -742,7 +743,7 @@
     top: 0;
   }
 [data-module="games"] .workspace {
-    max-width: 1040px;
+    max-width: none;
     padding: 2rem;
     width: 100%;
   }

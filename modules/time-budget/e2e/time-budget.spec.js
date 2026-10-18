@@ -77,7 +77,7 @@ test('keeping budgets advances and editing the plan retains task names and alloc
 test('templates save load and export the original name-to-task format', async ({ page }) => {
   await open(page);
   await plan(page);
-  await page.getByText('Templates', { exact: true }).click();
+  await page.locator('.template-section summary').click();
   await page.locator('#templateName').fill('Mañana 🌱');
   await page.getByRole('button', { name: 'Save current plan' }).click();
   await expect(page.locator('#templateSelect')).toHaveValue('Mañana 🌱');

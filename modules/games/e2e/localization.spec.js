@@ -23,6 +23,7 @@ test('games Spanish management history statistics and backup screens reopen offl
     [testIds.navGames, 'Reglas de puntuación'], [testIds.navHistory, 'Partidas terminadas'],
     [testIds.navStats, 'Récords'], [testIds.navSettings, 'Datos locales'],
   ]) {
+    await page.getByRole('button', { name: 'Apps', exact: true }).click();
     await page.getByTestId(nav).last().click();
     await expect(page.locator('[data-module=games] h1')).toHaveText(heading);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);

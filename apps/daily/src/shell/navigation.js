@@ -1,7 +1,6 @@
 import { href } from '../../../../packages/platform/src/router.js';
 import { shellText } from '../../../../packages/i18n/src/shell.js';
 import { element, link } from './elements.js';
-import { apps } from './catalog.js';
 export function navigation(language, base) {
     const copy = shellText(language);
     const header = element('header', 'shell-header');
@@ -18,14 +17,15 @@ export function navigation(language, base) {
         button.dataset.focus = `language-${value}`;
         controls.append(button);
     }
-    const menu = element('details', 'app-menu');
-    menu.append(element('summary', '', copy.apps));
-    const entries = element('nav', 'app-menu-list');
-    entries.setAttribute('aria-label', copy.apps);
-    for (const app of apps)
-        entries.append(link(copy[app.key], href({ page: app.page }, base)));
-    menu.append(entries);
-    controls.append(menu, link(copy.settings, href({ page: 'settings' }, base)));
-    header.append(brand, controls);
+    const menu = element('button', 'shell-menu-toggle', `☰ ${copy.apps}`);
+    menu.type = 'button';
+    menu.dataset.sidebarToggle = '';
+    menu.setAttribute('aria-label', copy.apps);
+    menu.setAttribute('aria-controls', 'daily-sidebar');
+    menu.setAttribute('aria-expanded', 'false');
+    const start = element('div', 'header-start');
+    start.append(menu, brand);
+    controls.append(link(copy.settings, href({ page: 'settings' }, base)));
+    header.append(start, controls);
     return header;
 }

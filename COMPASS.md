@@ -14,6 +14,7 @@
 
 ## Key Files
 
+- `apps/daily/src/shell/sidebar*.js`, `sidebar.css`, `footer.js`: shared themed navigation, drawer/collapse behavior and compact footer; [platform](docs/platform.md) explains ownership.
 - [Checkpoint history](docs/implementation-history.md): archived evidence; current instructions remain in progress.
 - [Source test mapping](reports/migration-test-inventory.md) and [provenance](reports/source-tests.json).
 - `scripts/test.mjs`: sequential orchestration; `scripts/discovery.mjs`: required test counts.

@@ -20,8 +20,14 @@ function copy(context) {
         return navigator.language.startsWith('es') ? es : en;
     }
 }
+function attachSystem(host) {
+    const slot = document.querySelector('[data-footer-system]') ?? document.body;
+    if (host.parentNode !== slot)
+        slot.append(host);
+}
 function draw(context) {
     const text = copy(context);
+    attachSystem(context.host);
     context.host.replaceChildren();
     if (context.error)
         context.host.append(element('p', '', text.error));

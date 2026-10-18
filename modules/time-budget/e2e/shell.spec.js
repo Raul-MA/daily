@@ -51,7 +51,7 @@ test('language changes retain added setup rows names minutes goal and template d
   const row = page.locator('#taskList .task-item').nth(2);
   await row.getByLabel('Task name').fill('Mi tarea 🌱');
   await row.getByLabel('Minutes', { exact: true }).fill('8');
-  await page.getByText('Templates', { exact: true }).click();
+  await page.locator('.template-section summary').click();
   await page.locator('#templateName').fill('Mañana');
   await page.getByRole('button', { name: 'Español', exact: true }).click();
   await expect(page.locator('#taskList .task-item')).toHaveCount(3);

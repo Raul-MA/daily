@@ -49,7 +49,7 @@ ctx.container.innerHTML = copy(`
       <p class="text-muted">${copy('Press "Generate" to create a progression')}</p>
     </div>
 
-    <div class="theory-item mt-lg" style="max-width:600px">
+    <div class="theory-item mt-lg">
       <div class="theory-item-title">${copy("About diatonic progressions")}</div>
       <p class="text-muted">${copy("All chords are built on degrees of the chosen scale, using diatonic 7th chord qualities. Each generation picks random degrees from the scale.")}</p>
     </div>

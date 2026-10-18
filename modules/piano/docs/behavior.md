@@ -16,6 +16,8 @@ Toniq's lessons, exercises, theory, cards, music calculations, keyboard diagrams
 
 Source CSS is scoped to `[data-module="piano"]`. Audio/diagrams are local assets covered by the generated shared worker inventory. Piano never installs a private worker. Component disposal removes listeners and presentation timers without pausing the persisted session.
 
+Piano content grows with the document: the shared header, app and footer use one page scroll and the same app background. `#app-shell` and `#page-content` must not impose a viewport height or a separate vertical scroller. Search results and horizontal keyboards/timelines retain their bounded scrolling.
+
 ## Tests and remaining acceptance
 
 Source: Toniq commit `3fc564302b2c10642315d97a603aeba3c73a6ed0`; file hashes/destinations are in `reports/piano-source-map.json`. The original 41 unit cases and both original browser scripts remain, with explicit baseline/native route and asset adapters. Four Markdown characterization cases, eight service cases four localization contracts and one nested restore contract bring the unit total to 58. Fourteen native browser cases cover continuation, hidden prompts, offline use, history, drafts, stale activity links, failed saves, EN/ES presentation and all 44 destinations at 320px.

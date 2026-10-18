@@ -17,7 +17,7 @@ export function discoverBrowser(module) {
   if (['plants', 'piano', 'reading', 'whatsapp'].includes(module)) {
     const files = globSync(`modules/${module}/e2e/*.spec.js`);
     const count = files.reduce((sum, file) => sum + [...readFileSync(file, 'utf8').matchAll(/^test\(/gm)].length, 0);
-    const counts = { plants: 13, piano: 19, reading: 31, whatsapp: 9 };
+    const counts = { plants: 14, piano: 19, reading: 31, whatsapp: 9 };
     const expectedCount = counts[module];
     if (count !== expectedCount) throw new Error(`${module} browser discovery mismatch: expected ${expectedCount}, found ${count}`);
     return files;
@@ -25,7 +25,7 @@ export function discoverBrowser(module) {
   if (module !== 'general') return discover(module);
   const files = globSync('tests/e2e/*.spec.js').sort();
   const count = files.reduce((sum, file) => sum + [...readFileSync(file, 'utf8').matchAll(/^test\(/gm)].length, 0);
-  if (count !== 33) throw new Error(`General browser discovery mismatch: expected 33, found ${count}`);
+  if (count !== 37) throw new Error(`General browser discovery mismatch: expected 37, found ${count}`);
   return files;
 }
 

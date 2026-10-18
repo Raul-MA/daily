@@ -136,7 +136,7 @@
   resize: vertical;
 }
 [data-module="coffee"] .app-shell {
-  width: min(980px, 100%);
+  width: 100%;
   margin: 0 auto;
   padding: var(--space-6) var(--space-4) var(--space-8);
 }

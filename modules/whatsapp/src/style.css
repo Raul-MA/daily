@@ -16,7 +16,8 @@
 [data-module="whatsapp"] * { box-sizing: border-box; }
 
 .whatsapp-composer {
-  max-width: 480px;
+  width: 100%;
+  max-width: none;
   margin: auto;
   padding: calc(52px + env(safe-area-inset-top)) max(26px, env(safe-area-inset-right)) calc(28px + env(safe-area-inset-bottom)) max(26px, env(safe-area-inset-left));
 }

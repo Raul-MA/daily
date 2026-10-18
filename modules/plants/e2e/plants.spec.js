@@ -20,6 +20,29 @@ async function detail(page) {
 async function settings(page) { await page.goto('/daily/#/plants/settings'); }
 const saved = page => page.evaluate(() => JSON.parse(localStorage.getItem('daily:v1')).modules.plants.data);
 
+async function singleColumn(page, testInfo) {
+  await page.goto('/daily/#/plants');
+  for (const width of [1280, 900, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    const title = await page.locator('.plant-page-title').boundingBox();
+    const cards = page.locator('.plant-cards-grid > .plant-card');
+    await expect(cards).toHaveCount(2);
+    const first = await cards.nth(0).boundingBox();
+    const second = await cards.nth(1).boundingBox();
+    expect(first.y).toBeGreaterThan(title.y + title.height);
+    expect(second.y).toBeGreaterThanOrEqual(first.y + first.height);
+    expect(second.x).toBe(first.x);
+    expect(second.width).toBe(first.width);
+    const container = await page.locator('[data-module="plants"]').evaluate(node => {
+      const style = getComputedStyle(node);
+      return node.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+    });
+    expect(first.width).toBeCloseTo(container, 0);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.screenshot({ path: testInfo.outputPath(`plants-list-${width}.png`), fullPage: true });
+  }
+}
+
 test('plant creation edit and deletion use canonical routes and retain other storage', async ({ page }) => {
   await page.goto('/daily/#/plants/new');
   await page.getByLabel('Plant name', { exact: true }).fill('My fern 🌱');
@@ -81,7 +104,6 @@ test('dashboard reminders open the stable plant without completing care or chang
 
 async function preview(page, value) {
   await page.getByLabel('Plant backup file', { exact: true }).setInputFiles({ name: 'plants.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(value)) });
-  await page.getByRole('button', { name: 'Preview import', exact: true }).click();
 }
 
 test('plant import previews can be canceled and replacement requires a recovery download', async ({ page }) => {
@@ -153,12 +175,13 @@ test('plant interfaces follow shared Spanish without translating saved names and
 });
 
 test('plant styles stay scoped and invalid imports leave the current plants intact', async ({ page }, testInfo) => {
-  await seed(page);
+  await seed(page, [plant, { ...plant, id: 'fern-2', name: 'Second fern' }]);
   await settings(page);
   const before = await saved(page);
   await preview(page, [plant, plant]);
   await expect(page.locator('[data-module="plants"]').getByRole('alert')).toBeVisible();
   expect(await saved(page)).toEqual(before);
+  await singleColumn(page, testInfo);
   await detail(page);
   expect(await page.locator('[data-module="plants"]').evaluate(node => getComputedStyle(node).backgroundColor)).toBe('rgb(245, 240, 232)');
   expect(await page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue('--bg'))).toBe('');

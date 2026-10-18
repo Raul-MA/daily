@@ -1,6 +1,8 @@
 import { exportData, markDataExported, getBackupStatus } from '../store/store.js';
 import { el, field, submit, button, anchor, download, announce, save } from './elements.js';
 
+const pendingReads = new WeakMap();
+
 function importDialog(context, preview, form) {
   const dialog = el('dialog', 'plant-dialog');
   dialog.setAttribute('aria-label', context.copy.importTitle);
@@ -27,13 +29,23 @@ function importDialog(context, preview, form) {
 }
 
 async function previewFile(context, form) {
+  const request = {};
+  pendingReads.set(form, request);
+  form.querySelector('[data-plant-import-error]')?.remove();
+  const file = form.elements.namedItem('backup').files[0];
+  if (!file) return;
   try {
-    const file = form.elements.namedItem('backup').files[0];
-    if (!file) return;
-    const preview = context.service.previewImport(await file.text());
-    if (context.host.isConnected) importDialog(context, preview, form);
+    const text = await file.text();
+    if (!form.isConnected || pendingReads.get(form) !== request) return;
+    const preview = context.service.previewImport(text);
+    importDialog(context, preview, form);
   } catch {
-    announce(context, context.copy.importError, true);
+    if (!form.isConnected || pendingReads.get(form) !== request) return;
+    const error = el('p', 'storage-error', context.copy.importError);
+    error.dataset.plantImportError = '';
+    error.setAttribute('role', 'alert');
+    form.append(error);
+    error.scrollIntoView({ block: 'nearest' });
   }
 }
 
@@ -53,6 +65,7 @@ export function backups(context) {
   const file = field('backup', context.copy.file, '', 'file');
   file.querySelector('input').accept = '.json,application/json';
   file.querySelector('input').required = true;
+  file.querySelector('input').onchange = () => { void previewFile(context, form); };
   form.append(file, submit(context.copy.preview));
   form.onsubmit = event => { event.preventDefault(); void previewFile(context, form); };
   section.append(form);

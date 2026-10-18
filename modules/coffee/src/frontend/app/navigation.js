@@ -1,10 +1,5 @@
 import { href } from '../../../../../packages/platform/src/router.js';
 import { coffee } from './context.js';
-import { currentLanguage } from './copy.js';
-import { t } from '../../backend/core/i18n.js';
-import { testIds } from './testIds.js';
-import { capitalize } from './format.js';
-import { escapeHtml } from '../components/components.js';
 import { getSettings } from '../../backend/features/settings.js';
 import { renderToolsSetup } from './tools.js';
 import { renderEntryForm } from './form.js';
@@ -16,34 +11,12 @@ import { renderSettings } from './settings.js';
 
 export function setRoute(name, id = null) {
  if (coffee.route.name === name && (coffee.route.id ?? null) === id) {
-   renderTabs();
    render();
    return;
  }
  const pages = { new: 'coffeeNew', history: 'coffeeHistory', detail: 'coffeeEntry', edit: 'coffeeEntryEdit', insights: 'coffeeInsights', settings: 'coffeeSettings' };
  location.hash = href({ page: pages[name], id }, coffee.base).split('#')[1];
  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-export function renderTabs() {
-  const language = currentLanguage();
-  const items = [
-    ["new", "navNew"],
-    ["history", "navHistory"],
-    ["insights", "navInsights"],
-    ["settings", "navSettings"]
-  ];
-
-  coffee.tabs.setAttribute("aria-label", t(language, "ariaPrimaryNavigation"));
-  coffee.tabs.innerHTML = items.map(([name, labelKey]) => `
-    <button type="button" class="${coffee.route.name === name ? "active" : ""}" data-route="${name}" data-testid="${testIds[`nav${capitalize(name)}`]}">
-      <span>${escapeHtml(t(language, labelKey))}</span>
-    </button>
-  `).join("");
-
-  coffee.tabs.querySelectorAll("button").forEach((button) => {
-    button.addEventListener("click", () => setRoute(button.dataset.route));
-  });
 }
 
 export function render() {

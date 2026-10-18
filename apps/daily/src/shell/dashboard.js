@@ -5,7 +5,7 @@ import { plantWidget } from '../../../../modules/plants/src/ui/widget.js';
 import { activitySummary } from './activity-summary.js';
 import { href } from '../../../../packages/platform/src/router.js';
 import { shellText } from '../../../../packages/i18n/src/shell.js';
-import { element, heading, arrowLink } from './elements.js';
+import { element, heading, arrowLink, link } from './elements.js';
 import { badge } from './icons.js';
 import { quickActions, widgets } from './catalog.js';
 export function quickLabel(id, copy) { return copy[quickActions[id].label]; }
@@ -26,7 +26,8 @@ function card(id, preferences, base, services) {
     node.dataset.widget = id;
     const title = element('h2', 'widget-title', copy[id]);
     title.id = `widget-${id}`;
-    const header = element('div', 'card-heading');
+    const destination = widgets[id];
+    const header = destination ? link('', href({ page: destination.page }, base), 'card-heading card-heading-link') : element('div', 'card-heading');
     header.append(badge(id), title);
     node.setAttribute('aria-labelledby', title.id);
     node.append(header);

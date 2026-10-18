@@ -17,12 +17,14 @@ Retain Stillgreen's care rules, IDs, history and Things handoff inside one PWA w
 - Template refresh replaces only template-owned species/schedules while preserving user names, location, notes, history and manual overrides. Legacy Xanadu species matching remains supported.
 - Things uses `Stillgreen to Things`, with the exact version/title/date/project shortcut payload. Settings require a nonempty project when enabled. Watering retains the automatic handoff; the detail page offers the direct link when configured. Opening a link does not confirm task creation.
 - Styles retain source palette, controls, care rows and scoped selectors. System/serif fallbacks allow offline rendering without downloading fonts. The root dashboard keeps its separate iOS appearance.
+- Native Plants pages use normal vertical document flow: heading, care reminders and plant list stack in one column at every width. Plant cards form successive rows across the available container width; list, form, detail and settings pages share this full-width contract. The standalone source's desktop flex-row frame must not arrange the native heading/body beside each other. Shared navigation belongs to Daily's sidebar.
 
 ## Backups
 
 - **Export plants** keeps the original plant-array format.
 - **Export plants and settings** writes `{app: "stillgreen", version: 1, plants, things}` as `stillgreen-migration.json`.
 - Import supports the original array, a validated original storage envelope and the new migration export. Previewing performs no writes. Replacement requires an offered recovery download, revalidates the module and rejects a stale preview. The shared store retains a complete previous root recovery document before committing.
+- Selecting a file opens its preview immediately. The Preview import button can reopen a canceled preview without selecting the file again. Invalid-file errors appear beside the file control and scroll into view; superseded reads and detached forms cannot open a late preview. Selection and preview never replace records automatically.
 - Array/envelope imports retain current Things settings; the migration format restores them explicitly. Unsupported/invalid formats and duplicate IDs never mutate data. Import counts as a backup-relevant mutation.
 - Browser storage persistence is requested once where available; the result is recorded without promising permanent retention. Old app source and user exports remain untouched.
 

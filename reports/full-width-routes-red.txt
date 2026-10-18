@@ -1,0 +1,1084 @@
+[WebServer] (node:166628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:166640) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/page-width.spec.js:17:1 › every registered screen and Piano destination fills its available container (23.1s)
+
+
+  1) tests/e2e/page-width.spec.js:17:1 › every registered screen and Piano destination fills its available container
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -    1
+    + Received  + 1053
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1280,
+    +       "x": 284,
+    +     },
+    +     "className": "daily-shell",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/",
+    +     "selector": ".daily-shell",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 620,
+    +       "x": 614,
+    +     },
+    +     "className": "plant-page-title",
+    +     "expected": Object {
+    +       "width": 1304,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 620,
+    +       "x": 614,
+    +     },
+    +     "className": "plant-list-view",
+    +     "expected": Object {
+    +       "width": 1304,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 620,
+    +       "x": 614,
+    +     },
+    +     "className": "plant-page-title",
+    +     "expected": Object {
+    +       "width": 1304,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants/new",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 520,
+    +       "x": 664,
+    +     },
+    +     "className": "plant-form",
+    +     "expected": Object {
+    +       "width": 1304,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants/new",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 620,
+    +       "x": 614,
+    +     },
+    +     "className": "plant-page-title",
+    +     "expected": Object {
+    +       "width": 1304,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants/settings",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 620,
+    +       "x": 614,
+    +     },
+    +     "className": "plant-page-title",
+    +     "expected": Object {
+    +       "width": 1304,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants/plant-one/edit",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 520,
+    +       "x": 664,
+    +     },
+    +     "className": "plant-form",
+    +     "expected": Object {
+    +       "width": 1304,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants/plant-one/edit",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 620,
+    +       "x": 614,
+    +     },
+    +     "className": "plant-page-title",
+    +     "expected": Object {
+    +       "width": 1304,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants/plant-one",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 620,
+    +       "x": 614,
+    +     },
+    +     "className": "detail-view plant-detail-content",
+    +     "expected": Object {
+    +       "width": 1304,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants/plant-one",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 980,
+    +       "x": 434,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 1312,
+    +       "x": 268,
+    +     },
+    +     "route": "/daily/#/coffee",
+    +     "selector": "[data-module=\"coffee\"] > .app-shell",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 980,
+    +       "x": 434,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 1312,
+    +       "x": 268,
+    +     },
+    +     "route": "/daily/#/coffee/new",
+    +     "selector": "[data-module=\"coffee\"] > .app-shell",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 980,
+    +       "x": 434,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 1312,
+    +       "x": 268,
+    +     },
+    +     "route": "/daily/#/coffee/history",
+    +     "selector": "[data-module=\"coffee\"] > .app-shell",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 980,
+    +       "x": 434,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 1312,
+    +       "x": 268,
+    +     },
+    +     "route": "/daily/#/coffee/insights",
+    +     "selector": "[data-module=\"coffee\"] > .app-shell",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 980,
+    +       "x": 434,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 1312,
+    +       "x": 268,
+    +     },
+    +     "route": "/daily/#/coffee/settings",
+    +     "selector": "[data-module=\"coffee\"] > .app-shell",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 980,
+    +       "x": 434,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 1312,
+    +       "x": 268,
+    +     },
+    +     "route": "/daily/#/coffee/entry/337743da-ef99-43dc-9200-63e4e039795b/edit",
+    +     "selector": "[data-module=\"coffee\"] > .app-shell",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 980,
+    +       "x": 434,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 1312,
+    +       "x": 268,
+    +     },
+    +     "route": "/daily/#/coffee/entry/337743da-ef99-43dc-9200-63e4e039795b",
+    +     "selector": "[data-module=\"coffee\"] > .app-shell",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1040,
+    +       "x": 404,
+    +     },
+    +     "className": "workspace",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/games",
+    +     "selector": "[data-module=\"games\"] .workspace",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1040,
+    +       "x": 404,
+    +     },
+    +     "className": "workspace",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/games/new",
+    +     "selector": "[data-module=\"games\"] .workspace",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1040,
+    +       "x": 404,
+    +     },
+    +     "className": "workspace",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/games/session/session-mvd3jyj3-dnjy79",
+    +     "selector": "[data-module=\"games\"] .workspace",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1120,
+    +       "x": 364,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1100,
+    +       "x": 374,
+    +     },
+    +     "className": "panel time-backup",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1100,
+    +       "x": 374,
+    +     },
+    +     "className": "panel time-countdowns",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1040,
+    +       "x": 404,
+    +     },
+    +     "className": "workspace",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/games/session",
+    +     "selector": "[data-module=\"games\"] .workspace",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1040,
+    +       "x": 404,
+    +     },
+    +     "className": "workspace",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/games/history",
+    +     "selector": "[data-module=\"games\"] .workspace",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1040,
+    +       "x": 404,
+    +     },
+    +     "className": "workspace",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/games/history/session-mvd3jyii-9959lk",
+    +     "selector": "[data-module=\"games\"] .workspace",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1040,
+    +       "x": 404,
+    +     },
+    +     "className": "workspace",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/games/catalog",
+    +     "selector": "[data-module=\"games\"] .workspace",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1040,
+    +       "x": 404,
+    +     },
+    +     "className": "workspace",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/games/players",
+    +     "selector": "[data-module=\"games\"] .workspace",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1040,
+    +       "x": 404,
+    +     },
+    +     "className": "workspace",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/games/stats",
+    +     "selector": "[data-module=\"games\"] .workspace",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1040,
+    +       "x": 404,
+    +     },
+    +     "className": "workspace",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/games/settings",
+    +     "selector": "[data-module=\"games\"] .workspace",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/intervals.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 760,
+    +       "x": 544,
+    +     },
+    +     "className": "reader-shell",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/reading/picker",
+    +     "selector": "[data-module=\"reading\"] > .reader-shell",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 480,
+    +       "x": 684,
+    +     },
+    +     "className": "whatsapp-composer",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/whatsapp",
+    +     "selector": "[data-module=\"whatsapp\"] > .whatsapp-composer",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1280,
+    +       "x": 284,
+    +     },
+    +     "className": "daily-shell",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/settings",
+    +     "selector": ".daily-shell",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 720,
+    +       "x": 320,
+    +     },
+    +     "className": "settings-view",
+    +     "expected": Object {
+    +       "width": 1208,
+    +       "x": 320,
+    +     },
+    +     "route": "/daily/#/settings",
+    +     "selector": ".settings-view, #dashboard",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/scales.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/modes.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/modal-characteristics.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/key-signatures.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/tensions.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/available-tensions.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/extended-chords.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/suspended-chords.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/ear-training.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 600,
+    +       "x": 568,
+    +     },
+    +     "className": "theory-item mt-lg",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/chord-progressions.practice",
+    +     "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/iivi.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/secondary-dominants.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/tritone-sub.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/modal-interchange.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/harmonic-function.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/chord-inversions.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 600,
+    +       "x": 568,
+    +     },
+    +     "className": "theory-item mt-lg",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/reference/circle.cards",
+    +     "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/shell-chords.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/voice-leading.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/rootless-voicings.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/modulations.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/superimpositions.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/bebop.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 680,
+    +       "x": 584,
+    +     },
+    +     "className": "exercise-card",
+    +     "expected": Object {
+    +       "width": 712,
+    +       "x": 568,
+    +     },
+    +     "route": "/daily/#/piano/exercises/melodic-minor.practice",
+    +     "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1120,
+    +       "x": 364,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1100,
+    +       "x": 374,
+    +     },
+    +     "className": "panel time-backup",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 1100,
+    +       "x": 374,
+    +     },
+    +     "className": "panel time-countdowns",
+    +     "expected": Object {
+    +       "width": 1352,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 720,
+    +       "x": 564,
+    +     },
+    +     "className": "setup-grid",
+    +     "expected": Object {
+    +       "width": 1120,
+    +       "x": 364,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] .setup-grid",
+    +     "width": 1600,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 520,
+    +       "x": 314,
+    +     },
+    +     "className": "plant-form",
+    +     "expected": Object {
+    +       "width": 604,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants/new",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 900,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 520,
+    +       "x": 314,
+    +     },
+    +     "className": "plant-form",
+    +     "expected": Object {
+    +       "width": 604,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/plants/plant-one/edit",
+    +     "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
+    +     "width": 900,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 612,
+    +       "x": 268,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 652,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 900,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 480,
+    +       "x": 334,
+    +     },
+    +     "className": "whatsapp-composer",
+    +     "expected": Object {
+    +       "width": 652,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/whatsapp",
+    +     "selector": "[data-module=\"whatsapp\"] > .whatsapp-composer",
+    +     "width": 900,
+    +   },
+    +   Object {
+    +     "overflow": 23,
+    +     "route": "/daily/#/settings",
+    +     "width": 900,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 600,
+    +       "x": 272,
+    +     },
+    +     "className": "theory-item mt-lg",
+    +     "expected": Object {
+    +       "width": 604,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/piano/exercises/chord-progressions.practice",
+    +     "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
+    +     "width": 900,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 600,
+    +       "x": 272,
+    +     },
+    +     "className": "theory-item mt-lg",
+    +     "expected": Object {
+    +       "width": 604,
+    +       "x": 272,
+    +     },
+    +     "route": "/daily/#/piano/reference/circle.cards",
+    +     "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
+    +     "width": 900,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 612,
+    +       "x": 268,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 652,
+    +       "x": 248,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 900,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 366,
+    +       "x": 12,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 390,
+    +       "x": 0,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 390,
+    +   },
+    +   Object {
+    +     "overflow": 39,
+    +     "route": "/daily/#/settings",
+    +     "width": 390,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 366,
+    +       "x": 12,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 390,
+    +       "x": 0,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 390,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 296,
+    +       "x": 12,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 320,
+    +       "x": 0,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 320,
+    +   },
+    +   Object {
+    +     "overflow": 39,
+    +     "route": "/daily/#/settings",
+    +     "width": 320,
+    +   },
+    +   Object {
+    +     "actual": Object {
+    +       "width": 296,
+    +       "x": 12,
+    +     },
+    +     "className": "app-shell",
+    +     "expected": Object {
+    +       "width": 320,
+    +       "x": 0,
+    +     },
+    +     "route": "/daily/#/time",
+    +     "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
+    +     "width": 320,
+    +   },
+    + ]
+
+      36 |   }
+      37 |   writeFileSync('reports/full-width-route-audit.json', JSON.stringify({ routes: routes.length, widths: [1600, 900, 390, 320], checks: results.length, results }, null, 2));
+    > 38 |   expect(results.flatMap(result => result.violations.map(violation => ({ width: result.width, route: result.url, ...violation })))).toEqual([]);
+         |                                                                                                                                     ^
+      39 | });
+      40 |
+        at /workspaces/daily/tests/e2e/page-width.spec.js:38:133
+
+    Error Context: test-results/page-width-every-registere-4b168-lls-its-available-container/error-context.md
+
+  1 failed
+    tests/e2e/page-width.spec.js:17:1 › every registered screen and Piano destination fills its available container

@@ -1,4 +1,4 @@
-const paths = {
+export const paths = {
     home: '/', plants: '/plants', plantNew: '/plants/new', plantSettings: '/plants/settings', plantEdit: '/plants/:id/edit', plant: '/plants/:id', coffee: '/coffee', coffeeNew: '/coffee/new',
     coffeeHistory: '/coffee/history', coffeeInsights: '/coffee/insights', coffeeSettings: '/coffee/settings', coffeeEntryEdit: '/coffee/entry/:id/edit', coffeeEntry: '/coffee/entry/:id',
     games: '/games', gameNew: '/games/new', gameSession: '/games/session/:id', time: '/time',

@@ -1,6 +1,6 @@
 import { tr } from './copy.js';
 import { coffee } from './context.js';
-import { render, renderTabs } from './navigation.js';
+import { render } from './navigation.js';
 import { applyLanguage, showToast, showToastKey, attempt } from './notifications.js';
 
 export function downloadJson(text, filename) {
@@ -50,7 +50,6 @@ function apply(preview, dialog) {
     coffee.service.applyImport(preview);
     dialog.close();
     applyLanguage();
-    renderTabs();
     render();
     showToastKey('toastImportComplete');
   } catch (error) { showToast(error.message); }

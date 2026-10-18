@@ -1,0 +1,1 @@
+{"app":"plants","file":"plantas.json","result":"PASS","counts":{"plants":7},"browserFileSelection":true,"recoveryDownload":true,"confirmation":true,"reload":true}

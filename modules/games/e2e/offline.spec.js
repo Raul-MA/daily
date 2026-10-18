@@ -28,6 +28,7 @@ test('game setup scores history and statistics work after an offline reload', as
   page.once('dialog', dialog => dialog.accept());
   await page.getByTestId(testIds.finishSession).click();
   await expect(page.getByTestId(testIds.historyItem)).toHaveCount(1);
+  await page.getByRole('button', { name: 'Apps', exact: true }).click();
   await page.getByTestId(testIds.navStats).last().click();
   await expect(page.getByTestId(testIds.statsView)).toContainText('Ada');
   await page.getByRole('link', { name: 'Home', exact: true }).click();

@@ -9,7 +9,7 @@ import { initNavigation } from './js/components/sidebar.js';
 function frame() {
   const host = document.createElement('section');
   host.dataset.module = 'piano';
-  host.innerHTML = copy(`<div id="app-shell"><div id="main-wrapper"><header id="topbar"><a class="brand-link" aria-label="Toniq course">${copy("Toniq")}</a><nav class="primary-navigation" aria-label="Main navigation"></nav><div id="search-container"></div></header><div id="page-content" tabindex="-1"><p data-piano-loading role="status">${copy("Loading piano…")}</p></div></div></div>`);
+  host.innerHTML = copy(`<div id="app-shell"><div id="main-wrapper"><header id="topbar"><a class="brand-link" aria-label="Toniq course">${copy("Toniq")}</a><div id="search-container"></div></header><div id="page-content" tabindex="-1"><p data-piano-loading role="status">${copy("Loading piano…")}</p></div></div></div>`);
   host.querySelector('.brand-link').href = pianoHref('/');
   return host;
 }

@@ -23,16 +23,20 @@ test('coffee forms history insights and beans remain available offline', async (
   await expect(page.getByTestId(testIds.beanList)).toContainText('Offline ☕');
   expect((await readCoffeeData(page)).beanPresets).toHaveLength(2);
   await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByRole('button', { name: 'Apps', exact: true }).click();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-  expect(await page.locator('#coffee-tabs span').evaluateAll(labels => labels.every(label => {
+  await expect(page.locator('[data-app-sections] .sidebar-label')).toHaveCount(4);
+  expect(await page.locator('[data-app-sections] .sidebar-label').evaluateAll(labels => labels.every(label => {
     const range = document.createRange();
     range.selectNodeContents(label);
     return range.getClientRects().length === 1;
   }))).toBe(true);
+  await page.getByRole('button', { name: 'Close menu', exact: true }).click();
   await expect(page.locator('[data-module=coffee]')).toHaveCSS('background-color', 'rgb(240, 239, 234)');
   await page.screenshot({ path: testInfo.outputPath('coffee-phone.png'), fullPage: true });
   await page.getByRole('button', { name: 'Español', exact: true }).click();
   await page.setViewportSize({ width: 320, height: 844 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-  await expect(page.locator('#coffee-tabs')).toContainText('Estadísticas');
+  await page.getByRole('button', { name: 'Apps', exact: true }).click();
+  await expect(page.locator('[data-app-sections]')).toContainText('Estadísticas');
 });
