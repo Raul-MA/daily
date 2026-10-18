@@ -1,6 +1,6 @@
 # Implementation progress
 
-Updated: 2026-10-18. Repo: `/workspaces/daily`, branch `feature/piano-exercise-player`.
+Updated: 2026-10-18. Repo: `/workspaces/daily`, branch `review/08-cloud-sharing-proposal`.
 
 ## Current status and resume
 
@@ -8,11 +8,27 @@ Updated: 2026-10-18. Repo: `/workspaces/daily`, branch `feature/piano-exercise-p
 
 **All-route full-width layout and dashboard title links are implemented locally. The 360-check route/width audit and all app regression suites pass.** See the full-width checkpoint below.
 
-Work remains **local only**, using **plain HTML/CSS/JavaScript**. No workflows, pushes, Pages configuration or deployments are authorized. Preserve real Readwise/Reader requests for the user's later private-token checks. Do not request personal tokens or exports.
+Application implementation remains **local**, using **plain HTML/CSS/JavaScript**. On 2026-10-18 the user authorized pushing review branches and creating PRs. Workflows, Pages/hosting configuration, cloud setup and deployments remain deferred. Preserve real Readwise/Reader requests for the user's later private-token checks. Do not request personal tokens or exports.
 
 **Next acceptance work is deferred:** follow [device validation](device-validation.md) when the user resumes actual iPhone, Things, authenticated API, worker-coexistence or release testing. Do not treat those checks as passed or start remote work automatically. The current storage policy is **one editing tab at a time**; revision checks reject ordinary stale saves but do not serialize simultaneous cross-tab writers.
 
 Local preview: `npm run dev`, then `http://127.0.0.1:5173/daily/`. Preparation copies native assets; rebuild after source edits.
+
+## Remote review publication (2026-10-18)
+
+- The user requested pushing the completed work and opening PRs arranged for review. Existing commits are preserved; eight review branches separate platform/core apps, Time/Piano, Reader/WhatsApp, backup/localization/recovery, Piano player/themes, shared navigation/layout/import previews, Time Budget sections, and the future cloud proposal.
+- Validation is recorded in the implementation checkpoints below; initial red/transient reports remain available. No runtime code changed for publication. Personal JSON backups and incidental WhatsApp screenshot churn stay outside the commits. No workflow, hosting configuration or deployment was added.
+- Review the code PRs in this order; each PR targets the preceding branch:
+
+1. [Native platform + Plants/Coffee/Games](https://github.com/Raul-MA/daily/pull/1)
+2. [Time Budget + Piano](https://github.com/Raul-MA/daily/pull/2)
+3. [Reader + WhatsApp](https://github.com/Raul-MA/daily/pull/3)
+4. [Backups, localization + recovery](https://github.com/Raul-MA/daily/pull/4)
+5. [Piano exercise player + themes](https://github.com/Raul-MA/daily/pull/5)
+6. [Shared navigation, full-width pages + import previews](https://github.com/Raul-MA/daily/pull/6)
+7. [Time Budget menu sections](https://github.com/Raul-MA/daily/pull/7)
+
+- The eighth PR contains only the future sharing/push proposal and review-publication documentation. Exact next step: publish that final documentation layer and verify the stack. Physical-device and authenticated API acceptance remain deferred.
 
 ## Time Budget menu sections (2026-10-18)
 
@@ -20,6 +36,14 @@ Local preview: `npm run dev`, then `http://127.0.0.1:5173/daily/`. Preparation c
 - Acceptance recorded before implementation in [menu red](../reports/time-menu-red.txt). Existing source assertions remain; General sidebar coverage now checks panel isolation and retained drafts, while module countdown/import/localization tests navigate to their controls. Discovery and source mapping remain current.
 - Verification: [module](../reports/time-menu-module.txt) passes 23 unit / 23 browser cases; the final language/keyboard refinements pass both [focused cases](../reports/time-menu-final-cases.txt). [General](../reports/time-menu-general.txt) passes 85 unit and 36 browser cases, including the 360-check width audit and all sidebar cases; its final service-worker controller startup timed out, then the unchanged [update case](../reports/time-menu-updates.txt) passes against a stable build. The initial failure remains recorded. Full strict [lint](../reports/time-menu-lint.txt), [824-file syntax](../reports/time-menu-syntax.txt), [708-asset build](../reports/time-menu-build.txt) and whitespace checks pass.
 - Exact next step: refresh the local preview and review the three menu panels. No local implementation remains pending for this request. Work remains local only; deferred physical/API/release acceptance and earlier unrelated checkpoints are unchanged.
+
+## Supabase, app sharing and push proposal (2026-10-18)
+
+- Follow-up: scheduled push is an explicit initial requirement for every app: one-time and recurring schedules, per-app management, personal/shared audiences with recipient opt-in, timezone/quiet-hour rules, cancellation/version checks and missed-occurrence handling. Added scheduling acceptance criteria and updated the push foundation stage. Documentation only; local links and whitespace checks pass; no runtime tests were needed. Next step remains proposal review, followed by Stage 0 only when implementation is requested.
+- Added [the focused proposal](supabase-sharing-push-plan.md) for optional cloud persistence across all seven apps, independent app-space memberships (Coffee and Games can have different audiences), database-enforced roles, offline conflicts/recovery, and Web Push through scheduled Edge Functions. Root Compass links to it; the consolidation plan remains authoritative for current behavior.
+- Evidence: inspected shared storage/activities/backup boundaries and all module Compass files; checked official Supabase RLS, Edge runtime/scheduling and Apple/WebKit push documentation, linked in the proposal. JavaScript-only Edge entry compatibility is an explicit future validation gate; no compatibility or delivery success is claimed.
+- Planning only: no application code, personal data, dependencies, services, migrations, invitations or deployments changed. No application tests or test mappings changed. Documentation links and patch whitespace checked locally; runtime suites were not run for this documentation-only request. Existing unrelated working-tree changes remain untouched.
+- Exact next step: review the proposal. If the user requests implementation, start its Stage 0 locally with acceptance contracts and the JavaScript Edge runtime spike, then proceed one stage/app at a time. Remote setup and physical-device push acceptance remain deferred. Existing implementation checkpoints below retain their own pending work.
 
 ## Supplied backup compatibility (2026-10-18)
 

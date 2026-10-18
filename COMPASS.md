@@ -2,7 +2,7 @@
 
 ## Start Here
 
-- [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Local only, no workflows or pushes; API token checks are deferred.
+- [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Review branches/PRs are authorized; deployment, hosting and API token checks remain deferred.
 - [Implementation plan](docs/pwa-consolidation-plan.md) defines the gates. All seven native apps, shared shell, timestamp activities, EN/ES, recovery and offline updates pass full local verification. Stage 8 physical-device/API/coexistence and release acceptance remain deferred.
 
 ## Commands
@@ -23,6 +23,7 @@
 
 ## Deep Dives
 
+- [Supabase, app sharing and push proposal](docs/supabase-sharing-push-plan.md): future app-specific memberships, offline sync and Edge Function reminders; planning only, no implementation authorized.
 - [Platform and native modules](docs/platform.md): route/state boundaries, local scripts and offline assets.
 - [Testing](docs/testing.md): baseline versus new-app runs and red-stage interpretation.
 - [Constraints](docs/constraints.md): Pages origin and Readwise capabilities.
