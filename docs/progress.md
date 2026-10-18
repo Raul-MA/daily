@@ -27,8 +27,9 @@ Local preview: `npm run dev`, then `http://127.0.0.1:5173/daily/`. Preparation c
 5. [Piano exercise player + themes](https://github.com/Raul-MA/daily/pull/5)
 6. [Shared navigation, full-width pages + import previews](https://github.com/Raul-MA/daily/pull/6)
 7. [Time Budget menu sections](https://github.com/Raul-MA/daily/pull/7)
+8. [Cloud sharing and scheduled push proposal — documentation only](https://github.com/Raul-MA/daily/pull/8)
 
-- The eighth PR contains only the future sharing/push proposal and review-publication documentation. Exact next step: publish that final documentation layer and verify the stack. Physical-device and authenticated API acceptance remain deferred.
+- All eight review branches and PRs are published. The first PR targets `main`; every later PR targets its predecessor. Exact next step: review and merge in order, retargeting dependents after each parent lands. No PR was merged automatically. Physical-device, authenticated API and deployment acceptance remain deferred.
 
 ## Time Budget menu sections (2026-10-18)
 
