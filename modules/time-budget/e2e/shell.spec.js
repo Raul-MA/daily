@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { open, plan, start } from './helpers.js';
+import { open, plan, start, section } from './helpers.js';
 
 test.use({ serviceWorkers: 'allow' });
 
@@ -24,6 +24,11 @@ test('focus starts persist immediately and Home navigation never changes its sav
 test('two named countdowns pause independently and remain overdue until explicit completion', async ({ page }) => {
   await open(page);
   await start(page);
+  const before = await root(page);
+  await section(page, 'Countdowns');
+  await page.locator('.time-countdowns h2').press('Space');
+  expect(await root(page)).toBe(before);
+  await expect(page.locator('#timerScreen')).not.toBeVisible();
   for (const name of ['Tea ☕', 'Stretch']) {
     await page.getByLabel('Countdown name', { exact: true }).fill(name);
     await page.getByLabel('Countdown minutes', { exact: true }).fill('1');
@@ -37,6 +42,7 @@ test('two named countdowns pause independently and remain overdue until explicit
   await expect(stretch.locator('output')).toHaveText('+0:30');
   await expect(stretch.getByRole('button', { name: 'Complete', exact: true })).toBeVisible();
   await page.reload();
+  await section(page, 'Countdowns');
   await expect(tea.getByRole('button', { name: 'Resume', exact: true })).toBeVisible();
   await stretch.getByRole('button', { name: 'Complete', exact: true }).click();
   await expect(stretch).toContainText('Completed');
@@ -73,11 +79,13 @@ test('pending overtime survives reload and canceled imports preserve the active 
   await expect(page.locator('#deficitAmount')).toHaveText('2 minutes');
   await page.getByRole('button', { name: 'Keep current budgets' }).click();
   const before = await root(page);
+  await section(page, 'Settings');
   await page.locator('[data-time-file]').setInputFiles({ name: 'templates.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ 'New 🌱': [{ name: 'Task', minutes: 12 }] })) });
   await expect(page.locator('[data-time-import-preview]')).toBeVisible();
   expect(await root(page)).toBe(before);
   await page.getByRole('button', { name: 'Cancel import' }).click();
   expect(await root(page)).toBe(before);
+  await section(page, 'Time Budget');
   await expect(page.locator('#currentTaskName')).toHaveText('Read ☕');
 });
 

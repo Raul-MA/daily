@@ -4,6 +4,8 @@ Updated: 2026-10-18. Repo: `/workspaces/daily`, branch `feature/piano-exercise-p
 
 ## Current status and resume
 
+**Time Budget now has separate Time Budget, Countdowns and Settings menu panels; local verification is complete.** See the menu checkpoint below.
+
 **All-route full-width layout and dashboard title links are implemented locally. The 360-check route/width audit and all app regression suites pass.** See the full-width checkpoint below.
 
 Work remains **local only**, using **plain HTML/CSS/JavaScript**. No workflows, pushes, Pages configuration or deployments are authorized. Preserve real Readwise/Reader requests for the user's later private-token checks. Do not request personal tokens or exports.
@@ -11,6 +13,13 @@ Work remains **local only**, using **plain HTML/CSS/JavaScript**. No workflows, 
 **Next acceptance work is deferred:** follow [device validation](device-validation.md) when the user resumes actual iPhone, Things, authenticated API, worker-coexistence or release testing. Do not treat those checks as passed or start remote work automatically. The current storage policy is **one editing tab at a time**; revision checks reject ordinary stale saves but do not serialize simultaneous cross-tab writers.
 
 Local preview: `npm run dev`, then `http://127.0.0.1:5173/daily/`. Preparation copies native assets; rebuild after source edits.
+
+## Time Budget menu sections (2026-10-18)
+
+- Replaced Time Budget's scrolling menu targets with three mutually exclusive sections: Time Budget (plan/templates), Countdowns, and Settings (backups/import/recovery). Switching retains mounted drafts and independent running clocks without saved-data changes; language remount retains the selected section. A full page reload starts at the plan. Space ignores the hidden budget panel.
+- Acceptance recorded before implementation in [menu red](../reports/time-menu-red.txt). Existing source assertions remain; General sidebar coverage now checks panel isolation and retained drafts, while module countdown/import/localization tests navigate to their controls. Discovery and source mapping remain current.
+- Verification: [module](../reports/time-menu-module.txt) passes 23 unit / 23 browser cases; the final language/keyboard refinements pass both [focused cases](../reports/time-menu-final-cases.txt). [General](../reports/time-menu-general.txt) passes 85 unit and 36 browser cases, including the 360-check width audit and all sidebar cases; its final service-worker controller startup timed out, then the unchanged [update case](../reports/time-menu-updates.txt) passes against a stable build. The initial failure remains recorded. Full strict [lint](../reports/time-menu-lint.txt), [824-file syntax](../reports/time-menu-syntax.txt), [708-asset build](../reports/time-menu-build.txt) and whitespace checks pass.
+- Exact next step: refresh the local preview and review the three menu panels. No local implementation remains pending for this request. Work remains local only; deferred physical/API/release acceptance and earlier unrelated checkpoints are unchanged.
 
 ## Supplied backup compatibility (2026-10-18)
 

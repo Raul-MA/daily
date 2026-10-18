@@ -1,3 +1,4 @@
+import { mountSections } from './sections.js';
 import { restoreNotice } from './notices.js';
 import { mountCountdowns } from './countdown-ui.js';
 import { createTimeApp } from './app.js';
@@ -49,6 +50,7 @@ export function mountTimeBudget(options) {
   restoreSetup(app, options.ui);
   mountBackupUI(app);
   const stopCountdowns = mountCountdowns(app);
+  mountSections(app, options.ui);
   const unbind = bindEvents(app);
   restoreNotice(app);
   host.querySelector('h1').tabIndex = -1;

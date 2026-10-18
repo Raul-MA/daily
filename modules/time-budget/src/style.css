@@ -1054,3 +1054,5 @@ to { opacity: 1; transform: none; }
 [data-module="time-budget"] .time-backup input { min-width: 0; max-width: 100%; }
 [data-module="time-budget"] .time-backup .button { max-width: 100%; white-space: normal; padding-block: 12px; }
 [data-module="time-budget"] .countdown-card strong { min-width: 0; overflow-wrap: anywhere; }
+
+[data-module="time-budget"] [data-menu-panel][hidden] { display: none; }

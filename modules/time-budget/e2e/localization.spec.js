@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { open, plan, start } from './helpers.js';
+import { open, plan, start, section } from './helpers.js';
 
 test.use({ serviceWorkers: 'allow' });
 
@@ -14,8 +14,14 @@ test('time budget Spanish setup countdowns and backup controls work offline with
   await page.getByRole('button', { name: 'Español', exact: true }).click();
   await expect(page.locator('#setupTitle')).toHaveText('Haz que cada minuto cuente.');
   await expect(page.locator('#taskList .task-name-input').first()).toHaveValue('Free time remaining 🌱');
+  await section(page, 'Cuentas atrás');
   await expect(page.getByLabel('Nombre de la cuenta atrás', { exact: true })).toBeVisible();
+  await section(page, 'Ajustes');
   await expect(page.getByRole('button', { name: 'Exportar Time Budget completo', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'English', exact: true }).click();
+  await expect(page.locator('.time-backup')).toBeVisible();
+  await page.getByRole('button', { name: 'Español', exact: true }).click();
+  await expect(page.locator('.time-backup')).toBeVisible();
   await page.evaluate(async () => {
     await navigator.serviceWorker.ready;
     if (!navigator.serviceWorker.controller) await new Promise(resolve => navigator.serviceWorker.addEventListener('controllerchange', resolve, { once: true }));
@@ -29,6 +35,7 @@ test('time budget Spanish setup countdowns and backup controls work offline with
   const wide = await page.evaluate(() => Array.from(document.querySelectorAll('[data-module="time-budget"] *')).filter(node => node.getBoundingClientRect().right > innerWidth + 1).map(node => ({ tag: node.tagName, id: node.id, className: node.className, width: node.getBoundingClientRect().width })));
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), JSON.stringify(wide)).toBe(true);
   expect(await moduleData(page)).toBeNull();
+  await section(page, 'Ajustes');
   await page.locator('[data-time-file]').setInputFiles({ name: 'future.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ app: 'time-budget', schemaVersion: 99 })) });
   await expect(page.locator('#toast')).toContainText('La versión del esquema de Time Budget no es compatible.');
   await page.getByRole('button', { name: 'Cancelar importación', exact: true }).click();
@@ -86,6 +93,7 @@ test('time budget ignores a slow previous backup after a newer file selection or
       return new Promise(resolve => { window.releaseTimeFile = () => result.then(resolve); });
     };
   });
+  await section(page, 'Settings');
   const input = page.locator('[data-time-file]');
   await input.setInputFiles({ name: 'slow.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ Old: [{ name: 'Old', minutes: 1 }] })) });
   await expect.poll(() => page.evaluate(() => typeof window.releaseTimeFile)).toBe('function');

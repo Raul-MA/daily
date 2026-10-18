@@ -20,3 +20,9 @@ export async function start(page) {
   await expect(page.locator('#timerScreen')).toBeVisible();
 }
 
+
+export async function section(page, name) {
+  const sidebar = page.locator('.shell-sidebar');
+  if (!await sidebar.isVisible()) await page.locator('[data-sidebar-toggle]').click();
+  await sidebar.locator('[data-app-sections]').getByRole('button', { name, exact: true }).click();
+}

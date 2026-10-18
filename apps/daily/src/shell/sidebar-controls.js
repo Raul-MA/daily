@@ -13,7 +13,8 @@ function modalState(aside, phone, open, copy) {
 function sectionAvailability(root, aside) {
   for (const button of aside.querySelectorAll('[data-sidebar-target]')) {
     const target = root.querySelector('.shell-main').querySelector(button.dataset.sidebarTarget);
-    button.disabled = !target || target.getClientRects().length === 0;
+    button.disabled = !target || (!target.hasAttribute('data-menu-panel') && target.getClientRects().length === 0);
+    if (target?.hasAttribute('data-menu-panel') && !target.hidden) button.setAttribute('aria-current', 'location');
   }
 }
 
@@ -43,6 +44,7 @@ function close(context, restoreFocus = true) {
 function visitSection(context, button) {
   const target = context.root.querySelector('.shell-main').querySelector(button.dataset.sidebarTarget);
   if (!target) return;
+  target.dispatchEvent(new Event('daily:show-section'));
   if (mobile()) close(context, false);
   if (target instanceof HTMLDetailsElement) target.open = true;
   target.scrollIntoView({ block: 'start' });

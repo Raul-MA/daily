@@ -28,9 +28,18 @@ test('shared sidebar separates app sections from app switching and keeps app col
     const color = await page.locator('.shell-main > [data-module]').evaluate(node => getComputedStyle(node).backgroundColor);
     await expect(sidebar).toHaveCSS('background-color', color);
     if (route === 'time') {
+      await page.locator('#taskList .task-name-input').first().fill('Keep my draft');
       await sidebar.getByRole('button', { name: 'Countdowns', exact: true }).click();
       await expect(page.locator('.time-countdowns')).toBeInViewport();
-      await sidebar.getByRole('button', { name: 'Templates', exact: true }).click();
+      await expect(page.locator('#setupScreen')).not.toBeVisible();
+      await expect(page.locator('.time-backup')).not.toBeVisible();
+      await sidebar.getByRole('button', { name: 'Settings', exact: true }).click();
+      await expect(page.locator('.time-backup')).toBeVisible();
+      await expect(page.locator('.time-countdowns')).not.toBeVisible();
+      await sidebar.getByRole('button', { name: 'Time Budget', exact: true }).click();
+      await expect(page.locator('#setupScreen')).toBeVisible();
+      await expect(page.locator('#taskList .task-name-input').first()).toHaveValue('Keep my draft');
+      await page.locator('.template-section summary').click();
       await expect(page.locator('.template-section')).toHaveAttribute('open', '');
     }
     if (route === 'whatsapp') {

@@ -17,10 +17,9 @@ export const sections = {
     item('gamesSettings', 'Settings', 'Ajustes', { testId: 'nav-settings' }),
   ],
   time: [
-    item('time', 'Plan', 'Plan', { target: '#setupScreen:not(.hidden), #timerScreen:not(.hidden)' }),
-    item('time', 'Countdowns', 'Cuentas atrás', { target: '.time-countdowns' }),
-    item('time', 'Templates', 'Plantillas', { target: '.template-section' }),
-    item('time', 'Backups', 'Respaldos', { target: '.time-backup' }),
+    item('time', 'Time Budget', 'Time Budget', { target: '[data-menu-panel="plan"]' }),
+    item('time', 'Countdowns', 'Cuentas atrás', { target: '[data-menu-panel="countdowns"]' }),
+    item('time', 'Settings', 'Ajustes', { target: '[data-menu-panel="settings"]' }),
   ],
   piano: [
     item('piano', 'Course', 'Curso', { matches: ['pianoLearn'] }),

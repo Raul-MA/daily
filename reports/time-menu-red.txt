@@ -1,0 +1,39 @@
+[WebServer] (node:10290) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:10303) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/sidebar.spec.js:3:1 › shared sidebar separates app sections from app switching and keeps app colors (9.8s)
+
+
+  1) tests/e2e/sidebar.spec.js:3:1 › shared sidebar separates app sections from app switching and keeps app colors
+
+    Error: expect(locator).not.toBeVisible() failed
+
+    Locator:  locator('#setupScreen')
+    Expected: not visible
+    Received: visible
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "not toBeVisible" with timeout 5000ms
+      - waiting for locator('#setupScreen')
+        14 × locator resolved to <section id="setupScreen" class="screen setup-screen" aria-labelledby="setupTitle">…</section>
+           - unexpected value "visible"
+
+
+      31 |       await sidebar.getByRole('button', { name: 'Countdowns', exact: true }).click();
+      32 |       await expect(page.locator('.time-countdowns')).toBeInViewport();
+    > 33 |       await expect(page.locator('#setupScreen')).not.toBeVisible();
+         |                                                      ^
+      34 |       await expect(page.locator('.time-backup')).not.toBeVisible();
+      35 |       await sidebar.getByRole('button', { name: 'Settings', exact: true }).click();
+      36 |       await expect(page.locator('.time-backup')).toBeVisible();
+        at /workspaces/daily/tests/e2e/sidebar.spec.js:33:54
+
+    Error Context: test-results/sidebar-shared-sidebar-sep-934f4-tching-and-keeps-app-colors/error-context.md
+
+  1 failed
+    tests/e2e/sidebar.spec.js:3:1 › shared sidebar separates app sections from app switching and keeps app colors

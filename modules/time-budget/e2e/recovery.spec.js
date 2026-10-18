@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { open, start } from './helpers.js';
+import { open, start, section } from './helpers.js';
 
 test('negative and fractional reallocation never enable confirmation', async ({ page }) => {
   await open(page);
@@ -45,6 +45,7 @@ test('queue drafts survive language changes and stale edits cannot overwrite ano
 test('confirmed legacy imports preserve active sessions and create a full recovery backup', async ({ page }) => {
   await open(page);
   await start(page);
+  await section(page, 'Settings');
   await expect(page.getByLabel('Import Time Budget backup')).toBeVisible();
   await page.locator('[data-time-file]').setInputFiles({ name: 'templates.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ 'Mañana 🌱': [{ name: 'Café', minutes: 12 }] })) });
   await expect(page.locator('[data-time-confirm]')).toBeDisabled();
