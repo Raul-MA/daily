@@ -23,7 +23,7 @@ Running 6 tests using 1 worker
   ✓  6 modules/piano/e2e/player-review.spec.js:67:1 › switching exercises cannot apply another exercise title or correction draft (1.9s)
 
 
-  1) modules/piano/e2e/player-review.spec.js:9:1 › player import rename and correction drafts survive language remounts and clear after save 
+  1) modules/piano/e2e/player-review.spec.js:9:1 › player import rename and correction drafts survive language remounts and clear after save
 
     Error: expect(locator).toHaveCount(expected) failed
 
@@ -50,7 +50,7 @@ Running 6 tests using 1 worker
 
     Error Context: test-results/player-review-player-impor-3acc3-mounts-and-clear-after-save/error-context.md
 
-  2) modules/piano/e2e/player-review.spec.js:25:1 › changing the corrected note keeps its editor open and keyboard focus on the selector 
+  2) modules/piano/e2e/player-review.spec.js:25:1 › changing the corrected note keeps its editor open and keyboard focus on the selector
 
     Error: expect(locator).toBeVisible() failed
 
@@ -77,7 +77,7 @@ Running 6 tests using 1 worker
 
     Error Context: test-results/player-review-changing-the-fe1f2-board-focus-on-the-selector/error-context.md
 
-  3) modules/piano/e2e/player-review.spec.js:33:1 › Spanish player validation explains file shape reference and syntax failures without changing paths 
+  3) modules/piano/e2e/player-review.spec.js:33:1 › Spanish player validation explains file shape reference and syntax failures without changing paths
 
     Error: expect(locator).toContainText(expected) failed
 
@@ -117,7 +117,7 @@ Running 6 tests using 1 worker
 
     Error Context: test-results/player-review-Spanish-play-28b68-ures-without-changing-paths/error-context.md
 
-  4) modules/piano/e2e/player-review.spec.js:46:1 › importing from the bottom reveals and focuses the player heading in document scroll 
+  4) modules/piano/e2e/player-review.spec.js:46:1 › importing from the bottom reveals and focuses the player heading in document scroll
 
     Error: expect(locator).toBeInViewport() failed
 
@@ -144,7 +144,7 @@ Running 6 tests using 1 worker
 
     Error Context: test-results/player-review-importing-fr-45847--heading-in-document-scroll/error-context.md
 
-  5) modules/piano/e2e/player-review.spec.js:54:1 › late file reads cannot overwrite newer imports or save after leaving the player 
+  5) modules/piano/e2e/player-review.spec.js:54:1 › late file reads cannot overwrite newer imports or save after leaving the player
 
     Error: expect(received).toBe(expected) // Object.is equality
 
@@ -163,9 +163,9 @@ Running 6 tests using 1 worker
     Error Context: test-results/player-review-late-file-re-4305a-ve-after-leaving-the-player/error-context.md
 
   5 failed
-    modules/piano/e2e/player-review.spec.js:9:1 › player import rename and correction drafts survive language remounts and clear after save 
-    modules/piano/e2e/player-review.spec.js:25:1 › changing the corrected note keeps its editor open and keyboard focus on the selector 
-    modules/piano/e2e/player-review.spec.js:33:1 › Spanish player validation explains file shape reference and syntax failures without changing paths 
-    modules/piano/e2e/player-review.spec.js:46:1 › importing from the bottom reveals and focuses the player heading in document scroll 
-    modules/piano/e2e/player-review.spec.js:54:1 › late file reads cannot overwrite newer imports or save after leaving the player 
+    modules/piano/e2e/player-review.spec.js:9:1 › player import rename and correction drafts survive language remounts and clear after save
+    modules/piano/e2e/player-review.spec.js:25:1 › changing the corrected note keeps its editor open and keyboard focus on the selector
+    modules/piano/e2e/player-review.spec.js:33:1 › Spanish player validation explains file shape reference and syntax failures without changing paths
+    modules/piano/e2e/player-review.spec.js:46:1 › importing from the bottom reveals and focuses the player heading in document scroll
+    modules/piano/e2e/player-review.spec.js:54:1 › late file reads cannot overwrite newer imports or save after leaving the player
   1 passed (36.4s)

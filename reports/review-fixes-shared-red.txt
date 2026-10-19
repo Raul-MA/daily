@@ -14,7 +14,7 @@ Running 3 tests using 1 worker
   ✘  3 tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks (1.2s)
 
 
-  1) tests/e2e/review-fixes.spec.js:3:1 › the focused desktop skip link is above the fixed sidebar and activates main content 
+  1) tests/e2e/review-fixes.spec.js:3:1 › the focused desktop skip link is above the fixed sidebar and activates main content
 
     Error: expect(received).toBe(expected) // Object.is equality
 
@@ -32,7 +32,7 @@ Running 3 tests using 1 worker
 
     Error Context: test-results/review-fixes-the-focused-d-b583e--and-activates-main-content/error-context.md
 
-  2) tests/e2e/review-fixes.spec.js:12:1 › storage recovery releases an open phone drawer so all recovery controls can scroll into view 
+  2) tests/e2e/review-fixes.spec.js:12:1 › storage recovery releases an open phone drawer so all recovery controls can scroll into view
 
     Error: expect(received).not.toBe(expected) // Object.is equality
 
@@ -49,7 +49,7 @@ Running 3 tests using 1 worker
 
     Error Context: test-results/review-fixes-storage-recov-a3086-ntrols-can-scroll-into-view/error-context.md
 
-  3) tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks 
+  3) tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks
 
     Error: expect(received).toEqual(expected) // deep equality
 
@@ -101,6 +101,6 @@ Running 3 tests using 1 worker
     Error Context: test-results/review-fixes-same-route-si-3dc98-d-nonprimary-browser-clicks/error-context.md
 
   3 failed
-    tests/e2e/review-fixes.spec.js:3:1 › the focused desktop skip link is above the fixed sidebar and activates main content 
-    tests/e2e/review-fixes.spec.js:12:1 › storage recovery releases an open phone drawer so all recovery controls can scroll into view 
-    tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks 
+    tests/e2e/review-fixes.spec.js:3:1 › the focused desktop skip link is above the fixed sidebar and activates main content
+    tests/e2e/review-fixes.spec.js:12:1 › storage recovery releases an open phone drawer so all recovery controls can scroll into view
+    tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks

@@ -1,0 +1,67 @@
+{
+  "command": "npm run verify",
+  "exitCode": 0,
+  "date": "2026-10-19",
+  "runtimeCheckpoint": "ad35e5307484598d11ae4a1978c1ad7288fb4bf4",
+  "baseCheckpoint": "859fd7b0f1365f90cbef22b0975f612580580e2c",
+  "report": "review-fixes-verify.txt",
+  "unit": 326,
+  "nativeBrowser": 212,
+  "pianoBroadScripts": 2,
+  "syntaxFiles": 829,
+  "assets": 709,
+  "layoutChecks": 360,
+  "unchangedOriginalTestFixtureHelperPaths": 172,
+  "unchangedOriginalSourceMaps": 8,
+  "removedObsoleteTxt": 270,
+  "scopes": [
+    {
+      "scope": "general",
+      "unit": 85,
+      "unitFailures": 0,
+      "browser": 40
+    },
+    {
+      "scope": "plants",
+      "unit": 28,
+      "unitFailures": 0,
+      "browser": 14
+    },
+    {
+      "scope": "coffee",
+      "unit": 20,
+      "unitFailures": 0,
+      "browser": 34
+    },
+    {
+      "scope": "games",
+      "unit": 17,
+      "unitFailures": 0,
+      "browser": 34
+    },
+    {
+      "scope": "time-budget",
+      "unit": 23,
+      "unitFailures": 0,
+      "browser": 25
+    },
+    {
+      "scope": "piano",
+      "unit": 84,
+      "unitFailures": 0,
+      "browser": 25
+    },
+    {
+      "scope": "reading",
+      "unit": 57,
+      "unitFailures": 0,
+      "browser": 31
+    },
+    {
+      "scope": "whatsapp",
+      "unit": 12,
+      "unitFailures": 0,
+      "browser": 9
+    }
+  ]
+}

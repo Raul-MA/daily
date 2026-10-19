@@ -17,9 +17,9 @@
 test at reports/.original-player/regression.mjs:10:1
 ✖ short loops schedule every repetition through the lookahead before each pump (9.717945ms)
   AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
-  
+
     assert.ok(audio.notes.some(note => note.when > .145))
-  
+
       at TestContext.<anonymous> (file:///workspaces/daily/.review-fixes/reports/.original-player/regression.mjs:13:25)
       at Test.runInAsyncScope (node:async_hooks:228:14)
       at Test.run (node:internal/test_runner/test:1118:25)
@@ -36,9 +36,9 @@ test at reports/.original-player/regression.mjs:10:1
 test at reports/.original-player/regression.mjs:20:1
 ✖ click grids restrict work to the selected range and skip subdivisions in beats mode (126.688281ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   10000 !== 1
-  
+
       at TestContext.<anonymous> (file:///workspaces/daily/.review-fixes/reports/.original-player/regression.mjs:24:10)
       at Test.runInAsyncScope (node:async_hooks:228:14)
       at Test.run (node:internal/test_runner/test:1118:25)
@@ -57,9 +57,9 @@ test at reports/.original-player/regression.mjs:20:1
 test at reports/.original-player/regression.mjs:29:1
 ✖ long metronome passages schedule only the horizon and extend it once without duplicate clicks (1.581164ms)
   AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
-  
+
     assert.ok(audio.clicks.every(click => click.when < .15))
-  
+
       at TestContext.<anonymous> (file:///workspaces/daily/.review-fixes/reports/.original-player/regression.mjs:32:25)
       at Test.runInAsyncScope (node:async_hooks:228:14)
       at Test.run (node:internal/test_runner/test:1118:25)
@@ -78,9 +78,9 @@ test at reports/.original-player/regression.mjs:29:1
 test at reports/.original-player/regression.mjs:37:1
 ✖ count-in clicks advance through the same horizon without repeats when metronome is off (0.570967ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   4 !== 1
-  
+
       at TestContext.<anonymous> (file:///workspaces/daily/.review-fixes/reports/.original-player/regression.mjs:40:25)
       at Test.runInAsyncScope (node:async_hooks:228:14)
       at Test.run (node:internal/test_runner/test:1118:25)
