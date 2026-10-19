@@ -48,7 +48,7 @@ function visitSection(context, button) {
   if (mobile()) close(context, false);
   if (target instanceof HTMLDetailsElement) target.open = true;
   target.scrollIntoView({ block: 'start' });
-  const focus = target.querySelector('h1, h2, summary') ?? target;
+  const focus = [...target.querySelectorAll('h1, h2, summary')].find(node => node.getClientRects().length) ?? target;
   if (focus.tagName !== 'SUMMARY') focus.tabIndex = -1;
   focus.focus({ preventScroll: true });
   for (const node of context.root.querySelectorAll('[data-sidebar-target]')) node.removeAttribute('aria-current');

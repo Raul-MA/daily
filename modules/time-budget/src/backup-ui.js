@@ -21,6 +21,8 @@ export async function importTemplates(input) {
   this.preview = null;
   const node = this.host.querySelector('[data-time-import-preview]');
   node.hidden = false;
+  node.closest('[data-menu-panel]')?.dispatchEvent(new Event('daily:show-section'));
+  node.scrollIntoView({ block: 'nearest' });
   node.querySelector('p').textContent = this.copy('Reading backup…');
   node.querySelector('[data-time-confirm]').disabled = true;
   try {
