@@ -1,6 +1,6 @@
 # Independent review corrections
 
-Parent: `review/08-cloud-sharing-proposal` (`859fd7b`). Fix branch: `review/09-review-fixes`. The original pinned independent review remains in the original workspace's `reports/branch-review/`; its twelve findings are historical and are not rewritten as passing on the original code.
+Parent: `review/08-cloud-sharing-proposal` (`859fd7b`). Fix branch: `review/09-review-fixes`, published as [PR #10](https://github.com/Raul-MA/daily/pull/10) after PR #8. The original pinned independent review remains in the original workspace's `reports/branch-review/`; its twelve findings are historical and are not rewritten as passing on the original code.
 
 | Finding | Correction | Acceptance |
 | --- | --- | --- |

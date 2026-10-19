@@ -4,7 +4,7 @@ Updated: 2026-10-19. Repo: `/workspaces/daily`, branch `review/09-review-fixes`.
 
 ## Current status and resume
 
-**All twelve independent-review fixes are implemented on `review/09-review-fixes`.** Time Budget and Piano checks pass; the shared regressions are reproduced and fixed. Full verification passes; publication of the next stacked PR is the only remaining step. See the remediation checkpoint below.
+**All twelve independent-review fixes are complete and published in [PR #10](https://github.com/Raul-MA/daily/pull/10), targeting `review/08-cloud-sharing-proposal` after PR #8.** Full verification passes; the documentation audit and obsolete-log cleanup are complete. See the remediation checkpoint below.
 
 **All-route full-width layout and dashboard title links are implemented locally. The 360-check route/width audit and all app regression suites pass.** See the full-width checkpoint below.
 
@@ -23,7 +23,8 @@ Local preview: `npm run dev`, then `http://127.0.0.1:5173/daily/`. Preparation c
 - Piano has six new unit contracts and six native browser cases: short loops fill lookahead, grids use bounded mode/range windows, count-ins avoid duplicates, drafts survive remounts without crossing exercise identities, deferred imports guard request/generation/disposal, current errors propagate in Spanish, and editor/import focus stays usable. Five original unit regressions and five browser regressions fail before source changes; the cross-exercise draft case already passes on the original. Piano passes 84 unit / 25 browser cases.
 - Shared red reproduces all three findings in `reports/review-fixes-shared-red.txt`; fixes raise the skip link, clear recovery drawer state and preserve modified/nonprimary click defaults. Final discovery totals are 326 unit / 212 native browser cases, plus both retained Piano broad scripts.
 - Final [verification](../reports/review-fixes-verification.json) passes `npm run verify` with exit 0: 326 unit / 212 native browser cases, both retained Piano broad scripts, full strict lint, 829-file syntax and a 709-asset build. [Complete transcript](../reports/review-fixes-verify.txt) consolidates focused green runs; the four behavioral-red logs remain. All 172 original test/fixture/helper paths and eight source maps are unchanged.
-- Exact next step: publish `review/09-review-fixes` and create its PR targeting `review/08-cloud-sharing-proposal`; preserve stack order. No runtime work remains pending for the review findings. No deployment/cloud implementation or physical/API acceptance is in scope.
+- Published [PR #10](https://github.com/Raul-MA/daily/pull/10) from `review/09-review-fixes` targeting `review/08-cloud-sharing-proposal`, following PR #8. The original workspace edits and personal files remain untouched.
+- Exact next step: review the new PR after its parent and merge the stack in dependency order, retargeting dependents as parents land. No finding remediation, local verification, documentation cleanup or publication work remains; no PR was merged automatically. No deployment/cloud implementation or physical/API acceptance is in scope.
 
 ## Remote review publication (2026-10-18)
 

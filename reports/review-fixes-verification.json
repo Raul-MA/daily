@@ -63,5 +63,8 @@
       "unitFailures": 0,
       "browser": 9
     }
-  ]
+  ],
+  "pullRequest": "https://github.com/Raul-MA/daily/pull/10",
+  "headBranch": "review/09-review-fixes",
+  "baseBranch": "review/08-cloud-sharing-proposal"
 }
