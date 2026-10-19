@@ -1,0 +1,242 @@
+Suite: plants
+✔ care dates use latest matching care and ignore notes skip and reschedule entries (34.660325ms)
+✔ watering seasons preserve wrap-around dry periods and growth intervals (2.670171ms)
+✔ fertilizer pause is preserved while a manual due date still takes precedence (0.465849ms)
+✔ care status distinguishes overdue today soon and future without mutating plants (1.634178ms)
+✔ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (1.602179ms)
+✔ backdated input uses local noon and today retains the actual event time (0.549976ms)
+✔ reminder counts include overdue and today care once and leave records unchanged (0.688264ms)
+✔ urgency ranking places overdue care ahead of future care (0.591604ms)
+✔ connected plant storage writes only the shared document and preserves other modules (5.493298ms)
+✔ connected care and due-date changes remain one root commit with no partial state (1.994211ms)
+✔ Things settings live with plant records and survive a plant update (1.5331ms)
+✔ legacy import previews are read-only and confirmation keeps a root recovery copy (1.33441ms)
+✔ migration export includes Things settings and imports without translating user text (2.236543ms)
+✔ unsupported duplicate and invalid plant imports never mutate shared data (1.236336ms)
+✔ quota failure retains plant history and sends no successful shared change (1.16836ms)
+✔ template care refresh preserves names notes history IDs and manual dates (2.439491ms)
+✔ valid legacy data remains readable when its migration write fails (0.860054ms)
+✔ care log and next-due override are committed in one primary write (1.454944ms)
+✔ validation failures use the storage-error notification path (0.324907ms)
+✔ builds a stable watering title (0.11284ms)
+✔ shortcut URL carries the exact title, date, and project (0.335245ms)
+✔ enabled integration requires a project (0.175658ms)
+✔ settings round-trip and normalize project whitespace (0.163886ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 110.956848
+[WebServer] (node:61015) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:61048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/plants/e2e/plants.spec.js:20:1 › plant creation edit and deletion use canonical routes and retain other storage (5.3s)
+(node:61237) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 modules/plants/e2e/plants.spec.js:38:1 › care logging skip and manual dates keep one history and support editing and deleting entries (5.3s)
+(node:61554) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 modules/plants/e2e/plants.spec.js:67:1 › dashboard reminders open the stable plant without completing care or changing legacy keys (5.3s)
+(node:61715) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 modules/plants/e2e/plants.spec.js:84:1 › plant import previews can be canceled and replacement requires a recovery download (5.4s)
+(node:61894) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 modules/plants/e2e/plants.spec.js:103:1 › Things settings and migration export preserve the exact shortcut integration (5.3s)
+(node:62056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  6 modules/plants/e2e/plants.spec.js:121:1 › failed care saves retain the visible form and previous stored history (5.4s)
+(node:62271) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  7 modules/plants/e2e/plants.spec.js:139:1 › plant interfaces follow shared Spanish without translating saved names and observations (5.3s)
+(node:62446) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  8 modules/plants/e2e/plants.spec.js:153:1 › plant styles stay scoped and invalid imports leave the current plants intact (5.3s)
+
+
+  1) modules/plants/e2e/plants.spec.js:20:1 › plant creation edit and deletion use canonical routes and retain other storage 
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByLabel('Plant name', { exact: true })
+
+
+      20 | test('plant creation edit and deletion use canonical routes and retain other storage', async ({ page }) => {
+      21 |   await page.goto('/daily/#/plants/new');
+    > 22 |   await page.getByLabel('Plant name', { exact: true }).fill('My fern 🌱');
+         |                                                        ^
+      23 |   await page.getByLabel('Location', { exact: true }).fill('Window');
+      24 |   await page.getByRole('button', { name: 'Add plant', exact: true }).click();
+      25 |   await expect(page.getByRole('heading', { name: 'My fern 🌱', exact: true })).toBeVisible();
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:22:56
+
+    Error Context: test-results/plants-plant-creation-edit-1086f-es-and-retain-other-storage/error-context.md
+
+  2) modules/plants/e2e/plants.spec.js:38:1 › care logging skip and manual dates keep one history and support editing and deleting entries 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Helecho 🌱', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Helecho 🌱', exact: true })
+
+
+      12 | async function detail(page) {
+      13 |   await page.goto('/daily/#/plants/fern-1');
+    > 14 |   await expect(page.getByRole('heading', { name: 'Helecho 🌱', exact: true })).toBeVisible();
+         |                                                                                ^
+      15 | }
+      16 |
+      17 | async function settings(page) { await page.goto('/daily/#/plants/settings'); }
+        at detail (/workspaces/daily/modules/plants/e2e/plants.spec.js:14:80)
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:40:3
+
+    Error Context: test-results/plants-care-logging-skip-a-0a129-diting-and-deleting-entries/error-context.md
+
+  3) modules/plants/e2e/plants.spec.js:67:1 › dashboard reminders open the stable plant without completing care or changing legacy keys 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('[data-widget="plants"]').getByRole('link', { name: /Helecho/ }).first()
+
+
+      69 |   await page.goto('/daily/#/');
+      70 |   const before = await page.evaluate(() => ({ ...localStorage }));
+    > 71 |   await page.locator('[data-widget="plants"]').getByRole('link', { name: /Helecho/ }).first().click();
+         |                                                                                               ^
+      72 |   await expect(page).toHaveURL(/#\/plants\/fern-1$/);
+      73 |   await expect(page.getByRole('heading', { name: 'Helecho 🌱', exact: true })).toBeVisible();
+      74 |   expect(await page.evaluate(() => ({ ...localStorage }))).toEqual(before);
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:71:95
+
+    Error Context: test-results/plants-dashboard-reminders-c68ab-are-or-changing-legacy-keys/error-context.md
+
+  4) modules/plants/e2e/plants.spec.js:84:1 › plant import previews can be canceled and replacement requires a recovery download 
+
+    TimeoutError: locator.setInputFiles: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByLabel('Plant backup file', { exact: true })
+
+
+      78 |
+      79 | async function preview(page, value) {
+    > 80 |   await page.getByLabel('Plant backup file', { exact: true }).setInputFiles({ name: 'plants.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(value)) });
+         |   ^
+      81 |   await page.getByRole('button', { name: 'Preview import', exact: true }).click();
+      82 | }
+      83 |
+        at preview (/workspaces/daily/modules/plants/e2e/plants.spec.js:80:3)
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:88:3
+
+    Error Context: test-results/plants-plant-import-previe-cdbd0-equires-a-recovery-download/error-context.md
+
+  5) modules/plants/e2e/plants.spec.js:103:1 › Things settings and migration export preserve the exact shortcut integration 
+
+    TimeoutError: locator.check: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByLabel('Create reminders after watering', { exact: true })
+
+
+      104 |   await seed(page);
+      105 |   await settings(page);
+    > 106 |   await page.getByLabel('Create reminders after watering', { exact: true }).check();
+          |                                                                             ^
+      107 |   await page.getByLabel('Things project', { exact: true }).fill('Casa 🏡');
+      108 |   await page.getByRole('button', { name: 'Save Things settings', exact: true }).click();
+      109 |   await detail(page);
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:106:77
+
+    Error Context: test-results/plants-Things-settings-and-86fc0--exact-shortcut-integration/error-context.md
+
+  6) modules/plants/e2e/plants.spec.js:121:1 › failed care saves retain the visible form and previous stored history 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Helecho 🌱', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Helecho 🌱', exact: true })
+
+
+      12 | async function detail(page) {
+      13 |   await page.goto('/daily/#/plants/fern-1');
+    > 14 |   await expect(page.getByRole('heading', { name: 'Helecho 🌱', exact: true })).toBeVisible();
+         |                                                                                ^
+      15 | }
+      16 |
+      17 | async function settings(page) { await page.goto('/daily/#/plants/settings'); }
+        at detail (/workspaces/daily/modules/plants/e2e/plants.spec.js:14:80)
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:123:3
+
+    Error Context: test-results/plants-failed-care-saves-r-d9eb2-and-previous-stored-history/error-context.md
+
+  7) modules/plants/e2e/plants.spec.js:139:1 › plant interfaces follow shared Spanish without translating saved names and observations 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Helecho 🌱', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Helecho 🌱', exact: true })
+
+
+      12 | async function detail(page) {
+      13 |   await page.goto('/daily/#/plants/fern-1');
+    > 14 |   await expect(page.getByRole('heading', { name: 'Helecho 🌱', exact: true })).toBeVisible();
+         |                                                                                ^
+      15 | }
+      16 |
+      17 | async function settings(page) { await page.goto('/daily/#/plants/settings'); }
+        at detail (/workspaces/daily/modules/plants/e2e/plants.spec.js:14:80)
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:141:3
+
+    Error Context: test-results/plants-plant-interfaces-fo-73126-aved-names-and-observations/error-context.md
+
+  8) modules/plants/e2e/plants.spec.js:153:1 › plant styles stay scoped and invalid imports leave the current plants intact 
+
+    TimeoutError: locator.setInputFiles: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByLabel('Plant backup file', { exact: true })
+
+
+      78 |
+      79 | async function preview(page, value) {
+    > 80 |   await page.getByLabel('Plant backup file', { exact: true }).setInputFiles({ name: 'plants.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(value)) });
+         |   ^
+      81 |   await page.getByRole('button', { name: 'Preview import', exact: true }).click();
+      82 | }
+      83 |
+        at preview (/workspaces/daily/modules/plants/e2e/plants.spec.js:80:3)
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:157:3
+
+    Error Context: test-results/plants-plant-styles-stay-s-5a8d9-e-the-current-plants-intact/error-context.md
+
+  8 failed
+    modules/plants/e2e/plants.spec.js:20:1 › plant creation edit and deletion use canonical routes and retain other storage 
+    modules/plants/e2e/plants.spec.js:38:1 › care logging skip and manual dates keep one history and support editing and deleting entries 
+    modules/plants/e2e/plants.spec.js:67:1 › dashboard reminders open the stable plant without completing care or changing legacy keys 
+    modules/plants/e2e/plants.spec.js:84:1 › plant import previews can be canceled and replacement requires a recovery download 
+    modules/plants/e2e/plants.spec.js:103:1 › Things settings and migration export preserve the exact shortcut integration 
+    modules/plants/e2e/plants.spec.js:121:1 › failed care saves retain the visible form and previous stored history 
+    modules/plants/e2e/plants.spec.js:139:1 › plant interfaces follow shared Spanish without translating saved names and observations 
+    modules/plants/e2e/plants.spec.js:153:1 › plant styles stay scoped and invalid imports leave the current plants intact 

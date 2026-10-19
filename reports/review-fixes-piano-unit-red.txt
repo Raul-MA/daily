@@ -1,0 +1,115 @@
+✖ short loops schedule every repetition through the lookahead before each pump (9.717945ms)
+✖ click grids restrict work to the selected range and skip subdivisions in beats mode (126.688281ms)
+✖ long metronome passages schedule only the horizon and extend it once without duplicate clicks (1.581164ms)
+✖ count-in clicks advance through the same horizon without repeats when metronome is off (0.570967ms)
+✖ an excessive subdivision density fails explicitly before constructing thousands of audio clicks (77.516783ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 239.609354
+
+✖ failing tests:
+
+test at reports/.original-player/regression.mjs:10:1
+✖ short loops schedule every repetition through the lookahead before each pump (9.717945ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(audio.notes.some(note => note.when > .145))
+
+      at TestContext.<anonymous> (file:///workspaces/daily/.review-fixes/reports/.original-player/regression.mjs:13:25)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at reports/.original-player/regression.mjs:20:1
+✖ click grids restrict work to the selected range and skip subdivisions in beats mode (126.688281ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  10000 !== 1
+
+      at TestContext.<anonymous> (file:///workspaces/daily/.review-fixes/reports/.original-player/regression.mjs:24:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 10000,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at reports/.original-player/regression.mjs:29:1
+✖ long metronome passages schedule only the horizon and extend it once without duplicate clicks (1.581164ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(audio.clicks.every(click => click.when < .15))
+
+      at TestContext.<anonymous> (file:///workspaces/daily/.review-fixes/reports/.original-player/regression.mjs:32:25)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at reports/.original-player/regression.mjs:37:1
+✖ count-in clicks advance through the same horizon without repeats when metronome is off (0.570967ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  4 !== 1
+
+      at TestContext.<anonymous> (file:///workspaces/daily/.review-fixes/reports/.original-player/regression.mjs:40:25)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 4,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at reports/.original-player/regression.mjs:45:1
+✖ an excessive subdivision density fails explicitly before constructing thousands of audio clicks (77.516783ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspaces/daily/.review-fixes/reports/.original-player/regression.mjs:47:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /too dense/,
+    operator: 'throws',
+    diff: 'simple'
+  }

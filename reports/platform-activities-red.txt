@@ -1,0 +1,244 @@
+✖ time is derived from timestamps without tick writes or automatic completion (2.512042ms)
+✖ reload and process reconstruction preserve elapsed time and Unicode references (0.706179ms)
+✖ explicit pause excludes background time and resume continues the same activity (0.542353ms)
+✖ countdowns are independent and singleton budgets games and piano resume existing activities (0.621641ms)
+✖ widget removal language changes and navigation do not pause or reset activities (0.611612ms)
+✖ completion is explicit and terminal while a new budget may start afterwards (4.102415ms)
+✖ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (1.181337ms)
+✖ invalid starts duplicate identifiers and unknown transitions never mutate activities (2.617129ms)
+✖ failed activity changes keep the previous status and publish no success (2.999622ms)
+✖ module defaults never write and saved payloads preserve unrelated preferences and records (1.425212ms)
+✖ module reads validate domain shapes and reject future versions without overwriting (1.213025ms)
+✖ module saves re-read current state and publish only committed updates (0.894952ms)
+✖ failed module commits retain previous readable data without success notifications (0.502268ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 0
+ℹ fail 13
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 120.005456
+
+✖ failing tests:
+
+test at tests/general/activities.test.mjs:17:1
+✖ time is derived from timestamps without tick writes or automatic completion (2.512042ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/activities.ts' imported from /workspaces/daily/tests/general/activities.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/activities.ts'
+  }
+
+test at tests/general/activities.test.mjs:28:1
+✖ reload and process reconstruction preserve elapsed time and Unicode references (0.706179ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/activities.ts' imported from /workspaces/daily/tests/general/activities.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/activities.ts'
+  }
+
+test at tests/general/activities.test.mjs:37:1
+✖ explicit pause excludes background time and resume continues the same activity (0.542353ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/activities.ts' imported from /workspaces/daily/tests/general/activities.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/activities.ts'
+  }
+
+test at tests/general/activities.test.mjs:50:1
+✖ countdowns are independent and singleton budgets games and piano resume existing activities (0.621641ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/activities.ts' imported from /workspaces/daily/tests/general/activities.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/activities.ts'
+  }
+
+test at tests/general/activities.test.mjs:62:1
+✖ widget removal language changes and navigation do not pause or reset activities (0.611612ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/activities.ts' imported from /workspaces/daily/tests/general/activities.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/activities.ts'
+  }
+
+test at tests/general/activities.test.mjs:71:1
+✖ completion is explicit and terminal while a new budget may start afterwards (4.102415ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/activities.ts' imported from /workspaces/daily/tests/general/activities.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/activities.ts'
+  }
+
+test at tests/general/activities.test.mjs:83:1
+✖ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (1.181337ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/activities.ts' imported from /workspaces/daily/tests/general/activities.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/activities.ts'
+  }
+
+test at tests/general/activities.test.mjs:93:1
+✖ invalid starts duplicate identifiers and unknown transitions never mutate activities (2.617129ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/activities.ts' imported from /workspaces/daily/tests/general/activities.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/activities.ts'
+  }
+
+test at tests/general/activities.test.mjs:106:1
+✖ failed activity changes keep the previous status and publish no success (2.999622ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/activities.ts' imported from /workspaces/daily/tests/general/activities.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/activities.ts'
+  }
+
+test at tests/general/module-store.test.mjs:14:1
+✖ module defaults never write and saved payloads preserve unrelated preferences and records (1.425212ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/data/src/module-store.ts' imported from /workspaces/daily/tests/general/module-store.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/data/src/module-store.ts'
+  }
+
+test at tests/general/module-store.test.mjs:24:1
+✖ module reads validate domain shapes and reject future versions without overwriting (1.213025ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/data/src/module-store.ts' imported from /workspaces/daily/tests/general/module-store.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/data/src/module-store.ts'
+  }
+
+test at tests/general/module-store.test.mjs:37:1
+✖ module saves re-read current state and publish only committed updates (0.894952ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/data/src/module-store.ts' imported from /workspaces/daily/tests/general/module-store.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/data/src/module-store.ts'
+  }
+
+test at tests/general/module-store.test.mjs:52:1
+✖ failed module commits retain previous readable data without success notifications (0.502268ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/data/src/module-store.ts' imported from /workspaces/daily/tests/general/module-store.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/data/src/module-store.ts'
+  }

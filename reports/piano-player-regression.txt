@@ -1,0 +1,328 @@
+Suite: piano
+Prepared 701 HTML/CSS/JavaScript/assets at /daily/
+✔ audio catalog is chromatic, complete, and backed by actual recordings (3.955244ms)
+✔ recordings, named interval, and exact keyboard keys agree for every interval (23.902752ms)
+✔ fitted keyboards start one white key before the lowest note across octave boundaries (0.647499ms)
+✔ explicit ranges override whole octaves and respect MIDI boundaries (0.361484ms)
+✔ exact notes select C4 and C5 independently; pitch classes repeat (0.623102ms)
+✔ enharmonic spellings cross the scientific-octave boundary correctly (0.324806ms)
+✔ compound intervals retain their distance across the C boundary (0.357487ms)
+✔ every extended chord preserves supplied compound intervals (4.02953ms)
+✔ bass-first inversion stays ascending and retains role metadata (0.429291ms)
+✔ explicit registers take precedence over inferred ascending placement (1.223323ms)
+✔ invalid ranges, notes, labels and out-of-range exact notes are rejected (0.896343ms)
+✔ arbitrary role and display text are preserved with HTML escaping (1.724492ms)
+✔ label settings control rendered labels while retaining accessible descriptions (0.437967ms)
+✔ voicing, rendering and compatibility adapter never mutate their input (0.571026ms)
+✔ exercise keyboards are absent until reveal, including all answer text (0.733108ms)
+✔ guide-tone keyboards preserve each voice’s nearest motion across every root (4.370175ms)
+✔ guide-tone motion crosses B to C without dropping an octave (0.146323ms)
+✔ guided ninth recall and application retain the compound interval (0.783042ms)
+✔ curriculum covers every stage with a continuous prerequisite chain and usable modes (3.768492ms)
+✔ all lesson recall variants produce revealable answers with valid pitch classes (32.649785ms)
+✔ major guide-tone questions follow F, F, E and explain the resolution (0.396961ms)
+✔ transfer prompts change keys only after a complete progression (0.377815ms)
+✔ blues follows the complete twelve-bar form and wraps (0.307634ms)
+✔ minor and modal lessons preserve characteristic spellings (0.207537ms)
+✔ piano Spanish copy covers the authored corpus and preserves interpolation and notation (4.295406ms)
+✔ all ten localized piano lessons retain their musical and structural data without mutating source (3.507476ms)
+✔ piano prompt presentation translates its text without changing saved prompts or keyboard notes (3.81564ms)
+✔ modal parent-key direction descriptions agree with their C-major examples (0.237713ms)
+✔ piano Markdown retains heading emphasis code links and Unicode teaching text (0.897234ms)
+✔ piano Markdown preserves tables blockquotes and escaped code fences (0.515643ms)
+✔ piano Markdown keeps paragraph list and rule boundaries without dropping ordinary pipes (0.30546ms)
+✔ piano Markdown handles blank input and detects an unconsumed malformed heading (0.170859ms)
+✔ spells intervals by letter in both directions and preserves chromatic transpose (0.180887ms)
+✔ recognizes enharmonics and double accidentals (0.118451ms)
+✔ chord tones and tensions retain theoretical spelling (0.167412ms)
+✔ every chord tone remains on its intended pitch for all standard roots (3.452022ms)
+✔ question root pools and numeric degree filters constrain practice (0.400046ms)
+✔ keyboard maps enharmonic pitches and retains an accessible escaped legend (0.260125ms)
+✔ every catalog destination has exactly one existing page loader (1.497465ms)
+✔ library links and search aliases use canonical destinations (0.563441ms)
+✔ player schema generated documentation and transcription contract match the application source (0.797358ms)
+✔ player library persists through Daily service reload and failed storage writes preserve musical content (10.21906ms)
+✔ player validates event identifiers score references pedals maps meter boundaries and incomplete bounds (1.599735ms)
+✔ player reschedules speed changes without duplicate voices and retriggers pedal-held notes on seek (1.899224ms)
+✔ player loop excludes events on the end boundary and preserves explicit swung onset times (0.480757ms)
+✔ exercise contract accepts complete documentation and defaults TPQ without importing examples (0.583128ms)
+✔ exercise contract rejects malformed shape references maps bounds and duplicate IDs with field errors (2.944344ms)
+✔ exercise contract supports explicit pickups and incomplete measures (0.314276ms)
+✔ timing integrates written tempo changes and practice speed with exact inverse mapping (0.192499ms)
+✔ sounding timeline preserves chords octaves rests trailing silence and independent hands (0.226283ms)
+✔ explicit sixteenths triplets and swing preserve integer timing without inferred swing (0.160259ms)
+✔ pedal extends releases through pedal-up and clips crossings at half-open loop bounds (0.195805ms)
+✔ compound meter click groups and imported triplet subdivisions use separate timing units (0.459077ms)
+✔ acceleration changes at boundaries by percentage points and never exceeds target (0.097482ms)
+✔ transport schedules by audio clock pauses seeks resumes and cancels voices (0.551399ms)
+✔ transport applies imported velocity track mute volume and zero accent emphasis (0.447615ms)
+✔ loop gaps count-ins repetition and acceleration share clock and clear pedal at boundaries (0.419042ms)
+✔ library import failure preserves selection content preferences and musical export roundtrip (1.242699ms)
+✔ ten-minute sessions reserve time for explanation, recall, application, and review (0.124432ms)
+✔ every supported session duration preserves the budget and includes all four blocks (0.336999ms)
+✔ invalid or unsupported durations cannot produce an unusable session (0.343531ms)
+✔ rootless keyboards preserve exact formula offsets and hand labels for every root and type (14.581054ms)
+✔ half-diminished B keeps its crossing voices instead of ascending them an extra octave (0.244696ms)
+✔ ii–V–I chooses minimum total voice motion while preserving whole chord formulas (13.277915ms)
+✔ G major rootless cadence resolves C down to B across the octave boundary (0.221433ms)
+✔ precache requests are unique and backed by repository assets (4.66745ms)
+✔ piano reads and random selection never create a practice record and explicit exercise opening persists the last ID (0.908064ms)
+✔ piano start saves its practice and timestamp activity atomically and offers the existing unfinished session (3.692441ms)
+✔ piano elapsed and current block reconstruct after suspension without writes or automatic completion (1.842348ms)
+✔ piano explicit pause freezes clocks and block changes preserve already practiced time (2.565818ms)
+✔ piano snapshots keep prompt and reveal stable until a presentation transition explicitly advances (5.093264ms)
+✔ piano explicit finish records practice once and atomically completes its activity (1.253139ms)
+✔ piano failed saves retain the previous practice history and activity without partial commits (1.814146ms)
+✔ piano future data and invalid lessons pacing or blocks reject without changing stored records (1.498066ms)
+✔ suspensions resolve to the target chord while retaining extensions in every key (6.379885ms)
+✔ piano restore rejects malformed keyboard payloads and out-of-range timestamps while retaining saved wording (3.716085ms)
+ℹ tests 76
+ℹ suites 0
+ℹ pass 76
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 319.551556
+[WebServer] (node:28511) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 18 tests using 1 worker
+
+(node:28524) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/piano/e2e/continuation.spec.js:15:1 › piano sessions continue across Home and reload with stable blocks prompts answers and timestamps (4.1s)
+  ✓   2 modules/piano/e2e/continuation.spec.js:34:1 › hiding piano never pauses elapsed time while explicit Pause survives background and reload (6.3s)
+  ✓   3 modules/piano/e2e/continuation.spec.js:54:1 › soft practice budgets preserve the active session until explicit finish and save one history record (20.6s)
+  ✓   4 modules/piano/e2e/continuation.spec.js:75:1 › opening another lesson offers the persisted practice and never overwrites it (2.5s)
+  ✓   5 modules/piano/e2e/continuation.spec.js:87:1 › random and last exercise links use stable IDs and opening an exercise creates no practice (2.3s)
+  ✓   6 modules/piano/e2e/continuation.spec.js:102:1 › piano practice and keyboard answers resume offline under the shared worker (8.4s)
+  ✓   7 modules/piano/e2e/continuation.spec.js:119:1 › running piano links resume the correct lesson and obsolete activity IDs preserve a newer practice (2.7s)
+  ✓   8 modules/piano/e2e/continuation.spec.js:140:1 › automatic prompts freeze while hidden and away while elapsed practice continues (6.9s)
+  ✓   9 modules/piano/e2e/drafts.spec.js:3:1 › piano language remounts retain setup and pacing drafts with their derived controls (2.1s)
+  ✓  10 modules/piano/e2e/drafts.spec.js:25:1 › piano failed pause or pacing saves preserve the running record and truthful controls (2.0s)
+  ✓  11 modules/piano/e2e/localization.spec.js:9:1 › piano Spanish lessons and running prompts preserve canonical English records and timestamps (5.7s)
+  ✓  12 modules/piano/e2e/localization.spec.js:36:1 › piano Spanish library and every destination open offline at 320px (8.4s)
+  ✓  13 modules/piano/e2e/localization.spec.js:74:1 › piano Spanish search finds translated lessons and reference topics (2.4s)
+  ✓  14 modules/piano/e2e/localization.spec.js:84:1 › piano language remounts preserve the ordinary exercise question answer and filters (3.5s)
+  ✓  15 modules/piano/e2e/player.spec.js:17:1 › player starts empty and accepts paste file and drop while failed imports preserve selection (3.4s)
+  ✓  16 modules/piano/e2e/player.spec.js:36:1 › player reuses real audio samples and keyboard and supports seek pause resume mute speed and stop (2.4s)
+  ✓  17 modules/piano/e2e/player.spec.js:67:1 › player corrects notes stores preferences separately and exports importable musical JSON (2.7s)
+  ✓  18 modules/piano/e2e/player.spec.js:85:1 › player supports measure and exact beat loops score attachments and phone layout (4.0s)
+
+  18 passed (1.6m)
+PASS: all ten lessons in piano and away modes, reveal, sequence, recap, repeat, next lesson
+PASS: custom duration, manual/automatic pacing, pause remainder, soft budgets, visibility, route cleanup, standalone keyboard reveal
+Checking library route: /exercise-player
+Checking library route: /intervals/theory
+Checking library route: /intervals/exercises
+Checking library route: /scales/theory
+Checking library route: /scales/exercises
+Checking library route: /pentatonic/theory
+Checking library route: /modes/theory
+Checking library route: /modes/exercises
+Checking library route: /modal-characteristics/exercises
+Checking library route: /ear-training/exercises
+Checking library route: /bebop/theory
+Checking library route: /bebop/exercises
+Checking library route: /melodic-minor/theory
+Checking library route: /melodic-minor/exercises
+Checking library route: /tensions/theory
+Checking library route: /tensions/exercises
+Checking library route: /available-tensions/theory
+Checking library route: /available-tensions/exercises
+Checking library route: /extended-chords/theory
+Checking library route: /extended-chords/exercises
+Checking library route: /suspended-chords/theory
+Checking library route: /suspended-chords/exercises
+Checking library route: /superimpositions/theory
+Checking library route: /superimpositions/exercises
+Checking library route: /harmonic-function/exercises
+Checking library route: /modal-interchange/exercises
+Checking library route: /chord-progressions/theory
+Checking library route: /chord-progressions/exercises
+Checking library route: /iivi/exercises
+Checking library route: /secondary-dominants/exercises
+Checking library route: /tritone-sub/exercises
+Checking library route: /chord-inversions/exercises
+Checking library route: /shell-chords/theory
+Checking library route: /shell-chords/exercises
+Checking library route: /rootless-voicings/theory
+Checking library route: /rootless-voicings/exercises
+Checking library route: /voice-leading/exercises
+Checking library route: /modulations/theory
+Checking library route: /modulations/exercises
+Checking library route: /key-signatures/exercises
+Checking library route: /key-signatures/cards
+Checking library route: /circle/cards
+Checking library route: /chord-substitution/theory
+Checking library route: /tensions/cards
+Checking library route: /available-tensions/cards
+PASS: 45 library routes, every exercise reveals exact-octave keyboards and hides them on next prompt
+Touch 320px: /exercise-player
+Touch 320px: /intervals/theory
+Touch 320px: /intervals/exercises
+Touch 320px: /scales/theory
+Touch 320px: /scales/exercises
+Touch 320px: /pentatonic/theory
+Touch 320px: /modes/theory
+Touch 320px: /modes/exercises
+Touch 320px: /modal-characteristics/exercises
+Touch 320px: /ear-training/exercises
+Touch 320px: /bebop/theory
+Touch 320px: /bebop/exercises
+Touch 320px: /melodic-minor/theory
+Touch 320px: /melodic-minor/exercises
+Touch 320px: /tensions/theory
+Touch 320px: /tensions/exercises
+Touch 320px: /available-tensions/theory
+Touch 320px: /available-tensions/exercises
+Touch 320px: /extended-chords/theory
+Touch 320px: /extended-chords/exercises
+Touch 320px: /suspended-chords/theory
+Touch 320px: /suspended-chords/exercises
+Touch 320px: /superimpositions/theory
+Touch 320px: /superimpositions/exercises
+Touch 320px: /harmonic-function/exercises
+Touch 320px: /modal-interchange/exercises
+Touch 320px: /chord-progressions/theory
+Touch 320px: /chord-progressions/exercises
+Touch 320px: /iivi/exercises
+Touch 320px: /secondary-dominants/exercises
+Touch 320px: /tritone-sub/exercises
+Touch 320px: /chord-inversions/exercises
+Touch 320px: /shell-chords/theory
+Touch 320px: /shell-chords/exercises
+Touch 320px: /rootless-voicings/theory
+Touch 320px: /rootless-voicings/exercises
+Touch 320px: /voice-leading/exercises
+Touch 320px: /modulations/theory
+Touch 320px: /modulations/exercises
+Touch 320px: /key-signatures/exercises
+Touch 320px: /key-signatures/cards
+Touch 320px: /circle/cards
+Touch 320px: /chord-substitution/theory
+Touch 320px: /tensions/cards
+Touch 320px: /available-tensions/cards
+Touch 320px lesson: interval-foundations
+Touch 320px lesson: seventh-intervals
+Touch 320px lesson: chord-tone-fluency
+Touch 320px lesson: rhythm-and-motif
+Touch 320px lesson: major-changes
+Touch 320px lesson: passing-notes-and-ninths
+Touch 320px lesson: transfer-to-new-keys
+Touch 320px lesson: blues-form
+Touch 320px lesson: minor-changes
+Touch 320px lesson: dorian-color
+Touch 360px: /exercise-player
+Touch 360px: /intervals/theory
+Touch 360px: /intervals/exercises
+Touch 360px: /scales/theory
+Touch 360px: /scales/exercises
+Touch 360px: /pentatonic/theory
+Touch 360px: /modes/theory
+Touch 360px: /modes/exercises
+Touch 360px: /modal-characteristics/exercises
+Touch 360px: /ear-training/exercises
+Touch 360px: /bebop/theory
+Touch 360px: /bebop/exercises
+Touch 360px: /melodic-minor/theory
+Touch 360px: /melodic-minor/exercises
+Touch 360px: /tensions/theory
+Touch 360px: /tensions/exercises
+Touch 360px: /available-tensions/theory
+Touch 360px: /available-tensions/exercises
+Touch 360px: /extended-chords/theory
+Touch 360px: /extended-chords/exercises
+Touch 360px: /suspended-chords/theory
+Touch 360px: /suspended-chords/exercises
+Touch 360px: /superimpositions/theory
+Touch 360px: /superimpositions/exercises
+Touch 360px: /harmonic-function/exercises
+Touch 360px: /modal-interchange/exercises
+Touch 360px: /chord-progressions/theory
+Touch 360px: /chord-progressions/exercises
+Touch 360px: /iivi/exercises
+Touch 360px: /secondary-dominants/exercises
+Touch 360px: /tritone-sub/exercises
+Touch 360px: /chord-inversions/exercises
+Touch 360px: /shell-chords/theory
+Touch 360px: /shell-chords/exercises
+Touch 360px: /rootless-voicings/theory
+Touch 360px: /rootless-voicings/exercises
+Touch 360px: /voice-leading/exercises
+Touch 360px: /modulations/theory
+Touch 360px: /modulations/exercises
+Touch 360px: /key-signatures/exercises
+Touch 360px: /key-signatures/cards
+Touch 360px: /circle/cards
+Touch 360px: /chord-substitution/theory
+Touch 360px: /tensions/cards
+Touch 360px: /available-tensions/cards
+Touch 360px lesson: interval-foundations
+Touch 360px lesson: seventh-intervals
+Touch 360px lesson: chord-tone-fluency
+Touch 360px lesson: rhythm-and-motif
+Touch 360px lesson: major-changes
+Touch 360px lesson: passing-notes-and-ninths
+Touch 360px lesson: transfer-to-new-keys
+Touch 360px lesson: blues-form
+Touch 360px lesson: minor-changes
+Touch 360px lesson: dorian-color
+PASS: 360px piano responds to native touch swipe; ear audio completes and cancels on next/route leave
+Touch 390px: /exercise-player
+Touch 390px: /intervals/theory
+Touch 390px: /intervals/exercises
+Touch 390px: /scales/theory
+Touch 390px: /scales/exercises
+Touch 390px: /pentatonic/theory
+Touch 390px: /modes/theory
+Touch 390px: /modes/exercises
+Touch 390px: /modal-characteristics/exercises
+Touch 390px: /ear-training/exercises
+Touch 390px: /bebop/theory
+Touch 390px: /bebop/exercises
+Touch 390px: /melodic-minor/theory
+Touch 390px: /melodic-minor/exercises
+Touch 390px: /tensions/theory
+Touch 390px: /tensions/exercises
+Touch 390px: /available-tensions/theory
+Touch 390px: /available-tensions/exercises
+Touch 390px: /extended-chords/theory
+Touch 390px: /extended-chords/exercises
+Touch 390px: /suspended-chords/theory
+Touch 390px: /suspended-chords/exercises
+Touch 390px: /superimpositions/theory
+Touch 390px: /superimpositions/exercises
+Touch 390px: /harmonic-function/exercises
+Touch 390px: /modal-interchange/exercises
+Touch 390px: /chord-progressions/theory
+Touch 390px: /chord-progressions/exercises
+Touch 390px: /iivi/exercises
+Touch 390px: /secondary-dominants/exercises
+Touch 390px: /tritone-sub/exercises
+Touch 390px: /chord-inversions/exercises
+Touch 390px: /shell-chords/theory
+Touch 390px: /shell-chords/exercises
+Touch 390px: /rootless-voicings/theory
+Touch 390px: /rootless-voicings/exercises
+Touch 390px: /voice-leading/exercises
+Touch 390px: /modulations/theory
+Touch 390px: /modulations/exercises
+Touch 390px: /key-signatures/exercises
+Touch 390px: /key-signatures/cards
+Touch 390px: /circle/cards
+Touch 390px: /chord-substitution/theory
+Touch 390px: /tensions/cards
+Touch 390px: /available-tensions/cards
+Touch 390px lesson: interval-foundations
+Touch 390px lesson: seventh-intervals
+Touch 390px lesson: chord-tone-fluency
+Touch 390px lesson: rhythm-and-motif
+Touch 390px lesson: major-changes
+Touch 390px lesson: passing-notes-and-ninths
+Touch 390px lesson: transfer-to-new-keys
+Touch 390px lesson: blues-form
+Touch 390px lesson: minor-changes
+Touch 390px lesson: dorian-color
+Service worker activated (daily-pwa-dad4dd88f7b656a7); offline reload and guided reveal passed

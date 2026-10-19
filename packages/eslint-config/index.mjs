@@ -1,5 +1,4 @@
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
 
 const sourceFiles = ['**/*.{js,mjs,cjs,ts,tsx}'];
 
@@ -58,28 +57,5 @@ export default [
   {
     files: ['**/test/**/*.{js,mjs,cjs,ts,tsx}', '**/tests/**/*.{js,mjs,cjs,ts,tsx}', '**/e2e/**/*.{js,mjs,cjs,ts,tsx}', 'scripts/**/*.{js,mjs,cjs,ts,tsx}', '*.{js,mjs,cjs,ts,tsx}', 'packages/eslint-config/**'],
     languageOptions: { globals: globals.node },
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: { projectService: true },
-    },
-    plugins: { '@typescript-eslint': tseslint.plugin },
-    rules: {
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/no-floating-promises': ['error', {
-        allowForKnownSafeCalls: [
-          { from: 'package', name: ['test', 'it', 'describe'], package: 'node:test' },
-          { from: 'package', name: ['test', 'it', 'describe'], package: '@playwright/test' },
-        ],
-      }],
-      '@typescript-eslint/no-misused-promises': 'error',
-      '@typescript-eslint/await-thenable': 'error',
-      '@typescript-eslint/only-throw-error': 'error',
-      '@typescript-eslint/no-unnecessary-type-assertion': 'error',
-      '@typescript-eslint/consistent-type-imports': ['error', { disallowTypeAnnotations: false }],
-    },
   },
 ];

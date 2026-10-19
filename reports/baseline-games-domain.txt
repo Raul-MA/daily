@@ -1,0 +1,16 @@
+✔ game sessions snapshot names and configuration and allow only one active session (27.391163ms)
+✔ round scores preserve negatives and shared ties while invalid fractions do not save (6.461605ms)
+✔ removing the final round retains an editable zero round and sequential numbering (1.362452ms)
+✔ first to points always favors the higher score while lowest-score games retain their rule (1.106735ms)
+✔ competitive outcomes require every result and retain separate wins ties and losses (2.115788ms)
+✔ collaborative solo outcomes have no individual winners or competitive head to head (1.166255ms)
+✔ history archives referenced records and duration overrides control derived statistics (1.738994ms)
+✔ full game backups reject broken references duplicates and future major versions without mutation (2.001074ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 82.716434

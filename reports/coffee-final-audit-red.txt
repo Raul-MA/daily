@@ -1,0 +1,222 @@
+Suite: coffee
+✔ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (8.947447ms)
+✔ drink type changes calculate composition and clear irrelevant water and milk fields (2.448612ms)
+✔ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (1.905007ms)
+✔ beans referenced by drinks cannot be deleted while unused beans can be removed (3.288741ms)
+✔ coffee filters and insights retain scored and unscored drink semantics (3.327947ms)
+✔ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (1.671471ms)
+✔ legacy replacement resets setup and normalizes absent drink composition fields (2.00856ms)
+✔ unsupported coffee backups and invalid bean input leave existing records unchanged (1.221451ms)
+✔ coffee reads create no records and saves preserve unrelated shared modules (4.815362ms)
+✔ explicit coffee language changes commit with global language atomically (0.83026ms)
+✔ coffee imports preserve shared language and validate merged bean references (1.889879ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (1.225739ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (1.240196ms)
+✔ coffee rejects a future module payload without silently replacing it (0.485316ms)
+✔ coffee import previews are read-only and cancel leaves the current root intact (0.679729ms)
+✔ coffee import confirmation rejects stale previews and retains recovery on replacement (1.030495ms)
+✔ coffee malformed nested records and invalid settings fail before any shared write (3.820033ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 77.885373
+[WebServer] (node:6608) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 33 tests using 1 worker
+
+(node:6621) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/coffee/e2e/backup.spec.js:4:1 › legacy imports keep merge tools and trigger setup after replace (5.9s)
+  ✓   2 modules/coffee/e2e/backup.spec.js:60:1 › exports data and imports merge, replace, and invalid backups (2.9s)
+  ✘   3 modules/coffee/e2e/final-audit.spec.js:35:1 › coffee restored history filters refresh the translated status and actual list (7.9s)
+(node:7544) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 modules/coffee/e2e/final-audit.spec.js:47:1 › coffee failed first tools Save retains setup and retries with one root replacement (8.9s)
+(node:7902) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   5 modules/coffee/e2e/final-audit.spec.js:51:1 › coffee failed first tools Skip retains setup and retries with one root replacement (7.2s)
+(node:8113) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 modules/coffee/e2e/final-audit.spec.js:55:1 › coffee notifications translate and expire at the original deadline through remounts (8.8s)
+(node:8358) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 modules/coffee/e2e/final-audit.spec.js:71:1 › coffee Spanish import preview translates its merge mode without altering bean names (7.3s)
+(node:8649) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 modules/coffee/e2e/history-detail.spec.js:3:1 › sorts, filters, opens, edits, cancels, and deletes history entries (3.4s)
+  ✓   9 modules/coffee/e2e/history-detail.spec.js:57:1 › switches history between compact and detailed views and remembers the choice (3.0s)
+  ✓  10 modules/coffee/e2e/history-detail.spec.js:80:1 › compact history rows fit on mobile (2.0s)
+  ✓  11 modules/coffee/e2e/history-detail.spec.js:93:1 › new entries created through the UI are listed in history (3.7s)
+  ✓  12 modules/coffee/e2e/insights.spec.js:3:1 › shows empty insights and updates metrics from stored drinks (4.5s)
+  ✓  13 modules/coffee/e2e/new-shot.spec.js:3:1 › creates a complete espresso drink, previews ratio, and persists it (6.1s)
+  ✓  14 modules/coffee/e2e/new-shot.spec.js:26:1 › creates an americano with water to coffee ratio (4.1s)
+  ✓  15 modules/coffee/e2e/new-shot.spec.js:40:1 › creates a milk drink and clears hidden composition fields after type switch (2.8s)
+  ✓  16 modules/coffee/e2e/new-shot.spec.js:61:1 › manage button routes to settings and invalid drink shows validation toast (2.5s)
+  ✓  17 modules/coffee/e2e/new-shot.spec.js:73:1 › clear button empties the selected bean (1.9s)
+  ✓  18 modules/coffee/e2e/new-shot.spec.js:83:1 › score slider can be set after skipping (3.0s)
+  ✓  19 modules/coffee/e2e/new-shot.spec.js:95:1 › taste info buttons explain the rating fields (2.0s)
+  ✓  20 modules/coffee/e2e/offline.spec.js:6:1 › coffee forms history insights and beans remain available offline (8.5s)
+  ✓  21 modules/coffee/e2e/settings-data.spec.js:4:1 › creates, edits, deletes beans, and blocks deleting a used bean (3.7s)
+  ✓  22 modules/coffee/e2e/settings-data.spec.js:32:1 › saves settings and persists theme (3.7s)
+  ✓  23 modules/coffee/e2e/settings-data.spec.js:53:1 › switches to Spanish and persists translated UI (3.3s)
+  ✓  24 modules/coffee/e2e/settings-data.spec.js:72:1 › reminds when data has not been exported recently and records exports (2.0s)
+  ✓  25 modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export (2.1s)
+  ✓  26 modules/coffee/e2e/settings-data.spec.js:101:1 › asks for tools once and hides unavailable prep controls (1.3s)
+  ✓  27 modules/coffee/e2e/settings-data.spec.js:119:1 › skip tools setup saves no optional tools and entries keep explicit prep values (1.7s)
+  ✓  28 modules/coffee/e2e/shared.spec.js:4:1 › coffee detail and edit links reload without changing records (4.0s)
+  ✓  29 modules/coffee/e2e/shared.spec.js:23:1 › coffee language changes preserve unsaved values and derived previews (2.2s)
+  ✓  30 modules/coffee/e2e/shared.spec.js:39:1 › coffee stale drink edits retain their draft and preserve the other tab change (3.4s)
+  ✓  31 modules/coffee/e2e/shared.spec.js:58:1 › coffee import cancellation and future backups leave existing data intact (2.1s)
+  ✓  32 modules/coffee/e2e/shared.spec.js:71:1 › coffee failed preference saves keep the draft and previous persisted settings (2.0s)
+  ✓  33 modules/coffee/e2e/shared.spec.js:89:1 › coffee exporting preserves unsaved settings and stale settings cannot overwrite another tab (3.0s)
+
+
+  1) modules/coffee/e2e/final-audit.spec.js:35:1 › coffee restored history filters refresh the translated status and actual list 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByTestId('filter-status')
+    Expected: "Filtrado"
+    Received: "Más reciente"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" with timeout 5000ms
+      - waiting for getByTestId('filter-status')
+        14 × locator resolved to <span id="filter-status" data-testid="filter-status">Más reciente</span>
+           - unexpected value "Más reciente"
+
+
+      41 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+      42 |   await expect(page.locator('#scoreMin')).toHaveValue('10');
+    > 43 |   await expect(page.getByTestId(testIds.filterStatus)).toHaveText('Filtrado');
+         |                                                        ^
+      44 |   await expect(page.getByTestId(testIds.entryRow)).toHaveCount(0);
+      45 | });
+      46 |
+        at /workspaces/daily/modules/coffee/e2e/final-audit.spec.js:43:56
+
+    Error Context: test-results/final-audit-coffee-restore-30092-ated-status-and-actual-list/error-context.md
+
+  2) modules/coffee/e2e/final-audit.spec.js:47:1 › coffee failed first tools Save retains setup and retries with one root replacement 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('toast')
+    Expected substring: "QuotaExceededError"
+    Received string:    ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('toast')
+        14 × locator resolved to <div hidden="" class="toast" role="status" id="coffee-toast" data-testid="toast"></div>
+           - unexpected value ""
+
+
+      23 |   await failWrites(page);
+      24 |   await page.getByTestId(action).click();
+    > 25 |   await expect(page.getByTestId(testIds.toast)).toContainText('QuotaExceededError');
+         |                                                 ^
+      26 |   await expect(page.getByTestId(testIds.toolsSetupForm)).toBeVisible();
+      27 |   expect(await readCoffeeData(page)).toEqual(before);
+      28 |   await page.evaluate(() => { window.coffeeQuota = false; window.coffeeWrites = 0; });
+        at setupFailure (/workspaces/daily/modules/coffee/e2e/final-audit.spec.js:25:49)
+        at /workspaces/daily/modules/coffee/e2e/final-audit.spec.js:48:3
+
+    Error Context: test-results/final-audit-coffee-failed--df203-s-with-one-root-replacement/error-context.md
+
+  3) modules/coffee/e2e/final-audit.spec.js:51:1 › coffee failed first tools Skip retains setup and retries with one root replacement 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('toast')
+    Expected substring: "QuotaExceededError"
+    Received string:    ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('toast')
+        14 × locator resolved to <div hidden="" class="toast" role="status" id="coffee-toast" data-testid="toast"></div>
+           - unexpected value ""
+
+
+      23 |   await failWrites(page);
+      24 |   await page.getByTestId(action).click();
+    > 25 |   await expect(page.getByTestId(testIds.toast)).toContainText('QuotaExceededError');
+         |                                                 ^
+      26 |   await expect(page.getByTestId(testIds.toolsSetupForm)).toBeVisible();
+      27 |   expect(await readCoffeeData(page)).toEqual(before);
+      28 |   await page.evaluate(() => { window.coffeeQuota = false; window.coffeeWrites = 0; });
+        at setupFailure (/workspaces/daily/modules/coffee/e2e/final-audit.spec.js:25:49)
+        at /workspaces/daily/modules/coffee/e2e/final-audit.spec.js:52:3
+
+    Error Context: test-results/final-audit-coffee-failed--799b7-s-with-one-root-replacement/error-context.md
+
+  4) modules/coffee/e2e/final-audit.spec.js:55:1 › coffee notifications translate and expire at the original deadline through remounts 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByTestId('toast')
+    Expected: "Ajustes guardados."
+    Received: "Settings saved."
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" with timeout 5000ms
+      - waiting for getByTestId('toast')
+        14 × locator resolved to <div class="toast" role="status" id="coffee-toast" data-testid="toast">Settings saved.</div>
+           - unexpected value "Settings saved."
+
+
+      62 |   await page.clock.fastForward(2000);
+      63 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+    > 64 |   await expect(page.getByTestId(testIds.toast)).toHaveText('Ajustes guardados.');
+         |                                                 ^
+      65 |   await page.clock.fastForward(1300);
+      66 |   await expect(page.getByTestId(testIds.toast)).toBeHidden();
+      67 |   await page.getByRole('button', { name: 'English', exact: true }).click();
+        at /workspaces/daily/modules/coffee/e2e/final-audit.spec.js:64:49
+
+    Error Context: test-results/final-audit-coffee-notific-32b6e-l-deadline-through-remounts/error-context.md
+
+  5) modules/coffee/e2e/final-audit.spec.js:71:1 › coffee Spanish import preview translates its merge mode without altering bean names 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-coffee-import-preview]')
+    Expected substring: "Fusionar y sobrescribir IDs coincidentes"
+    Received string:    "Vista previa de importaciónmerge: 1 cafés, 0 bebidasDescargar copia de recuperaciónConfirmar importaciónCancelar"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-coffee-import-preview]')
+        14 × locator resolved to <dialog open="" data-unsaved="true" data-coffee-import-preview="">…</dialog>
+           - unexpected value "Vista previa de importaciónmerge: 1 cafés, 0 bebidasDescargar copia de recuperaciónConfirmar importaciónCancelar"
+
+
+      75 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+      76 |   await page.getByTestId(testIds.importData).setInputFiles({ name: 'coffee.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(data)) });
+    > 77 |   await expect(page.locator('[data-coffee-import-preview]')).toContainText('Fusionar y sobrescribir IDs coincidentes');
+         |                                                              ^
+      78 |   expect((await readCoffeeData(page)).beanPresets).toEqual(data.beanPresets);
+      79 | });
+      80 |
+        at /workspaces/daily/modules/coffee/e2e/final-audit.spec.js:77:62
+
+    Error Context: test-results/final-audit-coffee-Spanish-a1cce-without-altering-bean-names/error-context.md
+
+  5 failed
+    modules/coffee/e2e/final-audit.spec.js:35:1 › coffee restored history filters refresh the translated status and actual list 
+    modules/coffee/e2e/final-audit.spec.js:47:1 › coffee failed first tools Save retains setup and retries with one root replacement 
+    modules/coffee/e2e/final-audit.spec.js:51:1 › coffee failed first tools Skip retains setup and retries with one root replacement 
+    modules/coffee/e2e/final-audit.spec.js:55:1 › coffee notifications translate and expire at the original deadline through remounts 
+    modules/coffee/e2e/final-audit.spec.js:71:1 › coffee Spanish import preview translates its merge mode without altering bean names 
+  28 passed (2.5m)

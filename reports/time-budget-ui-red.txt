@@ -1,0 +1,411 @@
+Suite: time-budget
+✖ time input is strict local HH:MM and invalid deadlines are rejected (1.808157ms)
+✖ a deadline at or before the reference rolls to the next local day (0.614588ms)
+✖ session deadlines stay anchored to the original start after midnight and overdue (0.531202ms)
+✖ pending budgets include unfinished current minutes and every later task once (0.408543ms)
+✖ paused task timers resume from elapsed time and pause without losing elapsed time (0.614017ms)
+✖ completing an overrun records exact actual minutes and offers reallocation (0.57323ms)
+✖ early completion advances explicitly and queue reorder never moves the current task (0.526954ms)
+✖ template collections retain Unicode and bounded whole-minute tasks (0.50846ms)
+✔ time budget reads are write-free and writes preserve shared language and other modules (6.523717ms)
+✔ time budget start and its paused activity commit atomically beside independent countdowns (1.631197ms)
+✔ running task timestamps reconstruct overtime without writes and explicit completion ends the activity (1.032489ms)
+✔ failed budget writes do not change tasks timestamps activities or the primary root (1.164965ms)
+✔ stale budget views cannot overwrite later task changes (0.751764ms)
+✔ legacy template previews merge only on confirmation while migration exports include active timing (1.195703ms)
+✔ migration imports retain active timestamps and reject stale or changed previews (1.012641ms)
+✔ budget validation rejects future schemas duplicate tasks invalid timers and future root modules without changes (0.956296ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 8
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 45.800101
+
+✖ failing tests:
+
+test at modules/time-budget/test/characterization.test.mjs:5:1
+✖ time input is strict local HH:MM and invalid deadlines are rejected (1.808157ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/time-budget/src/app.js' imported from /workspaces/daily/modules/time-budget/test/source-app.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/time-budget/src/app.js'
+  }
+
+test at modules/time-budget/test/characterization.test.mjs:14:1
+✖ a deadline at or before the reference rolls to the next local day (0.614588ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/time-budget/src/app.js' imported from /workspaces/daily/modules/time-budget/test/source-app.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/time-budget/src/app.js'
+  }
+
+test at modules/time-budget/test/characterization.test.mjs:25:1
+✖ session deadlines stay anchored to the original start after midnight and overdue (0.531202ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/time-budget/src/app.js' imported from /workspaces/daily/modules/time-budget/test/source-app.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/time-budget/src/app.js'
+  }
+
+test at modules/time-budget/test/characterization.test.mjs:36:1
+✖ pending budgets include unfinished current minutes and every later task once (0.408543ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/time-budget/src/app.js' imported from /workspaces/daily/modules/time-budget/test/source-app.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/time-budget/src/app.js'
+  }
+
+test at modules/time-budget/test/characterization.test.mjs:47:1
+✖ paused task timers resume from elapsed time and pause without losing elapsed time (0.614017ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/time-budget/src/app.js' imported from /workspaces/daily/modules/time-budget/test/source-app.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/time-budget/src/app.js'
+  }
+
+test at modules/time-budget/test/characterization.test.mjs:60:1
+✖ completing an overrun records exact actual minutes and offers reallocation (0.57323ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/time-budget/src/app.js' imported from /workspaces/daily/modules/time-budget/test/source-app.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/time-budget/src/app.js'
+  }
+
+test at modules/time-budget/test/characterization.test.mjs:73:1
+✖ early completion advances explicitly and queue reorder never moves the current task (0.526954ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/time-budget/src/app.js' imported from /workspaces/daily/modules/time-budget/test/source-app.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/time-budget/src/app.js'
+  }
+
+test at modules/time-budget/test/characterization.test.mjs:89:1
+✖ template collections retain Unicode and bounded whole-minute tasks (0.50846ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/time-budget/src/app.js' imported from /workspaces/daily/modules/time-budget/test/source-app.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/time-budget/src/app.js'
+  }
+[WebServer] (node:16562) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:16580) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/time-budget/e2e/time-budget.spec.js:23:1 › setup is read-only and shows available and assigned minutes (5.8s)
+(node:16843) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 modules/time-budget/e2e/time-budget.spec.js:30:1 › overallocated plans remain editable and do not start (5.8s)
+(node:17028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 modules/time-budget/e2e/time-budget.spec.js:39:1 › task order is editable and a plan starts with a paused first task (5.8s)
+(node:17236) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 modules/time-budget/e2e/time-budget.spec.js:49:1 › running focus restores timestamp elapsed after reload and paused focus stays paused (6.1s)
+(node:17516) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 modules/time-budget/e2e/time-budget.spec.js:64:1 › overtime stays active until explicit completion and accepts exact rounded reallocation (5.8s)
+(node:17714) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  6 modules/time-budget/e2e/time-budget.spec.js:82:1 › keeping budgets advances and editing the plan retains task names and allocations (5.7s)
+(node:18092) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  7 modules/time-budget/e2e/time-budget.spec.js:95:1 › templates save load and export the original name-to-task format (5.8s)
+(node:18269) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  8 modules/time-budget/e2e/time-budget.spec.js:112:1 › task completion advances once and finishing returns to the retained setup (5.9s)
+
+
+  1) modules/time-budget/e2e/time-budget.spec.js:23:1 › setup is read-only and shows available and assigned minutes 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#setupScreen')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#setupScreen')
+
+
+       5 |   await page.clock.pauseAt(new Date(2026, 9, 15, 12, 0));
+       6 |   await page.goto(process.env.DAILY_BASELINE_URL || './#/time');
+    >  7 |   await expect(page.locator('#setupScreen')).toBeVisible();
+         |                                              ^
+       8 | }
+       9 | async function plan(page) {
+      10 |   await page.locator('#goalTime').fill('13:00');
+        at open (/workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:7:46)
+        at /workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:24:3
+
+    Error Context: test-results/time-budget-setup-is-read--e334d-ilable-and-assigned-minutes/error-context.md
+
+  2) modules/time-budget/e2e/time-budget.spec.js:30:1 › overallocated plans remain editable and do not start 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#setupScreen')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#setupScreen')
+
+
+       5 |   await page.clock.pauseAt(new Date(2026, 9, 15, 12, 0));
+       6 |   await page.goto(process.env.DAILY_BASELINE_URL || './#/time');
+    >  7 |   await expect(page.locator('#setupScreen')).toBeVisible();
+         |                                              ^
+       8 | }
+       9 | async function plan(page) {
+      10 |   await page.locator('#goalTime').fill('13:00');
+        at open (/workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:7:46)
+        at /workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:31:3
+
+    Error Context: test-results/time-budget-overallocated--59500-n-editable-and-do-not-start/error-context.md
+
+  3) modules/time-budget/e2e/time-budget.spec.js:39:1 › task order is editable and a plan starts with a paused first task 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#setupScreen')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#setupScreen')
+
+
+       5 |   await page.clock.pauseAt(new Date(2026, 9, 15, 12, 0));
+       6 |   await page.goto(process.env.DAILY_BASELINE_URL || './#/time');
+    >  7 |   await expect(page.locator('#setupScreen')).toBeVisible();
+         |                                              ^
+       8 | }
+       9 | async function plan(page) {
+      10 |   await page.locator('#goalTime').fill('13:00');
+        at open (/workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:7:46)
+        at /workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:40:3
+
+    Error Context: test-results/time-budget-task-order-is--fce3d-ts-with-a-paused-first-task/error-context.md
+
+  4) modules/time-budget/e2e/time-budget.spec.js:49:1 › running focus restores timestamp elapsed after reload and paused focus stays paused 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#setupScreen')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#setupScreen')
+
+
+       5 |   await page.clock.pauseAt(new Date(2026, 9, 15, 12, 0));
+       6 |   await page.goto(process.env.DAILY_BASELINE_URL || './#/time');
+    >  7 |   await expect(page.locator('#setupScreen')).toBeVisible();
+         |                                              ^
+       8 | }
+       9 | async function plan(page) {
+      10 |   await page.locator('#goalTime').fill('13:00');
+        at open (/workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:7:46)
+        at /workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:50:3
+
+    Error Context: test-results/time-budget-running-focus--3285f-d-paused-focus-stays-paused/error-context.md
+
+  5) modules/time-budget/e2e/time-budget.spec.js:64:1 › overtime stays active until explicit completion and accepts exact rounded reallocation 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#setupScreen')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#setupScreen')
+
+
+       5 |   await page.clock.pauseAt(new Date(2026, 9, 15, 12, 0));
+       6 |   await page.goto(process.env.DAILY_BASELINE_URL || './#/time');
+    >  7 |   await expect(page.locator('#setupScreen')).toBeVisible();
+         |                                              ^
+       8 | }
+       9 | async function plan(page) {
+      10 |   await page.locator('#goalTime').fill('13:00');
+        at open (/workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:7:46)
+        at /workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:65:3
+
+    Error Context: test-results/time-budget-overtime-stays-2fc73--exact-rounded-reallocation/error-context.md
+
+  6) modules/time-budget/e2e/time-budget.spec.js:82:1 › keeping budgets advances and editing the plan retains task names and allocations 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#setupScreen')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#setupScreen')
+
+
+       5 |   await page.clock.pauseAt(new Date(2026, 9, 15, 12, 0));
+       6 |   await page.goto(process.env.DAILY_BASELINE_URL || './#/time');
+    >  7 |   await expect(page.locator('#setupScreen')).toBeVisible();
+         |                                              ^
+       8 | }
+       9 | async function plan(page) {
+      10 |   await page.locator('#goalTime').fill('13:00');
+        at open (/workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:7:46)
+        at /workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:83:3
+
+    Error Context: test-results/time-budget-keeping-budget-6f634--task-names-and-allocations/error-context.md
+
+  7) modules/time-budget/e2e/time-budget.spec.js:95:1 › templates save load and export the original name-to-task format 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#setupScreen')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#setupScreen')
+
+
+       5 |   await page.clock.pauseAt(new Date(2026, 9, 15, 12, 0));
+       6 |   await page.goto(process.env.DAILY_BASELINE_URL || './#/time');
+    >  7 |   await expect(page.locator('#setupScreen')).toBeVisible();
+         |                                              ^
+       8 | }
+       9 | async function plan(page) {
+      10 |   await page.locator('#goalTime').fill('13:00');
+        at open (/workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:7:46)
+        at /workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:96:3
+
+    Error Context: test-results/time-budget-templates-save-985f8-riginal-name-to-task-format/error-context.md
+
+  8) modules/time-budget/e2e/time-budget.spec.js:112:1 › task completion advances once and finishing returns to the retained setup 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#setupScreen')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#setupScreen')
+
+
+       5 |   await page.clock.pauseAt(new Date(2026, 9, 15, 12, 0));
+       6 |   await page.goto(process.env.DAILY_BASELINE_URL || './#/time');
+    >  7 |   await expect(page.locator('#setupScreen')).toBeVisible();
+         |                                              ^
+       8 | }
+       9 | async function plan(page) {
+      10 |   await page.locator('#goalTime').fill('13:00');
+        at open (/workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:7:46)
+        at /workspaces/daily/modules/time-budget/e2e/time-budget.spec.js:113:3
+
+    Error Context: test-results/time-budget-task-completio-3470a-turns-to-the-retained-setup/error-context.md
+
+  8 failed
+    modules/time-budget/e2e/time-budget.spec.js:23:1 › setup is read-only and shows available and assigned minutes 
+    modules/time-budget/e2e/time-budget.spec.js:30:1 › overallocated plans remain editable and do not start 
+    modules/time-budget/e2e/time-budget.spec.js:39:1 › task order is editable and a plan starts with a paused first task 
+    modules/time-budget/e2e/time-budget.spec.js:49:1 › running focus restores timestamp elapsed after reload and paused focus stays paused 
+    modules/time-budget/e2e/time-budget.spec.js:64:1 › overtime stays active until explicit completion and accepts exact rounded reallocation 
+    modules/time-budget/e2e/time-budget.spec.js:82:1 › keeping budgets advances and editing the plan retains task names and allocations 
+    modules/time-budget/e2e/time-budget.spec.js:95:1 › templates save load and export the original name-to-task format 
+    modules/time-budget/e2e/time-budget.spec.js:112:1 › task completion advances once and finishing returns to the retained setup 

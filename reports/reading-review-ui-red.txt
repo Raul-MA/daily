@@ -1,0 +1,230 @@
+Suite: reading
+✔ Reader duration parsing preserves numeric text and word-count estimates (12.040896ms)
+✔ Reader progress is bounded and remaining time rounds upward with a one-minute floor (0.662164ms)
+✔ Reader eligibility deduplicates IDs and applies progress remaining-time and safe-link filters (2.838984ms)
+✔ Reader selection prioritizes started items then configured location order without duplicates (0.79369ms)
+✔ Reader links accept only HTTPS Reader hosts and metadata minimization excludes content and tokens (0.572358ms)
+✔ Reader URL configuration preserves aliases location priority and supported shortcut controls (3.770963ms)
+✔ Reader invalid URL preferences retain defaults and advanced limits remain bounded (2.655192ms)
+✔ Reader generated shortcut URLs preserve picking controls and exclude tokens (1.079103ms)
+✔ Reader paginates locations sequentially using cursor and token headers and excludes children (2.158966ms)
+✔ Reader scan cap bounds returned documents and stops requesting further pages (0.849905ms)
+✔ Reader authorization throttling and service errors reject without successful results (3.322957ms)
+✔ Reader session cache contains minimized metadata and invalidates changed scan configuration (0.644071ms)
+✔ Reader startup is read-only and preference saves preserve other modules and global language (10.09161ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (3.177836ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (4.485766ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (11.423373ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (4.937979ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (8.7992ms)
+✔ scheduled review without credentials retains its direct fallback and makes no request (4.231832ms)
+✔ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (2.136064ms)
+✔ absent review is empty while network and authorization failures preserve a previously cached review (3.176935ms)
+✔ review completion is explicit server-confirmed and idempotent with a latest-review preflight (1.044318ms)
+✔ changed latest review or failed completion never reports the displayed review complete (1.566972ms)
+✔ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.580212ms)
+✔ a late review response cannot replace the state after its account changes (0.837573ms)
+✔ Q&A requires explicit structured capability hides answers initially and resets on card changes (1.039389ms)
+✔ Reader custom counts support two through twenty and uniform sampling can choose unread before started (0.604888ms)
+✔ Reader finite budgets exclude unknown duration unless enabled and always reject archived completed and child records (0.504862ms)
+✔ Reader scan limits count fetched child records and expose truncation instead of scanning forever (0.637359ms)
+✔ Reader repeating cursors and malformed response shapes fail rather than return misleading complete data (0.958587ms)
+✔ Reader caches are account-specific without serializing tokens or full document content (0.430162ms)
+✔ Reader links reject embedded credentials and cache freshness expires using the configured clock (0.430684ms)
+✔ Reader pagination requests only the remaining scan allowance (0.785284ms)
+✔ Reader enforces a local twenty-request rolling limit without automatically retrying (7.985062ms)
+✔ Reader throttling honors Retry-After and rejects retries until the cooldown expires (51.806376ms)
+✔ Reader request deadlines still abort when the caller supplies its own signal (10.471449ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 210.155128
+[WebServer] (node:54410) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 16 tests using 1 worker
+
+(node:54422) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/reading/e2e/reader.spec.js:4:1 › Reader retains original time and count controls across reload (3.9s)
+  ✓   2 modules/reading/e2e/reader.spec.js:15:1 › Reader returns distinct started-first picks fitting estimated remaining time (1.7s)
+  ✓   3 modules/reading/e2e/reader.spec.js:27:1 › Reader saves progress location cache and shortcut behavior without leaking tokens into URLs (2.3s)
+  ✓   4 modules/reading/e2e/reader.spec.js:49:1 › Reader pick again reuses fresh metadata rather than making additional requests (1.9s)
+  ✓   5 modules/reading/e2e/reader.spec.js:60:1 › Reader distinguishes rejected tokens and throttled document requests (1.8s)
+  ✘   6 modules/reading/e2e/review.spec.js:17:1 › review without credentials offers a direct handoff without issuing requests (6.6s)
+(node:55011) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 modules/reading/e2e/review.spec.js:26:1 › latest review shows ordinary highlights and explicit Readwise feedback handoffs without marking completion (6.5s)
+(node:55211) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 modules/reading/e2e/review.spec.js:37:1 › explicit review completion waits for server confirmation and then disables repeated completion (6.7s)
+(node:55435) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 modules/reading/e2e/review.spec.js:46:1 › failed completion keeps the review unfinished and reports the server failure (6.8s)
+(node:55627) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 modules/reading/e2e/review.spec.js:54:1 › missing review and API failure retain the direct fallback and leave local apps usable (6.8s)
+(node:55839) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 modules/reading/e2e/review.spec.js:63:1 › capability-gated Q&A component reveals answers accessibly and resets on the next card (1.7s)
+(node:55967) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 modules/reading/e2e/shared.spec.js:6:1 › Reader shortcut launch overrides do not replace saved preferences (1.9s)
+  ✓  13 modules/reading/e2e/shared.spec.js:15:1 › Reader custom count time policy and unknown-duration settings persist (3.6s)
+  ✓  14 modules/reading/e2e/shared.spec.js:34:1 › Reader saved picks survive Home and reload without reshuffling or new API calls (3.3s)
+  ✓  15 modules/reading/e2e/shared.spec.js:52:1 › Reader forget removes account picks and credential storage while preserving preferences and other modules (1.8s)
+  ✓  16 modules/reading/e2e/shared.spec.js:72:1 › central Reader preferences and the app edit the same settings and retain language drafts (1.5s)
+
+
+  1) modules/reading/e2e/review.spec.js:17:1 › review without credentials offers a direct handoff without issuing requests 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('[data-review-direct]')
+    Expected: "https://readwise.io/dailyreview"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('[data-review-direct]')
+
+
+      19 |   await page.route('https://readwise.io/api/**', route => { calls++; return route.fulfill({ status: 500 }); });
+      20 |   await page.goto('./#/reading/review');
+    > 21 |   await expect(page.locator('[data-review-direct]')).toHaveAttribute('href', 'https://readwise.io/dailyreview');
+         |                                                      ^
+      22 |   await expect(page.locator('[data-review-status]')).toContainText(/token|credentials/i);
+      23 |   expect(calls).toBe(0);
+      24 | });
+        at /workspaces/daily/modules/reading/e2e/review.spec.js:21:54
+
+    Error Context: test-results/review-review-without-cred-77a0d-ff-without-issuing-requests/error-context.md
+
+  2) modules/reading/e2e/review.spec.js:26:1 › latest review shows ordinary highlights and explicit Readwise feedback handoffs without marking completion 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-review-card]')
+    Expected substring: "An ordinary highlight."
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-review-card]')
+
+
+      26 | test('latest review shows ordinary highlights and explicit Readwise feedback handoffs without marking completion', async ({ page }) => {
+      27 |   const calls = await open(page);
+    > 28 |   await expect(page.locator('[data-review-card]')).toContainText('An ordinary highlight.');
+         |                                                    ^
+      29 |   await expect(page.locator('[data-review-heading]')).toHaveText('Latest available review');
+      30 |   await expect(page.getByRole('button', { name: 'Reveal answer', exact: true })).toHaveCount(0);
+      31 |   await expect(page.locator('[data-review-feedback]')).toHaveCount(4);
+        at /workspaces/daily/modules/reading/e2e/review.spec.js:28:52
+
+    Error Context: test-results/review-latest-review-shows-ec411--without-marking-completion/error-context.md
+
+  3) modules/reading/e2e/review.spec.js:37:1 › explicit review completion waits for server confirmation and then disables repeated completion 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-review-card]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('[data-review-card]')
+
+
+      37 | test('explicit review completion waits for server confirmation and then disables repeated completion', async ({ page }) => {
+      38 |   const calls = await open(page);
+    > 39 |   await expect(page.locator('[data-review-card]')).toBeVisible();
+         |                                                    ^
+      40 |   await page.getByRole('button', { name: 'Mark review complete', exact: true }).click();
+      41 |   await expect(page.locator('[data-review-completed]')).toBeVisible();
+      42 |   await expect(page.getByRole('button', { name: 'Mark review complete', exact: true })).toBeDisabled();
+        at /workspaces/daily/modules/reading/e2e/review.spec.js:39:52
+
+    Error Context: test-results/review-explicit-review-com-87153-isables-repeated-completion/error-context.md
+
+  4) modules/reading/e2e/review.spec.js:46:1 › failed completion keeps the review unfinished and reports the server failure 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-review-card]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('[data-review-card]')
+
+
+      46 | test('failed completion keeps the review unfinished and reports the server failure', async ({ page }) => {
+      47 |   await open(page, { completeStatus: 500 });
+    > 48 |   await expect(page.locator('[data-review-card]')).toBeVisible();
+         |                                                    ^
+      49 |   await page.getByRole('button', { name: 'Mark review complete', exact: true }).click();
+      50 |   await expect(page.locator('[data-review-status]')).toContainText('500');
+      51 |   await expect(page.locator('[data-review-completed]')).toHaveCount(0);
+        at /workspaces/daily/modules/reading/e2e/review.spec.js:48:52
+
+    Error Context: test-results/review-failed-completion-k-c3f33--reports-the-server-failure/error-context.md
+
+  5) modules/reading/e2e/review.spec.js:54:1 › missing review and API failure retain the direct fallback and leave local apps usable 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-review-status]')
+    Expected pattern: /no.*review|not.*available/i
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-review-status]')
+
+
+      54 | test('missing review and API failure retain the direct fallback and leave local apps usable', async ({ page }) => {
+      55 |   await open(page, { status: 404 });
+    > 56 |   await expect(page.locator('[data-review-status]')).toContainText(/no.*review|not.*available/i);
+         |                                                      ^
+      57 |   await expect(page.locator('[data-review-direct]')).toHaveAttribute('href', 'https://readwise.io/dailyreview');
+      58 |   await page.getByRole('link', { name: 'Home', exact: true }).click();
+      59 |   await page.locator('[data-widget="quick"] a[href$="/coffee/new"]').click();
+        at /workspaces/daily/modules/reading/e2e/review.spec.js:56:54
+
+    Error Context: test-results/review-missing-review-and--70e13-and-leave-local-apps-usable/error-context.md
+
+  6) modules/reading/e2e/review.spec.js:63:1 › capability-gated Q&A component reveals answers accessibly and resets on the next card 
+
+    Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:8766/daily/modules/reading/src/review/cards.js
+
+      63 | test('capability-gated Q&A component reveals answers accessibly and resets on the next card', async ({ page }) => {
+      64 |   await open(page, { status: 404 });
+    > 65 |   await page.evaluate(async () => {
+         |              ^
+      66 |     const { mountReviewCards } = await import('./modules/reading/src/review/cards.js');
+      67 |     const host = document.createElement('section');
+      68 |     host.id = 'qa-fixture';
+        at /workspaces/daily/modules/reading/e2e/review.spec.js:65:14
+
+    Error Context: test-results/review-capability-gated-Q--4c20b-and-resets-on-the-next-card/error-context.md
+
+  6 failed
+    modules/reading/e2e/review.spec.js:17:1 › review without credentials offers a direct handoff without issuing requests 
+    modules/reading/e2e/review.spec.js:26:1 › latest review shows ordinary highlights and explicit Readwise feedback handoffs without marking completion 
+    modules/reading/e2e/review.spec.js:37:1 › explicit review completion waits for server confirmation and then disables repeated completion 
+    modules/reading/e2e/review.spec.js:46:1 › failed completion keeps the review unfinished and reports the server failure 
+    modules/reading/e2e/review.spec.js:54:1 › missing review and API failure retain the direct fallback and leave local apps usable 
+    modules/reading/e2e/review.spec.js:63:1 › capability-gated Q&A component reveals answers accessibly and resets on the next card 
+  10 passed (1.1m)

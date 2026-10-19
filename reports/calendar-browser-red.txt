@@ -1,0 +1,185 @@
+Suite: general
+✔ time is derived from timestamps without tick writes or automatic completion (9.788262ms)
+✔ reload and process reconstruction preserve elapsed time and Unicode references (0.826792ms)
+✔ explicit pause excludes background time and resume continues the same activity (0.93279ms)
+✔ countdowns are independent and singleton budgets games and piano resume existing activities (1.906407ms)
+✔ widget removal language changes and navigation do not pause or reset activities (0.817526ms)
+✔ completion is explicit and terminal while a new budget may start afterwards (1.504257ms)
+✔ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (0.529938ms)
+✔ invalid starts duplicate identifiers and unknown transitions never mutate activities (1.225166ms)
+✔ failed activity changes keep the previous status and publish no success (0.645735ms)
+✖ calendar refreshes at local midnight without repeated changes on the same day (2.413633ms)
+✖ foreground resumes recalculate date after suspension and cleanup removes callbacks (0.524369ms)
+✖ calendar deadlines follow daylight-saving local days rather than a fixed 24 hours (1.760344ms)
+✔ missing modules fail when exercised rather than preventing test discovery (0.415194ms)
+✔ new browser tests target the Pages path and module hash (1.067882ms)
+✔ plants worker removes only its old caches (4.035649ms)
+✔ coffee worker removes only its old caches (2.274274ms)
+✔ games worker removes only its old caches (2.092023ms)
+✔ Time Budget worker removes only its old caches (3.340833ms)
+✔ piano worker removes only its old caches (2.067326ms)
+✔ module defaults never write and saved payloads preserve unrelated preferences and records (0.736284ms)
+✔ module reads validate domain shapes and reject future versions without overwriting (0.62688ms)
+✔ module saves re-read current state and publish only committed updates (0.564383ms)
+✔ failed module commits retain previous readable data without success notifications (0.290722ms)
+✔ fresh dashboard defaults put plants and activities first without writing data (0.41804ms)
+✔ language and dashboard order persist across a new state instance (0.234157ms)
+✔ removing a widget preserves module records and their active sessions (0.37009ms)
+✔ invalid language, duplicate widgets and unknown actions never overwrite settings (0.433959ms)
+✔ failed saves publish no committed change and retain the previous preferences (0.306101ms)
+✔ committed preference changes notify subscribers and support cleanup (0.296042ms)
+✔ diagnostic rejects empty credentials without making requests (0.953309ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (58.920255ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (1.840403ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.493651ms)
+✔ hung requests time out and remaining endpoint checks still execute (15.36772ms)
+✔ local diagnostics do not claim Pages-origin verification (0.378306ms)
+✔ hash routes cover all seven modules and their canonical deep links (2.281396ms)
+✔ href builder encodes stable IDs and supports configurable local base paths (0.466951ms)
+✔ query parameters and repeated values survive routing without changing settings (0.329074ms)
+✔ unknown and malformed routes fail safely instead of executing external URLs (0.714092ms)
+✔ browser hash listener supports navigation and removes itself on cleanup (0.580503ms)
+✔ static preparation preserves native modules byte-for-byte and resolves every relative import (132.280675ms)
+✔ static preparation uses the configured base for HTML manifest and worker without shipping tests (111.228796ms)
+✔ invalid static bases fail before replacing any previously prepared files (99.772203ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (1.086256ms)
+✔ replacement keeps the previous validated document as recovery (0.383325ms)
+✔ invalid and future documents are rejected without any storage mutation (2.043072ms)
+✔ primary quota failure retains the readable document and reports failure (0.389226ms)
+✔ recovery quota failure prevents a primary replacement (0.233124ms)
+✔ corrupt primary data is preserved and recovery is explicit (0.288077ms)
+✔ unrecoverable corruption never produces an empty collection (0.336878ms)
+✔ missing primary data can recover from an existing valid recovery document (0.180126ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (6.192453ms)
+✔ lossy serialization is validated before touching existing records (1.281262ms)
+✔ a future primary schema is rejected without recovery or mutation (0.371654ms)
+✔ failure to preserve corrupt data reports failure without replacing it (1.407976ms)
+✔ update activation is held for any unfinished activity or unsaved form (0.817005ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (4.14838ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (3.766437ms)
+✔ offline navigation and built assets use only this app cache (2.42241ms)
+✔ updates wait until explicitly requested and reject unrelated messages (2.482021ms)
+✔ online navigation stays on the cached version until an update is accepted (1.396064ms)
+✔ any blocked tab prevents update activation (1.282864ms)
+✔ unresponsive tabs and malformed state replies keep updates waiting (24.648294ms)
+✔ every same-app tab must explicitly report safe before an update activates (1.134006ms)
+✔ updates from unknown clients are ignored (1.144295ms)
+ℹ tests 65
+ℹ suites 0
+ℹ pass 62
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 601.633034
+
+✖ failing tests:
+
+test at tests/general/calendar.test.mjs:21:1
+✖ calendar refreshes at local midnight without repeated changes on the same day (2.413633ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/calendar.js' imported from /workspaces/daily/tests/general/calendar.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/calendar.js'
+  }
+
+test at tests/general/calendar.test.mjs:31:1
+✖ foreground resumes recalculate date after suspension and cleanup removes callbacks (0.524369ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/calendar.js' imported from /workspaces/daily/tests/general/calendar.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/calendar.js'
+  }
+
+test at tests/general/calendar.test.mjs:43:1
+✖ calendar deadlines follow daylight-saving local days rather than a fixed 24 hours (1.760344ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/calendar.js' imported from /workspaces/daily/tests/general/calendar.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/calendar.js'
+  }
+[WebServer] (node:89853) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 19 tests using 1 worker
+
+(node:89866) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes (1.7s)
+  ✓   2 tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state (708ms)
+  ✓   3 tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard (415ms)
+  ✘   4 tests/e2e/calendar.spec.js:3:1 › dashboard care reminders refresh at midnight without changing records (5.4s)
+(node:90165) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 tests/e2e/diagnostics.spec.js:5:1 › connection checks require submission and preserve unrelated storage (448ms)
+  ✓   6 tests/e2e/diagnostics.spec.js:28:1 › a missing review and a Reader network failure do not hide other outcomes (317ms)
+  ✓   7 tests/e2e/diagnostics.spec.js:43:1 › diagnostic controls and outcomes support Spanish (327ms)
+  ✓   8 tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base (823ms)
+  ✓   9 tests/e2e/offline.spec.js:24:1 › home settings and connection checks reopen offline without losing saved settings (1.6s)
+  ✓  10 tests/e2e/offline.spec.js:39:1 › offline cache contains generated assets and excludes API responses and credentials (862ms)
+  ✓  11 tests/e2e/platform.spec.js:10:1 › dashboard keeps the accepted three, two and one column layouts (751ms)
+  ✓  12 tests/e2e/platform.spec.js:23:1 › all modules stay reachable and dashboard navigation creates no records (651ms)
+  ✓  13 tests/e2e/platform.spec.js:39:1 › shared language setting persists and leaves module user text unchanged (709ms)
+  ✓  14 tests/e2e/platform.spec.js:55:1 › widget visibility and order persist without removing apps or module state (927ms)
+  ✓  15 tests/e2e/platform.spec.js:69:1 › quick-action visibility persists while its app remains in the menu (826ms)
+  ✓  16 tests/e2e/platform.spec.js:81:1 › stable deep links reload and unknown routes provide an accessible way home (751ms)
+  ✓  17 tests/e2e/platform.spec.js:93:1 › failed preference saves report failure and retain the previous language (565ms)
+  ✓  18 tests/e2e/platform.spec.js:109:1 › unrecoverable storage is retained and never shown as an empty dashboard (319ms)
+  ✓  19 tests/e2e/updates.spec.js:23:1 › updates wait for unsaved work in another tab and then preserve settings across activation (3.0s)
+
+
+  1) tests/e2e/calendar.spec.js:3:1 › dashboard care reminders refresh at midnight without changing records 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('[data-widget="plants"]').getByRole('link', { name: /Tomorrow fern/ })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('[data-widget="plants"]').getByRole('link', { name: /Tomorrow fern/ })
+
+
+      12 |   const before = await page.evaluate(() => localStorage.getItem('daily:v1'));
+      13 |   await page.clock.fastForward(4000);
+    > 14 |   await expect(page.locator('[data-widget="plants"]').getByRole('link', { name: /Tomorrow fern/ })).toBeVisible();
+         |                                                                                                     ^
+      15 |   expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe(before);
+      16 | });
+      17 |
+        at /workspaces/daily/tests/e2e/calendar.spec.js:14:101
+
+    Error Context: test-results/calendar-dashboard-care-re-fbeca-ht-without-changing-records/error-context.md
+
+  1 failed
+    tests/e2e/calendar.spec.js:3:1 › dashboard care reminders refresh at midnight without changing records 
+  18 passed (24.5s)

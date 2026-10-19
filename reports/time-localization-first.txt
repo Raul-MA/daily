@@ -1,0 +1,83 @@
+Suite: time-budget
+✔ time input is strict local HH:MM and invalid deadlines are rejected (2.720402ms)
+✔ a deadline at or before the reference rolls to the next local day (0.440973ms)
+✔ session deadlines stay anchored to the original start after midnight and overdue (0.84579ms)
+✔ pending budgets include unfinished current minutes and every later task once (1.155007ms)
+✔ paused task timers resume from elapsed time and pause without losing elapsed time (0.884448ms)
+✔ completing an overrun records exact actual minutes and offers reallocation (0.459748ms)
+✔ early completion advances explicitly and queue reorder never moves the current task (1.064118ms)
+✔ template collections retain Unicode and bounded whole-minute tasks (0.434281ms)
+✔ legacy budget export preserves original running and paused clocks and imports through Daily without credentials (4.437316ms)
+✔ legacy budget export assigns a stable session identity without initializing absent storage (0.677125ms)
+✔ legacy budget malformed records or blocked storage fail without resetting any original data (1.189141ms)
+✔ time budget dictionaries retain interpolation and literal task names (1.27996ms)
+✔ time budget reads its shared language without initializing or changing a session (0.429372ms)
+✔ time budget reads are write-free and writes preserve shared language and other modules (0.882187ms)
+✔ time budget start and its paused activity commit atomically beside independent countdowns (1.030244ms)
+✔ running task timestamps reconstruct overtime without writes and explicit completion ends the activity (0.863192ms)
+✔ failed budget writes do not change tasks timestamps activities or the primary root (0.757685ms)
+✔ stale budget views cannot overwrite later task changes (0.72334ms)
+✔ legacy template previews merge only on confirmation while migration exports include active timing (1.014955ms)
+✔ migration imports retain active timestamps and reject stale or changed previews (0.942811ms)
+✔ budget validation rejects future schemas duplicate tasks invalid timers and future root modules without changes (0.877448ms)
+✔ full Time Budget backups restore independent countdowns atomically beside the plan (4.351254ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 85.78226
+[WebServer] (node:64697) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 20 tests using 1 worker
+
+(node:64709) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 modules/time-budget/e2e/localization.spec.js:10:1 › time budget Spanish setup countdowns and backup controls work offline without rewriting draft text (4.4s)
+(node:64867) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 modules/time-budget/e2e/localization.spec.js:39:1 › time budget running clocks queue drafts and overtime controls translate without changing saved timing (9.9s)
+  ✓   3 modules/time-budget/e2e/localization.spec.js:65:1 › time budget notifications translate through remounts and keep their original expiry (1.8s)
+  ✓   4 modules/time-budget/e2e/recovery.spec.js:4:1 › negative and fractional reallocation never enable confirmation (10.6s)
+  ✓   5 modules/time-budget/e2e/recovery.spec.js:23:1 › queue drafts survive language changes and stale edits cannot overwrite another view (2.4s)
+  ✓   6 modules/time-budget/e2e/recovery.spec.js:45:1 › confirmed legacy imports preserve active sessions and create a full recovery backup (1.7s)
+  ✓   7 modules/time-budget/e2e/shell.spec.js:10:1 › focus starts persist immediately and Home navigation never changes its saved timestamps (2.6s)
+  ✓   8 modules/time-budget/e2e/shell.spec.js:24:1 › two named countdowns pause independently and remain overdue until explicit completion (4.7s)
+  ✓   9 modules/time-budget/e2e/shell.spec.js:47:1 › language changes retain added setup rows names minutes goal and template drafts (2.4s)
+  ✓  10 modules/time-budget/e2e/shell.spec.js:65:1 › pending overtime survives reload and canceled imports preserve the active plan (11.8s)
+  ✓  11 modules/time-budget/e2e/shell.spec.js:84:1 › quota failures retain the setup draft and create no successful-looking plan (1.6s)
+  ✓  12 modules/time-budget/e2e/shell.spec.js:95:1 › phone layout and offline reopening preserve the running budget (5.7s)
+  ✓  13 modules/time-budget/e2e/time-budget.spec.js:5:1 › setup is read-only and shows available and assigned minutes (1.3s)
+  ✓  14 modules/time-budget/e2e/time-budget.spec.js:12:1 › overallocated plans remain editable and do not start (1.5s)
+  ✓  15 modules/time-budget/e2e/time-budget.spec.js:21:1 › task order is editable and a plan starts with a paused first task (1.4s)
+  ✓  16 modules/time-budget/e2e/time-budget.spec.js:31:1 › running focus restores timestamp elapsed after reload and paused focus stays paused (6.8s)
+  ✓  17 modules/time-budget/e2e/time-budget.spec.js:46:1 › overtime stays active until explicit completion and accepts exact rounded reallocation (10.4s)
+  ✓  18 modules/time-budget/e2e/time-budget.spec.js:64:1 › keeping budgets advances and editing the plan retains task names and allocations (9.8s)
+  ✓  19 modules/time-budget/e2e/time-budget.spec.js:77:1 › templates save load and export the original name-to-task format (1.9s)
+  ✓  20 modules/time-budget/e2e/time-budget.spec.js:94:1 › task completion advances once and finishing returns to the retained setup (2.6s)
+
+
+  1) modules/time-budget/e2e/localization.spec.js:10:1 › time budget Spanish setup countdowns and backup controls work offline without rewriting draft text 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      27 |   await expect(page.locator('#setupTitle')).toHaveText('Haz que cada minuto cuente.');
+      28 |   await expect(page.getByLabel('Hora de finalización', { exact: true })).toBeVisible();
+    > 29 |   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+         |                                                                                         ^
+      30 |   expect(await moduleData(page)).toBeNull();
+      31 |   await page.locator('[data-time-file]').setInputFiles({ name: 'future.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ app: 'time-budget', schemaVersion: 99 })) });
+      32 |   await expect(page.locator('#toast')).toContainText('La versión del esquema de Time Budget no es compatible.');
+        at /workspaces/daily/modules/time-budget/e2e/localization.spec.js:29:89
+
+    Error Context: test-results/localization-time-budget-S-95fa7-ithout-rewriting-draft-text/error-context.md
+
+  1 failed
+    modules/time-budget/e2e/localization.spec.js:10:1 › time budget Spanish setup countdowns and backup controls work offline without rewriting draft text 
+  19 passed (1.6m)

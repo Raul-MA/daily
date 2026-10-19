@@ -1,0 +1,791 @@
+Suite: games
+✔ game sessions snapshot names and configuration and allow only one active session (27.837906ms)
+✔ round scores preserve negatives and shared ties while invalid fractions do not save (3.668314ms)
+✔ removing the final round retains an editable zero round and sequential numbering (3.079525ms)
+✔ first to points always favors the higher score while lowest-score games retain their rule (3.353967ms)
+✔ competitive outcomes require every result and retain separate wins ties and losses (2.684078ms)
+✔ collaborative solo outcomes have no individual winners or competitive head to head (1.630962ms)
+✔ history archives referenced records and duration overrides control derived statistics (2.208861ms)
+✔ full game backups reject broken references duplicates and future major versions without mutation (2.564425ms)
+✔ games read without writes and preserve other modules while sharing explicit language changes (13.193306ms)
+✔ starting a game atomically registers its timestamp activity and retains unrelated countdowns (3.965637ms)
+✔ scores never restart game timing and finishing atomically completes the shared activity (5.660282ms)
+✔ game quota failures leave both the sessions and shared activities unchanged (2.421227ms)
+✔ game stale domain saves reject instead of overwriting a newer module state (2.374571ms)
+✔ game replacement previews preserve shared language and restore active timing with recovery (2.039164ms)
+✔ game future modules and stale import previews remain untouched (1.828011ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 119.247567
+[WebServer] (node:155400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 24 tests using 1 worker
+
+(node:155458) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 modules/games/e2e/gameplay-2.spec.js:4:1 › keeps history filters collapsed and summarizes active filters (5.6s)
+(node:155617) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 modules/games/e2e/gameplay-2.spec.js:19:1 › starts enters edits and finishes a score session (5.7s)
+(node:155793) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 modules/games/e2e/gameplay-2.spec.js:66:1 › opens completed game details without editing first (6.0s)
+(node:156017) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 modules/games/e2e/gameplay-3.spec.js:7:1 › tracks session duration and game duration analytics (5.6s)
+(node:156175) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   5 modules/games/e2e/gameplay-3.spec.js:34:1 › shows player average scores by game instead of blending scoring systems (5.6s)
+(node:156366) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 modules/games/e2e/gameplay-4.spec.js:7:1 › first to points ranks the highest live total as leader (5.6s)
+(node:156555) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 modules/games/e2e/gameplay-4.spec.js:19:1 › shows first to points target reached as a toast (5.6s)
+(node:156736) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 modules/games/e2e/gameplay-4.spec.js:40:1 › records win loss tie results (5.6s)
+(node:156925) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 modules/games/e2e/gameplay-4.spec.js:56:1 › preserves scoring settings while collaborative mode is enabled (5.7s)
+(node:157117) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 modules/games/e2e/gameplay-4.spec.js:72:1 › records one team result and keeps collaborative stats separate (5.7s)
+(node:157384) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 modules/games/e2e/gameplay.spec.js:3:1 › creates edits and archives a player (5.5s)
+(node:157583) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  12 modules/games/e2e/gameplay.spec.js:15:1 › creates edits and archives a game definition (5.6s)
+(node:157771) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  13 modules/games/e2e/gameplay.spec.js:27:1 › shows only scoring fields required by selected game mode (5.5s)
+(node:157959) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  14 modules/games/e2e/gameplay.spec.js:39:1 › hides game form while a session is active (5.5s)
+(node:158136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  15 modules/games/e2e/gameplay.spec.js:50:1 › hides play setup form while a session is active (5.6s)
+(node:158329) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  16 modules/games/e2e/gameplay.spec.js:60:1 › excludes archived players from new play setup without deleting history (5.6s)
+(node:158508) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  17 modules/games/e2e/gameplay.spec.js:88:1 › shows app messages as dismissible fixed toasts (5.6s)
+(node:158805) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  18 modules/games/e2e/import-export.spec.js:5:1 › exports full JSON and replace-import restores data (5.5s)
+(node:159029) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  19 modules/games/e2e/import-export.spec.js:33:1 › rejects malformed nested backup data without replacing local data (5.6s)
+(node:159210) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  20 modules/games/e2e/settings.spec.js:4:1 › persists theme and language settings (5.5s)
+(node:159473) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  21 modules/games/e2e/settings.spec.js:15:1 › shows backup reminder before a successful export (5.5s)
+(node:159690) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  22 modules/games/e2e/settings.spec.js:24:1 › shows backup reminder age when the last export is stale (5.8s)
+(node:159958) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  23 modules/games/e2e/smoke.spec.js:3:1 › loads mobile-first primary navigation (5.5s)
+(node:160128) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  24 modules/games/e2e/smoke.spec.js:10:1 › registers service worker path over http (5.6s)
+
+
+  1) modules/games/e2e/gameplay-2.spec.js:4:1 › keeps history filters collapsed and summarizes active filters 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay-2.spec.js:5:5
+
+    Error Context: test-results/gameplay-2-keeps-history-f-f08fc-d-summarizes-active-filters/error-context.md
+
+  2) modules/games/e2e/gameplay-2.spec.js:19:1 › starts enters edits and finishes a score session ──
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay-2.spec.js:20:5
+
+    Error Context: test-results/gameplay-2-starts-enters-edits-and-finishes-a-score-session/error-context.md
+
+  3) modules/games/e2e/gameplay-2.spec.js:66:1 › opens completed game details without editing first 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay-2.spec.js:67:5
+
+    Error Context: test-results/gameplay-2-opens-completed-7458e-tails-without-editing-first/error-context.md
+
+  4) modules/games/e2e/gameplay-3.spec.js:7:1 › tracks session duration and game duration analytics 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('history-item').filter({ hasText: 'Dutch Blitz' }).first().getByTestId('history-duration')
+    Expected substring: "10 min"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('history-item').filter({ hasText: 'Dutch Blitz' }).first().getByTestId('history-duration')
+
+
+      13 |     await page.goto(appURL("games", "history"));
+      14 |     const latest = page.getByTestId(testIds.historyItem).filter({ hasText: "Dutch Blitz" }).first();
+    > 15 |     await expect(latest.getByTestId(testIds.historyDuration)).toContainText("10 min");
+         |                                                               ^
+      16 |     page.once("dialog", (dialog) => dialog.accept());
+      17 |     await latest.getByRole("button", { name: "Edit" }).click();
+      18 |     await page.getByTestId(testIds.sessionDurationOverride).fill("12");
+        at /workspaces/daily/modules/games/e2e/gameplay-3.spec.js:15:63
+
+    Error Context: test-results/gameplay-3-tracks-session--3a740-and-game-duration-analytics/error-context.md
+
+  5) modules/games/e2e/gameplay-3.spec.js:34:1 › shows player average scores by game instead of blending scoring systems 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.stat-card').filter({ hasText: 'Ada' }).first()
+    Expected substring: "Azul"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('.stat-card').filter({ hasText: 'Ada' }).first()
+
+
+      40 |     await page.goto(appURL("games", "stats"));
+      41 |     const adaCard = page.locator(".stat-card").filter({ hasText: "Ada" }).first();
+    > 42 |     await expect(adaCard).toContainText("Azul");
+         |                           ^
+      43 |     await expect(adaCard).toContainText("75");
+      44 |     await expect(adaCard).toContainText("Dutch Blitz");
+      45 |     await expect(adaCard).toContainText("500");
+        at /workspaces/daily/modules/games/e2e/gameplay-3.spec.js:42:27
+
+    Error Context: test-results/gameplay-3-shows-player-av-7de6e-of-blending-scoring-systems/error-context.md
+
+  6) modules/games/e2e/gameplay-4.spec.js:7:1 › first to points ranks the highest live total as leader 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('session-total').first()
+    Expected substring: "Leader"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('session-total').first()
+
+
+      12 |     }, { key: STORAGE_KEY, data: gameFixture(data) });
+      13 |     await page.goto(appURL("games", "session"));
+    > 14 |     await expect(page.getByTestId(testIds.sessionTotal).first()).toContainText("Leader");
+         |                                                                  ^
+      15 |     await expect(page.getByTestId(testIds.sessionTotal).first()).toContainText("232");
+      16 |     await expect(page.getByTestId(testIds.sessionTotal).first()).toContainText("Majo");
+      17 |     await expect(page.getByText("Majo leads with 232 - round total 254")).toBeVisible();
+        at /workspaces/daily/modules/games/e2e/gameplay-4.spec.js:14:66
+
+    Error Context: test-results/gameplay-4-first-to-points-dbf9d-ighest-live-total-as-leader/error-context.md
+
+  7) modules/games/e2e/gameplay-4.spec.js:19:1 › shows first to points target reached as a toast ───
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay-4.spec.js:20:5
+
+    Error Context: test-results/gameplay-4-shows-first-to-points-target-reached-as-a-toast/error-context.md
+
+  8) modules/games/e2e/gameplay-4.spec.js:40:1 › records win loss tie results ──────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay-4.spec.js:41:5
+
+    Error Context: test-results/gameplay-4-records-win-loss-tie-results/error-context.md
+
+  9) modules/games/e2e/gameplay-4.spec.js:56:1 › preserves scoring settings while collaborative mode is enabled 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay-4.spec.js:57:5
+
+    Error Context: test-results/gameplay-4-preserves-scori-0f8ad-llaborative-mode-is-enabled/error-context.md
+
+  10) modules/games/e2e/gameplay-4.spec.js:72:1 › records one team result and keeps collaborative stats separate 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay-4.spec.js:73:5
+
+    Error Context: test-results/gameplay-4-records-one-tea-36939-ollaborative-stats-separate/error-context.md
+
+  11) modules/games/e2e/gameplay.spec.js:3:1 › creates edits and archives a player ─────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:4:5
+
+    Error Context: test-results/gameplay-creates-edits-and-archives-a-player/error-context.md
+
+  12) modules/games/e2e/gameplay.spec.js:15:1 › creates edits and archives a game definition ───────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:16:5
+
+    Error Context: test-results/gameplay-creates-edits-and-archives-a-game-definition/error-context.md
+
+  13) modules/games/e2e/gameplay.spec.js:27:1 › shows only scoring fields required by selected game mode 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:28:5
+
+    Error Context: test-results/gameplay-shows-only-scorin-f6121-uired-by-selected-game-mode/error-context.md
+
+  14) modules/games/e2e/gameplay.spec.js:39:1 › hides game form while a session is active ──────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:40:5
+
+    Error Context: test-results/gameplay-hides-game-form-while-a-session-is-active/error-context.md
+
+  15) modules/games/e2e/gameplay.spec.js:50:1 › hides play setup form while a session is active ────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:51:5
+
+    Error Context: test-results/gameplay-hides-play-setup-form-while-a-session-is-active/error-context.md
+
+  16) modules/games/e2e/gameplay.spec.js:60:1 › excludes archived players from new play setup without deleting history 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:61:5
+
+    Error Context: test-results/gameplay-excludes-archived-6032c-up-without-deleting-history/error-context.md
+
+  17) modules/games/e2e/gameplay.spec.js:88:1 › shows app messages as dismissible fixed toasts ─────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/gameplay.spec.js:89:5
+
+    Error Context: test-results/gameplay-shows-app-messages-as-dismissible-fixed-toasts/error-context.md
+
+  18) modules/games/e2e/import-export.spec.js:5:1 › exports full JSON and replace-import restores data 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/import-export.spec.js:6:5
+
+    Error Context: test-results/import-export-exports-full-0b941-eplace-import-restores-data/error-context.md
+
+  19) modules/games/e2e/import-export.spec.js:33:1 › rejects malformed nested backup data without replacing local data 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/import-export.spec.js:34:5
+
+    Error Context: test-results/import-export-rejects-malf-a8bb9-ithout-replacing-local-data/error-context.md
+
+  20) modules/games/e2e/settings.spec.js:4:1 › persists theme and language settings ────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/settings.spec.js:5:5
+
+    Error Context: test-results/settings-persists-theme-and-language-settings/error-context.md
+
+  21) modules/games/e2e/settings.spec.js:15:1 › shows backup reminder before a successful export ───
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/settings.spec.js:16:5
+
+    Error Context: test-results/settings-shows-backup-reminder-before-a-successful-export/error-context.md
+
+  22) modules/games/e2e/settings.spec.js:24:1 › shows backup reminder age when the last export is stale 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/settings.spec.js:25:5
+
+    Error Context: test-results/settings-shows-backup-remi-d1ab9-en-the-last-export-is-stale/error-context.md
+
+  23) modules/games/e2e/smoke.spec.js:3:1 › loads mobile-first primary navigation ──────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/smoke.spec.js:4:5
+
+    Error Context: test-results/smoke-loads-mobile-first-primary-navigation/error-context.md
+
+  24) modules/games/e2e/smoke.spec.js:10:1 › registers service worker path over http ───────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('nav-play').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at /workspaces/daily/modules/games/e2e/smoke.spec.js:11:5
+
+    Error Context: test-results/smoke-registers-service-worker-path-over-http/error-context.md
+
+  24 failed
+    modules/games/e2e/gameplay-2.spec.js:4:1 › keeps history filters collapsed and summarizes active filters 
+    modules/games/e2e/gameplay-2.spec.js:19:1 › starts enters edits and finishes a score session ───
+    modules/games/e2e/gameplay-2.spec.js:66:1 › opens completed game details without editing first ─
+    modules/games/e2e/gameplay-3.spec.js:7:1 › tracks session duration and game duration analytics ─
+    modules/games/e2e/gameplay-3.spec.js:34:1 › shows player average scores by game instead of blending scoring systems 
+    modules/games/e2e/gameplay-4.spec.js:7:1 › first to points ranks the highest live total as leader 
+    modules/games/e2e/gameplay-4.spec.js:19:1 › shows first to points target reached as a toast ────
+    modules/games/e2e/gameplay-4.spec.js:40:1 › records win loss tie results ───────────────────────
+    modules/games/e2e/gameplay-4.spec.js:56:1 › preserves scoring settings while collaborative mode is enabled 
+    modules/games/e2e/gameplay-4.spec.js:72:1 › records one team result and keeps collaborative stats separate 
+    modules/games/e2e/gameplay.spec.js:3:1 › creates edits and archives a player ───────────────────
+    modules/games/e2e/gameplay.spec.js:15:1 › creates edits and archives a game definition ─────────
+    modules/games/e2e/gameplay.spec.js:27:1 › shows only scoring fields required by selected game mode 
+    modules/games/e2e/gameplay.spec.js:39:1 › hides game form while a session is active ────────────
+    modules/games/e2e/gameplay.spec.js:50:1 › hides play setup form while a session is active ──────
+    modules/games/e2e/gameplay.spec.js:60:1 › excludes archived players from new play setup without deleting history 
+    modules/games/e2e/gameplay.spec.js:88:1 › shows app messages as dismissible fixed toasts ───────
+    modules/games/e2e/import-export.spec.js:5:1 › exports full JSON and replace-import restores data 
+    modules/games/e2e/import-export.spec.js:33:1 › rejects malformed nested backup data without replacing local data 
+    modules/games/e2e/settings.spec.js:4:1 › persists theme and language settings ──────────────────
+    modules/games/e2e/settings.spec.js:15:1 › shows backup reminder before a successful export ─────
+    modules/games/e2e/settings.spec.js:24:1 › shows backup reminder age when the last export is stale 
+    modules/games/e2e/smoke.spec.js:3:1 › loads mobile-first primary navigation ────────────────────
+    modules/games/e2e/smoke.spec.js:10:1 › registers service worker path over http ─────────────────

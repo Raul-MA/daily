@@ -1,0 +1,23 @@
+Suite: whatsapp
+Passed: encoding, validation, local time in four zones, DST, manifest, icons, and asset paths.
+Passed: worker install, cache cleanup, offline shell, repository scope, and external-link bypass.
+Passed: submit clears form/storage, preserves handoff and copy fallback, and keeps invalid drafts.
+✔ encoding, validation, local time, DST, manifest, icons and asset paths (11.196279ms)
+✔ worker install, cache ownership, offline shell and external bypass (2.613716ms)
+✔ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (3.932578ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 37.561737
+
+Running 1 test using 1 worker
+
+(node:12777) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 modules/whatsapp/e2e/source.spec.js:4:1 › WhatsApp retains its original composer appearance and local reminder controls on phones (569ms)
+
+  1 passed (1.5s)

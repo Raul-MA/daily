@@ -1,0 +1,93 @@
+Suite: general
+✔ time is derived from timestamps without tick writes or automatic completion (10.763751ms)
+✔ reload and process reconstruction preserve elapsed time and Unicode references (0.538736ms)
+✔ explicit pause excludes background time and resume continues the same activity (0.988546ms)
+✔ countdowns are independent and singleton budgets games and piano resume existing activities (0.987745ms)
+✔ widget removal language changes and navigation do not pause or reset activities (0.640226ms)
+✔ completion is explicit and terminal while a new budget may start afterwards (0.92119ms)
+✔ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (0.633483ms)
+✔ invalid starts duplicate identifiers and unknown transitions never mutate activities (0.79746ms)
+✔ failed activity changes keep the previous status and publish no success (0.594861ms)
+✔ missing modules fail when exercised rather than preventing test discovery (1.437285ms)
+✔ new browser tests target the Pages path and module hash (0.314568ms)
+✔ plants worker removes only its old caches (3.117035ms)
+✔ coffee worker removes only its old caches (1.883437ms)
+✔ games worker removes only its old caches (1.271645ms)
+✔ Time Budget worker removes only its old caches (2.40416ms)
+✔ piano worker removes only its old caches (2.312609ms)
+✔ module defaults never write and saved payloads preserve unrelated preferences and records (1.028512ms)
+✔ module reads validate domain shapes and reject future versions without overwriting (0.724864ms)
+✔ module saves re-read current state and publish only committed updates (0.589972ms)
+✔ failed module commits retain previous readable data without success notifications (0.410267ms)
+✔ fresh dashboard defaults put plants and activities first without writing data (0.775879ms)
+✔ language and dashboard order persist across a new state instance (0.33205ms)
+✔ removing a widget preserves module records and their active sessions (0.464949ms)
+✔ invalid language, duplicate widgets and unknown actions never overwrite settings (0.382123ms)
+✔ failed saves publish no committed change and retain the previous preferences (0.340396ms)
+✔ committed preference changes notify subscribers and support cleanup (0.463035ms)
+✔ diagnostic rejects empty credentials without making requests (1.765968ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (34.000853ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (1.661974ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.459689ms)
+✔ hung requests time out and remaining endpoint checks still execute (18.261778ms)
+✔ local diagnostics do not claim Pages-origin verification (0.526824ms)
+✔ hash routes cover all seven modules and their canonical deep links (3.063732ms)
+✔ href builder encodes stable IDs and supports configurable local base paths (0.601053ms)
+✔ query parameters and repeated values survive routing without changing settings (0.218168ms)
+✔ unknown and malformed routes fail safely instead of executing external URLs (0.438118ms)
+✔ browser hash listener supports navigation and removes itself on cleanup (0.302414ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (0.544216ms)
+✔ replacement keeps the previous validated document as recovery (0.413022ms)
+✔ invalid and future documents are rejected without any storage mutation (0.336529ms)
+✔ primary quota failure retains the readable document and reports failure (0.24678ms)
+✔ recovery quota failure prevents a primary replacement (0.549136ms)
+✔ corrupt primary data is preserved and recovery is explicit (0.441164ms)
+✔ unrecoverable corruption never produces an empty collection (0.418101ms)
+✔ missing primary data can recover from an existing valid recovery document (0.247072ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (2.868457ms)
+✔ lossy serialization is validated before touching existing records (0.382665ms)
+✔ a future primary schema is rejected without recovery or mutation (0.264404ms)
+✔ failure to preserve corrupt data reports failure without replacing it (0.235941ms)
+✔ update activation is held for any unfinished activity or unsaved form (0.776821ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (2.087506ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (2.812964ms)
+✔ offline navigation and built assets use only this app cache (2.301799ms)
+✔ updates wait until explicitly requested and reject unrelated messages (1.770536ms)
+ℹ tests 54
+ℹ suites 0
+ℹ pass 54
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 211.826963
+[WebServer] (node:42347) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:42399) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:42413) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 17 tests using 1 worker
+
+(node:42453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes (1.4s)
+  ✓   2 tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state (315ms)
+  ✓   3 tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard (189ms)
+  ✓   4 tests/e2e/diagnostics.spec.js:5:1 › connection checks require submission and preserve unrelated storage (260ms)
+  ✓   5 tests/e2e/diagnostics.spec.js:28:1 › a missing review and a Reader network failure do not hide other outcomes (426ms)
+  ✓   6 tests/e2e/diagnostics.spec.js:43:1 › diagnostic controls and outcomes support Spanish (272ms)
+  ✓   7 tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base (280ms)
+  ✓   8 tests/e2e/offline.spec.js:24:1 › home settings and connection checks reopen offline without losing saved settings (550ms)
+  ✓   9 tests/e2e/offline.spec.js:39:1 › offline cache contains generated assets and excludes API responses and credentials (235ms)
+  ✓  10 tests/e2e/platform.spec.js:10:1 › dashboard keeps the accepted three, two and one column layouts (479ms)
+  ✓  11 tests/e2e/platform.spec.js:23:1 › all modules stay reachable and dashboard navigation creates no records (419ms)
+  ✓  12 tests/e2e/platform.spec.js:39:1 › shared language setting persists and leaves module user text unchanged (388ms)
+  ✓  13 tests/e2e/platform.spec.js:55:1 › widget visibility and order persist without removing apps or module state (462ms)
+  ✓  14 tests/e2e/platform.spec.js:69:1 › quick-action visibility persists while its app remains in the menu (441ms)
+  ✓  15 tests/e2e/platform.spec.js:81:1 › stable deep links reload and unknown routes provide an accessible way home (273ms)
+  ✓  16 tests/e2e/platform.spec.js:93:1 › failed preference saves report failure and retain the previous language (307ms)
+  ✓  17 tests/e2e/platform.spec.js:109:1 › unrecoverable storage is retained and never shown as an empty dashboard (156ms)
+
+  17 passed (10.0s)

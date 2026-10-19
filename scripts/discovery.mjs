@@ -1,9 +1,9 @@
 import { globSync, readFileSync } from 'node:fs';
 
-const expected = { general: 25, plants: 7, coffee: 21, games: 24, piano: 41, whatsapp: 3 };
+const expected = { general: 85, plants: 28, coffee: 34, games: 34, 'time-budget': 25, piano: 84, reading: 57, whatsapp: 12 };
 
 export function discover(module) {
-  const browser = module === 'coffee' || module === 'games';
+  const browser = ['coffee', 'games', 'time-budget'].includes(module);
   const pattern = module === 'general' ? 'tests/general/*.test.mjs' : `modules/${module}/${browser ? 'e2e/*.spec.js' : 'test/*.{test.mjs,cjs}'}`;
   const files = globSync(pattern).sort();
   const count = files.reduce((sum, file) => sum + [...readFileSync(file, 'utf8').matchAll(/^test\(/gm)].length, 0);
@@ -14,9 +14,25 @@ export function discover(module) {
 }
 
 export function discoverBrowser(module) {
+  if (['plants', 'piano', 'reading', 'whatsapp'].includes(module)) {
+    const files = globSync(`modules/${module}/e2e/*.spec.js`);
+    const count = files.reduce((sum, file) => sum + [...readFileSync(file, 'utf8').matchAll(/^test\(/gm)].length, 0);
+    const counts = { plants: 14, piano: 25, reading: 31, whatsapp: 9 };
+    const expectedCount = counts[module];
+    if (count !== expectedCount) throw new Error(`${module} browser discovery mismatch: expected ${expectedCount}, found ${count}`);
+    return files;
+  }
   if (module !== 'general') return discover(module);
   const files = globSync('tests/e2e/*.spec.js').sort();
   const count = files.reduce((sum, file) => sum + [...readFileSync(file, 'utf8').matchAll(/^test\(/gm)].length, 0);
-  if (count !== 3) throw new Error(`General browser discovery mismatch: expected 3, found ${count}`);
+  if (count !== 40) throw new Error(`General browser discovery mismatch: expected 40, found ${count}`);
+  return files;
+}
+
+export function discoverDomainUnit(module) {
+  const expectedCounts = { coffee: 20, games: 17, 'time-budget': 23 };
+  const files = globSync(`modules/${module}/test/*.test.mjs`).sort();
+  const count = files.reduce((sum, file) => sum + [...readFileSync(file, 'utf8').matchAll(/^test\(/gm)].length, 0);
+  if (count !== expectedCounts[module]) throw new Error(`${module} unit discovery mismatch: expected ${expectedCounts[module]}, found ${count}`);
   return files;
 }

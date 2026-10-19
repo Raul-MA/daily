@@ -1,0 +1,111 @@
+Suite: plants
+✔ care dates use latest matching care and ignore notes skip and reschedule entries (22.375816ms)
+✔ watering seasons preserve wrap-around dry periods and growth intervals (1.127934ms)
+✔ fertilizer pause is preserved while a manual due date still takes precedence (0.692963ms)
+✔ care status distinguishes overdue today soon and future without mutating plants (1.257176ms)
+✔ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (1.615133ms)
+✔ backdated input uses local noon and today retains the actual event time (0.669088ms)
+✔ reminder counts include overdue and today care once and leave records unchanged (0.616941ms)
+✔ urgency ranking places overdue care ahead of future care (0.987883ms)
+✔ connected plant storage writes only the shared document and preserves other modules (5.89593ms)
+✔ connected care and due-date changes remain one root commit with no partial state (2.480338ms)
+✔ Things settings live with plant records and survive a plant update (1.35588ms)
+✔ legacy import previews are read-only and confirmation keeps a root recovery copy (1.159043ms)
+✔ migration export includes Things settings and imports without translating user text (1.9352ms)
+✔ unsupported duplicate and invalid plant imports never mutate shared data (0.917672ms)
+✔ quota failure retains plant history and sends no successful shared change (1.317969ms)
+✔ template care refresh preserves names notes history IDs and manual dates (2.453786ms)
+✔ valid legacy data remains readable when its migration write fails (0.457013ms)
+✔ care log and next-due override are committed in one primary write (1.173069ms)
+✔ validation failures use the storage-error notification path (0.238034ms)
+✔ builds a stable watering title (0.093013ms)
+✔ shortcut URL carries the exact title, date, and project (0.288017ms)
+✔ enabled integration requires a project (0.167272ms)
+✔ settings round-trip and normalize project whitespace (0.138719ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 92.692003
+[WebServer] (node:82750) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 1 worker
+
+(node:82796) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/plants/e2e/plants.spec.js:21:1 › plant creation edit and deletion use canonical routes and retain other storage (893ms)
+  ✓   2 modules/plants/e2e/plants.spec.js:39:1 › care logging skip and manual dates keep one history and support editing and deleting entries (893ms)
+  ✓   3 modules/plants/e2e/plants.spec.js:68:1 › dashboard reminders open the stable plant without completing care or changing legacy keys (660ms)
+  ✓   4 modules/plants/e2e/plants.spec.js:85:1 › plant import previews can be canceled and replacement requires a recovery download (769ms)
+  ✓   5 modules/plants/e2e/plants.spec.js:104:1 › Things settings and migration export preserve the exact shortcut integration (660ms)
+  ✓   6 modules/plants/e2e/plants.spec.js:122:1 › failed care saves retain the visible form and previous stored history (444ms)
+  ✓   7 modules/plants/e2e/plants.spec.js:140:1 › plant interfaces follow shared Spanish without translating saved names and observations (699ms)
+  ✓   8 modules/plants/e2e/plants.spec.js:153:1 › plant styles stay scoped and invalid imports leave the current plants intact (700ms)
+  ✘   9 modules/plants/e2e/plants.spec.js:172:1 › a plant changed in another tab keeps the current draft and refuses a stale edit (5.8s)
+(node:83193) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 modules/plants/e2e/plants.spec.js:187:1 › switching language preserves draft plant fields and an open care note (5.5s)
+
+
+  1) modules/plants/e2e/plants.spec.js:172:1 › a plant changed in another tab keeps the current draft and refuses a stale edit 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  getByLabel('Plant name', { exact: true })
+    Expected: "My unsaved draft"
+    Received: "Helecho 🌱"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for getByLabel('Plant name', { exact: true })
+        14 × locator resolved to <input type="text" name="name" required="" maxlength="500" class="form-input"/>
+           - unexpected value "Helecho 🌱"
+
+
+      178 |   await other.getByRole('button', { name: 'Record watering', exact: true }).click();
+      179 |   await other.getByRole('button', { name: 'Save care', exact: true }).click();
+    > 180 |   await expect(page.getByLabel('Plant name', { exact: true })).toHaveValue('My unsaved draft');
+          |                                                                ^
+      181 |   await page.getByRole('button', { name: 'Save changes', exact: true }).click();
+      182 |   await expect(page.locator('[data-module="plants"]').getByRole('alert')).toContainText('changed in another');
+      183 |   expect((await saved(page)).plants[0].name).toBe('Helecho 🌱');
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:180:64
+
+    Error Context: test-results/plants-a-plant-changed-in--13f0c-ft-and-refuses-a-stale-edit/error-context.md
+
+  2) modules/plants/e2e/plants.spec.js:187:1 › switching language preserves draft plant fields and an open care note 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  getByLabel('Nombre de la planta', { exact: true })
+    Expected: "Draft 🌱"
+    Received: "Helecho 🌱"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for getByLabel('Nombre de la planta', { exact: true })
+        14 × locator resolved to <input type="text" name="name" required="" maxlength="500" class="form-input"/>
+           - unexpected value "Helecho 🌱"
+
+
+      190 |   await page.getByLabel('Plant name', { exact: true }).fill('Draft 🌱');
+      191 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+    > 192 |   await expect(page.getByLabel('Nombre de la planta', { exact: true })).toHaveValue('Draft 🌱');
+          |                                                                         ^
+      193 |   await detail(page);
+      194 |   await page.getByRole('button', { name: 'Registrar riego', exact: true }).click();
+      195 |   await page.getByLabel('Nota de cuidado', { exact: true }).fill('Mi borrador');
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:192:73
+
+    Error Context: test-results/plants-switching-language--1c5bd-ields-and-an-open-care-note/error-context.md
+
+  2 failed
+    modules/plants/e2e/plants.spec.js:172:1 › a plant changed in another tab keeps the current draft and refuses a stale edit 
+    modules/plants/e2e/plants.spec.js:187:1 › switching language preserves draft plant fields and an open care note 
+  8 passed (20.1s)

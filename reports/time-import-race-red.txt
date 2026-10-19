@@ -1,0 +1,35 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 modules/time-budget/e2e/localization.spec.js:79:1 › time budget ignores a slow previous backup after a newer file selection or cancel (6.6s)
+
+
+  1) modules/time-budget/e2e/localization.spec.js:79:1 › time budget ignores a slow previous backup after a newer file selection or cancel 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('#toast')
+    Expected substring: "Unsupported Time Budget schema version."
+    Received string:    ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('#toast')
+        14 × locator resolved to <div id="toast" role="status" aria-live="polite" class="toast hidden"></div>
+           - unexpected value ""
+
+
+      91 |   await expect.poll(() => page.evaluate(() => typeof window.releaseTimeFile)).toBe('function');
+      92 |   await input.setInputFiles({ name: 'future.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify({ app: 'time-budget', schemaVersion: 99 })) });
+    > 93 |   await expect(page.locator('#toast')).toContainText('Unsupported Time Budget schema version.');
+         |                                        ^
+      94 |   await page.evaluate(async () => { await window.releaseTimeFile(); });
+      95 |   await expect(page.locator('[data-time-import-preview] p')).toHaveText('This backup could not be imported.');
+      96 |   await expect(page.locator('[data-time-confirm]')).toBeDisabled();
+        at /workspaces/daily/modules/time-budget/e2e/localization.spec.js:93:40
+
+    Error Context: test-results/localization-time-budget-i-2f45e-er-file-selection-or-cancel/error-context.md
+
+  1 failed
+    modules/time-budget/e2e/localization.spec.js:79:1 › time budget ignores a slow previous backup after a newer file selection or cancel 

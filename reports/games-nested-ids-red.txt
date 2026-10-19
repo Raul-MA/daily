@@ -1,0 +1,32 @@
+✔ games read without writes and preserve other modules while sharing explicit language changes (17.825679ms)
+✔ starting a game atomically registers its timestamp activity and retains unrelated countdowns (4.351361ms)
+✔ scores never restart game timing and finishing atomically completes the shared activity (4.491292ms)
+✔ game quota failures leave both the sessions and shared activities unchanged (1.970903ms)
+✔ game stale domain saves reject instead of overwriting a newer module state (2.282956ms)
+✔ game replacement previews preserve shared language and restore active timing with recovery (2.799251ms)
+✔ game future modules and stale import previews remain untouched (1.933623ms)
+✖ game backup previews reject duplicate nested round result and winner identities without replacing records (2.742685ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 67.84733
+
+✖ failing tests:
+
+test at modules/games/test/service.test.mjs:126:1
+✖ game backup previews reject duplicate nested round result and winner identities without replacing records (2.742685ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/service.test.mjs:141:12)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /invalid|duplicate/i,
+    operator: 'throws',
+    diff: 'simple'
+  }

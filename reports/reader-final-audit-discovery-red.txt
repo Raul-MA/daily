@@ -1,0 +1,109 @@
+Suite: reading
+✔ Reader exports versioned settings and current picks without credentials or disposable pools (12.580384ms)
+✔ Reader legacy migration preview normalizes aliases and discards credentials without changing saved data (2.983873ms)
+✔ Reader replacement previews reject tampering and stale roots before mutation (3.026964ms)
+✔ Reader confirmed restore preserves other modules and language while requiring token reentry (2.465036ms)
+✔ failed Reader restore retains previous primary records and credentials (2.361202ms)
+✔ Reader duration parsing preserves numeric text and word-count estimates (0.684206ms)
+✔ Reader progress is bounded and remaining time rounds upward with a one-minute floor (0.40216ms)
+✔ Reader eligibility deduplicates IDs and applies progress remaining-time and safe-link filters (0.671292ms)
+✔ Reader selection prioritizes started items then configured location order without duplicates (0.604968ms)
+✔ Reader links accept only HTTPS Reader hosts and metadata minimization excludes content and tokens (0.6383ms)
+✔ Reader URL configuration preserves aliases location priority and supported shortcut controls (0.706918ms)
+✔ Reader invalid URL preferences retain defaults and advanced limits remain bounded (0.359981ms)
+✔ Reader generated shortcut URLs preserve picking controls and exclude tokens (0.452233ms)
+✔ legacy Reader export whitelists preferences and remembered metadata through Daily import without tokens or bodies (6.529286ms)
+✔ legacy Reader export initializes no keys and does not read an opted-out remembered item or obsolete settings (0.522905ms)
+✔ legacy Reader invalid preferences remembered URLs JSON and blocked storage fail without deletion or fallback reset (1.362691ms)
+✖ Reader Spanish authored failures and destructive confirmation retain specific meaning (1.220656ms)
+✖ Reader rejects unrenderable pick timestamps before saving and keeps valid original timestamps (0.970369ms)
+✔ Reader paginates locations sequentially using cursor and token headers and excludes children (0.598285ms)
+✔ Reader scan cap bounds returned documents and stops requesting further pages (0.415525ms)
+✔ Reader authorization throttling and service errors reject without successful results (0.984466ms)
+✔ Reader session cache contains minimized metadata and invalidates changed scan configuration (0.385599ms)
+✔ Reader disposable metadata cache survives a new instance but never crosses account identities (0.808738ms)
+✔ scheduled-review cache is separate from backups and reopens as cached data until a successful refresh (1.07271ms)
+✔ Reader scan summary preserves truncation across locations and a fresh cached pool retains its fetch timestamp (1.931001ms)
+✔ Reader startup is read-only and preference saves preserve other modules and global language (0.963456ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (1.168499ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (0.46637ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (1.950606ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (0.950042ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (0.911209ms)
+✔ Reader revalidates a remembered item by ID and removes archived completed or missing items (2.639121ms)
+✔ Reader remembered-item validation updates progress and keeps the previous item on request failure (1.347993ms)
+✔ Reader picks distinguish selection time from metadata fetch time when picking again from cache (1.341681ms)
+✔ Reader forgetting credentials succeeds even when clearing canonical cached picks hits quota (1.465653ms)
+✔ Reader account changes in another tab reject late picks and require the old tab to reconnect (2.574691ms)
+✔ Reader cannot revive an obsolete session token by reopening a tab after another account was selected (0.567829ms)
+✔ scheduled review without credentials retains its direct fallback and makes no request (0.428439ms)
+✔ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (0.636818ms)
+✔ absent review is empty while network and authorization failures preserve a previously cached review (0.78263ms)
+✔ review completion is explicit server-confirmed and idempotent with a latest-review preflight (0.921969ms)
+✔ changed latest review or failed completion never reports the displayed review complete (1.200208ms)
+✔ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.652477ms)
+✔ a late review response cannot replace the state after its account changes (0.518227ms)
+✔ Q&A requires explicit structured capability hides answers initially and resets on card changes (0.663637ms)
+✔ review widgets reuse fresh results refresh after fifteen minutes and do not automatically loop after errors (0.786857ms)
+✔ Reader custom counts support two through twenty and uniform sampling can choose unread before started (0.44549ms)
+✔ Reader finite budgets exclude unknown duration unless enabled and always reject archived completed and child records (0.448887ms)
+✔ Reader scan limits count fetched child records and expose truncation instead of scanning forever (0.553723ms)
+✔ Reader repeating cursors and malformed response shapes fail rather than return misleading complete data (0.826661ms)
+✔ Reader caches are account-specific without serializing tokens or full document content (0.351455ms)
+✔ Reader links reject embedded credentials and cache freshness expires using the configured clock (0.3488ms)
+✔ Reader pagination requests only the remaining scan allowance (0.648389ms)
+✔ Reader enforces a local twenty-request rolling limit without automatically retrying (4.333901ms)
+✔ Reader throttling honors Retry-After and rejects retries until the cooldown expires (30.939395ms)
+✔ Reader request deadlines still abort when the caller supplies its own signal (10.539872ms)
+ℹ tests 56
+ℹ suites 0
+ℹ pass 54
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 184.223226
+
+✖ failing tests:
+
+test at modules/reading/test/localization-service.test.mjs:7:1
+✖ Reader Spanish authored failures and destructive confirmation retain specific meaning (1.220656ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Invalid Reader response.'
+  - 'La respuesta de Reader no es válida.'
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/localization-service.test.mjs:8:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Invalid Reader response.',
+    expected: 'La respuesta de Reader no es válida.',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at modules/reading/test/localization-service.test.mjs:18:1
+✖ Reader rejects unrenderable pick timestamps before saving and keeps valid original timestamps (0.970369ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/localization-service.test.mjs:26:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /invalid/i,
+    operator: 'throws',
+    diff: 'simple'
+  }
+Error: reading browser discovery mismatch: expected 31, found 29

@@ -1,0 +1,289 @@
+--- a/index.html
++++ b/index.html
+@@ -158,4 +158,5 @@
+ 
+   <script src="app.js" defer></script>
++    <a class="button ghost" href="daily-migration/index.html">Export for Daily / Exportar para Daily</a>
+ </body>
+ </html>
+--- /dev/null
++++ b/daily-migration/index.html
+@@ -0,0 +1,37 @@
++<!doctype html>
++<html lang="en">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
++  <meta name="referrer" content="no-referrer">
++  <title>Reader export for Daily</title>
++  <style>
++    * { box-sizing: border-box; }
++    body { margin: 0; background: #f2f2f7; color: #1c1c1e; font: 1rem/1.6 system-ui, sans-serif; }
++    main { max-width: 42rem; margin: auto; padding: max(1rem, env(safe-area-inset-top)) 1rem 3rem; }
++    p { overflow-wrap: anywhere; }
++    h1 { line-height: 1.2; font-size: 2rem; }
++    button, select { font: inherit; padding: .7rem; border-radius: .7rem; border: 1px solid #8e8e93; }
++    button { margin: .5rem 0; width: 100%; color: #fff; background: #175cd3; }
++    button:disabled { opacity: .5; }
++    a { color: #175cd3; }
++    [hidden] { display: none; }
++    @media (prefers-color-scheme: dark) { body { background: #1c1c1e; color: #f2f2f7; } a { color: #8ebaff; } }
++  </style>
++</head>
++<body>
++  <main>
++    <label><span id="language-label">Language</span> <select id="language"><option value="en">English</option><option value="es">Español</option></select></label>
++    <h1 id="title">Export Reader for Daily</h1>
++    <p id="explain"></p>
++    <p id="privacy"></p>
++    <button id="preview" type="button">Preview saved data</button>
++    <p id="counts" aria-live="polite"></p>
++    <p id="remembered"></p>
++    <button id="download" type="button" disabled>Download migration backup</button>
++    <p id="status" role="status" aria-live="polite"></p>
++    <a id="back" href="../">Back to Reader</a>
++  </main>
++  <script type="module" src="./entry.js"></script>
++</body>
++</html>
+--- /dev/null
++++ b/daily-migration/entry.js
+@@ -0,0 +1,54 @@
++import { exportLegacyReader } from './export.js';
++
++const copy = {
++  en: { title: 'Export Reader for Daily', 'language-label': 'Language', preview: 'Preview saved preferences', download: 'Download migration backup', back: 'Back to Reader',
++    explain: 'Includes picker preferences and the optional remembered item. Import this file in Daily → Reader → Backups, then enter your token privately in Daily.',
++    privacy: 'Original preferences stay on this device. Tokens, caches and article bodies are excluded. Keep the original installation and this backup.',
++    counts: '{count} item(s) per pick.', remembered: 'Remembered item: {title}', none: 'No remembered item is included.',
++    invalid: 'Saved preferences or the remembered item are invalid or could not be read. Nothing was changed. Return to the original app to inspect its data.', downloaded: 'Migration backup downloaded. Original preferences and credentials were kept.' },
++  es: { title: 'Exportar Reader para Daily', 'language-label': 'Idioma', preview: 'Vista previa de preferencias', download: 'Descargar copia de migración', back: 'Volver a Reader',
++    explain: 'Incluye las preferencias y la lectura recordada opcional. Importa el archivo en Daily → Reader → Copias de seguridad e introduce tu token de forma privada en Daily.',
++    privacy: 'Las preferencias originales se conservan en este dispositivo. Se excluyen los tokens, cachés y cuerpos de artículos. Conserva la instalación original y esta copia.',
++    counts: '{count} elemento(s) por selección.', remembered: 'Lectura recordada: {title}', none: 'No se incluye ninguna lectura recordada.',
++    invalid: 'Las preferencias o la lectura recordada no son válidas o no se pudieron leer. No se ha cambiado nada. Vuelve a la aplicación original para revisar sus datos.', downloaded: 'Copia de migración descargada. Se conservaron las preferencias y credenciales originales.' },
++};
++const language = document.getElementById('language');
++const state = { file: null, message: '' };
++function draw() {
++  const text = copy[language.value];
++  document.documentElement.lang = language.value;
++  document.title = text.title;
++  for (const id of ['title', 'language-label', 'preview', 'download', 'back', 'explain', 'privacy']) document.getElementById(id).textContent = text[id];
++  document.getElementById('download').disabled = !state.file;
++  document.getElementById('status').textContent = text[state.message] ?? '';
++  const data = state.file ? JSON.parse(state.file) : null;
++  document.getElementById('counts').textContent = data ? text.counts.replace('{count}', data.settings.count) : '';
++  document.getElementById('remembered').textContent = '';
++  if (data) document.getElementById('remembered').textContent = data.lastItem ? text.remembered.replace('{title}', data.lastItem.title) : text.none;
++}
++function preview() {
++  state.file = null;
++  state.message = '';
++  try { state.file = exportLegacyReader(localStorage); }
++  catch { state.message = 'invalid'; }
++  draw();
++}
++function download() {
++  preview();
++  if (!state.file) return;
++  const url = URL.createObjectURL(new Blob([state.file], { type: 'application/json' }));
++  const link = document.createElement('a');
++  link.href = url;
++  link.download = 'reader-daily-migration.json';
++  document.body.append(link);
++  link.click();
++  link.remove();
++  setTimeout(() => URL.revokeObjectURL(url), 1000);
++  state.message = 'downloaded';
++  draw();
++}
++language.value = navigator.language.startsWith('es') ? 'es' : 'en';
++language.addEventListener('change', draw);
++document.getElementById('preview').addEventListener('click', preview);
++document.getElementById('download').addEventListener('click', download);
++draw();
+--- /dev/null
++++ b/daily-migration/export.js
+@@ -0,0 +1,36 @@
++import { DEFAULTS, parseLocations } from './config.js';
++import { validSettings, validDocument } from './validation.js';
++import { minimizeDocument } from './metadata.js';
++
++function object(value) { return value !== null && typeof value === 'object' && !Array.isArray(value); }
++function savedSettings(storage) {
++  const current = storage.getItem('readerPicker.settings.v2');
++  const raw = current === null ? storage.getItem('readerPicker.settings.v1') : current;
++  if (raw === null) return {};
++  const value = JSON.parse(raw);
++  if (!object(value)) throw new Error('Invalid original Reader preferences.');
++  return value;
++}
++function settingsFrom(storage) {
++  const saved = savedSettings(storage);
++  const settings = Object.fromEntries(Object.keys(DEFAULTS).map(key => [key, Object.hasOwn(saved, key) ? saved[key] : DEFAULTS[key]]));
++  for (const key of ['count', 'minutes', 'cacheMinutes', 'scanLimit']) settings[key] = Number(settings[key]);
++  if (!Array.isArray(settings.locations)) throw new Error('Invalid original Reader locations.');
++  settings.locations = parseLocations(settings.locations.join(',')) ?? [];
++  if (!validSettings(settings)) throw new Error('Invalid original Reader preferences.');
++  return settings;
++}
++function remembered(storage, enabled) {
++  if (!enabled) return null;
++  const raw = storage.getItem('readerPicker.lastItem.v1');
++  if (raw === null) return null;
++  const value = JSON.parse(raw);
++  if (value === null) return null;
++  const item = minimizeDocument(value);
++  if (!validDocument(item)) throw new Error('Invalid remembered Reader item.');
++  return item;
++}
++export function exportLegacyReader(storage) {
++  const settings = settingsFrom(storage);
++  return JSON.stringify({ app: 'reader-picker', schemaVersion: 1, settings, lastItem: remembered(storage, settings.rememberLastItem) }, null, 2);
++}
+--- /dev/null
++++ b/daily-migration/validation.js
+@@ -0,0 +1,48 @@
++import { validTimestamp } from './timestamps.js';
++import { DEFAULTS } from './config.js';
++import { validateReaderUrl } from './metadata.js';
++
++const locations = ['new', 'later', 'shortlist'];
++function integer(value, min, max) { return Number.isInteger(value) && value >= min && value <= max; }
++function keys(value, expected) { return value && typeof value === 'object' && Object.keys(value).every(key => expected.includes(key)); }
++function validLocations(value) { return Array.isArray(value) && value.length > 0 && value.length <= 3 && new Set(value).size === value.length && value.every(item => locations.includes(item)); }
++function validSwitches(value) { return ['updateUrlOnPick', 'autoOpenSingle', 'rememberLastItem', 'includeUnknown'].every(key => typeof value[key] === 'boolean'); }
++export function validSettings(value) {
++  if (!keys(value, Object.keys(DEFAULTS)) || !validLocations(value.locations) || !validSwitches(value)) return false;
++  return validLimits(value) && ['unfinished', 'started', 'unread'].includes(value.progress) && ['started-first', 'uniform'].includes(value.policy);
++}
++function validLimits(value) { return integer(value.count, 1, 20) && integer(value.minutes, 0, 10000) && integer(value.cacheMinutes, 1, 1440) && integer(value.scanLimit, 100, 2000); }
++export function validDocument(value) {
++  if (!value || typeof value.id !== 'string' || !value.id || !value.title) return false;
++  const expected = ['id', 'url', 'title', 'author', 'source', 'site_name', 'category', 'location', 'reading_progress', 'reading_time', 'word_count'];
++  if (!keys(value, expected) || !validateReaderUrl(value.url)) return false;
++  return ['title', 'author', 'source', 'site_name', 'category', 'location'].every(key => typeof value[key] === 'string') && validReading(value);
++}
++function nonnegative(value) { return Number.isFinite(value) && value >= 0; }
++function validTime(value) { return value === null || typeof value === 'string' || nonnegative(value); }
++function validReading(value) {
++  return validTime(value.reading_time) && nonnegative(value.word_count) && nonnegative(value.reading_progress) && value.reading_progress <= 1;
++}
++function validScan(value) {
++  if (value === undefined || value === null) return true;
++  return keys(value, ['scanned', 'truncated']) && (value.scanned === null || integer(value.scanned, 0, 6000)) && (value.truncated === null || typeof value.truncated === 'boolean');
++}
++function validSettingsKey(value) { try { return validSettings(JSON.parse(value)); } catch { return false; } }
++function validPickMetadata(value) {
++  if (!validTimestamp(value.selectedAt) || !validSettingsKey(value.settingsKey)) return false;
++  if (value.fetchedAt !== undefined && value.fetchedAt !== null && !validTimestamp(value.fetchedAt)) return false;
++  return validScan(value.scan);
++}
++function validCollection(value) { return Array.isArray(value) && value.length <= 20; }
++function validPicks(value) {
++  if (value === null) return true;
++  if (!keys(value, ['documents', 'selectedAt', 'settingsKey', 'fetchedAt', 'scan']) || !validCollection(value.documents)) return false;
++  if (!validPickMetadata(value)) return false;
++  return value.documents.every(validDocument) && new Set(value.documents.map(item => item.id)).size === value.documents.length;
++}
++export function initialReading() { return { settings: structuredClone(DEFAULTS), picks: null, lastItem: null }; }
++export function validReadingData(value) {
++  if (!keys(value, ['settings', 'picks', 'lastItem']) || !validSettings(value.settings)) return false;
++  if (!value.settings.rememberLastItem && value.lastItem !== null) return false;
++  return validPicks(value.picks) && (value.lastItem === null || validDocument(value.lastItem));
++}
+--- /dev/null
++++ b/daily-migration/config.js
+@@ -0,0 +1,45 @@
++export const DEFAULTS = Object.freeze({
++  locations: ['new', 'later', 'shortlist'], progress: 'unfinished', minutes: 10, count: 3,
++  cacheMinutes: 15, scanLimit: 500, updateUrlOnPick: false, autoOpenSingle: false, rememberLastItem: false,
++  policy: 'started-first', includeUnknown: false,
++});
++export function clampInt(value, min, max, fallback) {
++  if (value === null || value === undefined || value === '') return fallback;
++  const number = Number.parseInt(value, 10);
++  return Number.isFinite(number) ? Math.min(max, Math.max(min, number)) : fallback;
++}
++export function normalizeCount(raw, fallback) {
++  const number = Number(raw);
++  return Number.isInteger(number) && number >= 1 && number <= 20 ? number : fallback;
++}
++export function normalizeProgress(raw, fallback) { return ['unfinished', 'started', 'unread'].includes(raw) ? raw : fallback; }
++export function normalizeOpen(raw) { return ['auto', '1', 'true', 'yes'].includes(String(raw || '').toLowerCase()); }
++export function parseLocations(raw) {
++  if (!raw) return null;
++  const aliases = { inbox: 'new', new: 'new', later: 'later', shortlist: 'shortlist' };
++  const locations = raw.split(',').map(value => aliases[value.trim().toLowerCase()]).filter(Boolean);
++  return locations.length ? [...new Set(locations)].slice(0, 3) : null;
++}
++export function createConfig(location) {
++  function getBooleanParam(name, fallback) {
++    const raw = location.searchParams.get(name);
++    return raw === null ? fallback : ['1', 'true', 'yes', 'on'].includes(raw.toLowerCase());
++  }
++  function readConfigFromUrl(settings) {
++    const params = location.searchParams;
++    return {
++      ...settings, minutes: clampInt(params.get('minutes'), 0, 10000, settings.minutes),
++      count: normalizeCount(params.get('count'), settings.count), progress: normalizeProgress(params.get('progress'), settings.progress),
++      locations: parseLocations(params.get('locations')) || settings.locations,
++      open: params.has('open') ? normalizeOpen(params.get('open')) : Boolean(settings.autoOpenSingle),
++      refresh: getBooleanParam('refresh', false), scanLimit: clampInt(params.get('scan'), 100, 2000, settings.scanLimit),
++    };
++  }
++  function updatePickerUrl(config) {
++    location.search = '';
++    const values = { count: config.count, minutes: config.minutes, progress: config.progress, locations: config.locations.join(','), scan: config.scanLimit, run: 1 };
++    for (const [key, value] of Object.entries(values)) location.searchParams.set(key, String(value));
++    if (config.count === 1 && config.open) location.searchParams.set('open', 'auto');
++  }
++  return { getBooleanParam, readConfigFromUrl, updatePickerUrl, shouldAutoRunFromUrl: () => getBooleanParam('run', false) || getBooleanParam('auto', false) };
++}
+--- /dev/null
++++ b/daily-migration/metadata.js
+@@ -0,0 +1,37 @@
++export function normalizeProgressValue(value) { return Math.min(1, Math.max(0, Number(value) || 0)); }
++export function parseReadingMinutes(value, wordCount = 0) {
++  if (typeof value === 'number') return Number.isFinite(value) ? Math.max(0, value) : 0;
++  const match = String(value || '').match(/[\d.]+/);
++  if (match) return Math.max(0, Number(match[0]) || 0);
++  return wordMinutes(wordCount);
++}
++function wordMinutes(value) {
++  const words = Math.max(0, Number(value) || 0);
++  return words > 0 ? Math.max(1, Math.ceil(words / 238)) : 0;
++}
++export function getRemainingMinutes(doc) {
++  const total = parseReadingMinutes(doc.reading_time, doc.word_count);
++  if (total <= 0) return null;
++  return Math.max(1, Math.ceil(total * (1 - normalizeProgressValue(doc.reading_progress))));
++}
++export function validateReaderUrl(value) {
++  try {
++    const url = new URL(value);
++    if (url.username || url.password || url.port) return '';
++    return url.protocol === 'https:' && ['read.readwise.io', 'readwise.io'].includes(url.hostname) ? url.href : '';
++  } catch { return ''; }
++}
++function readingTime(value) { return ['number', 'string'].includes(typeof value) ? value : null; }
++export function minimizeDocument(doc) {
++  if (!doc || typeof doc !== 'object') return null;
++  const url = validateReaderUrl(doc.url);
++  if (!url) return null;
++  return {
++    id: String(doc.id || ''), url, ...textFields(doc),
++    reading_progress: normalizeProgressValue(doc.reading_progress),
++    reading_time: readingTime(doc.reading_time), word_count: Math.max(0, Number(doc.word_count) || 0),
++  };
++}
++function textFields(doc) {
++  return Object.fromEntries(['title', 'author', 'source', 'site_name', 'category', 'location'].map(key => [key, String(doc[key] || '')]));
++}
+--- /dev/null
++++ b/daily-migration/timestamps.js
+@@ -0,0 +1,3 @@
++export function validTimestamp(value) {
++  return Number.isFinite(value) && value >= 0 && value <= 8640000000000000;
++}

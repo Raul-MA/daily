@@ -1,0 +1,39 @@
+[WebServer] (node:24421) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:24433) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/updates.spec.js:23:1 › updates wait for unsaved work in another tab and then preserve settings across activation (6.0s)
+
+
+  1) tests/e2e/updates.spec.js:23:1 › updates wait for unsaved work in another tab and then preserve settings across activation 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('.daily-system')
+    Expected substring: "all open Daily tabs"
+    Received string:    "Update availableApply updateOn iPhone: Share → Add to Home Screen."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('.daily-system')
+        14 × locator resolved to <aside class="daily-system">…</aside>
+           - unexpected value "Update availableApply updateOn iPhone: Share → Add to Home Screen."
+
+
+      36 |     await expect(page.getByRole('button', { name: 'Apply update', exact: true })).toBeDisabled();
+      37 |     await apply.click();
+    > 38 |     await expect(other.locator('.daily-system')).toContainText('all open Daily tabs');
+         |                                                  ^
+      39 |     expect(await other.evaluate(async () => Boolean((await navigator.serviceWorker.ready).waiting))).toBe(true);
+      40 |     await expect(page.getByRole('textbox', { name: 'Unfinished work' })).toHaveValue('Keep this until saved');
+      41 |     await page.locator('#update-test-form').evaluate(form => { form.dataset.unsaved = 'false'; });
+        at /workspaces/daily/tests/e2e/updates.spec.js:38:50
+
+    Error Context: test-results/updates-updates-wait-for-u-27882--settings-across-activation/error-context.md
+
+  1 failed
+    tests/e2e/updates.spec.js:23:1 › updates wait for unsaved work in another tab and then preserve settings across activation 

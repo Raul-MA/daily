@@ -1,0 +1,89 @@
+Suite: games
+✔ game sessions snapshot names and configuration and allow only one active session (20.26586ms)
+✔ round scores preserve negatives and shared ties while invalid fractions do not save (2.160581ms)
+✔ removing the final round retains an editable zero round and sequential numbering (1.331384ms)
+✔ first to points always favors the higher score while lowest-score games retain their rule (1.620172ms)
+✔ competitive outcomes require every result and retain separate wins ties and losses (1.803925ms)
+✔ collaborative solo outcomes have no individual winners or competitive head to head (1.255202ms)
+✔ history archives referenced records and duration overrides control derived statistics (2.051207ms)
+✔ full game backups reject broken references duplicates and future major versions without mutation (2.242804ms)
+✔ games read without writes and preserve other modules while sharing explicit language changes (10.748073ms)
+✔ starting a game atomically registers its timestamp activity and retains unrelated countdowns (3.480906ms)
+✔ scores never restart game timing and finishing atomically completes the shared activity (5.194872ms)
+✔ game quota failures leave both the sessions and shared activities unchanged (1.754493ms)
+✔ game stale domain saves reject instead of overwriting a newer module state (2.047179ms)
+✔ game replacement previews preserve shared language and restore active timing with recovery (1.90308ms)
+✔ game future modules and stale import previews remain untouched (1.659255ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 100.290099
+[WebServer] (node:162014) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 24 tests using 1 worker
+
+(node:162027) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/games/e2e/gameplay-2.spec.js:4:1 › keeps history filters collapsed and summarizes active filters (1.9s)
+  ✓   2 modules/games/e2e/gameplay-2.spec.js:19:1 › starts enters edits and finishes a score session (2.1s)
+  ✓   3 modules/games/e2e/gameplay-2.spec.js:66:1 › opens completed game details without editing first (2.0s)
+  ✓   4 modules/games/e2e/gameplay-3.spec.js:7:1 › tracks session duration and game duration analytics (1.1s)
+  ✓   5 modules/games/e2e/gameplay-3.spec.js:34:1 › shows player average scores by game instead of blending scoring systems (990ms)
+  ✓   6 modules/games/e2e/gameplay-4.spec.js:7:1 › first to points ranks the highest live total as leader (972ms)
+  ✓   7 modules/games/e2e/gameplay-4.spec.js:19:1 › shows first to points target reached as a toast (5.3s)
+  ✓   8 modules/games/e2e/gameplay-4.spec.js:40:1 › records win loss tie results (1.4s)
+  ✓   9 modules/games/e2e/gameplay-4.spec.js:56:1 › preserves scoring settings while collaborative mode is enabled (1.0s)
+  ✓  10 modules/games/e2e/gameplay-4.spec.js:72:1 › records one team result and keeps collaborative stats separate (1.9s)
+  ✓  11 modules/games/e2e/gameplay.spec.js:3:1 › creates edits and archives a player (949ms)
+  ✓  12 modules/games/e2e/gameplay.spec.js:15:1 › creates edits and archives a game definition (947ms)
+  ✓  13 modules/games/e2e/gameplay.spec.js:27:1 › shows only scoring fields required by selected game mode (936ms)
+  ✓  14 modules/games/e2e/gameplay.spec.js:39:1 › hides game form while a session is active (1.3s)
+  ✓  15 modules/games/e2e/gameplay.spec.js:50:1 › hides play setup form while a session is active (1.5s)
+  ✓  16 modules/games/e2e/gameplay.spec.js:60:1 › excludes archived players from new play setup without deleting history (1.8s)
+  ✓  17 modules/games/e2e/gameplay.spec.js:88:1 › shows app messages as dismissible fixed toasts (1.1s)
+  ✓  18 modules/games/e2e/import-export.spec.js:5:1 › exports full JSON and replace-import restores data (2.0s)
+  ✓  19 modules/games/e2e/import-export.spec.js:33:1 › rejects malformed nested backup data without replacing local data (1.1s)
+  ✓  20 modules/games/e2e/settings.spec.js:4:1 › persists theme and language settings (1.6s)
+  ✘  21 modules/games/e2e/settings.spec.js:15:1 › shows backup reminder before a successful export (5.8s)
+(node:163249) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  22 modules/games/e2e/settings.spec.js:24:1 › shows backup reminder age when the last export is stale (1.6s)
+  ✓  23 modules/games/e2e/smoke.spec.js:3:1 › loads mobile-first primary navigation (836ms)
+  ✓  24 modules/games/e2e/smoke.spec.js:10:1 › registers service worker path over http (716ms)
+
+
+  1) modules/games/e2e/settings.spec.js:15:1 › shows backup reminder before a successful export ────
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByTestId('export-button')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" with timeout 5000ms
+      - waiting for getByTestId('export-button')
+        14 × locator resolved to <button type="button" data-testid="export-button">Export data</button>
+           - unexpected value "inactive"
+
+
+      19 |     await page.getByTestId(testIds.appToast).click();
+      20 |     await expect(page).toHaveURL(process.env.DAILY_BASELINE_URL ? /#\/settings$/ : /#\/games\/settings$/);
+    > 21 |     await expect(page.getByTestId(testIds.exportButton)).toBeFocused();
+         |                                                          ^
+      22 |     await expect(page.getByTestId(testIds.backupReminder)).toBeVisible();
+      23 | });
+      24 | test("shows backup reminder age when the last export is stale", async ({ page }) => {
+        at /workspaces/daily/modules/games/e2e/settings.spec.js:21:58
+
+    Error Context: test-results/settings-shows-backup-reminder-before-a-successful-export/error-context.md
+
+  1 failed
+    modules/games/e2e/settings.spec.js:15:1 › shows backup reminder before a successful export ─────
+  23 passed (44.5s)

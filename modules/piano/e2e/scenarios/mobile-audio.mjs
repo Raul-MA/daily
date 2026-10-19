@@ -1,3 +1,4 @@
+import { hrefFor, baseline } from '../paths.mjs';
 import assert from 'node:assert/strict';
 export async function checkAudio(state, path) {
     const { mobilePage, mobileRoute } = state;
@@ -18,7 +19,8 @@ export async function checkAudio(state, path) {
     await mobilePage.waitForTimeout(3500);
     assert.equal(await mobilePage.locator('.ear-training-status').textContent(), expectedStatus, 'next prompt cancels previous audio state updates');
     await mobilePage.locator('.play-btn').tap();
-    await mobilePage.locator('.nav-link[href="#/library"]').tap();
+    if (!baseline) await mobilePage.getByRole('button', { name: 'Apps', exact: true }).tap();
+    await mobilePage.locator(`.nav-link[href="${hrefFor('/library')}"]`).tap();
     await mobilePage.locator('.library-grid').waitFor();
     assert.equal(await mobilePage.evaluate(() => window.__testAudio.every(audio => audio.paused)), true, 'leaving ear training stops audio');
     await mobileRoute(path, '.exercise-card');

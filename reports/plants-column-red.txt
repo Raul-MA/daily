@@ -1,0 +1,31 @@
+[WebServer] (node:142080) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:142109) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/plants/e2e/plants.spec.js:173:1 › plant styles stay scoped and invalid imports leave the current plants intact (2.4s)
+
+
+  1) modules/plants/e2e/plants.spec.js:173:1 › plant styles stay scoped and invalid imports leave the current plants intact
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 928
+    Received:   371.21875
+
+      30 |     const first = await cards.nth(0).boundingBox();
+      31 |     const second = await cards.nth(1).boundingBox();
+    > 32 |     expect(first.y).toBeGreaterThan(title.y + title.height);
+         |                     ^
+      33 |     expect(second.y).toBeGreaterThanOrEqual(first.y + first.height);
+      34 |     expect(second.x).toBe(first.x);
+      35 |     expect(second.width).toBe(first.width);
+        at singleColumn (/workspaces/daily/modules/plants/e2e/plants.spec.js:32:21)
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:180:3
+
+    Error Context: test-results/plants-plant-styles-stay-s-5a8d9-e-the-current-plants-intact/error-context.md
+
+  1 failed
+    modules/plants/e2e/plants.spec.js:173:1 › plant styles stay scoped and invalid imports leave the current plants intact

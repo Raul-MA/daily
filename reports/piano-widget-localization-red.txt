@@ -1,0 +1,35 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 modules/piano/e2e/localization.spec.js:9:1 › piano Spanish lessons and running prompts preserve canonical English records and timestamps (10.0s)
+
+
+  1) modules/piano/e2e/localization.spec.js:9:1 › piano Spanish lessons and running prompts preserve canonical English records and timestamps 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-widget=activities]')
+    Expected substring: "Encuentra terceras y quintas"
+    Received string:    "En marchaFind thirds and fifths8:30"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-widget=activities]')
+        14 × locator resolved to <section class="dashboard-card" data-widget="activities" aria-labelledby="widget-activities">…</section>
+           - unexpected value "En marchaFind thirds and fifths8:30"
+
+
+      25 |   expect(await saved(page)).toBe(before);
+      26 |   await page.getByRole('link', { name: 'Inicio', exact: true }).click();
+    > 27 |   await expect(page.locator('[data-widget=activities]')).toContainText('Encuentra terceras y quintas');
+         |                                                          ^
+      28 |   await expect(page.locator('[data-piano-practice]')).toContainText('Encuentra terceras y quintas');
+      29 |   expect(await saved(page)).toBe(before);
+      30 |   await page.goto('./#/piano/learn?lesson=interval-foundations');
+        at /workspaces/daily/modules/piano/e2e/localization.spec.js:27:58
+
+    Error Context: test-results/localization-piano-Spanish-75838-lish-records-and-timestamps/error-context.md
+
+  1 failed
+    modules/piano/e2e/localization.spec.js:9:1 › piano Spanish lessons and running prompts preserve canonical English records and timestamps 

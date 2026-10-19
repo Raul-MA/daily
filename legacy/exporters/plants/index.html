@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <title>Plant export for Daily</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f2f2f7; color: #1c1c1e; font: 1rem/1.6 system-ui, sans-serif; }
+    main { max-width: 42rem; margin: auto; padding: max(1rem, env(safe-area-inset-top)) 1rem 3rem; }
+    p { overflow-wrap: anywhere; }
+    h1 { line-height: 1.2; font-size: 2rem; }
+    button, select { font: inherit; padding: .7rem; border-radius: .7rem; border: 1px solid #8e8e93; }
+    button { margin: .5rem 0; width: 100%; color: #fff; background: #175cd3; }
+    button:disabled { opacity: .5; }
+    a { color: #175cd3; }
+    [hidden] { display: none; }
+    @media (prefers-color-scheme: dark) { body { background: #1c1c1e; color: #f2f2f7; } a { color: #8ebaff; } }
+  </style>
+</head>
+<body>
+  <main>
+    <label><span id="language-label">Language</span> <select id="language"><option value="en">English</option><option value="es">Español</option></select></label>
+    <h1 id="title">Export plants for Daily</h1>
+    <p id="explain"></p>
+    <p id="privacy"></p>
+    <button id="preview" type="button">Preview saved data</button>
+    <p id="counts" aria-live="polite"></p>
+    <p id="project"></p>
+    <p id="recovery" hidden></p>
+    <button id="download" type="button" disabled>Download migration backup</button>
+    <p id="status" role="status" aria-live="polite"></p>
+    <a id="back" href="../">Back to Plants</a>
+  </main>
+  <script type="module" src="./entry.js"></script>
+</body>
+</html>

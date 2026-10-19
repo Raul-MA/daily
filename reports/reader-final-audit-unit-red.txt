@@ -1,0 +1,73 @@
+✖ Reader Spanish authored failures and destructive confirmation retain specific meaning (8.342304ms)
+✖ Reader rejects unrenderable pick timestamps before saving and keeps valid original timestamps (5.750982ms)
+✖ Reader discards unrenderable and future disposable cache timestamps without replacing saved records (1.923606ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 125.229663
+
+✖ failing tests:
+
+test at modules/reading/test/localization-service.test.mjs:10:1
+✖ Reader Spanish authored failures and destructive confirmation retain specific meaning (8.342304ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Invalid Reader response.'
+  - 'La respuesta de Reader no es válida.'
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/localization-service.test.mjs:11:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Invalid Reader response.',
+    expected: 'La respuesta de Reader no es válida.',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at modules/reading/test/localization-service.test.mjs:21:1
+✖ Reader rejects unrenderable pick timestamps before saving and keeps valid original timestamps (5.750982ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/localization-service.test.mjs:29:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /invalid/i,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at modules/reading/test/localization-service.test.mjs:36:1
+✖ Reader discards unrenderable and future disposable cache timestamps without replacing saved records (1.923606ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  [] !== null
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/localization-service.test.mjs:46:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

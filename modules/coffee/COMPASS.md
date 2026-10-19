@@ -1,9 +1,10 @@
-# coffee Compass
+# Coffee Compass
 
 ## Start Here
 
 - [Root rules](../../AGENTS.md).
 - [Migration inventory](../../reports/migration-test-inventory.md).
+- [Storage and workflows](docs/behavior.md): shared language, legacy import rules, preview/recovery, drafts and routes.
 
 ## Commands
 
@@ -11,9 +12,14 @@
 
 ## Key Files
 
-- `test/` and `e2e/`: tests copied before implementation.
-- `src/`: reserved for module implementation.
+- `src/service.js`, `src/imports.js`, `src/validation.js`: shared document and import boundary.
+- `src/backend/features/`: retained domain API; `src/frontend/app/`: scoped original screens; `src/view.js`: shell mount.
+- `test/` and `e2e/`: source characterization, service/localization contracts and mounted workflows; the migration inventory owns assertion provenance.
 
 ## Non-Obvious Patterns
 
-- Missing functionality must fail tests; this module is unfinished.
+- First tools Save/Skip saves settings plus the original starter bean in one root replacement; failed writes retain the setup form.
+- Restoring history drafts must refresh filtered results; notification remounts preserve their expiry deadline.
+- Navigation never creates the original starter bean; explicit tools Save/Skip does.
+- Mounted storage is always bound to Daily. Legacy standalone storage is only used for source characterization.
+- Imports retain shared language and validate references against the final merged/replaced data.

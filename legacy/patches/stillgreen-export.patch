@@ -1,0 +1,274 @@
+--- a/index.html
++++ b/index.html
+@@ -84,4 +84,5 @@
+ 
+   <script type="module" src="./app.js"></script>
++    <a class="button ghost" href="daily-migration/index.html">Export for Daily / Exportar para Daily</a>
+ </body>
+ </html>
+--- /dev/null
++++ b/daily-migration/index.html
+@@ -0,0 +1,38 @@
++<!doctype html>
++<html lang="en">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
++  <meta name="referrer" content="no-referrer">
++  <title>Plant export for Daily</title>
++  <style>
++    * { box-sizing: border-box; }
++    body { margin: 0; background: #f2f2f7; color: #1c1c1e; font: 1rem/1.6 system-ui, sans-serif; }
++    main { max-width: 42rem; margin: auto; padding: max(1rem, env(safe-area-inset-top)) 1rem 3rem; }
++    p { overflow-wrap: anywhere; }
++    h1 { line-height: 1.2; font-size: 2rem; }
++    button, select { font: inherit; padding: .7rem; border-radius: .7rem; border: 1px solid #8e8e93; }
++    button { margin: .5rem 0; width: 100%; color: #fff; background: #175cd3; }
++    button:disabled { opacity: .5; }
++    a { color: #175cd3; }
++    [hidden] { display: none; }
++    @media (prefers-color-scheme: dark) { body { background: #1c1c1e; color: #f2f2f7; } a { color: #8ebaff; } }
++  </style>
++</head>
++<body>
++  <main>
++    <label><span id="language-label">Language</span> <select id="language"><option value="en">English</option><option value="es">Español</option></select></label>
++    <h1 id="title">Export plants for Daily</h1>
++    <p id="explain"></p>
++    <p id="privacy"></p>
++    <button id="preview" type="button">Preview saved data</button>
++    <p id="counts" aria-live="polite"></p>
++    <p id="project"></p>
++    <p id="recovery" hidden></p>
++    <button id="download" type="button" disabled>Download migration backup</button>
++    <p id="status" role="status" aria-live="polite"></p>
++    <a id="back" href="../">Back to Plants</a>
++  </main>
++  <script type="module" src="./entry.js"></script>
++</body>
++</html>
+--- /dev/null
++++ b/daily-migration/entry.js
+@@ -0,0 +1,60 @@
++import { exportLegacyPlants } from './export.js';
++
++const copy = {
++  en: { title: 'Export plants for Daily', 'language-label': 'Language', preview: 'Preview saved data', download: 'Download migration backup', back: 'Back to Plants',
++    explain: 'Includes plant records, care history, manual care dates and Things preferences. Import this file in Daily → Plants → Plant settings.',
++    privacy: 'Original records and recovery copies stay on this device. Other apps and credentials are excluded. Keep the original installation and this backup.',
++    counts: '{plants} plant(s).', project: 'Things reminders: {project}', off: 'Things reminders are off.', recovery: 'This export reads a saved recovery copy because the primary records could not be read. Original storage is kept unchanged.',
++    invalid: 'Saved data is invalid, unsupported or could not be read. Nothing was changed. Return to the original app to inspect its data.', downloaded: 'Migration backup downloaded. Original records and preferences were kept.' },
++  es: { title: 'Exportar plantas para Daily', 'language-label': 'Idioma', preview: 'Vista previa de datos guardados', download: 'Descargar copia de migración', back: 'Volver a Plantas',
++    explain: 'Incluye las plantas, historial de cuidados, fechas manuales y preferencias de Things. Importa el archivo en Daily → Plantas → Ajustes de plantas.',
++    privacy: 'Los registros originales y las copias de recuperación se conservan en este dispositivo. Se excluyen otras aplicaciones y credenciales. Conserva la instalación original y esta copia.',
++    counts: '{plants} planta(s).', project: 'Recordatorios de Things: {project}', off: 'Los recordatorios de Things están desactivados.', recovery: 'Se exporta una copia de recuperación guardada porque no se pudieron leer los registros principales. El almacenamiento original se conserva sin cambios.',
++    invalid: 'Los datos guardados no son válidos o compatibles, o no se pudieron leer. No se ha cambiado nada. Vuelve a la aplicación original para revisar sus datos.', downloaded: 'Copia de migración descargada. Se conservaron los registros y preferencias originales.' },
++};
++const language = document.getElementById('language');
++const state = { file: null, message: '' };
++function drawData(text, data) {
++  document.getElementById('counts').textContent = data ? text.counts.replace('{plants}', data.plants.length) : '';
++  document.getElementById('project').textContent = '';
++  document.getElementById('recovery').hidden = true;
++  if (!data) return;
++  document.getElementById('project').textContent = data.things.enabled ? text.project.replace('{project}', data.things.project) : text.off;
++  document.getElementById('recovery').textContent = text.recovery;
++  document.getElementById('recovery').hidden = !data.recoverySource || data.recoverySource === 'plantTracker_plants';
++}
++function draw() {
++  const text = copy[language.value];
++  document.documentElement.lang = language.value;
++  document.title = text.title;
++  for (const id of ['title', 'language-label', 'preview', 'download', 'back', 'explain', 'privacy']) document.getElementById(id).textContent = text[id];
++  document.getElementById('download').disabled = !state.file;
++  document.getElementById('status').textContent = text[state.message] ?? '';
++  drawData(text, state.file ? JSON.parse(state.file) : null);
++}
++function preview() {
++  state.file = null;
++  state.message = '';
++  try { state.file = exportLegacyPlants(localStorage); }
++  catch { state.message = 'invalid'; }
++  draw();
++}
++function download() {
++  preview();
++  if (!state.file) return;
++  const url = URL.createObjectURL(new Blob([state.file], { type: 'application/json' }));
++  const link = document.createElement('a');
++  link.href = url;
++  link.download = 'plants-daily-migration.json';
++  document.body.append(link);
++  link.click();
++  link.remove();
++  setTimeout(() => URL.revokeObjectURL(url), 1000);
++  state.message = 'downloaded';
++  draw();
++}
++language.value = navigator.language.startsWith('es') ? 'es' : 'en';
++language.addEventListener('change', draw);
++document.getElementById('preview').addEventListener('click', preview);
++document.getElementById('download').addEventListener('click', download);
++draw();
+--- /dev/null
++++ b/daily-migration/export.js
+@@ -0,0 +1,36 @@
++import { parseDocument } from './envelope.js';
++
++class UnsupportedPlantVersion extends Error {
++  constructor() { super('Unsupported plant storage version.'); }
++}
++function plantsFrom(raw) {
++  const value = JSON.parse(raw);
++  if (value?.schemaVersion !== undefined && value.schemaVersion !== 1) throw new UnsupportedPlantVersion();
++  return parseDocument(raw).document.plants;
++}
++function readPlants(storage) {
++  let invalid = false;
++  for (const key of ['plantTracker_plants', 'plantTracker_plants_pending', 'plantTracker_plants_backup_1', 'plantTracker_plants_backup_2']) {
++    const raw = storage.getItem(key);
++    if (raw === null) continue;
++    try { return { plants: plantsFrom(raw), recoverySource: key }; }
++    catch (error) {
++      if (error instanceof UnsupportedPlantVersion) throw error;
++      invalid = true;
++    }
++  }
++  if (invalid) throw new Error('No readable plant recovery. Original records were kept.');
++  return { plants: [], recoverySource: null };
++}
++function readThings(storage) {
++  const raw = storage.getItem('stillgreen_things_settings');
++  if (raw === null) return { enabled: false, project: '' };
++  const value = JSON.parse(raw);
++  if (!value || typeof value.enabled !== 'boolean' || typeof value.project !== 'string') throw new Error('Invalid Things settings.');
++  if (value.enabled && !value.project.trim()) throw new Error('Invalid enabled Things project.');
++  return { enabled: value.enabled, project: value.project };
++}
++export function exportLegacyPlants(storage) {
++  const data = readPlants(storage);
++  return JSON.stringify({ app: 'stillgreen', version: 1, ...data, things: readThings(storage) }, null, 2);
++}
+--- /dev/null
++++ b/daily-migration/validation.js
+@@ -0,0 +1,64 @@
++import { CARE_TYPES, TASK_TYPES } from './constants.js';
++
++export function isObject(value) { return value !== null && typeof value === 'object' && !Array.isArray(value); }
++export function isString(value, { required = false, max = 10000 } = {}) {
++  return typeof value === 'string' && (!required || value.trim().length > 0) && value.length <= max;
++}
++export function isSafeId(value) { return isString(value, { required: true, max: 200 }) && /^[A-Za-z0-9_-]+$/.test(value); }
++export function isValidDate(value) { return typeof value === 'string' && value.length <= 40 && !Number.isNaN(Date.parse(value)); }
++export function isNumberInRange(value, min, max) { return typeof value === 'number' && Number.isFinite(value) && value >= min && value <= max; }
++function optional(value, validate) { return value == null || validate(value); }
++function month(value) { return Number.isInteger(value) && isNumberInRange(value, 1, 12); }
++
++export function validateSeason(season, intervalKey, nullable = false) {
++  if (!isObject(season) || !month(season.startMonth) || !month(season.endMonth)) return false;
++  const value = season[intervalKey];
++  if (nullable && value === null) return true;
++  return isNumberInRange(value, 1, intervalKey === 'intervalDays' ? 365 : 52);
++}
++
++function seasonList(value, type) {
++  const key = type === 'watering' ? 'intervalDays' : 'intervalWeeks';
++  return Array.isArray(value) && value.every(season => validateSeason(season, key, type === 'fertilizer'));
++}
++
++function dueOverrides(value) {
++  return isObject(value) && Object.entries(value).every(([type, date]) => TASK_TYPES.has(type) && isValidDate(date));
++}
++
++export function validateSchedule(schedule) {
++  if (!isObject(schedule)) return false;
++  const ranges = [['wateringIntervalDays', 365], ['soilIntervalMonths', 120], ['fertilizerIntervalWeeks', 52]];
++  const validRanges = ranges.every(([key, max]) => optional(schedule[key], value => isNumberInRange(value, 1, max)));
++  return validRanges && optional(schedule.wateringSeasons, value => seasonList(value, 'watering'))
++    && optional(schedule.fertilizerSeasons, value => seasonList(value, 'fertilizer'))
++    && optional(schedule.nextDueOverrides, dueOverrides);
++}
++
++export function validateCareEntry(entry) {
++  return isObject(entry) && isSafeId(entry.id) && CARE_TYPES.has(entry.type) && isValidDate(entry.date)
++    && optional(entry.note, isString) && optional(entry.careType, type => TASK_TYPES.has(type));
++}
++
++function validateIdentity(plant) {
++  if (!isSafeId(plant.id) || !isString(plant.name, { required: true, max: 500 })) return false;
++  const fields = ['commonName', 'species', 'location', 'notes', 'templateId'];
++  return fields.every(key => optional(plant[key], isString)) && optional(plant.difficulty, value => isNumberInRange(value, 0, 5));
++}
++
++export function validatePlant(plant) {
++  if (!isObject(plant) || !validateIdentity(plant) || !isValidDate(plant.dateAdded)) return false;
++  if (!validateSchedule(plant.schedule) || !Array.isArray(plant.careLog)) return false;
++  return plant.careLog.every(validateCareEntry) && new Set(plant.careLog.map(entry => entry.id)).size === plant.careLog.length;
++}
++
++export function validatePlants(plants) {
++  if (!Array.isArray(plants)) throw new Error('Formato inválido: se esperaba una lista de plantas');
++  const ids = new Set();
++  for (const plant of plants) {
++    if (!validatePlant(plant)) throw new Error('El respaldo contiene una planta o registro inválido');
++    if (ids.has(plant.id)) throw new Error('El respaldo contiene identificadores de planta duplicados');
++    ids.add(plant.id);
++  }
++  return plants;
++}
+--- /dev/null
++++ b/daily-migration/constants.js
+@@ -0,0 +1,9 @@
++export const KEY = 'plantTracker_plants';
++export const PENDING_KEY = 'plantTracker_plants_pending';
++export const BACKUP_KEYS = ['plantTracker_plants_backup_1', 'plantTracker_plants_backup_2'];
++export const CORRUPT_KEY = 'plantTracker_plants_corrupt';
++export const BACKUP_META_KEY = 'plantTracker_backup_meta';
++export const STORAGE_META_KEY = 'plantTracker_storage_meta';
++export const SCHEMA_VERSION = 1;
++export const CARE_TYPES = new Set(['watering', 'soil', 'fertilizer', 'note', 'skip', 'reschedule']);
++export const TASK_TYPES = new Set(['watering', 'soil', 'fertilizer']);
+--- /dev/null
++++ b/daily-migration/envelope.js
+@@ -0,0 +1,41 @@
++import { SCHEMA_VERSION } from './constants.js';
++import { isObject, isValidDate, validatePlants } from './validation.js';
++
++export function checksum(text) {
++  let hash = 0x811c9dc5;
++  for (let i = 0; i < text.length; i += 1) {
++    hash ^= text.charCodeAt(i);
++    hash = Math.imul(hash, 0x01000193);
++  }
++  return (hash >>> 0).toString(16).padStart(8, '0');
++}
++
++export function makeDocument(plants, revision = 1) {
++  const payload = JSON.stringify(plants);
++  return {
++    schemaVersion: SCHEMA_VERSION,
++    revision,
++    updatedAt: new Date().toISOString(),
++    checksum: checksum(payload),
++    plants,
++  };
++}
++
++export function parseDocument(raw) {
++  const value = JSON.parse(raw);
++  if (Array.isArray(value)) {
++    validatePlants(value);
++    return { document: makeDocument(value), legacy: true };
++  }
++  if (!validEnvelope(value)) throw new Error('Formato de almacenamiento desconocido');
++  validatePlants(value.plants);
++  if (checksum(JSON.stringify(value.plants)) !== value.checksum) {
++    throw new Error('La verificación del almacenamiento no coincide');
++  }
++  return { document: value, legacy: false };
++}
++
++function validEnvelope(value) {
++  if (!isObject(value) || value.schemaVersion !== SCHEMA_VERSION) return false;
++  return Number.isInteger(value.revision) && value.revision >= 1 && isValidDate(value.updatedAt) && typeof value.checksum === 'string';
++}

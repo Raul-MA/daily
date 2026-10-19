@@ -1,0 +1,31 @@
+[WebServer] (node:47431) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:47444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/platform.spec.js:68:1 › app backgrounds fill the viewport when switching apps (2.1s)
+
+
+  1) tests/e2e/platform.spec.js:68:1 › app backgrounds fill the viewport when switching apps ───────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      25 |   const content = page.locator('[data-module="piano"] #page-content');
+      26 |   await expect(content.locator('h1')).toBeVisible();
+    > 27 |   expect(await content.evaluate(node => node.scrollHeight <= node.clientHeight)).toBe(true);
+         |                                                                                  ^
+      28 |   await content.hover();
+      29 |   await page.mouse.wheel(0, 500);
+      30 |   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
+        at pianoScrollsWithPage (/workspaces/daily/tests/e2e/platform.spec.js:27:82)
+        at /workspaces/daily/tests/e2e/platform.spec.js:85:30
+
+    Error Context: test-results/platform-app-backgrounds-f-22681-iewport-when-switching-apps/error-context.md
+
+  1 failed
+    tests/e2e/platform.spec.js:68:1 › app backgrounds fill the viewport when switching apps ────────

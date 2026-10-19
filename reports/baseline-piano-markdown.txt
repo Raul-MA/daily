@@ -1,0 +1,12 @@
+✔ piano Markdown retains heading emphasis code links and Unicode teaching text (1.887936ms)
+✔ piano Markdown preserves tables blockquotes and escaped code fences (0.917925ms)
+✔ piano Markdown keeps paragraph list and rule boundaries without dropping ordinary pipes (0.586195ms)
+✔ piano Markdown handles blank input and detects an unconsumed malformed heading (0.686813ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.204202

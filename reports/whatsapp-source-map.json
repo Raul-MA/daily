@@ -1,0 +1,90 @@
+{
+  "commit": "941d4cdb71dc38c4512bea836d4292dd8c96e541",
+  "status": "local acceptance: 12 unit / nine browser including legacy exporter; prior combined-backup all-scope checkpoint green at nine/nine; physical handoff/device and old-app release deferred",
+  "files": [
+    {
+      "source": "schedule-whatsapp/README.md",
+      "sha256": "c8ab943ada0560325ee429f52996cdc29c58c94814dda24eb49e08f4ee8e56bc",
+      "destinations": [
+        "modules/whatsapp/docs/behavior.md"
+      ]
+    },
+    {
+      "source": "schedule-whatsapp/app.js",
+      "sha256": "85598f4fa28ef6da3453978472625ebf5a9695c4af8620c7837a797e6d981612",
+      "destinations": [
+        "modules/whatsapp/src/app.js",
+        "modules/whatsapp/src/controller.js",
+        "modules/whatsapp/src/view.js",
+        "modules/whatsapp/src/service.js",
+        "modules/whatsapp/src/validation.js",
+        "modules/whatsapp/src/i18n.js"
+      ]
+    },
+    {
+      "source": "schedule-whatsapp/icons/apple-touch-icon.png",
+      "sha256": "fe4769536fac0d655740b8870e1dedbfe07ecf6320b19c50f5f6e97ea3c27370",
+      "replacement": "shared Daily install assets/worker; no private installation"
+    },
+    {
+      "source": "schedule-whatsapp/icons/icon-192.png",
+      "sha256": "6191a88519d2760015e5e0e19c70ed2d86f0673441b072c039cdf2cc7453d1bc",
+      "replacement": "shared Daily install assets/worker; no private installation"
+    },
+    {
+      "source": "schedule-whatsapp/icons/icon-512.png",
+      "sha256": "e7087179a05ef42ed66193ddd1cb53658c4d470edad76bb9aa96647b7c765b5f",
+      "replacement": "shared Daily install assets/worker; no private installation"
+    },
+    {
+      "source": "schedule-whatsapp/index.html",
+      "sha256": "7cfdb6d06d68a5f3471f47a771b2bcace99a5177ba64609b980a64f50a508117",
+      "destinations": [
+        "modules/whatsapp/src/markup.js",
+        "modules/whatsapp/src/view.js"
+      ]
+    },
+    {
+      "source": "schedule-whatsapp/manifest.webmanifest",
+      "sha256": "a42ea6a4110f641ece2cfec1f3bd9a2349b2b0bf90da70a0d7a3bc9f516b55a9",
+      "replacement": "shared Daily install assets/worker; no private installation"
+    },
+    {
+      "source": "schedule-whatsapp/style.css",
+      "sha256": "1c5f59717a379d9cb8a611ab8eb25ff9ccfd4ec1c0452496b817c28c1e51b9e9",
+      "destinations": [
+        "modules/whatsapp/src/style.css"
+      ]
+    },
+    {
+      "source": "schedule-whatsapp/sw.js",
+      "sha256": "76832f5d23f7667b3b6d491b0704b116f46f41c8d93afa58ebe525ff0aaecf34",
+      "replacement": "shared Daily install assets/worker; no private installation"
+    },
+    {
+      "source": "schedule-whatsapp/tests.js",
+      "sha256": "1cfd5b154bee555df780a7548b317794a4a11f0c9f11a29d603b8cc338386c0b",
+      "destinations": [
+        "modules/whatsapp/test/tests.cjs",
+        "modules/whatsapp/test/support/native.cjs"
+      ]
+    }
+  ],
+  "newContracts": [
+    "modules/whatsapp/test/service.test.mjs",
+    "modules/whatsapp/e2e/whatsapp.spec.js",
+    "modules/whatsapp/e2e/source.spec.js"
+  ],
+  "newFeatures": [
+    "modules/whatsapp/src/imports.js",
+    "modules/whatsapp/src/backup-ui.js"
+  ],
+  "legacyExport": {
+    "directory": "legacy/exporters/whatsapp",
+    "patch": "legacy/patches/schedule-whatsapp-export.patch",
+    "unitContracts": 3,
+    "browserContracts": 1,
+    "sourceModified": false,
+    "release": "deferred"
+  }
+}

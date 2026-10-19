@@ -1,0 +1,123 @@
+Suite: coffee
+✔ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (10.665698ms)
+✔ drink type changes calculate composition and clear irrelevant water and milk fields (2.41215ms)
+✔ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (1.424928ms)
+✔ beans referenced by drinks cannot be deleted while unused beans can be removed (1.894876ms)
+✔ coffee filters and insights retain scored and unscored drink semantics (2.591845ms)
+✔ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (1.596619ms)
+✔ legacy replacement resets setup and normalizes absent drink composition fields (1.73674ms)
+✔ unsupported coffee backups and invalid bean input leave existing records unchanged (1.037666ms)
+✔ coffee reads create no records and saves preserve unrelated shared modules (4.758357ms)
+✔ explicit coffee language changes commit with global language atomically (0.843644ms)
+✔ coffee imports preserve shared language and validate merged bean references (1.927055ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (1.233552ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (1.299855ms)
+✔ coffee rejects a future module payload without silently replacing it (0.652107ms)
+✔ coffee import previews are read-only and cancel leaves the current root intact (0.994015ms)
+✔ coffee import confirmation rejects stale previews and retains recovery on replacement (1.074785ms)
+✔ coffee malformed nested records and invalid settings fail before any shared write (2.578801ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 75.465502
+[WebServer] (node:129866) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 28 tests using 1 worker
+
+(node:129878) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/coffee/e2e/backup.spec.js:4:1 › legacy imports keep merge tools and trigger setup after replace (1.4s)
+  ✓   2 modules/coffee/e2e/backup.spec.js:60:1 › exports data and imports merge, replace, and invalid backups (1.6s)
+  ✓   3 modules/coffee/e2e/history-detail.spec.js:3:1 › sorts, filters, opens, edits, cancels, and deletes history entries (1.7s)
+  ✓   4 modules/coffee/e2e/history-detail.spec.js:57:1 › switches history between compact and detailed views and remembers the choice (1.4s)
+  ✓   5 modules/coffee/e2e/history-detail.spec.js:80:1 › compact history rows fit on mobile (871ms)
+  ✓   6 modules/coffee/e2e/history-detail.spec.js:93:1 › new entries created through the UI are listed in history (1.7s)
+  ✓   7 modules/coffee/e2e/insights.spec.js:3:1 › shows empty insights and updates metrics from stored drinks (1.2s)
+  ✓   8 modules/coffee/e2e/new-shot.spec.js:3:1 › creates a complete espresso drink, previews ratio, and persists it (2.0s)
+  ✓   9 modules/coffee/e2e/new-shot.spec.js:26:1 › creates an americano with water to coffee ratio (1.5s)
+  ✓  10 modules/coffee/e2e/new-shot.spec.js:40:1 › creates a milk drink and clears hidden composition fields after type switch (1.5s)
+  ✓  11 modules/coffee/e2e/new-shot.spec.js:61:1 › manage button routes to settings and invalid drink shows validation toast (1.0s)
+  ✓  12 modules/coffee/e2e/new-shot.spec.js:73:1 › clear button empties the selected bean (775ms)
+  ✓  13 modules/coffee/e2e/new-shot.spec.js:83:1 › score slider can be set after skipping (1.7s)
+  ✓  14 modules/coffee/e2e/new-shot.spec.js:95:1 › taste info buttons explain the rating fields (786ms)
+  ✓  15 modules/coffee/e2e/offline.spec.js:6:1 › coffee forms history insights and beans remain available offline (1.6s)
+  ✓  16 modules/coffee/e2e/settings-data.spec.js:4:1 › creates, edits, deletes beans, and blocks deleting a used bean (1.1s)
+  ✓  17 modules/coffee/e2e/settings-data.spec.js:32:1 › saves settings and persists theme (1.4s)
+  ✓  18 modules/coffee/e2e/settings-data.spec.js:53:1 › switches to Spanish and persists translated UI (1.2s)
+  ✓  19 modules/coffee/e2e/settings-data.spec.js:72:1 › reminds when data has not been exported recently and records exports (856ms)
+  ✓  20 modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export (773ms)
+  ✓  21 modules/coffee/e2e/settings-data.spec.js:101:1 › asks for tools once and hides unavailable prep controls (547ms)
+  ✓  22 modules/coffee/e2e/settings-data.spec.js:119:1 › skip tools setup saves no optional tools and entries keep explicit prep values (1.0s)
+  ✘  23 modules/coffee/e2e/shared.spec.js:4:1 › coffee detail and edit links reload without changing records (6.5s)
+(node:130519) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  24 modules/coffee/e2e/shared.spec.js:23:1 › coffee language changes preserve unsaved values and derived previews (1.1s)
+  ✓  25 modules/coffee/e2e/shared.spec.js:39:1 › coffee stale drink edits retain their draft and preserve the other tab change (1.4s)
+  ✓  26 modules/coffee/e2e/shared.spec.js:58:1 › coffee import cancellation and future backups leave existing data intact (794ms)
+  ✓  27 modules/coffee/e2e/shared.spec.js:71:1 › coffee failed preference saves keep the draft and previous persisted settings (794ms)
+  ✘  28 modules/coffee/e2e/shared.spec.js:89:1 › coffee exporting preserves unsaved settings and stale settings cannot overwrite another tab (5.8s)
+
+
+  1) modules/coffee/e2e/shared.spec.js:4:1 › coffee detail and edit links reload without changing records 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByTestId('entry-form')
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" with timeout 5000ms
+      - waiting for getByTestId('entry-form')
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      16 |   expect(await readCoffeeData(page)).toEqual(before);
+      17 |   await page.goto('/daily/#/coffee/entry/missing/edit');
+    > 18 |   await expect(page.getByTestId(testIds.entryForm)).toHaveCount(0);
+         |                                                     ^
+      19 |   await expect(page.locator('[data-module=coffee]')).toContainText('Drink not found');
+      20 |   expect(await readCoffeeData(page)).toEqual(before);
+      21 | });
+        at /workspaces/daily/modules/coffee/e2e/shared.spec.js:18:53
+
+    Error Context: test-results/shared-coffee-detail-and-e-a6867-ad-without-changing-records/error-context.md
+
+  2) modules/coffee/e2e/shared.spec.js:89:1 › coffee exporting preserves unsaved settings and stale settings cannot overwrite another tab 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  locator('#burrTouchReference')
+    Expected: "Unsaved draft"
+    Received: ""
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('#burrTouchReference')
+        14 × locator resolved to <input value="" type="text" id="burrTouchReference" name="burrTouchReference" placeholder="e.g. +2.0 marks from chirp"/>
+           - unexpected value ""
+
+
+      94 |   await page.getByTestId(testIds.exportData).click();
+      95 |   await download;
+    > 96 |   await expect(page.locator('#burrTouchReference')).toHaveValue('Unsaved draft');
+         |                                                     ^
+      97 |   const other = await context.newPage();
+      98 |   await other.goto('/daily/#/');
+      99 |   await other.evaluate(() => {
+        at /workspaces/daily/modules/coffee/e2e/shared.spec.js:96:53
+
+    Error Context: test-results/shared-coffee-exporting-pr-3bc42-annot-overwrite-another-tab/error-context.md
+
+  2 failed
+    modules/coffee/e2e/shared.spec.js:4:1 › coffee detail and edit links reload without changing records 
+    modules/coffee/e2e/shared.spec.js:89:1 › coffee exporting preserves unsaved settings and stale settings cannot overwrite another tab 
+  26 passed (46.8s)

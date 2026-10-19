@@ -1,0 +1,33 @@
+✔ coffee reads create no records and saves preserve unrelated shared modules (10.121383ms)
+✔ explicit coffee language changes commit with global language atomically (0.883759ms)
+✔ coffee imports preserve shared language and validate merged bean references (3.364118ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (1.971178ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (1.547938ms)
+✔ coffee rejects a future module payload without silently replacing it (0.724482ms)
+✔ coffee import previews are read-only and cancel leaves the current root intact (0.951245ms)
+✔ coffee import confirmation rejects stale previews and retains recovery on replacement (1.370948ms)
+✖ coffee malformed nested records and invalid settings fail before any shared write (2.190366ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 52.290449
+
+✖ failing tests:
+
+test at modules/coffee/test/service.test.mjs:121:1
+✖ coffee malformed nested records and invalid settings fail before any shared write (2.190366ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/service.test.mjs:129:12)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }

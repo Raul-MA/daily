@@ -1,0 +1,207 @@
+[WebServer] (node:17027) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:17076) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/platform.spec.js:10:1 › dashboard keeps the accepted three, two and one column layouts (7.5s)
+(node:17498) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/platform.spec.js:23:1 › all modules stay reachable and dashboard navigation creates no records (5.2s)
+(node:17684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/e2e/platform.spec.js:39:1 › shared language setting persists and leaves module user text unchanged (5.2s)
+(node:17849) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/e2e/platform.spec.js:55:1 › widget visibility and order persist without removing apps or module state (5.2s)
+(node:18031) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 tests/e2e/platform.spec.js:69:1 › quick-action visibility persists while its app remains in the menu (5.2s)
+(node:18207) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  6 tests/e2e/platform.spec.js:81:1 › stable deep links reload and unknown routes provide an accessible way home (5.2s)
+(node:18420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  7 tests/e2e/platform.spec.js:93:1 › failed preference saves report failure and retain the previous language (5.2s)
+(node:18592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  8 tests/e2e/platform.spec.js:109:1 › unrecoverable storage is retained and never shown as an empty dashboard (5.2s)
+
+
+  1) tests/e2e/platform.spec.js:10:1 › dashboard keeps the accepted three, two and one column layouts 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Today', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Today', exact: true })
+
+
+      10 | test('dashboard keeps the accepted three, two and one column layouts', async ({ page }, testInfo) => {
+      11 |   await home(page);
+    > 12 |   await expect(page.getByRole('heading', { name: 'Today', exact: true })).toBeVisible();
+         |                                                                           ^
+      13 |   await expect(page.locator('[data-widget]')).toHaveCount(6);
+      14 |   for (const [width, columns] of [[1280, 3], [1100, 3], [900, 2], [390, 1], [320, 1]]) {
+      15 |     await page.setViewportSize({ width, height: 900 });
+        at /workspaces/daily/tests/e2e/platform.spec.js:12:75
+
+    Error Context: test-results/platform-dashboard-keeps-t-512d2--two-and-one-column-layouts/error-context.md
+
+  2) tests/e2e/platform.spec.js:23:1 › all modules stay reachable and dashboard navigation creates no records 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByText('Apps', { exact: true })
+
+
+      25 |   await page.evaluate(() => localStorage.setItem('unrelated-app', 'preserve'));
+      26 |   const before = await page.evaluate(() => ({ ...localStorage }));
+    > 27 |   await page.getByText('Apps', { exact: true }).click();
+         |                                                 ^
+      28 |   await expect(page.getByRole('navigation', { name: 'Apps' }).getByRole('link')).toHaveCount(7);
+      29 |   await page.getByRole('navigation', { name: 'Apps' }).getByRole('link', { name: 'Coffee', exact: true }).click();
+      30 |   await expect(page.getByRole('heading', { name: 'Coffee', exact: true })).toBeVisible();
+        at /workspaces/daily/tests/e2e/platform.spec.js:27:49
+
+    Error Context: test-results/platform-all-modules-stay--cf7b2-vigation-creates-no-records/error-context.md
+
+  3) tests/e2e/platform.spec.js:39:1 › shared language setting persists and leaves module user text unchanged 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'English', exact: true })
+
+
+      39 | test('shared language setting persists and leaves module user text unchanged', async ({ page }) => {
+      40 |   await home(page);
+    > 41 |   await page.getByRole('button', { name: 'English', exact: true }).click();
+         |                                                                    ^
+      42 |   await page.evaluate(() => {
+      43 |     const document = JSON.parse(localStorage.getItem('daily:v1'));
+      44 |     document.modules.plants = { version: 1, data: { name: 'My 🌱 fern' } };
+        at /workspaces/daily/tests/e2e/platform.spec.js:41:68
+
+    Error Context: test-results/platform-shared-language-s-e43ef--module-user-text-unchanged/error-context.md
+
+  4) tests/e2e/platform.spec.js:55:1 › widget visibility and order persist without removing apps or module state 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: 'Settings', exact: true })
+
+
+      4 |
+      5 | async function settings(page) {
+    > 6 |   await page.getByRole('link', { name: 'Settings', exact: true }).click();
+        |                                                                   ^
+      7 |   await expect(page.getByRole('heading', { name: 'Settings', exact: true })).toBeVisible();
+      8 | }
+      9 |
+        at settings (/workspaces/daily/tests/e2e/platform.spec.js:6:67)
+        at /workspaces/daily/tests/e2e/platform.spec.js:57:9
+
+    Error Context: test-results/platform-widget-visibility-f8c7d-moving-apps-or-module-state/error-context.md
+
+  5) tests/e2e/platform.spec.js:69:1 › quick-action visibility persists while its app remains in the menu 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: 'Settings', exact: true })
+
+
+      4 |
+      5 | async function settings(page) {
+    > 6 |   await page.getByRole('link', { name: 'Settings', exact: true }).click();
+        |                                                                   ^
+      7 |   await expect(page.getByRole('heading', { name: 'Settings', exact: true })).toBeVisible();
+      8 | }
+      9 |
+        at settings (/workspaces/daily/tests/e2e/platform.spec.js:6:67)
+        at /workspaces/daily/tests/e2e/platform.spec.js:71:9
+
+    Error Context: test-results/platform-quick-action-visi-3e023-its-app-remains-in-the-menu/error-context.md
+
+  6) tests/e2e/platform.spec.js:81:1 › stable deep links reload and unknown routes provide an accessible way home 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('[data-route-id]')
+    Expected: "plant 🌱"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveText" with timeout 5000ms
+      - waiting for locator('[data-route-id]')
+
+
+      81 | test('stable deep links reload and unknown routes provide an accessible way home', async ({ page }) => {
+      82 |   await page.goto('/daily/#/plants/plant%20%F0%9F%8C%B1');
+    > 83 |   await expect(page.locator('[data-route-id]')).toHaveText('plant 🌱');
+         |                                                 ^
+      84 |   await page.reload();
+      85 |   await expect(page.locator('[data-route-id]')).toHaveText('plant 🌱');
+      86 |   await page.goto('/daily/#/unknown');
+        at /workspaces/daily/tests/e2e/platform.spec.js:83:49
+
+    Error Context: test-results/platform-stable-deep-links-2a3fe-vide-an-accessible-way-home/error-context.md
+
+  7) tests/e2e/platform.spec.js:93:1 › failed preference saves report failure and retain the previous language 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'English', exact: true })
+
+
+      93 | test('failed preference saves report failure and retain the previous language', async ({ page }) => {
+      94 |   await home(page);
+    > 95 |   await page.getByRole('button', { name: 'English', exact: true }).click();
+         |                                                                    ^
+      96 |   await page.evaluate(() => {
+      97 |     const original = Storage.prototype.setItem;
+      98 |     Storage.prototype.setItem = function (key, value) {
+        at /workspaces/daily/tests/e2e/platform.spec.js:95:68
+
+    Error Context: test-results/platform-failed-preference-b3722-etain-the-previous-language/error-context.md
+
+  8) tests/e2e/platform.spec.js:109:1 › unrecoverable storage is retained and never shown as an empty dashboard 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Local data needs attention', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Local data needs attention', exact: true })
+
+
+      110 |   await page.addInitScript(() => localStorage.setItem('daily:v1', '{broken'));
+      111 |   await home(page);
+    > 112 |   await expect(page.getByRole('heading', { name: 'Local data needs attention', exact: true })).toBeVisible();
+          |                                                                                                ^
+      113 |   await expect(page.locator('#dashboard')).toHaveCount(0);
+      114 |   expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe('{broken');
+      115 |   expect(await page.evaluate(() => localStorage.getItem('daily:v1:corrupt'))).toBe('{broken');
+        at /workspaces/daily/tests/e2e/platform.spec.js:112:96
+
+    Error Context: test-results/platform-unrecoverable-sto-83b43-shown-as-an-empty-dashboard/error-context.md
+
+  8 failed
+    tests/e2e/platform.spec.js:10:1 › dashboard keeps the accepted three, two and one column layouts 
+    tests/e2e/platform.spec.js:23:1 › all modules stay reachable and dashboard navigation creates no records 
+    tests/e2e/platform.spec.js:39:1 › shared language setting persists and leaves module user text unchanged 
+    tests/e2e/platform.spec.js:55:1 › widget visibility and order persist without removing apps or module state 
+    tests/e2e/platform.spec.js:69:1 › quick-action visibility persists while its app remains in the menu 
+    tests/e2e/platform.spec.js:81:1 › stable deep links reload and unknown routes provide an accessible way home 
+    tests/e2e/platform.spec.js:93:1 › failed preference saves report failure and retain the previous language 
+    tests/e2e/platform.spec.js:109:1 › unrecoverable storage is retained and never shown as an empty dashboard 

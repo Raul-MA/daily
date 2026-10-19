@@ -1,0 +1,37 @@
+[WebServer] (node:8880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:8898) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/plants/e2e/import-selection.spec.js:5:2 › selecting a plant backup opens a read-only preview and allows retry after cancel or invalid JSON (8.7s)
+
+
+  1) modules/plants/e2e/import-selection.spec.js:5:2 › selecting a plant backup opens a read-only preview and allows retry after cancel or invalid JSON
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('dialog')
+    Expected substring: "1 plant"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByRole('dialog')
+
+
+      10 |   await input.setInputFiles(file);
+      11 |   const dialog = page.getByRole('dialog');
+    > 12 |   await expect(dialog).toContainText('1 plant');
+         |                        ^
+      13 |   expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe(before);
+      14 |   await dialog.getByRole('button', { name: 'Cancel', exact: true }).click();
+      15 |   await page.getByRole('button', { name: 'Preview import', exact: true }).click();
+        at /workspaces/daily/modules/plants/e2e/import-selection.spec.js:12:24
+
+    Error Context: test-results/import-selection-selecting-3fde1-fter-cancel-or-invalid-JSON/error-context.md
+
+  1 failed
+    modules/plants/e2e/import-selection.spec.js:5:2 › selecting a plant backup opens a read-only preview and allows retry after cancel or invalid JSON

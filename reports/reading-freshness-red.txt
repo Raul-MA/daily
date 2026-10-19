@@ -1,0 +1,48 @@
+✔ Reader disposable metadata cache survives a new instance but never crosses account identities (7.289074ms)
+✔ scheduled-review cache is separate from backups and reopens as cached data until a successful refresh (3.922936ms)
+✖ Reader scan summary preserves truncation across locations and a fresh cached pool retains its fetch timestamp (2.488962ms)
+✔ Reader startup is read-only and preference saves preserve other modules and global language (6.304137ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (2.256819ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (4.861637ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (4.710465ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (1.710259ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (1.380314ms)
+✔ Reader revalidates a remembered item by ID and removes archived completed or missing items (4.464105ms)
+✔ Reader remembered-item validation updates progress and keeps the previous item on request failure (1.824503ms)
+✖ Reader picks distinguish selection time from metadata fetch time when picking again from cache (2.292646ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 10
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 76.304213
+
+✖ failing tests:
+
+test at modules/reading/test/offline.test.mjs:42:1
+✖ Reader scan summary preserves truncation across locations and a fresh cached pool retains its fetch timestamp (2.488962ms)
+  TypeError: Cannot read properties of undefined (reading 'truncated')
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/offline.test.mjs:53:32)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/reading/test/persistence.test.mjs:134:1
+✖ Reader picks distinguish selection time from metadata fetch time when picking again from cache (2.292646ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 1000
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/reading/test/persistence.test.mjs:139:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 1000,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

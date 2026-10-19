@@ -1,0 +1,535 @@
+Suite: coffee
+✔ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (13.810596ms)
+✔ drink type changes calculate composition and clear irrelevant water and milk fields (2.547524ms)
+✔ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (1.4685ms)
+✔ beans referenced by drinks cannot be deleted while unused beans can be removed (1.799548ms)
+✔ coffee filters and insights retain scored and unscored drink semantics (2.525852ms)
+✔ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (1.56514ms)
+✔ legacy replacement resets setup and normalizes absent drink composition fields (1.947493ms)
+✔ unsupported coffee backups and invalid bean input leave existing records unchanged (1.02383ms)
+✔ coffee reads create no records and saves preserve unrelated shared modules (4.686363ms)
+✔ explicit coffee language changes commit with global language atomically (0.808638ms)
+✔ coffee imports preserve shared language and validate merged bean references (1.757018ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (3.273117ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (1.153542ms)
+✔ coffee rejects a future module payload without silently replacing it (0.481318ms)
+✔ coffee import previews are read-only and cancel leaves the current root intact (0.672074ms)
+✔ coffee import confirmation rejects stale previews and retains recovery on replacement (1.089573ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 89.594094
+[WebServer] (node:116852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 21 tests using 1 worker
+
+(node:116864) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 modules/coffee/e2e/backup.spec.js:4:1 › legacy imports keep merge tools and trigger setup after replace (5.8s)
+(node:117047) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 modules/coffee/e2e/backup.spec.js:60:1 › exports data and imports merge, replace, and invalid backups (5.7s)
+(node:117356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 modules/coffee/e2e/history-detail.spec.js:3:1 › sorts, filters, opens, edits, cancels, and deletes history entries (5.7s)
+(node:117523) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 modules/coffee/e2e/history-detail.spec.js:57:1 › switches history between compact and detailed views and remembers the choice (5.7s)
+(node:117722) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   5 modules/coffee/e2e/history-detail.spec.js:80:1 › compact history rows fit on mobile (5.8s)
+(node:117920) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 modules/coffee/e2e/history-detail.spec.js:93:1 › new entries created through the UI are listed in history (5.7s)
+(node:118094) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 modules/coffee/e2e/insights.spec.js:3:1 › shows empty insights and updates metrics from stored drinks (5.6s)
+(node:118291) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 modules/coffee/e2e/new-shot.spec.js:3:1 › creates a complete espresso drink, previews ratio, and persists it (5.6s)
+(node:118473) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 modules/coffee/e2e/new-shot.spec.js:26:1 › creates an americano with water to coffee ratio (5.6s)
+(node:118656) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 modules/coffee/e2e/new-shot.spec.js:40:1 › creates a milk drink and clears hidden composition fields after type switch (5.6s)
+(node:118839) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 modules/coffee/e2e/new-shot.spec.js:61:1 › manage button routes to settings and invalid drink shows validation toast (5.9s)
+(node:119145) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  12 modules/coffee/e2e/new-shot.spec.js:73:1 › clear button empties the selected bean (5.9s)
+(node:119415) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  13 modules/coffee/e2e/new-shot.spec.js:83:1 › score slider can be set after skipping (5.7s)
+(node:119616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  14 modules/coffee/e2e/new-shot.spec.js:95:1 › taste info buttons explain the rating fields (5.6s)
+(node:119888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  15 modules/coffee/e2e/settings-data.spec.js:4:1 › creates, edits, deletes beans, and blocks deleting a used bean (5.7s)
+(node:120072) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  16 modules/coffee/e2e/settings-data.spec.js:32:1 › saves settings and persists theme (5.6s)
+(node:120264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  17 modules/coffee/e2e/settings-data.spec.js:53:1 › switches to Spanish and persists translated UI (5.8s)
+(node:120462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  18 modules/coffee/e2e/settings-data.spec.js:72:1 › reminds when data has not been exported recently and records exports (5.7s)
+(node:120642) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  19 modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export (5.7s)
+(node:120820) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  20 modules/coffee/e2e/settings-data.spec.js:101:1 › asks for tools once and hides unavailable prep controls (5.4s)
+(node:121015) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  21 modules/coffee/e2e/settings-data.spec.js:119:1 › skip tools setup saves no optional tools and entries keep explicit prep values (5.4s)
+
+
+  1) modules/coffee/e2e/backup.spec.js:4:1 › legacy imports keep merge tools and trigger setup after replace 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      23 |         }
+      24 |     }));
+    > 25 |     await page.getByTestId(testIds.navSettings).click();
+         |                                                 ^
+      26 |     await page.getByTestId(testIds.importData).setInputFiles({
+      27 |         name: "legacy-merge.json",
+      28 |         mimeType: "application/json",
+        at /workspaces/daily/modules/coffee/e2e/backup.spec.js:25:49
+
+    Error Context: test-results/backup-legacy-imports-keep-9db42-trigger-setup-after-replace/error-context.md
+
+  2) modules/coffee/e2e/backup.spec.js:60:1 › exports data and imports merge, replace, and invalid backups 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      64 |         entries: [entry({ id: "entry-original", meta: { beanPresetId: house.id } })]
+      65 |     }));
+    > 66 |     await page.getByTestId(testIds.navSettings).click();
+         |                                                 ^
+      67 |     const downloadPromise = page.waitForEvent("download");
+      68 |     await page.getByTestId(testIds.exportData).click();
+      69 |     const download = await downloadPromise;
+        at /workspaces/daily/modules/coffee/e2e/backup.spec.js:66:49
+
+    Error Context: test-results/backup-exports-data-and-im-4e6bc-replace-and-invalid-backups/error-context.md
+
+  3) modules/coffee/e2e/history-detail.spec.js:3:1 › sorts, filters, opens, edits, cancels, and deletes history entries 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-history')
+
+
+      12 |     }));
+      13 |     const fields = appLocators(page);
+    > 14 |     await page.getByTestId(testIds.navHistory).click();
+         |                                                ^
+      15 |     await expect(page.getByTestId(testIds.entryRow)).toHaveCount(2);
+      16 |     await expect(page.getByTestId(testIds.historyViewCompact)).toHaveAttribute("aria-pressed", "true");
+      17 |     await expect(page.getByTestId(testIds.entryRow).first()).toContainText("Yield40g");
+        at /workspaces/daily/modules/coffee/e2e/history-detail.spec.js:14:48
+
+    Error Context: test-results/history-detail-sorts-filte-3fb0e-and-deletes-history-entries/error-context.md
+
+  4) modules/coffee/e2e/history-detail.spec.js:57:1 › switches history between compact and detailed views and remembers the choice 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-history')
+
+
+      63 |         ]
+      64 |     }));
+    > 65 |     await page.getByTestId(testIds.navHistory).click();
+         |                                                ^
+      66 |     await expect(page.getByTestId(testIds.historyViewCompact)).toHaveAttribute("aria-pressed", "true");
+      67 |     await expect(page.getByTestId(testIds.entryRow)).toContainText("DF5414.5");
+      68 |     await expect(page.getByTestId(testIds.entryRow)).toContainText("Yield40g");
+        at /workspaces/daily/modules/coffee/e2e/history-detail.spec.js:65:48
+
+    Error Context: test-results/history-detail-switches-hi-8a3f0-ws-and-remembers-the-choice/error-context.md
+
+  5) modules/coffee/e2e/history-detail.spec.js:80:1 › compact history rows fit on mobile ───────────
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-history')
+
+
+      86 |         ]
+      87 |     }));
+    > 88 |     await page.getByTestId(testIds.navHistory).click();
+         |                                                ^
+      89 |     await expect(page.getByTestId(testIds.entryRow)).toContainText("Flat white");
+      90 |     const overflows = await page.getByTestId(testIds.entryRow).evaluate((row) => row.scrollWidth > row.clientWidth);
+      91 |     expect(overflows).toBe(false);
+        at /workspaces/daily/modules/coffee/e2e/history-detail.spec.js:88:48
+
+    Error Context: test-results/history-detail-compact-history-rows-fit-on-mobile/error-context.md
+
+  6) modules/coffee/e2e/history-detail.spec.js:93:1 › new entries created through the UI are listed in history 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-new')
+
+
+       at helpers.js:188
+
+      186 | }
+      187 | export async function createShotThroughUi(page, overrides) {
+    > 188 |     await page.getByTestId(testIds.navNew).click();
+          |                                            ^
+      189 |     await fillShotForm(page, overrides);
+      190 |     await page.getByTestId(testIds.saveShot).click();
+      191 |     await expectToast(page, "Drink saved.");
+        at createShotThroughUi (/workspaces/daily/modules/coffee/e2e/helpers.js:188:44)
+        at /workspaces/daily/modules/coffee/e2e/history-detail.spec.js:95:11
+
+    Error Context: test-results/history-detail-new-entries-42ca4-he-UI-are-listed-in-history/error-context.md
+
+  7) modules/coffee/e2e/insights.spec.js:3:1 › shows empty insights and updates metrics from stored drinks 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-insights')
+
+
+      3 | test("shows empty insights and updates metrics from stored drinks", async ({ page }) => {
+      4 |     await gotoApp(page);
+    > 5 |     await page.getByTestId(testIds.navInsights).click();
+        |                                                 ^
+      6 |     await expect(page.getByTestId(testIds.insightGrid)).toContainText("Logged drinks0");
+      7 |     await expect(page.getByTestId(testIds.bestCup)).toContainText("No scored drinks yet");
+      8 |     const house = bean();
+        at /workspaces/daily/modules/coffee/e2e/insights.spec.js:5:49
+
+    Error Context: test-results/insights-shows-empty-insig-5f101--metrics-from-stored-drinks/error-context.md
+
+  8) modules/coffee/e2e/new-shot.spec.js:3:1 › creates a complete espresso drink, previews ratio, and persists it 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'New Drink' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'New Drink' })
+
+
+      4 |     await gotoApp(page);
+      5 |     const fields = appLocators(page);
+    > 6 |     await expect(page.getByRole("heading", { name: "New Drink" })).toBeVisible();
+        |                                                                    ^
+      7 |     await expect(fields.beanSearch).toHaveValue("");
+      8 |     await expect(fields.drinkType).toHaveValue("espresso");
+      9 |     await fillShotForm(page);
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:6:68
+
+    Error Context: test-results/new-shot-creates-a-complet-dea15-views-ratio-and-persists-it/error-context.md
+
+  9) modules/coffee/e2e/new-shot.spec.js:26:1 › creates an americano with water to coffee ratio ────
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#beanSearch')
+
+
+       at helpers.js:160
+
+      158 |     };
+      159 |     if (values.beanSearch !== null) {
+    > 160 |         await fields.beanSearch.fill(values.beanSearch);
+          |                                 ^
+      161 |         await fields.beanSearch.dispatchEvent("change");
+      162 |     }
+      163 |     await fields.brewedAt.fill(values.brewedAt);
+        at fillShotForm (/workspaces/daily/modules/coffee/e2e/helpers.js:160:33)
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:29:11
+
+    Error Context: test-results/new-shot-creates-an-americano-with-water-to-coffee-ratio/error-context.md
+
+  10) modules/coffee/e2e/new-shot.spec.js:40:1 › creates a milk drink and clears hidden composition fields after type switch 
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#beanSearch')
+
+
+       at helpers.js:160
+
+      158 |     };
+      159 |     if (values.beanSearch !== null) {
+    > 160 |         await fields.beanSearch.fill(values.beanSearch);
+          |                                 ^
+      161 |         await fields.beanSearch.dispatchEvent("change");
+      162 |     }
+      163 |     await fields.brewedAt.fill(values.brewedAt);
+        at fillShotForm (/workspaces/daily/modules/coffee/e2e/helpers.js:160:33)
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:43:11
+
+    Error Context: test-results/new-shot-creates-a-milk-dr-bfd0a-on-fields-after-type-switch/error-context.md
+
+  11) modules/coffee/e2e/new-shot.spec.js:61:1 › manage button routes to settings and invalid drink shows validation toast 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('#beanSearch')
+    Expected: ""
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('#beanSearch')
+
+
+      62 |     await gotoApp(page, emptyData());
+      63 |     const fields = appLocators(page);
+    > 64 |     await expect(fields.beanSearch).toHaveValue("");
+         |                                     ^
+      65 |     await page.getByTestId(testIds.manageBeans).click();
+      66 |     await expect(page.getByRole("heading", { name: "Settings" })).toBeVisible();
+      67 |     await page.getByTestId(testIds.navNew).click();
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:64:37
+
+    Error Context: test-results/new-shot-manage-button-rou-54497-rink-shows-validation-toast/error-context.md
+
+  12) modules/coffee/e2e/new-shot.spec.js:73:1 › clear button empties the selected bean ────────────
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#beanSearch')
+
+
+      74 |     await gotoApp(page);
+      75 |     const fields = appLocators(page);
+    > 76 |     await fields.beanSearch.fill("House / First Dial-In");
+         |                             ^
+      77 |     await fields.beanSearch.dispatchEvent("change");
+      78 |     await page.getByTestId(testIds.clearBean).click();
+      79 |     await expect(fields.beanSearch).toHaveValue("");
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:76:29
+
+    Error Context: test-results/new-shot-clear-button-empties-the-selected-bean/error-context.md
+
+  13) modules/coffee/e2e/new-shot.spec.js:83:1 › score slider can be set after skipping ────────────
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for locator('#beanSearch')
+
+
+       at helpers.js:160
+
+      158 |     };
+      159 |     if (values.beanSearch !== null) {
+    > 160 |         await fields.beanSearch.fill(values.beanSearch);
+          |                                 ^
+      161 |         await fields.beanSearch.dispatchEvent("change");
+      162 |     }
+      163 |     await fields.brewedAt.fill(values.brewedAt);
+        at fillShotForm (/workspaces/daily/modules/coffee/e2e/helpers.js:160:33)
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:86:11
+
+    Error Context: test-results/new-shot-score-slider-can-be-set-after-skipping/error-context.md
+
+  14) modules/coffee/e2e/new-shot.spec.js:95:1 › taste info buttons explain the rating fields ──────
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'About Acidity/brightness' })
+
+
+       95 | test("taste info buttons explain the rating fields", async ({ page }) => {
+       96 |     await gotoApp(page);
+    >  97 |     await page.getByRole("button", { name: "About Acidity/brightness" }).click();
+          |                                                                          ^
+       98 |     await expect(page.getByRole("dialog", { name: "Acidity/brightness" })).toBeVisible();
+       99 |     await expect(page.getByRole("dialog")).toContainText("too much can taste sour");
+      100 |     await expect(page.getByRole("dialog")).toContainText("Does it lean unpleasantly sour or sharp?");
+        at /workspaces/daily/modules/coffee/e2e/new-shot.spec.js:97:74
+
+    Error Context: test-results/new-shot-taste-info-buttons-explain-the-rating-fields/error-context.md
+
+  15) modules/coffee/e2e/settings-data.spec.js:4:1 › creates, edits, deletes beans, and blocks deleting a used bean 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+       8 |         entries: [entry({ meta: { beanPresetId: usedBean.id } })]
+       9 |     }));
+    > 10 |     await page.getByTestId(testIds.navSettings).click();
+         |                                                 ^
+      11 |     const fields = appLocators(page);
+      12 |     await fields.beanBrand.fill("Guest");
+      13 |     await fields.beanBlend.fill("Washed");
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:10:49
+
+    Error Context: test-results/settings-data-creates-edit-ac735-blocks-deleting-a-used-bean/error-context.md
+
+  16) modules/coffee/e2e/settings-data.spec.js:32:1 › saves settings and persists theme ────────────
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      32 | test("saves settings and persists theme", async ({ page }) => {
+      33 |     await gotoApp(page);
+    > 34 |     await page.getByTestId(testIds.navSettings).click();
+         |                                                 ^
+      35 |     const { burrTouchReference, distributorTool, distributorUsed, puckScreenUsed, tampDeviation, theme, html, wdtUsed } = appLocators(page);
+      36 |     await theme.selectOption("dark");
+      37 |     await burrTouchReference.fill("+2.0 marks from chirp");
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:34:49
+
+    Error Context: test-results/settings-data-saves-settings-and-persists-theme/error-context.md
+
+  17) modules/coffee/e2e/settings-data.spec.js:53:1 › switches to Spanish and persists translated UI 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      53 | test("switches to Spanish and persists translated UI", async ({ page }) => {
+      54 |     await gotoApp(page);
+    > 55 |     await page.getByTestId(testIds.navSettings).click();
+         |                                                 ^
+      56 |     const { html, language } = appLocators(page);
+      57 |     await language.selectOption("es");
+      58 |     await page.getByTestId(testIds.saveSettings).click();
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:55:49
+
+    Error Context: test-results/settings-data-switches-to-Spanish-and-persists-translated-UI/error-context.md
+
+  18) modules/coffee/e2e/settings-data.spec.js:72:1 › reminds when data has not been exported recently and records exports 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('nav-settings')
+
+
+      77 |         }
+      78 |     }));
+    > 79 |     await page.getByTestId(testIds.navSettings).click();
+         |                                                 ^
+      80 |     await expect(page.getByTestId(testIds.exportReminder)).toContainText("Last export was");
+      81 |     const downloadPromise = page.waitForEvent("download");
+      82 |     await page.getByTestId(testIds.exportData).click();
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:79:49
+
+    Error Context: test-results/settings-data-reminds-when-40381-ecently-and-records-exports/error-context.md
+
+  19) modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('new-export-reminder')
+    Expected substring: "No backup export has been recorded"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('new-export-reminder')
+
+
+      93 |         }
+      94 |     }));
+    > 95 |     await expect(page.getByTestId(testIds.newExportReminder)).toContainText("No backup export has been recorded");
+         |                                                               ^
+      96 |     await expect(page.locator(process.env.DAILY_BASELINE_URL ? "#app > :first-child" : "#coffee-content > :first-child")).toHaveAttribute("data-testid", testIds.newExportReminder);
+      97 |     await page.getByTestId(testIds.newExportReminder).click();
+      98 |     await expect(page.getByRole("heading", { name: "Settings" })).toBeVisible();
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:95:63
+
+    Error Context: test-results/settings-data-shows-the-ba-5c0b2-outes-it-to-settings-export/error-context.md
+
+  20) modules/coffee/e2e/settings-data.spec.js:101:1 › asks for tools once and hides unavailable prep controls 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('tools-setup-form')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('tools-setup-form')
+
+
+      102 |     const { distributorUsed, puckScreenUsed, tampDeviation, wdtTool, wdtUsed } = appLocators(page);
+      103 |     await page.goto(appURL("coffee"));
+    > 104 |     await expect(page.getByTestId(testIds.toolsSetupForm)).toBeVisible();
+          |                                                            ^
+      105 |     await expect(wdtTool).not.toBeChecked();
+      106 |     await setToggle(page, fieldIds.toolWdt, true);
+      107 |     await setToggle(page, fieldIds.toolPuckScreen, true);
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:104:60
+
+    Error Context: test-results/settings-data-asks-for-too-d168e-s-unavailable-prep-controls/error-context.md
+
+  21) modules/coffee/e2e/settings-data.spec.js:119:1 › skip tools setup saves no optional tools and entries keep explicit prep values 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByTestId('skip-tools-setup')
+
+
+      120 |     const { distributorUsed, puckScreenUsed, tampDeviation, wdtUsed } = appLocators(page);
+      121 |     await page.goto(appURL("coffee"));
+    > 122 |     await page.getByTestId(testIds.skipToolsSetup).click();
+          |                                                    ^
+      123 |     await expectToast(page, "Tools saved.");
+      124 |     await expect(wdtUsed).toHaveCount(0);
+      125 |     await expect(distributorUsed).toHaveCount(0);
+        at /workspaces/daily/modules/coffee/e2e/settings-data.spec.js:122:52
+
+    Error Context: test-results/settings-data-skip-tools-s-87327-s-keep-explicit-prep-values/error-context.md
+
+  21 failed
+    modules/coffee/e2e/backup.spec.js:4:1 › legacy imports keep merge tools and trigger setup after replace 
+    modules/coffee/e2e/backup.spec.js:60:1 › exports data and imports merge, replace, and invalid backups 
+    modules/coffee/e2e/history-detail.spec.js:3:1 › sorts, filters, opens, edits, cancels, and deletes history entries 
+    modules/coffee/e2e/history-detail.spec.js:57:1 › switches history between compact and detailed views and remembers the choice 
+    modules/coffee/e2e/history-detail.spec.js:80:1 › compact history rows fit on mobile ────────────
+    modules/coffee/e2e/history-detail.spec.js:93:1 › new entries created through the UI are listed in history 
+    modules/coffee/e2e/insights.spec.js:3:1 › shows empty insights and updates metrics from stored drinks 
+    modules/coffee/e2e/new-shot.spec.js:3:1 › creates a complete espresso drink, previews ratio, and persists it 
+    modules/coffee/e2e/new-shot.spec.js:26:1 › creates an americano with water to coffee ratio ─────
+    modules/coffee/e2e/new-shot.spec.js:40:1 › creates a milk drink and clears hidden composition fields after type switch 
+    modules/coffee/e2e/new-shot.spec.js:61:1 › manage button routes to settings and invalid drink shows validation toast 
+    modules/coffee/e2e/new-shot.spec.js:73:1 › clear button empties the selected bean ──────────────
+    modules/coffee/e2e/new-shot.spec.js:83:1 › score slider can be set after skipping ──────────────
+    modules/coffee/e2e/new-shot.spec.js:95:1 › taste info buttons explain the rating fields ────────
+    modules/coffee/e2e/settings-data.spec.js:4:1 › creates, edits, deletes beans, and blocks deleting a used bean 
+    modules/coffee/e2e/settings-data.spec.js:32:1 › saves settings and persists theme ──────────────
+    modules/coffee/e2e/settings-data.spec.js:53:1 › switches to Spanish and persists translated UI ─
+    modules/coffee/e2e/settings-data.spec.js:72:1 › reminds when data has not been exported recently and records exports 
+    modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export 
+    modules/coffee/e2e/settings-data.spec.js:101:1 › asks for tools once and hides unavailable prep controls 
+    modules/coffee/e2e/settings-data.spec.js:119:1 › skip tools setup saves no optional tools and entries keep explicit prep values 

@@ -1,3 +1,4 @@
+import { baseline, hashFor } from './paths.mjs';
 import assert from 'node:assert/strict';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const browser = await chromium.launch({ headless: true, ...(process.env.PLAYWRIGHT_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH } : {}) });
@@ -6,13 +7,13 @@ const baseURL = process.env.TONIQ_URL || 'http://127.0.0.1:8766/daily/';
 const page = await context.newPage();
 page.setDefaultTimeout(15000);
 try {
-    await page.goto(baseURL);
+    await page.goto(`${baseURL.replace(/\/$/, '')}/${hashFor('/')}`);
     await page.locator('.course-lessons').waitFor();
     await page.waitForFunction(() => navigator.serviceWorker.controller?.state === 'activated');
-    const cacheName = await page.evaluate(async () => {
+    const cacheName = await page.evaluate(async prefix => {
         const names = await caches.keys();
-        return names.find(name => name.startsWith('toniq-'));
-    });
+        return names.find(name => name.startsWith(prefix));
+    }, baseline ? 'toniq-' : 'daily-pwa-');
     assert.ok(cacheName, 'installation populated the app cache');
     assert.equal(await page.evaluate(async () => Boolean(await caches.match(location.href))), true, 'the document is precached before going offline');
     await context.setOffline(true);

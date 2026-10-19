@@ -1,0 +1,438 @@
+[data-module="plants"]{
+  --bg:           #F5F0E8;
+  --surface:      #FDFAF5;
+  --primary:      #8B9E7A;
+  --primary-dark: #4A6741;
+  --text:         #2C2C2C;
+  --text-muted:   #7A7A6E;
+  --border:       #E0D9CE;
+  --overdue:      #C17B5A;
+  --due-soon:     #C9A84C;
+  --ok:           #7A9E6A;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow:    0 2px 8px rgba(0, 0, 0, 0.06);
+  --transition: 0.2s ease;
+
+  --nav-height:    64px;
+  --header-height: 56px;
+  --sidebar-width: 220px;
+}
+[data-module="plants"] *, [data-module="plants"] *::before, [data-module="plants"] *::after{ box-sizing: border-box; margin: 0; padding: 0; }
+[data-module="plants"]{
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+[data-module="plants"]{
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+[data-module="plants"] button{ font-family: inherit; cursor: pointer; border: none; background: none; }
+[data-module="plants"] input, [data-module="plants"] textarea, [data-module="plants"] select{ font-family: inherit; font-size: inherit; color: inherit; }
+[data-module="plants"] a{ color: inherit; text-decoration: none; }
+[data-module="plants"]{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+}
+[data-module="plants"] #app-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 14px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  gap: 8px;
+}
+[data-module="plants"] #app-title{
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+[data-module="plants"] .reminder-count{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--overdue);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1;
+}
+[data-module="plants"] .reminder-count[hidden]{ display: none; }
+[data-module="plants"] .header-reminder-count{ flex-shrink: 0; }
+[data-module="plants"] #app-main{
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 16px;
+  padding-bottom: calc(var(--nav-height) + 20px);
+}
+[data-module="plants"] .storage-error{
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--overdue);
+  border-radius: var(--radius-md);
+}
+[data-module="plants"] .storage-error h2{
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 8px;
+}
+[data-module="plants"] .storage-error p{
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+[data-module="plants"] #app-nav{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: var(--nav-height);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  z-index: 100;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+[data-module="plants"] .nav-btn{
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--text-muted);
+  font-size: 0.67rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color var(--transition);
+  padding: 8px 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+[data-module="plants"] .nav-reminder-count{
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: 8px;
+}
+[data-module="plants"] .nav-btn svg{ transition: stroke var(--transition); }
+[data-module="plants"] .nav-btn.active{
+  color: var(--primary-dark);
+}
+[data-module="plants"] .nav-btn.active svg{ stroke: var(--primary-dark); }
+[data-module="plants"] .nav-btn:focus-visible{
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+@media (min-width: 768px){[data-module="plants"]{ display: flex; justify-content: center; }
+[data-module="plants"]{
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+  }
+[data-module="plants"] #app-header{ display: none; }
+[data-module="plants"] #app-nav{
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    flex-direction: column;
+    width: var(--sidebar-width);
+    height: 100vh;
+    border-top: none;
+    border-right: 1px solid var(--border);
+    padding: 0 12px 24px;
+    gap: 2px;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+[data-module="plants"] #app-nav::before{
+    content: 'Plant Tracker';
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    padding: 22px 12px 18px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 10px;
+  }
+[data-module="plants"] .nav-btn{
+    flex: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 0.875rem;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    letter-spacing: 0;
+    text-align: left;
+    width: 100%;
+  }
+[data-module="plants"] .nav-reminder-count{
+    position: static;
+    margin-left: auto;
+  }
+[data-module="plants"] .nav-btn.active{ background: rgba(139, 158, 122, 0.14); }
+[data-module="plants"] #app-main{
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 24px;
+    padding-bottom: 24px;
+  }
+
+}
+[data-module="plants"] .btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: all var(--transition);
+  white-space: nowrap;
+  cursor: pointer;
+}
+[data-module="plants"] .btn-primary{
+  background: var(--primary);
+  color: #fff;
+}
+[data-module="plants"] .btn-primary:hover{ background: var(--primary-dark); }
+[data-module="plants"] .btn-primary:focus-visible{ outline: 2px solid var(--primary-dark); outline-offset: 2px; }
+[data-module="plants"] .btn-outline{
+  border: 1.5px solid var(--primary);
+  color: var(--primary-dark);
+}
+[data-module="plants"] .btn-outline:hover{ background: rgba(139, 158, 122, 0.1); }
+[data-module="plants"] .btn-danger{
+  background: var(--overdue);
+  color: #fff;
+}
+[data-module="plants"] .btn-danger:hover{ background: #a5613c; }
+[data-module="plants"] .btn-ghost{
+  color: var(--text-muted);
+}
+[data-module="plants"] .btn-ghost:hover{ color: var(--text); background: rgba(0,0,0,0.05); }
+[data-module="plants"] .btn-sm{
+  padding: 6px 14px;
+  font-size: 0.8rem;
+}
+[data-module="plants"] .icon-btn{
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+[data-module="plants"] .icon-btn:hover{ background: rgba(0,0,0,0.06); }
+[data-module="plants"] .icon-btn:focus-visible{ outline: 2px solid var(--primary); outline-offset: 2px; }
+[data-module="plants"] .form-group{ margin-bottom: 14px; }
+[data-module="plants"] .form-label{
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+[data-module="plants"] .form-input, [data-module="plants"] .form-textarea, [data-module="plants"] .form-select{
+  width: 100%;
+  padding: 10px 13px;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--text);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+  -webkit-appearance: none;
+}
+[data-module="plants"] .form-input:focus, [data-module="plants"] .form-textarea:focus, [data-module="plants"] .form-select:focus{
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(139, 158, 122, 0.15);
+}
+[data-module="plants"] .form-input::placeholder, [data-module="plants"] .form-textarea::placeholder{ color: var(--text-muted); opacity: 0.7; }
+[data-module="plants"] .form-textarea{
+  resize: vertical;
+  min-height: 72px;
+  line-height: 1.5;
+}
+[data-module="plants"] .star-rating{ display: flex; gap: 4px; }
+[data-module="plants"] .star-btn{
+  font-size: 1.4rem;
+  color: var(--border);
+  transition: color var(--transition), transform var(--transition);
+  padding: 2px;
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+[data-module="plants"] .star-btn:hover, [data-module="plants"] .star-btn.active{ color: var(--due-soon); }
+[data-module="plants"] .star-btn:hover{ transform: scale(1.15); }
+[data-module="plants"] .pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+[data-module="plants"] .pill-ok{ background: rgba(122, 158, 106, 0.14); color: #3d6e2a; }
+[data-module="plants"] .pill-due-soon{ background: rgba(201, 168, 76, 0.15);  color: #7a5a00; }
+[data-module="plants"] .pill-overdue{ background: rgba(193, 123, 90, 0.15);  color: #8a3310; }
+[data-module="plants"] .pill-neutral{ background: rgba(0,0,0,0.05);           color: var(--text-muted); }
+[data-module="plants"] .empty-state{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+  gap: 14px;
+  min-height: 60vh;
+}
+[data-module="plants"] .empty-state h2{
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--text);
+}
+[data-module="plants"] .empty-state p{
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  max-width: 240px;
+  line-height: 1.6;
+}
+[data-module="plants"] .section-title{
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+[data-module="plants"] .divider{
+  height: 1px;
+  background: var(--border);
+  margin: 20px 0;
+}
+[data-module="plants"] .toast{
+  position: fixed;
+  bottom: calc(var(--nav-height) + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 9px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 500;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+[data-module="plants"] .toast.show{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (min-width: 768px){[data-module="plants"] .toast{ bottom: 24px; }
+
+}
+[data-module="plants"] .modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 400;
+  padding: 0;
+  backdrop-filter: blur(2px);
+}
+@media (min-width: 480px){[data-module="plants"] .modal-overlay{ align-items: center; padding: 24px; }
+
+}
+[data-module="plants"] .modal{
+  background: var(--surface);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: 24px;
+  width: 100%;
+  max-width: 440px;
+  animation: plants-slideUp 0.28s ease;
+}
+@media (min-width: 480px){[data-module="plants"] .modal{ border-radius: var(--radius-lg); animation: plants-fadeScaleIn 0.2s ease; }
+
+}
+[data-module="plants"] .modal h3{
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+[data-module="plants"] .modal p{
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+[data-module="plants"] .modal-actions{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+[data-module="plants"] .view-enter{
+  animation: plants-viewEnter 0.22s ease both;
+}
+@keyframes plants-viewEnter{
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes plants-slideUp{
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+@keyframes plants-fadeScaleIn{
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+

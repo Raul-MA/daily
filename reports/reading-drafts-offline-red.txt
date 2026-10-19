@@ -1,0 +1,202 @@
+Suite: reading
+✔ Reader duration parsing preserves numeric text and word-count estimates (5.888184ms)
+✔ Reader progress is bounded and remaining time rounds upward with a one-minute floor (0.555806ms)
+✔ Reader eligibility deduplicates IDs and applies progress remaining-time and safe-link filters (1.37784ms)
+✔ Reader selection prioritizes started items then configured location order without duplicates (0.860224ms)
+✔ Reader links accept only HTTPS Reader hosts and metadata minimization excludes content and tokens (0.565134ms)
+✔ Reader URL configuration preserves aliases location priority and supported shortcut controls (1.157329ms)
+✔ Reader invalid URL preferences retain defaults and advanced limits remain bounded (0.534316ms)
+✔ Reader generated shortcut URLs preserve picking controls and exclude tokens (0.768543ms)
+✔ Reader paginates locations sequentially using cursor and token headers and excludes children (2.187493ms)
+✔ Reader scan cap bounds returned documents and stops requesting further pages (1.448943ms)
+✔ Reader authorization throttling and service errors reject without successful results (3.857511ms)
+✔ Reader session cache contains minimized metadata and invalidates changed scan configuration (0.772111ms)
+✔ Reader disposable metadata cache survives a new instance but never crosses account identities (1.085174ms)
+✔ scheduled-review cache is separate from backups and reopens as cached data until a successful refresh (3.001919ms)
+✔ Reader startup is read-only and preference saves preserve other modules and global language (4.210272ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (2.054782ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (3.921874ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (6.12355ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (2.939562ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (2.38096ms)
+✔ Reader revalidates a remembered item by ID and removes archived completed or missing items (5.227078ms)
+✔ Reader remembered-item validation updates progress and keeps the previous item on request failure (4.353211ms)
+✔ scheduled review without credentials retains its direct fallback and makes no request (0.544385ms)
+✔ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (0.494963ms)
+✔ absent review is empty while network and authorization failures preserve a previously cached review (0.668948ms)
+✔ review completion is explicit server-confirmed and idempotent with a latest-review preflight (0.772731ms)
+✔ changed latest review or failed completion never reports the displayed review complete (0.941827ms)
+✔ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.405797ms)
+✔ a late review response cannot replace the state after its account changes (0.509991ms)
+✔ Q&A requires explicit structured capability hides answers initially and resets on card changes (0.83637ms)
+✔ Reader custom counts support two through twenty and uniform sampling can choose unread before started (0.340305ms)
+✔ Reader finite budgets exclude unknown duration unless enabled and always reject archived completed and child records (0.355664ms)
+✔ Reader scan limits count fetched child records and expose truncation instead of scanning forever (0.607853ms)
+✔ Reader repeating cursors and malformed response shapes fail rather than return misleading complete data (0.674798ms)
+✔ Reader caches are account-specific without serializing tokens or full document content (0.350585ms)
+✔ Reader links reject embedded credentials and cache freshness expires using the configured clock (0.286374ms)
+✔ Reader pagination requests only the remaining scan allowance (0.568741ms)
+✔ Reader enforces a local twenty-request rolling limit without automatically retrying (3.648985ms)
+✔ Reader throttling honors Retry-After and rejects retries until the cooldown expires (38.86584ms)
+✔ Reader request deadlines still abort when the caller supplies its own signal (10.948007ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 163.468307
+[WebServer] (node:77242) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 23 tests using 1 worker
+
+(node:77255) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/reading/e2e/localization.spec.js:4:1 › Reader dialog drafts including an unsaved token survive close reopen and a language change (2.6s)
+  ✓   2 modules/reading/e2e/localization.spec.js:20:1 › Reader Spanish controls and metadata preserve fetched article titles and saved picks (1.7s)
+  ✓   3 modules/reading/e2e/offline.spec.js:12:1 › Reader saved picks reopen offline and failed refresh retains the previous selection (4.4s)
+  ✘   4 modules/reading/e2e/offline.spec.js:28:1 › scheduled review metadata reopens offline with a cached label while API responses stay out of worker caches (9.4s)
+(node:77835) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 modules/reading/e2e/reader.spec.js:4:1 › Reader retains original time and count controls across reload (3.2s)
+  ✓   6 modules/reading/e2e/reader.spec.js:19:1 › Reader returns distinct started-first picks fitting estimated remaining time (1.9s)
+  ✓   7 modules/reading/e2e/reader.spec.js:31:1 › Reader saves progress location cache and shortcut behavior without leaking tokens into URLs (2.3s)
+  ✓   8 modules/reading/e2e/reader.spec.js:53:1 › Reader pick again reuses fresh metadata rather than making additional requests (1.9s)
+  ✓   9 modules/reading/e2e/reader.spec.js:64:1 › Reader distinguishes rejected tokens and throttled document requests (2.1s)
+  ✘  10 modules/reading/e2e/reader.spec.js:79:1 › Reader remembers opened items and revalidates them before offering unfinished continuation (10.0s)
+(node:78387) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 modules/reading/e2e/recovery.spec.js:4:1 › invalid Reader custom-control drafts survive a language change without changing saved preferences (7.0s)
+(node:78683) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  12 modules/reading/e2e/recovery.spec.js:17:1 › Reader stale preference drafts cannot overwrite another tab and quota failures remain visible (8.4s)
+(node:78961) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 modules/reading/e2e/review.spec.js:17:1 › review without credentials offers a direct handoff without issuing requests (1.7s)
+  ✓  14 modules/reading/e2e/review.spec.js:26:1 › latest review shows ordinary highlights and explicit Readwise feedback handoffs without marking completion (1.9s)
+  ✓  15 modules/reading/e2e/review.spec.js:37:1 › explicit review completion waits for server confirmation and then disables repeated completion (1.7s)
+  ✓  16 modules/reading/e2e/review.spec.js:46:1 › failed completion keeps the review unfinished and reports the server failure (1.6s)
+  ✓  17 modules/reading/e2e/review.spec.js:54:1 › missing review and API failure retain the direct fallback and leave local apps usable (1.9s)
+  ✓  18 modules/reading/e2e/review.spec.js:63:1 › capability-gated Q&A component reveals answers accessibly and resets on the next card (2.1s)
+  ✓  19 modules/reading/e2e/shared.spec.js:6:1 › Reader shortcut launch overrides do not replace saved preferences (1.8s)
+  ✓  20 modules/reading/e2e/shared.spec.js:15:1 › Reader custom count time policy and unknown-duration settings persist (3.8s)
+  ✓  21 modules/reading/e2e/shared.spec.js:34:1 › Reader saved picks survive Home and reload without reshuffling or new API calls (3.4s)
+  ✓  22 modules/reading/e2e/shared.spec.js:52:1 › Reader forget removes account picks and credential storage while preserving preferences and other modules (2.0s)
+  ✓  23 modules/reading/e2e/shared.spec.js:72:1 › central Reader preferences and the app edit the same settings and retain language drafts (1.8s)
+
+
+  1) modules/reading/e2e/offline.spec.js:28:1 › scheduled review metadata reopens offline with a cached label while API responses stay out of worker caches 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-review-status]')
+    Expected pattern: /cached/i
+    Received string:  "Failed to fetch"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-review-status]')
+        14 × locator resolved to <p role="status" class="status" aria-live="polite" data-review-status="">Failed to fetch</p>
+           - unexpected value "Failed to fetch"
+
+
+      39 |   await page.reload();
+      40 |   await expect(page.locator('[data-review-card]')).toContainText('Offline highlight.');
+    > 41 |   await expect(page.locator('[data-review-status]')).toContainText(/cached/i);
+         |                                                      ^
+      42 |   await expect(page.getByRole('button', { name: 'Mark review complete', exact: true })).toBeDisabled();
+      43 |   const urls = await page.evaluate(async () => {
+      44 |     const keys = await caches.keys();
+        at /workspaces/daily/modules/reading/e2e/offline.spec.js:41:54
+
+    Error Context: test-results/offline-scheduled-review-m-73554-s-stay-out-of-worker-caches/error-context.md
+
+  2) modules/reading/e2e/reader.spec.js:79:1 › Reader remembers opened items and revalidates them before offering unfinished continuation 
+
+    Error: expect(locator).not.toBeVisible() failed
+
+    Locator:  locator('#lastItemSection')
+    Expected: not visible
+    Received: visible
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "not toBeVisible" with timeout 5000ms
+      - waiting for locator('#lastItemSection')
+        14 × locator resolved to <section class="last-item" id="lastItemSection" aria-labelledby="lastItemTitle">…</section>
+           - unexpected value "visible"
+
+
+       98 |   archived = true;
+       99 |   await page.reload();
+    > 100 |   await expect(page.locator('#lastItemSection')).not.toBeVisible();
+          |                                                      ^
+      101 | });
+      102 |
+        at /workspaces/daily/modules/reading/e2e/reader.spec.js:100:54
+
+    Error Context: test-results/reader-Reader-remembers-op-d6312-ing-unfinished-continuation/error-context.md
+
+  3) modules/reading/e2e/recovery.spec.js:4:1 › invalid Reader custom-control drafts survive a language change without changing saved preferences 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  locator('#countInput')
+    Expected: "custom"
+    Received: "3"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('#countInput')
+        14 × locator resolved to <select id="countInput">…</select>
+           - unexpected value "3"
+
+
+       7 |   await page.locator('#customCount').fill('0');
+       8 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+    >  9 |   await expect(page.locator('#countInput')).toHaveValue('custom');
+         |                                             ^
+      10 |   await expect(page.locator('#customCount')).toHaveValue('0');
+      11 |   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('daily:v1')).modules.reading.data.settings.count)).toBe(3);
+      12 |   await page.locator('#customCount').fill('7');
+        at /workspaces/daily/modules/reading/e2e/recovery.spec.js:9:45
+
+    Error Context: test-results/recovery-invalid-Reader-cu-350b6--changing-saved-preferences/error-context.md
+
+  4) modules/reading/e2e/recovery.spec.js:17:1 › Reader stale preference drafts cannot overwrite another tab and quota failures remain visible 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('#status')
+    Expected pattern: /changed|draft/i
+    Received string:  ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('#status')
+        14 × locator resolved to <p id="status" role="status" class="status" aria-live="polite"></p>
+           - unexpected value ""
+
+
+      33 |   await page.locator('#closeSettings').click();
+      34 |   await page.locator('#countInput').selectOption('1');
+    > 35 |   await expect(page.locator('#status')).toContainText(/changed|draft/i);
+         |                                         ^
+      36 |   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('daily:v1')).modules.reading.data.settings.count)).toBe(5);
+      37 |   await other.close();
+      38 |   await page.reload();
+        at /workspaces/daily/modules/reading/e2e/recovery.spec.js:35:41
+
+    Error Context: test-results/recovery-Reader-stale-pref-5f017-ota-failures-remain-visible/error-context.md
+
+  4 failed
+    modules/reading/e2e/offline.spec.js:28:1 › scheduled review metadata reopens offline with a cached label while API responses stay out of worker caches 
+    modules/reading/e2e/reader.spec.js:79:1 › Reader remembers opened items and revalidates them before offering unfinished continuation 
+    modules/reading/e2e/recovery.spec.js:4:1 › invalid Reader custom-control drafts survive a language change without changing saved preferences 
+    modules/reading/e2e/recovery.spec.js:17:1 › Reader stale preference drafts cannot overwrite another tab and quota failures remain visible 
+  19 passed (1.4m)

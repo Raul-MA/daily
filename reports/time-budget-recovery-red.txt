@@ -1,0 +1,83 @@
+Suite: time-budget
+✔ time input is strict local HH:MM and invalid deadlines are rejected (19.923742ms)
+✔ a deadline at or before the reference rolls to the next local day (0.452485ms)
+✔ session deadlines stay anchored to the original start after midnight and overdue (0.477732ms)
+✔ pending budgets include unfinished current minutes and every later task once (0.377255ms)
+✔ paused task timers resume from elapsed time and pause without losing elapsed time (0.731026ms)
+✔ completing an overrun records exact actual minutes and offers reallocation (0.458727ms)
+✔ early completion advances explicitly and queue reorder never moves the current task (1.477149ms)
+✔ template collections retain Unicode and bounded whole-minute tasks (0.689979ms)
+✔ time budget reads are write-free and writes preserve shared language and other modules (4.858604ms)
+✔ time budget start and its paused activity commit atomically beside independent countdowns (1.808137ms)
+✔ running task timestamps reconstruct overtime without writes and explicit completion ends the activity (1.829427ms)
+✔ failed budget writes do not change tasks timestamps activities or the primary root (1.370269ms)
+✔ stale budget views cannot overwrite later task changes (0.779106ms)
+✔ legacy template previews merge only on confirmation while migration exports include active timing (1.147533ms)
+✔ migration imports retain active timestamps and reject stale or changed previews (0.786449ms)
+✔ budget validation rejects future schemas duplicate tasks invalid timers and future root modules without changes (0.807689ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 67.149366
+[WebServer] (node:24054) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 17 tests using 1 worker
+
+(node:24086) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 modules/time-budget/e2e/recovery.spec.js:4:1 › negative and fractional reallocation never enable confirmation (15.5s)
+(node:24391) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 modules/time-budget/e2e/recovery.spec.js:23:1 › queue drafts survive language changes and stale edits cannot overwrite another view (2.2s)
+  ✓   3 modules/time-budget/e2e/recovery.spec.js:45:1 › confirmed legacy imports preserve active sessions and create a full recovery backup (1.3s)
+  ✓   4 modules/time-budget/e2e/shell.spec.js:10:1 › focus starts persist immediately and Home navigation never changes its saved timestamps (2.2s)
+  ✓   5 modules/time-budget/e2e/shell.spec.js:24:1 › two named countdowns pause independently and remain overdue until explicit completion (3.9s)
+  ✓   6 modules/time-budget/e2e/shell.spec.js:47:1 › language changes retain added setup rows names minutes goal and template drafts (1.7s)
+  ✓   7 modules/time-budget/e2e/shell.spec.js:65:1 › pending overtime survives reload and canceled imports preserve the active plan (11.2s)
+  ✓   8 modules/time-budget/e2e/shell.spec.js:84:1 › quota failures retain the setup draft and create no successful-looking plan (2.1s)
+  ✓   9 modules/time-budget/e2e/shell.spec.js:95:1 › phone layout and offline reopening preserve the running budget (5.4s)
+  ✓  10 modules/time-budget/e2e/time-budget.spec.js:5:1 › setup is read-only and shows available and assigned minutes (845ms)
+  ✓  11 modules/time-budget/e2e/time-budget.spec.js:12:1 › overallocated plans remain editable and do not start (1.2s)
+  ✓  12 modules/time-budget/e2e/time-budget.spec.js:21:1 › task order is editable and a plan starts with a paused first task (1.3s)
+  ✓  13 modules/time-budget/e2e/time-budget.spec.js:31:1 › running focus restores timestamp elapsed after reload and paused focus stays paused (6.5s)
+  ✓  14 modules/time-budget/e2e/time-budget.spec.js:46:1 › overtime stays active until explicit completion and accepts exact rounded reallocation (10.1s)
+  ✓  15 modules/time-budget/e2e/time-budget.spec.js:64:1 › keeping budgets advances and editing the plan retains task names and allocations (9.4s)
+  ✓  16 modules/time-budget/e2e/time-budget.spec.js:77:1 › templates save load and export the original name-to-task format (1.3s)
+  ✓  17 modules/time-budget/e2e/time-budget.spec.js:94:1 › task completion advances once and finishing returns to the retained setup (1.5s)
+
+
+  1) modules/time-budget/e2e/recovery.spec.js:4:1 › negative and fractional reallocation never enable confirmation 
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator:  locator('#applyReallocBtn')
+    Expected: disabled
+    Received: enabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeDisabled" with timeout 5000ms
+      - waiting for locator('#applyReallocBtn')
+        14 × locator resolved to <button type="button" id="applyReallocBtn" class="button primary" data-time-click="app.applyReallocation()">Apply changes</button>
+           - unexpected value "enabled"
+
+
+      15 |   await page.locator('.realloc-input').nth(0).fill('-1');
+      16 |   await page.locator('.realloc-input').nth(1).fill('3');
+    > 17 |   await expect(page.locator('#applyReallocBtn')).toBeDisabled();
+         |                                                  ^
+      18 |   await page.locator('.realloc-input').nth(0).fill('1.5');
+      19 |   await page.locator('.realloc-input').nth(1).fill('1');
+      20 |   await expect(page.locator('#applyReallocBtn')).toBeDisabled();
+        at /workspaces/daily/modules/time-budget/e2e/recovery.spec.js:17:50
+
+    Error Context: test-results/recovery-negative-and-frac-75e6f-n-never-enable-confirmation/error-context.md
+
+  1 failed
+    modules/time-budget/e2e/recovery.spec.js:4:1 › negative and fractional reallocation never enable confirmation 
+  16 passed (1.4m)

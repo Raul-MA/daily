@@ -1,0 +1,92 @@
+✖ update activation is held for any unfinished activity or unsaved form (2.139706ms)
+✖ new worker installs owned assets and activation never deletes sibling caches (3.225277ms)
+✖ worker does not intercept authenticated external non-GET or unknown requests (0.756643ms)
+✖ offline navigation and built assets use only this app cache (0.428861ms)
+✖ updates wait until explicitly requested and reject unrelated messages (0.416127ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 0
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 29.200531
+
+✖ failing tests:
+
+test at tests/general/update-gate.test.mjs:6:1
+✖ update activation is held for any unfinished activity or unsaved form (2.139706ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/update-gate.ts' imported from /workspaces/daily/tests/general/update-gate.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/update-gate.ts'
+  }
+
+test at tests/general/worker.test.mjs:26:1
+✖ new worker installs owned assets and activation never deletes sibling caches (3.225277ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/apps/daily/src/sw.js'
+      at async open (node:internal/fs/promises:637:25)
+      at async readFile (node:internal/fs/promises:1269:14)
+      at async worker (file:///workspaces/daily/tests/general/worker.test.mjs:7:18)
+      at async TestContext.<anonymous> (file:///workspaces/daily/tests/general/worker.test.mjs:27:39)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/apps/daily/src/sw.js'
+  }
+
+test at tests/general/worker.test.mjs:34:1
+✖ worker does not intercept authenticated external non-GET or unknown requests (0.756643ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/apps/daily/src/sw.js'
+      at async open (node:internal/fs/promises:637:25)
+      at async readFile (node:internal/fs/promises:1269:14)
+      at async worker (file:///workspaces/daily/tests/general/worker.test.mjs:7:18)
+      at async TestContext.<anonymous> (file:///workspaces/daily/tests/general/worker.test.mjs:35:22)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/apps/daily/src/sw.js'
+  }
+
+test at tests/general/worker.test.mjs:50:1
+✖ offline navigation and built assets use only this app cache (0.428861ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/apps/daily/src/sw.js'
+      at async open (node:internal/fs/promises:637:25)
+      at async readFile (node:internal/fs/promises:1269:14)
+      at async worker (file:///workspaces/daily/tests/general/worker.test.mjs:7:18)
+      at async TestContext.<anonymous> (file:///workspaces/daily/tests/general/worker.test.mjs:51:22)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/apps/daily/src/sw.js'
+  }
+
+test at tests/general/worker.test.mjs:59:1
+✖ updates wait until explicitly requested and reject unrelated messages (0.416127ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/apps/daily/src/sw.js'
+      at async open (node:internal/fs/promises:637:25)
+      at async readFile (node:internal/fs/promises:1269:14)
+      at async worker (file:///workspaces/daily/tests/general/worker.test.mjs:7:18)
+      at async TestContext.<anonymous> (file:///workspaces/daily/tests/general/worker.test.mjs:60:33)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/apps/daily/src/sw.js'
+  }

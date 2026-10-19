@@ -1,3 +1,4 @@
+import { gameFixture } from './shared-data.js';
 import { appURL } from '../../../tests/support/app-url.mjs';
 import { fixtureData } from './fixture-data.js';
 import { expect, test } from "@playwright/test";
@@ -8,7 +9,7 @@ test("tracks session duration and game duration analytics", async ({ page }) => 
     const data = fixtureData('gameplay-1.json', now);
     await page.addInitScript(({ key, data }) => {
         localStorage.setItem(key, JSON.stringify(data));
-    }, { key: STORAGE_KEY, data });
+    }, { key: STORAGE_KEY, data: gameFixture(data) });
     await page.goto(appURL("games", "history"));
     const latest = page.getByTestId(testIds.historyItem).filter({ hasText: "Dutch Blitz" }).first();
     await expect(latest.getByTestId(testIds.historyDuration)).toContainText("10 min");
@@ -35,7 +36,7 @@ test("shows player average scores by game instead of blending scoring systems", 
     const data = fixtureData('gameplay-2.json', now);
     await page.addInitScript(({ key, data }) => {
         localStorage.setItem(key, JSON.stringify(data));
-    }, { key: STORAGE_KEY, data });
+    }, { key: STORAGE_KEY, data: gameFixture(data) });
     await page.goto(appURL("games", "stats"));
     const adaCard = page.locator(".stat-card").filter({ hasText: "Ada" }).first();
     await expect(adaCard).toContainText("Azul");

@@ -1,0 +1,90 @@
+✖ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (2.223378ms)
+✖ drink type changes calculate composition and clear irrelevant water and milk fields (0.840569ms)
+✖ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (0.693603ms)
+✖ beans referenced by drinks cannot be deleted while unused beans can be removed (2.2452ms)
+✖ coffee filters and insights retain scored and unscored drink semantics (0.786648ms)
+✖ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (1.775903ms)
+✖ legacy replacement resets setup and normalizes absent drink composition fields (2.477091ms)
+✖ unsupported coffee backups and invalid bean input leave existing records unchanged (0.593597ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33.149858
+
+✖ failing tests:
+
+test at modules/coffee/test/domain.test.mjs:27:1
+✖ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (2.223378ms)
+  Error: Unimplemented coffee: backend/features/beans.js:createBeanPreset
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:19:22)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:28:38)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/coffee/test/domain.test.mjs:37:1
+✖ drink type changes calculate composition and clear irrelevant water and milk fields (0.840569ms)
+  Error: Unimplemented coffee: backend/features/beans.js:createBeanPreset
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:19:22)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:38:29)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/coffee/test/domain.test.mjs:50:1
+✖ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (0.693603ms)
+  Error: Unimplemented coffee: backend/features/beans.js:createBeanPreset
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:19:22)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:51:29)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/coffee/test/domain.test.mjs:62:1
+✖ beans referenced by drinks cannot be deleted while unused beans can be removed (2.2452ms)
+  Error: Unimplemented coffee: backend/features/beans.js:createBeanPreset
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:19:22)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:63:36)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/coffee/test/domain.test.mjs:71:1
+✖ coffee filters and insights retain scored and unscored drink semantics (0.786648ms)
+  Error: Unimplemented coffee: backend/features/beans.js:createBeanPreset
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:19:22)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:72:39)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/coffee/test/domain.test.mjs:85:1
+✖ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (1.775903ms)
+  Error: Unimplemented coffee: backend/features/beans.js:createBeanPreset
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:19:22)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:86:41)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/coffee/test/domain.test.mjs:96:1
+✖ legacy replacement resets setup and normalizes absent drink composition fields (2.477091ms)
+  Error: Unimplemented coffee: backend/features/beans.js:createBeanPreset
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:19:22)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:97:56)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/coffee/test/domain.test.mjs:109:1
+✖ unsupported coffee backups and invalid bean input leave existing records unchanged (0.593597ms)
+  Error: Unimplemented coffee: backend/features/beans.js:createBeanPreset
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:19:22)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/domain.test.mjs:110:38)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)

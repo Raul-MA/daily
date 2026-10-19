@@ -1,3 +1,4 @@
+import { gameFixture, readGameData } from './shared-data.js';
 import { appURL } from '../../../tests/support/app-url.mjs';
 import { fixtureData } from './fixture-data.js';
 import { expect, test } from "@playwright/test";
@@ -8,7 +9,7 @@ test("first to points ranks the highest live total as leader", async ({ page }) 
     const data = fixtureData('gameplay-3.json', now);
     await page.addInitScript(({ key, data }) => {
         localStorage.setItem(key, JSON.stringify(data));
-    }, { key: STORAGE_KEY, data });
+    }, { key: STORAGE_KEY, data: gameFixture(data) });
     await page.goto(appURL("games", "session"));
     await expect(page.getByTestId(testIds.sessionTotal).first()).toContainText("Leader");
     await expect(page.getByTestId(testIds.sessionTotal).first()).toContainText("232");
@@ -95,7 +96,7 @@ test("records one team result and keeps collaborative stats separate", async ({ 
     await page.getByTestId(testIds.collaborativeOutcome).selectOption("loss");
     page.once("dialog", (dialog) => dialog.accept());
     await page.getByTestId(testIds.finishSession).click();
-    const stored = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)), STORAGE_KEY);
+    const stored = await readGameData(page);
     const collaborativeSessions = stored.sessions.filter((session) => session.isCollaborative);
     expect(collaborativeSessions).toHaveLength(2);
     expect(collaborativeSessions.every((session) => session.rounds.length === 0 && session.results.length === 0)).toBe(true);

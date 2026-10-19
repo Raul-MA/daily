@@ -1,0 +1,171 @@
+[WebServer] (node:18501) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:18517) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/piano/e2e/player-review.spec.js:9:1 › player import rename and correction drafts survive language remounts and clear after save (6.8s)
+(node:18760) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 modules/piano/e2e/player-review.spec.js:25:1 › changing the corrected note keeps its editor open and keyboard focus on the selector (6.8s)
+(node:18969) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 modules/piano/e2e/player-review.spec.js:33:1 › Spanish player validation explains file shape reference and syntax failures without changing paths (6.5s)
+(node:19183) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 modules/piano/e2e/player-review.spec.js:46:1 › importing from the bottom reveals and focuses the player heading in document scroll (6.8s)
+(node:19410) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 modules/piano/e2e/player-review.spec.js:54:1 › late file reads cannot overwrite newer imports or save after leaving the player (1.5s)
+(node:19528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 modules/piano/e2e/player-review.spec.js:67:1 › switching exercises cannot apply another exercise title or correction draft (1.9s)
+
+
+  1) modules/piano/e2e/player-review.spec.js:9:1 › player import rename and correction drafts survive language remounts and clear after save
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('form[data-unsaved="true"] [name="import-json"]')
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" with timeout 5000ms
+      - waiting for locator('form[data-unsaved="true"] [name="import-json"]')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+       9 | test('player import rename and correction drafts survive language remounts and clear after save', async ({ page }) => {
+      10 |   await open(page); await page.locator('[name="import-json"]').fill(example);
+    > 11 |   await expect(page.locator('form[data-unsaved="true"] [name="import-json"]')).toHaveCount(1);
+         |                                                                                ^
+      12 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+      13 |   await expect(page.locator('[name="import-json"]')).toHaveValue(example);
+      14 |   await page.locator('[data-player-action="import"]').click(); await expect(page.locator('form[data-unsaved="true"]')).toHaveCount(0);
+        at /workspaces/daily/.review-fixes/modules/piano/e2e/player-review.spec.js:11:80
+
+    Error Context: test-results/player-review-player-impor-3acc3-mounts-and-clear-after-save/error-context.md
+
+  2) modules/piano/e2e/player-review.spec.js:25:1 › changing the corrected note keeps its editor open and keyboard focus on the selector
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('[name="notePitch"]')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('[name="notePitch"]')
+        14 × locator resolved to <input min="0" step="1" max="127" value="60" type="number" name="notePitch"/>
+           - unexpected value "hidden"
+
+
+      27 |   await page.getByText('Correct a note', { exact: true }).click(); await page.locator('[name="noteId"]').focus();
+      28 |   await page.locator('[name="noteId"]').selectOption('n2');
+    > 29 |   await expect(page.locator('[name="notePitch"]')).toBeVisible(); await expect(page.locator('[name="noteId"]')).toBeFocused();
+         |                                                    ^
+      30 |   await expect(page.locator('[name="notePitch"]')).toHaveValue('60'); expect(await raw(page)).toBe(before);
+      31 | });
+      32 |
+        at /workspaces/daily/.review-fixes/modules/piano/e2e/player-review.spec.js:29:52
+
+    Error Context: test-results/player-review-changing-the-fe1f2-board-focus-on-the-selector/error-context.md
+
+  3) modules/piano/e2e/player-review.spec.js:33:1 › Spanish player validation explains file shape reference and syntax failures without changing paths
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-player-error]')
+    Timeout: 5000ms
+    - Expected substring  - 1
+    + Received string     + 6
+
+    - $.schemaVersion: el valor admitido es 1
+    + $.id: required
+    + $.title: required
+    + $.defaultVariantId: required
+    + $.tracks: required
+    + $.variants: required
+    + $.schemaVersion: supported value is 1
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-player-error]')
+        14 × locator resolved to <p role="alert" data-player-error="">$.id: required↵$.title: required↵$.defaultVariant…</p>
+           - unexpected value "$.id: required
+    $.title: required
+    $.defaultVariantId: required
+    $.tracks: required
+    $.variants: required
+    $.schemaVersion: supported value is 1"
+
+
+      34 |   await open(page); await page.getByRole('button', { name: 'Español', exact: true }).click();
+      35 |   await page.locator('[name="import-file"]').setInputFiles({ name: 'invalid.json', mimeType: 'application/json', buffer: Buffer.from('{"schemaVersion":99}') });
+    > 36 |   await expect(page.locator('[data-player-error]')).toContainText('$.schemaVersion: el valor admitido es 1');
+         |                                                     ^
+      37 |   await page.locator('[name="import-json"]').fill('{}'); await page.locator('[data-player-action="import"]').click();
+      38 |   await expect(page.locator('[data-player-error]')).toContainText('$.schemaVersion: obligatorio');
+      39 |   const duplicate = JSON.parse(example); duplicate.tracks.push(duplicate.tracks[0]);
+        at /workspaces/daily/.review-fixes/modules/piano/e2e/player-review.spec.js:36:53
+
+    Error Context: test-results/player-review-Spanish-play-28b68-ures-without-changing-paths/error-context.md
+
+  4) modules/piano/e2e/player-review.spec.js:46:1 › importing from the bottom reveals and focuses the player heading in document scroll
+
+    Error: expect(locator).toBeInViewport() failed
+
+    Locator:  locator('.player-page h1')
+    Expected: in viewport
+    Received: viewport ratio 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeInViewport" with timeout 5000ms
+      - waiting for locator('.player-page h1')
+        14 × locator resolved to <h1 tabindex="-1">Exercise player</h1>
+           - unexpected value "viewport ratio 0"
+
+
+      49 |   await page.locator('[name="import-json"]').fill(JSON.stringify({ ...JSON.parse(example), id: 'bottom-import' }));
+      50 |   await page.locator('[data-player-action="import"]').click();
+    > 51 |   await expect(page.locator('.player-page h1')).toBeInViewport(); await expect(page.locator('.player-page h1')).toBeFocused();
+         |                                                 ^
+      52 | });
+      53 |
+      54 | test('late file reads cannot overwrite newer imports or save after leaving the player', async ({ page }) => {
+        at /workspaces/daily/.review-fixes/modules/piano/e2e/player-review.spec.js:51:49
+
+    Error Context: test-results/player-review-importing-fr-45847--heading-in-document-scroll/error-context.md
+
+  5) modules/piano/e2e/player-review.spec.js:54:1 › late file reads cannot overwrite newer imports or save after leaving the player
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "{\"version\":1,\"preferences\":{\"language\":\"en\",\"widgets\":[\"plants\",\"activities\",\"review\",\"reader\",\"quick\",\"piano\"],\"quickActions\":[\"coffee\",\"games\",\"countdown\",\"budget\"]},\"modules\":{\"piano\":{\"version\":1,\"data\":{\"lastExerciseId\":null,\"practice\":null,\"history\":[],\"settings\":{\"minutes\":10,\"piano\":true},\"playerLibrary\":{\"exercises\":[{\"schemaVersion\":1,\"id\":\"latest\",\"title\":\"Two hands: triplets and silence\",\"instructions\":\"Keep the triplets even; observe the written tempo change.\",\"ticksPerQuarter\":960,\"defaultVariantId\":\"written\",\"tracks\":[{\"id\":\"lh\",\"name\":\"Left hand\"},{\"id\":\"rh\",\"name\":\"Right hand\"}],\"variants\":[{\"id\":\"written\",\"name\":\"As written\",\"lengthTicks\":7680,\"tempoMap\":[{\"tick\":0,\"quarterBpm\":120},{\"tick\":3840,\"quarterBpm\":100}],\"timeSignatureMap\":[{\"tick\":0,\"numerator\":4,\"denominator\":4}],\"measures\":[{\"id\":\"m1\",\"label\":\"1\",\"startTick\":0,\"endTick\":3840},{\"id\":\"m2\",\"label\":\"2\",\"startTick\":3840,\"endTick\":7680}],\"subdivisionRegions\":[{\"id\":\"triplets\",\"startTick\":0,\"endTick\":960,\"stepTicks\":320,\"labels\":[\"1\",\"trip\",\"LET\"]}],\"notes\":[{\"id\":\"n1\",\"trackId\":\"lh\",\"pitch\":48,\"startTick\":0,\"durationTicks\":1920,\"velocity\":72,\"accent\":false},{\"id\":\"n2\",\"trackId\":\"lh\",\"pitch\":60,\"startTick\":0,\"durationTicks\":1920,\"velocity\":72,\"accent\":false},{\"id\":\"n3\",\"trackId\":\"rh\",\"pitch\":64,\"startTick\":0,\"durationTicks\":320,\"velocity\":72,\"accent\":false},{\"id\":\"n4\",\"trackId\":\"rh\",\"pitch\":67,\"startTick\":320,\"durationTicks\":320,\"velocity\":72,\"accent\":false},{\"id\":\"n5\",\"trackId\":\"rh\",\"pitch\":72,\"startTick\":640,\"durationTicks\":320,\"velocity\":72,\"accent\":true},{\"id\":\"n6\",\"trackId\":\"rh\",\"pitch\":67,\"startTick\":1920,\"durationTicks\":960,\"velocity\":72,\"accent\":false},{\"id\":\"n7\",\"trackId\":\"lh\",\"pitch\":43,\"startTick\":3840,\"durationTicks\":1920,\"velocity\":72,\"accent\":true},{\"id\":\"n8\",\"trackId\":\"rh\",\"pitch\":62,\"startTick\":3840,\"durationTicks\":240,\"velocity\":72,\"accent\":false},{\"id\":\"n9\",\"trackId\":\"rh\",\"pitch\":65,\"startTick\":4080,\"durationTicks\":240,\"velocity\":72,\"accent\":false},{\"id\":\"n10\",\"trackId\":\"rh\",\"pitch\":69,\"startTick\":4320,\"durationTicks\":480,\"velocity\":72,\"accent\":true}],\"pedalEvents\":[{\"id\":\"pd\",\"trackId\":\"lh\",\"tick\":0,\"down\":true},{\"id\":\"pu\",\"trackId\":\"lh\",\"tick\":1920,\"down\":false}]}]}],\"selectedId\":\"latest\",\"preferences\":{},\"attachments\":{}}}},\"activities\":{\"version\":1,\"data\":[]}}}"
+    Received: "{\"version\":1,\"preferences\":{\"language\":\"en\",\"widgets\":[\"plants\",\"activities\",\"review\",\"reader\",\"quick\",\"piano\"],\"quickActions\":[\"coffee\",\"games\",\"countdown\",\"budget\"]},\"modules\":{\"piano\":{\"version\":1,\"data\":{\"lastExerciseId\":null,\"practice\":null,\"history\":[],\"settings\":{\"minutes\":10,\"piano\":true},\"playerLibrary\":{\"exercises\":[{\"schemaVersion\":1,\"id\":\"latest\",\"title\":\"Two hands: triplets and silence\",\"instructions\":\"Keep the triplets even; observe the written tempo change.\",\"ticksPerQuarter\":960,\"defaultVariantId\":\"written\",\"tracks\":[{\"id\":\"lh\",\"name\":\"Left hand\"},{\"id\":\"rh\",\"name\":\"Right hand\"}],\"variants\":[{\"id\":\"written\",\"name\":\"As written\",\"lengthTicks\":7680,\"tempoMap\":[{\"tick\":0,\"quarterBpm\":120},{\"tick\":3840,\"quarterBpm\":100}],\"timeSignatureMap\":[{\"tick\":0,\"numerator\":4,\"denominator\":4}],\"measures\":[{\"id\":\"m1\",\"label\":\"1\",\"startTick\":0,\"endTick\":3840},{\"id\":\"m2\",\"label\":\"2\",\"startTick\":3840,\"endTick\":7680}],\"subdivisionRegions\":[{\"id\":\"triplets\",\"startTick\":0,\"endTick\":960,\"stepTicks\":320,\"labels\":[\"1\",\"trip\",\"LET\"]}],\"notes\":[{\"id\":\"n1\",\"trackId\":\"lh\",\"pitch\":48,\"startTick\":0,\"durationTicks\":1920,\"velocity\":72,\"accent\":false},{\"id\":\"n2\",\"trackId\":\"lh\",\"pitch\":60,\"startTick\":0,\"durationTicks\":1920,\"velocity\":72,\"accent\":false},{\"id\":\"n3\",\"trackId\":\"rh\",\"pitch\":64,\"startTick\":0,\"durationTicks\":320,\"velocity\":72,\"accent\":false},{\"id\":\"n4\",\"trackId\":\"rh\",\"pitch\":67,\"startTick\":320,\"durationTicks\":320,\"velocity\":72,\"accent\":false},{\"id\":\"n5\",\"trackId\":\"rh\",\"pitch\":72,\"startTick\":640,\"durationTicks\":320,\"velocity\":72,\"accent\":true},{\"id\":\"n6\",\"trackId\":\"rh\",\"pitch\":67,\"startTick\":1920,\"durationTicks\":960,\"velocity\":72,\"accent\":false},{\"id\":\"n7\",\"trackId\":\"lh\",\"pitch\":43,\"startTick\":3840,\"durationTicks\":1920,\"velocity\":72,\"accent\":true},{\"id\":\"n8\",\"trackId\":\"rh\",\"pitch\":62,\"startTick\":3840,\"durationTicks\":240,\"velocity\":72,\"accent\":false},{\"id\":\"n9\",\"trackId\":\"rh\",\"pitch\":65,\"startTick\":4080,\"durationTicks\":240,\"velocity\":72,\"accent\":false},{\"id\":\"n10\",\"trackId\":\"rh\",\"pitch\":69,\"startTick\":4320,\"durationTicks\":480,\"velocity\":72,\"accent\":true}],\"pedalEvents\":[{\"id\":\"pd\",\"trackId\":\"lh\",\"tick\":0,\"down\":true},{\"id\":\"pu\",\"trackId\":\"lh\",\"tick\":1920,\"down\":false}]}]},{\"schemaVersion\":1,\"id\":\"documentation-triplets\",\"title\":\"Two hands: triplets and silence\",\"instructions\":\"Keep the triplets even; observe the written tempo change.\",\"ticksPerQuarter\":960,\"defaultVariantId\":\"written\",\"tracks\":[{\"id\":\"lh\",\"name\":\"Left hand\"},{\"id\":\"rh\",\"name\":\"Right hand\"}],\"variants\":[{\"id\":\"written\",\"name\":\"As written\",\"lengthTicks\":7680,\"tempoMap\":[{\"tick\":0,\"quarterBpm\":120},{\"tick\":3840,\"quarterBpm\":100}],\"timeSignatureMap\":[{\"tick\":0,\"numerator\":4,\"denominator\":4}],\"measures\":[{\"id\":\"m1\",\"label\":\"1\",\"startTick\":0,\"endTick\":3840},{\"id\":\"m2\",\"label\":\"2\",\"startTick\":3840,\"endTick\":7680}],\"subdivisionRegions\":[{\"id\":\"triplets\",\"startTick\":0,\"endTick\":960,\"stepTicks\":320,\"labels\":[\"1\",\"trip\",\"LET\"]}],\"notes\":[{\"id\":\"n1\",\"trackId\":\"lh\",\"pitch\":48,\"startTick\":0,\"durationTicks\":1920,\"velocity\":72,\"accent\":false},{\"id\":\"n2\",\"trackId\":\"lh\",\"pitch\":60,\"startTick\":0,\"durationTicks\":1920,\"velocity\":72,\"accent\":false},{\"id\":\"n3\",\"trackId\":\"rh\",\"pitch\":64,\"startTick\":0,\"durationTicks\":320,\"velocity\":72,\"accent\":false},{\"id\":\"n4\",\"trackId\":\"rh\",\"pitch\":67,\"startTick\":320,\"durationTicks\":320,\"velocity\":72,\"accent\":false},{\"id\":\"n5\",\"trackId\":\"rh\",\"pitch\":72,\"startTick\":640,\"durationTicks\":320,\"velocity\":72,\"accent\":true},{\"id\":\"n6\",\"trackId\":\"rh\",\"pitch\":67,\"startTick\":1920,\"durationTicks\":960,\"velocity\":72,\"accent\":false},{\"id\":\"n7\",\"trackId\":\"lh\",\"pitch\":43,\"startTick\":3840,\"durationTicks\":1920,\"velocity\":72,\"accent\":true},{\"id\":\"n8\",\"trackId\":\"rh\",\"pitch\":62,\"startTick\":3840,\"durationTicks\":240,\"velocity\":72,\"accent\":false},{\"id\":\"n9\",\"trackId\":\"rh\",\"pitch\":65,\"startTick\":4080,\"durationTicks\":240,\"velocity\":72,\"accent\":false},{\"id\":\"n10\",\"trackId\":\"rh\",\"pitch\":69,\"startTick\":4320,\"durationTicks\":480,\"velocity\":72,\"accent\":true}],\"pedalEvents\":[{\"id\":\"pd\",\"trackId\":\"lh\",\"tick\":0,\"down\":true},{\"id\":\"pu\",\"trackId\":\"lh\",\"tick\":1920,\"down\":false}]}]}],\"selectedId\":\"documentation-triplets\",\"preferences\":{},\"attachments\":{}}}},\"activities\":{\"version\":1,\"data\":[]}}}"
+
+      59 |   await expect.poll(() => page.evaluate(() => window.releaseImports.length)).toBe(2);
+      60 |   await page.evaluate(() => window.releaseImports[1]()); await expect(page.locator('[name="exerciseId"]')).toHaveValue('latest');
+    > 61 |   const before = await raw(page); await page.evaluate(() => window.releaseImports[0]()); expect(await raw(page)).toBe(before);
+         |                                                                                                                  ^
+      62 |   await page.locator('.player-import summary').click();
+      63 |   await page.locator('[name="import-file"]').setInputFiles({ name: 'late.json', mimeType: 'application/json', buffer: Buffer.from(example) });
+      64 |   await page.getByRole('link', { name: 'Home', exact: true }).click(); await page.evaluate(() => window.releaseImports[2]()); expect(await raw(page)).toBe(before);
+        at /workspaces/daily/.review-fixes/modules/piano/e2e/player-review.spec.js:61:114
+
+    Error Context: test-results/player-review-late-file-re-4305a-ve-after-leaving-the-player/error-context.md
+
+  5 failed
+    modules/piano/e2e/player-review.spec.js:9:1 › player import rename and correction drafts survive language remounts and clear after save
+    modules/piano/e2e/player-review.spec.js:25:1 › changing the corrected note keeps its editor open and keyboard focus on the selector
+    modules/piano/e2e/player-review.spec.js:33:1 › Spanish player validation explains file shape reference and syntax failures without changing paths
+    modules/piano/e2e/player-review.spec.js:46:1 › importing from the bottom reveals and focuses the player heading in document scroll
+    modules/piano/e2e/player-review.spec.js:54:1 › late file reads cannot overwrite newer imports or save after leaving the player
+  1 passed (36.4s)

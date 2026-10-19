@@ -1,0 +1,32 @@
+Suite: time-budget
+✔ time input is strict local HH:MM and invalid deadlines are rejected (7.341394ms)
+✔ a deadline at or before the reference rolls to the next local day (3.018247ms)
+✔ session deadlines stay anchored to the original start after midnight and overdue (1.484723ms)
+✔ pending budgets include unfinished current minutes and every later task once (4.300269ms)
+✔ paused task timers resume from elapsed time and pause without losing elapsed time (2.401475ms)
+✔ completing an overrun records exact actual minutes and offers reallocation (3.150484ms)
+✔ early completion advances explicitly and queue reorder never moves the current task (3.595738ms)
+✔ template collections retain Unicode and bounded whole-minute tasks (2.062054ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 51.108405
+
+Running 8 tests using 1 worker
+
+(node:15313) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 modules/time-budget/e2e/time-budget.spec.js:23:1 › setup is read-only and shows available and assigned minutes (415ms)
+  ✓  2 modules/time-budget/e2e/time-budget.spec.js:30:1 › overallocated plans remain editable and do not start (1.3s)
+  ✓  3 modules/time-budget/e2e/time-budget.spec.js:39:1 › task order is editable and a plan starts with a paused first task (839ms)
+  ✓  4 modules/time-budget/e2e/time-budget.spec.js:49:1 › running focus restores timestamp elapsed after reload and paused focus stays paused (3.3s)
+  ✓  5 modules/time-budget/e2e/time-budget.spec.js:64:1 › overtime stays active until explicit completion and accepts exact rounded reallocation (6.8s)
+  ✓  6 modules/time-budget/e2e/time-budget.spec.js:82:1 › keeping budgets advances and editing the plan retains task names and allocations (7.0s)
+  ✓  7 modules/time-budget/e2e/time-budget.spec.js:95:1 › templates save load and export the original name-to-task format (967ms)
+  ✓  8 modules/time-budget/e2e/time-budget.spec.js:112:1 › task completion advances once and finishing returns to the retained setup (1.8s)
+
+  8 passed (23.8s)

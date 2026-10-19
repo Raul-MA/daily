@@ -1,0 +1,35 @@
+✔ piano Spanish copy covers the authored corpus and preserves interpolation and notation (4.947269ms)
+✔ all ten localized piano lessons retain their musical and structural data without mutating source (5.052405ms)
+✔ piano prompt presentation translates its text without changing saved prompts or keyboard notes (1.272276ms)
+✖ modal parent-key direction descriptions agree with their C-major examples (1.230147ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 103.080527
+
+✖ failing tests:
+
+test at modules/piano/test/localization-service.test.mjs:52:1
+✖ modal parent-key direction descriptions agree with their C-major examples (1.230147ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /below the root/. Input:
+  
+  'Parent major key is a whole step (M2) above the root — e.g., D Dorian → C major.'
+  
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/piano/test/localization-service.test.mjs:56:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Parent major key is a whole step (M2) above the root — e.g., D Dorian → C major.',
+    expected: /below the root/,
+    operator: 'match',
+    diff: 'simple'
+  }

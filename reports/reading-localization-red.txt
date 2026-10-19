@@ -1,0 +1,134 @@
+Suite: reading
+✔ Reader duration parsing preserves numeric text and word-count estimates (6.873028ms)
+✔ Reader progress is bounded and remaining time rounds upward with a one-minute floor (0.504651ms)
+✔ Reader eligibility deduplicates IDs and applies progress remaining-time and safe-link filters (1.37806ms)
+✔ Reader selection prioritizes started items then configured location order without duplicates (0.706156ms)
+✔ Reader links accept only HTTPS Reader hosts and metadata minimization excludes content and tokens (0.519689ms)
+✔ Reader URL configuration preserves aliases location priority and supported shortcut controls (0.85822ms)
+✔ Reader invalid URL preferences retain defaults and advanced limits remain bounded (0.313224ms)
+✔ Reader generated shortcut URLs preserve picking controls and exclude tokens (0.589219ms)
+✔ Reader paginates locations sequentially using cursor and token headers and excludes children (1.304162ms)
+✔ Reader scan cap bounds returned documents and stops requesting further pages (0.776347ms)
+✔ Reader authorization throttling and service errors reject without successful results (1.871149ms)
+✔ Reader session cache contains minimized metadata and invalidates changed scan configuration (0.707489ms)
+✔ Reader startup is read-only and preference saves preserve other modules and global language (5.540192ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (1.931011ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (3.449794ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (10.344792ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (1.299563ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (1.276701ms)
+✔ scheduled review without credentials retains its direct fallback and makes no request (0.585833ms)
+✔ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (0.574131ms)
+✔ absent review is empty while network and authorization failures preserve a previously cached review (0.653198ms)
+✔ review completion is explicit server-confirmed and idempotent with a latest-review preflight (0.733007ms)
+✔ changed latest review or failed completion never reports the displayed review complete (1.839139ms)
+✔ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.79368ms)
+✔ a late review response cannot replace the state after its account changes (0.617491ms)
+✔ Q&A requires explicit structured capability hides answers initially and resets on card changes (1.030371ms)
+✔ Reader custom counts support two through twenty and uniform sampling can choose unread before started (0.607593ms)
+✔ Reader finite budgets exclude unknown duration unless enabled and always reject archived completed and child records (0.601051ms)
+✔ Reader scan limits count fetched child records and expose truncation instead of scanning forever (0.615197ms)
+✔ Reader repeating cursors and malformed response shapes fail rather than return misleading complete data (1.985183ms)
+✔ Reader caches are account-specific without serializing tokens or full document content (0.502577ms)
+✔ Reader links reject embedded credentials and cache freshness expires using the configured clock (0.930926ms)
+✔ Reader pagination requests only the remaining scan allowance (1.020443ms)
+✔ Reader enforces a local twenty-request rolling limit without automatically retrying (8.865994ms)
+✔ Reader throttling honors Retry-After and rejects retries until the cooldown expires (42.369667ms)
+✔ Reader request deadlines still abort when the caller supplies its own signal (11.066228ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 154.272961
+[WebServer] (node:60864) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 18 tests using 1 worker
+
+(node:60882) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 modules/reading/e2e/localization.spec.js:4:1 › Reader dialog drafts including an unsaved token survive close reopen and a language change (7.3s)
+(node:61101) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 modules/reading/e2e/localization.spec.js:20:1 › Reader Spanish controls and metadata preserve fetched article titles and saved picks (7.2s)
+(node:61323) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 modules/reading/e2e/reader.spec.js:4:1 › Reader retains original time and count controls across reload (3.5s)
+  ✓   4 modules/reading/e2e/reader.spec.js:19:1 › Reader returns distinct started-first picks fitting estimated remaining time (1.7s)
+  ✓   5 modules/reading/e2e/reader.spec.js:31:1 › Reader saves progress location cache and shortcut behavior without leaking tokens into URLs (2.6s)
+  ✓   6 modules/reading/e2e/reader.spec.js:53:1 › Reader pick again reuses fresh metadata rather than making additional requests (1.8s)
+  ✓   7 modules/reading/e2e/reader.spec.js:64:1 › Reader distinguishes rejected tokens and throttled document requests (1.9s)
+  ✓   8 modules/reading/e2e/review.spec.js:17:1 › review without credentials offers a direct handoff without issuing requests (1.6s)
+  ✓   9 modules/reading/e2e/review.spec.js:26:1 › latest review shows ordinary highlights and explicit Readwise feedback handoffs without marking completion (1.8s)
+  ✓  10 modules/reading/e2e/review.spec.js:37:1 › explicit review completion waits for server confirmation and then disables repeated completion (1.7s)
+  ✓  11 modules/reading/e2e/review.spec.js:46:1 › failed completion keeps the review unfinished and reports the server failure (1.9s)
+  ✓  12 modules/reading/e2e/review.spec.js:54:1 › missing review and API failure retain the direct fallback and leave local apps usable (1.9s)
+  ✓  13 modules/reading/e2e/review.spec.js:63:1 › capability-gated Q&A component reveals answers accessibly and resets on the next card (1.7s)
+  ✓  14 modules/reading/e2e/shared.spec.js:6:1 › Reader shortcut launch overrides do not replace saved preferences (1.8s)
+  ✓  15 modules/reading/e2e/shared.spec.js:15:1 › Reader custom count time policy and unknown-duration settings persist (3.5s)
+  ✓  16 modules/reading/e2e/shared.spec.js:34:1 › Reader saved picks survive Home and reload without reshuffling or new API calls (3.3s)
+  ✓  17 modules/reading/e2e/shared.spec.js:52:1 › Reader forget removes account picks and credential storage while preserving preferences and other modules (2.0s)
+  ✓  18 modules/reading/e2e/shared.spec.js:72:1 › central Reader preferences and the app edit the same settings and retain language drafts (1.7s)
+
+
+  1) modules/reading/e2e/localization.spec.js:4:1 › Reader dialog drafts including an unsaved token survive close reopen and a language change 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  locator('#progressInput')
+    Expected: "unread"
+    Received: "unfinished"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('#progressInput')
+        14 × locator resolved to <select id="progressInput">…</select>
+           - unexpected value "unfinished"
+
+
+      11 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+      12 |   await settings(page);
+    > 13 |   await expect(page.locator('#progressInput')).toHaveValue('unread');
+         |                                                ^
+      14 |   await expect(page.locator('#policyInput')).toHaveValue('uniform');
+      15 |   await expect(page.locator('#tokenInput')).toHaveValue('fixture-unsaved');
+      16 |   expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).not.toContain('fixture-unsaved');
+        at /workspaces/daily/modules/reading/e2e/localization.spec.js:13:48
+
+    Error Context: test-results/localization-Reader-dialog-0b783-eopen-and-a-language-change/error-context.md
+
+  2) modules/reading/e2e/localization.spec.js:20:1 › Reader Spanish controls and metadata preserve fetched article titles and saved picks 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('#pickButton')
+    Expected: "Elegir por mí"
+    Received: "Pick for me"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" with timeout 5000ms
+      - waiting for locator('#pickButton')
+        14 × locator resolved to <button type="button" id="pickButton" class="primary-button">Pick for me</button>
+           - unexpected value "Pick for me"
+
+
+      24 |   const before = await page.evaluate(() => JSON.stringify(JSON.parse(localStorage.getItem('daily:v1')).modules.reading.data.picks));
+      25 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+    > 26 |   await expect(page.locator('#pickButton')).toHaveText('Elegir por mí');
+         |                                             ^
+      27 |   await expect(page.locator('#results .result-title').first()).toHaveText('Started three');
+      28 |   await expect(page.locator('#results')).toContainText('min restantes');
+      29 |   expect(await page.evaluate(() => JSON.stringify(JSON.parse(localStorage.getItem('daily:v1')).modules.reading.data.picks))).toBe(before);
+        at /workspaces/daily/modules/reading/e2e/localization.spec.js:26:45
+
+    Error Context: test-results/localization-Reader-Spanis-9933b-icle-titles-and-saved-picks/error-context.md
+
+  2 failed
+    modules/reading/e2e/localization.spec.js:4:1 › Reader dialog drafts including an unsaved token survive close reopen and a language change 
+    modules/reading/e2e/localization.spec.js:20:1 › Reader Spanish controls and metadata preserve fetched article titles and saved picks 
+  16 passed (53.7s)

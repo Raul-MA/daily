@@ -1,3 +1,4 @@
+import { hashFor } from '../paths.mjs';
 import { loadModule } from '../../../../tests/support/load-module.mjs';
 import { mkdir } from 'node:fs/promises';
 export const { LESSONS } = await loadModule('piano', 'js/music/learning-path.js');
@@ -30,21 +31,15 @@ export const screenshot = async (name) => {
 export const action = name => page.locator(`[data-action="${name}"]`);
 export const countIntervals = () => page.evaluate(() => window.__practiceTestIntervals.size);
 export async function route(path, ready) {
-    if (new URL(page.url()).hash === `#${path}`) {
+    if (new URL(page.url()).hash === hashFor(path)) {
         await route(path === '/library' ? '/' : '/library', path === '/library' ? '.course-lessons' : '.library-grid');
     }
-    await page.evaluate(value => new Promise(resolve => {
-        const expectedPath = value === '/pentatonic/theory' ? '/scales/theory' : value;
+    const expectedPath = path === '/pentatonic/theory' ? '/scales/theory' : path;
+    await page.evaluate(hash => { window.location.hash = hash; }, hashFor(path));
+    await page.waitForFunction(hash => {
         const container = document.querySelector('#page-content');
-        const observer = new MutationObserver(() => {
-            if (location.hash === `#${expectedPath}` && !/Loading…|Redirecting…/.test(container.textContent)) {
-                observer.disconnect();
-                resolve();
-            }
-        });
-        observer.observe(container, { childList: true, subtree: true });
-        window.location.hash = value;
-    }), path);
+        return location.hash === hash && container && !container.querySelector('[data-piano-loading]') && !/Loading…|Redirecting…/.test(container.textContent);
+    }, hashFor(expectedPath));
     await page.locator(ready).waitFor();
 }
 export async function startRecall() {

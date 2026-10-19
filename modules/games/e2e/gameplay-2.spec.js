@@ -26,7 +26,8 @@ test("starts enters edits and finishes a score session", async ({ page }) => {
     const firstPlayerId = await firstScore.getAttribute("data-player-id");
     const secondPlayerId = await secondScore.getAttribute("data-player-id");
     const storedScore = async (playerId) => page.evaluate(({ key, roundId, playerId }) => {
-        const data = JSON.parse(localStorage.getItem(key));
+        const root = JSON.parse(localStorage.getItem(key));
+        const data = key === 'daily:v1' ? root.modules.games.data : root;
         return data.sessions[0].rounds.find((round) => round.id === roundId).scores[playerId];
     }, { key: STORAGE_KEY, roundId: firstRoundId, playerId });
     await firstScore.click();
@@ -79,7 +80,7 @@ test("opens completed game details without editing first", async ({ page }) => {
     await page.getByTestId(testIds.finishSession).click();
     const historyRow = page.getByTestId(testIds.historyItem).filter({ hasText: "Azul" });
     await historyRow.locator(".history-main").click();
-    await expect(page).toHaveURL(/#\/game\//);
+    await expect(page).toHaveURL(process.env.DAILY_BASELINE_URL ? /#\/game\// : /#\/games\/history\//);
     await expect(page.getByTestId(testIds.gameDetail)).toContainText("Winner: Grace");
     await expect(page.getByTestId(testIds.gameDetailRound)).toHaveCount(2);
     await expect(page.getByTestId(testIds.gameDetailRound).nth(0)).toContainText("Round 1");

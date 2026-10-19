@@ -1,0 +1,159 @@
+✖ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (1.802648ms)
+✖ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (0.550379ms)
+✖ WhatsApp failed draft saves and clears preserve the previous primary document (0.499143ms)
+✖ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (0.371004ms)
+✖ WhatsApp restore rejects changed stale invalid and future previews before replacing records (0.551821ms)
+✖ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (0.633934ms)
+✖ encoding, validation, local time, DST, manifest, icons and asset paths (1.118009ms)
+✔ worker install, cache ownership, offline shell and external bypass (89.54323ms)
+✖ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (3.54311ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 1
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 125.416199
+
+✖ failing tests:
+
+test at modules/whatsapp/test/service.test.mjs:15:1
+✖ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (1.802648ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/service.test.mjs:26:1
+✖ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (0.550379ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/service.test.mjs:38:1
+✖ WhatsApp failed draft saves and clears preserve the previous primary document (0.499143ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/service.test.mjs:48:1
+✖ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (0.371004ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/service.test.mjs:61:1
+✖ WhatsApp restore rejects changed stale invalid and future previews before replacing records (0.551821ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/service.test.mjs:75:1
+✖ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (0.633934ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/whatsapp/src/service.js' imported from /workspaces/daily/modules/whatsapp/test/service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/whatsapp/src/service.js'
+  }
+
+test at modules/whatsapp/test/tests.cjs:15:1
+✖ encoding, validation, local time, DST, manifest, icons and asset paths (1.118009ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/app.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:8:25)
+      at readFunctions (/workspaces/daily/modules/whatsapp/test/tests.cjs:12:21)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:16:57)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/app.js'
+  }
+
+test at modules/whatsapp/test/tests.cjs:120:1
+✖ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (3.54311ms)
+  Error: ENOENT: no such file or directory, open '/workspaces/daily/modules/whatsapp/src/app.js'
+      at Object.openSync (node:fs:560:18)
+      at Object.readFileSync (node:fs:444:35)
+      at read (/workspaces/daily/modules/whatsapp/test/tests.cjs:8:25)
+      at readFunctions (/workspaces/daily/modules/whatsapp/test/tests.cjs:12:21)
+      at TestContext.<anonymous> (/workspaces/daily/modules/whatsapp/test/tests.cjs:121:45)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: '/workspaces/daily/modules/whatsapp/src/app.js'
+  }

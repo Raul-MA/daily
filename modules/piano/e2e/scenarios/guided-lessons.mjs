@@ -1,3 +1,4 @@
+import { hashFor } from '../paths.mjs';
 import assert from 'node:assert/strict';
 import { page, LESSONS, route, action, startRecall, countIntervals } from './core.mjs';
 for (let index = 0; index < LESSONS.length; index++) {
@@ -39,7 +40,7 @@ for (let index = 0; index < LESSONS.length; index++) {
             await action('finish').click();
             await action('next-lesson').click();
             await page.waitForFunction(title => document.querySelector('.practice-page h1')?.textContent === title, LESSONS[1].title);
-            assert.equal(new URL(page.url()).hash, `#/learn?lesson=${LESSONS[1].id}`);
+            assert.equal(new URL(page.url()).hash, hashFor(`/learn?lesson=${LESSONS[1].id}`));
         }
     }
 }

@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { readFile } from "node:fs/promises";
-import { appLocators, bean, emptyData, entry, expectToast, gotoApp, STORAGE_KEY, testIds } from "./helpers.js";
+import { appLocators, bean, emptyData, entry, expectToast, gotoApp, readCoffeeData, confirmCoffeeImport, STORAGE_KEY, testIds } from "./helpers.js";
 test("legacy imports keep merge tools and trigger setup after replace", async ({ page }) => {
     const { importMode } = appLocators(page);
     const legacySettings = {
@@ -28,8 +28,9 @@ test("legacy imports keep merge tools and trigger setup after replace", async ({
         mimeType: "application/json",
         buffer: Buffer.from(JSON.stringify(legacyBackup))
     });
+    await confirmCoffeeImport(page);
     await expectToast(page, "Import complete.");
-    let settings = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).settings, STORAGE_KEY);
+    let settings = (await readCoffeeData(page)).settings;
     expect(settings.toolsConfigured).toBe(true);
     expect(settings.tools).toEqual({ wdt: true, distributor: false, puckScreen: true });
     await page.getByTestId(testIds.importData).setInputFiles({
@@ -40,8 +41,9 @@ test("legacy imports keep merge tools and trigger setup after replace", async ({
             settings: { ...legacySettings, tools: { distributor: true } }
         }))
     });
+    await confirmCoffeeImport(page);
     await expectToast(page, "Import complete.");
-    settings = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).settings, STORAGE_KEY);
+    settings = (await readCoffeeData(page)).settings;
     expect(settings.tools).toEqual({ wdt: true, distributor: true, puckScreen: true });
     await importMode.selectOption("replace");
     await page.getByTestId(testIds.importData).setInputFiles({
@@ -49,9 +51,10 @@ test("legacy imports keep merge tools and trigger setup after replace", async ({
         mimeType: "application/json",
         buffer: Buffer.from(JSON.stringify(legacyBackup))
     });
+    await confirmCoffeeImport(page);
     await expectToast(page, "Import complete.");
     await expect(page.getByTestId(testIds.toolsSetupForm)).toBeVisible();
-    settings = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).settings, STORAGE_KEY);
+    settings = (await readCoffeeData(page)).settings;
     expect(settings.toolsConfigured).toBe(false);
 });
 test("exports data and imports merge, replace, and invalid backups", async ({ page }) => {
@@ -90,12 +93,13 @@ test("exports data and imports merge, replace, and invalid backups", async ({ pa
         mimeType: "application/json",
         buffer: Buffer.from(JSON.stringify(replaceData))
     });
+    await confirmCoffeeImport(page);
     await expectToast(page, "Import complete.");
     await page.getByTestId(testIds.navHistory).click();
     await expect(page.getByTestId(testIds.entryRow)).toHaveCount(1);
     await expect(page.getByTestId(testIds.entryRow)).toContainText("Replace / Only");
     await expect(page.getByTestId(testIds.entryRow)).toContainText("Espresso");
-    const replaced = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)).entries[0], STORAGE_KEY);
+    const replaced = (await readCoffeeData(page)).entries[0];
     expect(replaced.brew.drinkType).toBe("espresso");
     expect(replaced.brew.compositionRatio).toBeNull();
     await page.getByTestId(testIds.navSettings).click();
@@ -108,7 +112,8 @@ test("exports data and imports merge, replace, and invalid backups", async ({ pa
 });
 async function mergeBackup(page) {
     await page.evaluate(async (key) => {
-        const data = JSON.parse(localStorage.getItem(key));
+        const root = JSON.parse(localStorage.getItem(key));
+        const data = key === 'daily:v1' ? root.modules.coffee.data : root;
         data.beanPresets.push({
             id: "bean-imported",
             schemaVersion: 1,
@@ -119,7 +124,7 @@ async function mergeBackup(page) {
             decaf: false,
             roastOrigin: "Brazil"
         });
-        localStorage.setItem(key, JSON.stringify(data));
+        localStorage.setItem(key, JSON.stringify(root));
     }, STORAGE_KEY);
     await page.evaluate(async (data) => {
         window.__mergeBackup = data;
@@ -132,6 +137,7 @@ async function mergeBackup(page) {
         mimeType: "application/json",
         buffer: Buffer.from(JSON.stringify(await page.evaluate(() => window.__mergeBackup)))
     });
+    await confirmCoffeeImport(page);
     await expectToast(page, "Import complete.");
     await page.getByTestId(testIds.navHistory).click();
     await expect(page.getByTestId(testIds.entryRow)).toHaveCount(2);

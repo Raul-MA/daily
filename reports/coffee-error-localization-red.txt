@@ -1,0 +1,29 @@
+✖ coffee dictionaries cover shared errors and preserve user text in either language (10.958333ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 103.509441
+
+✖ failing tests:
+
+test at modules/coffee/test/localization-service.test.mjs:5:1
+✖ coffee dictionaries cover shared errors and preserve user text in either language (10.958333ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to:
+  
+  'Data changed in another view.'
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/localization-service.test.mjs:15:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Data changed in another view.',
+    expected: 'Data changed in another view.',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }

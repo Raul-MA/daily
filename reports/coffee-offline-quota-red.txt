@@ -1,0 +1,108 @@
+Suite: coffee
+✔ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (7.915488ms)
+✔ drink type changes calculate composition and clear irrelevant water and milk fields (1.757859ms)
+✔ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (1.461868ms)
+✔ beans referenced by drinks cannot be deleted while unused beans can be removed (1.930501ms)
+✔ coffee filters and insights retain scored and unscored drink semantics (2.484626ms)
+✔ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (1.647404ms)
+✔ legacy replacement resets setup and normalizes absent drink composition fields (1.683711ms)
+✔ unsupported coffee backups and invalid bean input leave existing records unchanged (1.050841ms)
+✔ coffee reads create no records and saves preserve unrelated shared modules (4.712622ms)
+✔ explicit coffee language changes commit with global language atomically (0.794692ms)
+✔ coffee imports preserve shared language and validate merged bean references (1.806901ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (1.118096ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (1.084774ms)
+✔ coffee rejects a future module payload without silently replacing it (0.481759ms)
+✔ coffee import previews are read-only and cancel leaves the current root intact (0.672034ms)
+✔ coffee import confirmation rejects stale previews and retains recovery on replacement (1.018831ms)
+✖ coffee malformed nested records and invalid settings fail before any shared write (1.413948ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 16
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 71.402065
+
+✖ failing tests:
+
+test at modules/coffee/test/service.test.mjs:121:1
+✖ coffee malformed nested records and invalid settings fail before any shared write (1.413948ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/coffee/test/service.test.mjs:129:12)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+[WebServer] (node:126045) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 27 tests using 1 worker
+
+(node:126077) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/coffee/e2e/backup.spec.js:4:1 › legacy imports keep merge tools and trigger setup after replace (1.4s)
+  ✓   2 modules/coffee/e2e/backup.spec.js:60:1 › exports data and imports merge, replace, and invalid backups (1.6s)
+  ✓   3 modules/coffee/e2e/history-detail.spec.js:3:1 › sorts, filters, opens, edits, cancels, and deletes history entries (1.7s)
+  ✓   4 modules/coffee/e2e/history-detail.spec.js:57:1 › switches history between compact and detailed views and remembers the choice (1.4s)
+  ✓   5 modules/coffee/e2e/history-detail.spec.js:80:1 › compact history rows fit on mobile (812ms)
+  ✓   6 modules/coffee/e2e/history-detail.spec.js:93:1 › new entries created through the UI are listed in history (1.8s)
+  ✓   7 modules/coffee/e2e/insights.spec.js:3:1 › shows empty insights and updates metrics from stored drinks (1.3s)
+  ✓   8 modules/coffee/e2e/new-shot.spec.js:3:1 › creates a complete espresso drink, previews ratio, and persists it (2.0s)
+  ✓   9 modules/coffee/e2e/new-shot.spec.js:26:1 › creates an americano with water to coffee ratio (1.7s)
+  ✓  10 modules/coffee/e2e/new-shot.spec.js:40:1 › creates a milk drink and clears hidden composition fields after type switch (1.7s)
+  ✓  11 modules/coffee/e2e/new-shot.spec.js:61:1 › manage button routes to settings and invalid drink shows validation toast (978ms)
+  ✓  12 modules/coffee/e2e/new-shot.spec.js:73:1 › clear button empties the selected bean (809ms)
+  ✓  13 modules/coffee/e2e/new-shot.spec.js:83:1 › score slider can be set after skipping (1.6s)
+  ✓  14 modules/coffee/e2e/new-shot.spec.js:95:1 › taste info buttons explain the rating fields (846ms)
+  ✓  15 modules/coffee/e2e/offline.spec.js:6:1 › coffee forms history insights and beans remain available offline (1.8s)
+  ✓  16 modules/coffee/e2e/settings-data.spec.js:4:1 › creates, edits, deletes beans, and blocks deleting a used bean (2.1s)
+  ✓  17 modules/coffee/e2e/settings-data.spec.js:32:1 › saves settings and persists theme (2.6s)
+  ✓  18 modules/coffee/e2e/settings-data.spec.js:53:1 › switches to Spanish and persists translated UI (2.0s)
+  ✓  19 modules/coffee/e2e/settings-data.spec.js:72:1 › reminds when data has not been exported recently and records exports (909ms)
+  ✓  20 modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export (891ms)
+  ✓  21 modules/coffee/e2e/settings-data.spec.js:101:1 › asks for tools once and hides unavailable prep controls (670ms)
+  ✓  22 modules/coffee/e2e/settings-data.spec.js:119:1 › skip tools setup saves no optional tools and entries keep explicit prep values (1.2s)
+  ✓  23 modules/coffee/e2e/shared.spec.js:4:1 › coffee detail and edit links reload without changing records (2.0s)
+  ✓  24 modules/coffee/e2e/shared.spec.js:19:1 › coffee language changes preserve unsaved values and derived previews (929ms)
+  ✓  25 modules/coffee/e2e/shared.spec.js:35:1 › coffee stale drink edits retain their draft and preserve the other tab change (1.5s)
+  ✓  26 modules/coffee/e2e/shared.spec.js:54:1 › coffee import cancellation and future backups leave existing data intact (847ms)
+  ✘  27 modules/coffee/e2e/shared.spec.js:67:1 › coffee failed preference saves keep the draft and previous persisted settings (5.8s)
+
+
+  1) modules/coffee/e2e/shared.spec.js:67:1 › coffee failed preference saves keep the draft and previous persisted settings 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('toast')
+    Expected substring: "QuotaExceededError"
+    Received string:    ""
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('toast')
+        14 × locator resolved to <div hidden="" class="toast" role="status" id="coffee-toast" data-testid="toast"></div>
+           - unexpected value ""
+
+
+      78 |   });
+      79 |   await page.getByTestId(testIds.saveSettings).click();
+    > 80 |   await expect(page.getByTestId(testIds.toast)).toContainText('QuotaExceededError');
+         |                                                 ^
+      81 |   await expect(page.locator('#burrTouchReference')).toHaveValue('Unsaved reference');
+      82 |   expect(await readCoffeeData(page)).toEqual(before);
+      83 | });
+        at /workspaces/daily/modules/coffee/e2e/shared.spec.js:80:49
+
+    Error Context: test-results/shared-coffee-failed-prefe-7f0a6-previous-persisted-settings/error-context.md
+
+  1 failed
+    modules/coffee/e2e/shared.spec.js:67:1 › coffee failed preference saves keep the draft and previous persisted settings 
+  26 passed (45.5s)

@@ -1,0 +1,208 @@
+✖ fresh dashboard defaults put plants and activities first without writing data (3.102455ms)
+✖ language and dashboard order persist across a new state instance (0.614117ms)
+✖ removing a widget preserves module records and their active sessions (0.399987ms)
+✖ invalid language, duplicate widgets and unknown actions never overwrite settings (0.384329ms)
+✖ failed saves publish no committed change and retain the previous preferences (0.414625ms)
+✖ committed preference changes notify subscribers and support cleanup (0.480478ms)
+✖ hash routes cover all seven modules and their canonical deep links (0.510654ms)
+✖ href builder encodes stable IDs and supports configurable local base paths (0.552311ms)
+✖ query parameters and repeated values survive routing without changing settings (1.198689ms)
+✖ unknown and malformed routes fail safely instead of executing external URLs (0.737237ms)
+✖ browser hash listener supports navigation and removes itself on cleanup (1.507365ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 0
+ℹ fail 11
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 82.805417
+
+✖ failing tests:
+
+test at tests/general/preferences.test.mjs:22:1
+✖ fresh dashboard defaults put plants and activities first without writing data (3.102455ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/data/src/daily-state.ts' imported from /workspaces/daily/tests/general/preferences.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/data/src/daily-state.ts'
+  }
+
+test at tests/general/preferences.test.mjs:29:1
+✖ language and dashboard order persist across a new state instance (0.614117ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/data/src/daily-state.ts' imported from /workspaces/daily/tests/general/preferences.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/data/src/daily-state.ts'
+  }
+
+test at tests/general/preferences.test.mjs:37:1
+✖ removing a widget preserves module records and their active sessions (0.399987ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/data/src/daily-state.ts' imported from /workspaces/daily/tests/general/preferences.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/data/src/daily-state.ts'
+  }
+
+test at tests/general/preferences.test.mjs:48:1
+✖ invalid language, duplicate widgets and unknown actions never overwrite settings (0.384329ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/data/src/daily-state.ts' imported from /workspaces/daily/tests/general/preferences.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/data/src/daily-state.ts'
+  }
+
+test at tests/general/preferences.test.mjs:58:1
+✖ failed saves publish no committed change and retain the previous preferences (0.414625ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/data/src/daily-state.ts' imported from /workspaces/daily/tests/general/preferences.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/data/src/daily-state.ts'
+  }
+
+test at tests/general/preferences.test.mjs:69:1
+✖ committed preference changes notify subscribers and support cleanup (0.480478ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/data/src/daily-state.ts' imported from /workspaces/daily/tests/general/preferences.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/data/src/daily-state.ts'
+  }
+
+test at tests/general/router.test.mjs:6:1
+✖ hash routes cover all seven modules and their canonical deep links (0.510654ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/router.ts' imported from /workspaces/daily/tests/general/router.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/router.ts'
+  }
+
+test at tests/general/router.test.mjs:12:1
+✖ href builder encodes stable IDs and supports configurable local base paths (0.552311ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/router.ts' imported from /workspaces/daily/tests/general/router.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/router.ts'
+  }
+
+test at tests/general/router.test.mjs:21:1
+✖ query parameters and repeated values survive routing without changing settings (1.198689ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/router.ts' imported from /workspaces/daily/tests/general/router.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/router.ts'
+  }
+
+test at tests/general/router.test.mjs:29:1
+✖ unknown and malformed routes fail safely instead of executing external URLs (0.737237ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/router.ts' imported from /workspaces/daily/tests/general/router.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/router.ts'
+  }
+
+test at tests/general/router.test.mjs:37:1
+✖ browser hash listener supports navigation and removes itself on cleanup (1.507365ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/packages/platform/src/router.ts' imported from /workspaces/daily/tests/general/router.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:650:32)
+      at TracingChannel.tracePromise (node:diagnostics_channel:350:14) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/packages/platform/src/router.ts'
+  }

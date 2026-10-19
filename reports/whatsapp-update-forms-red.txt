@@ -1,0 +1,99 @@
+Suite: whatsapp
+Prepared 623 HTML/CSS/JavaScript/assets at /daily/
+Passed: encoding, validation, local time in four zones, DST, manifest, icons, and asset paths.
+Passed: submit clears form/storage, preserves handoff and copy fallback, and keeps invalid drafts.
+✔ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (6.20229ms)
+✔ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (1.353559ms)
+✔ WhatsApp failed draft saves and clears preserve the previous primary document (0.857994ms)
+✔ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (1.64308ms)
+✔ WhatsApp restore rejects changed stale invalid and future previews before replacing records (1.037138ms)
+✔ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (1.116737ms)
+✔ encoding, validation, local time, DST, manifest, icons and asset paths (11.890348ms)
+✔ worker install, cache ownership, offline shell and external bypass (67.222543ms)
+✔ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (6.052109ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 121.109794
+[WebServer] (node:40767) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:40779) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 modules/whatsapp/e2e/source.spec.js:4:1 › WhatsApp retains its original composer appearance and local reminder controls on phones (1.5s)
+  ✓  2 modules/whatsapp/e2e/whatsapp.spec.js:10:1 › WhatsApp draft autosaves and survives Home reload and language changes without translating user text (1.9s)
+  ✓  3 modules/whatsapp/e2e/whatsapp.spec.js:25:1 › WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback (971ms)
+  ✓  4 modules/whatsapp/e2e/whatsapp.spec.js:44:1 › WhatsApp expired drafts remain visible and clipboard denial exposes a selectable manual link (1.8s)
+  ✓  5 modules/whatsapp/e2e/whatsapp.spec.js:60:1 › WhatsApp stale edits and storage failures retain the visible draft and prevent a destructive handoff (2.6s)
+  ✓  6 modules/whatsapp/e2e/whatsapp.spec.js:79:1 › WhatsApp import is read-only until recovery confirmation and cancel keeps current records (1.0s)
+  ✓  7 modules/whatsapp/e2e/whatsapp.spec.js:101:1 › WhatsApp composer and saved draft reopen under the shared worker offline at narrow phone widths (3.3s)
+  ✘  8 modules/whatsapp/e2e/whatsapp.spec.js:119:1 › WhatsApp autosaved drafts release the update hold while failed saves remain protected through language changes (5.9s)
+(node:41129) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  9 modules/whatsapp/e2e/whatsapp.spec.js:143:1 › WhatsApp invalid import can be canceled and releases the dirty form without replacing its saved draft (6.2s)
+
+
+  1) modules/whatsapp/e2e/whatsapp.spec.js:119:1 › WhatsApp autosaved drafts release the update hold while failed saves remain protected through language changes 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('#composer')
+    Expected: "false"
+    Received: "true"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('#composer')
+        14 × locator resolved to <form id="composer" data-unsaved="true">…</form>
+           - unexpected value "true"
+
+
+      120 |   await open(page);
+      121 |   await compose(page);
+    > 122 |   await expect(page.locator('#composer')).toHaveAttribute('data-unsaved', 'false');
+          |                                           ^
+      123 |   await page.evaluate(() => {
+      124 |     const original = Storage.prototype.setItem;
+      125 |     window.fixtureQuota = true;
+        at /workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:122:43
+
+    Error Context: test-results/whatsapp-WhatsApp-autosave-201e8-ed-through-language-changes/error-context.md
+
+  2) modules/whatsapp/e2e/whatsapp.spec.js:143:1 › WhatsApp invalid import can be canceled and releases the dirty form without replacing its saved draft 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('#whatsapp-import-cancel')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#whatsapp-import-cancel')
+        14 × locator resolved to <button type="button" id="whatsapp-import-cancel">Cancel import</button>
+           - unexpected value "hidden"
+
+
+      147 |   await page.locator('#whatsapp-import-file').setInputFiles({ name: 'invalid.json', mimeType: 'application/json', buffer: Buffer.from('invalid JSON') });
+      148 |   await expect(page.locator('#whatsapp-import-status')).toContainText(/JSON|Unexpected|Invalid/i);
+    > 149 |   await expect(page.locator('#whatsapp-import-cancel')).toBeVisible();
+          |                                                         ^
+      150 |   await page.locator('#whatsapp-import-cancel').click();
+      151 |   await expect(page.locator('#whatsapp-import')).toHaveAttribute('data-unsaved', 'false');
+      152 |   expect(await page.locator('#whatsapp-import-file').inputValue()).toBe('');
+        at /workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:149:57
+
+    Error Context: test-results/whatsapp-WhatsApp-invalid--3e61f-t-replacing-its-saved-draft/error-context.md
+
+  2 failed
+    modules/whatsapp/e2e/whatsapp.spec.js:119:1 › WhatsApp autosaved drafts release the update hold while failed saves remain protected through language changes 
+    modules/whatsapp/e2e/whatsapp.spec.js:143:1 › WhatsApp invalid import can be canceled and releases the dirty form without replacing its saved draft 
+  7 passed (28.0s)

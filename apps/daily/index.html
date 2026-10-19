@@ -1,5 +1,27 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Daily bootstrap</title></head>
-<body><main id="app"><h1>Daily</h1><p>Test-first bootstrap. Modules are not implemented yet.</p><p><a href="./diagnostics.html">Readwise connection checks</a></p></main></body>
+<head>
+  <meta charset="utf-8">
+  <meta name="daily-base" content="%BASE_URL%">
+  <link rel="stylesheet" href="./apps/daily/src/shell/style.css">
+  <link rel="stylesheet" href="./modules/plants/src/style.css">
+  <link rel="stylesheet" href="./modules/coffee/src/style.css">
+  <link rel="stylesheet" href="./modules/games/src/style.css">
+  <link rel="stylesheet" href="./modules/time-budget/src/style.css">
+  <link rel="stylesheet" href="./modules/piano/src/style.css">
+  <link rel="stylesheet" href="./modules/reading/src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f2f2f7">
+  <meta name="description" content="Your local daily dashboard.">
+  <link rel="manifest" href="%BASE_URL%manifest.webmanifest">
+    <link rel="icon" href="%BASE_URL%icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="%BASE_URL%apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Daily</title>
+<link rel="stylesheet" href="%BASE_URL%modules/whatsapp/src/style.css">
+</head>
+<body>
+  <div id="app" class="daily-shell"></div>
+  <script type="module" src="./apps/daily/src/main.js"></script>
+</body>
 </html>

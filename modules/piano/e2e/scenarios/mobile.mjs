@@ -1,3 +1,4 @@
+import { baseline, hashFor } from '../paths.mjs';
 import { browser, errors, baseURL, screenshotDirectory } from './core.mjs';
 import { libraryPaths } from './library.mjs';
 import { checkIntro } from './mobile-intro.mjs';
@@ -13,7 +14,9 @@ for (const width of [320, 360, 390]) {
     await mobilePage.route('**/favicon.ico', route => route.fulfill({ status: 204 }));
     let visit = 0;
     const mobileRoute = async (path, ready) => {
-        await mobilePage.goto(`${baseURL}/?mobile=${width}-${visit++}#${path}`);
+        const query = baseline ? `?mobile=${width}-${visit++}` : '';
+        await mobilePage.goto(`${baseURL}/${query}${hashFor(path)}`);
+        if (!baseline) await mobilePage.reload();
         await mobilePage.locator(ready).waitFor();
     };
     const state = { mobilePage, mobileRoute, mobileContext, width };

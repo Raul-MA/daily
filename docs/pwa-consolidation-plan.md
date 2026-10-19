@@ -1,6 +1,6 @@
 # One daily PWA: research and implementation plan
 
-Status: implementation started 2026-10-13 in the new local `daily/` Git repository. Stage 1 test-first bootstrap is complete; feature implementation and deployment have not started. See [progress / resume](./progress.md) for current evidence and the exact next step.
+Status: local implementation and migration tooling have verification evidence in [progress / resume](./progress.md). Use plain HTML/CSS/JavaScript without Vite or TypeScript. Review branches and stacked PR publication are authorized; hosting, deployment, live Readwise/Reader and physical-device/release acceptance remain deferred.
 
 ## Implementation contract: tests first, ESLint required from day one
 
@@ -8,13 +8,13 @@ Status: implementation started 2026-10-13 in the new local `daily/` Git reposito
 2. Add only the minimum test runner, browser harness, route setup, and strict shared ESLint configuration needed to run them. Record the initial red results against the unimplemented apps. Missing behavior should cause failures; broken test discovery or a server that never starts is not adequate red-stage evidence. Already-independent passing tests need not be deliberately broken.
 3. Preserve assertions and coverage while adapting imports, routes, and test organization. Imported tests must also satisfy ESLint: split oversized files/functions and move explanatory comments into documentation. No skipped tests, weaker assertions, blanket exclusions, inline disables, or legacy lint exemptions to manufacture success.
 4. Implement/refactor one module at a time until every test in its suite passes. Add characterization tests first for uncovered behavior and for Time Budget/Reader, which have no discovered suites. Record approved differences, such as piano continuation, with replacement acceptance tests before implementation.
-5. Keep general/platform tests separate from module suites. A coffee-only change can run coffee unit/integration and E2E tests; shared changes require the general and affected module suites. Full verification runs all suites, strict lint, typechecking, and the build before release or declaring the migration complete.
+5. Keep general/platform tests separate from module suites. A coffee-only change can run coffee unit/integration and E2E tests; shared changes require the general and affected module suites. Full verification runs all suites, strict lint, JavaScript syntax checks, and static preparation before release or declaring the migration complete.
 
 ESLint is blocking for **all authored code, imported code, tests, and scripts from the outset**. This replaces the earlier advisory legacy-report proposal. During test-first bootstrap the feature suites are intentionally red and reported honestly; lint remains mandatory. A module is not complete until its tests pass, and the PWA is not complete until all suites pass.
 
 ## 1. Agreed outcome
 
-Create a new monorepo that deploys one personal, installable PWA to GitHub Pages. Its home screen is a configurable daily dashboard. All seven existing apps remain available inside the same installation, with their functionality and individual visual styles preserved initially.
+Create a new monorepo for one personal, installable PWA. Work locally for now; GitHub Pages deployment is a future option requiring a renewed user request. Its home screen is a configurable daily dashboard. All seven existing apps remain available inside the same installation, with their functionality and individual visual styles preserved initially.
 
 The primary device is an iPhone. Application records and preferences remain local, with export/import; there is no new account system, application backend, or cross-device sync. Readwise and Reader remain external services accessed directly using the user's token. Existing Things and WhatsApp integrations retain their current behavior.
 
@@ -71,7 +71,7 @@ Coffee has existing uncommitted documentation, a backup file, and Excel-related 
 
 ## 3. Recommended architecture
 
-Use a new repository, with npm workspaces, one lockfile, one build, and one GitHub Pages deployment. Use Vite to bundle the existing ES modules and new code. Keep the apps in vanilla JavaScript initially; use TypeScript for new shared contracts, persistence, routing, timers, and integration code. A complete conversion of existing apps is unnecessary.
+Use a new repository, with npm workspaces, one lockfile, one local build, with deployment deferred. Review branch publication is authorized; do not add GitHub Actions workflows, configure hosting or deploy without a further request. Per the later user clarification, use plain HTML, CSS and JavaScript modules throughout. Do not use Vite, TypeScript or an application framework. Small Node scripts may copy native files, generate offline metadata, serve locally and run checks. Preserve explicit browser-compatible imports and runtime schemas.
 
 The working name below is only a placeholder.
 
@@ -83,7 +83,6 @@ daily/
   .codex/skills/compass-docs/
   package.json
   eslint.config.mjs
-  tsconfig.base.json
   apps/
     daily/
       src/                 # Shell, dashboard, widget registry, app menu
@@ -117,7 +116,6 @@ daily/
     integrations.md
     lint-policy.md
     testing.md
-    deployment.md
     decisions/
   reports/
     migration-test-inventory.md
@@ -135,7 +133,7 @@ The shell owns navigation, language, installation, service-worker updates, and o
 
 ### Preserve each app's appearance
 
-Use the accepted [iOS demo](../../daily-dashboard-demo/index.html?design=ios) as the dashboard visual reference, with three desktop columns and navigation-only cards. Do not ship the alternative design experiments. Mount each app under a module wrapper with scoped styles and module-specific CSS variables, preserving its current appearance. Adapt global `html`, `body`, and `:root` rules to the module boundary and audit overlays, dialogs, focus, and safe areas. Scope selectors to the mount container. Keep the common Home/App menu small and visually neutral.
+The accepted iOS demo is a historical sibling-workspace reference, outside this repository. Preserve its three desktop columns and navigation-only cards through the maintained [dashboard](../tests/e2e/platform.spec.js) and [route/layout](../tests/e2e/page-width.spec.js) acceptance tests. Do not ship the alternative design experiments. Mount each app under a module wrapper with scoped styles and module-specific CSS variables, preserving its current appearance. Adapt global `html`, `body`, and `:root` rules to the module boundary and audit overlays, dialogs, focus, and safe areas. Scope selectors to the mount container. Keep the common Home/App menu small and visually neutral.
 
 Use before/after screenshots of existing flows to verify visual preservation. An iframe-based launcher would reduce initial CSS work but complicate routing, timers, accessibility, and data updates; it is not the recommended final architecture.
 
@@ -205,7 +203,7 @@ Show retrieval freshness, distinguish cached data from current data, and never l
 
 Reuse the existing token model: memory by default, optional persistent saving on the installed PWA. Never include tokens in URLs, Git, bundled assets, logs, routine backups, or service-worker response caches. Re-enter the token after migration/restore. Reader preferences are always persistable independently of whether the token is remembered.
 
-Readwise requests go directly from the iPhone to Readwise. No proxy or cloud database is included. Verify authenticated CORS access for the auth, Reader-list, and Daily-Review endpoints from the actual Pages origin early; inspecting code and API documentation does not verify that behavior. No personal token or authenticated API call was used in this research. If an endpoint cannot be called from the browser, document that constraint and offer an explicit cached-data/Shortcuts-import fallback; a proxy would require changing the local-only architecture.
+Readwise requests go directly from the iPhone to Readwise. No proxy or cloud database is included. Keep the documented auth, Reader-list and Daily-Review API requests implemented with explicit success/failure handling. Per the 2026-10-15 instruction, authenticated connectivity/CORS verification is deferred to the user entering a token later and does not block local implementation. Mocked tests do not prove live access from any origin. No personal token or authenticated API call was used in this research. If an endpoint cannot be called from the browser, document that constraint and offer an explicit cached-data/Shortcuts-import fallback; a proxy would require changing the local-only architecture.
 
 Show local widgets immediately. Reading widgets load independently, honor rate limits, and show cached data with a stale/offline label when necessary. API failures must not block coffee, plants, games, or timers. Cached metadata does not make full Reader documents available offline inside this PWA.
 
@@ -276,8 +274,6 @@ Adopt the user's supplied rule set for every application, package, test, and scr
 
 The new repo has mandatory full-scope lint from day one. Imported code is refactored into compliant units as it enters; there is no grandfathered debt baseline or report-only exception. Reports can aid diagnosis but cannot convert a failing lint run into success.
 
-Measured raw file sizes illustrate the refactoring needed: coffee app 1,088 lines; games app 1,483; Time Budget 1,275; Reader app 788; plant detail 705. These are raw line counts, not ESLint findings. Use the copied tests to protect behavior while splitting code; actual lint diagnostics remain to be collected during implementation.
-
 ### Documentation ownership
 
 | Document | Responsibility |
@@ -292,7 +288,7 @@ Measured raw file sizes illustrate the refactoring needed: coffee app 1,088 line
 
 Use the existing `compass-docs` skill, staged under `daily/.codex/skills/compass-docs/` with its references. Keep root/module Compass files short routers and complex explanations in focused deep dives; update both when behavior or paths change. Its Anori-specific examples are not rules for this PWA: this project uses root `AGENTS.md`, EN/ES, and the module structure above. This plan and the lint policy now live in the repo's `docs/`, with workspace relocation pointers and one authoritative copy of each.
 
-Move useful explanations from removed source comments into module/shared docs as affected code is refactored. Use clear names and small functions in source. Document types in `.ts` declarations and external docs rather than introducing JSDoc that violates the requested comment ban. Preserve legal notices in appropriate license files; do not delete required attribution merely to satisfy lint.
+Move useful explanations from removed source comments into module/shared docs as affected code is refactored. Use clear names and small functions in source. Document data contracts through runtime validators and external docs rather than introducing JSDoc that violates the requested comment ban. Preserve legal notices in appropriate license files; do not delete required attribution merely to satisfy lint.
 
 Retain the useful existing coffee/game Compass documents, Toniq deep dives, plant Things instructions, and Reader shortcut documentation. Reconcile stale descriptions with the inspected code. Cloud/Azure proposal documents must remain clearly labeled historical proposals, not the current local-only architecture.
 
@@ -301,19 +297,19 @@ Retain the useful existing coffee/game Compass documents, Toniq deep dives, plan
 | Stage | Deliverable | Done when |
 | --- | --- | --- |
 | 1. Copy tests first; record red | Copy all existing unit/integration and E2E suites with safe fixtures, source mapping, and the minimum runnable harness. Set up mandatory shared lint and docs before application implementation. | Tests are discovered and executed; absent features produce recorded red results; lint passes for imported tests/harness; no assertions are weakened or tests skipped; no personal data/secrets enter tracked sources. |
-| 2. Prove constraints | iPhone tests for Readwise endpoints, exports, background timer restoration, service-worker coexistence; backup-size/storage feasibility check. | Live integration feasibility is known, storage layout validated, and any fallback is recorded before dependent work. |
-| 3. Platform foundation | Test-first shell, manifest, router, EN/ES, settings, data boundary, activities/timers, Pages build, and iOS three-column home. | General suite passes for implemented contracts; deep links/reload work under the real base; all introduced code passes lint; cards navigate without mutations. |
-| 4. Plants and daily home | Full plants module, attention widget, layout settings, import/export, existing Things behavior. | Plant suites pass; reminder taps open the correct plant without completing care; imported schedules and existing appearance are preserved. |
-| 5. Coffee and games | Full coffee/game modules and dashboard quick actions/resume. | Existing workflow suites pass through the shared shell; no coffee/bean/history/scoring/statistics functions are lost. |
-| 6. Time and piano | Full Time Budget and Toniq modules, named countdowns, persistent activities, random/last exercise widgets. | Navigation, lock/resume, explicit pause, reload, and process restart preserve state and calculate elapsed time correctly; piano content/assets work offline. |
-| 7. Reading and WhatsApp | Test-first Reader settings/picker, scheduled Daily Review or direct-link fallback, conditional review UI, WhatsApp draft migration. | Module suites pass; settings survive relaunch/restore; N/time filters and shortcuts work; API errors stay isolated; review scheduling is either verified or handed off to Readwise. |
-| 8. Release migration | Complete localization, legacy exporters, combined backup recovery, offline/update tests, iPhone installation guide. | All seven parity checklists pass, real iPhone migration is verified, and one installation provides every retained function. |
+| 2. Prove constraints | Local storage recovery and cache ownership tests; record existing-device observations and retain API calls for later user token testing. | Local preparation is complete. Live Readwise/Reader, installed coexistence and later product/device checks are deferred by the user; unverified API access does not block Stage 3. |
+| 3. Platform foundation (local acceptance passing) | Test-first shell, manifest, router, EN/ES, settings, data boundary, activities/timers, local build, and iOS three-column home. | General suite passes for implemented contracts; deep links/reload work under the real base; all introduced code passes lint; cards navigate without mutations. |
+| 4. Plants and daily home (local acceptance passing; device checks deferred) | Full plants module, attention widget, layout settings, import/export, existing Things behavior. | Plant suites pass; reminder taps open the correct plant without completing care; imported schedules and existing appearance are preserved. |
+| 5. Coffee and games (local acceptance passing; releases deferred) | Full coffee/game modules and dashboard quick actions/resume. | Existing workflow suites pass through the shared shell; no coffee/bean/history/scoring/statistics functions are lost. |
+| 6. Time and piano (local acceptance passing; device checks deferred) | Full Time Budget and Toniq modules, named countdowns, persistent activities, random/last exercise widgets. | Navigation, lock/resume, explicit pause, reload, and process restart preserve state and calculate elapsed time correctly; piano content/assets work offline. |
+| 7. Reading and WhatsApp (local acceptance passing; live API/device checks deferred) | Test-first Reader settings/picker, scheduled Daily Review or direct-link fallback, conditional review UI, WhatsApp draft migration. | Module suites pass; settings survive relaunch/restore; N/time filters and shortcuts work; API errors stay isolated; review scheduling is either verified or handed off to Readwise. |
+| 8. Release migration (local implementation verified; physical/release acceptance deferred) | Complete localization, legacy exporters, combined backup recovery, offline/update tests, iPhone installation guide. | All seven parity checklists pass, real iPhone migration is verified, and one installation provides every retained function. |
 
 Stages are development increments, not permission to call the migration complete with missing apps. Preserve the original repositories until the full parity and data migration gates pass. Source history can remain in the originals with recorded source commits; importing complete Git histories is optional and does not affect runtime architecture.
 
 ### General and per-module test suites
 
-These commands are now installed for test bootstrap. Their full product scopes remain acceptance requirements; a passing harness check alone does not fulfill them.
+These commands run the installed native suites. Their full product scopes remain acceptance requirements; a passing harness check alone does not fulfill them.
 
 | Command | Scope |
 | --- | --- |
@@ -321,9 +317,9 @@ These commands are now installed for test bootstrap. Their full product scopes r
 | `npm run test:coffee` | Only coffee unit/integration and coffee E2E workflows mounted through the shell. |
 | `npm run test:plants`, `test:games`, `test:time-budget`, `test:piano`, `test:reading`, `test:whatsapp` | Equivalent isolated suites for each module. |
 | `npm run test:all` | General suite plus every module suite, including all E2E tests. |
-| `npm run verify` | Blocking full lint, typecheck, all tests, and production build. |
+| `npm run verify` | Blocking full lint, JavaScript syntax checks, all tests, and static preparation. |
 
-Module suites own domain behavior; general suites own shared contracts and cross-module behavior. Use isolated storage/browser contexts, deterministic clocks, and mocked external APIs. A coffee change does not require unrelated piano/reading tests during its development loop. Changes to shared storage, routing, i18n, timer contracts, or shell require general plus affected module suites. Full verification is required before merging a completed migration increment or releasing; the initial red bootstrap is explicitly incomplete and must not be labeled release-ready.
+Module suites own domain behavior; general suites own shared contracts and cross-module behavior. Use isolated storage/browser contexts, deterministic clocks, and mocked external APIs. A coffee change does not require unrelated piano/reading tests during its development loop. Changes to shared storage, routing, i18n, timer contracts, or shell require general plus affected module suites. Full verification is required before declaring a completed migration increment or releasing; the initial red bootstrap is explicitly incomplete and must not be labeled release-ready.
 
 Track each source test and its migrated destination, including fixture provenance. Test runners must fail on suite errors and missing expected test discovery. Do not mask failures with expected-failure flags. Document justified behavior changes and retain coverage of the original invariant. Collect full-suite results throughout migration: remaining red app suites are unfinished work, not exemptions.
 
@@ -338,7 +334,7 @@ Track each source test and its migrated destination, including fixture provenanc
 - Verify styles per module, narrow-screen layout, keyboard/focus behavior, safe areas, and both languages. Translation changes must not translate stored plant/player/bean names or saved user text.
 - Verify a Pages subpath deployment, direct hash links, old shortcut compatibility, all-module offline startup, and version upgrades with active sessions and unsaved forms.
 
-Implementation evidence now belongs to [progress](./progress.md) and [test inventory](../reports/migration-test-inventory.md). Imported suites and a minimal harness have been verified at the initial red stage; production modules and deployment remain pending. Authenticated API behavior and physical iPhone migration/background checks have not been established.
+Local implementation, full EN/ES presentation, combined recovery, prepared legacy migration tools and offline/update checks pass the full verification gate. Evidence belongs to [progress](./progress.md), the [complete final report](../reports/final-verification.txt) and [test inventory](../reports/migration-test-inventory.md). Physical iPhone migration/background behavior, Things handoffs, authenticated API access, installed-worker coexistence and original-app releases remain deferred and are not claimed passing. Current storage supports one editing tab at a time; optimistic stale-save checks are not cross-tab serialization.
 
 ## 10. References
 
@@ -347,8 +343,7 @@ Implementation evidence now belongs to [progress](./progress.md) and [test inven
 - [Readwise Mastery](https://docs.readwise.io/readwise/guides/mastery): Q&A review and scheduling semantics; not a public API contract for those interactions.
 - [Reader API](https://readwise.io/reader_api): document filtering, pagination, and response metadata.
 - [GitHub Pages setup](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site): static deployment and custom build workflows.
-- [Vite production builds](https://vite.dev/guide/build): static output and deployment base paths.
 - [npm workspaces](https://docs.npmjs.com/cli/using-npm/workspaces/): shared repository package management.
 - [MDN offline/background operation](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation): service-worker lifecycle and background limitations.
 - [WebKit storage policy](https://webkit.org/blog/14403/updates-to-storage-policy/): quotas, persistence, and storage eviction considerations.
-- [ESLint flat-config migration](https://eslint.org/docs/latest/use/configure/migration-guide) and [typed linting project service](https://typescript-eslint.io/blog/project-service/): configuration paths and TypeScript project ownership.
+- [ESLint flat-config migration](https://eslint.org/docs/latest/use/configure/migration-guide): configuration paths and runtime scopes.

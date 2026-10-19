@@ -1,0 +1,127 @@
+{
+  "commit": "b3892b2417b8167d0cd063c31b2b69da781fd4a9",
+  "status": "local acceptance: 54 unit / 30 browser including legacy exporter; combined-backup all-scope checkpoint green with 51/30; live API/device and old-app release deferred",
+  "files": [
+    {
+      "source": "random-readwise/README.md",
+      "sha256": "4a6cfbfa6edf285e0534b70f8bb941cd4992170e7130ec1cd2896845acfc19a8",
+      "status": "shortcut/privacy semantics retained in modules/reading/docs/behavior.md; deployment instructions historical"
+    },
+    {
+      "source": "random-readwise/app.js",
+      "sha256": "7791ac3d5a0893d530a083ac7d355a48ad9b234825f8c470db15c3528441a292",
+      "destinations": [
+        "modules/reading/src/account-epoch.js",
+        "modules/reading/src/backup-ui.js",
+        "modules/reading/src/cache-storage.js",
+        "modules/reading/src/cache.js",
+        "modules/reading/src/client.js",
+        "modules/reading/src/config.js",
+        "modules/reading/src/credentials.js",
+        "modules/reading/src/domain.js",
+        "modules/reading/src/imports.js",
+        "modules/reading/src/metadata.js",
+        "modules/reading/src/preferences.js",
+        "modules/reading/src/rate-limit.js",
+        "modules/reading/src/request.js",
+        "modules/reading/src/selection.js",
+        "modules/reading/src/service-actions.js",
+        "modules/reading/src/service-credentials.js",
+        "modules/reading/src/service.js",
+        "modules/reading/src/ui/actions.js",
+        "modules/reading/src/ui/cards.js",
+        "modules/reading/src/ui/fields.js",
+        "modules/reading/src/ui/freshness.js",
+        "modules/reading/src/ui/i18n.js",
+        "modules/reading/src/ui/markup.js",
+        "modules/reading/src/ui/options.js",
+        "modules/reading/src/validation.js",
+        "modules/reading/src/view.js",
+        "modules/reading/src/widget.js"
+      ]
+    },
+    {
+      "source": "random-readwise/icons/icon-180.png",
+      "sha256": "d4574561adf957d3f0b8b1eba7ac2cc326c18335721a30a845f009adcc9d041f",
+      "status": "replaced by shared Daily install identity/assets; no private installation"
+    },
+    {
+      "source": "random-readwise/icons/icon-192.png",
+      "sha256": "fde4dd3987debf2945630f0d90554cd15a2071d808e24933debb4030452ecdf7",
+      "status": "replaced by shared Daily install identity/assets; no private installation"
+    },
+    {
+      "source": "random-readwise/icons/icon-512.png",
+      "sha256": "3cf5ded80f538ade500334a9a7ed5a1dc93f0451a98865da0f0ddac32e45ef05",
+      "status": "replaced by shared Daily install identity/assets; no private installation"
+    },
+    {
+      "source": "random-readwise/icons/icon.svg",
+      "sha256": "bf68028c920b6ba6e23ae55f52e2d8f89f05110b1d3a70ce1df4411e27702688",
+      "status": "replaced by shared Daily install identity/assets; no private installation"
+    },
+    {
+      "source": "random-readwise/index.html",
+      "sha256": "b923c3714ddab0eeae5ad8e22bd8cad9be373257c590781b2cd15001e9e3896b",
+      "destinations": [
+        "modules/reading/src/ui/markup.js",
+        "modules/reading/src/view.js"
+      ]
+    },
+    {
+      "source": "random-readwise/manifest.webmanifest",
+      "sha256": "b3fdd32ee4f7a0093dad2a4efc70f200ae455d9115bfc409a7429c8a4ba57d5a",
+      "status": "replaced by shared Daily install identity/assets; no private installation"
+    },
+    {
+      "source": "random-readwise/service-worker.js",
+      "sha256": "417ffac5258c69da51c875718dfecc5b907332cddab06ac1956cb0e353086835",
+      "replacement": "shared Daily worker; no private worker is installed"
+    },
+    {
+      "source": "random-readwise/styles.css",
+      "sha256": "2b66a3b2f049e9dc55a568f9afb22ea56b6eaf3c2c11f9f3f5288763c1b09d96",
+      "destinations": [
+        "modules/reading/src/style.css"
+      ]
+    }
+  ],
+  "newFeatures": {
+    "review": [
+      "modules/reading/src/review/cache.js",
+      "modules/reading/src/review/cards.js",
+      "modules/reading/src/review/model.js",
+      "modules/reading/src/review/presentation.js",
+      "modules/reading/src/review/service.js",
+      "modules/reading/src/review/view.js",
+      "modules/reading/src/review/widget.js"
+    ],
+    "sharedIntegration": [
+      "apps/daily/src/shell/reading-widgets.js",
+      "apps/daily/src/shell/modules.js",
+      "apps/daily/src/shell/dashboard.js",
+      "apps/daily/src/shell/render.js"
+    ]
+  },
+  "legacyExport": {
+    "directory": "legacy/exporters/reader",
+    "patch": "legacy/patches/random-readwise-export.patch",
+    "unitContracts": 3,
+    "browserContracts": 1,
+    "sourceModified": false,
+    "release": "deferred"
+  },
+  "finalAudit": {
+    "contracts": "57 unit / 31 native browser cases; original 30 browser assertions retained.",
+    "changes": [
+      "Exact authored error and Reader-only confirmation localization; item-save failures localized in Reader and Home.",
+      "Bounded saved pick timestamps and invalid/future disposable cache rejection.",
+      "Guard recovery downloads and superseded/disposed file-read failures."
+    ],
+    "redEvidence": [
+      "reports/reader-final-audit-unit-red.txt",
+      "reports/reader-final-audit-red.txt"
+    ],
+    "harnessCorrection": "Initial new test file name collided with an existing file; existing file restored byte-for-byte from HEAD, new contract moved to final-audit.spec.js before browser red."
+  }
+}

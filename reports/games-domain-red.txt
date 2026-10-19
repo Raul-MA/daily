@@ -1,0 +1,90 @@
+✖ game sessions snapshot names and configuration and allow only one active session (1.960357ms)
+✖ round scores preserve negatives and shared ties while invalid fractions do not save (0.763453ms)
+✖ removing the final round retains an editable zero round and sequential numbering (1.015044ms)
+✖ first to points always favors the higher score while lowest-score games retain their rule (0.804351ms)
+✖ competitive outcomes require every result and retain separate wins ties and losses (0.548042ms)
+✖ collaborative solo outcomes have no individual winners or competitive head to head (0.523767ms)
+✖ history archives referenced records and duration overrides control derived statistics (1.464101ms)
+✖ full game backups reject broken references duplicates and future major versions without mutation (0.430824ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31.644296
+
+✖ failing tests:
+
+test at modules/games/test/domain.test.mjs:28:1
+✖ game sessions snapshot names and configuration and allow only one active session (1.960357ms)
+  Error: Unimplemented games: backend/core/schema.js:createEmptyData
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/games/test/domain.test.mjs:14:42)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/domain.test.mjs:29:46)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/games/test/domain.test.mjs:39:1
+✖ round scores preserve negatives and shared ties while invalid fractions do not save (0.763453ms)
+  Error: Unimplemented games: backend/core/schema.js:createEmptyData
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/games/test/domain.test.mjs:14:42)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/domain.test.mjs:40:38)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/games/test/domain.test.mjs:52:1
+✖ removing the final round retains an editable zero round and sequential numbering (1.015044ms)
+  Error: Unimplemented games: backend/core/schema.js:createEmptyData
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/games/test/domain.test.mjs:14:42)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/domain.test.mjs:53:30)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/games/test/domain.test.mjs:63:1
+✖ first to points always favors the higher score while lowest-score games retain their rule (0.804351ms)
+  Error: Unimplemented games: backend/core/schema.js:createEmptyData
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/games/test/domain.test.mjs:14:42)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/domain.test.mjs:64:30)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/games/test/domain.test.mjs:73:1
+✖ competitive outcomes require every result and retain separate wins ties and losses (0.548042ms)
+  Error: Unimplemented games: backend/core/schema.js:createEmptyData
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/games/test/domain.test.mjs:14:42)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/domain.test.mjs:74:44)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/games/test/domain.test.mjs:86:1
+✖ collaborative solo outcomes have no individual winners or competitive head to head (0.523767ms)
+  Error: Unimplemented games: backend/core/schema.js:createEmptyData
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/games/test/domain.test.mjs:14:42)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/domain.test.mjs:87:44)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/games/test/domain.test.mjs:101:1
+✖ history archives referenced records and duration overrides control derived statistics (1.464101ms)
+  Error: Unimplemented games: backend/core/schema.js:createEmptyData
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/games/test/domain.test.mjs:14:42)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/domain.test.mjs:102:53)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at modules/games/test/domain.test.mjs:114:1
+✖ full game backups reject broken references duplicates and future major versions without mutation (0.430824ms)
+  Error: Unimplemented games: backend/core/schema.js:createEmptyData
+      at Proxy.fail (file:///workspaces/daily/tests/support/load-module.mjs:17:30)
+      at setup (file:///workspaces/daily/modules/games/test/domain.test.mjs:14:42)
+      at async TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/domain.test.mjs:115:46)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)

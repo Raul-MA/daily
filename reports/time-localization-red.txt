@@ -1,0 +1,189 @@
+Suite: time-budget
+✔ time input is strict local HH:MM and invalid deadlines are rejected (7.425188ms)
+✔ a deadline at or before the reference rolls to the next local day (0.608687ms)
+✔ session deadlines stay anchored to the original start after midnight and overdue (2.653374ms)
+✔ pending budgets include unfinished current minutes and every later task once (1.205ms)
+✔ paused task timers resume from elapsed time and pause without losing elapsed time (1.573147ms)
+✔ completing an overrun records exact actual minutes and offers reallocation (0.537674ms)
+✔ early completion advances explicitly and queue reorder never moves the current task (2.025041ms)
+✔ template collections retain Unicode and bounded whole-minute tasks (0.651397ms)
+✔ legacy budget export preserves original running and paused clocks and imports through Daily without credentials (9.26502ms)
+✔ legacy budget export assigns a stable session identity without initializing absent storage (0.426807ms)
+✔ legacy budget malformed records or blocked storage fail without resetting any original data (1.171798ms)
+✖ modules/time-budget/test/localization-service.test.mjs (0.072134ms)
+✔ time budget reads are write-free and writes preserve shared language and other modules (0.827305ms)
+✔ time budget start and its paused activity commit atomically beside independent countdowns (0.972847ms)
+✔ running task timestamps reconstruct overtime without writes and explicit completion ends the activity (0.687414ms)
+✔ failed budget writes do not change tasks timestamps activities or the primary root (1.265363ms)
+✔ stale budget views cannot overwrite later task changes (0.740172ms)
+✔ legacy template previews merge only on confirmation while migration exports include active timing (1.116475ms)
+✔ migration imports retain active timestamps and reject stale or changed previews (0.940797ms)
+✔ budget validation rejects future schemas duplicate tasks invalid timers and future root modules without changes (0.775649ms)
+✔ full Time Budget backups restore independent countdowns atomically beside the plan (5.717914ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 20
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 128.550369
+
+✖ failing tests:
+
+test at modules/time-budget/test/localization-service.test.mjs:1:1
+✖ modules/time-budget/test/localization-service.test.mjs (0.072134ms)
+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspaces/daily/modules/time-budget/src/i18n.js' imported from /workspaces/daily/modules/time-budget/test/localization-service.test.mjs
+      at finalizeResolution (node:internal/modules/esm/resolve:275:11)
+      at moduleResolve (node:internal/modules/esm/resolve:865:10)
+      at defaultResolve (node:internal/modules/esm/resolve:991:11)
+      at #cachedDefaultResolve (node:internal/modules/esm/loader:719:20)
+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:736:38)
+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:765:52)
+      at #resolve (node:internal/modules/esm/loader:701:17)
+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:621:35)
+      at ModuleJob.syncLink (node:internal/modules/esm/module_job:160:33)
+      at ModuleJob.link (node:internal/modules/esm/module_job:245:17) {
+    code: 'ERR_MODULE_NOT_FOUND',
+    url: 'file:///workspaces/daily/modules/time-budget/src/i18n.js'
+  }
+[WebServer] (node:59490) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 20 tests using 1 worker
+
+(node:59503) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 modules/time-budget/e2e/localization.spec.js:10:1 › time budget Spanish setup countdowns and backup controls work offline without rewriting draft text (7.0s)
+(node:59766) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 modules/time-budget/e2e/localization.spec.js:33:1 › time budget running clocks queue drafts and overtime controls translate without changing saved timing (7.6s)
+(node:59978) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 modules/time-budget/e2e/localization.spec.js:59:1 › time budget notifications translate through remounts and keep their original expiry (7.0s)
+(node:60224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 modules/time-budget/e2e/recovery.spec.js:4:1 › negative and fractional reallocation never enable confirmation (10.5s)
+  ✘   5 modules/time-budget/e2e/recovery.spec.js:23:1 › queue drafts survive language changes and stale edits cannot overwrite another view (6.9s)
+(node:60706) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 modules/time-budget/e2e/recovery.spec.js:45:1 › confirmed legacy imports preserve active sessions and create a full recovery backup (1.7s)
+  ✓   7 modules/time-budget/e2e/shell.spec.js:10:1 › focus starts persist immediately and Home navigation never changes its saved timestamps (2.7s)
+  ✓   8 modules/time-budget/e2e/shell.spec.js:24:1 › two named countdowns pause independently and remain overdue until explicit completion (4.5s)
+  ✓   9 modules/time-budget/e2e/shell.spec.js:47:1 › language changes retain added setup rows names minutes goal and template drafts (1.9s)
+  ✓  10 modules/time-budget/e2e/shell.spec.js:65:1 › pending overtime survives reload and canceled imports preserve the active plan (11.4s)
+  ✓  11 modules/time-budget/e2e/shell.spec.js:84:1 › quota failures retain the setup draft and create no successful-looking plan (1.5s)
+  ✓  12 modules/time-budget/e2e/shell.spec.js:95:1 › phone layout and offline reopening preserve the running budget (5.4s)
+  ✓  13 modules/time-budget/e2e/time-budget.spec.js:5:1 › setup is read-only and shows available and assigned minutes (1.2s)
+  ✓  14 modules/time-budget/e2e/time-budget.spec.js:12:1 › overallocated plans remain editable and do not start (1.3s)
+  ✓  15 modules/time-budget/e2e/time-budget.spec.js:21:1 › task order is editable and a plan starts with a paused first task (1.3s)
+  ✓  16 modules/time-budget/e2e/time-budget.spec.js:31:1 › running focus restores timestamp elapsed after reload and paused focus stays paused (6.5s)
+  ✓  17 modules/time-budget/e2e/time-budget.spec.js:46:1 › overtime stays active until explicit completion and accepts exact rounded reallocation (10.2s)
+  ✓  18 modules/time-budget/e2e/time-budget.spec.js:64:1 › keeping budgets advances and editing the plan retains task names and allocations (9.7s)
+  ✓  19 modules/time-budget/e2e/time-budget.spec.js:77:1 › templates save load and export the original name-to-task format (1.6s)
+  ✓  20 modules/time-budget/e2e/time-budget.spec.js:94:1 › task completion advances once and finishing returns to the retained setup (1.9s)
+
+
+  1) modules/time-budget/e2e/localization.spec.js:10:1 › time budget Spanish setup countdowns and backup controls work offline without rewriting draft text 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('#setupTitle')
+    Expected: "Haz que cada minuto cuente."
+    Received: "Make every minute count."
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" with timeout 5000ms
+      - waiting for locator('#setupTitle')
+        14 × locator resolved to <h1 tabindex="-1" id="setupTitle">Make every minute count.</h1>
+           - unexpected value "Make every minute count."
+
+
+      13 |   await page.locator('#taskList .task-name-input').first().fill('Free time remaining 🌱');
+      14 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+    > 15 |   await expect(page.locator('#setupTitle')).toHaveText('Haz que cada minuto cuente.');
+         |                                             ^
+      16 |   await expect(page.locator('#taskList .task-name-input').first()).toHaveValue('Free time remaining 🌱');
+      17 |   await expect(page.getByLabel('Nombre de la cuenta atrás', { exact: true })).toBeVisible();
+      18 |   await expect(page.getByRole('button', { name: 'Exportar Time Budget completo', exact: true })).toBeVisible();
+        at /workspaces/daily/modules/time-budget/e2e/localization.spec.js:15:45
+
+    Error Context: test-results/localization-time-budget-S-95fa7-ithout-rewriting-draft-text/error-context.md
+
+  2) modules/time-budget/e2e/localization.spec.js:33:1 › time budget running clocks queue drafts and overtime controls translate without changing saved timing 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'Guardar cambios', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Guardar cambios', exact: true })
+
+
+      40 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+      41 |   await expect(page.locator('#remainingTasksList .task-name-input')).toHaveValue('Draft 🌱');
+    > 42 |   await expect(page.getByRole('button', { name: 'Guardar cambios', exact: true })).toBeVisible();
+         |                                                                                    ^
+      43 |   await expect(page.locator('#startPauseBtn')).toHaveText('Pausar enfoque');
+      44 |   await page.clock.runFor(90000);
+      45 |   await expect(page.locator('#timeDisplay')).toHaveText('3:30');
+        at /workspaces/daily/modules/time-budget/e2e/localization.spec.js:42:84
+
+    Error Context: test-results/localization-time-budget-r-b1e7e-thout-changing-saved-timing/error-context.md
+
+  3) modules/time-budget/e2e/localization.spec.js:59:1 › time budget notifications translate through remounts and keep their original expiry 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('#toast')
+    Expected: "Elige primero una hora de finalización."
+    Received: ""
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" with timeout 5000ms
+      - waiting for locator('#toast')
+        13 × locator resolved to <div id="toast" role="status" aria-live="polite" class="toast hidden"></div>
+           - unexpected value ""
+
+
+      63 |   await page.clock.fastForward(2000);
+      64 |   await page.getByRole('button', { name: 'Español', exact: true }).click();
+    > 65 |   await expect(page.locator('#toast')).toHaveText('Elige primero una hora de finalización.');
+         |                                        ^
+      66 |   await page.clock.fastForward(1300);
+      67 |   await expect(page.locator('#toast')).toBeHidden();
+      68 |   await page.getByRole('button', { name: 'English', exact: true }).click();
+        at /workspaces/daily/modules/time-budget/e2e/localization.spec.js:65:40
+
+    Error Context: test-results/localization-time-budget-n-96b51--keep-their-original-expiry/error-context.md
+
+  4) modules/time-budget/e2e/recovery.spec.js:23:1 › queue drafts survive language changes and stale edits cannot overwrite another view 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Guardar cambios' })
+
+
+      37 |     return next;
+      38 |   });
+    > 39 |   await page.getByRole('button', { name: 'Guardar cambios' }).click();
+         |                                                               ^
+      40 |   await expect(page.locator('#toast')).toContainText('cambiado');
+      41 |   await expect(page.locator('#remainingTasksList .task-name-input')).toHaveValue('Draft 🌱');
+      42 |   expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe(other);
+        at /workspaces/daily/modules/time-budget/e2e/recovery.spec.js:39:63
+
+    Error Context: test-results/recovery-queue-drafts-surv-66061-nnot-overwrite-another-view/error-context.md
+
+  4 failed
+    modules/time-budget/e2e/localization.spec.js:10:1 › time budget Spanish setup countdowns and backup controls work offline without rewriting draft text 
+    modules/time-budget/e2e/localization.spec.js:33:1 › time budget running clocks queue drafts and overtime controls translate without changing saved timing 
+    modules/time-budget/e2e/localization.spec.js:59:1 › time budget notifications translate through remounts and keep their original expiry 
+    modules/time-budget/e2e/recovery.spec.js:23:1 › queue drafts survive language changes and stale edits cannot overwrite another view 
+  16 passed (1.8m)

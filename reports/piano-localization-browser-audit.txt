@@ -1,0 +1,36 @@
+
+Running 3 tests using 1 worker
+
+  ✓  1 modules/piano/e2e/localization.spec.js:9:1 › piano Spanish lessons and running prompts preserve canonical English records and timestamps (5.0s)
+  ✘  2 modules/piano/e2e/localization.spec.js:36:1 › piano Spanish library and every destination open offline at 320px (5.7s)
+  ✓  3 modules/piano/e2e/localization.spec.js:72:1 › piano Spanish search finds translated lessons and reference topics (1.9s)
+
+
+  1) modules/piano/e2e/localization.spec.js:36:1 › piano Spanish library and every destination open offline at 320px 
+
+    Error: chord-inversions.practice
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "Show scale notes in answer",
+    + ]
+
+      66 |       return missing;
+      67 |     });
+    > 68 |     expect(untranslated, destination.id).toEqual([]);
+         |                                          ^
+      69 |   }
+      70 | });
+      71 |
+        at /workspaces/daily/modules/piano/e2e/localization.spec.js:68:42
+
+    Error Context: test-results/localization-piano-Spanish-d8dc7-ation-open-offline-at-320px/error-context.md
+
+  1 failed
+    modules/piano/e2e/localization.spec.js:36:1 › piano Spanish library and every destination open offline at 320px 
+  2 passed (15.6s)

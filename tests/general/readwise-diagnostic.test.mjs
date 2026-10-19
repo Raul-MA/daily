@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-const load = () => import('../../apps/daily/src/diagnostics/readwise.ts');
+const load = () => import('../../apps/daily/src/diagnostics/connections.js');
 
 test('diagnostic rejects empty credentials without making requests', async () => {
   const { checkReadwise } = await load();

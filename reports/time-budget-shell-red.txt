@@ -1,0 +1,91 @@
+Suite: time-budget
+✔ time input is strict local HH:MM and invalid deadlines are rejected (23.837572ms)
+✔ a deadline at or before the reference rolls to the next local day (0.677385ms)
+✔ session deadlines stay anchored to the original start after midnight and overdue (0.504302ms)
+✔ pending budgets include unfinished current minutes and every later task once (0.663139ms)
+✔ paused task timers resume from elapsed time and pause without losing elapsed time (1.098301ms)
+✔ completing an overrun records exact actual minutes and offers reallocation (0.597276ms)
+✔ early completion advances explicitly and queue reorder never moves the current task (2.230266ms)
+✔ template collections retain Unicode and bounded whole-minute tasks (0.687023ms)
+✔ time budget reads are write-free and writes preserve shared language and other modules (4.541953ms)
+✔ time budget start and its paused activity commit atomically beside independent countdowns (2.283335ms)
+✔ running task timestamps reconstruct overtime without writes and explicit completion ends the activity (2.002857ms)
+✔ failed budget writes do not change tasks timestamps activities or the primary root (1.464515ms)
+✔ stale budget views cannot overwrite later task changes (0.75514ms)
+✔ legacy template previews merge only on confirmation while migration exports include active timing (2.006441ms)
+✔ migration imports retain active timestamps and reject stale or changed previews (1.14551ms)
+✔ budget validation rejects future schemas duplicate tasks invalid timers and future root modules without changes (0.784876ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 73.094183
+[WebServer] (node:21772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 14 tests using 1 worker
+
+(node:21811) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/time-budget/e2e/shell.spec.js:8:1 › focus starts persist immediately and Home navigation never changes its saved timestamps (2.4s)
+  ✘   2 modules/time-budget/e2e/shell.spec.js:22:1 › two named countdowns pause independently and remain overdue until explicit completion (6.4s)
+(node:22134) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 modules/time-budget/e2e/shell.spec.js:45:1 › language changes retain added setup rows names minutes goal and template drafts (1.6s)
+  ✓   4 modules/time-budget/e2e/shell.spec.js:63:1 › pending overtime survives reload and canceled imports preserve the active plan (9.4s)
+  ✓   5 modules/time-budget/e2e/shell.spec.js:82:1 › quota failures retain the setup draft and create no successful-looking plan (1.2s)
+  ✘   6 modules/time-budget/e2e/shell.spec.js:93:1 › phone layout and offline reopening preserve the running budget (30.0s)
+(node:22974) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 modules/time-budget/e2e/time-budget.spec.js:5:1 › setup is read-only and shows available and assigned minutes (1.2s)
+  ✓   8 modules/time-budget/e2e/time-budget.spec.js:12:1 › overallocated plans remain editable and do not start (1.4s)
+  ✓   9 modules/time-budget/e2e/time-budget.spec.js:21:1 › task order is editable and a plan starts with a paused first task (1.2s)
+  ✓  10 modules/time-budget/e2e/time-budget.spec.js:31:1 › running focus restores timestamp elapsed after reload and paused focus stays paused (5.3s)
+  ✓  11 modules/time-budget/e2e/time-budget.spec.js:46:1 › overtime stays active until explicit completion and accepts exact rounded reallocation (8.6s)
+  ✓  12 modules/time-budget/e2e/time-budget.spec.js:64:1 › keeping budgets advances and editing the plan retains task names and allocations (8.6s)
+  ✓  13 modules/time-budget/e2e/time-budget.spec.js:77:1 › templates save load and export the original name-to-task format (2.0s)
+  ✓  14 modules/time-budget/e2e/time-budget.spec.js:94:1 › task completion advances once and finishing returns to the retained setup (2.2s)
+
+
+  1) modules/time-budget/e2e/shell.spec.js:22:1 › two named countdowns pause independently and remain overdue until explicit completion 
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByLabel('Countdown name', { exact: true })
+
+
+      24 |   await start(page);
+      25 |   for (const name of ['Tea ☕', 'Stretch']) {
+    > 26 |     await page.getByLabel('Countdown name', { exact: true }).fill(name);
+         |                                                              ^
+      27 |     await page.getByLabel('Countdown minutes', { exact: true }).fill('1');
+      28 |     await page.getByRole('button', { name: 'Start countdown', exact: true }).click();
+      29 |   }
+        at /workspaces/daily/modules/time-budget/e2e/shell.spec.js:26:62
+
+    Error Context: test-results/shell-two-named-countdowns-6a5c6-e-until-explicit-completion/error-context.md
+
+  2) modules/time-budget/e2e/shell.spec.js:93:1 › phone layout and offline reopening preserve the running budget 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.evaluate: Test timeout of 30000ms exceeded.
+
+      94 |
+      95 | test('phone layout and offline reopening preserve the running budget', async ({ page }) => {
+    > 96 |   await page.setViewportSize({ width: 390, height: 844 });
+         |              ^
+      97 |   await open(page);
+      98 |   await page.evaluate(async () => {
+      99 |     await navigator.serviceWorker.register('./sw.js', { scope: './' });
+        at /workspaces/daily/modules/time-budget/e2e/shell.spec.js:96:14
+
+    Error Context: test-results/shell-phone-layout-and-off-7b925-preserve-the-running-budget/error-context.md
+
+  2 failed
+    modules/time-budget/e2e/shell.spec.js:22:1 › two named countdowns pause independently and remain overdue until explicit completion 
+    modules/time-budget/e2e/shell.spec.js:93:1 › phone layout and offline reopening preserve the running budget 
+  12 passed (1.4m)
