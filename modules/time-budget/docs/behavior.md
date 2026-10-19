@@ -44,3 +44,5 @@ The original app's normal export remains templates-only. A separate read-only mi
 Starting a plan requests the existing notification permission before committing. After the asynchronous response, the mounted app checks disposal and pending route changes, then rechecks the latest document/draft revision. Leaving the route or changing language cancels that old start; the new view retains its setup draft. No off-screen budget or activity is created. The original permission behavior is unchanged for a current view.
 
 Persisted timestamps and elapsed counters must be finite, nonnegative and within the JavaScript Date range, so malformed backups cannot create unrenderable deadlines or clocks. Original timestamp-based numeric task IDs remain accepted. The new service contract verifies rejection before any write and acceptance of a valid session.
+
+The original Templates importer selects Settings before revealing its recovery-gated preview. Switching back to a running plan focuses its visible heading and leaves primary records unchanged.

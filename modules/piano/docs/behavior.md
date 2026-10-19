@@ -20,11 +20,11 @@ Piano content grows with the document: the shared header, app and footer use one
 
 ## Tests and remaining acceptance
 
-Source: Toniq commit `3fc564302b2c10642315d97a603aeba3c73a6ed0`; file hashes/destinations are in `reports/piano-source-map.json`. The original 41 unit cases and both original browser scripts remain, with explicit baseline/native route and asset adapters. Four Markdown characterization cases, eight service cases four localization contracts and one nested restore contract bring the unit total to 58. Fourteen native browser cases cover continuation, hidden prompts, offline use, history, drafts, stale activity links, failed saves, EN/ES presentation and all 44 destinations at 320px.
+Source: Toniq commit `3fc564302b2c10642315d97a603aeba3c73a6ed0`; file hashes/destinations are in `reports/piano-source-map.json`. The original 41 unit cases and both original browser scripts remain, with explicit baseline/native route and asset adapters. Current discovery and added acceptance are maintained in the [migration inventory](../../../reports/migration-test-inventory.md), with continuation, offline, failed-save and language/draft browser coverage.
 
 Original automatic pause-on-hide and loss-on-navigation expectations intentionally become continuation assertions. All musical, keyboard, reveal, timing-budget and cleanup assertions remain. The old worker inventory checks the generated single-worker assets in native mode and the original worker in baseline mode.
 
-Physical iPhone acceptance and the final whole-PWA audit remain final gates. Local browser clocks do not establish installed-device acceptance. Current test evidence and exact next work are maintained in `docs/progress.md`.
+Physical iPhone acceptance remains deferred; local whole-PWA results are maintained in progress. Local browser clocks do not establish installed-device acceptance. Current test evidence and exact next work are maintained in `docs/progress.md`.
 
 ## Language and transient exercise state
 
@@ -36,4 +36,4 @@ Four source parent-key descriptions are corrected from “above” to “below�
 
 `prompt-validation.js` validates each persisted keyboard tone using the original note/voicing calculations before display. Null/unknown notes, malformed offsets and pitches outside MIDI 0–127 reject, without regenerating or replacing saved questions. Timestamps and elapsed counters remain finite, nonnegative and within the JavaScript Date range. The nested restore contract fails before implementation (`piano-nested-validation-red.txt`) and accepts every lesson prompt plus legacy saved wording after the correction.
 
-The [imported exercise player](exercise-player.md) is a separate Library destination with an initially empty user collection. Its twenty domain/integration checks and five mounted browser checks bring the current Piano totals to 78 unit and 19 browser cases. Its audio pauses on hide and cancels on navigation, independently of guided session continuation. Optional player content/preferences participate in the existing Piano service validation and Daily backup; IndexedDB score blobs remain separate.
+The [imported exercise player](exercise-player.md) is a separate Library destination with an initially empty user collection. Its unit/native suites cover imported content, audio timing, preferences, drafts and asynchronous cancellation. Its audio pauses on hide and cancels on navigation, independently of guided session continuation. Optional player content/preferences participate in the existing Piano service validation and Daily backup; IndexedDB score blobs remain separate.

@@ -1,6 +1,6 @@
 import { mergeSettings, validSettings } from './settings.js';
 import { tickAt, nextSpeed } from './timing.js';
-import { makeCycle, scheduleCycle } from './schedule.js';
+import { makeCycle, scheduleCycle, extendClicks } from './schedule.js';
 
 function cycleSnapshot(ctx, cycle, now) {
   if (now < cycle.time) return { tick: cycle.tick, phase: 'gap' };
@@ -24,11 +24,15 @@ export function createPlayer(options) {
     const now = ctx.audio.now();
     const last = state.cycles.at(-1);
     if (!ctx.settings.loop.enabled && now >= last.endTime) { api.halt(); state.tick = last.endTick; }
-    else if (ctx.settings.loop.enabled && now + .15 >= last.endTime) appendCycle(ctx, state, last);
+    else if (ctx.settings.loop.enabled) fillHorizon(ctx, state, now);
+    for (const cycle of state.cycles) extendClicks(ctx, cycle);
     state.cycles = state.cycles.filter(cycle => cycle.endTime > now || cycle === state.cycles.at(-1));
     options.onFrame?.(snapshot());
   }
   return { ...api, snapshot, pump, play: () => api.start(pump), dispose: () => { api.halt(); state.disposed = true; } };
+}
+function fillHorizon(ctx, state, now) {
+  while (state.cycles.at(-1).endTime < now + .15) appendCycle(ctx, state, state.cycles.at(-1));
 }
 function cycleDetails(cycle, state, ctx) { return { repetition: cycle?.repetition ?? state.repetition, speed: cycle?.speed ?? nextSpeed(ctx.settings.acceleration, state.repetition, ctx.settings.speed) }; }
 function followingCycle(ctx, last) {
@@ -67,7 +71,9 @@ function buildControls(ctx, state) {
     const tick = startTick(ctx, state.tick);
     const cycle = makeCycle(ctx, { tick, time: ctx.audio.now(), repetition: state.repetition, resume: state.paused });
     state.cycles = [cycle]; scheduleCycle(ctx, cycle); state.running = true; state.paused = false;
-    if (ctx.automatic !== false) state.timer = setInterval(pump, 25);
+    if (ctx.automatic !== false) state.timer = setInterval(() => {
+      try { pump(); } catch (error) { halt(); ctx.onError?.(error); }
+    }, 25);
     pump();
   }
   function seek(tick) {

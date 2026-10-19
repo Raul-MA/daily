@@ -34,22 +34,28 @@ export function soundingEvents(variant, start, end) {
   return variant.notes.map(note => ({ ...note, startTick: Math.max(start, note.startTick), endTick: Math.min(end, releaseTick(note, variant)) }))
     .filter(note => note.startTick < note.endTick && note.startTick < end);
 }
-function measureClicks(variant, measure, tpq) {
-  const meter = meterAt(variant, measure.startTick);
-  const step = tpq * 4 / meter.denominator;
-  const beat = beatTicks(meter, tpq);
-  const clicks = [];
-  for (let tick = measure.startTick; tick < measure.endTick; tick += step) clicks.push({ tick, beat: (tick - measure.startTick) % beat === 0, strong: tick === measure.startTick });
-  return clicks;
-}
-export function clickGrid(variant, tpq) {
-  const grid = variant.measures.flatMap(measure => measureClicks(variant, measure, tpq));
-  for (const region of variant.subdivisionRegions ?? []) {
-    for (let tick = region.startTick; tick < region.endTick; tick += region.stepTicks) {
-      if (!grid.some(click => click.tick === tick)) grid.push({ tick, beat: false, strong: false });
-    }
+function addClicks(grid, range, sequence) {
+  const first = sequence.start + Math.max(0, Math.ceil((range.start - sequence.start) / sequence.step)) * sequence.step;
+  const end = Math.min(range.end, sequence.end);
+  if ((end - first) / sequence.step > 4096) throw new Error('Metronome grid is too dense. Choose beats or a larger subdivision.');
+  for (let tick = first; tick < end; tick += sequence.step) {
+    if (!grid.has(tick)) grid.set(tick, sequence.click(tick));
   }
-  return grid.sort((a, b) => a.tick - b.tick);
+}
+function measureClicks(grid, measure, context) {
+  const meter = meterAt(context.variant, measure.startTick);
+  const beat = beatTicks(meter, context.tpq);
+  const step = context.range.mode === 'beats' ? beat : context.tpq * 4 / meter.denominator;
+  addClicks(grid, context.range, { start: measure.startTick, end: measure.endTick, step, click: tick => ({ tick, beat: (tick - measure.startTick) % beat === 0, strong: tick === measure.startTick }) });
+}
+export function clickGrid(variant, tpq, options = {}) {
+  const range = { start: 0, end: variant.lengthTicks, mode: 'subdivisions', ...options };
+  const grid = new Map();
+  for (const measure of variant.measures) measureClicks(grid, measure, { variant, tpq, range });
+  if (range.mode === 'subdivisions') {
+    for (const region of variant.subdivisionRegions ?? []) addClicks(grid, range, { start: region.startTick, end: region.endTick, step: region.stepTicks, click: tick => ({ tick, beat: false, strong: false }) });
+  }
+  return [...grid.values()].sort((a, b) => a.tick - b.tick);
 }
 export function nextSpeed(acceleration, repetition, fallback) {
   if (!acceleration.enabled) return fallback;

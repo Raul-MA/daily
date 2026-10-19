@@ -1,6 +1,6 @@
 # Implementation progress
 
-Updated: 2026-10-18. Repo: `/workspaces/daily`, branch `review/08-cloud-sharing-proposal`.
+Updated: 2026-10-19. Repo: `/workspaces/daily`, branch `review/09-review-fixes`.
 
 ## Current status and resume
 
@@ -13,6 +13,15 @@ Application implementation remains **local**, using **plain HTML/CSS/JavaScript*
 **Next acceptance work is deferred:** follow [device validation](device-validation.md) when the user resumes actual iPhone, Things, authenticated API, worker-coexistence or release testing. Do not treat those checks as passed or start remote work automatically. The current storage policy is **one editing tab at a time**; revision checks reject ordinary stale saves but do not serialize simultaneous cross-tab writers.
 
 Local preview: `npm run dev`, then `http://127.0.0.1:5173/daily/`. Preparation copies native assets; rebuild after source edits.
+
+## Independent review remediation (2026-10-19)
+
+- User authorized all twelve review fixes, a new PR targeting `review/08-cloud-sharing-proposal`, a documentation specialist audit with parent approval before removals, and removal of unnecessary TXT logs. Work uses persistent `/workspaces/daily/.review-fixes`; original dirty files, original review reports and personal data remain untouched.
+- An environment restart removed the earlier temporary worktree before its patches were committed. Reconstructed acceptance/fixes are being rerun; no final result is inferred from lost transcripts. Time Budget and documentation cleanup now have durable local commits.
+- Time Budget red reproduces both findings in `reports/review-fixes-time-red.txt`; the corrected suite passes 23 unit / 25 browser cases. Import selects visible Settings with recovery gating; section navigation focuses a visible heading. Original source assertions remain.
+- Parent reviewed the complete documentation deletion list before implementation and again after reconstruction. Merged deployment guidance into README; removed 270 superseded logs (902,577 bytes), preserving baselines/red/manifest-backed evidence. Repaired 173 historical citations. See [documentation audit](../reports/documentation-audit.md).
+- Piano has six new unit contracts and six native browser cases: short loops fill lookahead, grids use bounded mode/range windows, count-ins avoid duplicates, drafts survive remounts without crossing exercise identities, deferred imports guard request/generation/disposal, current errors propagate in Spanish, and editor/import focus stays usable. Five original unit regressions and five browser regressions fail before source changes; the cross-exercise draft case already passes on the original. Current Piano native verification is running.
+- Exact next step: finish Piano checks, reproduce/fix the three shared-shell findings, checkpoint source/evidence, run one fresh `npm run verify` with final discovery counts, consolidate current logs, and publish the authorized stacked PR. No deployment/cloud implementation or physical/API acceptance is in scope.
 
 ## Remote review publication (2026-10-18)
 

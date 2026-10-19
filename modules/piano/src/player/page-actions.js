@@ -28,7 +28,7 @@ async function play(ctx) {
   } finally { if (request === ctx.playRequest) ctx.loading = false; }
 }
 function launch(ctx, audio) {
-  ctx.player = createPlayer({ audio, exercise: ctx.exercise, variant: ctx.variant, settings: ctx.settings, onFrame: snapshot => displayFrame(ctx, snapshot) });
+  ctx.player = createPlayer({ audio, exercise: ctx.exercise, variant: ctx.variant, settings: ctx.settings, onError: error => { ctx.fail(error); displayFrame(ctx, ctx.player.snapshot()); }, onFrame: snapshot => displayFrame(ctx, snapshot) });
   if (ctx.pendingTick) ctx.player.seek(ctx.pendingTick);
   ctx.player.play();
 }
@@ -68,8 +68,8 @@ export function actionHandlers(ctx) {
     export: () => download(ctx.library.exportText(ctx.exercise.id), `${ctx.exercise.id}.json`),
     'export-settings': () => download(JSON.stringify({ exerciseId: ctx.exercise.id, practiceSettings: ctx.settings }, null, 2), `${ctx.exercise.id}-practice.json`),
     delete: () => deleteExercise(ctx),
-    rename: () => { const exercise = { ...ctx.exercise, title: inputValue(ctx.container, 'exerciseTitle').value }; ctx.library.replace(exercise); stopPlayer(ctx); renderPage(ctx); },
-    correct: () => { ctx.library.replace(correctedExercise(ctx)); stopPlayer(ctx); renderPage(ctx); },
+    rename: () => { const exercise = { ...ctx.exercise, title: inputValue(ctx.container, 'exerciseTitle').value }; ctx.library.replace(exercise); clearDraft(ctx, 'player-title'); stopPlayer(ctx); renderPage(ctx); },
+    correct: () => { ctx.library.replace(correctedExercise(ctx)); clearDraft(ctx, 'player-correction'); stopPlayer(ctx); renderPage(ctx); },
     'full-loop': () => { setLoopInputs(ctx, { startTick: 0, endTick: ctx.variant.lengthTicks }); saveSettings(ctx); },
     'measure-loop': () => measureLoop(ctx),
   };
@@ -80,21 +80,39 @@ export function seek(ctx, tick) {
   ctx.pendingTick = tick; ctx.player.seek(tick); displayFrame(ctx, ctx.player.snapshot());
 }
 export function importText(ctx, text) {
-  ctx.library.importText(text); stopPlayer(ctx); renderPage(ctx);
-  ctx.container.scrollTop = 0;
-  const heading = ctx.container.querySelector('h1'); heading.tabIndex = -1; heading.focus({ preventScroll: true });
+  if (ctx.disposed) return;
+  ctx.importRequest = (ctx.importRequest ?? 0) + 1;
+  ctx.library.importText(text); clearDraft(ctx, 'player-import'); stopPlayer(ctx); renderPage(ctx);
+  const heading = ctx.container.querySelector('h1'); heading.tabIndex = -1; heading.focus({ preventScroll: true }); heading.scrollIntoView({ block: 'start' });
 }
 export async function changeField(ctx, target) {
   if (target.type === 'file') { await changeFile(ctx, target); return; }
   if (target.name === 'exerciseId') { ctx.library.select(target.value); stopPlayer(ctx); renderPage(ctx); return; }
   if (target.name === 'variantId') { const variant = ctx.exercise.variants.find(item => item.id === target.value); ctx.library.preferences(ctx.exercise.id, { ...ctx.settings, variantId: variant.id, loop: defaults(variant).loop }); stopPlayer(ctx); renderPage(ctx); return; }
-  if (target.name === 'noteId') { ctx.noteId = target.value; renderPage(ctx); return; }
+  if (target.name === 'noteId') { ctx.noteId = target.value; ctx.container.querySelector('#player-correction').dataset.unsaved = 'false'; renderPage(ctx); inputValue(ctx.container, 'noteId').focus({ preventScroll: true }); return; }
   if (isSetting(target.name)) saveSettings(ctx);
 }
 async function changeFile(ctx, target) {
   const file = target.files[0];
   if (!file) return;
-  if (target.name === 'import-file') importText(ctx, await file.text());
+  if (target.name === 'import-file') await importFile(ctx, file);
   if (target.name === 'score-file') { await attachScore(ctx, file); renderPage(ctx); }
 }
 function isSetting(name) { return ['speed', 'accent', 'metronome', 'countIn', 'countBars', 'gap', 'accelerate', 'accStart', 'accIncrement', 'accEvery', 'accTarget', 'loopStart', 'loopEnd', 'loopEnabled'].includes(name) || name.startsWith('mute:') || name.startsWith('volume:'); }
+
+function clearDraft(ctx, id) {
+  const form = ctx.container.querySelector(`#${id}`);
+  if (!form) return;
+  form.dataset.unsaved = 'false';
+  const disclosure = form.querySelector('details') ?? form.closest('details');
+  if (disclosure) disclosure.open = false;
+}
+export async function importFile(ctx, file) {
+  const request = ctx.importRequest = (ctx.importRequest ?? 0) + 1;
+  const generation = ctx.generation;
+  let text;
+  try { text = await file.text(); }
+  catch (error) { if (currentImport(ctx, request, generation)) throw error; return; }
+  if (currentImport(ctx, request, generation)) importText(ctx, text);
+}
+function currentImport(ctx, request, generation) { return !ctx.disposed && request === ctx.importRequest && generation === ctx.generation; }
