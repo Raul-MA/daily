@@ -57,7 +57,7 @@ function visitSection(context, button) {
 
 function visitLink(event, context) {
   const link = event.target.closest('.shell-sidebar a[href]');
-  if (!link) return false;
+  if (!link || modifiedClick(event)) return false;
   if (mobile()) close(context, false);
   if (new URL(link.href).hash !== location.hash) return false;
   event.preventDefault();
@@ -104,3 +104,5 @@ export function watchSidebar(context) {
   scheme.addEventListener('change', resize);
   return () => { context.root.removeEventListener('keydown', keydown); document.removeEventListener('daily:form-state', refresh); scheme.removeEventListener('change', resize); };
 }
+
+function modifiedClick(event) { return event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey; }

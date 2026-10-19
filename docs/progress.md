@@ -4,7 +4,7 @@ Updated: 2026-10-19. Repo: `/workspaces/daily`, branch `review/09-review-fixes`.
 
 ## Current status and resume
 
-**Time Budget now has separate Time Budget, Countdowns and Settings menu panels; local verification is complete.** See the menu checkpoint below.
+**All twelve independent-review fixes are implemented on `review/09-review-fixes`.** Time Budget and Piano checks pass; the shared regressions are reproduced and fixed. Full verification and the next stacked PR are in progress. See the remediation checkpoint below.
 
 **All-route full-width layout and dashboard title links are implemented locally. The 360-check route/width audit and all app regression suites pass.** See the full-width checkpoint below.
 
@@ -20,8 +20,9 @@ Local preview: `npm run dev`, then `http://127.0.0.1:5173/daily/`. Preparation c
 - An environment restart removed the earlier temporary worktree before its patches were committed. Reconstructed acceptance/fixes are being rerun; no final result is inferred from lost transcripts. Time Budget and documentation cleanup now have durable local commits.
 - Time Budget red reproduces both findings in `reports/review-fixes-time-red.txt`; the corrected suite passes 23 unit / 25 browser cases. Import selects visible Settings with recovery gating; section navigation focuses a visible heading. Original source assertions remain.
 - Parent reviewed the complete documentation deletion list before implementation and again after reconstruction. Merged deployment guidance into README; removed 270 superseded logs (902,577 bytes), preserving baselines/red/manifest-backed evidence. Repaired 173 historical citations. See [documentation audit](../reports/documentation-audit.md).
-- Piano has six new unit contracts and six native browser cases: short loops fill lookahead, grids use bounded mode/range windows, count-ins avoid duplicates, drafts survive remounts without crossing exercise identities, deferred imports guard request/generation/disposal, current errors propagate in Spanish, and editor/import focus stays usable. Five original unit regressions and five browser regressions fail before source changes; the cross-exercise draft case already passes on the original. Current Piano native verification is running.
-- Exact next step: finish Piano checks, reproduce/fix the three shared-shell findings, checkpoint source/evidence, run one fresh `npm run verify` with final discovery counts, consolidate current logs, and publish the authorized stacked PR. No deployment/cloud implementation or physical/API acceptance is in scope.
+- Piano has six new unit contracts and six native browser cases: short loops fill lookahead, grids use bounded mode/range windows, count-ins avoid duplicates, drafts survive remounts without crossing exercise identities, deferred imports guard request/generation/disposal, current errors propagate in Spanish, and editor/import focus stays usable. Five original unit regressions and five browser regressions fail before source changes; the cross-exercise draft case already passes on the original. Piano passes 84 unit / 25 browser cases.
+- Shared red reproduces all three findings in `reports/review-fixes-shared-red.txt`; fixes raise the skip link, clear recovery drawer state and preserve modified/nonprimary click defaults. Final discovery totals are 326 unit / 212 native browser cases, plus both retained Piano broad scripts.
+- Exact next step: run one fresh `npm run verify` with the final code/discovery counts, address any failures, consolidate current logs, verify documentation links and publish the authorized stacked PR. No deployment/cloud implementation or physical/API acceptance is in scope.
 
 ## Remote review publication (2026-10-18)
 

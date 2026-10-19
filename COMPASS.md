@@ -21,6 +21,8 @@
 - `packages/eslint-config/index.mjs`: one shared blocking policy.
 - `modules/<module>/COMPASS.md`: module entry points.
 
+- [Independent review fixes](reports/review-fixes.md): twelve findings, regression mapping and retained evidence.
+
 ## Deep Dives
 
 - [Supabase, app sharing and push proposal](docs/supabase-sharing-push-plan.md): future app-specific memberships, offline sync and Edge Function reminders; planning only, no implementation authorized.

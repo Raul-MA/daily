@@ -1,0 +1,106 @@
+[WebServer] (node:24764) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:24803) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/review-fixes.spec.js:3:1 › the focused desktop skip link is above the fixed sidebar and activates main content (1.4s)
+(node:24896) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/review-fixes.spec.js:12:1 › storage recovery releases an open phone drawer so all recovery controls can scroll into view (1.4s)
+(node:25007) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks (1.2s)
+
+
+  1) tests/e2e/review-fixes.spec.js:3:1 › the focused desktop skip link is above the fixed sidebar and activates main content 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+       6 |     const box = node.getBoundingClientRect();
+       7 |     return node.contains(document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2));
+    >  8 |   })).toBe(true);
+         |       ^
+       9 |   await page.keyboard.press('Enter'); await expect(page.locator('#content')).toBeFocused();
+      10 | });
+      11 |
+        at /workspaces/daily/.review-fixes/tests/e2e/review-fixes.spec.js:8:7
+
+    Error Context: test-results/review-fixes-the-focused-d-b583e--and-activates-main-content/error-context.md
+
+  2) tests/e2e/review-fixes.spec.js:12:1 › storage recovery releases an open phone drawer so all recovery controls can scroll into view 
+
+    Error: expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not "hidden"
+
+      15 |   await page.evaluate(() => { localStorage.setItem('daily:v1', '{broken'); window.dispatchEvent(new StorageEvent('storage', { key: 'daily:v1' })); });
+      16 |   await expect(page.getByRole('heading', { name: 'Local data needs attention', exact: true })).toBeVisible();
+    > 17 |   expect(await page.locator('body').evaluate(node => getComputedStyle(node).overflowY)).not.toBe('hidden');
+         |                                                                                             ^
+      18 |   expect(await page.locator('[data-menu-open="true"]').count()).toBe(0);
+      19 |   await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight)); expect(await page.evaluate(() => scrollY)).toBeGreaterThan(0);
+      20 | });
+        at /workspaces/daily/.review-fixes/tests/e2e/review-fixes.spec.js:17:93
+
+    Error Context: test-results/review-fixes-storage-recov-a3086-ntrols-can-scroll-into-view/error-context.md
+
+  3) tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 10
+    + Received  + 10
+
+      Array [
+        Object {
+    -     "open": true,
+    -     "prevented": false,
+    +     "open": false,
+    +     "prevented": true,
+        },
+        Object {
+    -     "open": true,
+    -     "prevented": false,
+    +     "open": false,
+    +     "prevented": true,
+        },
+        Object {
+    -     "open": true,
+    -     "prevented": false,
+    +     "open": false,
+    +     "prevented": true,
+        },
+        Object {
+    -     "open": true,
+    -     "prevented": false,
+    +     "open": false,
+    +     "prevented": true,
+        },
+        Object {
+    -     "open": true,
+    -     "prevented": false,
+    +     "open": false,
+    +     "prevented": true,
+        },
+      ]
+
+      32 |     });
+      33 |   });
+    > 34 |   expect(outcomes.slice(0, 5)).toEqual(Array.from({ length: 5 }, () => ({ prevented: false, open: true })));
+         |                                ^
+      35 |   expect(outcomes[5]).toEqual({ prevented: true, open: false });
+      36 | });
+      37 |
+        at /workspaces/daily/.review-fixes/tests/e2e/review-fixes.spec.js:34:32
+
+    Error Context: test-results/review-fixes-same-route-si-3dc98-d-nonprimary-browser-clicks/error-context.md
+
+  3 failed
+    tests/e2e/review-fixes.spec.js:3:1 › the focused desktop skip link is above the fixed sidebar and activates main content 
+    tests/e2e/review-fixes.spec.js:12:1 › storage recovery releases an open phone drawer so all recovery controls can scroll into view 
+    tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks 

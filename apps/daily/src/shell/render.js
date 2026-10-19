@@ -32,6 +32,8 @@ function focusAfterRender(root, key, changedRoute) {
         root.querySelector(`[data-focus="${CSS.escape(key)}"]`)?.focus();
 }
 function failure(context) {
+    context.menuOpen = false;
+    context.root.dataset.menuOpen = 'false';
     context.pageCleanup?.();
     context.pageCleanup = undefined;
     context.pageRestore = undefined;
