@@ -1,5 +1,0 @@
-
-> daily-pwa@0.0.0 build
-> node scripts/build.mjs
-
-Prepared 646 HTML/CSS/JavaScript/assets at /daily/

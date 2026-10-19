@@ -15,7 +15,7 @@
 
 ## Commands
 
-- `npm run test:piano`: 78 unit cases, nineteen native browser cases, both retained original browser scripts.
+- `npm run test:piano`: unit/native browser suites and both retained broad browser scripts.
 
 ## Key Files
 

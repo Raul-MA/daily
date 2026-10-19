@@ -31,14 +31,14 @@
 - [Storage and migrations](docs/storage-and-migrations.md): combined backups, schema/activity validation, atomic replacement, unreadable-root export/restore and the one-editing-tab policy.
 - [Legacy workers](docs/legacy-workers.md): tested cleanup patches and release requirements.
 - [Legacy exporters](docs/legacy-exporters.md): prepared Time Budget, Plants, Reader and WhatsApp migration patches; originals/releases untouched.
-- [Local development / deferred deployment](docs/deployment.md): local commands and the current no-workflows instruction.
+- [Local development](README.md#local-use): copy-only build, preview commands and review-publication/deployment boundary.
 - [Lint policy](docs/pwa-eslint-policy.md): exact required rules.
 
 ## Non-Obvious Patterns
 
 - The test-only absent-module loader permits discovery and throws when missing behavior is exercised; it never supplies fake successful behavior.
 - Baseline runs target original code in isolated contexts. They do not prove the new PWA works.
-- Time Budget characterization was authored before its port. Reader source characterization and mounted UI checks pass; General and affected regressions pass in `reader-shared-regressions.txt`. All feature scopes pass local checks in `reports/final-verification.txt`; physical/release Stage 8 acceptance remains deferred.
+- Source mappings preserve characterization and intentional adaptations. Use [progress](docs/progress.md) for current verification; physical/release acceptance remains deferred.
 
 ## Documentation Rules
 

@@ -6,7 +6,7 @@
 
 ## Commands
 
-- `npm run test:plants`: 28 unit cases and 14 browser cases.
+- `npm run test:plants`: unit and mounted browser suites.
 - `node scripts/test.mjs plants --report reports/plants-ui.txt`: same scope with a report, no shell redirection.
 
 ## Key Files

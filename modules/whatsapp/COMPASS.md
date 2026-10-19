@@ -7,7 +7,7 @@
 
 ## Commands
 
-- `npm run test:whatsapp`: 12 unit and nine browser cases; the legacy exporter adds three unit contracts.
+- `npm run test:whatsapp`: unit/controller and mounted browser suites, including legacy exporter contracts.
 - Source: `node scripts/test.mjs whatsapp --baseline http://127.0.0.1:8767/schedule-whatsapp/ --report reports/baseline-whatsapp-complete.txt`; workspace static server required.
 
 ## Key Files

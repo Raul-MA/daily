@@ -1,0 +1,21 @@
+# Documentation audit
+
+The user requested a specialist audit and parent review before removals. The parent reviewed the initial file-level proposal and approved the current-guidance corrections, deduplication and merger of `docs/deployment.md` into README. An environment restart lost that uncommitted patch; this persistent reconstruction preserves the same approved scope. The parent reviewed the reconstructed exact file list and approved it again before deletion; the [retention manifest](documentation-audit-log-retention.json) records the narrow removal set.
+
+The audit inventory covers 56 tracked Markdown files: 44 documentation files and 12 protected instruction/skill files. It also includes the Piano schema/example/generator and the role of branch-review reports. Current guidance should provide actionable commands, contracts, non-obvious invariants, recovery procedures, source provenance and honest limits. Historical evidence remains useful when clearly labeled.
+
+Current documentation corrections consolidate local operation in README, describe the unchanged installed JavaScript lint rules, replace stale test-count/checkpoint duplication with inventory/progress links, and correct acceptance/navigation/icon claims. Musical deep dives, generated transcription tools, instruction/legal files, source lesson content, migration keys/recovery rules and original assertion provenance are protected.
+
+The parent owns current progress, migration inventory and active Time Budget/Piano behavior/player guides; those files are outside the specialist's ordinary content edits. Citation-only changes for approved TXT cleanup will be coordinated separately.
+
+Public official documentation was checked during the initial audit: [Supabase JavaScript entrypoints](https://supabase.com/docs/guides/functions/function-configuration#custom-entrypoints), [scheduled functions](https://supabase.com/docs/guides/functions/schedule-functions), [RLS/grants](https://supabase.com/docs/guides/database/postgres/row-level-security), [runtime limits](https://supabase.com/docs/guides/functions/limits), [WebKit Home Screen push](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/), [Readwise API](https://readwise.io/api_deets) and [Reader API](https://readwise.io/reader_api). Documented capabilities do not establish project runtime or live-service success.
+
+This is static corroboration, not exhaustive proof of every statement or a new runtime-suite run. Existing logs retain their original checkpoint meaning. No authenticated API calls, personal backup inspection, external messages, cloud setup or deployment are part of the audit. Physical iPhone behavior, installed-worker coexistence, external-app handoffs, live CORS/authentication and future cloud/push delivery remain unverified here.
+
+## Approved cleanup and verification
+
+Merged operational facts into README and repaired inbound references before deleting the duplicate `docs/deployment.md`. Removed **270 superseded tracked TXT logs (902,577 bytes)** after parent review of every proposed filename and safeguards. Each removed file matched its Git blob at `859fd7b0f1365f90cbef22b0975f612580580e2c` immediately before deletion. Repaired 173 historical citations with pinned original-commit URLs, preserving original outcomes and source mappings rather than substituting newer runs.
+
+Retained 192 original snapshot logs, including baseline/red/fixture failures, historical full verification, native-JavaScript parity, structured-manifest backing evidence, legacy patch preparation, unique compatibility evidence and mixed/failed/interrupted product runs. All new remediation logs remain parent-owned and outside deletion authorization. The original worktree, personal data, runtime configuration, source assertions, fixtures and JSON source/verification manifests were untouched.
+
+Verified relative Markdown paths and local heading anchors, all concrete documented npm scripts, unchanged installed lint rules/error severities/five thresholds/modified complexity/inline-config guard, Piano generated schema/prompt/example consistency, retired historical citations and retained structured-manifest backing logs. Patch whitespace passes. Parent owns current runtime verification; no fresh runtime suite is claimed by this documentation audit.

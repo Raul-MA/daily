@@ -1,6 +1,6 @@
 # One daily PWA: research and implementation plan
 
-Status: updated 2026-10-17. Local implementation is complete and full verification passes: strict lint, 786-file JavaScript syntax, 300 unit checks, 189 native browser checks, both broad Piano scripts and preparation of 679 assets. Work remains local, using plain HTML/CSS/JavaScript without Vite or TypeScript. Live Readwise/Reader, physical-device acceptance and releases remain deferred. See [progress / resume](./progress.md) for evidence and the next acceptance steps.
+Status: local implementation and migration tooling have verification evidence in [progress / resume](./progress.md). Use plain HTML/CSS/JavaScript without Vite or TypeScript. Review branches and stacked PR publication are authorized; hosting, deployment, live Readwise/Reader and physical-device/release acceptance remain deferred.
 
 ## Implementation contract: tests first, ESLint required from day one
 
@@ -71,7 +71,7 @@ Coffee has existing uncommitted documentation, a backup file, and Excel-related 
 
 ## 3. Recommended architecture
 
-Use a new repository, with npm workspaces, one lockfile, one local build, with deployment deferred. Do not add GitHub Actions workflows or push/configure hosting during local implementation. Per the later user clarification, use plain HTML, CSS and JavaScript modules throughout. Do not use Vite, TypeScript or an application framework. Small Node scripts may copy native files, generate offline metadata, serve locally and run checks. Preserve explicit browser-compatible imports and runtime schemas.
+Use a new repository, with npm workspaces, one lockfile, one local build, with deployment deferred. Review branch publication is authorized; do not add GitHub Actions workflows, configure hosting or deploy without a further request. Per the later user clarification, use plain HTML, CSS and JavaScript modules throughout. Do not use Vite, TypeScript or an application framework. Small Node scripts may copy native files, generate offline metadata, serve locally and run checks. Preserve explicit browser-compatible imports and runtime schemas.
 
 The working name below is only a placeholder.
 
@@ -116,7 +116,6 @@ daily/
     integrations.md
     lint-policy.md
     testing.md
-    deployment.md
     decisions/
   reports/
     migration-test-inventory.md
@@ -134,7 +133,7 @@ The shell owns navigation, language, installation, service-worker updates, and o
 
 ### Preserve each app's appearance
 
-Use the accepted [iOS demo](../../daily-dashboard-demo/index.html?design=ios) as the dashboard visual reference, with three desktop columns and navigation-only cards. Do not ship the alternative design experiments. Mount each app under a module wrapper with scoped styles and module-specific CSS variables, preserving its current appearance. Adapt global `html`, `body`, and `:root` rules to the module boundary and audit overlays, dialogs, focus, and safe areas. Scope selectors to the mount container. Keep the common Home/App menu small and visually neutral.
+The accepted iOS demo is a historical sibling-workspace reference, outside this repository. Preserve its three desktop columns and navigation-only cards through the maintained [dashboard](../tests/e2e/platform.spec.js) and [route/layout](../tests/e2e/page-width.spec.js) acceptance tests. Do not ship the alternative design experiments. Mount each app under a module wrapper with scoped styles and module-specific CSS variables, preserving its current appearance. Adapt global `html`, `body`, and `:root` rules to the module boundary and audit overlays, dialogs, focus, and safe areas. Scope selectors to the mount container. Keep the common Home/App menu small and visually neutral.
 
 Use before/after screenshots of existing flows to verify visual preservation. An iframe-based launcher would reduce initial CSS work but complicate routing, timers, accessibility, and data updates; it is not the recommended final architecture.
 
@@ -275,8 +274,6 @@ Adopt the user's supplied rule set for every application, package, test, and scr
 
 The new repo has mandatory full-scope lint from day one. Imported code is refactored into compliant units as it enters; there is no grandfathered debt baseline or report-only exception. Reports can aid diagnosis but cannot convert a failing lint run into success.
 
-Measured raw file sizes illustrate the refactoring needed: coffee app 1,088 lines; games app 1,483; Time Budget 1,275; Reader app 788; plant detail 705. These are raw line counts, not ESLint findings. Use the copied tests to protect behavior while splitting code; actual lint diagnostics remain to be collected during implementation.
-
 ### Documentation ownership
 
 | Document | Responsibility |
@@ -312,7 +309,7 @@ Stages are development increments, not permission to call the migration complete
 
 ### General and per-module test suites
 
-These commands are now installed for test bootstrap. Their full product scopes remain acceptance requirements; a passing harness check alone does not fulfill them.
+These commands run the installed native suites. Their full product scopes remain acceptance requirements; a passing harness check alone does not fulfill them.
 
 | Command | Scope |
 | --- | --- |
@@ -349,4 +346,4 @@ Local implementation, full EN/ES presentation, combined recovery, prepared legac
 - [npm workspaces](https://docs.npmjs.com/cli/using-npm/workspaces/): shared repository package management.
 - [MDN offline/background operation](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation): service-worker lifecycle and background limitations.
 - [WebKit storage policy](https://webkit.org/blog/14403/updates-to-storage-policy/): quotas, persistence, and storage eviction considerations.
-- [ESLint flat-config migration](https://eslint.org/docs/latest/use/configure/migration-guide) and [typed linting project service](https://typescript-eslint.io/blog/project-service/): configuration paths and TypeScript project ownership.
+- [ESLint flat-config migration](https://eslint.org/docs/latest/use/configure/migration-guide): configuration paths and runtime scopes.

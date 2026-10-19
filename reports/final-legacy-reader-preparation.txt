@@ -1,5 +1,0 @@
-
-> daily-pwa@0.0.0 prepare:legacy-reader
-> node scripts/prepare-legacy-reader.mjs
-
-Prepared /workspaces/daily/legacy/patches/random-readwise-export.patch. Original files were only read.

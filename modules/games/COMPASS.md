@@ -14,7 +14,7 @@
 
 - `src/service.js`, `src/activity-sync.js`, `src/imports.js`: atomic module/activity storage and preview/recovery.
 - `src/backend/`: retained domain API; `src/frontend/app/`: split original screens; `src/view.js`: shell mount.
-- `test/`: eight original-source data cases and eight service and one localization case; `e2e/`: 24 copied workflows plus ten shared/offline/localization cases.
+- `test/` and `e2e/`: source data characterization, service/localization contracts and mounted workflows; the migration inventory owns assertion provenance.
 
 ## Non-Obvious Patterns
 

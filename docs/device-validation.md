@@ -6,7 +6,7 @@ Local Stage 2 preparation is complete. By the 2026-10-15 user instruction, live 
 
 ## How It Works
 
-Use the existing installations and keep their data. All seven Daily apps are implemented locally; no deployment is authorized. Local workflow tests pass, while final migration audits are still in progress. Do not remove installed apps or import into them for these checks. Share only statuses, counts and file sizes; keep tokens and backup contents on your device.
+Use the existing installations and keep their data. All seven Daily apps are implemented locally; no deployment is authorized. Local implementation and recovery checks have evidence in [progress](progress.md); physical migration remains unverified. Do not remove installed apps or import into them for these checks. Share only statuses, counts and file sizes; keep tokens and backup contents on your device.
 
 ### Checks available now
 
@@ -52,7 +52,7 @@ These are instructions for the later device session, not a request to deploy now
 | Existing export / restore | User confirms export and restore work | Most backups contain fewer than 50 entries; reported backup size approximately 20 KB. Combined Daily migration has synthetic local acceptance tests; physical migration remains deferred |
 | Old Time Budget background / restart | User confirms success | Lock, background and closing/reopening preserve the active budget with correct timing; Daily acceptance remains deferred |
 | Existing Reader | User confirms it works | Reader works on the iPhone; Daily API integration still needs separate verification |
-| New Daily Review | Not previously available; unverified | Implement the diagnostic/integration or direct-review fallback before requesting verification |
+| New Daily Review | Not previously available; unverified | Diagnostic/integration and direct-review fallback are implemented locally; verify on the actual installation |
 | Authenticated API calls from the actual test origin | Diagnostic implemented; user token testing deferred without blocking local implementation | Three endpoint outcomes, no token/payload |
 | Largest combined backup / storage | User reports small record counts and approximately 20 KB; 12 recovery tests pass with synthetic data; aggregate/device measurement pending | Aggregate byte size and recovery results |
 | Legacy worker coexistence | Five tested patches prepared; application/release pending | Cache ownership and coexistence results |

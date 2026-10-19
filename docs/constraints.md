@@ -6,17 +6,13 @@ Static browser behavior and desktop emulation do not establish authenticated COR
 
 ## How It Works
 
-The current instruction (2026-10-15) is local work only, no workflows. A real-endpoint diagnostic is available locally at `/daily/diagnostics.html`; authenticated requests are deferred to the user entering a token later. Live API uncertainty does not block platform or module implementation. Hosting and remote changes are deferred; see [local development](./deployment.md).
+Application and device work remains local; review branch publication is authorized, while workflows, hosting and cloud setup remain deferred. A real-endpoint diagnostic is available locally at `/daily/diagnostics.html`; authenticated requests are deferred to the user entering a token later. Live API uncertainty does not block platform or module implementation. See [local development](../README.md#local-use) for preview commands and the publication boundary.
 
 Rechecked public [Readwise API documentation](https://readwise.io/api_deets) on 2026-10-13: auth GET returns 204 for a valid token; scheduled Daily Review is GET `/api/v2/review/`, may return 404, and exposes completion and a review URL. Completion is a separate explicit POST `/api/v2/review/complete/`. No authenticated requests or completion mutations were made. The public documentation checked does not establish structured Mastery-card data or the pictured Never/Soon/Later/Someday feedback API; retain the plan's direct-review fallback until capability is demonstrated.
 
 The [Reader API](https://readwise.io/reader_api) documents GET `/api/v3/list/`, cursor pagination, location filters and a bounded limit. These documented contracts do not prove authenticated CORS from Pages on iPhone.
 
-Only file-size metadata was read from the existing coffee backup: 20,124 bytes. Its content was not copied into Daily. This small sample does not validate the largest combined installed-app backup or the chosen root-document storage budget.
-
-The user subsequently reported successful exports from every app, with most backups containing fewer than 50 entries. The user also reported an approximate backup size of 20 KB, without specifying whether this was per-file or aggregate. The user also confirmed restore works. Export and restore of existing app backups are therefore recorded as user-confirmed success. Exact aggregate bytes and exported coverage of active state/settings remain unverified; this does not yet validate the new combined Daily import/restore. No export files are needed from the user at this point.
-
-The user confirms the existing Time Budget survives lock, backgrounding and closing/reopening with correct timing, and that Reader works on the iPhone. Daily Review is new and has not been verified. These observations complete the existing-app checks without establishing authenticated API access or the new Daily activity lifecycle.
+The [device evidence ledger](device-validation.md#evidence-ledger) preserves user-confirmed old-app export/restore and timer/Reader observations, including their limits. Those observations do not establish Daily migration, combined storage capacity or authenticated access from its origin.
 
 Follow the [physical device checklist](./device-validation.md) for the evidence still needed.
 
@@ -24,7 +20,7 @@ Follow the [physical device checklist](./device-validation.md) for the evidence 
 
 - When the user later tests the APIs, use the current local page origin with the token entered locally. Never send it through chat or write it into tracked sources/reports. Record status/CORS outcomes without payloads or headers containing credentials. GET-only diagnostics must not mark a review complete.
 - Export separately from each installed old PWA into Files and compare record counts. Do not assume a Safari tab can read an installed PWA's storage.
-- Test a running budget and piano session across navigation, lock, background and full process termination on the physical iPhone once persistence exists. Rendering intervals alone cannot certify this.
+- Test a running budget and piano session across navigation, lock, background and full process termination on the physical iPhone when physical testing resumes. Rendering intervals alone cannot certify this.
 - Fix the five broad legacy worker cleanup policies before new and old installations coexist. Limit cleanup to each app's owned prefix; preserve origin storage and unrelated caches. The five cleanup patches are prepared and tested in `legacy/patches/`, but are not applied or released; see [legacy worker details](./legacy-workers.md).
 - Physical checks remain pending and must not be marked passing based on mock responses or Chromium touch emulation.
 

@@ -1,3 +1,0 @@
-
-> daily-pwa@0.0.0 lint
-> eslint . --max-warnings 0

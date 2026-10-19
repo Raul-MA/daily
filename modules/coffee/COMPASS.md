@@ -14,7 +14,7 @@
 
 - `src/service.js`, `src/imports.js`, `src/validation.js`: shared document and import boundary.
 - `src/backend/features/`: retained domain API; `src/frontend/app/`: scoped original screens; `src/view.js`: shell mount.
-- `test/`: eight original-source characterization and eleven service and one dictionary/error localization case; `e2e/`: 21 copied workflows plus thirteen shared/offline/final-audit cases.
+- `test/` and `e2e/`: source characterization, service/localization contracts and mounted workflows; the migration inventory owns assertion provenance.
 
 ## Non-Obvious Patterns
 

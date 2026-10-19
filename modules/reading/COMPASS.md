@@ -7,7 +7,7 @@
 
 ## Commands
 
-- `npm run test:reading`: 57 unit and 31 browser cases; legacy exporter contracts add three unit cases to the prior local acceptance checkpoint.
+- `npm run test:reading`: unit and mounted browser suites, including legacy exporter contracts.
 - Source baseline: `node scripts/test.mjs reading --baseline http://127.0.0.1:8767/.daily-reader-source/ --report reports/baseline-reading-browser.txt` with the workspace static server running.
 
 ## Key Files

@@ -12,10 +12,10 @@
 
 ## Key Files
 
-- `test/characterization.test.mjs`: eight source-characterized domain cases; `service.test.mjs`: ten native storage/import cases.
-- `test/localization-service.test.mjs`: two shared-language/dictionary/layout identity cases.
-- `test/legacy-service.test.mjs`: three read-only legacy exporter/import contracts; [prepared exporter](../../legacy/exporters/time-budget/README.md) explains its separate original-app release.
-- `e2e/`: eight original baseline workflows plus fifteen Daily acceptance/localization/lifecycle cases.
+- `test/characterization.test.mjs`, `service.test.mjs`: source-characterized domain behavior and native storage/import contracts.
+- `test/localization-service.test.mjs`: shared-language/dictionary/layout identity contracts.
+- `test/legacy-service.test.mjs`: read-only legacy exporter/import contracts; [prepared exporter](../../legacy/exporters/time-budget/README.md) explains its separate original-app release.
+- `e2e/`: original baseline workflows and Daily acceptance/localization/lifecycle contracts.
 - `src/sections.js`: separate Time Budget, Countdowns and Settings panels without changing clocks or drafts.
 - `src/app.js`, `src/methods/`: native original workflow; `src/view.js`: scoped mount and cleanup.
 - `src/i18n.js`, `src/translations.js`, `src/notices.js`, `src/queue-drafts.js`: explicit authored copy, fixed notice expiry and semantic draft reconstruction.

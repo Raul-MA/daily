@@ -30,7 +30,7 @@ Reader Picker and the new Daily Review share Daily's routing, preferences and of
 - Public [Reader docs](https://readwise.io/reader_api) and [Readwise docs](https://readwise.io/api_deets), rechecked 2026-10-16, establish list/latest-review/completion requests but do not establish structured Q&A or per-card scheduling support. Browser fixtures prove request handling, not live access or CORS.
 - Counts 2–20 are an intentional addition. The original invalid-count fixture now uses 21; original fallback assertions remain alongside new custom-count contracts.
 - Worker caching covers owned code/CSS, not authenticated API responses. Original private manifest/worker/icons are replaced by the shared installation assets.
-- Combined whole-app backup validation, legacy exporter delivery, full cross-module release checks and actual iPhone/live API acceptance remain separate gates.
+- Current local backup and cross-module verification is recorded in [progress](../../../docs/progress.md). Legacy exporter release and actual iPhone/live API acceptance remain deferred.
 
 ## Shortcuts and evidence
 
@@ -38,10 +38,7 @@ Use `/daily/#/reading/picker?count=1&minutes=10&run=1&open=auto` to open one fit
 
 Supported parameters: `count` 1–20, `minutes` 0–10000 (0 = any), `progress` unfinished/started/unread, ordered `locations` inbox/new/later/shortlist, `scan` 100–2000 per location, boolean `run` (alias `auto`), `open` and `refresh`. Launch overrides do not replace saved defaults. An auto-run opened before token entry resumes after Save. Update-URL settings generate a reusable token-free URL; only an explicit single-result picker launch can auto-open Reader. Home widgets never redirect.
 
-`baseline-reading-complete.txt` passes all 12 characterization and six source browser cases. `reading-backup-ui.txt` passes 48 native unit and 25 browser cases. `reader-shared-regressions.txt` passes 51 native unit and 29 browser cases, plus General and every previously completed module. WhatsApp alone remains red in that report. Phone screenshots are `reader-source-phone.png` and `reader-native-phone.png`. All fixtures are synthetic; no personal exports or tokens were used.
-
-Stage 8 import-cancel audit: `reading-import-discard-red.txt` records 29 browser passes and the hidden-Cancel failure. `reading-import-discard.txt` passes 51 unit/30 browser after correction; unsaved token and preference drafts survive invalid-file cancellation across language changes. Full strict lint passes in `reading-import-discard-lint.txt`.
-
+Source characterization and native assertion adaptations are mapped in the [migration inventory](../../../reports/migration-test-inventory.md); [progress](../../../docs/progress.md) records verification. Historical reports remain evidence of their pinned checkpoints, including failed import-cancel fixtures and the later correction.
 
 ## Prepared old-app exporter
 
