@@ -1,14 +1,22 @@
 # Implementation progress
 
-Updated: 2026-10-19. Repo: `/workspaces/daily`, branch `review/09-review-fixes`.
+Updated: 2026-10-19. Repo: `/workspaces/daily`, branch `main`.
 
 ## Current status and resume
+
+**Pages repair in progress (2026-10-19):** the user explicitly authorized adding the deployment workflow, changing Pages configuration and publishing the app. `.github/workflows/pages.yml` installs Node 24/dependencies/Chromium, runs the full verification gate and publishes only generated `dist/` from `main`, using pinned official action revisions and a separate deployment job. Exact next step: complete local verification, commit/push only the repair files, switch Pages to GitHub Actions, and verify the successful deployment and public app/manifest/worker. No application logic or original test assertions changed; source-test mappings remain unchanged. Cloud/device/API acceptance remains deferred.
+
+The initial full gate exposed two existing 320px backup-form overflow failures in General's route-width and storage-recovery assertions. Grid track sizing is corrected without changing tests; [deployment evidence](../reports/pages-deployment.md) retains the red details and pending green/live checks. Actionlint v1.7.12 passes; the existing Pages environment allows `main`.
+
+Attempting the authorized Pages source update returned HTTP 403 (`Resource not accessible by integration`); the source remains `legacy`. The user has been asked to select **GitHub Actions** in repository Settings → Pages while workflow publication/verification continues. The session can read Pages settings but cannot update them.
+
+Diagnosis: after merge commit `dcbec77`, `https://raul-ma.github.io/daily/` returned HTTP 200 with the README rendered by Jekyll. Read-only Pages API inspection confirmed `build_type: legacy`, source `main:/`; its latest build succeeded ([run](https://github.com/Raul-MA/daily/actions/runs/39265831750)). The repository root has no application `index.html`, and generated `dist/` is intentionally untracked. Merging source did not run Node preparation or publish its output. The initial `npm run build` passed with 709 assets at `/daily/`; `node --test tests/general/static-output.test.mjs` exited 0.
 
 **All twelve independent-review fixes are complete and published in [PR #10](https://github.com/Raul-MA/daily/pull/10), targeting `review/08-cloud-sharing-proposal` after PR #8.** Full verification passes; the documentation audit and obsolete-log cleanup are complete. See the remediation checkpoint below.
 
 **All-route full-width layout and dashboard title links are implemented locally. The 360-check route/width audit and all app regression suites pass.** See the full-width checkpoint below.
 
-Application implementation remains **local**, using **plain HTML/CSS/JavaScript**. On 2026-10-18 the user authorized pushing review branches and creating PRs. Workflows, Pages/hosting configuration, cloud setup and deployments remain deferred. Preserve real Readwise/Reader requests for the user's later private-token checks. Do not request personal tokens or exports.
+Application implementation uses **plain HTML/CSS/JavaScript**. On 2026-10-18 the user authorized pushing review branches and creating PRs; on 2026-10-19 they authorized the Daily Pages workflow/configuration/deployment repair. Cloud setup and other releases remain deferred. Preserve real Readwise/Reader requests for the user's later private-token checks. Do not request personal tokens or exports.
 
 **Next acceptance work is deferred:** follow [device validation](device-validation.md) when the user resumes actual iPhone, Things, authenticated API, worker-coexistence or release testing. Do not treat those checks as passed or start remote work automatically. The current storage policy is **one editing tab at a time**; revision checks reject ordinary stale saves but do not serialize simultaneous cross-tab writers.
 

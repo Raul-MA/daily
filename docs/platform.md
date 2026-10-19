@@ -2,7 +2,7 @@
 
 ## Problem
 
-Seven apps need one shell and local data boundary without conflicting navigation, styling or timer ownership. The user requires native HTML/CSS/JavaScript; review publication is authorized while hosting and deployment remain deferred.
+Seven apps need one shell and local data boundary without conflicting navigation, styling or timer ownership. The user requires native HTML/CSS/JavaScript; review publication and Daily Pages deployment are authorized. [README](../README.md#github-pages) owns the publishing procedure; cloud setup and physical/API acceptance remain deferred.
 
 ## How It Works
 
@@ -12,6 +12,7 @@ Seven apps need one shell and local data boundary without conflicting navigation
 - `packages/platform/src/router.js` owns the allowlisted hash routes and configurable base. IDs and query values are encoded. Unknown or malformed routes render a focused not-found heading. Routing does not create records.
 - `packages/data/src/daily-state.js` manages one `daily:v1` document. Preferences are separate from versioned module payloads. `module-store.js` validates data before saving, rejects unsupported versions and preserves unrelated modules. Subscribers run only after a successful storage commit.
 - Settings mounts `apps/daily/src/backup/view.js` for full-root export, validated preview, recovery download and explicit replacement. [Storage and migrations](storage-and-migrations.md) explains schema/reference checks, credential cleanup and failure ordering.
+- The backup form and file label use bounded grid tracks so native file-input sizing cannot widen Settings or storage recovery at 320px.
 - `calendar.js` schedules the next local midnight rather than a fixed 24-hour delay and rechecks date/timezone on foreground/focus. Dashboard refresh never saves records.
 - `packages/ui/src/drafts.js` keeps identified forms marked `data-unsaved="true"` in memory across language renders, including file selection and focus. Conditional module form state is kept separately from domain records.
 - Dashboard cards navigate; each app-linked card's icon/title opens its destination from the shared widget catalog. Running opens Time Budget; Quick actions keeps its aggregate heading and separate action links. Title links inherit the existing appearance, use a 44px target and retain shared hover/focus feedback. Settings own widget visibility/order and quick-action visibility. EN/ES changes labels without translating saved user text.

@@ -1,5 +1,7 @@
 # Migration test inventory
 
+2026-10-19 Pages repair: no tests moved or source assertions changed. Existing General route-width and storage-recovery assertions exposed backup-form overflow at 320px; the CSS correction and deployment checks are recorded in [Pages evidence](pages-deployment.md).
+
 2026-10-18 Plants import selection: `modules/plants/e2e/import-selection.spec.js` records automatic file-selection preview, read-only cancellation, explicit button retry, visible invalid-file errors, recovery gating and reload preservation. The pre-change case fails in `plants-import-selection-red.txt` because no dialog opens on selection. All 28 units / 14 browser cases pass in [plants-import-selection.txt](https://github.com/Raul-MA/daily/blob/859fd7b0f1365f90cbef22b0975f612580580e2c/reports/plants-import-selection.txt); discovery increases Plants to 14 (201 total native browser cases). Existing import assertions remain; their helper now selects the file without the former extra Preview click. Personal backup contents are excluded from fixtures; the exact supplied file also passes a disposable browser check in `plants-supplied-selection.txt`.
 
 Updated 2026-10-16. Original commits and SHA-256 values are in [source-tests.json](source-tests.json). No application logic was copied with these suites. Every fixture comes from source test literals, not personal backups.

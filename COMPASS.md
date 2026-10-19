@@ -2,7 +2,7 @@
 
 ## Start Here
 
-- [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Review branches/PRs are authorized; deployment, hosting and API token checks remain deferred.
+- [Working rules](AGENTS.md), then [progress / resume](docs/progress.md). Review branches/PRs and Daily Pages deployment are authorized; cloud setup, device acceptance and API token checks remain deferred.
 - [Implementation plan](docs/pwa-consolidation-plan.md) defines the gates. All seven native apps, shared shell, timestamp activities, EN/ES, recovery and offline updates pass full local verification. Stage 8 physical-device/API/coexistence and release acceptance remain deferred.
 
 ## Commands
@@ -33,7 +33,7 @@
 - [Storage and migrations](docs/storage-and-migrations.md): combined backups, schema/activity validation, atomic replacement, unreadable-root export/restore and the one-editing-tab policy.
 - [Legacy workers](docs/legacy-workers.md): tested cleanup patches and release requirements.
 - [Legacy exporters](docs/legacy-exporters.md): prepared Time Budget, Plants, Reader and WhatsApp migration patches; originals/releases untouched.
-- [Local development](README.md#local-use): copy-only build, preview commands and review-publication/deployment boundary.
+- [Local development](README.md#local-use) and [Pages deployment](README.md#github-pages): copy-only build, preview commands and verified `dist/` publication.
 - [Lint policy](docs/pwa-eslint-policy.md): exact required rules.
 
 ## Non-Obvious Patterns

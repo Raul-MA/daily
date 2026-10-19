@@ -74,9 +74,9 @@ body { margin: 0; background: var(--shell-background, #f2f2f7); }
 .pwa-button:disabled { opacity: .5; cursor: default; }
 @media (max-width: 719px) { .footer-system { margin-left: 0; } }
 
-.daily-backup form { display:grid; gap:16px; }
-.daily-backup label { display:grid; gap:8px; }
-.daily-backup input[type="file"] { max-width:100%; }
+.daily-backup form { display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
+.daily-backup label { display:grid; grid-template-columns:minmax(0,1fr); gap:8px; }
+.daily-backup input[type="file"] { min-width:0; max-width:100%; }
 .daily-backup button { min-height:44px; padding:10px 16px; border:1px solid #d1d1d6; border-radius:10px; background:#fff; color:#1c1c1e; }
 .daily-backup button:disabled { opacity:.5; }
 .daily-backup nav { display:flex; gap:12px; flex-wrap:wrap; }

@@ -10,7 +10,13 @@ Use Node 24 and npm 11. Run `npm ci`, then `npm run dev`; open `http://127.0.0.1
 
 The build copies native browser modules and CSS unchanged into `dist/`, generates installation icons, the manifest and offline asset list, and uses no bundler or compiler. Any ordinary static HTTP server can serve that directory. Set `DAILY_BASE=/another/path/` for both building and serving another path; the default is `/daily/`. To choose a port after building, run `node scripts/serve.mjs --port 5174`; the loopback-only server prints its URL.
 
-Review branch publication and stacked PRs are authorized. Hosting, workflows, repository configuration, cloud setup and deployment require a further request. Publishing a review does not verify physical devices or authenticated APIs.
+## GitHub Pages
+
+The user authorized Pages deployment on 2026-10-19. [The deployment workflow](.github/workflows/pages.yml) runs on pushes to `main` or manual dispatch from `main`. It uses Node 24, installs locked dependencies and Chromium, and runs `npm run verify` before uploading only `dist/` at `/daily/`. The deployment job needs a successful build and uses the `github-pages` environment. Action revisions are pinned to commits (checkout v6, setup-node v7, configure-pages v5, upload-pages-artifact v4, deploy-pages v4).
+
+In repository Settings → Pages, the publishing source must be **GitHub Actions**. Publishing `main:/` with Jekyll renders this README instead of building the app. See [GitHub's custom workflow guidance](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages). The app URL is <https://raul-ma.github.io/daily/>; hash routes, manifest and service worker all use that base. Repository documentation, tests, reports and personal exports are excluded from deployment; only app/shared/module runtime assets are copied by the build.
+
+Cloud setup, physical-device migration, authenticated APIs and legacy-app releases remain deferred. Publishing the app does not establish those acceptance results.
 
 ## Checks
 
