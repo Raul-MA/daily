@@ -75,7 +75,7 @@
   "localization": {
     "lookup": "modules/plants/src/plants/localized.js",
     "englishText": "modules/plants/src/plants/translations/",
-    "templates": 13,
+    "templates": 16,
     "sourceSpanishModified": false,
     "savedUserTextTranslated": false,
     "unitContracts": 2,
@@ -90,5 +90,33 @@
     "history": "Borderless semantic table; inline edit/delete retained; contained horizontal scrolling on narrow screens.",
     "things": "Plant-detail buttons for each future planned care type open one direct things:///json task with the unchanged planned date; buttons remain enabled after use. No actions on reminder lists, bulk send, shortcut or automatic handoff. Legacy compatibility retained.",
     "direct_things_unit_contracts": 3
+  },
+  "researched_additions": {
+    "date": "2026-10-20",
+    "templates": [
+      "maranta",
+      "calathea-lutea",
+      "fiddle-leaf-fig"
+    ],
+    "research": "modules/plants/docs/care-research.md",
+    "original_templates_unchanged": true,
+    "acceptance": "modules/plants/test/localization-service.test.mjs",
+    "browser_acceptance": "modules/plants/e2e/localization.spec.js",
+    "red": "reports/plants-new-guides-red.txt",
+    "verification": "reports/plants-new-guides-verification.txt",
+    "puebla_update": {
+      "watering_check_days": {
+        "maranta": 3,
+        "calathea-lutea": 3,
+        "fiddle-leaf-fig": 7
+      },
+      "both_watering_seasons_updated": true,
+      "watering_frequency_validated": false,
+      "saved_records_modified": false,
+      "acceptance": "modules/plants/test/localization-service.test.mjs",
+      "browser_acceptance": "modules/plants/e2e/localization.spec.js",
+      "red": "reports/plants-puebla-guidance-red.txt",
+      "verification": "reports/plants-puebla-guidance-verification.txt"
+    }
   }
 }

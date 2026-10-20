@@ -19,6 +19,15 @@ test('template defaults follow the selected language while existing form text su
   await expect(page.locator('[name=template] option:checked')).toHaveText('Lucky Bamboo (in soil)');
   await expect(page.locator('[name=notes]')).toHaveValue(draft);
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('daily:v1')).modules)).toEqual({});
+  for (const [id, species, water, soil, fertilizer] of [['maranta', 'Maranta leuconeura', '3', '18', '4'], ['calathea-lutea', 'Calathea lutea', '3', '24', '4'], ['fiddle-leaf-fig', 'Ficus lyrata', '7', '30', '2']]) {
+    await page.locator('[name=template]').selectOption(id);
+    await expect(page.locator('[name=species]')).toHaveValue(species);
+    await expect(page.locator('[name=waterGrow]')).toHaveValue(water);
+    await expect(page.locator('[name=waterDry]')).toHaveValue(water);
+    await expect(page.locator('[name=soilMonths]')).toHaveValue(soil);
+    await expect(page.locator('[name=fertGrow]')).toHaveValue(fertilizer);
+    await expect(page.locator('[name=fertPause]')).toBeChecked();
+  }
 });
 
 test('authored plant guides switch language offline without translating saved records or changing care timing', async ({ page, context }) => {

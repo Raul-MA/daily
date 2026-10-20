@@ -32,7 +32,7 @@ Retain Stillgreen's care rules, IDs, history and Things handoff inside one PWA w
 
 - The original seven test cases remain unchanged; twenty-four new unit cases cover care, shared-state integration, legacy export, localization and direct Things URLs. Browser coverage includes offline reload, quota failure, migration preview/cancel, draft preservation, stale edits, theme containment and language.
 - The root is still localStorage: there is no transactional cross-tab compare-and-swap. UI stale-record guards reduce lost-edit risks; truly simultaneous writers still need the shared concurrency policy before release.
-- Controls, validation states, template labels/defaults and all thirteen authored guides support EN/ES. The original Spanish data objects remain unchanged; `plants/localized.js` overlays detached English text or Spanish labels. Unit contracts preserve every numeric care figure and schedule. Physical iPhone acceptance remains open; automatic/shortcut handoff was removed at the user’s request.
+- Controls, validation states, template labels/defaults and all sixteen authored guides support EN/ES. The original thirteen Spanish data objects remain unchanged; three new templates have [researched care and documented default assumptions](care-research.md). `plants/localized.js` overlays detached English text or Spanish labels. Unit contracts preserve every numeric care figure and schedule. Physical iPhone acceptance remains open; automatic/shortcut handoff was removed at the user’s request.
 - See `reports/plants-source-map.json` for source hashes and targets. New migration export behavior is not evidence that the old installed PWA already exports Things settings; its prepared migration exporter has not been released to that installation.
 
 

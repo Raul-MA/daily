@@ -5,10 +5,20 @@ import { PLANT_TEMPLATES } from '../src/plants/plant-templates.js';
 async function templates(language) { return (await import('../src/plants/localized.js')).plantTemplates(language); }
 function numbers(text) { return text.match(/\d+/g) ?? []; }
 
-test('all thirteen authored plant guides and template notes have complete English and Spanish text with unchanged care figures', async () => {
+test('original thirteen and three researched plant guides have complete English and Spanish text with unchanged care figures', async () => {
   const english = await templates('en');
   const spanish = await templates('es');
-  assert.equal(english.length, 13);
+  const additions = ['maranta', 'calathea-lutea', 'fiddle-leaf-fig'];
+  assert.equal(english.filter(item => !additions.includes(item.id)).length, 13);
+  assert.equal(english.length, 16);
+  assert.deepEqual(english.filter(item => additions.includes(item.id)).map(item => item.species), ['Maranta leuconeura', 'Calathea lutea', 'Ficus lyrata']);
+  for (const [id, days] of [['maranta', 3], ['calathea-lutea', 3], ['fiddle-leaf-fig', 7]]) {
+    const item = english.find(template => template.id === id);
+    assert.equal(item.schedule.wateringIntervalDays, days);
+    assert.deepEqual(item.schedule.wateringSeasons.map(season => season.intervalDays), [days, days]);
+    assert.match(item.guide.water, /check|Check/);
+    assert.match(item.guide.water, /2–3/);
+  }
   assert.deepEqual(english.map(item => item.id), PLANT_TEMPLATES.map(item => item.id));
   assert.equal(spanish.find(item => item.id === 'lucky-bamboo').label, 'Bambú de la suerte (en tierra)');
   assert.equal(english.find(item => item.id === 'lucky-bamboo').label, 'Lucky Bamboo (in soil)');

@@ -11,5 +11,8 @@ import template9 from './templates/lucky-bamboo.js';
 import template10 from './templates/monstera.js';
 import template11 from './templates/peace-lily.js';
 import template12 from './templates/xanadu.js';
+import maranta from './templates/maranta.js';
+import calatheaLutea from './templates/calathea-lutea.js';
+import fiddleLeafFig from './templates/fiddle-leaf-fig.js';
 
-export const PLANT_TEMPLATES = [template0, template1, template2, template3, template4, template5, template6, template7, template8, template9, template10, template11, template12];
+export const PLANT_TEMPLATES = [template0, template1, template2, template3, template4, template5, template6, template7, template8, template9, template10, template11, template12, maranta, calatheaLutea, fiddleLeafFig];
