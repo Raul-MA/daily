@@ -1,0 +1,175 @@
+Suite: general
+✔ time is derived from timestamps without tick writes or automatic completion (10.4749ms)
+✔ reload and process reconstruction preserve elapsed time and Unicode references (0.504461ms)
+✔ explicit pause excludes background time and resume continues the same activity (1.01396ms)
+✔ countdowns are independent and singleton budgets games and piano resume existing activities (1.374522ms)
+✔ widget removal language changes and navigation do not pause or reset activities (0.631498ms)
+✔ completion is explicit and terminal while a new budget may start afterwards (1.363602ms)
+✔ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (2.435481ms)
+✔ invalid starts duplicate identifiers and unknown transitions never mutate activities (4.015397ms)
+✔ failed activity changes keep the previous status and publish no success (0.754377ms)
+✔ combined backup exports every module layout language and original running timestamps without credentials or caches (70.482175ms)
+✔ combined preview validates every module and shows counts without changing records (14.100911ms)
+✔ combined restore rejects unknown identities future schemas unknown modules and future module versions (9.756581ms)
+✔ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (12.716541ms)
+✔ combined restore rejects orphan missing and inconsistent active activity mirrors (11.743205ms)
+✔ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (8.014543ms)
+✔ combined failed primary or recovery writes retain records and do not reset credentials (9.261247ms)
+✔ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (14.120748ms)
+✔ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (10.625021ms)
+✔ calendar refreshes at local midnight without repeated changes on the same day (1.352521ms)
+✔ foreground resumes recalculate date after suspension and cleanup removes callbacks (0.422207ms)
+✔ calendar deadlines follow daylight-saving local days rather than a fixed 24 hours (0.554644ms)
+✔ missing modules fail when exercised rather than preventing test discovery (0.346606ms)
+✔ new browser tests target the Pages path and module hash (0.222966ms)
+✔ legacy budget patch packages a working export link without modifying originals and refuses changed source HTML (130.70337ms)
+✔ legacy plants patch packages a working export link without modifying originals and refuses changed source HTML (119.59716ms)
+✔ legacy Reader patch packages a working export link without modifying originals and refuses changed source HTML (163.594753ms)
+✔ legacy WhatsApp patch packages a working export link without modifying originals and refuses changed source HTML (110.490132ms)
+✔ plants worker removes only its old caches (7.090981ms)
+✔ coffee worker removes only its old caches (2.374254ms)
+✔ games worker removes only its old caches (2.38529ms)
+✔ Time Budget worker removes only its old caches (2.008576ms)
+✔ piano worker removes only its old caches (1.205497ms)
+✔ module defaults never write and saved payloads preserve unrelated preferences and records (0.518848ms)
+✔ module reads validate domain shapes and reject future versions without overwriting (0.548853ms)
+✔ module saves re-read current state and publish only committed updates (0.361935ms)
+✔ failed module commits retain previous readable data without success notifications (0.292465ms)
+✔ activity schemas reject unrenderable finite clocks and durations before creating the root (0.313504ms)
+✔ durable storage is requested where available and refusal or failure never claims retention (0.564713ms)
+✔ fresh dashboard defaults put plants and activities first without writing data (0.347718ms)
+✔ language and dashboard order persist across a new state instance (0.23037ms)
+✔ removing a widget preserves module records and their active sessions (0.293226ms)
+✔ invalid language, duplicate widgets and unknown actions never overwrite settings (0.488971ms)
+✔ failed saves publish no committed change and retain the previous preferences (0.267599ms)
+✔ committed preference changes notify subscribers and support cleanup (0.26804ms)
+✔ diagnostic rejects empty credentials without making requests (0.683044ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (34.486238ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (2.436142ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.499461ms)
+✔ hung requests time out and remaining endpoint checks still execute (17.933347ms)
+✔ local diagnostics do not claim Pages-origin verification (0.537242ms)
+✔ hash routes cover all seven modules and their canonical deep links (3.054695ms)
+✔ href builder encodes stable IDs and supports configurable local base paths (0.393223ms)
+✔ query parameters and repeated values survive routing without changing settings (0.277518ms)
+✔ unknown and malformed routes fail safely instead of executing external URLs (0.459537ms)
+✔ browser hash listener supports navigation and removes itself on cleanup (0.460859ms)
+✔ static preparation preserves native modules byte-for-byte and resolves every relative import (1248.919445ms)
+✔ static preparation uses the configured base for HTML manifest and worker without shipping tests (1187.615045ms)
+✔ invalid static bases fail before replacing any previously prepared files (349.564958ms)
+✔ shared install assets provide PNG sizes maskable identity and a subpath-safe Apple touch icon (1494.265114ms)
+✔ attention-screen raw recovery preserves only the three owned root snapshots without scanning storage (9.478914ms)
+✔ attention-screen restore validates full backups and replaces only the primary after a successful write (47.732568ms)
+✔ attention-screen restore rejects stale or tampered previews and future stored root versions (22.389095ms)
+✔ attention-screen recovery propagates blocked reads and reports cleanup failure only after replacement (17.5539ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (3.825613ms)
+✔ replacement keeps the previous validated document as recovery (0.330947ms)
+✔ invalid and future documents are rejected without any storage mutation (1.698016ms)
+✔ primary quota failure retains the readable document and reports failure (0.347498ms)
+✔ recovery quota failure prevents a primary replacement (0.805021ms)
+✔ corrupt primary data is preserved and recovery is explicit (4.058858ms)
+✔ unrecoverable corruption never produces an empty collection (4.519296ms)
+✔ missing primary data can recover from an existing valid recovery document (0.271887ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (13.496495ms)
+✔ lossy serialization is validated before touching existing records (0.489483ms)
+✔ a future primary schema is rejected without recovery or mutation (0.678655ms)
+✔ failure to preserve corrupt data reports failure without replacing it (0.341076ms)
+✔ update activation is held for any unfinished activity or unsaved form (0.958898ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (11.551195ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (4.10292ms)
+✔ offline navigation and built assets use only this app cache (4.060962ms)
+✔ updates wait until explicitly requested and reject unrelated messages (5.16484ms)
+✔ online navigation stays on the cached version until an update is accepted (1.975693ms)
+✔ any blocked tab prevents update activation (1.787804ms)
+✔ unresponsive tabs and malformed state replies keep updates waiting (26.972681ms)
+✔ every same-app tab must explicitly report safe before an update activates (1.966477ms)
+✔ updates from unknown clients are ignored (1.762356ms)
+ℹ tests 85
+ℹ suites 0
+ℹ pass 85
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5380.769846
+[WebServer] (node:24177) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 40 tests using 1 worker
+
+(node:24210) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes (3.9s)
+  ✓   2 tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state (2.2s)
+  ✓   3 tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard (1.8s)
+  ✓   4 tests/e2e/backup.spec.js:32:1 › full backup downloads all saved modules and layout without credentials or unsaved settings (2.8s)
+  ✓   5 tests/e2e/backup.spec.js:46:1 › full backup restores every app into a separate browser profile with original overdue clocks and token reentry (4.8s)
+  ✓   6 tests/e2e/backup.spec.js:69:1 › full import invalid cancel stale and quota paths preserve current records and retained credentials (2.9s)
+  ✓   7 tests/e2e/backup.spec.js:99:1 › full import reports restored records honestly when credential cleanup fails after the root commit (2.4s)
+  ✓   8 tests/e2e/backup.spec.js:113:1 › full restore discards setup drafts retained by another app before importing (3.1s)
+  ✓   9 tests/e2e/calendar.spec.js:5:1 › dashboard care reminders refresh at midnight without changing records (1.9s)
+  ✓  10 tests/e2e/diagnostics.spec.js:5:1 › connection checks require submission and preserve unrelated storage (561ms)
+  ✓  11 tests/e2e/diagnostics.spec.js:28:1 › a missing review and a Reader network failure do not hide other outcomes (438ms)
+  ✓  12 tests/e2e/diagnostics.spec.js:43:1 › diagnostic controls and outcomes support Spanish (375ms)
+  ✓  13 tests/e2e/legacy-budget.spec.js:35:1 › legacy Time Budget exporter previews and downloads original active timing without changing source storage (495ms)
+  ✓  14 tests/e2e/legacy-plants.spec.js:37:1 › legacy plant exporter preserves plant records and Things preferences through phone preview and Daily import (461ms)
+  ✓  15 tests/e2e/legacy-reader.spec.js:36:1 › legacy Reader export previews optional remembered metadata and imports preferences without credentials or cached bodies (496ms)
+  ✓  16 tests/e2e/legacy-whatsapp.spec.js:34:1 › legacy WhatsApp export preserves expired reminder fields and safe literal message text without handoff or storage changes (540ms)
+  ✓  17 tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base (6.3s)
+  ✓  18 tests/e2e/offline.spec.js:46:1 › home settings and connection checks reopen offline without losing saved settings (7.2s)
+  ✓  19 tests/e2e/offline.spec.js:61:1 › offline cache contains generated assets and excludes API responses and credentials (4.9s)
+  ✘  20 tests/e2e/page-width.spec.js:17:1 › every registered screen and Piano destination fills its available container (33.5s)
+(node:32239) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  21 tests/e2e/platform.spec.js:38:1 › dashboard keeps the accepted three, two and one column layouts (1.6s)
+  ✓  22 tests/e2e/platform.spec.js:51:1 › all modules stay reachable and dashboard navigation creates no records (2.5s)
+  ✓  23 tests/e2e/platform.spec.js:77:1 › app backgrounds fill the viewport when switching apps (4.8s)
+  ✓  24 tests/e2e/platform.spec.js:111:1 › shared header and footer follow app theme changes and system dark mode (1.7s)
+  ✓  25 tests/e2e/platform.spec.js:130:1 › shared language setting persists and leaves module user text unchanged (2.5s)
+  ✓  26 tests/e2e/platform.spec.js:146:1 › widget visibility and order persist without removing apps or module state (2.4s)
+  ✓  27 tests/e2e/platform.spec.js:160:1 › quick-action visibility persists while its app remains in the menu (2.8s)
+  ✓  28 tests/e2e/platform.spec.js:172:1 › stable deep links reload and unknown routes provide an accessible way home (2.4s)
+  ✓  29 tests/e2e/platform.spec.js:184:1 › failed preference saves report failure and retain the previous language (1.5s)
+  ✓  30 tests/e2e/platform.spec.js:200:1 › unrecoverable storage is retained and never shown as an empty dashboard (1.5s)
+  ✓  31 tests/e2e/review-fixes.spec.js:3:1 › the focused desktop skip link is above the fixed sidebar and activates main content (1.4s)
+  ✓  32 tests/e2e/review-fixes.spec.js:12:1 › storage recovery releases an open phone drawer so all recovery controls can scroll into view (1.4s)
+  ✓  33 tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks (1.6s)
+  ✓  34 tests/e2e/sidebar.spec.js:3:1 › shared sidebar separates app sections from app switching and keeps app colors (3.0s)
+  ✓  35 tests/e2e/sidebar.spec.js:62:1 › desktop sidebar collapses without remounting the app or losing a draft (1.8s)
+  ✓  36 tests/e2e/sidebar.spec.js:74:1 › phone drawer traps focus closes with escape and navigates without overflow (2.1s)
+  ✓  37 tests/e2e/storage-recovery.spec.js:31:1 › unreadable storage can be preserved and restored through a validated recovery-first preview at 320px (2.3s)
+  ✓  38 tests/e2e/storage-recovery.spec.js:54:1 › future stored root versions remain exportable and are never downgraded by the recovery screen (1.8s)
+  ✓  39 tests/e2e/storage-recovery.spec.js:67:1 › recovery quota and stale-preview failures preserve unreadable records and allow cancellation (1.9s)
+  ✓  40 tests/e2e/updates.spec.js:23:1 › updates wait for unsaved work in another tab and then preserve settings across activation (10.6s)
+
+
+  1) tests/e2e/page-width.spec.js:17:1 › every registered screen and Piano destination fills its available container
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "offenders": Array [],
+    +     "overflow": 70,
+    +     "route": "/daily/#/piano/exercises/superimpositions.practice",
+    +     "width": 1600,
+    +   },
+    + ]
+
+      40 |   }
+      41 |   writeFileSync('reports/full-width-route-audit.json', JSON.stringify({ routes: routes.length, widths: [1600, 900, 390, 320], checks: results.length, results }, null, 2));
+    > 42 |   expect(results.flatMap(result => result.violations.map(violation => ({ width: result.width, route: result.url, ...violation })))).toEqual([]);
+         |                                                                                                                                     ^
+      43 | });
+      44 |
+        at /workspaces/daily/tests/e2e/page-width.spec.js:42:133
+
+    Error Context: test-results/page-width-every-registere-4b168-lls-its-available-container/error-context.md
+
+  1 failed
+    tests/e2e/page-width.spec.js:17:1 › every registered screen and Piano destination fills its available container
+  39 passed (2.3m)

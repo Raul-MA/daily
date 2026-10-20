@@ -13,7 +13,7 @@
 
 - `src/service.js`: shared-document adapter, import preview, stale-preview guard and migration export.
 - `src/store/store.js`: retained plant operations; `validation.js`, `envelope.js`, `legacy.js`, `metadata.js` split storage responsibilities.
-- `src/care/care.js`: original seasonal/manual-date rules. `src/ui/`: native DOM pages and dashboard provider.
+- `src/care/care.js`: original seasonal/manual-date rules. `src/ui/`: native DOM pages, grouped dashboard reminders and borderless history; individual direct Things URL buttons for future planned care on plant details, no automatic/shortcut handoff; backup compatibility retained.
 - `src/plants/templates/`: thirteen unchanged source templates, split into small data modules.
 - `src/plants/localized.js`, `src/plants/translations/`: detached EN/ES authored text; source schedules and saved user content are untouched.
 - `test/` and `e2e/`: original assertions plus care, shared-storage, draft and browser acceptance coverage.

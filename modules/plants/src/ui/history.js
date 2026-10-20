@@ -23,7 +23,10 @@ function editEntry(context, entry, node) {
       context.render();
     });
   };
-  node.replaceChildren(form);
+  const cell = el('td');
+  cell.colSpan = 4;
+  cell.append(form);
+  node.replaceChildren(cell);
   form.querySelector('textarea').focus();
 }
 
@@ -37,21 +40,32 @@ function removeEntry(context, entry) {
 export function history(context) {
   const section = el('section', 'timeline-section');
   section.append(el('h2', 'section-title', context.copy.history));
-  const list = el('div', 'timeline');
-  list.setAttribute('role', 'list');
+  const wrapper = el('div', 'care-history-scroll');
+  const list = el('table', 'care-history-table');
   list.setAttribute('aria-label', context.copy.history);
+  const head = el('thead');
+  const headings = el('tr');
+  for (const label of [context.copy.entryDate, context.copy.entryType, context.copy.entryNote, context.copy.actions]) {
+    const cell = el('th', '', label);
+    cell.scope = 'col';
+    headings.append(cell);
+  }
+  head.append(headings);
+  const body = el('tbody');
+  list.append(head, body);
   const entries = [...getPlant(context.route.id).careLog].sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
   if (!entries.length) section.append(el('p', '', context.copy.noHistory));
   for (const entry of entries) {
-    const node = el('article', 'timeline-entry');
+    const node = el('tr', 'care-history-row');
     node.dataset.entryId = entry.id;
-    node.setAttribute('role', 'listitem');
     const date = new Date(entry.date).toLocaleDateString(context.language);
-    node.append(el('strong', '', `${context.copy[entry.type]} · ${date}`), el('p', 'tl-note', entry.note || ''));
-    node.append(button(context.copy.editEntry, () => editEntry(context, entry, node)), button(context.copy.deleteEntry, () => removeEntry(context, entry)));
+    const actions = el('td', 'care-history-actions');
+    actions.append(button(context.copy.editEntry, () => editEntry(context, entry, node), 'btn btn-ghost'), button(context.copy.deleteEntry, () => removeEntry(context, entry), 'btn btn-ghost'));
+    node.append(el('td', '', date), el('td', '', context.copy[entry.type]), el('td', 'tl-note', entry.note || ''), actions);
     if (context.ui.editEntry === entry.id) editEntry(context, entry, node);
-    list.append(node);
+    body.append(node);
   }
-  section.append(list);
+  wrapper.append(list);
+  if (entries.length) section.append(wrapper);
   return section;
 }

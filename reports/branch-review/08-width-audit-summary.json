@@ -1,0 +1,15 @@
+{
+  "routes": 87,
+  "widths": [
+    1600,
+    900,
+    390,
+    320
+  ],
+  "checks": 360,
+  "violations": 0,
+  "rawAuditSha256": "70abdf21c75b59cb1d416dedc073e5feb7003d29af275030e8fac26b182d238c",
+  "rawAuditLocation": "/tmp/daily-branch-review-20261018/reports/full-width-route-audit.json",
+  "evidence": "08-general-tests.txt",
+  "rawAuditRetention": "Raw rerun geometry is temporary; this summary and test log are retained. Tracked original audit is historical evidence."
+}

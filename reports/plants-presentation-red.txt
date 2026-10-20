@@ -1,0 +1,68 @@
+[WebServer] (node:15225) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:15266) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/plants/e2e/presentation.spec.js:14:1 › dashboard and Plants group reminders by care type with urgency retained and navigation only (6.7s)
+(node:15487) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 modules/plants/e2e/presentation.spec.js:35:1 › care history uses a borderless table and retains inline editing on narrow screens (6.4s)
+
+
+  1) modules/plants/e2e/presentation.spec.js:14:1 › dashboard and Plants group reminders by care type with urgency retained and navigation only
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('[data-care-group]')
+    Expected: 3
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" with timeout 5000ms
+      - waiting for locator('[data-care-group]')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      18 |     const before = await page.evaluate(() => localStorage.getItem('daily:v1'));
+      19 |     const groups = page.locator('[data-care-group]');
+    > 20 |     await expect(groups).toHaveCount(3);
+         |                          ^
+      21 |     for (const [index, title] of ['Watering', 'Soil change', 'Fertilizer'].entries()) {
+      22 |       const group = groups.nth(index);
+      23 |       await expect(group.getByRole('heading', { name: title, exact: true })).toBeVisible();
+        at /workspaces/daily/modules/plants/e2e/presentation.spec.js:20:26
+
+    Error Context: test-results/presentation-dashboard-and-e8838-etained-and-navigation-only/error-context.md
+
+  2) modules/plants/e2e/presentation.spec.js:35:1 › care history uses a borderless table and retains inline editing on narrow screens
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('table', { name: 'Care history', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('table', { name: 'Care history', exact: true })
+
+
+      38 |   await page.goto('/daily/#/plants/fern-0');
+      39 |   const table = page.getByRole('table', { name: 'Care history', exact: true });
+    > 40 |   await expect(table).toBeVisible();
+         |                       ^
+      41 |   await expect(table.getByRole('columnheader')).toHaveCount(4);
+      42 |   await expect(table).toContainText('Watered carefully 🌱');
+      43 |   expect(await table.locator('th, td').evaluateAll(cells => cells.every(cell => ['Top', 'Right', 'Bottom', 'Left'].every(side => getComputedStyle(cell)[`border${side}Width`] === '0px')))).toBe(true);
+        at /workspaces/daily/modules/plants/e2e/presentation.spec.js:40:23
+
+    Error Context: test-results/presentation-care-history--91d0f-e-editing-on-narrow-screens/error-context.md
+
+  2 failed
+    modules/plants/e2e/presentation.spec.js:14:1 › dashboard and Plants group reminders by care type with urgency retained and navigation only
+    modules/plants/e2e/presentation.spec.js:35:1 › care history uses a borderless table and retains inline editing on narrow screens

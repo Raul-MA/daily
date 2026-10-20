@@ -1,0 +1,44 @@
+✖ direct Things URL sends every reminder with its care type, original due date and Unicode plant name (1.291588ms)
+✖ direct Things URL follows interface language and never changes reminder records (0.283428ms)
+✖ direct Things URL does not launch an empty import (0.181989ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 0
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 36.532104
+
+✖ failing tests:
+
+test at modules/plants/test/things-direct.test.mjs:8:1
+✖ direct Things URL sends every reminder with its care type, original due date and Unicode plant name (1.291588ms)
+  TypeError: things.buildThingsRemindersURL is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things-direct.test.mjs:10:30)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17)
+
+test at modules/plants/test/things-direct.test.mjs:17:1
+✖ direct Things URL follows interface language and never changes reminder records (0.283428ms)
+  TypeError: things.buildThingsRemindersURL is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things-direct.test.mjs:20:30)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/plants/test/things-direct.test.mjs:25:1
+✖ direct Things URL does not launch an empty import (0.181989ms)
+  TypeError: things.buildThingsRemindersURL is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/plants/test/things-direct.test.mjs:26:23)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)

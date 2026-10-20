@@ -3,15 +3,15 @@
   "piano": {
     "unit": {
       "passed": 78,
-      "report": "piano-player-unit.txt"
+      "report": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-unit.txt"
     },
     "nativeBrowser": {
       "existingPassed": 14,
       "playerPassed": 5,
       "total": 19,
       "reports": [
-        "piano-player-regression.txt",
-        "piano-player-browser.txt"
+        "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-regression.txt",
+        "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-browser.txt"
       ]
     },
     "retainedBrowserScripts": {
@@ -23,27 +23,27 @@
         390
       ],
       "offlineReload": true,
-      "report": "piano-player-regression.txt"
+      "report": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-regression.txt"
     }
   },
   "general": {
     "unitPassed": 85,
     "nativeBrowserPassed": 33,
-    "report": "piano-player-general.txt"
+    "report": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-general.txt"
   },
   "lint": {
     "passed": true,
-    "report": "piano-player-lint.txt"
+    "report": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-lint.txt"
   },
   "syntax": {
     "passed": true,
     "files": 812,
-    "report": "piano-player-syntax.txt"
+    "report": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-syntax.txt"
   },
   "build": {
     "passed": true,
     "assets": 701,
-    "report": "piano-player-build.txt"
+    "report": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-build.txt"
   },
   "userFixture": {
     "path": "modules/piano/test/fixtures/timing-test.json",

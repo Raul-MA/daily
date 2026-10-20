@@ -1,0 +1,43 @@
+[WebServer] (node:33920) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:33933) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/plants/e2e/presentation.spec.js:14:1 › dashboard and Plants group reminders by care type with urgency retained and navigation only (6.7s)
+(node:34180) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 modules/plants/e2e/presentation.spec.js:37:1 › care history uses a borderless table and retains inline editing on narrow screens (1.4s)
+
+
+  1) modules/plants/e2e/presentation.spec.js:14:1 › dashboard and Plants group reminders by care type with urgency retained and navigation only
+
+    Error: expect(locator).not.toContainText(expected) failed
+
+    Locator: locator('[data-care-group]').first().getByRole('link').first()
+    Expected substring: not "Watering"
+    Received string: "Earlier fern · Watering · Overdue 2484d"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "not toContainText" with timeout 5000ms
+      - waiting for locator('[data-care-group]').first().getByRole('link').first()
+        14 × locator resolved to <a class="module-link" href="/daily/#/plants/fern-1">Earlier fern · Watering · Overdue 2484d</a>
+           - unexpected value "Earlier fern · Watering · Overdue 2484d"
+
+
+      26 |       await expect(links.nth(0)).toContainText('Earlier fern');
+      27 |       await expect(links.nth(1)).toContainText('Later fern');
+    > 28 |       await expect(links.nth(0)).not.toContainText(title);
+         |                                      ^
+      29 |       await expect(links.nth(0).locator('.pill-overdue')).toContainText('Overdue');
+      30 |     }
+      31 |     await groups.first().getByRole('link').first().click();
+        at /workspaces/daily/modules/plants/e2e/presentation.spec.js:28:38
+
+    Error Context: test-results/presentation-dashboard-and-e8838-etained-and-navigation-only/error-context.md
+
+  1 failed
+    modules/plants/e2e/presentation.spec.js:14:1 › dashboard and Plants group reminders by care type with urgency retained and navigation only
+  1 passed (10.9s)

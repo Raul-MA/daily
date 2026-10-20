@@ -274,5 +274,245 @@
     "reports/whatsapp-service.txt",
     "reports/whatsapp-update-forms-lint.txt",
     "reports/whatsapp-update-forms.txt"
-  ]
+  ],
+  "followUpCleanup": {
+    "date": "2026-10-20",
+    "archivedCommit": "1ab4f4dff491878f7400c6433f4f74f127b2b94d",
+    "removedCount": 33,
+    "removedBytes": 376299,
+    "rule": "Consolidate superseded passing logs; retain baselines, behavioral failures, source maps, final gates and substantive reviews. Retire reproducible screenshots and stale review setup/resume artifacts. Archive tracked log citations without changing their historical outcomes.",
+    "removedFiles": [
+      {
+        "path": "reports/piano-player-browser.txt",
+        "tracked": true,
+        "bytes": 1150,
+        "sha256": "3fc72fed72d1faa997036d85f01f3f28d9685bdc3736747bcabe588ba6c31c53",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-browser.txt"
+      },
+      {
+        "path": "reports/piano-player-build.txt",
+        "tracked": true,
+        "bytes": 102,
+        "sha256": "67c2482a4caef8e49faabef553e3d15795aca574f1cb918642797867fc2dd3f3",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-build.txt"
+      },
+      {
+        "path": "reports/piano-player-general.txt",
+        "tracked": true,
+        "bytes": 13136,
+        "sha256": "be93c32696e8a1f63932cc8652b20fb84e1a605ab3bd72e8b22ad8f4d10c4336",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-general.txt"
+      },
+      {
+        "path": "reports/piano-player-lint.txt",
+        "tracked": true,
+        "bytes": 53,
+        "sha256": "89c736a9a9189c0ee1e85dbf0be7285890f5a9e7dc8bcdcd2990730c3ad93459",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-lint.txt"
+      },
+      {
+        "path": "reports/piano-player-regression.txt",
+        "tracked": true,
+        "bytes": 19200,
+        "sha256": "0fda5d59d8297f891be088530ea545583739ad6b382ae343915d4860b142adc5",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-regression.txt"
+      },
+      {
+        "path": "reports/piano-player-syntax.txt",
+        "tracked": true,
+        "bytes": 94,
+        "sha256": "218e772b85b740d966289a1e4bc303630fad57b14ce4550aa2eafbfa203ee56c",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-syntax.txt"
+      },
+      {
+        "path": "reports/piano-player-unit.txt",
+        "tracked": true,
+        "bytes": 7652,
+        "sha256": "274db28908ef0d68fb4885be98c26a804579518f74ed8cd6569e92c7a0071515",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/piano-player-unit.txt"
+      },
+      {
+        "path": "reports/plants-bulk-things-general.txt",
+        "tracked": false,
+        "bytes": 14067,
+        "sha256": "3bc2d90bfb6b84ce851455c9b63e1599b3493deff85d6d0673db68dc387b0d85",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/plants-bulk-things-verification.txt",
+        "tracked": false,
+        "bytes": 5993,
+        "sha256": "b059ae0fc1070a3b83d113ae4712f4f378f390c4a650e863e95f27439aec3b9c",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/plants-column-regression.txt",
+        "tracked": true,
+        "bytes": 5052,
+        "sha256": "866de61351c26ab70079073d709d03121616fc59dc658fcb537ff7658b719877",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/plants-column-regression.txt"
+      },
+      {
+        "path": "reports/plants-final-general.txt",
+        "tracked": false,
+        "bytes": 14068,
+        "sha256": "e1e0450d416b470fe313b16eb9343def8ffff0dec8e35a68cea7377d70164048",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/plants-final-static.txt",
+        "tracked": false,
+        "bytes": 249,
+        "sha256": "d010128ff925a816d7335ae8fb0f0069fd23c01550ae5df04d33e523e1cde521",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/plants-final-verification.txt",
+        "tracked": false,
+        "bytes": 5546,
+        "sha256": "121dfeff4d8da7af20cf191ee5ba756abfadd0e37680a4a578d1b6ad6ef149f3",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/plants-individual-things-general.txt",
+        "tracked": false,
+        "bytes": 14067,
+        "sha256": "f7f13320a0ffb1bb325bbb88110b9dbf08bb279b00b483ec7deb9d976a274970",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/plants-individual-things-green.txt",
+        "tracked": false,
+        "bytes": 5976,
+        "sha256": "11ae0bbaf88d5f5c197281799468fb80ac01fa55abfe9648272bd35c46505005",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/plants-individual-things-static.txt",
+        "tracked": false,
+        "bytes": 147,
+        "sha256": "eceda35b70f90ec507c767525e207ab2b0c86c905e2c14589b73432de69ca398",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/plants-presentation-green.txt",
+        "tracked": false,
+        "bytes": 5524,
+        "sha256": "a11b74265266ca8259200f1265d0e322f805393d2e68114efebad2201c065a43",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/plants-reminder-chips-green.txt",
+        "tracked": false,
+        "bytes": 5517,
+        "sha256": "890304b07b9f360d92a4a5d5f0932262c204da91871599044b89380b89e455aa",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/plants-replace-button-green.txt",
+        "tracked": false,
+        "bytes": 5217,
+        "sha256": "eb4024fce05a1078fe479c2b422cf8a2dcb46df6ef95b9c7b99b4b800f1bea02",
+        "replacement": "reports/plants-verification.md"
+      },
+      {
+        "path": "reports/platform-general.txt",
+        "tracked": true,
+        "bytes": 7772,
+        "sha256": "02e981bb86ae0a5a864a04cd98d1dd6bae11840ffa27a92aacf044212f1ae690",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/platform-general.txt"
+      },
+      {
+        "path": "reports/sidebar-build.txt",
+        "tracked": true,
+        "bytes": 102,
+        "sha256": "013a477f488c69da6bafd64107b6e911027c8b30c7929aa74f555b03fbd09aaa",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-build.txt"
+      },
+      {
+        "path": "reports/sidebar-coffee.txt",
+        "tracked": true,
+        "bytes": 6888,
+        "sha256": "355d6cca25f4963e54913280a852b8e1baedb22a2ecd8d1d92bf421db495b726",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-coffee.txt"
+      },
+      {
+        "path": "reports/sidebar-lint.txt",
+        "tracked": true,
+        "bytes": 52,
+        "sha256": "43a99bdd2b82d7303584dcf5b3226ab88b5dc1d1c957087445f823eb0998455c",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-lint.txt"
+      },
+      {
+        "path": "reports/sidebar-platform.txt",
+        "tracked": true,
+        "bytes": 2015,
+        "sha256": "2c9469cc22d376b978e24f4e89192a07e3ceb4151cba23c6752f49f9243584fb",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-platform.txt"
+      },
+      {
+        "path": "reports/sidebar-syntax.txt",
+        "tracked": true,
+        "bytes": 37,
+        "sha256": "eb322986e5e613f16ab62795dbbafe44928f4200744ae629005f46f35f2a8804",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-syntax.txt"
+      },
+      {
+        "path": "reports/sidebar-time-budget.txt",
+        "tracked": true,
+        "bytes": 6267,
+        "sha256": "2a8cb9de2b1d2005b447d62eed80b95cf6dab3d28b363f3e89acc45f4264df3a",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-time-budget.txt"
+      },
+      {
+        "path": "reports/reader-native-phone.png",
+        "tracked": true,
+        "bytes": 34836,
+        "sha256": "94895f4708f1401aef12301318dd63b455f51972d8e4a0a756c8471698d0cc34",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/reader-native-phone.png"
+      },
+      {
+        "path": "reports/reader-source-phone.png",
+        "tracked": true,
+        "bytes": 32809,
+        "sha256": "ee5a5216261a33a0f5f4964d0b13ee25cd72f63b1a061187f944b5c07f86cfc8",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/reader-source-phone.png"
+      },
+      {
+        "path": "reports/whatsapp-native-phone.png",
+        "tracked": true,
+        "bytes": 55496,
+        "sha256": "f0c750111baa836a1881bfaf982907144a93dddb0ac2db85210792eeae458f22",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/whatsapp-native-phone.png"
+      },
+      {
+        "path": "reports/whatsapp-offline-phone.png",
+        "tracked": true,
+        "bytes": 60092,
+        "sha256": "a258d361499b8965d6f937ca43e5476a0fb258afd675be8d0035dd44db4362f7",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/whatsapp-offline-phone.png"
+      },
+      {
+        "path": "reports/whatsapp-source-phone.png",
+        "tracked": true,
+        "bytes": 43419,
+        "sha256": "d2ce2a24d6bf0185a7e6e614de4292d6dd41f204ecae3ed458e0ca4996b78af1",
+        "archive": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/whatsapp-source-phone.png"
+      },
+      {
+        "path": "reports/branch-review/RESUME.md",
+        "tracked": false,
+        "bytes": 1462,
+        "sha256": "5e69710890d5d70721212baf6607f0765415d9f0de23bb80720928290b3304e7",
+        "replacement": "reports/branch-review/verification.md"
+      },
+      {
+        "path": "reports/branch-review/02-coffee-tests-initial-port-conflict.txt",
+        "tracked": false,
+        "bytes": 2242,
+        "sha256": "ec73c3b6e145eaaf894d46ecd25fed78670b2fbd1cd61aa002cd693640517f92",
+        "replacement": "reports/branch-review/verification.md"
+      }
+    ]
+  }
 }

@@ -1,1 +1,0 @@
-JavaScript syntax checked: 818 files

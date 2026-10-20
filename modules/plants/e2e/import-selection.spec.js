@@ -21,11 +21,10 @@ test('selecting a plant backup opens a read-only preview and allows retry after 
   await input.setInputFiles(file);
   await expect(dialog).toContainText('1 plant');
   const replace = dialog.getByRole('button', { name: 'Replace plants', exact: true });
-  await expect(replace).toBeDisabled();
+  await expect(replace).toBeEnabled();
   const download = page.waitForEvent('download');
-  await dialog.getByRole('link', { name: 'Download recovery copy', exact: true }).click();
-  await download;
   await replace.click();
+  expect((await download).suggestedFilename()).toBe('stillgreen-recovery.json');
   await expect(dialog).toHaveCount(0);
   await page.reload();
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('daily:v1')).modules.plants.data.plants)).toEqual([plant]);

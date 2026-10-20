@@ -1,0 +1,30 @@
+[WebServer] (node:49471) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:49490) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/plants/e2e/presentation.spec.js:53:1 › one button opens Things directly with all due reminders on both screens without changing plant data (6.5s)
+
+
+  1) modules/plants/e2e/presentation.spec.js:53:1 › one button opens Things directly with all due reminders on both screens without changing plant data
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Add all reminders to Things 3', exact: true })
+
+
+      64 |       });
+      65 |     });
+    > 66 |     await page.getByRole('button', { name: 'Add all reminders to Things 3', exact: true }).click();
+         |                                                                                            ^
+      67 |     const urls = await page.evaluate(() => window.plantThingsURLs);
+      68 |     expect(urls).toHaveLength(1);
+      69 |     const url = new URL(urls[0]);
+        at /workspaces/daily/modules/plants/e2e/presentation.spec.js:66:92
+
+    Error Context: test-results/presentation-one-button-op-38f6e-without-changing-plant-data/error-context.md
+
+  1 failed
+    modules/plants/e2e/presentation.spec.js:53:1 › one button opens Things directly with all due reminders on both screens without changing plant data

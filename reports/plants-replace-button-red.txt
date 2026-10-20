@@ -1,0 +1,39 @@
+[WebServer] (node:5113) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:5125) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/plants/e2e/import-selection.spec.js:5:1 › selecting a plant backup opens a read-only preview and allows retry after cancel or invalid JSON (9.6s)
+
+
+  1) modules/plants/e2e/import-selection.spec.js:5:1 › selecting a plant backup opens a read-only preview and allows retry after cancel or invalid JSON
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  getByRole('dialog').getByRole('button', { name: 'Replace plants', exact: true })
+    Expected: enabled
+    Received: disabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeEnabled" with timeout 5000ms
+      - waiting for getByRole('dialog').getByRole('button', { name: 'Replace plants', exact: true })
+        14 × locator resolved to <button disabled type="button" class="btn btn-danger">Replace plants</button>
+           - unexpected value "disabled"
+
+
+      22 |   await expect(dialog).toContainText('1 plant');
+      23 |   const replace = dialog.getByRole('button', { name: 'Replace plants', exact: true });
+    > 24 |   await expect(replace).toBeEnabled();
+         |                         ^
+      25 |   const download = page.waitForEvent('download');
+      26 |   await replace.click();
+      27 |   expect((await download).suggestedFilename()).toBe('stillgreen-recovery.json');
+        at /workspaces/daily/modules/plants/e2e/import-selection.spec.js:24:25
+
+    Error Context: test-results/import-selection-selecting-3fde1-fter-cancel-or-invalid-JSON/error-context.md
+
+  1 failed
+    modules/plants/e2e/import-selection.spec.js:5:1 › selecting a plant backup opens a read-only preview and allows retry after cancel or invalid JSON

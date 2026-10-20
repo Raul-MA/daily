@@ -18,6 +18,26 @@ export function statusText(info, copy) {
   return `${info.days}d`;
 }
 
+function reminderRow(context, task, linkClass) {
+  const link = anchor('', href({ page: 'plant', id: task.plant.id }, context.base), linkClass);
+  link.append(el('span', 'task-row-plant', task.plant.name), el('span', `pill pill-${task.info.status} task-pill`, statusText(task.info, context.copy)));
+  return link;
+}
+
+export function careGroups(context, tasks, linkClass = 'task-row') {
+  const list = el('div', 'task-table');
+  for (const type of careTypes) {
+    const entries = tasks.filter(task => task.type === type);
+    if (!entries.length) continue;
+    const group = el('section', 'task-group');
+    group.dataset.careGroup = type;
+    group.append(el('h3', 'task-group-header', context.copy[type]));
+    for (const task of entries) group.append(reminderRow(context, task, linkClass));
+    list.append(group);
+  }
+  return list;
+}
+
 export function plantList(context) {
   const view = el('div', 'plant-list-view');
   const plants = getPlants().sort((a, b) => getUrgencyScore(b) - getUrgencyScore(a));
@@ -27,7 +47,7 @@ export function plantList(context) {
   }
   view.append(el('h2', 'task-section-title', context.copy.due));
   const tasks = pendingCare(plants);
-  for (const task of tasks) view.append(anchor(`${task.plant.name} · ${context.copy[task.type]} · ${statusText(task.info, context.copy)}`, href({ page: 'plant', id: task.plant.id }, context.base), 'task-row'));
+  view.append(careGroups(context, tasks));
   if (!tasks.length) view.append(el('p', 'task-caught-up', context.copy.caughtUp));
   view.append(el('h2', 'dashboard-plants-title', context.copy.all));
   const grid = el('div', 'plant-cards-grid');

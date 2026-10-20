@@ -20,12 +20,28 @@
 [data-module="plants"] .care-guide h3 { margin-top: 16px; }
 [data-module="plants"] .care-guide li { margin-left: 20px; }
 [data-module="plants"] .form-group { display: flex; flex-direction: column; }
-[data-module="plants"] .plant-import-form, [data-module="plants"] .things-settings-card { margin: 24px 0; }
+[data-module="plants"] .plant-import-form { margin: 24px 0; }
 [data-module="plants"] .btn { min-height: 44px; }
-[data-module="plants"] .timeline-entry { padding: 18px; margin: 12px 0; border: 1px solid var(--border); border-radius: 12px; }
+[data-module="plants"] .care-history-scroll { overflow-x: auto; }
+[data-module="plants"] .care-history-table { width: 100%; min-width: 480px; border-collapse: collapse; border: 0; text-align: left; }
+[data-module="plants"] .care-history-table :is(th, td) { border: 0; padding: 8px; vertical-align: top; overflow-wrap: anywhere; }
+[data-module="plants"] .care-history-table th { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
+[data-module="plants"] .care-history-actions .btn { display: block; padding: 4px 8px; }
+[data-module="plants"] .task-table { margin-bottom: 20px; }
 [data-module="plants"] .plant-message { color: var(--primary-dark); padding: 12px 0; }
 [data-module="plants"] input, [data-module="plants"] textarea, [data-module="plants"] select { min-width: 0; max-width: 100%; }
 @media (max-width: 500px) { [data-module="plants"] { padding: 16px; } [data-module="plants"] .form-actions { flex-wrap: wrap; } }
 
 [data-module="plants"] :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .settings-container) { width: 100%; max-width: none; margin-left: 0; margin-right: 0; }
 .plant-widget-summary .module-link { overflow-wrap: anywhere; }
+
+.plant-widget-summary .task-group { margin: 14px 0; }
+.plant-widget-summary .task-group-header { font-size: 13px; font-weight: 600; color: var(--shell-muted, #68686e); margin: 0 0 4px; }
+.plant-widget-summary .module-link { margin: 0; }
+
+.plant-widget-summary .task-row-plant { min-width: 0; overflow-wrap: anywhere; }
+.plant-widget-summary .task-pill { flex-shrink: 0; }
+
+[data-module="plants"] .plant-things-action { min-height: 44px; max-width: 100%; }
+[data-module="plants"] .care-quick-actions { flex-wrap: wrap; }
+[data-module="plants"] .task-row-plant { overflow-wrap: anywhere; }

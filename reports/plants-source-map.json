@@ -80,5 +80,15 @@
     "savedUserTextTranslated": false,
     "unitContracts": 2,
     "browserContracts": 2
+  },
+  "native_acceptance": {
+    "import": "modules/plants/e2e/import-selection.spec.js",
+    "presentation": "modules/plants/e2e/presentation.spec.js",
+    "browser_contracts": 18,
+    "import_recovery": "Replace initiates a recovery download; the separate recovery link avoids a duplicate download.",
+    "reminders": "Dashboard and Plants group watering, soil and fertilizer with urgency ordering; rows contain plant name and shared status pill, without repeated care type.",
+    "history": "Borderless semantic table; inline edit/delete retained; contained horizontal scrolling on narrow screens.",
+    "things": "Plant-detail buttons for each future planned care type open one direct things:///json task with the unchanged planned date; buttons remain enabled after use. No actions on reminder lists, bulk send, shortcut or automatic handoff. Legacy compatibility retained.",
+    "direct_things_unit_contracts": 3
   }
 }

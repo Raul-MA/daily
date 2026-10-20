@@ -1,6 +1,4 @@
 import { getPlant, deletePlant } from '../store/store.js';
-import { getNextDueDate } from '../care/care.js';
-import { getThingsSettings, buildThingsShortcutURL, wateringReminderTitle } from '../integrations/things.js';
 import { plantTemplates } from '../plants/localized.js';
 import { href } from '../../../../packages/platform/src/router.js';
 import { el, button, anchor, confirm } from './elements.js';
@@ -25,14 +23,6 @@ function guide(plant, copy, language) {
   return section;
 }
 
-function thingsLink(context, plant) {
-  const settings = getThingsSettings();
-  const due = getNextDueDate(plant, 'watering');
-  const section = el('div');
-  if (settings.enabled && due) section.append(anchor(context.copy.thingsAdd, buildThingsShortcutURL({ title: wateringReminderTitle(plant.name), date: due, project: settings.project }), 'btn btn-outline'));
-  return section;
-}
-
 export function plantDetail(context) {
   const plant = getPlant(context.route.id);
   if (!plant) {
@@ -52,7 +42,7 @@ export function plantDetail(context) {
   view.append(actions, el('div', 'divider'));
   const cards = el('div', 'care-actions');
   for (const type of careTypes) cards.append(careCard(context, plant, type));
-  view.append(cards, thingsLink(context, plant), el('div', 'divider'));
+  view.append(cards, el('div', 'divider'));
   const careGuide = guide(plant, context.copy, context.language);
   if (careGuide) view.append(careGuide, el('div', 'divider'));
   view.append(observation(context), el('div', 'divider'), history(context));

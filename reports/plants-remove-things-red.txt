@@ -1,0 +1,39 @@
+[WebServer] (node:36630) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:36657) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/plants/e2e/plants.spec.js:129:1 › Plants remove Things controls and handoffs while preserving legacy settings and export compatibility (7.9s)
+
+
+  1) modules/plants/e2e/plants.spec.js:129:1 › Plants remove Things controls and handoffs while preserving legacy settings and export compatibility
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByText('Stillgreen to Things', { exact: true })
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" with timeout 5000ms
+      - waiting for getByText('Stillgreen to Things', { exact: true })
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      136 |   });
+      137 |   await page.reload();
+    > 138 |   await expect(page.getByText('Stillgreen to Things', { exact: true })).toHaveCount(0);
+          |                                                                         ^
+      139 |   await expect(page.getByLabel('Create reminders after watering', { exact: true })).toHaveCount(0);
+      140 |   await expect(page.getByRole('button', { name: 'Save Things settings', exact: true })).toHaveCount(0);
+      141 |   await detail(page);
+        at /workspaces/daily/modules/plants/e2e/plants.spec.js:138:73
+
+    Error Context: test-results/plants-Plants-remove-Thing-3336a-gs-and-export-compatibility/error-context.md
+
+  1 failed
+    modules/plants/e2e/plants.spec.js:129:1 › Plants remove Things controls and handoffs while preserving legacy settings and export compatibility

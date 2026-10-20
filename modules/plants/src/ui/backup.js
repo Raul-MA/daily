@@ -10,14 +10,17 @@ function importDialog(context, preview, form) {
   const recovery = URL.createObjectURL(new Blob([context.service.exportMigration()], { type: 'application/json' }));
   const link = anchor(context.copy.recovery, recovery, 'btn btn-outline');
   link.download = 'stillgreen-recovery.json';
+  let recoveryDownloaded = false;
+  link.onclick = () => { recoveryDownloaded = true; };
   const apply = button(context.copy.replace, () => {
-    if (!save(context, form, () => context.service.applyImport(preview))) return;
+    if (!save({ ...context, host: dialog }, form, () => {
+      if (!recoveryDownloaded) link.click();
+      context.service.applyImport(preview);
+    })) return;
     dialog.close();
     context.render();
     announce(context, context.copy.saved);
   }, 'btn btn-danger');
-  apply.disabled = true;
-  link.onclick = () => { apply.disabled = false; };
   dialog.append(link, button(context.copy.cancel, () => dialog.close()), apply);
   dialog.onclose = () => {
     URL.revokeObjectURL(recovery);

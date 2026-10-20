@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { buildThingsShortcutURL } from '../src/integrations/things.js';
 
 test.use({ serviceWorkers: 'allow' });
 
@@ -116,7 +117,7 @@ test('plant import previews can be canceled and replacement requires a recovery 
   expect(await saved(page)).toEqual(before);
   await preview(page, [{ ...plant, id: 'new-id', name: 'Imported plant' }]);
   const confirm = page.getByRole('dialog').getByRole('button', { name: 'Replace plants', exact: true });
-  await expect(confirm).toBeDisabled();
+  await expect(confirm).toBeEnabled();
   const download = page.waitForEvent('download');
   await page.getByRole('dialog').getByRole('link', { name: 'Download recovery copy', exact: true }).click();
   await download;
@@ -125,14 +126,29 @@ test('plant import previews can be canceled and replacement requires a recovery 
   expect(await page.evaluate(() => localStorage.getItem('plantTracker_plants'))).toBe('legacy storage must stay untouched');
 });
 
-test('Things settings and migration export preserve the exact shortcut integration', async ({ page }) => {
+test('Plants remove Things controls and handoffs while preserving legacy settings and export compatibility', async ({ page }) => {
   await seed(page);
   await settings(page);
-  await page.getByLabel('Create reminders after watering', { exact: true }).check();
-  await page.getByLabel('Things project', { exact: true }).fill('Casa 🏡');
-  await page.getByRole('button', { name: 'Save Things settings', exact: true }).click();
+  await page.evaluate(() => {
+    const root = JSON.parse(localStorage.getItem('daily:v1'));
+    root.modules.plants.data.things = { enabled: true, project: 'Casa 🏡' };
+    localStorage.setItem('daily:v1', JSON.stringify(root));
+  });
+  await page.reload();
+  await expect(page.getByText('Stillgreen to Things', { exact: true })).toHaveCount(0);
+  await expect(page.getByLabel('Create reminders after watering', { exact: true })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Save Things settings', exact: true })).toHaveCount(0);
   await detail(page);
-  const shortcut = await page.getByRole('link', { name: 'Add to Things 3', exact: true }).getAttribute('href');
+  await expect(page.getByRole('link', { name: 'Add to Things 3', exact: true })).toHaveCount(0);
+  const navigations = [];
+  const session = await page.context().newCDPSession(page);
+  await session.send('Page.enable');
+  session.on('Page.frameRequestedNavigation', event => navigations.push(event.url));
+  await page.getByRole('button', { name: 'Record watering', exact: true }).click();
+  await page.getByRole('button', { name: 'Save care', exact: true }).click();
+  expect((await saved(page)).plants[0].careLog[0].type).toBe('watering');
+  expect(navigations.filter(url => url.startsWith('shortcuts:'))).toEqual([]);
+  const shortcut = buildThingsShortcutURL({ title: 'Legacy reminder', date: '2026-10-20', project: 'Casa 🏡' });
   const url = new URL(shortcut);
   expect(url.protocol).toBe('shortcuts:');
   expect(JSON.parse(url.searchParams.get('text')).project).toBe('Casa 🏡');

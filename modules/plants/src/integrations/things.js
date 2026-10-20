@@ -69,3 +69,10 @@ export function openWateringReminderInThings(plantName, date) {
   window.location.href = url;
   return true;
 }
+
+export function buildThingsRemindersURL(reminders, copy) {
+  if (!reminders.length) return null;
+  const items = ['watering', 'soil', 'fertilizer'].flatMap(type => reminders.filter(item => item.type === type))
+    .map(({ plant, type, info }) => ({ type: 'to-do', attributes: { title: `${copy[type]} — ${plant.name}`, when: info.nextDue } }));
+  return `things:///json?data=${encodeURIComponent(JSON.stringify(items))}`;
+}

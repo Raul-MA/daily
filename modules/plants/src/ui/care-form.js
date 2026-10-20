@@ -1,8 +1,6 @@
 import { DataConflictError } from '../../../../packages/data/src/errors.js';
 import { getPlant, addCareLog, addCareLogAndSetNextDue } from '../store/store.js';
 import { generateId, nowUTC, today, dateInputToUTC, addDays } from '../utils/utils.js';
-import { getNextDueDate } from '../care/care.js';
-import { openWateringReminderInThings } from '../integrations/things.js';
 import { el, field, submit, button, save } from './elements.js';
 
 function careEntry(context, form, type, action) {
@@ -29,11 +27,7 @@ function commitCare(context, form, type, action) {
   else addCareLogAndSetNextDue(context.route.id, record.entry, type, record.due);
   context.ui.care = null;
   context.render();
-  if (type === 'watering' && action === 'record') {
-    const updated = getPlant(context.route.id);
-    const next = getNextDueDate(updated, 'watering');
-    if (next) openWateringReminderInThings(updated.name, next);
-  }
+
 }
 
 export function openCareForm(context, type, action = 'record') {

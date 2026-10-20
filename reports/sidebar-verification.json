@@ -13,13 +13,13 @@
     "plants": {
       "unit": 28,
       "browser": 13,
-      "report": "reports/plants-column-regression.txt",
+      "report": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/plants-column-regression.txt",
       "status": "pass"
     },
     "coffee": {
       "unit": 20,
       "browser": 34,
-      "report": "reports/sidebar-coffee.txt",
+      "report": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-coffee.txt",
       "status": "pass"
     },
     "games": {
@@ -31,7 +31,7 @@
     "time-budget": {
       "unit": 23,
       "browser": 23,
-      "report": "reports/sidebar-time-budget.txt",
+      "report": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-time-budget.txt",
       "status": "pass"
     },
     "piano": {
@@ -54,7 +54,7 @@
     }
   },
   "finalSharedLayoutCases": 13,
-  "finalSharedLayoutReport": "reports/sidebar-platform.txt",
+  "finalSharedLayoutReport": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-platform.txt",
   "pianoRetainedScripts": "pass: all lessons, 45 Library routes, phone widths 320/360/390, audio cleanup, offline reload",
   "initialFailures": {
     "report": "reports/sidebar-all.txt",
@@ -63,18 +63,18 @@
   },
   "plantsFollowup": {
     "red": "reports/plants-column-red.txt",
-    "regression": "reports/plants-column-regression.txt",
+    "regression": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/plants-column-regression.txt",
     "widths": [
       1280,
       900,
       320
     ]
   },
-  "lint": "reports/sidebar-lint.txt",
+  "lint": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-lint.txt",
   "syntax": {
     "files": 818,
-    "report": "reports/sidebar-syntax.txt"
+    "report": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-syntax.txt"
   },
-  "build": "reports/sidebar-build.txt",
+  "build": "https://github.com/Raul-MA/daily/blob/1ab4f4dff491878f7400c6433f4f74f127b2b94d/reports/sidebar-build.txt",
   "remoteWork": false
 }

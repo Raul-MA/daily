@@ -306,7 +306,7 @@
 }
 [data-module="plants"] .star-btn:hover, [data-module="plants"] .star-btn.active{ color: var(--due-soon); }
 [data-module="plants"] .star-btn:hover{ transform: scale(1.15); }
-[data-module="plants"] .pill{
+[data-module="plants"] .pill, .plant-widget-summary .pill{
   display: inline-flex;
   align-items: center;
   gap: 3px;
@@ -317,10 +317,10 @@
   white-space: nowrap;
   line-height: 1.4;
 }
-[data-module="plants"] .pill-ok{ background: rgba(122, 158, 106, 0.14); color: #3d6e2a; }
-[data-module="plants"] .pill-due-soon{ background: rgba(201, 168, 76, 0.15);  color: #7a5a00; }
-[data-module="plants"] .pill-overdue{ background: rgba(193, 123, 90, 0.15);  color: #8a3310; }
-[data-module="plants"] .pill-neutral{ background: rgba(0,0,0,0.05);           color: var(--text-muted); }
+[data-module="plants"] .pill-ok, .plant-widget-summary .pill-ok{ background: rgba(122, 158, 106, 0.14); color: #3d6e2a; }
+[data-module="plants"] .pill-due-soon, .plant-widget-summary .pill-due-soon{ background: rgba(201, 168, 76, 0.15);  color: #7a5a00; }
+[data-module="plants"] .pill-overdue, .plant-widget-summary .pill-overdue{ background: rgba(193, 123, 90, 0.15);  color: #8a3310; }
+[data-module="plants"] .pill-neutral, .plant-widget-summary .pill-neutral{ background: rgba(0,0,0,0.05);           color: var(--text-muted); }
 [data-module="plants"] .empty-state{
   display: flex;
   flex-direction: column;

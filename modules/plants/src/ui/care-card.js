@@ -2,6 +2,7 @@ import { getStatus, getEffectiveFertilizerInterval, getEffectiveWateringInterval
 import { el, button } from './elements.js';
 import { openCareForm } from './care-form.js';
 import { statusText } from './list.js';
+import { buildThingsRemindersURL } from '../integrations/things.js';
 
 function intervalLabel(plant, type, copy) {
   if (type === 'watering') return `${copy.every} ${getEffectiveWateringInterval(plant)} ${copy.days}`;
@@ -20,6 +21,12 @@ function quickActions(context, type) {
   return section;
 }
 
+function thingsAction(context, plant, type, info) {
+  const action = button(context.copy.thingsAdd, () => location.assign(buildThingsRemindersURL([{ plant, type, info }], context.copy)), 'btn btn-ghost btn-sm plant-things-action');
+  action.setAttribute('aria-label', `${context.copy.thingsAdd}: ${context.copy[type]} — ${plant.name}`);
+  return action;
+}
+
 export function careCard(context, plant, type) {
   const info = getStatus(plant, type);
   const card = el('section', 'care-action-wrap');
@@ -30,9 +37,12 @@ export function careCard(context, plant, type) {
   const emoji = { watering: '💧', soil: '🌱', fertilizer: '🌿' };
   const label = el('span', 'care-label');
   label.append(el('strong', '', context.copy[type]), el('small', 'care-interval', intervalLabel(plant, type, context.copy)), el('small', '', `${context.copy.last}: ${info.lastDate || context.copy.never}`));
+  if (info.nextDue) label.append(el('small', '', `${context.copy.next}: ${info.nextDue}`));
   const meta = el('span', 'care-action-meta');
   meta.append(el('span', `pill pill-${info.status}`, statusText(info, context.copy)));
   action.append(el('span', 'care-icon', emoji[type]), label, meta);
-  card.append(action, quickActions(context, type));
+  const quick = quickActions(context, type);
+  if (info.days > 0) quick.append(thingsAction(context, plant, type, info));
+  card.append(action, quick);
   return card;
 }

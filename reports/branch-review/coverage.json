@@ -1,0 +1,1640 @@
+{
+  "base": "1e1caae45edd6fe318dff5a997de8b108d0bb2d4",
+  "head": "859fd7b0f1365f90cbef22b0975f612580580e2c",
+  "changedPathCount": 163,
+  "modulePaths": 80,
+  "sharedPaths": 83,
+  "reportArtifactPaths": 54,
+  "files": [
+    {
+      "path": "COMPASS.md",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/diagnostics/style.css",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/app.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/catalog.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/dashboard.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/footer.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/navigation.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/pwa.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/render.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/sidebar-catalog.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/sidebar-controls.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/sidebar-icons.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/sidebar.css",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/sidebar.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "apps/daily/src/shell/style.css",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "docs/deployment.md",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "docs/platform.md",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "docs/progress.md",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "docs/supabase-sharing-push-plan.md",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/coffee/e2e/history-detail.spec.js",
+      "scope": "coffee",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "02-coffee-security-data.md",
+        "02-coffee-architecture-correctness.md",
+        "02-coffee-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/coffee/e2e/offline.spec.js",
+      "scope": "coffee",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "02-coffee-security-data.md",
+        "02-coffee-architecture-correctness.md",
+        "02-coffee-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/coffee/src/frontend/app/import-preview.js",
+      "scope": "coffee",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "02-coffee-security-data.md",
+        "02-coffee-architecture-correctness.md",
+        "02-coffee-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/coffee/src/frontend/app/navigation.js",
+      "scope": "coffee",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "02-coffee-security-data.md",
+        "02-coffee-architecture-correctness.md",
+        "02-coffee-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/coffee/src/frontend/app/settings.js",
+      "scope": "coffee",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "02-coffee-security-data.md",
+        "02-coffee-architecture-correctness.md",
+        "02-coffee-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/coffee/src/style.css",
+      "scope": "coffee",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "02-coffee-security-data.md",
+        "02-coffee-architecture-correctness.md",
+        "02-coffee-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/coffee/src/view.js",
+      "scope": "coffee",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "02-coffee-security-data.md",
+        "02-coffee-architecture-correctness.md",
+        "02-coffee-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/games/e2e/localization.spec.js",
+      "scope": "games",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "03-games-security-data.md",
+        "03-games-architecture-correctness.md",
+        "03-games-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/games/e2e/offline.spec.js",
+      "scope": "games",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "03-games-security-data.md",
+        "03-games-architecture-correctness.md",
+        "03-games-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/games/src/frontend/app/render.js",
+      "scope": "games",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "03-games-security-data.md",
+        "03-games-architecture-correctness.md",
+        "03-games-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/games/src/style.css",
+      "scope": "games",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "03-games-security-data.md",
+        "03-games-architecture-correctness.md",
+        "03-games-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/COMPASS.md",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/docs/behavior.md",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/docs/exercise-player.md",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/docs/exercise-player/example.json",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/docs/exercise-player/exercise.schema.json",
+      "scope": "piano",
+      "method": "generated contract equivalence checks plus generator and reference/instruction review",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/docs/exercise-player/format.md",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/docs/exercise-player/transcription-prompt.md",
+      "scope": "piano",
+      "method": "generated contract equivalence checks plus generator and reference/instruction review",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/docs/exercise-player/types.md",
+      "scope": "piano",
+      "method": "generated contract equivalence checks plus generator and reference/instruction review",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/e2e/player.spec.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/e2e/scenarios/mobile-audio.mjs",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/e2e/scenarios/mobile-intro.mjs",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/css/base.css",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/css/components.css",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/css/layout.css",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/i18n.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/js/app.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/js/components/navigation-data.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/js/components/sidebar.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/js/pages/chord-progressions-exercise.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/js/pages/circle-of-fifths-cards.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/attachments.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/audio.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/controls.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/display.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/forms.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/html.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/library.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/page-actions.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/page-render.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/page.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/schedule.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/schema.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/score-view.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/settings.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/shape-validator.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/style.css",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/timing.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/transport.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/types.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/player/validator.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/style.css",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/translations/player.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/validation.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/src/view.js",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/test/fixtures/timing-test.json",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/test/player-invariants.test.mjs",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/test/player-user-timing.test.mjs",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/piano/test/player.test.mjs",
+      "scope": "piano",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "05-piano-security-data.md",
+        "05-piano-architecture-correctness.md",
+        "05-piano-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/plants/COMPASS.md",
+      "scope": "plants",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "01-plants-security-data.md",
+        "01-plants-architecture-correctness.md",
+        "01-plants-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/plants/docs/behavior.md",
+      "scope": "plants",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "01-plants-security-data.md",
+        "01-plants-architecture-correctness.md",
+        "01-plants-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/plants/e2e/import-selection.spec.js",
+      "scope": "plants",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "01-plants-security-data.md",
+        "01-plants-architecture-correctness.md",
+        "01-plants-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/plants/e2e/plants.spec.js",
+      "scope": "plants",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "01-plants-security-data.md",
+        "01-plants-architecture-correctness.md",
+        "01-plants-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/plants/src/style.css",
+      "scope": "plants",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "01-plants-security-data.md",
+        "01-plants-architecture-correctness.md",
+        "01-plants-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/plants/src/ui/backup.js",
+      "scope": "plants",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "01-plants-security-data.md",
+        "01-plants-architecture-correctness.md",
+        "01-plants-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/plants/src/ui/list.js",
+      "scope": "plants",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "01-plants-security-data.md",
+        "01-plants-architecture-correctness.md",
+        "01-plants-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/plants/src/ui/view.js",
+      "scope": "plants",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "01-plants-security-data.md",
+        "01-plants-architecture-correctness.md",
+        "01-plants-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/reading/src/style.css",
+      "scope": "reading",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "06-reading-security-data.md",
+        "06-reading-architecture-correctness.md",
+        "06-reading-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/COMPASS.md",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/docs/behavior.md",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/e2e/helpers.js",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/e2e/localization.spec.js",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/e2e/recovery.spec.js",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/e2e/shell.spec.js",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/e2e/time-budget.spec.js",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/src/methods/setupKeyboardShortcuts.js",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/src/sections.js",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/src/style.css",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/time-budget/src/view.js",
+      "scope": "time-budget",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "04-time-budget-security-data.md",
+        "04-time-budget-architecture-correctness.md",
+        "04-time-budget-ui-testing.md"
+      ]
+    },
+    {
+      "path": "modules/whatsapp/src/style.css",
+      "scope": "whatsapp",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "07-whatsapp-security-data.md",
+        "07-whatsapp-architecture-correctness.md",
+        "07-whatsapp-ui-testing.md"
+      ]
+    },
+    {
+      "path": "packages/i18n/src/shell.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "packages/platform/src/router.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/dashboard-title-links-general.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/dashboard-title-links-lint.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/dashboard-title-links-offline.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/full-width-all.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/full-width-lint.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/full-width-route-audit.json",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/full-width-routes-red.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/full-width-routes.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/full-width-syntax.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/migration-test-inventory.md",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/page-scroll-coffee.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/page-scroll-games.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/page-scroll-general.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/page-scroll-lint.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/page-scroll-plants.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/page-scroll-red.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/page-scroll-syntax.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/personal-import-compatibility.md",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/piano-player-browser.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/piano-player-build.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/piano-player-general.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/piano-player-lint.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/piano-player-red.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/piano-player-regression.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/piano-player-syntax.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/piano-player-unit.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/piano-player-verification.json",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/piano-source-map.json",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/plants-column-red.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/plants-column-regression.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/plants-import-selection-lint.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/plants-import-selection-red.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/plants-import-selection-syntax.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/plants-import-selection.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/plants-supplied-selection.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-all.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-build.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-coffee.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-focused-lint.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-general.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-lint.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-platform.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-red.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-syntax.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-time-budget.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/sidebar-verification.json",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/time-menu-build.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/time-menu-final-cases.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/time-menu-general.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/time-menu-lint.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/time-menu-module.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/time-menu-red.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/time-menu-syntax.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "reports/time-menu-updates.txt",
+      "scope": "shared",
+      "method": "structural/provenance review and targeted sensitive-data scan",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "scripts/discovery.mjs",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "scripts/piano-player-contract.mjs",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "tests/e2e/page-width.spec.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "tests/e2e/platform.spec.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "tests/e2e/sidebar.spec.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "tests/e2e/width-checks.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "tests/e2e/width-fixture.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    },
+    {
+      "path": "tests/e2e/width-routes.js",
+      "scope": "shared",
+      "method": "changed-hunk review and necessary dependency tracing",
+      "specialtyReports": [
+        "08-shared-security-data.md",
+        "08-shared-architecture-correctness.md",
+        "08-shared-ui-testing.md"
+      ]
+    }
+  ]
+}

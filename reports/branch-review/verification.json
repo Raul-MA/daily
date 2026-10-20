@@ -1,0 +1,105 @@
+{
+  "status": "complete",
+  "reviewDate": "2026-10-19",
+  "base": "1e1caae45edd6fe318dff5a997de8b108d0bb2d4",
+  "head": "859fd7b0f1365f90cbef22b0975f612580580e2c",
+  "sourceSnapshotCheck": {
+    "nonReportChangedPaths": 109,
+    "mismatches": []
+  },
+  "suites": [
+    {
+      "scope": "plants",
+      "unit": 28,
+      "unitFailed": 0,
+      "browser": 14,
+      "exitCode": 0,
+      "evidence": "01-plants-tests.txt"
+    },
+    {
+      "scope": "coffee",
+      "unit": 20,
+      "unitFailed": 0,
+      "browser": 34,
+      "exitCode": 0,
+      "evidence": "02-coffee-tests.txt"
+    },
+    {
+      "scope": "games",
+      "unit": 17,
+      "unitFailed": 0,
+      "browser": 34,
+      "exitCode": 0,
+      "evidence": "03-games-tests.txt"
+    },
+    {
+      "scope": "time-budget",
+      "unit": 23,
+      "unitFailed": 0,
+      "browser": 23,
+      "exitCode": 0,
+      "evidence": "04-time-budget-tests.txt"
+    },
+    {
+      "scope": "piano",
+      "unit": 78,
+      "unitFailed": 0,
+      "browser": 19,
+      "exitCode": 0,
+      "evidence": "05-piano-tests.txt"
+    },
+    {
+      "scope": "reading",
+      "unit": 57,
+      "unitFailed": 0,
+      "browser": 31,
+      "exitCode": 0,
+      "evidence": "06-reading-tests.txt"
+    },
+    {
+      "scope": "whatsapp",
+      "unit": 12,
+      "unitFailed": 0,
+      "browser": 9,
+      "exitCode": 0,
+      "evidence": "07-whatsapp-tests.txt"
+    },
+    {
+      "scope": "general",
+      "unit": 85,
+      "unitFailed": 0,
+      "browser": 37,
+      "exitCode": 0,
+      "evidence": "08-general-tests.txt"
+    }
+  ],
+  "totalUnit": 320,
+  "totalBrowser": 201,
+  "pianoBroadScripts": "both passed (see05-piano-tests.txt)",
+  "checks": {
+    "lint": {
+      "exitCode": 0,
+      "evidence": "08-lint.txt"
+    },
+    "javascriptSyntax": {
+      "exitCode": 0,
+      "files": 824,
+      "evidence": "08-syntax.txt"
+    },
+    "build": {
+      "exitCode": 0,
+      "assets": 708,
+      "evidence": "08-build.txt"
+    }
+  },
+  "findings": {
+    "P2": 9,
+    "P3": 3,
+    "total": 12
+  },
+  "limitations": [
+    "No physical-device, live authenticated API or release validation.",
+    "Existing uncommitted changes excluded.",
+    "Passing suites miss independently reproduced findings."
+  ]
+}

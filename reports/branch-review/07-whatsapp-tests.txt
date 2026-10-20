@@ -1,0 +1,42 @@
+Suite: whatsapp
+Prepared 708 HTML/CSS/JavaScript/assets at /daily/
+Passed: encoding, validation, local time in four zones, DST, manifest, icons, and asset paths.
+Passed: submit clears form/storage, preserves handoff and copy fallback, and keeps invalid drafts.
+✔ legacy WhatsApp export imports expired and incomplete Unicode drafts without rescheduling or changing originals (15.199497ms)
+✔ legacy WhatsApp empty or null saved drafts stay absent and unknown properties are excluded (0.788039ms)
+✔ legacy WhatsApp malformed JSON invalid dates clocks and missing fields fail without clearing original storage (2.97144ms)
+✔ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (4.30135ms)
+✔ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (2.422717ms)
+✔ WhatsApp failed draft saves and clears preserve the previous primary document (7.462875ms)
+✔ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (1.030181ms)
+✔ WhatsApp restore rejects changed stale invalid and future previews before replacing records (3.174999ms)
+✔ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (3.629497ms)
+✔ encoding, validation, local time, DST, manifest, icons and asset paths (79.102517ms)
+✔ worker install, cache ownership, offline shell and external bypass (148.906581ms)
+✔ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (8.622687ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 318.99503
+[WebServer] (node:56906) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:56918) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 modules/whatsapp/e2e/source.spec.js:4:1 › WhatsApp retains its original composer appearance and local reminder controls on phones (2.2s)
+  ✓  2 modules/whatsapp/e2e/whatsapp.spec.js:10:1 › WhatsApp draft autosaves and survives Home reload and language changes without translating user text (2.7s)
+  ✓  3 modules/whatsapp/e2e/whatsapp.spec.js:25:1 › WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback (2.4s)
+  ✓  4 modules/whatsapp/e2e/whatsapp.spec.js:44:1 › WhatsApp expired drafts remain visible and clipboard denial exposes a selectable manual link (2.5s)
+  ✓  5 modules/whatsapp/e2e/whatsapp.spec.js:60:1 › WhatsApp stale edits and storage failures retain the visible draft and prevent a destructive handoff (3.9s)
+  ✓  6 modules/whatsapp/e2e/whatsapp.spec.js:79:1 › WhatsApp import is read-only until recovery confirmation and cancel keeps current records (1.6s)
+  ✓  7 modules/whatsapp/e2e/whatsapp.spec.js:101:1 › WhatsApp composer and saved draft reopen under the shared worker offline at narrow phone widths (5.0s)
+  ✓  8 modules/whatsapp/e2e/whatsapp.spec.js:119:1 › WhatsApp autosaved drafts release the update hold while failed saves remain protected through language changes (1.4s)
+  ✓  9 modules/whatsapp/e2e/whatsapp.spec.js:144:1 › WhatsApp invalid import can be canceled and releases the dirty form without replacing its saved draft (1.5s)
+
+  9 passed (25.9s)
