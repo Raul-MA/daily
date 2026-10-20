@@ -1,0 +1,37 @@
+[WebServer] (node:115956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:115970) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/reading/e2e/review.spec.js:84:1 › review action bar advances locally and completes only on the final Done (7.5s)
+
+
+  1) modules/reading/e2e/review.spec.js:84:1 › review action bar advances locally and completes only on the final Done
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-review-progress]')
+    Expected substring: "1 of 2"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-review-progress]')
+
+
+      87 |   const calls = await open(page, { review: { ...review, highlights } });
+      88 |   const bar = page.locator('.review-actions');
+    > 89 |   await expect(page.locator('[data-review-progress]')).toContainText('1 of 2');
+         |                                                        ^
+      90 |   for (const name of ['Discard', 'Master', 'Frequency']) {
+      91 |     await expect(bar.getByRole('link', { name: `${name} — open in Readwise`, exact: true })).toHaveAttribute('href', review.review_url);
+      92 |   }
+        at /workspaces/daily/modules/reading/e2e/review.spec.js:89:56
+
+    Error Context: test-results/review-review-action-bar-a-ef35d-etes-only-on-the-final-Done/error-context.md
+
+  1 failed
+    modules/reading/e2e/review.spec.js:84:1 › review action bar advances locally and completes only on the final Done

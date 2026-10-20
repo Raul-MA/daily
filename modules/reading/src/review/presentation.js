@@ -10,6 +10,7 @@ export function createReviewPresentation(cards, capabilities = {}) {
     return { kind: 'highlight', text: String(card.text ?? ''), title: String(card.title ?? ''), author: String(card.author ?? '') };
   }
   return {
+    position: () => ({ index, total: cards.length }),
     current, reveal: () => { revealed = true; },
     next: () => { index = Math.min(cards.length, index + 1); revealed = false; },
     previous: () => { index = Math.max(0, index - 1); revealed = false; },

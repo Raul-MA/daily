@@ -1,6 +1,6 @@
 {
   "commit": "b3892b2417b8167d0cd063c31b2b69da781fd4a9",
-  "status": "local acceptance: 54 unit / 30 browser including legacy exporter; combined-backup all-scope checkpoint green with 51/30; live API/device and old-app release deferred",
+  "status": "local acceptance: 57 unit / 32 browser, including final review toolbar; live API/device and old-app release deferred",
   "files": [
     {
       "source": "random-readwise/README.md",
@@ -94,7 +94,8 @@
       "modules/reading/src/review/presentation.js",
       "modules/reading/src/review/service.js",
       "modules/reading/src/review/view.js",
-      "modules/reading/src/review/widget.js"
+      "modules/reading/src/review/widget.js",
+      "modules/reading/src/review/toolbar.js"
     ],
     "sharedIntegration": [
       "apps/daily/src/shell/reading-widgets.js",
@@ -123,5 +124,16 @@
       "reports/reader-final-audit-red.txt"
     ],
     "harnessCorrection": "Initial new test file name collided with an existing file; existing file restored byte-for-byte from HEAD, new contract moved to final-audit.spec.js before browser red."
+  },
+  "reviewLayout": {
+    "contracts": "57 unit / 32 native browser cases; original assertions preserved.",
+    "acceptance": "modules/reading/e2e/review.spec.js: review action bar advances locally and completes only on the final Done",
+    "redEvidence": "reports/reading-review-layout-red.txt",
+    "verification": "reports/reading-review-layout-verification.txt",
+    "behavior": "Fixed four-column Discard/Master/Frequency/Done bar. First three actions open the Readwise review; Done advances locally and completes on the last card with server confirmation. Existing timing links retained under Readwise options.",
+    "overlayRegression": "reports/reading-review-layout-overlay-red.txt",
+    "cache": "daily-pwa-d09ba81ff45a93b6 (716 assets; content-derived version)",
+    "general": "reports/reading-review-layout-general.txt",
+    "finalFocused": "Seven review cases pass after compact navigation and footer clearance refinement."
   }
 }

@@ -1,0 +1,13 @@
+
+> daily-pwa@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> daily-pwa@0.0.0 check:js
+> node scripts/check-js.mjs
+
+JavaScript syntax checked: 838 files
+
+Cache verification: daily-pwa-13ead2039c89e437 -> daily-pwa-d09ba81ff45a93b6
+Build: 716 assets at /daily/, including the new review toolbar.
+Final test-file lint passed.

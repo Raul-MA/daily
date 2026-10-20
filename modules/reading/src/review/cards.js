@@ -17,8 +17,9 @@ export function mountReviewCards(host, cards, options = {}) {
     const card = element('section', 'result-card');
     card.dataset.reviewCard = '';
     if (current.kind === 'qa') question(card, current, focus);
-    else card.append(element('blockquote', '', current.text), element('p', 'result-source', `${current.title} ${current.author}`));
+    else card.append(element('p', 'review-source', `${current.title} · ${current.author}`), element('blockquote', '', current.text));
     host.append(card);
+    if (options.navigation === false) return;
     host.append(button(spanish ? 'Tarjeta anterior' : 'Previous card', () => { presentation.previous(); render(); }), button(spanish ? 'Siguiente tarjeta' : 'Next card', () => { presentation.next(); render(); }));
   }
   function question(card, current, focus) {

@@ -178,3 +178,31 @@
 
 [data-module="reading"][data-reader-page="picker"] { margin-left:calc(-1 * max(20px, env(safe-area-inset-left))); margin-right:calc(-1 * max(20px, env(safe-area-inset-right))); }
 [data-module="reading"] h1:focus { outline:none; }
+
+[data-module="reading"].review-shell { padding-bottom:calc(140px + env(safe-area-inset-bottom)); }
+[data-module="reading"].review-shell h1 { text-align:center; font-size:clamp(1.8rem, 5vw, 3rem); letter-spacing:-0.04em; }
+[data-module="reading"] .review-content { max-width:840px; margin-inline:auto; }
+[data-module="reading"] .review-progress { display:grid; justify-items:center; gap:10px; color:var(--muted); font-size:0.85rem; scroll-margin-top:24px; }
+[data-module="reading"] .review-dots { display:flex; flex-wrap:wrap; justify-content:center; gap:7px; }
+[data-module="reading"] .review-dots span { width:7px; height:7px; border-radius:50%; background:var(--line); }
+[data-module="reading"] .review-dots .current { background:var(--text); }
+[data-module="reading"] .review-cards .result-card { padding:clamp(22px, 5vw, 44px); min-width:0; }
+[data-module="reading"] .review-cards .result-card:hover { transform:none; }
+[data-module="reading"] .review-content blockquote { font-family:Georgia, "Times New Roman", serif; font-size:clamp(1.3rem, 3vw, 1.8rem); overflow-wrap:anywhere; }
+[data-module="reading"] .review-source { margin:0; color:var(--muted); line-height:1.5; overflow-wrap:anywhere; }
+[data-module="reading"] .review-actions { position:static; z-index:20; bottom:0; left:var(--sidebar-offset, 0px); right:0; display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); align-items:center; gap:clamp(4px, 2vw, 20px); margin:0; padding:12px max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); background:var(--background); border-top:1px solid var(--line); box-shadow:0 -8px 28px #18181608; }
+[data-module="reading"] .review-tool { display:grid; justify-items:center; gap:6px; min-height:64px; padding:6px 0; color:var(--muted); text-decoration:none; font-size:0.8rem; }
+[data-module="reading"] .review-tool-icon { display:grid; place-items:center; width:44px; height:36px; font-size:1.8rem; color:var(--text); }
+[data-module="reading"] .review-tool:first-child .review-tool-icon { border:1px solid var(--line); border-radius:20px; background:var(--soft); width:64px; }
+[data-module="reading"] .review-done { width:100%; max-width:160px; justify-self:end; border-radius:28px; padding:0 10px; }
+[data-module="reading"] .review-feedback summary { cursor:pointer; color:var(--muted); padding:12px 0; }
+[data-module="reading"] .review-feedback a { margin:4px; }
+[data-module="reading"] .review-actions :focus-visible { outline:2px solid var(--text); outline-offset:3px; }
+
+[data-module="reading"].review-shell:has(.review-cards [data-review-card]) .review-actions { position:fixed; }
+
+[data-module="reading"] .review-content > [data-review-status] { margin:0 2px; font-size:0.78rem; }
+[data-module="reading"] .review-card-navigation { display:grid; grid-template-columns:46px minmax(0, 1fr) 46px; align-items:center; }
+[data-module="reading"] .review-previous { padding:0; font-size:1.4rem; }
+
+.daily-shell:has(.review-shell .review-cards [data-review-card]) { padding-bottom:calc(110px + env(safe-area-inset-bottom)); }

@@ -3,6 +3,7 @@ import { href } from '../../../../packages/platform/src/router.js';
 import { element } from '../ui/cards.js';
 import { mountReviewCards } from './cards.js';
 import { createReviewPresentation } from './presentation.js';
+import { reviewToolbar, reviewProgress, reviewPrevious } from './toolbar.js';
 
 function link(text, url, marker) {
   const node = element('a', 'secondary-button', text);
@@ -45,15 +46,10 @@ function feedback(context, node, snapshot) {
   }
 }
 function controls(context, snapshot, host) {
-  const form = element('form', 'review-actions');
-  form.id = 'review-actions';
-  form.dataset.unsaved = String(snapshot.status === 'completing');
-  const button = element('button', 'primary-button', context.spanish ? 'Marcar repaso completado' : 'Mark review complete');
-  button.type = 'button';
-  button.disabled = snapshot.status !== 'ready' || !snapshot.value || snapshot.value.completed;
-  button.addEventListener('click', () => context.review.complete().catch(error => report(context, error)));
-  form.append(button);
-  host.append(form);
+  host.append(reviewToolbar(context, snapshot, {
+    change: () => { render(context); context.host.querySelector('[data-review-progress]')?.focus(); },
+    complete: () => context.review.complete().catch(error => report(context, error)),
+  }));
   if (snapshot.value?.completed) {
     const done = element('p', 'status success', context.spanish ? 'Repaso completado en Readwise.' : 'Review completed in Readwise.');
     done.dataset.reviewCompleted = '';
@@ -74,9 +70,15 @@ function render(context) {
   status.dataset.reviewStatus = '';
   status.setAttribute('role', 'status');
   status.setAttribute('aria-live', 'polite');
-  host.append(status, link(context.spanish ? 'Abrir repaso en Readwise' : 'Open Daily Review in Readwise', snapshot.url, 'data-review-direct'));
+  host.append(status);
   if (snapshot.value) showCards(context, snapshot, host);
-  feedback(context, host, snapshot);
+  host.append(link(context.spanish ? 'Abrir repaso en Readwise' : 'Open Daily Review in Readwise', snapshot.url, 'data-review-direct'));
+  if (snapshot.value) {
+    const details = element('details', 'review-feedback');
+    details.append(element('summary', '', context.spanish ? 'Opciones en Readwise' : 'Readwise options'));
+    feedback(context, details, snapshot);
+    host.append(details);
+  }
   controls(context, snapshot, host);
 }
 function showCards(context, snapshot, host) {
@@ -84,12 +86,18 @@ function showCards(context, snapshot, host) {
     context.ui.reviewId = snapshot.value.id;
     context.ui.presentation = createReviewPresentation(snapshot.value.highlights, { qa: false });
   }
+  const navigation = element('div', 'review-card-navigation');
+  navigation.append(reviewPrevious(context, () => {
+    render(context);
+    context.host.querySelector('[data-review-progress]')?.focus();
+  }), reviewProgress(context.ui.presentation, context.spanish));
+  host.append(navigation);
   const cards = element('div', 'review-cards');
   host.append(cards);
-  mountReviewCards(cards, snapshot.value.highlights, { presentation: context.ui.presentation, language: context.spanish ? 'es' : 'en' });
+  mountReviewCards(cards, snapshot.value.highlights, { presentation: context.ui.presentation, language: context.spanish ? 'es' : 'en', navigation: false });
 }
 export function mountReview(options) {
-  const host = element('section', 'reader-shell');
+  const host = element('section', 'reader-shell review-shell');
   host.dataset.module = 'reading';
   const context = { ...options, host, spanish: document.documentElement.lang === 'es', review: options.service.review, content: element('div', 'review-content'), disposed: false };
   const heading = element('h1', '', context.spanish ? 'Último repaso disponible' : 'Latest available review');
