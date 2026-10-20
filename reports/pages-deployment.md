@@ -1,5 +1,15 @@
 # Pages deployment repair
 
+## Actions run 39458247390 diagnosis (2026-10-20)
+
+- Follow-up requested by the user: full local `npm run verify` on unchanged application/test sources exits 0. [Transcript](all-tests-after-actions-failure-full.txt) passes 329 unit / 216 native browser cases, both retained Piano broad scripts, strict lint, 837-file syntax and the 715-asset build. Games passes 17 unit / 34 browser cases, including the original offline/Home-background snapshot. This does not prove the intermittent CI assertion race is fixed; no test or runtime change was made. An initial [sandbox run](all-tests-after-actions-failure.txt) could not bind localhost (`EPERM`); the completed gate used approved local-server permission. No remote run was retried.
+- The user requested inspection of the [failed build job](https://github.com/Raul-MA/daily/actions/runs/39458247390/job/118750638257), a push run on commit `8ff0781f8eb910ea6e6f3b8c378b0e81295bb305`. Read the job metadata and failed-step logs with `gh run view`; no remote state was changed.
+- Installation, strict lint and 837-file syntax passed. All unit suites passed. The sole native browser failure was `modules/games/e2e/offline.spec.js:35`, at the end of “game setup scores history and statistics work after an offline reload”. The Games suite passed 33 of 34 browser cases. General, Plants, Coffee, Time Budget, Piano, Reading and WhatsApp browser scopes passed, including all 18 Plants cases.
+- After clicking Home, the test immediately reads the computed HTML background using `evaluate` and a non-retrying value assertion. Expected dashboard `rgb(242, 242, 247)`; received Games `rgb(248, 247, 243)`. The preceding offline gameplay, saved session, scoring, history and statistics assertions passed.
+- Code inspection is consistent with a navigation/theme timing race: hash navigation renders the destination and the shell theme synchronizes through a MutationObserver, while this test takes one immediate style snapshot. This is the likely cause; no local reproduction or timing trace was run during this inspection. General's equivalent theme checks already use retrying `toHaveCSS` assertions.
+- Recommended next step: retain the exact color assertion using `await expect(page.locator('html')).toHaveCSS('background-color', 'rgb(242, 242, 247)')` after asserting the Home heading is visible; reproduce/check Games and General, then run the full release gate. No application/test/workflow fix was made as part of this diagnosis.
+- `npm run test:all` retained the earlier Games failure while continuing the other scopes, so `npm run verify` exited 1. Final build, Pages configuration, artifact upload and deploy did not proceed. The run does not show a Pages permission/configuration failure; those steps were skipped.
+
 ## Diagnosis and acceptance
 
 On 2026-10-19, the public `/daily/` returned HTTP 200 with Jekyll-generated README HTML, not the app shell. Pages API reported `build_type: legacy`, source `main:/`, after merge `dcbec77`. The application entry point is generated in untracked `dist/` by `npm run build`; the repository root is not deployable app output.

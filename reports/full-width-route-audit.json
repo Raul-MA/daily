@@ -708,7 +708,7 @@
     {
       "width": 1600,
       "page": "coffeeEntryEdit",
-      "url": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25/edit",
+      "url": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf/edit",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -761,13 +761,13 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25/edit",
+      "route": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf/edit",
       "violations": []
     },
     {
       "width": 1600,
       "page": "coffeeEntry",
-      "url": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25",
+      "url": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -820,7 +820,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25",
+      "route": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf",
       "violations": []
     },
     {
@@ -944,7 +944,7 @@
     {
       "width": 1600,
       "page": "gameSession",
-      "url": "/daily/#/games/session/session-mvgsckeq-x0j1zq",
+      "url": "/daily/#/games/session/session-mvgx4jv0-sgnisf",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -997,7 +997,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/session/session-mvgsckeq-x0j1zq",
+      "route": "/daily/#/games/session/session-mvgx4jv0-sgnisf",
       "violations": []
     },
     {
@@ -1180,7 +1180,7 @@
     {
       "width": 1600,
       "page": "gameDetail",
-      "url": "/daily/#/games/history/session-mvgsckec-hj7wab",
+      "url": "/daily/#/games/history/session-mvgx4juq-7qxlp0",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -1233,7 +1233,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/history/session-mvgsckec-hj7wab",
+      "route": "/daily/#/games/history/session-mvgx4juq-7qxlp0",
       "violations": []
     },
     {
@@ -6596,7 +6596,7 @@
     {
       "width": 900,
       "page": "coffeeEntryEdit",
-      "url": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25/edit",
+      "url": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf/edit",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -6649,13 +6649,13 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25/edit",
+      "route": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf/edit",
       "violations": []
     },
     {
       "width": 900,
       "page": "coffeeEntry",
-      "url": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25",
+      "url": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -6708,7 +6708,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25",
+      "route": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf",
       "violations": []
     },
     {
@@ -6832,7 +6832,7 @@
     {
       "width": 900,
       "page": "gameSession",
-      "url": "/daily/#/games/session/session-mvgsckeq-x0j1zq",
+      "url": "/daily/#/games/session/session-mvgx4jv0-sgnisf",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -6885,7 +6885,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/session/session-mvgsckeq-x0j1zq",
+      "route": "/daily/#/games/session/session-mvgx4jv0-sgnisf",
       "violations": []
     },
     {
@@ -7068,7 +7068,7 @@
     {
       "width": 900,
       "page": "gameDetail",
-      "url": "/daily/#/games/history/session-mvgsckec-hj7wab",
+      "url": "/daily/#/games/history/session-mvgx4juq-7qxlp0",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -7121,7 +7121,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/history/session-mvgsckec-hj7wab",
+      "route": "/daily/#/games/history/session-mvgx4juq-7qxlp0",
       "violations": []
     },
     {
@@ -12484,7 +12484,7 @@
     {
       "width": 390,
       "page": "coffeeEntryEdit",
-      "url": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25/edit",
+      "url": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf/edit",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -12537,13 +12537,13 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25/edit",
+      "route": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf/edit",
       "violations": []
     },
     {
       "width": 390,
       "page": "coffeeEntry",
-      "url": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25",
+      "url": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -12596,7 +12596,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25",
+      "route": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf",
       "violations": []
     },
     {
@@ -12720,7 +12720,7 @@
     {
       "width": 390,
       "page": "gameSession",
-      "url": "/daily/#/games/session/session-mvgsckeq-x0j1zq",
+      "url": "/daily/#/games/session/session-mvgx4jv0-sgnisf",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -12773,7 +12773,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/session/session-mvgsckeq-x0j1zq",
+      "route": "/daily/#/games/session/session-mvgx4jv0-sgnisf",
       "violations": []
     },
     {
@@ -12956,7 +12956,7 @@
     {
       "width": 390,
       "page": "gameDetail",
-      "url": "/daily/#/games/history/session-mvgsckec-hj7wab",
+      "url": "/daily/#/games/history/session-mvgx4juq-7qxlp0",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -13009,7 +13009,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/history/session-mvgsckec-hj7wab",
+      "route": "/daily/#/games/history/session-mvgx4juq-7qxlp0",
       "violations": []
     },
     {
@@ -18372,7 +18372,7 @@
     {
       "width": 320,
       "page": "coffeeEntryEdit",
-      "url": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25/edit",
+      "url": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf/edit",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -18425,13 +18425,13 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25/edit",
+      "route": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf/edit",
       "violations": []
     },
     {
       "width": 320,
       "page": "coffeeEntry",
-      "url": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25",
+      "url": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -18484,7 +18484,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/ec9348d0-7090-4b80-9a2c-37537b184c25",
+      "route": "/daily/#/coffee/entry/8b994098-5435-41e6-8db3-debdb7d6b4bf",
       "violations": []
     },
     {
@@ -18608,7 +18608,7 @@
     {
       "width": 320,
       "page": "gameSession",
-      "url": "/daily/#/games/session/session-mvgsckeq-x0j1zq",
+      "url": "/daily/#/games/session/session-mvgx4jv0-sgnisf",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -18661,7 +18661,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/session/session-mvgsckeq-x0j1zq",
+      "route": "/daily/#/games/session/session-mvgx4jv0-sgnisf",
       "violations": []
     },
     {
@@ -18844,7 +18844,7 @@
     {
       "width": 320,
       "page": "gameDetail",
-      "url": "/daily/#/games/history/session-mvgsckec-hj7wab",
+      "url": "/daily/#/games/history/session-mvgx4juq-7qxlp0",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -18897,7 +18897,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/history/session-mvgsckec-hj7wab",
+      "route": "/daily/#/games/history/session-mvgx4juq-7qxlp0",
       "violations": []
     },
     {
