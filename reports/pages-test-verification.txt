@@ -1,0 +1,207 @@
+
+> daily-pwa@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> daily-pwa@0.0.0 check:js
+> node scripts/check-js.mjs
+
+JavaScript syntax checked: 829 files
+
+> daily-pwa@0.0.0 test:general
+> node scripts/test.mjs general
+
+Suite: general
+✔ time is derived from timestamps without tick writes or automatic completion (4.449563ms)
+✔ reload and process reconstruction preserve elapsed time and Unicode references (0.550639ms)
+✔ explicit pause excludes background time and resume continues the same activity (1.015346ms)
+✔ countdowns are independent and singleton budgets games and piano resume existing activities (1.187297ms)
+✔ widget removal language changes and navigation do not pause or reset activities (0.524599ms)
+✔ completion is explicit and terminal while a new budget may start afterwards (0.902726ms)
+✔ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (0.420826ms)
+✔ invalid starts duplicate identifiers and unknown transitions never mutate activities (0.63682ms)
+✔ failed activity changes keep the previous status and publish no success (0.644573ms)
+✔ combined backup exports every module layout language and original running timestamps without credentials or caches (52.115967ms)
+✔ combined preview validates every module and shows counts without changing records (35.567378ms)
+✔ combined restore rejects unknown identities future schemas unknown modules and future module versions (13.210414ms)
+✔ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (10.914706ms)
+✔ combined restore rejects orphan missing and inconsistent active activity mirrors (9.748548ms)
+✔ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (11.880653ms)
+✔ combined failed primary or recovery writes retain records and do not reset credentials (9.63727ms)
+✔ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (11.143513ms)
+✔ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (11.824184ms)
+✔ calendar refreshes at local midnight without repeated changes on the same day (1.34421ms)
+✔ foreground resumes recalculate date after suspension and cleanup removes callbacks (0.445853ms)
+✔ calendar deadlines follow daylight-saving local days rather than a fixed 24 hours (34.445384ms)
+✔ missing modules fail when exercised rather than preventing test discovery (0.442597ms)
+✔ new browser tests target the Pages path and module hash (0.308346ms)
+✔ legacy budget patch packages a working export link without modifying originals and refuses changed source HTML (129.724458ms)
+✔ legacy plants patch packages a working export link without modifying originals and refuses changed source HTML (94.10028ms)
+✔ legacy Reader patch packages a working export link without modifying originals and refuses changed source HTML (143.157087ms)
+✔ legacy WhatsApp patch packages a working export link without modifying originals and refuses changed source HTML (96.519019ms)
+✔ plants worker removes only its old caches (5.475126ms)
+✔ coffee worker removes only its old caches (1.31177ms)
+✔ games worker removes only its old caches (1.331677ms)
+✔ Time Budget worker removes only its old caches (1.235538ms)
+✔ piano worker removes only its old caches (1.21989ms)
+✔ module defaults never write and saved payloads preserve unrelated preferences and records (0.533196ms)
+✔ module reads validate domain shapes and reject future versions without overwriting (0.436365ms)
+✔ module saves re-read current state and publish only committed updates (0.434422ms)
+✔ failed module commits retain previous readable data without success notifications (0.285673ms)
+✔ activity schemas reject unrenderable finite clocks and durations before creating the root (0.320628ms)
+✔ durable storage is requested where available and refusal or failure never claims retention (0.597536ms)
+✔ fresh dashboard defaults put plants and activities first without writing data (0.501417ms)
+✔ language and dashboard order persist across a new state instance (0.344183ms)
+✔ removing a widget preserves module records and their active sessions (0.394707ms)
+✔ invalid language, duplicate widgets and unknown actions never overwrite settings (0.528387ms)
+✔ failed saves publish no committed change and retain the previous preferences (0.383326ms)
+✔ committed preference changes notify subscribers and support cleanup (0.266558ms)
+✔ diagnostic rejects empty credentials without making requests (0.903858ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (30.396672ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (1.566505ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.501427ms)
+✔ hung requests time out and remaining endpoint checks still execute (18.215952ms)
+✔ local diagnostics do not claim Pages-origin verification (0.602566ms)
+✔ hash routes cover all seven modules and their canonical deep links (2.786855ms)
+✔ href builder encodes stable IDs and supports configurable local base paths (0.324085ms)
+✔ query parameters and repeated values survive routing without changing settings (0.224499ms)
+✔ unknown and malformed routes fail safely instead of executing external URLs (0.509381ms)
+✔ browser hash listener supports navigation and removes itself on cleanup (0.429192ms)
+✔ static preparation preserves native modules byte-for-byte and resolves every relative import (1443.68672ms)
+✔ static preparation uses the configured base for HTML manifest and worker without shipping tests (641.843028ms)
+✔ invalid static bases fail before replacing any previously prepared files (183.862955ms)
+✔ shared install assets provide PNG sizes maskable identity and a subpath-safe Apple touch icon (595.438266ms)
+✔ attention-screen raw recovery preserves only the three owned root snapshots without scanning storage (2.370958ms)
+✔ attention-screen restore validates full backups and replaces only the primary after a successful write (9.937631ms)
+✔ attention-screen restore rejects stale or tampered previews and future stored root versions (9.91598ms)
+✔ attention-screen recovery propagates blocked reads and reports cleanup failure only after replacement (9.379481ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (0.571738ms)
+✔ replacement keeps the previous validated document as recovery (0.211715ms)
+✔ invalid and future documents are rejected without any storage mutation (0.355974ms)
+✔ primary quota failure retains the readable document and reports failure (0.328754ms)
+✔ recovery quota failure prevents a primary replacement (0.34294ms)
+✔ corrupt primary data is preserved and recovery is explicit (0.376623ms)
+✔ unrecoverable corruption never produces an empty collection (0.258433ms)
+✔ missing primary data can recover from an existing valid recovery document (0.170228ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (3.537517ms)
+✔ lossy serialization is validated before touching existing records (0.24617ms)
+✔ a future primary schema is rejected without recovery or mutation (0.365032ms)
+✔ failure to preserve corrupt data reports failure without replacing it (0.215122ms)
+✔ update activation is held for any unfinished activity or unsaved form (0.457755ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (2.358936ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (2.857296ms)
+✔ offline navigation and built assets use only this app cache (2.225026ms)
+✔ updates wait until explicitly requested and reject unrelated messages (2.154283ms)
+✔ online navigation stays on the cached version until an update is accepted (1.473943ms)
+✔ any blocked tab prevents update activation (2.296077ms)
+✔ unresponsive tabs and malformed state replies keep updates waiting (25.125758ms)
+✔ every same-app tab must explicitly report safe before an update activates (1.231109ms)
+✔ updates from unknown clients are ignored (1.127316ms)
+ℹ tests 85
+ℹ suites 0
+ℹ pass 85
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3795.624774
+[WebServer] (node:10482) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 40 tests using 1 worker
+
+(node:10495) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes (5.0s)
+  ✓   2 tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state (1.4s)
+  ✓   3 tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard (1.3s)
+  ✓   4 tests/e2e/backup.spec.js:32:1 › full backup downloads all saved modules and layout without credentials or unsaved settings (1.9s)
+  ✓   5 tests/e2e/backup.spec.js:46:1 › full backup restores every app into a separate browser profile with original overdue clocks and token reentry (3.2s)
+  ✓   6 tests/e2e/backup.spec.js:69:1 › full import invalid cancel stale and quota paths preserve current records and retained credentials (2.1s)
+  ✓   7 tests/e2e/backup.spec.js:99:1 › full import reports restored records honestly when credential cleanup fails after the root commit (1.7s)
+  ✓   8 tests/e2e/backup.spec.js:113:1 › full restore discards setup drafts retained by another app before importing (2.1s)
+  ✓   9 tests/e2e/calendar.spec.js:5:1 › dashboard care reminders refresh at midnight without changing records (1.2s)
+  ✓  10 tests/e2e/diagnostics.spec.js:5:1 › connection checks require submission and preserve unrelated storage (303ms)
+  ✓  11 tests/e2e/diagnostics.spec.js:28:1 › a missing review and a Reader network failure do not hide other outcomes (285ms)
+  ✓  12 tests/e2e/diagnostics.spec.js:43:1 › diagnostic controls and outcomes support Spanish (262ms)
+  ✓  13 tests/e2e/legacy-budget.spec.js:35:1 › legacy Time Budget exporter previews and downloads original active timing without changing source storage (289ms)
+  ✓  14 tests/e2e/legacy-plants.spec.js:37:1 › legacy plant exporter preserves plant records and Things preferences through phone preview and Daily import (302ms)
+  ✓  15 tests/e2e/legacy-reader.spec.js:36:1 › legacy Reader export previews optional remembered metadata and imports preferences without credentials or cached bodies (324ms)
+  ✓  16 tests/e2e/legacy-whatsapp.spec.js:34:1 › legacy WhatsApp export preserves expired reminder fields and safe literal message text without handoff or storage changes (319ms)
+  ✓  17 tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base (4.5s)
+  ✓  18 tests/e2e/offline.spec.js:46:1 › home settings and connection checks reopen offline without losing saved settings (4.8s)
+  ✓  19 tests/e2e/offline.spec.js:61:1 › offline cache contains generated assets and excludes API responses and credentials (3.1s)
+  ✓  20 tests/e2e/page-width.spec.js:17:1 › every registered screen and Piano destination fills its available container (28.3s)
+  ✓  21 tests/e2e/platform.spec.js:38:1 › dashboard keeps the accepted three, two and one column layouts (1.4s)
+  ✓  22 tests/e2e/platform.spec.js:51:1 › all modules stay reachable and dashboard navigation creates no records (2.4s)
+  ✓  23 tests/e2e/platform.spec.js:77:1 › app backgrounds fill the viewport when switching apps (4.4s)
+  ✓  24 tests/e2e/platform.spec.js:111:1 › shared header and footer follow app theme changes and system dark mode (1.6s)
+  ✓  25 tests/e2e/platform.spec.js:130:1 › shared language setting persists and leaves module user text unchanged (2.2s)
+  ✓  26 tests/e2e/platform.spec.js:146:1 › widget visibility and order persist without removing apps or module state (2.6s)
+  ✓  27 tests/e2e/platform.spec.js:160:1 › quick-action visibility persists while its app remains in the menu (2.5s)
+  ✓  28 tests/e2e/platform.spec.js:172:1 › stable deep links reload and unknown routes provide an accessible way home (2.3s)
+  ✓  29 tests/e2e/platform.spec.js:184:1 › failed preference saves report failure and retain the previous language (1.2s)
+  ✓  30 tests/e2e/platform.spec.js:200:1 › unrecoverable storage is retained and never shown as an empty dashboard (1.0s)
+  ✓  31 tests/e2e/review-fixes.spec.js:3:1 › the focused desktop skip link is above the fixed sidebar and activates main content (1.1s)
+  ✓  32 tests/e2e/review-fixes.spec.js:12:1 › storage recovery releases an open phone drawer so all recovery controls can scroll into view (1.2s)
+  ✓  33 tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks (1.2s)
+  ✓  34 tests/e2e/sidebar.spec.js:3:1 › shared sidebar separates app sections from app switching and keeps app colors (2.6s)
+  ✓  35 tests/e2e/sidebar.spec.js:62:1 › desktop sidebar collapses without remounting the app or losing a draft (1.2s)
+  ✓  36 tests/e2e/sidebar.spec.js:74:1 › phone drawer traps focus closes with escape and navigates without overflow (1.5s)
+  ✓  37 tests/e2e/storage-recovery.spec.js:31:1 › unreadable storage can be preserved and restored through a validated recovery-first preview at 320px (1.7s)
+  ✓  38 tests/e2e/storage-recovery.spec.js:54:1 › future stored root versions remain exportable and are never downgraded by the recovery screen (1.5s)
+  ✓  39 tests/e2e/storage-recovery.spec.js:67:1 › recovery quota and stale-preview failures preserve unreadable records and allow cancellation (1.6s)
+  ✓  40 tests/e2e/updates.spec.js:23:1 › updates wait for unsaved work in another tab and then preserve settings across activation (10.2s)
+
+  40 passed (2.0m)
+
+> daily-pwa@0.0.0 test:whatsapp
+> node scripts/test.mjs whatsapp
+
+Suite: whatsapp
+Prepared 709 HTML/CSS/JavaScript/assets at /daily/
+Passed: encoding, validation, local time in four zones, DST, manifest, icons, and asset paths.
+Passed: submit clears form/storage, preserves handoff and copy fallback, and keeps invalid drafts.
+✔ legacy WhatsApp export imports expired and incomplete Unicode drafts without rescheduling or changing originals (5.598326ms)
+✔ legacy WhatsApp empty or null saved drafts stay absent and unknown properties are excluded (0.440883ms)
+✔ legacy WhatsApp malformed JSON invalid dates clocks and missing fields fail without clearing original storage (0.943954ms)
+✔ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (1.037347ms)
+✔ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (1.051213ms)
+✔ WhatsApp failed draft saves and clears preserve the previous primary document (0.965694ms)
+✔ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (0.438629ms)
+✔ WhatsApp restore rejects changed stale invalid and future previews before replacing records (0.938362ms)
+✔ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (3.416822ms)
+✔ encoding, validation, local time, DST, manifest, icons and asset paths (26.962949ms)
+✔ worker install, cache ownership, offline shell and external bypass (90.047124ms)
+✔ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (9.506486ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 179.276637
+[WebServer] (node:13757) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:13797) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 modules/whatsapp/e2e/source.spec.js:4:1 › WhatsApp retains its original composer appearance and local reminder controls on phones (1.6s)
+  ✓  2 modules/whatsapp/e2e/whatsapp.spec.js:10:1 › WhatsApp draft autosaves and survives Home reload and language changes without translating user text (2.5s)
+  ✓  3 modules/whatsapp/e2e/whatsapp.spec.js:25:1 › WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback (1.4s)
+  ✓  4 modules/whatsapp/e2e/whatsapp.spec.js:53:1 › WhatsApp expired drafts remain visible and clipboard denial exposes a selectable manual link (2.5s)
+  ✓  5 modules/whatsapp/e2e/whatsapp.spec.js:69:1 › WhatsApp stale edits and storage failures retain the visible draft and prevent a destructive handoff (3.9s)
+  ✓  6 modules/whatsapp/e2e/whatsapp.spec.js:88:1 › WhatsApp import is read-only until recovery confirmation and cancel keeps current records (1.9s)
+  ✓  7 modules/whatsapp/e2e/whatsapp.spec.js:110:1 › WhatsApp composer and saved draft reopen under the shared worker offline at narrow phone widths (6.3s)
+  ✓  8 modules/whatsapp/e2e/whatsapp.spec.js:128:1 › WhatsApp autosaved drafts release the update hold while failed saves remain protected through language changes (2.2s)
+  ✓  9 modules/whatsapp/e2e/whatsapp.spec.js:153:1 › WhatsApp invalid import can be canceled and releases the dirty form without replacing its saved draft (2.5s)
+
+  9 passed (28.4s)
+
+> daily-pwa@0.0.0 build
+> node scripts/build.mjs
+
+Prepared 709 HTML/CSS/JavaScript/assets at /daily/

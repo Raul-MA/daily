@@ -1,0 +1,39 @@
+[WebServer] (node:4696) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:4715) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/whatsapp/e2e/whatsapp.spec.js:25:1 › WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback (10.6s)
+
+
+  1) modules/whatsapp/e2e/whatsapp.spec.js:25:1 › WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('#status')
+    Expected: "Things link copied."
+    Received: "Opening Things… If it doesn’t open, use Copy link."
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" with timeout 5000ms
+      - waiting for locator('#status')
+        14 × locator resolved to <p id="status" role="status" class="hint status">Opening Things… If it doesn’t open, use Copy link.</p>
+           - unexpected value "Opening Things… If it doesn’t open, use Copy link."
+
+
+      34 |   await expect(page.locator('#copy')).toBeEnabled();
+      35 |   await page.locator('#copy').click();
+    > 36 |   await expect(page.locator('#status')).toHaveText('Things link copied.');
+         |                                         ^
+      37 |   const text = await page.evaluate(() => navigator.clipboard.readText());
+      38 |   const url = new URL(text);
+      39 |   expect(url.searchParams.get('title')).toBe(`WhatsApp ${saved.recipient}`);
+        at /workspaces/daily/modules/whatsapp/e2e/whatsapp.spec.js:36:41
+
+    Error Context: test-results/whatsapp-WhatsApp-Things-h-f716a-ves-the-exact-copy-fallback/error-context.md
+
+  1 failed
+    modules/whatsapp/e2e/whatsapp.spec.js:25:1 › WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback 

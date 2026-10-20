@@ -32,6 +32,8 @@ The submitted Things URL remains in page-session memory for Copy link after clea
 
 Native unit/controller and browser contracts cover shared state, phone appearance, language remounts, Things/copy/manual fallback, expired drafts, stale/quota failures, recovery import, offline reopening and dirty-form update protection. Current verification is in [progress](../../../docs/progress.md), with source assertion mapping in the [migration inventory](../../../reports/migration-test-inventory.md). Original assertions and early missing-module reports remain retained.
 
+The browser handoff test intercepts and cancels only `things:` navigation through Chromium's Navigation API, capturing the URL and stored draft at that boundary. Attempting the actual external protocol in headless Chromium blocks subsequent input. The test asserts that the draft is already cleared at handoff, uses the real Copy link click and clipboard, waits for successful-copy status, and compares the clipboard with the captured URL before retaining every original nested URL assertion. Real iPhone handoff acceptance remains separate.
+
 
 ## Prepared original-app exporter
 

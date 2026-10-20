@@ -24,6 +24,11 @@ test('WhatsApp draft autosaves and survives Home reload and language changes wit
 
 test('WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback', async ({ page }) => {
   await page.context().grantPermissions(['clipboard-read', 'clipboard-write']);
+  await page.addInitScript(() => window.navigation.addEventListener('navigate', event => {
+    if (!event.destination.url.startsWith('things:')) return;
+    event.preventDefault();
+    window.fixtureThingsHandoff = { url: event.destination.url, draft: JSON.parse(localStorage.getItem('daily:v1')).modules.whatsapp.data.draft };
+  }));
   await open(page);
   await compose(page);
   const saved = (await root(page)).modules.whatsapp.data.draft;
@@ -31,9 +36,13 @@ test('WhatsApp Things handoff clears the saved draft before navigation and prese
   await expect(page.locator('#recipient')).toHaveValue('');
   await expect(page.locator('#message')).toHaveValue('');
   expect((await root(page)).modules.whatsapp.data.draft).toBeNull();
+  const handoff = await page.evaluate(() => window.fixtureThingsHandoff);
+  expect(handoff.draft).toBeNull();
   await expect(page.locator('#copy')).toBeEnabled();
   await page.locator('#copy').click();
+  await expect(page.locator('#status')).toHaveText('Things link copied.');
   const text = await page.evaluate(() => navigator.clipboard.readText());
+  expect(text).toBe(handoff.url);
   const url = new URL(text);
   expect(url.searchParams.get('title')).toBe(`WhatsApp ${saved.recipient}`);
   expect(url.searchParams.get('when')).toBe(`${saved.date}@${saved.time}`);
