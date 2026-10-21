@@ -1,3 +1,4 @@
+import { mountPianoSettings } from './settings-view.js';
 import { localizeAttributes } from './attributes.js';
 import { copy } from './i18n.js';
 import { rememberUI, restoreUI } from './ui-drafts.js';
@@ -14,6 +15,7 @@ function frame() {
   return host;
 }
 export function mountPiano(options) {
+  if (options.route.page === 'pianoSettings') return mountPianoSettings(options);
   Object.assign(pianoContext, { service: options.service, base: options.base, language: options.service.language(), ui: options.ui });
   const host = frame();
   host.lang = pianoContext.language;

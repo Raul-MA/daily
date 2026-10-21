@@ -1,3 +1,4 @@
+import { allocateSessionSeconds } from '../practice-allocation.js';
 import { copy } from '../../../i18n.js';
 import { createDailyState } from '../../../../../../packages/data/src/daily-state.js';
 import { connectPiano } from '../../../service.js';
@@ -66,7 +67,11 @@ export function preparePersistence(context) {
   const mounted = context.container.closest('[data-module="piano"]');
   context.service = mounted && pianoContext.service ? pianoContext.service : ephemeralService();
   context.expected = documentKey(context);
-  context.persisted = context.service.read().practice;
+  const data = context.service.read();
+  context.persisted = data.practice;
+  context.minutes = data.settings.minutes;
+  context.piano = data.settings.piano;
+  context.budgets = allocateSessionSeconds(data.settings.minutes);
   context.commitPractice = (action, input) => commitPractice(context, action, input);
   if (offerExisting(context, context.persisted)) return false;
   if (context.persisted) {

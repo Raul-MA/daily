@@ -37,3 +37,7 @@ Four source parent-key descriptions are corrected from “above” to “below�
 `prompt-validation.js` validates each persisted keyboard tone using the original note/voicing calculations before display. Null/unknown notes, malformed offsets and pitches outside MIDI 0–127 reject, without regenerating or replacing saved questions. Timestamps and elapsed counters remain finite, nonnegative and within the JavaScript Date range. The nested restore contract fails before implementation (`piano-nested-validation-red.txt`) and accepts every lesson prompt plus legacy saved wording after the correction.
 
 The [imported exercise player](exercise-player.md) is a separate Library destination with an initially empty user collection. Its unit/native suites cover imported content, audio timing, preferences, drafts and asynchronous cancellation. Its audio pauses on hide and cancels on navigation, independently of guided session continuation. Optional player content/preferences participate in the existing Piano service validation and Daily backup; IndexedDB score blobs remain separate.
+
+## App settings
+
+`#/piano/settings` owns new-practice defaults: whole minutes from 3–120 and At the piano. The explicit save uses the existing versioned service and stale/quota protections; opening the page creates no practice. New setup reads these saved values; a running session keeps its own duration and piano choice. EN/ES remounts preserve unsaved fields and their original document revision. Per-exercise tempo, sound, loops and imported-player preferences stay inside their exercises.

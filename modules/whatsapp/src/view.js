@@ -16,6 +16,7 @@ export function mountWhatsApp(options) {
   if (options.ui.saveFailure) field(context, 'status').textContent = saveError(context.language, options.ui.saveFailure);
   bindComposer(context);
   mountBackup(context);
+  if (options.route.page === 'whatsappSettings') showSettings(host, context.language);
   const refresh = () => { if (!document.hidden) refreshComposer(context); };
   document.addEventListener('visibilitychange', refresh, { signal: controller.signal });
   window.addEventListener('pageshow', refresh, { signal: controller.signal });
@@ -26,4 +27,15 @@ export function mountWhatsApp(options) {
     conflict: () => { options.ui.saveFailure = { message: 'Data changed in another view.' }; field(context, 'status').textContent = text(context.language, 'conflict'); },
     dispose: () => { options.ui.expected = field(context, 'composer').dataset.unsaved === 'true' ? context.expected : undefined; clearInterval(timer); clearTimeout(context.cleanTimer); controller.abort(); },
   };
+}
+
+function showSettings(host, language) {
+  host.querySelector('.whatsapp-composer').hidden = true;
+  const settings = document.createElement('div');
+  settings.className = 'app-settings-page';
+  const title = document.createElement('h1');
+  title.textContent = language === 'es' ? 'Ajustes de WhatsApp' : 'WhatsApp settings';
+  title.tabIndex = -1;
+  settings.append(title, host.querySelector('.whatsapp-backup'));
+  host.prepend(settings);
 }

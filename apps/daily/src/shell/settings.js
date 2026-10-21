@@ -1,6 +1,7 @@
 import { widgetIds, quickIds } from '../../../../packages/data/src/daily-document.js';
 import { shellText } from '../../../../packages/i18n/src/shell.js';
 import { element, heading } from './elements.js';
+import { settingsGroup } from './settings-hub.js';
 import { quickLabel } from './dashboard.js';
 function choice(id, label, checked, kind) {
     const wrapper = element('label', 'setting-choice');
@@ -42,10 +43,11 @@ function widgetSettings(preferences, copy) {
 export function settings(preferences) {
     const copy = shellText(preferences.language);
     const view = element('div', 'settings-view');
-    view.append(heading(copy.settings), element('p', 'widget-note', copy.customize));
+    view.append(heading(copy.settings), element('p', 'widget-note', copy.settingsIntro));
     const language = element('label', 'settings-language', copy.language);
     const select = element('select');
     select.id = 'shell-language';
+    select.setAttribute('aria-label', copy.language);
     select.dataset.focus = 'shell-language';
     for (const [value, title] of [['en', 'English'], ['es', 'Español']]) {
         const option = element('option', '', title);
@@ -58,6 +60,8 @@ export function settings(preferences) {
     quick.append(element('legend', '', copy.quick));
     for (const id of quickIds)
         quick.append(choice(id, quickLabel(id, copy), preferences.quickActions.includes(id), 'quickChoice'));
-    view.append(language, widgetSettings(preferences, copy), quick);
+    const daily = settingsGroup('daily-settings', 'Daily', copy.dailyNote);
+    daily.append(language, widgetSettings(preferences, copy), quick);
+    view.append(daily);
     return view;
 }

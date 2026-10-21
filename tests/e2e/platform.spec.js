@@ -17,7 +17,7 @@ async function shellMatchesApp(page) {
 }
 
 async function settings(page) {
-  await page.getByRole('link', { name: 'Settings', exact: true }).click();
+  await page.getByRole('link', { name: 'Daily settings', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Settings', exact: true })).toBeVisible();
 }
 
@@ -79,9 +79,9 @@ test('app backgrounds fill the viewport when switching apps', async ({ page }, t
   const language = page.getByRole('button', { name: 'English', exact: true });
   await language.hover();
   await expect(language).toHaveCSS('opacity', '0.78');
-  const settingsLink = page.locator('.shell-header').getByRole('link', { name: 'Settings', exact: true });
-  await settingsLink.hover();
-  await expect(settingsLink).toHaveCSS('text-decoration-line', 'underline');
+  const homeLink = page.locator('.shell-header').getByRole('link', { name: 'Home', exact: true });
+  await homeLink.hover();
+  await expect(homeLink).toHaveCSS('text-decoration-line', 'underline');
   for (const width of [1600, 900, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
     for (const route of ['coffee/new', 'plants', 'games', 'time', 'piano', 'reading/picker', 'reading/review', 'whatsapp']) {

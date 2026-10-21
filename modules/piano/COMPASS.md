@@ -22,6 +22,7 @@
 - `src/service.js`, `src/service-actions.js`, `src/practice-clock.js`: atomic practice/history/activity transitions and timestamp snapshots.
 - `src/i18n.js`, `src/translations/`, `src/localized-lessons.js`: EN/ES presentation overlays; canonical musical data remains unchanged.
 - `src/exercise-state.js`: language-only question/filter/pacing snapshots, cleared by route changes.
+- `src/settings-view.js`: app-owned practice defaults; the hub and Piano menu link to `#/piano/settings`.
 - `src/view.js`, `src/ui-drafts.js`, `src/js/router.js`: async mounting, remount drafts and shared routing.
 - `src/js/music/`, `src/js/pages/`, `src/js/components/`: original musical content and split presentation code.
 

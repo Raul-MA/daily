@@ -51,3 +51,7 @@ Authored request/import/review errors have exact EN/ES presentation. Status code
 Persisted pick timestamps reject finite values outside the JavaScript Date range. Disposable metadata/review caches with invalid, negative or future timestamps are ignored; saved picks remain unchanged. A clock moving backward therefore cannot keep a cached pool fresh indefinitely. Recovery downloads report storage failures visibly and set the recovery gate only after a successful download. Superseded/disposed file-read failures cannot replace a current preview message.
 
 These local checks use mocked Readwise responses. Real endpoint requests and fallback links remain unchanged; private-token and installed-iPhone acceptance remain deferred.
+
+## App settings
+
+`#/reading/settings` owns the Reader preferences form previously mounted in Daily settings. The hub and Reader menu link here; changing the route does not save preferences. Language remounts preserve unsaved fields, and the picker and this page edit the same validated module settings. Token connection and per-pick overrides remain available in the picker. Daily settings mounts no Reader form.

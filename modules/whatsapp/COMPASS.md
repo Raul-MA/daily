@@ -14,7 +14,7 @@
 
 - `src/app.js`, `src/controller.js`: exact URL/local-time validation and source handoff/copy behavior.
 - `src/service.js`, `src/validation.js`, `src/imports.js`: versioned draft, stale/quota guards and protected recovery.
-- `src/view.js`, `src/markup.js`, `src/style.css`, `src/i18n.js`, `src/backup-ui.js`: scoped source interface and EN/ES.
+- `src/view.js`, `src/markup.js`, `src/style.css`, `src/i18n.js`, `src/backup-ui.js`: scoped source interface, app-owned settings/backup route and EN/ES.
 - `test/tests.cjs`, `test/support/native.cjs`: retained source assertions and explicit native shared-install/controller adapters.
 - [Prepared legacy exporter](../../legacy/exporters/whatsapp/README.md): read-only saved drafts, including expired/incomplete fields; old-app release deferred.
 

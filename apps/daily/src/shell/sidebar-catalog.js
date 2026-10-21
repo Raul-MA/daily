@@ -24,9 +24,10 @@ export const sections = {
   piano: [
     item('piano', 'Course', 'Curso', { matches: ['pianoLearn'] }),
     item('pianoLibrary', 'Library', 'Biblioteca', { matches: ['pianoExercise', 'pianoReference'] }),
+    item('pianoSettings', 'Piano settings', 'Ajustes de Piano'),
   ],
-  reader: [item('reader', 'Reader Picker', 'Selector de Reader'), item('review', 'Daily Review', 'Repaso diario')],
-  whatsapp: [item('whatsapp', 'Compose', 'Redactar', { target: '#composer' }), item('whatsapp', 'Draft backup', 'Copia del borrador', { target: '.whatsapp-backup' })],
+  reader: [item('reader', 'Reader Picker', 'Selector de Reader'), item('review', 'Daily Review', 'Repaso diario'), item('readerSettings', 'Reader settings', 'Ajustes de Reader')],
+  whatsapp: [item('whatsapp', 'Compose', 'Redactar'), item('whatsappSettings', 'WhatsApp settings', 'Ajustes de WhatsApp')],
 };
 
 export function activeSection(entry, route) {

@@ -32,14 +32,17 @@ async function recovery(page) {
 test('full backup downloads all saved modules and layout without credentials or unsaved settings', async ({ page }) => {
   const { root } = await filledState();
   await open(page, root);
-  await page.locator('#reader-default-count').fill('19');
+  const reader = await page.context().newPage();
+  await reader.goto('./#/reading/settings');
+  await reader.locator('#reader-default-count').fill('19');
   const pending = page.waitForEvent('download');
   await page.locator('#daily-backup-export').click();
   const text = await readDownload(await pending);
   expect(JSON.parse(text).data).toEqual(root);
   expect(text).not.toContain('fixture-session-secret');
   expect(text).not.toContain('fixture-private-token');
-  await expect(page.locator('#reader-default-count')).toHaveValue('19');
+  await expect(reader.locator('#reader-default-count')).toHaveValue('19');
+  await reader.close();
   expect(await stored(page)).toEqual(root);
 });
 

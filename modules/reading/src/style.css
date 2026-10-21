@@ -206,3 +206,5 @@
 [data-module="reading"] .review-previous { padding:0; font-size:1.4rem; }
 
 .daily-shell:has(.review-shell .review-cards [data-review-card]) { padding-bottom:calc(110px + env(safe-area-inset-bottom)); }
+
+[data-module="reading"].reader-preferences form { display: grid; gap: 18px; }

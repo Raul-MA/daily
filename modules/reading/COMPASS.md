@@ -16,7 +16,7 @@
 - `src/metadata.js`, `src/selection.js`, `src/config.js`: duration, sampling and shortcut rules.
 - `src/client.js`, `src/request.js`, `src/rate-limit.js`, `src/cache.js`, `src/credentials.js`, `src/account-epoch.js`: real requests, disposable metadata and account isolation.
 - `src/timestamps.js`, `src/ui/errors.js`: bounded persisted/cache timestamps and exact authored error translations.
-- `src/view.js`, `src/ui/`, `src/preferences.js`: source picker appearance, shared preferences and language drafts.
+- `src/view.js`, `src/ui/`, `src/preferences.js`: source picker appearance, app-owned settings and language drafts.
 - `src/review/`: latest-review client, fixed handoff/Done toolbar, explicit final-card completion, ordinary highlights and conditional Q&A presenter.
 - `src/imports.js`, `src/backup-ui.js`: validated preview/recovery/confirmation and credential-free exports.
 - [Prepared legacy exporter](../../legacy/exporters/reader/README.md): settings and optional remembered metadata; tokens/cache keys are excluded and old-app release is deferred.

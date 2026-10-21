@@ -96,7 +96,8 @@
       "settings_acceptance": "modules/plants/e2e/plants.spec.js",
       "red": "reports/plants-shortcut-red.txt",
       "verification": "reports/plants-shortcut-verification.txt",
-      "device_acceptance": "pending"
+      "device_acceptance": "pending",
+      "full_verification": "reports/plants-shortcut-full-verification.txt"
     }
   },
   "researched_additions": {

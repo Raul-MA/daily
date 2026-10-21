@@ -1,0 +1,61 @@
+[WebServer] (node:20356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:20386) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/settings-hub.spec.js:3:1 › settings hub separates Daily controls from app settings and links directly to each destination (6.6s)
+(node:20656) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/e2e/settings-hub.spec.js:28:1 › phone settings navigation closes the drawer and translates the two settings scopes (1.8s)
+  ✘  3 tests/e2e/settings-hub.spec.js:44:1 › Piano owns its practice defaults without starting practice or changing Daily preferences (6.2s)
+
+
+  1) tests/e2e/settings-hub.spec.js:3:1 › settings hub separates Daily controls from app settings and links directly to each destination
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('region', { name: 'Daily', exact: true }).getByLabel('Language', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('region', { name: 'Daily', exact: true }).getByLabel('Language', { exact: true })
+
+
+       7 |   const daily = page.getByRole('region', { name: 'Daily', exact: true });
+       8 |   const apps = page.getByRole('region', { name: 'App settings', exact: true });
+    >  9 |   await expect(daily.getByLabel('Language', { exact: true })).toBeVisible();
+         |                                                               ^
+      10 |   await expect(daily.locator('.daily-backup')).toBeVisible();
+      11 |   await expect(page.locator('#readerPreferencesForm')).toHaveCount(0);
+      12 |   await expect(daily.locator('#readerPreferencesForm')).toHaveCount(0);
+        at /workspaces/daily/tests/e2e/settings-hub.spec.js:9:63
+
+    Error Context: test-results/settings-hub-settings-hub--0144f-irectly-to-each-destination/error-context.md
+
+  2) tests/e2e/settings-hub.spec.js:44:1 › Piano owns its practice defaults without starting practice or changing Daily preferences
+
+    TimeoutError: locator.fill: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByLabel('Minutes (3–120)', { exact: true })
+
+
+      45 |   await page.goto('/daily/#/piano/settings');
+      46 |   const preferences = await page.evaluate(() => JSON.parse(localStorage.getItem('daily:v1') ?? '{"preferences":null}').preferences);
+    > 47 |   await page.getByLabel('Minutes (3–120)', { exact: true }).fill('15');
+         |                                                             ^
+      48 |   await page.getByLabel('At the piano', { exact: true }).uncheck();
+      49 |   await page.getByRole('button', { name: 'Save Piano settings', exact: true }).click();
+      50 |   await expect(page.getByRole('status')).toContainText('Saved');
+        at /workspaces/daily/tests/e2e/settings-hub.spec.js:47:61
+
+    Error Context: test-results/settings-hub-Piano-owns-it-96de5--changing-Daily-preferences/error-context.md
+
+  2 failed
+    tests/e2e/settings-hub.spec.js:3:1 › settings hub separates Daily controls from app settings and links directly to each destination
+    tests/e2e/settings-hub.spec.js:44:1 › Piano owns its practice defaults without starting practice or changing Daily preferences
+  1 passed (17.6s)

@@ -38,3 +38,7 @@ The browser handoff test intercepts and cancels only `things:` navigation throug
 ## Prepared original-app exporter
 
 A separate read-only export page and checked patch are prepared in [legacy/exporters/whatsapp](../../../legacy/exporters/whatsapp/README.md). It reads only the saved draft, whitelists recipient/date/time/message and preserves expired/incomplete Unicode data through actual native import. Malformed records fail unchanged; unrelated keys and prior handoff fields are excluded. The exporter does not launch Things or clear/send a message. Original source and installations remain untouched; later release and physical migration are deferred.
+
+## App settings
+
+`#/whatsapp/settings` owns the WhatsApp settings destination, accessible from the hub and its app menu. It presents the existing protected draft backup/import controls without displaying the composer. The composer remains mounted but hidden so existing import validation and draft refresh use the same controller; navigation itself never saves or launches. The original composer backup controls remain available for compatibility. Daily settings contains only the full-app backup, not WhatsApp-specific controls.

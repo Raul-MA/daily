@@ -1,0 +1,41 @@
+[WebServer] (node:12766) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:12778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/settings-hub.spec.js:3:1 › settings hub separates Daily controls from app settings and links directly to each destination (6.7s)
+(node:12978) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/e2e/settings-hub.spec.js:28:1 › phone settings navigation closes the drawer and translates the two settings scopes (2.0s)
+
+
+  1) tests/e2e/settings-hub.spec.js:3:1 › settings hub separates Daily controls from app settings and links directly to each destination
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('region', { name: 'Daily', exact: true }).getByLabel('Language', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('region', { name: 'Daily', exact: true }).getByLabel('Language', { exact: true })
+
+
+       7 |   const daily = page.getByRole('region', { name: 'Daily', exact: true });
+       8 |   const apps = page.getByRole('region', { name: 'App settings', exact: true });
+    >  9 |   await expect(daily.getByLabel('Language', { exact: true })).toBeVisible();
+         |                                                               ^
+      10 |   await expect(daily.locator('.daily-backup')).toBeVisible();
+      11 |   await expect(apps.locator('#readerPreferencesForm')).toBeVisible();
+      12 |   await expect(daily.locator('#readerPreferencesForm')).toHaveCount(0);
+        at /workspaces/daily/tests/e2e/settings-hub.spec.js:9:63
+
+    Error Context: test-results/settings-hub-settings-hub--0144f-irectly-to-each-destination/error-context.md
+
+  1 failed
+    tests/e2e/settings-hub.spec.js:3:1 › settings hub separates Daily controls from app settings and links directly to each destination
+  1 passed (11.5s)

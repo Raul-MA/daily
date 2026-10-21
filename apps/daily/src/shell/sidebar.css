@@ -1,4 +1,4 @@
-.shell-menu-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 0; border: 0; background: transparent; color: var(--shell-link, #0067d8); font: inherit; font-size: 13px; cursor: pointer; }
+.shell-menu-toggle { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 8px; border: 0; background: transparent; color: var(--shell-link, #0067d8); font: inherit; font-size: 20px; cursor: pointer; }
 .header-start { display: flex; align-items: center; gap: 18px; }
 .shell-sidebar { position: fixed; inset: 0 auto 0 0; z-index: 50; display: flex; flex-direction: column; box-sizing: border-box; width: 248px; height: 100dvh; padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; background: var(--shell-background, #f2f2f7); color: var(--shell-color, #1c1c1e); border-right: 1px solid var(--shell-line, #e3e3e8); font-size: 14px; }
 .sidebar-top { display: flex; align-items: center; gap: 8px; min-height: 44px; margin-bottom: 24px; }
@@ -36,3 +36,4 @@
   .sidebar-close::after { content: '×'; font-size: 26px; }
   .shell-sidebar .sidebar-item { min-height: 44px; }
 }
+.sidebar-daily { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--shell-line, #e3e3e8); }

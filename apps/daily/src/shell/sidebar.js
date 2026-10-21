@@ -63,7 +63,7 @@ export function sidebar(context, copy) {
   top.append(close, title);
   aside.append(top);
   if (app) aside.append(appSections(context, app, copy));
-  aside.append(appSwitcher(context, app, copy));
+  aside.append(appSwitcher(context, app, copy), dailySettings(context, copy));
   return aside;
 }
 
@@ -78,3 +78,13 @@ export function menuBackdrop(copy) {
 }
 
 export function sidebarCopy(context) { return shellText(context.state.read().value.preferences.language); }
+
+function dailySettings(context, copy) {
+  const nav = element('nav', 'sidebar-daily');
+  nav.setAttribute('aria-label', 'Daily');
+  const node = link('', href({ page: 'settings' }, context.base), 'sidebar-item');
+  node.append(...menuEntry(copy.dailySettings, 'settings'));
+  if (context.route.page === 'settings') node.setAttribute('aria-current', 'page');
+  nav.append(node);
+  return nav;
+}

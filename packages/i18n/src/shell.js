@@ -1,4 +1,5 @@
 const en = {
+    dailySettings: 'Daily settings', appSettings: 'App settings', settingsIntro: 'Manage Daily and your apps in one place.', dailyNote: 'Language, dashboard and backups for all your apps.', appsNote: 'Open an app’s settings. Changes apply to that app.',
     menu: 'Navigation menu', sections: 'In this app', switchApps: 'Switch apps', closeMenu: 'Close menu', collapseSidebar: 'Collapse sidebar',
     home: 'Home', apps: 'Apps', settings: 'Settings', today: 'Today', language: 'Language',
     plants: 'Plants', activities: 'Running', review: 'Readwise', reader: 'Reader', quick: 'Quick actions', piano: 'Piano',
@@ -16,6 +17,7 @@ const en = {
     diagnostic: 'Connection checks', skip: 'Skip to content', reading: 'Reading',
 };
 const es = {
+    dailySettings: 'Ajustes de Daily', appSettings: 'Ajustes de apps', settingsIntro: 'Gestiona Daily y tus apps en un solo lugar.', dailyNote: 'Idioma, panel y copias de seguridad de todas tus apps.', appsNote: 'Abre los ajustes de una app. Los cambios se aplican a esa app.',
     menu: 'Menú de navegación', sections: 'En esta app', switchApps: 'Cambiar de app', closeMenu: 'Cerrar menú', collapseSidebar: 'Contraer menú lateral',
     home: 'Inicio', apps: 'Apps', settings: 'Ajustes', today: 'Hoy', language: 'Idioma',
     plants: 'Plantas', activities: 'En marcha', review: 'Readwise', reader: 'Reader', quick: 'Acciones rápidas', piano: 'Piano',

@@ -14,9 +14,10 @@ import { mountCoffee } from '../../../../modules/coffee/src/view.js';
 import { mountGames } from '../../../../modules/games/src/view.js';
 import { activitySummary } from './activity-summary.js';
 import { shellText } from '../../../../packages/i18n/src/shell.js';
-import { element, link } from './elements.js';
+import { element, link, heading } from './elements.js';
 import { navigation } from './navigation.js';
 import { dashboard } from './dashboard.js';
+import { appendAppSettings, focusSettingsDestination } from './settings-hub.js';
 import { settings } from './settings.js';
 import { modulePlaceholder } from './module-placeholder.js';
 import { sidebar, menuBackdrop } from './sidebar.js';
@@ -25,7 +26,9 @@ import { shellFooter } from './footer.js';
 function focusKey() {
     return document.activeElement instanceof HTMLElement ? document.activeElement.dataset.focus : undefined;
 }
-function focusAfterRender(root, key, changedRoute) {
+function focusAfterRender(context, key, changedRoute) {
+    const { root } = context;
+    if (changedRoute && focusSettingsDestination(context)) return;
     if (changedRoute)
         root.querySelector('h1')?.focus();
     else if (key)
@@ -72,7 +75,7 @@ function pageView(context, preferences) {
     }
     if (context.route.page === 'home')
         return dashboard(preferences, context.base, { state: context.state, plants: context.plants, piano: context.piano, reading: context.reading });
-    if (['reader', 'review', 'settings', 'whatsapp'].includes(context.route.page))
+    if (['reader', 'review', 'readerSettings', 'settings', 'whatsapp', 'whatsappSettings'].includes(context.route.page))
         return utilityPage(context, preferences);
     return modulePlaceholder(context.route, shellText(preferences.language), context.base);
 }
@@ -98,8 +101,8 @@ export function renderShell(context, changedRoute = false) {
         const skip = link(copy.skip, '#content', 'skip-link');
         skip.dataset.skip = '';
         context.root.replaceChildren(skip, navigation(preferences.language, context.base), sidebar(context, copy), menuBackdrop(copy), activitySummary({ state: context.state, language: preferences.language, base: context.base }, true), main, shellFooter(context, copy));
+        focusAfterRender(context, key, changedRoute);
         syncSidebar(context);
-        focusAfterRender(context.root, key, changedRoute);
         restoreDrafts(context.root, drafts);
         context.pageRestore?.();
         document.dispatchEvent(new Event('daily:form-state'));
@@ -144,16 +147,24 @@ function gamePage(context) {
 }
 
 function utilityPage(context, preferences) {
-    const options = { route: context.route, base: context.base, service: context[context.route.page === 'whatsapp' ? 'whatsapp' : 'reading'], ui: context.moduleUI };
-    const mounts = { reader: mountReader, review: mountReview, settings: mountReaderPreferences, whatsapp: mountWhatsApp };
+    if (context.route.page === 'settings') {
+        const view = settings(preferences);
+        view.querySelector('#daily-settings').append(backupPage(context));
+        appendAppSettings(view, preferences.language, context.base);
+        return view;
+    }
+    const whatsapp = context.route.page.startsWith('whatsapp');
+    const options = { route: context.route, base: context.base, service: context[whatsapp ? 'whatsapp' : 'reading'], ui: context.moduleUI };
+    const mounts = { reader: mountReader, review: mountReview, readerSettings: mountReaderPreferences, whatsapp: mountWhatsApp, whatsappSettings: mountWhatsApp };
     const page = mounts[context.route.page](options);
     context.pageCleanup = page.dispose;
     context.pageRestore = page.restore;
     context.pageConflict = page.conflict;
-    if (context.route.page !== 'settings') return page.node;
-    const view = settings(preferences);
-    view.append(page.node, backupPage(context));
-    return view;
+    if (context.route.page === 'readerSettings') {
+        page.node.classList.add('app-settings-page');
+        page.node.prepend(heading(preferences.language === 'es' ? 'Ajustes de Reader' : 'Reader settings'));
+    }
+    return page.node;
 }
 
 function backupPage(context) {

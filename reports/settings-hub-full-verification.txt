@@ -1,0 +1,121 @@
+
+> daily-pwa@0.0.0 verify
+> npm run lint && npm run check:js && npm run test:all && npm run build
+
+
+> daily-pwa@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> daily-pwa@0.0.0 check:js
+> node scripts/check-js.mjs
+
+JavaScript syntax checked: 842 files
+
+> daily-pwa@0.0.0 test:all
+> node scripts/test.mjs all
+
+Suite: general
+✔ time is derived from timestamps without tick writes or automatic completion (5.781747ms)
+✔ reload and process reconstruction preserve elapsed time and Unicode references (0.441796ms)
+✔ explicit pause excludes background time and resume continues the same activity (0.740563ms)
+✔ countdowns are independent and singleton budgets games and piano resume existing activities (0.92652ms)
+✔ widget removal language changes and navigation do not pause or reset activities (0.493501ms)
+✔ completion is explicit and terminal while a new budget may start afterwards (0.844688ms)
+✔ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (0.423601ms)
+✔ invalid starts duplicate identifiers and unknown transitions never mutate activities (0.633002ms)
+✔ failed activity changes keep the previous status and publish no success (0.631489ms)
+✔ combined backup exports every module layout language and original running timestamps without credentials or caches (49.7288ms)
+✔ combined preview validates every module and shows counts without changing records (14.978429ms)
+✔ combined restore rejects unknown identities future schemas unknown modules and future module versions (10.045889ms)
+✔ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (10.23973ms)
+✔ combined restore rejects orphan missing and inconsistent active activity mirrors (12.725181ms)
+✔ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (8.947818ms)
+✔ combined failed primary or recovery writes retain records and do not reset credentials (9.46957ms)
+✔ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (19.899801ms)
+✔ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (14.236033ms)
+✔ calendar refreshes at local midnight without repeated changes on the same day (1.995376ms)
+✔ foreground resumes recalculate date after suspension and cleanup removes callbacks (0.513279ms)
+✔ calendar deadlines follow daylight-saving local days rather than a fixed 24 hours (41.430332ms)
+✔ missing modules fail when exercised rather than preventing test discovery (0.371102ms)
+✔ new browser tests target the Pages path and module hash (0.241441ms)
+✔ legacy budget patch packages a working export link without modifying originals and refuses changed source HTML (93.775766ms)
+✔ legacy plants patch packages a working export link without modifying originals and refuses changed source HTML (98.563262ms)
+✔ legacy Reader patch packages a working export link without modifying originals and refuses changed source HTML (97.955219ms)
+✔ legacy WhatsApp patch packages a working export link without modifying originals and refuses changed source HTML (90.10831ms)
+✔ plants worker removes only its old caches (6.733992ms)
+✔ coffee worker removes only its old caches (1.241829ms)
+✔ games worker removes only its old caches (1.460848ms)
+✔ Time Budget worker removes only its old caches (1.438546ms)
+✔ piano worker removes only its old caches (2.355619ms)
+✔ module defaults never write and saved payloads preserve unrelated preferences and records (0.533606ms)
+✔ module reads validate domain shapes and reject future versions without overwriting (0.484034ms)
+✔ module saves re-read current state and publish only committed updates (0.559545ms)
+✔ failed module commits retain previous readable data without success notifications (0.287056ms)
+✔ activity schemas reject unrenderable finite clocks and durations before creating the root (0.312864ms)
+✔ durable storage is requested where available and refusal or failure never claims retention (0.607123ms)
+✔ fresh dashboard defaults put plants and activities first without writing data (0.325979ms)
+✔ language and dashboard order persist across a new state instance (0.284592ms)
+✔ removing a widget preserves module records and their active sessions (0.254476ms)
+✔ invalid language, duplicate widgets and unknown actions never overwrite settings (0.308536ms)
+✔ failed saves publish no committed change and retain the previous preferences (0.276036ms)
+✔ committed preference changes notify subscribers and support cleanup (0.227736ms)
+✔ diagnostic rejects empty credentials without making requests (0.702972ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (33.161684ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (1.22621ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.382795ms)
+✔ hung requests time out and remaining endpoint checks still execute (21.163518ms)
+✔ local diagnostics do not claim Pages-origin verification (0.635537ms)
+✔ hash routes cover all seven modules and their canonical deep links (6.213843ms)
+✔ href builder encodes stable IDs and supports configurable local base paths (0.485527ms)
+✔ query parameters and repeated values survive routing without changing settings (0.341859ms)
+✔ unknown and malformed routes fail safely instead of executing external URLs (0.730343ms)
+✔ browser hash listener supports navigation and removes itself on cleanup (0.68028ms)
+✔ static preparation preserves native modules byte-for-byte and resolves every relative import (885.776437ms)
+✔ static preparation uses the configured base for HTML manifest and worker without shipping tests (626.89054ms)
+✔ invalid static bases fail before replacing any previously prepared files (161.761684ms)
+✔ shared install assets provide PNG sizes maskable identity and a subpath-safe Apple touch icon (597.440273ms)
+✔ attention-screen raw recovery preserves only the three owned root snapshots without scanning storage (2.275962ms)
+✔ attention-screen restore validates full backups and replaces only the primary after a successful write (9.767729ms)
+✔ attention-screen restore rejects stale or tampered previews and future stored root versions (11.939595ms)
+✔ attention-screen recovery propagates blocked reads and reports cleanup failure only after replacement (8.542712ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (0.537023ms)
+✔ replacement keeps the previous validated document as recovery (0.212367ms)
+✔ invalid and future documents are rejected without any storage mutation (0.346708ms)
+✔ primary quota failure retains the readable document and reports failure (0.329675ms)
+✔ recovery quota failure prevents a primary replacement (0.350654ms)
+✔ corrupt primary data is preserved and recovery is explicit (0.341518ms)
+✔ unrecoverable corruption never produces an empty collection (0.752976ms)
+✔ missing primary data can recover from an existing valid recovery document (0.178753ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (2.994632ms)
+✔ lossy serialization is validated before touching existing records (0.248875ms)
+✔ a future primary schema is rejected without recovery or mutation (0.354753ms)
+✔ failure to preserve corrupt data reports failure without replacing it (0.220212ms)
+✔ update activation is held for any unfinished activity or unsaved form (0.496848ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (2.454932ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (2.892884ms)
+✔ offline navigation and built assets use only this app cache (2.248218ms)
+✔ updates wait until explicitly requested and reject unrelated messages (2.287228ms)
+✔ online navigation stays on the cached version until an update is accepted (2.532619ms)
+✔ any blocked tab prevents update activation (1.492066ms)
+✔ unresponsive tabs and malformed state replies keep updates waiting (23.192366ms)
+✔ every same-app tab must explicitly report safe before an update activates (1.336626ms)
+✔ updates from unknown clients are ignored (1.084706ms)
+ℹ tests 85
+ℹ suites 0
+ℹ pass 85
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3142.236092
+[WebServer] (node:12517) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 43 tests using 1 worker
+
+(node:12578) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes (3ms)
+
+Verification interrupted at user request (SIGINT, exit 130). Lint, 842-file syntax and 85 General unit cases passed before interruption. General browser and remaining module suites are incomplete. This is not a passing full gate.

@@ -43,7 +43,8 @@ export async function auditPageWidth(page, route) {
 export async function contentReady(page, route) {
   const content = page.locator('.shell-main');
   await expect(content).toBeVisible();
-  if (route.page.startsWith('piano')) {
+  if (route.page === 'pianoSettings') await expect(page.locator('[data-module="piano"] h1')).toBeVisible();
+  else if (route.page.startsWith('piano')) {
     await expect(page.locator('#page-content h1')).toBeVisible();
     await expect(page.locator('[data-piano-loading]')).toHaveCount(0);
     if (route.url.includes('?lesson=')) await expect(page.locator('#page-content > .practice-page')).toBeVisible();

@@ -1,0 +1,12 @@
+[WebServer] (node:38862) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:38874) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/settings-hub.spec.js:3:1 › settings hub separates Daily controls from app settings and links directly to each destination (2.2s)
+  ✓  2 tests/e2e/settings-hub.spec.js:28:1 › phone settings navigation closes the drawer and translates the two settings scopes (1.6s)
+  ✓  3 tests/e2e/settings-hub.spec.js:44:1 › Piano owns its practice defaults without starting practice or changing Daily preferences (2.7s)
+
+  3 passed (8.6s)

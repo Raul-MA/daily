@@ -43,7 +43,7 @@ test('shared sidebar separates app sections from app switching and keeps app col
       await expect(page.locator('.template-section')).toHaveAttribute('open', '');
     }
     if (route === 'whatsapp') {
-      await sidebar.getByRole('button', { name: 'Draft backup', exact: true }).click();
+      await sidebar.getByRole('link', { name: 'WhatsApp settings', exact: true }).click();
       await expect(page.locator('.whatsapp-backup')).toBeInViewport();
     }
     expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe(before);

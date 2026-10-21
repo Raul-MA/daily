@@ -73,7 +73,7 @@ test('Reader forget removes account picks and credential storage while preservin
 
 test('central Reader preferences and the app edit the same settings and retain language drafts', async ({ page }) => {
   await prepare(page);
-  await page.goto('./#/settings');
+  await page.goto('./#/reading/settings');
   await expect(page.locator('#readerPreferencesForm')).toBeVisible();
   await page.locator('#reader-default-count').fill('8');
   await page.getByRole('button', { name: 'Español', exact: true }).click();

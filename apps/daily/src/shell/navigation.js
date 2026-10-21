@@ -17,7 +17,7 @@ export function navigation(language, base) {
         button.dataset.focus = `language-${value}`;
         controls.append(button);
     }
-    const menu = element('button', 'shell-menu-toggle', `☰ ${copy.apps}`);
+    const menu = element('button', 'shell-menu-toggle', '☰');
     menu.type = 'button';
     menu.dataset.sidebarToggle = '';
     menu.setAttribute('aria-label', copy.apps);
@@ -25,7 +25,6 @@ export function navigation(language, base) {
     menu.setAttribute('aria-expanded', 'false');
     const start = element('div', 'header-start');
     start.append(menu, brand);
-    controls.append(link(copy.settings, href({ page: 'settings' }, base)));
     header.append(start, controls);
     return header;
 }
