@@ -81,3 +81,28 @@
 [data-module="whatsapp"] .whatsapp-backup h2 { font-size:20px; letter-spacing:-.02em; }
 [data-module="whatsapp"] .whatsapp-backup button { width:100%; min-height:44px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--text); }
 [data-module="whatsapp"] .whatsapp-backup input[type="file"] { font-size:13px; padding:12px; }
+
+.whatsapp-composer { padding:24px max(20px, env(safe-area-inset-right)) 40px max(20px, env(safe-area-inset-left)); }
+[data-module="whatsapp"] header { margin-bottom:32px; }
+[data-module="whatsapp"] .schedule { grid-template-columns:minmax(0, 1.15fr) minmax(0, 1fr); }
+[data-module="whatsapp"] .app-settings-page { padding:24px 20px 40px; }
+[data-module="whatsapp"] .app-settings-page h1 { margin-bottom:24px; }
+[data-module="whatsapp"] .whatsapp-backup { border-top:1px solid var(--line); padding-top:24px; margin-top:28px; }
+[data-module="whatsapp"] .app-settings-page .whatsapp-backup { border:0; padding:0; margin:0; }
+[data-module="whatsapp"] .whatsapp-backup h2 { margin:0 0 16px; }
+[data-module="whatsapp"] .whatsapp-backup button { margin:0; padding:12px 16px; line-height:1.4; }
+[data-module="whatsapp"] .whatsapp-backup label { margin:24px 0 0; line-height:1.5; }
+[data-module="whatsapp"] .whatsapp-backup input[type="file"] { margin-top:8px; font-weight:400; }
+[data-module="whatsapp"] .whatsapp-backup input::file-selector-button { min-height:32px; border:1px solid var(--line); border-radius:6px; background:var(--background); color:var(--text); margin-right:8px; }
+[data-module="whatsapp"] #whatsapp-import-preview:not([hidden]) { display:grid; gap:12px; margin-top:24px; }
+[data-module="whatsapp"] #whatsapp-import-message { margin:0 0 4px; line-height:1.6; max-width:70ch; }
+[data-module="whatsapp"] #whatsapp-import-cancel { margin-top:12px; }
+[data-module="whatsapp"] #whatsapp-import-status { line-height:1.6; overflow-wrap:anywhere; }
+[data-module="whatsapp"] #whatsapp-import-status:empty { display:none; }
+[data-module="whatsapp"] .fallback p { line-height:1.5; }
+@media (min-width:768px) {
+  .whatsapp-composer, [data-module="whatsapp"] .app-settings-page { padding-left:36px; padding-right:36px; }
+}
+@media (max-width:359px) {
+  [data-module="whatsapp"] .schedule { grid-template-columns:minmax(0, 1fr); }
+}

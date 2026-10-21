@@ -1,0 +1,3743 @@
+[
+  {
+    "page": "pianoSettings",
+    "index": 1,
+    "url": "/daily/#/piano/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/01-pianoSettings-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Piano settings",
+        "x": 20,
+        "y": 152,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoSettings",
+    "index": 1,
+    "url": "/daily/#/piano/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/01-pianoSettings-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Piano settings",
+        "x": 20,
+        "y": 152,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoSettings",
+    "index": 1,
+    "url": "/daily/#/piano/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/01-pianoSettings-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Piano settings",
+        "x": 284,
+        "y": 152,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "piano",
+    "index": 2,
+    "url": "/daily/#/piano",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/02-piano-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1781,
+    "headings": [
+      {
+        "text": "Learn to improvise",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Suggested lesson order",
+        "x": 20,
+        "y": 419,
+        "size": "16px"
+      },
+      {
+        "text": "Practice history",
+        "x": 20,
+        "y": 1523,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "piano",
+    "index": 2,
+    "url": "/daily/#/piano",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/02-piano-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1720,
+    "headings": [
+      {
+        "text": "Learn to improvise",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Suggested lesson order",
+        "x": 20,
+        "y": 419,
+        "size": "16px"
+      },
+      {
+        "text": "Practice history",
+        "x": 20,
+        "y": 1462,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "piano",
+    "index": 2,
+    "url": "/daily/#/piano",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/02-piano-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1675,
+    "headings": [
+      {
+        "text": "Learn to improvise",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Suggested lesson order",
+        "x": 284,
+        "y": 368,
+        "size": "16px"
+      },
+      {
+        "text": "Practice history",
+        "x": 284,
+        "y": 1445,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLibrary",
+    "index": 3,
+    "url": "/daily/#/piano/library",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/03-pianoLibrary-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3244,
+    "headings": [
+      {
+        "text": "Library",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Your music",
+        "x": 20,
+        "y": 431,
+        "size": "18.4px"
+      },
+      {
+        "text": "Foundations",
+        "x": 20,
+        "y": 614,
+        "size": "18.4px"
+      },
+      {
+        "text": "Chords & harmony",
+        "x": 20,
+        "y": 1279,
+        "size": "18.4px"
+      },
+      {
+        "text": "Movement & voicing",
+        "x": 20,
+        "y": 1906,
+        "size": "18.4px"
+      },
+      {
+        "text": "Reference",
+        "x": 20,
+        "y": 2663,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLibrary",
+    "index": 3,
+    "url": "/daily/#/piano/library",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/03-pianoLibrary-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3040,
+    "headings": [
+      {
+        "text": "Library",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Your music",
+        "x": 20,
+        "y": 431,
+        "size": "18.4px"
+      },
+      {
+        "text": "Foundations",
+        "x": 20,
+        "y": 591,
+        "size": "18.4px"
+      },
+      {
+        "text": "Chords & harmony",
+        "x": 20,
+        "y": 1206,
+        "size": "18.4px"
+      },
+      {
+        "text": "Movement & voicing",
+        "x": 20,
+        "y": 1779,
+        "size": "18.4px"
+      },
+      {
+        "text": "Reference",
+        "x": 20,
+        "y": 2482,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLibrary",
+    "index": 3,
+    "url": "/daily/#/piano/library",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/03-pianoLibrary-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2274,
+    "headings": [
+      {
+        "text": "Library",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Your music",
+        "x": 284,
+        "y": 356,
+        "size": "18.4px"
+      },
+      {
+        "text": "Foundations",
+        "x": 784,
+        "y": 356,
+        "size": "18.4px"
+      },
+      {
+        "text": "Chords & harmony",
+        "x": 284,
+        "y": 1006,
+        "size": "18.4px"
+      },
+      {
+        "text": "Movement & voicing",
+        "x": 784,
+        "y": 1006,
+        "size": "18.4px"
+      },
+      {
+        "text": "Reference",
+        "x": 284,
+        "y": 1721,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 4,
+    "url": "/daily/#/piano/reference/pentatonic.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/04-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 6710,
+    "headings": [
+      {
+        "text": "Scales — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 4,
+    "url": "/daily/#/piano/reference/pentatonic.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/04-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 6182,
+    "headings": [
+      {
+        "text": "Scales — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 4,
+    "url": "/daily/#/piano/reference/pentatonic.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/04-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4892,
+    "headings": [
+      {
+        "text": "Scales — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 5,
+    "url": "/daily/#/piano/exercises/intervals.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/05-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1070,
+    "headings": [
+      {
+        "text": "Intervals",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 5,
+    "url": "/daily/#/piano/exercises/intervals.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/05-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1021,
+    "headings": [
+      {
+        "text": "Intervals",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 5,
+    "url": "/daily/#/piano/exercises/intervals.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/05-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Intervals",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 6,
+    "url": "/daily/#/piano/learn",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/06-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1719,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      },
+      {
+        "text": "Understand the idea",
+        "x": 41,
+        "y": 586,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 6,
+    "url": "/daily/#/piano/learn",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/06-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1568,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      },
+      {
+        "text": "Understand the idea",
+        "x": 41,
+        "y": 566,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 6,
+    "url": "/daily/#/piano/learn",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/06-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1120,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      },
+      {
+        "text": "Understand the idea",
+        "x": 313,
+        "y": 506,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 7,
+    "url": "/daily/#/piano/reference/intervals.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/07-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2488,
+    "headings": [
+      {
+        "text": "Intervals — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 7,
+    "url": "/daily/#/piano/reference/intervals.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/07-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2300,
+    "headings": [
+      {
+        "text": "Intervals — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 7,
+    "url": "/daily/#/piano/reference/intervals.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/07-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1678,
+    "headings": [
+      {
+        "text": "Intervals — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 8,
+    "url": "/daily/#/piano/reference/scales.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/08-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 6710,
+    "headings": [
+      {
+        "text": "Scales — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 8,
+    "url": "/daily/#/piano/reference/scales.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/08-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 6182,
+    "headings": [
+      {
+        "text": "Scales — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 8,
+    "url": "/daily/#/piano/reference/scales.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/08-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4892,
+    "headings": [
+      {
+        "text": "Scales — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 9,
+    "url": "/daily/#/piano/exercises/scales.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/09-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1070,
+    "headings": [
+      {
+        "text": "Scales",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 9,
+    "url": "/daily/#/piano/exercises/scales.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/09-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1021,
+    "headings": [
+      {
+        "text": "Scales",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 9,
+    "url": "/daily/#/piano/exercises/scales.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/09-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Scales",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 10,
+    "url": "/daily/#/piano/reference/modes.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/10-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4977,
+    "headings": [
+      {
+        "text": "Modes — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 10,
+    "url": "/daily/#/piano/reference/modes.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/10-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4465,
+    "headings": [
+      {
+        "text": "Modes — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 10,
+    "url": "/daily/#/piano/reference/modes.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/10-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3203,
+    "headings": [
+      {
+        "text": "Modes — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 11,
+    "url": "/daily/#/piano/exercises/modes.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/11-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1070,
+    "headings": [
+      {
+        "text": "Modes",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 11,
+    "url": "/daily/#/piano/exercises/modes.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/11-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1021,
+    "headings": [
+      {
+        "text": "Modes",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 11,
+    "url": "/daily/#/piano/exercises/modes.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/11-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Modes",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 12,
+    "url": "/daily/#/piano/exercises/modal-characteristics.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/12-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1263,
+    "headings": [
+      {
+        "text": "Modal Characteristics",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 12,
+    "url": "/daily/#/piano/exercises/modal-characteristics.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/12-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1179,
+    "headings": [
+      {
+        "text": "Modal Characteristics",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 12,
+    "url": "/daily/#/piano/exercises/modal-characteristics.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/12-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Modal Characteristics",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 13,
+    "url": "/daily/#/piano/exercises/key-signatures.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/13-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1000,
+    "headings": [
+      {
+        "text": "Key Signatures",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 13,
+    "url": "/daily/#/piano/exercises/key-signatures.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/13-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 951,
+    "headings": [
+      {
+        "text": "Key Signatures",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 13,
+    "url": "/daily/#/piano/exercises/key-signatures.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/13-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Key Signatures",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 14,
+    "url": "/daily/#/piano/reference/key-signatures.cards",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/14-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 6134,
+    "headings": [
+      {
+        "text": "Key Signatures — Cards",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 14,
+    "url": "/daily/#/piano/reference/key-signatures.cards",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/14-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 6095,
+    "headings": [
+      {
+        "text": "Key Signatures — Cards",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 14,
+    "url": "/daily/#/piano/reference/key-signatures.cards",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/14-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1903,
+    "headings": [
+      {
+        "text": "Key Signatures — Cards",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 15,
+    "url": "/daily/#/piano/reference/tensions.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/15-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4928,
+    "headings": [
+      {
+        "text": "Tensions — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 15,
+    "url": "/daily/#/piano/reference/tensions.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/15-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3771,
+    "headings": [
+      {
+        "text": "Tensions — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 15,
+    "url": "/daily/#/piano/reference/tensions.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/15-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3507,
+    "headings": [
+      {
+        "text": "Tensions — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 16,
+    "url": "/daily/#/piano/exercises/tensions.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/16-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1060,
+    "headings": [
+      {
+        "text": "Tensions",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 16,
+    "url": "/daily/#/piano/exercises/tensions.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/16-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1011,
+    "headings": [
+      {
+        "text": "Tensions",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 16,
+    "url": "/daily/#/piano/exercises/tensions.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/16-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Tensions",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 17,
+    "url": "/daily/#/piano/reference/tensions.cards",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/17-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4440,
+    "headings": [
+      {
+        "text": "Tensions — Cards",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 17,
+    "url": "/daily/#/piano/reference/tensions.cards",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/17-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4207,
+    "headings": [
+      {
+        "text": "Tensions — Cards",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 17,
+    "url": "/daily/#/piano/reference/tensions.cards",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/17-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1540,
+    "headings": [
+      {
+        "text": "Tensions — Cards",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 18,
+    "url": "/daily/#/piano/reference/available-tensions.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/18-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2428,
+    "headings": [
+      {
+        "text": "Available Tensions — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Available Tensions",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 18,
+    "url": "/daily/#/piano/reference/available-tensions.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/18-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2197,
+    "headings": [
+      {
+        "text": "Available Tensions — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Available Tensions",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 18,
+    "url": "/daily/#/piano/reference/available-tensions.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/18-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1557,
+    "headings": [
+      {
+        "text": "Available Tensions — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Available Tensions",
+        "x": 284,
+        "y": 356,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 19,
+    "url": "/daily/#/piano/exercises/available-tensions.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/19-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1160,
+    "headings": [
+      {
+        "text": "Available Tensions",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 19,
+    "url": "/daily/#/piano/exercises/available-tensions.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/19-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1111,
+    "headings": [
+      {
+        "text": "Available Tensions",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 19,
+    "url": "/daily/#/piano/exercises/available-tensions.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/19-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Available Tensions",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 20,
+    "url": "/daily/#/piano/reference/available-tensions.cards",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/20-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4603,
+    "headings": [
+      {
+        "text": "Available Tensions — Cards",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 20,
+    "url": "/daily/#/piano/reference/available-tensions.cards",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/20-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4544,
+    "headings": [
+      {
+        "text": "Available Tensions — Cards",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 20,
+    "url": "/daily/#/piano/reference/available-tensions.cards",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/20-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1873,
+    "headings": [
+      {
+        "text": "Available Tensions — Cards",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 21,
+    "url": "/daily/#/piano/reference/extended-chords.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/21-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 5523,
+    "headings": [
+      {
+        "text": "Extended Chords — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Extended Chords",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 21,
+    "url": "/daily/#/piano/reference/extended-chords.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/21-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4259,
+    "headings": [
+      {
+        "text": "Extended Chords — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Extended Chords",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 21,
+    "url": "/daily/#/piano/reference/extended-chords.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/21-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3764,
+    "headings": [
+      {
+        "text": "Extended Chords — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Extended Chords",
+        "x": 284,
+        "y": 356,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 22,
+    "url": "/daily/#/piano/exercises/extended-chords.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/22-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1100,
+    "headings": [
+      {
+        "text": "Extended Chords",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 22,
+    "url": "/daily/#/piano/exercises/extended-chords.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/22-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1051,
+    "headings": [
+      {
+        "text": "Extended Chords",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 22,
+    "url": "/daily/#/piano/exercises/extended-chords.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/22-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Extended Chords",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 23,
+    "url": "/daily/#/piano/reference/suspended-chords.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/23-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2618,
+    "headings": [
+      {
+        "text": "Suspended Chords — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Suspended Chords (sus2 / sus4)",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      },
+      {
+        "text": "Dominant sus sound",
+        "x": 20,
+        "y": 755,
+        "size": "26.4px"
+      },
+      {
+        "text": "Slash-chord relationship",
+        "x": 20,
+        "y": 1147,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 23,
+    "url": "/daily/#/piano/reference/suspended-chords.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/23-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2292,
+    "headings": [
+      {
+        "text": "Suspended Chords — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Suspended Chords (sus2 / sus4)",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      },
+      {
+        "text": "Dominant sus sound",
+        "x": 20,
+        "y": 729,
+        "size": "26.4px"
+      },
+      {
+        "text": "Slash-chord relationship",
+        "x": 20,
+        "y": 1036,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 23,
+    "url": "/daily/#/piano/reference/suspended-chords.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/23-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1812,
+    "headings": [
+      {
+        "text": "Suspended Chords — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Suspended Chords (sus2 / sus4)",
+        "x": 284,
+        "y": 356,
+        "size": "26.4px"
+      },
+      {
+        "text": "Dominant sus sound",
+        "x": 284,
+        "y": 561,
+        "size": "26.4px"
+      },
+      {
+        "text": "Slash-chord relationship",
+        "x": 284,
+        "y": 791,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 24,
+    "url": "/daily/#/piano/exercises/suspended-chords.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/24-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1230,
+    "headings": [
+      {
+        "text": "Suspended Chords",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 24,
+    "url": "/daily/#/piano/exercises/suspended-chords.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/24-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1121,
+    "headings": [
+      {
+        "text": "Suspended Chords",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 24,
+    "url": "/daily/#/piano/exercises/suspended-chords.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/24-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Suspended Chords",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 25,
+    "url": "/daily/#/piano/exercises/ear-training.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/25-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1193,
+    "headings": [
+      {
+        "text": "Ear Training — Intervals",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 25,
+    "url": "/daily/#/piano/exercises/ear-training.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/25-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1109,
+    "headings": [
+      {
+        "text": "Ear Training — Intervals",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 25,
+    "url": "/daily/#/piano/exercises/ear-training.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/25-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 925,
+    "headings": [
+      {
+        "text": "Ear Training — Intervals",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 26,
+    "url": "/daily/#/piano/reference/chord-progressions.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/26-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3874,
+    "headings": [
+      {
+        "text": "Chord Progressions",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Chord Progressions Theory",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 26,
+    "url": "/daily/#/piano/reference/chord-progressions.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/26-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3477,
+    "headings": [
+      {
+        "text": "Chord Progressions",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Chord Progressions Theory",
+        "x": 20,
+        "y": 404,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 26,
+    "url": "/daily/#/piano/reference/chord-progressions.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/26-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2540,
+    "headings": [
+      {
+        "text": "Chord Progressions",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Chord Progressions Theory",
+        "x": 284,
+        "y": 356,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 27,
+    "url": "/daily/#/piano/exercises/chord-progressions.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/27-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2997,
+    "headings": [
+      {
+        "text": "Chord Progressions",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 27,
+    "url": "/daily/#/piano/exercises/chord-progressions.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/27-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2910,
+    "headings": [
+      {
+        "text": "Chord Progressions",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 27,
+    "url": "/daily/#/piano/exercises/chord-progressions.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/27-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1661,
+    "headings": [
+      {
+        "text": "Chord Progressions",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 28,
+    "url": "/daily/#/piano/exercises/iivi.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/28-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1060,
+    "headings": [
+      {
+        "text": "ii-V-I",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 28,
+    "url": "/daily/#/piano/exercises/iivi.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/28-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1011,
+    "headings": [
+      {
+        "text": "ii-V-I",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 28,
+    "url": "/daily/#/piano/exercises/iivi.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/28-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "ii-V-I",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 29,
+    "url": "/daily/#/piano/exercises/secondary-dominants.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/29-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1144,
+    "headings": [
+      {
+        "text": "Secondary Dominants",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 29,
+    "url": "/daily/#/piano/exercises/secondary-dominants.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/29-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1021,
+    "headings": [
+      {
+        "text": "Secondary Dominants",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 29,
+    "url": "/daily/#/piano/exercises/secondary-dominants.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/29-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Secondary Dominants",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 30,
+    "url": "/daily/#/piano/exercises/tritone-sub.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/30-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1135,
+    "headings": [
+      {
+        "text": "Tritone Substitution",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 30,
+    "url": "/daily/#/piano/exercises/tritone-sub.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/30-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1051,
+    "headings": [
+      {
+        "text": "Tritone Substitution",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 30,
+    "url": "/daily/#/piano/exercises/tritone-sub.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/30-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Tritone Substitution",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 31,
+    "url": "/daily/#/piano/exercises/modal-interchange.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/31-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1109,
+    "headings": [
+      {
+        "text": "Modal Interchange",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 31,
+    "url": "/daily/#/piano/exercises/modal-interchange.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/31-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1021,
+    "headings": [
+      {
+        "text": "Modal Interchange",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 31,
+    "url": "/daily/#/piano/exercises/modal-interchange.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/31-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Modal Interchange",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 32,
+    "url": "/daily/#/piano/exercises/harmonic-function.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/32-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1109,
+    "headings": [
+      {
+        "text": "Harmonic Function",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 32,
+    "url": "/daily/#/piano/exercises/harmonic-function.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/32-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1044,
+    "headings": [
+      {
+        "text": "Harmonic Function",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 32,
+    "url": "/daily/#/piano/exercises/harmonic-function.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/32-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Harmonic Function",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 33,
+    "url": "/daily/#/piano/exercises/chord-inversions.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/33-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1257,
+    "headings": [
+      {
+        "text": "Chord Inversions",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 33,
+    "url": "/daily/#/piano/exercises/chord-inversions.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/33-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1158,
+    "headings": [
+      {
+        "text": "Chord Inversions",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 33,
+    "url": "/daily/#/piano/exercises/chord-inversions.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/33-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 930,
+    "headings": [
+      {
+        "text": "Chord Inversions",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 34,
+    "url": "/daily/#/piano/reference/circle.cards",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/34-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1732,
+    "headings": [
+      {
+        "text": "Circle of Fifths / Fourths",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Circle of Fifths",
+        "x": 20,
+        "y": 399,
+        "size": "26.4px"
+      },
+      {
+        "text": "Circle of Fourths",
+        "x": 20,
+        "y": 821,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 34,
+    "url": "/daily/#/piano/reference/circle.cards",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/34-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1534,
+    "headings": [
+      {
+        "text": "Circle of Fifths / Fourths",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Circle of Fifths",
+        "x": 20,
+        "y": 364,
+        "size": "26.4px"
+      },
+      {
+        "text": "Circle of Fourths",
+        "x": 20,
+        "y": 731,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 34,
+    "url": "/daily/#/piano/reference/circle.cards",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/34-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 978,
+    "headings": [
+      {
+        "text": "Circle of Fifths / Fourths",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Circle of Fifths",
+        "x": 284,
+        "y": 356,
+        "size": "26.4px"
+      },
+      {
+        "text": "Circle of Fourths",
+        "x": 784,
+        "y": 356,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 35,
+    "url": "/daily/#/piano/reference/chord-substitution.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/35-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2849,
+    "headings": [
+      {
+        "text": "Chord Substitution",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Chord Substitution",
+        "x": 20,
+        "y": 364,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 35,
+    "url": "/daily/#/piano/reference/chord-substitution.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/35-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2505,
+    "headings": [
+      {
+        "text": "Chord Substitution",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Chord Substitution",
+        "x": 20,
+        "y": 364,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 35,
+    "url": "/daily/#/piano/reference/chord-substitution.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/35-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1988,
+    "headings": [
+      {
+        "text": "Chord Substitution",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Chord Substitution",
+        "x": 284,
+        "y": 356,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 36,
+    "url": "/daily/#/piano/reference/shell-chords.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/36-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2448,
+    "headings": [
+      {
+        "text": "Shell Chords — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Shell Chords (Voicings)",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 36,
+    "url": "/daily/#/piano/reference/shell-chords.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/36-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2179,
+    "headings": [
+      {
+        "text": "Shell Chords — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Shell Chords (Voicings)",
+        "x": 20,
+        "y": 404,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 36,
+    "url": "/daily/#/piano/reference/shell-chords.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/36-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1717,
+    "headings": [
+      {
+        "text": "Shell Chords — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Shell Chords (Voicings)",
+        "x": 284,
+        "y": 356,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 37,
+    "url": "/daily/#/piano/exercises/shell-chords.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/37-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1145,
+    "headings": [
+      {
+        "text": "Shell Chords",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 37,
+    "url": "/daily/#/piano/exercises/shell-chords.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/37-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1073,
+    "headings": [
+      {
+        "text": "Shell Chords",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 37,
+    "url": "/daily/#/piano/exercises/shell-chords.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/37-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 980,
+    "headings": [
+      {
+        "text": "Shell Chords",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 38,
+    "url": "/daily/#/piano/exercises/voice-leading.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/38-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1166,
+    "headings": [
+      {
+        "text": "Guide Tone Voice Leading",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 38,
+    "url": "/daily/#/piano/exercises/voice-leading.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/38-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1086,
+    "headings": [
+      {
+        "text": "Guide Tone Voice Leading",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 38,
+    "url": "/daily/#/piano/exercises/voice-leading.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/38-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Guide Tone Voice Leading",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 39,
+    "url": "/daily/#/piano/reference/rootless-voicings.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/39-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2975,
+    "headings": [
+      {
+        "text": "Rootless Voicings — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Rootless Voicings (A & B)",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 39,
+    "url": "/daily/#/piano/reference/rootless-voicings.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/39-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2553,
+    "headings": [
+      {
+        "text": "Rootless Voicings — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Rootless Voicings (A & B)",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 39,
+    "url": "/daily/#/piano/reference/rootless-voicings.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/39-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1960,
+    "headings": [
+      {
+        "text": "Rootless Voicings — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Rootless Voicings (A & B)",
+        "x": 284,
+        "y": 356,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 40,
+    "url": "/daily/#/piano/exercises/rootless-voicings.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/40-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1317,
+    "headings": [
+      {
+        "text": "Rootless Voicings",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 40,
+    "url": "/daily/#/piano/exercises/rootless-voicings.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/40-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1238,
+    "headings": [
+      {
+        "text": "Rootless Voicings",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 40,
+    "url": "/daily/#/piano/exercises/rootless-voicings.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/40-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 987,
+    "headings": [
+      {
+        "text": "Rootless Voicings",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 41,
+    "url": "/daily/#/piano/reference/modulations.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/41-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3829,
+    "headings": [
+      {
+        "text": "Modulation — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Modulation",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 41,
+    "url": "/daily/#/piano/reference/modulations.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/41-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3336,
+    "headings": [
+      {
+        "text": "Modulation — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Modulation",
+        "x": 20,
+        "y": 404,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 41,
+    "url": "/daily/#/piano/reference/modulations.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/41-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2517,
+    "headings": [
+      {
+        "text": "Modulation — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Modulation",
+        "x": 284,
+        "y": 356,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 42,
+    "url": "/daily/#/piano/exercises/modulations.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/42-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1228,
+    "headings": [
+      {
+        "text": "Modulation Recognition",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 42,
+    "url": "/daily/#/piano/exercises/modulations.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/42-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1055,
+    "headings": [
+      {
+        "text": "Modulation Recognition",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 42,
+    "url": "/daily/#/piano/exercises/modulations.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/42-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Modulation Recognition",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 43,
+    "url": "/daily/#/piano/reference/superimpositions.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/43-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4016,
+    "headings": [
+      {
+        "text": "Upper Structures — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Upper-Structure Triads",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 43,
+    "url": "/daily/#/piano/reference/superimpositions.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/43-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3626,
+    "headings": [
+      {
+        "text": "Upper Structures — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Upper-Structure Triads",
+        "x": 20,
+        "y": 439,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 43,
+    "url": "/daily/#/piano/reference/superimpositions.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/43-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2703,
+    "headings": [
+      {
+        "text": "Upper Structures — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Upper-Structure Triads",
+        "x": 284,
+        "y": 356,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 44,
+    "url": "/daily/#/piano/exercises/superimpositions.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/44-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1100,
+    "headings": [
+      {
+        "text": "Upper Structures",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 44,
+    "url": "/daily/#/piano/exercises/superimpositions.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/44-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1011,
+    "headings": [
+      {
+        "text": "Upper Structures",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 44,
+    "url": "/daily/#/piano/exercises/superimpositions.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/44-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Upper Structures",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 45,
+    "url": "/daily/#/piano/reference/bebop.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/45-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3823,
+    "headings": [
+      {
+        "text": "Bebop Scales — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 45,
+    "url": "/daily/#/piano/reference/bebop.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/45-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3260,
+    "headings": [
+      {
+        "text": "Bebop Scales — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 45,
+    "url": "/daily/#/piano/reference/bebop.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/45-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2338,
+    "headings": [
+      {
+        "text": "Bebop Scales — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 46,
+    "url": "/daily/#/piano/exercises/bebop.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/46-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1294,
+    "headings": [
+      {
+        "text": "Bebop Scales",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 46,
+    "url": "/daily/#/piano/exercises/bebop.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/46-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1184,
+    "headings": [
+      {
+        "text": "Bebop Scales",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 46,
+    "url": "/daily/#/piano/exercises/bebop.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/46-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 964,
+    "headings": [
+      {
+        "text": "Bebop Scales",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 47,
+    "url": "/daily/#/piano/reference/melodic-minor.theory",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/47-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 6899,
+    "headings": [
+      {
+        "text": "Melodic Minor Modes — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 47,
+    "url": "/daily/#/piano/reference/melodic-minor.theory",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/47-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 6091,
+    "headings": [
+      {
+        "text": "Melodic Minor Modes — Theory",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 47,
+    "url": "/daily/#/piano/reference/melodic-minor.theory",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/47-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4230,
+    "headings": [
+      {
+        "text": "Melodic Minor Modes — Theory",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 48,
+    "url": "/daily/#/piano/exercises/melodic-minor.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/48-pianoExercise-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1432,
+    "headings": [
+      {
+        "text": "Melodic Minor Modes",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 48,
+    "url": "/daily/#/piano/exercises/melodic-minor.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/48-pianoExercise-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1276,
+    "headings": [
+      {
+        "text": "Melodic Minor Modes",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoExercise",
+    "index": 48,
+    "url": "/daily/#/piano/exercises/melodic-minor.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/48-pianoExercise-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 964,
+    "headings": [
+      {
+        "text": "Melodic Minor Modes",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 49,
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/49-pianoReference-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1141,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 49,
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/49-pianoReference-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1115,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "page": "pianoReference",
+    "index": 49,
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/49-pianoReference-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 942,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 50,
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/50-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1313,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 50,
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/50-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1261,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 50,
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/50-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1083,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 51,
+    "url": "/daily/#/piano/learn?lesson=seventh-intervals",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/51-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1409,
+    "headings": [
+      {
+        "text": "Hear and find sevenths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 51,
+    "url": "/daily/#/piano/learn?lesson=seventh-intervals",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/51-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1261,
+    "headings": [
+      {
+        "text": "Hear and find sevenths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 51,
+    "url": "/daily/#/piano/learn?lesson=seventh-intervals",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/51-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1083,
+    "headings": [
+      {
+        "text": "Hear and find sevenths",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 52,
+    "url": "/daily/#/piano/learn?lesson=chord-tone-fluency",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/52-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1382,
+    "headings": [
+      {
+        "text": "Turn chord symbols into notes",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 52,
+    "url": "/daily/#/piano/learn?lesson=chord-tone-fluency",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/52-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1293,
+    "headings": [
+      {
+        "text": "Turn chord symbols into notes",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 52,
+    "url": "/daily/#/piano/learn?lesson=chord-tone-fluency",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/52-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1083,
+    "headings": [
+      {
+        "text": "Turn chord symbols into notes",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 53,
+    "url": "/daily/#/piano/learn?lesson=rhythm-and-motif",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/53-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1369,
+    "headings": [
+      {
+        "text": "Make a phrase with rhythm and space",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 53,
+    "url": "/daily/#/piano/learn?lesson=rhythm-and-motif",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/53-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1318,
+    "headings": [
+      {
+        "text": "Make a phrase with rhythm and space",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 53,
+    "url": "/daily/#/piano/learn?lesson=rhythm-and-motif",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/53-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1083,
+    "headings": [
+      {
+        "text": "Make a phrase with rhythm and space",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 54,
+    "url": "/daily/#/piano/learn?lesson=major-changes",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/54-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1310,
+    "headings": [
+      {
+        "text": "Follow a major ii–V–I",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 54,
+    "url": "/daily/#/piano/learn?lesson=major-changes",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/54-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1285,
+    "headings": [
+      {
+        "text": "Follow a major ii–V–I",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 54,
+    "url": "/daily/#/piano/learn?lesson=major-changes",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/54-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1083,
+    "headings": [
+      {
+        "text": "Follow a major ii–V–I",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 55,
+    "url": "/daily/#/piano/learn?lesson=passing-notes-and-ninths",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/55-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1382,
+    "headings": [
+      {
+        "text": "Add a passing note and a ninth",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 55,
+    "url": "/daily/#/piano/learn?lesson=passing-notes-and-ninths",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/55-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1293,
+    "headings": [
+      {
+        "text": "Add a passing note and a ninth",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 55,
+    "url": "/daily/#/piano/learn?lesson=passing-notes-and-ninths",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/55-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1083,
+    "headings": [
+      {
+        "text": "Add a passing note and a ninth",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 56,
+    "url": "/daily/#/piano/learn?lesson=transfer-to-new-keys",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/56-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1369,
+    "headings": [
+      {
+        "text": "Move the same idea into F, G, and Bb",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 56,
+    "url": "/daily/#/piano/learn?lesson=transfer-to-new-keys",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/56-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1318,
+    "headings": [
+      {
+        "text": "Move the same idea into F, G, and Bb",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 56,
+    "url": "/daily/#/piano/learn?lesson=transfer-to-new-keys",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/56-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1083,
+    "headings": [
+      {
+        "text": "Move the same idea into F, G, and Bb",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 57,
+    "url": "/daily/#/piano/learn?lesson=blues-form",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/57-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1382,
+    "headings": [
+      {
+        "text": "Keep your place in a twelve-bar blues",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 57,
+    "url": "/daily/#/piano/learn?lesson=blues-form",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/57-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1318,
+    "headings": [
+      {
+        "text": "Keep your place in a twelve-bar blues",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 57,
+    "url": "/daily/#/piano/learn?lesson=blues-form",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/57-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1083,
+    "headings": [
+      {
+        "text": "Keep your place in a twelve-bar blues",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 58,
+    "url": "/daily/#/piano/learn?lesson=minor-changes",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/58-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1382,
+    "headings": [
+      {
+        "text": "Resolve a minor ii–V–i",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 58,
+    "url": "/daily/#/piano/learn?lesson=minor-changes",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/58-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1285,
+    "headings": [
+      {
+        "text": "Resolve a minor ii–V–i",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 58,
+    "url": "/daily/#/piano/learn?lesson=minor-changes",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/58-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1083,
+    "headings": [
+      {
+        "text": "Resolve a minor ii–V–i",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 59,
+    "url": "/daily/#/piano/learn?lesson=dorian-color",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/59-pianoLearn-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1409,
+    "headings": [
+      {
+        "text": "Explore one modal color deliberately",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 59,
+    "url": "/daily/#/piano/learn?lesson=dorian-color",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/59-pianoLearn-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1293,
+    "headings": [
+      {
+        "text": "Explore one modal color deliberately",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "pianoLearn",
+    "index": 59,
+    "url": "/daily/#/piano/learn?lesson=dorian-color",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/59-pianoLearn-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1083,
+    "headings": [
+      {
+        "text": "Explore one modal color deliberately",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  }
+]

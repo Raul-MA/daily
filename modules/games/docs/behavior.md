@@ -6,6 +6,8 @@ The shared-device score tracker retains its original ledger interface and portab
 
 ## How It Works
 
+- Visual review retains the ledger palette and scoring structure, with matching shell gutters, 44px scoring actions, responsive statistics and themed import dialogs. Persistent backup reminders sit in the page flow; Settings keeps its inline warning. Temporary notices remain fixed and dismissible.
+
 - `src/backend/` retains player/game CRUD, archival rules, session scoring, outcomes, history, statistics and full JSON export. Validators live under `backend/core/validation/`; statistics accumulation is split into small functions without changing its derived results.
 - Payload: `daily:v1.modules.games = { version: 1, data }`. The inner schema retains `appId/appSlug: board-game-score-tracker`, `schemaVersion: "1.0"`, settings, players, games, sessions and metadata. Original future-major rejection and additive same-major import normalization remain. Navigation never initializes records.
 - `src/service.js` binds the original storage API to the root. Reads return fresh data plus an internal symbol revision that spreads through feature operations and is excluded from JSON. Stale domain saves reject before writing. Unsupported module versions propagate; the legacy standalone corruption fallback is never used by the mounted app.

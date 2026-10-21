@@ -1,0 +1,530 @@
+[
+  {
+    "page": "home",
+    "url": "/daily/#/",
+    "index": 1,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/01-home-390.png",
+    "overflow": 0,
+    "height": 2305,
+    "headings": [
+      {
+        "text": "Today",
+        "x": 20,
+        "y": 293,
+        "size": "32px"
+      },
+      {
+        "text": "Plants",
+        "x": 71,
+        "y": 386,
+        "size": "14px"
+      },
+      {
+        "text": "Running",
+        "x": 71,
+        "y": 714,
+        "size": "14px"
+      },
+      {
+        "text": "Readwise",
+        "x": 71,
+        "y": 1006,
+        "size": "14px"
+      },
+      {
+        "text": "Reader",
+        "x": 71,
+        "y": 1282,
+        "size": "14px"
+      },
+      {
+        "text": "Quick actions",
+        "x": 71,
+        "y": 1565,
+        "size": "14px"
+      },
+      {
+        "text": "Piano",
+        "x": 71,
+        "y": 1955,
+        "size": "14px"
+      }
+    ]
+  },
+  {
+    "page": "home",
+    "url": "/daily/#/",
+    "index": 1,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/01-home-320.png",
+    "overflow": 0,
+    "height": 2341,
+    "headings": [
+      {
+        "text": "Today",
+        "x": 20,
+        "y": 293,
+        "size": "32px"
+      },
+      {
+        "text": "Plants",
+        "x": 71,
+        "y": 386,
+        "size": "14px"
+      },
+      {
+        "text": "Running",
+        "x": 71,
+        "y": 714,
+        "size": "14px"
+      },
+      {
+        "text": "Readwise",
+        "x": 71,
+        "y": 1006,
+        "size": "14px"
+      },
+      {
+        "text": "Reader",
+        "x": 71,
+        "y": 1293,
+        "size": "14px"
+      },
+      {
+        "text": "Quick actions",
+        "x": 71,
+        "y": 1601,
+        "size": "14px"
+      },
+      {
+        "text": "Piano",
+        "x": 71,
+        "y": 1991,
+        "size": "14px"
+      }
+    ]
+  },
+  {
+    "page": "home",
+    "url": "/daily/#/",
+    "index": 1,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/01-home-1280.png",
+    "overflow": 0,
+    "height": 1034,
+    "headings": [
+      {
+        "text": "Today",
+        "x": 284,
+        "y": 189,
+        "size": "36px"
+      },
+      {
+        "text": "Plants",
+        "x": 337,
+        "y": 288,
+        "size": "14px"
+      },
+      {
+        "text": "Running",
+        "x": 664,
+        "y": 288,
+        "size": "14px"
+      },
+      {
+        "text": "Readwise",
+        "x": 990,
+        "y": 288,
+        "size": "14px"
+      },
+      {
+        "text": "Reader",
+        "x": 337,
+        "y": 620,
+        "size": "14px"
+      },
+      {
+        "text": "Quick actions",
+        "x": 664,
+        "y": 620,
+        "size": "14px"
+      },
+      {
+        "text": "Piano",
+        "x": 990,
+        "y": 620,
+        "size": "14px"
+      }
+    ]
+  },
+  {
+    "page": "settings",
+    "url": "/daily/#/settings",
+    "index": 2,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/02-settings-390.png",
+    "overflow": 0,
+    "height": 2436,
+    "headings": [
+      {
+        "text": "Settings",
+        "x": 20,
+        "y": 262,
+        "size": "32px"
+      },
+      {
+        "text": "Daily",
+        "x": 20,
+        "y": 367,
+        "size": "23px"
+      },
+      {
+        "text": "Daily backup and restore",
+        "x": 40,
+        "y": 1324,
+        "size": "20px"
+      },
+      {
+        "text": "App settings",
+        "x": 20,
+        "y": 1820,
+        "size": "23px"
+      }
+    ]
+  },
+  {
+    "page": "settings",
+    "url": "/daily/#/settings",
+    "index": 2,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/02-settings-320.png",
+    "overflow": 0,
+    "height": 2567,
+    "headings": [
+      {
+        "text": "Settings",
+        "x": 20,
+        "y": 262,
+        "size": "32px"
+      },
+      {
+        "text": "Daily",
+        "x": 20,
+        "y": 390,
+        "size": "23px"
+      },
+      {
+        "text": "Daily backup and restore",
+        "x": 40,
+        "y": 1372,
+        "size": "20px"
+      },
+      {
+        "text": "App settings",
+        "x": 20,
+        "y": 1952,
+        "size": "23px"
+      }
+    ]
+  },
+  {
+    "page": "settings",
+    "url": "/daily/#/settings",
+    "index": 2,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/02-settings-1280.png",
+    "overflow": 0,
+    "height": 2168,
+    "headings": [
+      {
+        "text": "Settings",
+        "x": 284,
+        "y": 158,
+        "size": "36px"
+      },
+      {
+        "text": "Daily",
+        "x": 284,
+        "y": 267,
+        "size": "23px"
+      },
+      {
+        "text": "Daily backup and restore",
+        "x": 304,
+        "y": 1201,
+        "size": "20px"
+      },
+      {
+        "text": "App settings",
+        "x": 284,
+        "y": 1628,
+        "size": "23px"
+      }
+    ]
+  },
+  {
+    "page": "notFound",
+    "url": "/daily/#/not-a-route",
+    "index": 3,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/03-notFound-390.png",
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Page not found",
+        "x": 20,
+        "y": 276,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "notFound",
+    "url": "/daily/#/not-a-route",
+    "index": 3,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/03-notFound-320.png",
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Page not found",
+        "x": 20,
+        "y": 276,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "notFound",
+    "url": "/daily/#/not-a-route",
+    "index": 3,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/03-notFound-1280.png",
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Page not found",
+        "x": 284,
+        "y": 172,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "page": "menu",
+    "url": "/daily/#/",
+    "mode": "menu",
+    "index": 4,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/04-menu-menu-390.png",
+    "overflow": 0,
+    "height": 2317,
+    "headings": [
+      {
+        "text": "Today",
+        "x": 20,
+        "y": 293,
+        "size": "32px"
+      },
+      {
+        "text": "Plants",
+        "x": 71,
+        "y": 386,
+        "size": "14px"
+      },
+      {
+        "text": "Running",
+        "x": 71,
+        "y": 714,
+        "size": "14px"
+      },
+      {
+        "text": "Readwise",
+        "x": 71,
+        "y": 1006,
+        "size": "14px"
+      },
+      {
+        "text": "Reader",
+        "x": 71,
+        "y": 1293,
+        "size": "14px"
+      },
+      {
+        "text": "Quick actions",
+        "x": 71,
+        "y": 1577,
+        "size": "14px"
+      },
+      {
+        "text": "Piano",
+        "x": 71,
+        "y": 1967,
+        "size": "14px"
+      }
+    ]
+  },
+  {
+    "page": "menu",
+    "url": "/daily/#/",
+    "mode": "menu",
+    "index": 4,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/04-menu-menu-320.png",
+    "overflow": 0,
+    "height": 2341,
+    "headings": [
+      {
+        "text": "Today",
+        "x": 20,
+        "y": 293,
+        "size": "32px"
+      },
+      {
+        "text": "Plants",
+        "x": 71,
+        "y": 386,
+        "size": "14px"
+      },
+      {
+        "text": "Running",
+        "x": 71,
+        "y": 714,
+        "size": "14px"
+      },
+      {
+        "text": "Readwise",
+        "x": 71,
+        "y": 1006,
+        "size": "14px"
+      },
+      {
+        "text": "Reader",
+        "x": 71,
+        "y": 1293,
+        "size": "14px"
+      },
+      {
+        "text": "Quick actions",
+        "x": 71,
+        "y": 1601,
+        "size": "14px"
+      },
+      {
+        "text": "Piano",
+        "x": 71,
+        "y": 1991,
+        "size": "14px"
+      }
+    ]
+  },
+  {
+    "page": "menu",
+    "url": "/daily/#/",
+    "mode": "menu",
+    "index": 4,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/04-menu-menu-1280.png",
+    "overflow": 0,
+    "height": 1034,
+    "headings": [
+      {
+        "text": "Today",
+        "x": 284,
+        "y": 189,
+        "size": "36px"
+      },
+      {
+        "text": "Plants",
+        "x": 337,
+        "y": 288,
+        "size": "14px"
+      },
+      {
+        "text": "Running",
+        "x": 664,
+        "y": 288,
+        "size": "14px"
+      },
+      {
+        "text": "Readwise",
+        "x": 990,
+        "y": 288,
+        "size": "14px"
+      },
+      {
+        "text": "Reader",
+        "x": 337,
+        "y": 620,
+        "size": "14px"
+      },
+      {
+        "text": "Quick actions",
+        "x": 664,
+        "y": 620,
+        "size": "14px"
+      },
+      {
+        "text": "Piano",
+        "x": 990,
+        "y": 620,
+        "size": "14px"
+      }
+    ]
+  },
+  {
+    "page": "diagnostics",
+    "url": "/daily/diagnostics.html",
+    "index": 5,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/05-diagnostics-390.png",
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Readwise connection checks",
+        "x": 16,
+        "y": 92,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "diagnostics",
+    "url": "/daily/diagnostics.html",
+    "index": 5,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/05-diagnostics-320.png",
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Readwise connection checks",
+        "x": 16,
+        "y": 92,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "diagnostics",
+    "url": "/daily/diagnostics.html",
+    "index": 5,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/05-diagnostics-1280.png",
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Readwise connection checks",
+        "x": 16,
+        "y": 92,
+        "size": "32px"
+      }
+    ]
+  }
+]

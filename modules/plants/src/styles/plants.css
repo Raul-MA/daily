@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 [data-module="plants"] .form-section{
-  margin-bottom: 8px;
+  margin: 24px 0;
 }
 [data-module="plants"] .form-section-title{
   font-family: 'Playfair Display', serif;

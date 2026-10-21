@@ -51,7 +51,7 @@ test('home settings and connection checks reopen offline without losing saved se
   await context.setOffline(true);
   await page.reload();
   await expect(page.getByRole('heading', { name: 'Hoy', exact: true })).toBeVisible();
-  await page.getByRole('link', { name: 'Ajustes', exact: true }).click();
+  await page.getByRole('link', { name: 'Ajustes de Daily', exact: true }).click();
   await page.reload();
   await expect(page.getByRole('heading', { name: 'Ajustes', exact: true })).toBeVisible();
   await page.goto('/daily/diagnostics.html');

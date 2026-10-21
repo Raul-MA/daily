@@ -8,3 +8,27 @@
 [data-module="piano"] .piano-history { margin-top: 32px; border-top: 1px solid var(--border); padding-top: 20px; }
 [data-module="piano"] .piano-record { display: flex; flex-direction: column; gap: 4px; padding: 12px 0; }
 [data-module="piano"] .piano-record time { color: var(--text-muted); font-size: var(--text-sm); }
+
+[data-module="piano"].app-settings-page { padding: 24px 20px 40px; }
+[data-module="piano"].app-settings-page form { display: grid; gap: 20px; margin-top: 28px; }
+[data-module="piano"].app-settings-page label { display: grid; gap: 8px; }
+[data-module="piano"].app-settings-page input[type="number"] { width: 180px; max-width: 100%; min-height: 48px; padding: 10px 12px; border: 1px solid var(--border-light); border-radius: var(--radius); background: var(--surface); color: var(--text); }
+[data-module="piano"].app-settings-page label:has(input[type="checkbox"]) { display: flex; align-items: center; gap: 12px; min-height: 44px; }
+[data-module="piano"].app-settings-page input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--accent); }
+[data-module="piano"].app-settings-page button { justify-self: start; min-height: 48px; max-width: 100%; padding: 12px 20px; border: 1px solid var(--accent); border-radius: var(--radius); background: var(--accent); color: white; font-weight: 600; line-height: 1.4; cursor: pointer; }
+[data-module="piano"].app-settings-page button:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+[data-module="piano"].app-settings-page [role="status"] { margin: 0; }
+[data-module="piano"].app-settings-page [role="status"]:empty { display: none; }
+[data-module="piano"] .search-input { min-height: 44px; }
+[data-module="piano"] .library-links a, [data-module="piano"] .course-lesson-title a { display: inline-flex; align-items: center; min-height: 44px; }
+[data-module="piano"] .theory-content p { max-width: 75ch; }
+[data-module="piano"] .practice-page .practice-checkbox { min-height: 44px; }
+[data-module="piano"] .practice-page input[type="number"], [data-module="piano"] .auto-advance-seconds { min-height: 44px; }
+[data-module="piano"] .multi-select { min-height: 44px; font-size: 16px; }
+[data-module="piano"] label:has(input[type="checkbox"]) { min-height: 44px; }
+[data-module="piano"] .exercise-controls:not(:empty) { padding-top: 16px; }
+@media (min-width: 720px) {
+  [data-module="piano"] #topbar { padding-inline: 36px; }
+  [data-module="piano"] #page-content { padding-inline: 36px; }
+  [data-module="piano"].app-settings-page { padding-inline: 36px; }
+}

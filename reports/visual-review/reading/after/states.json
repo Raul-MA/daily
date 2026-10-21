@@ -1,0 +1,1682 @@
+[
+  {
+    "name": "saved-picker",
+    "url": "/daily/#/reading/picker",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-saved-picker-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1585,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 852,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 915,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1129,
+        "size": "18.56px"
+      }
+    ]
+  },
+  {
+    "name": "empty-picker",
+    "url": "/daily/#/reading/picker",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-empty-picker-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1086,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      }
+    ]
+  },
+  {
+    "name": "custom-controls",
+    "url": "/daily/#/reading/picker",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-custom-controls-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1665,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 932,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 995,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1209,
+        "size": "18.56px"
+      }
+    ]
+  },
+  {
+    "name": "token-dialog",
+    "url": "/daily/#/reading/picker",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-token-dialog-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1585,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 852,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 915,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1129,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 39,
+        "y": 65,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 39,
+        "y": 1581,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "dialog-preferences",
+    "url": "/daily/#/reading/picker",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-dialog-preferences-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1585,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 852,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 915,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1129,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 39,
+        "y": -246,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 39,
+        "y": 1270,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "dialog-backup",
+    "url": "/daily/#/reading/picker",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-dialog-backup-320.png",
+    "fullPage": true,
+    "sections": [
+      {
+        "name": "backup",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-dialog-backup-backup-320.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1585,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 852,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 915,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1129,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 39,
+        "y": -899,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 39,
+        "y": 617,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "preferences-draft",
+    "url": "/daily/#/reading/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-preferences-draft-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1638,
+    "headings": [
+      {
+        "text": "Reader settings",
+        "x": 20,
+        "y": 152,
+        "size": "32px"
+      },
+      {
+        "text": "Reader preferences",
+        "x": 20,
+        "y": 211,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "review-ordinary",
+    "url": "/daily/#/reading/review",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-ordinary-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1164,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-progress",
+    "url": "/daily/#/reading/review",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-progress-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1197,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-long",
+    "url": "/daily/#/reading/review",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-long-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3883,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-bottom",
+    "url": "/daily/#/reading/review",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-bottom-320.png",
+    "fullPage": false,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3883,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": -2891,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-no-credentials",
+    "url": "/daily/#/reading/review",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-no-credentials-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-error",
+    "url": "/daily/#/reading/review",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-error-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/reading/picker",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-import-preview-320.png",
+    "fullPage": true,
+    "sections": [
+      {
+        "name": "backup",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-import-preview-backup-320.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1585,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 852,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 915,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1129,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 39,
+        "y": -1322,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 39,
+        "y": 194,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/reading/picker",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-invalid-import-320.png",
+    "fullPage": true,
+    "sections": [
+      {
+        "name": "backup",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-invalid-import-backup-320.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1585,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 852,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 915,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1129,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 39,
+        "y": -1065,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 39,
+        "y": 451,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/reading/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-spanish-settings-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1772,
+    "headings": [
+      {
+        "text": "Ajustes de Reader",
+        "x": 20,
+        "y": 152,
+        "size": "32px"
+      },
+      {
+        "text": "Preferencias de Reader",
+        "x": 20,
+        "y": 246,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-review",
+    "url": "/daily/#/reading/review",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-spanish-review-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1178,
+    "headings": [
+      {
+        "text": "Último repaso disponible",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-options",
+    "url": "/daily/#/reading/review",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-options-320.png",
+    "fullPage": false,
+    "sections": [
+      {
+        "name": "feedback",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-options-feedback-320.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1343,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": -351,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "saved-picker",
+    "url": "/daily/#/reading/picker",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-saved-picker-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1362,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 764,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 827,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1009,
+        "size": "18.56px"
+      }
+    ]
+  },
+  {
+    "name": "empty-picker",
+    "url": "/daily/#/reading/picker",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-empty-picker-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 988,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      }
+    ]
+  },
+  {
+    "name": "custom-controls",
+    "url": "/daily/#/reading/picker",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-custom-controls-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1442,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 844,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 907,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1089,
+        "size": "18.56px"
+      }
+    ]
+  },
+  {
+    "name": "token-dialog",
+    "url": "/daily/#/reading/picker",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-token-dialog-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1362,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 764,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 827,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1009,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 39,
+        "y": 65,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 39,
+        "y": 1493,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "dialog-preferences",
+    "url": "/daily/#/reading/picker",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-dialog-preferences-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1362,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 764,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 827,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1009,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 39,
+        "y": -246,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 39,
+        "y": 1182,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "dialog-backup",
+    "url": "/daily/#/reading/picker",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-dialog-backup-390.png",
+    "fullPage": true,
+    "sections": [
+      {
+        "name": "backup",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-dialog-backup-backup-390.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1362,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 764,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 827,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1009,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 39,
+        "y": -811,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 39,
+        "y": 617,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "preferences-draft",
+    "url": "/daily/#/reading/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-preferences-draft-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1585,
+    "headings": [
+      {
+        "text": "Reader settings",
+        "x": 20,
+        "y": 152,
+        "size": "32px"
+      },
+      {
+        "text": "Reader preferences",
+        "x": 20,
+        "y": 211,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "review-ordinary",
+    "url": "/daily/#/reading/review",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-ordinary-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1061,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-progress",
+    "url": "/daily/#/reading/review",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-progress-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1061,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-long",
+    "url": "/daily/#/reading/review",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-long-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3205,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-bottom",
+    "url": "/daily/#/reading/review",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-bottom-390.png",
+    "fullPage": false,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3205,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": -2213,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-no-credentials",
+    "url": "/daily/#/reading/review",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-no-credentials-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-error",
+    "url": "/daily/#/reading/review",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-error-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/reading/picker",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-import-preview-390.png",
+    "fullPage": true,
+    "sections": [
+      {
+        "name": "backup",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-import-preview-backup-390.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1362,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 764,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 827,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1009,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 39,
+        "y": -1167,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 39,
+        "y": 261,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/reading/picker",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-invalid-import-390.png",
+    "fullPage": true,
+    "sections": [
+      {
+        "name": "backup",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-invalid-import-backup-390.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1362,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 764,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 827,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1009,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 39,
+        "y": -977,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 39,
+        "y": 451,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/reading/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-spanish-settings-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1619,
+    "headings": [
+      {
+        "text": "Ajustes de Reader",
+        "x": 20,
+        "y": 152,
+        "size": "32px"
+      },
+      {
+        "text": "Preferencias de Reader",
+        "x": 20,
+        "y": 211,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-review",
+    "url": "/daily/#/reading/review",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-spanish-review-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1136,
+    "headings": [
+      {
+        "text": "Último repaso disponible",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "review-options",
+    "url": "/daily/#/reading/review",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-options-390.png",
+    "fullPage": false,
+    "sections": [
+      {
+        "name": "feedback",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-options-feedback-390.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1240,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": -248,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "name": "saved-picker",
+    "url": "/daily/#/reading/picker",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-saved-picker-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1302,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 284,
+        "y": 290,
+        "size": "80px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 284,
+        "y": 748,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 813,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 999,
+        "size": "18.56px"
+      }
+    ]
+  },
+  {
+    "name": "empty-picker",
+    "url": "/daily/#/reading/picker",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-empty-picker-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 920,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 284,
+        "y": 290,
+        "size": "80px"
+      }
+    ]
+  },
+  {
+    "name": "custom-controls",
+    "url": "/daily/#/reading/picker",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-custom-controls-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1382,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 284,
+        "y": 290,
+        "size": "80px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 284,
+        "y": 828,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 893,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 1079,
+        "size": "18.56px"
+      }
+    ]
+  },
+  {
+    "name": "token-dialog",
+    "url": "/daily/#/reading/picker",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-token-dialog-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1302,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 284,
+        "y": 290,
+        "size": "80px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 284,
+        "y": 748,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 813,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 999,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 383,
+        "y": 65,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 383,
+        "y": 1366,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "dialog-preferences",
+    "url": "/daily/#/reading/picker",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-dialog-preferences-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1302,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 284,
+        "y": 290,
+        "size": "80px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 284,
+        "y": 748,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 813,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 999,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 383,
+        "y": -227,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 383,
+        "y": 1074,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "dialog-backup",
+    "url": "/daily/#/reading/picker",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-dialog-backup-1280.png",
+    "fullPage": true,
+    "sections": [
+      {
+        "name": "backup",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-dialog-backup-backup-1280.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1302,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 284,
+        "y": 290,
+        "size": "80px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 284,
+        "y": 748,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 813,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 999,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 383,
+        "y": -629,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 383,
+        "y": 672,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "preferences-draft",
+    "url": "/daily/#/reading/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-preferences-draft-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1467,
+    "headings": [
+      {
+        "text": "Reader settings",
+        "x": 284,
+        "y": 152,
+        "size": "40px"
+      },
+      {
+        "text": "Reader preferences",
+        "x": 284,
+        "y": 220,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "review-ordinary",
+    "url": "/daily/#/reading/review",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-ordinary-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1036,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 284,
+        "y": 148,
+        "size": "48px"
+      }
+    ]
+  },
+  {
+    "name": "review-progress",
+    "url": "/daily/#/reading/review",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-progress-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1036,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 284,
+        "y": 148,
+        "size": "48px"
+      }
+    ]
+  },
+  {
+    "name": "review-long",
+    "url": "/daily/#/reading/review",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-long-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2603,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 284,
+        "y": 148,
+        "size": "48px"
+      }
+    ]
+  },
+  {
+    "name": "review-bottom",
+    "url": "/daily/#/reading/review",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-bottom-1280.png",
+    "fullPage": false,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2603,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 284,
+        "y": -1555,
+        "size": "48px"
+      }
+    ]
+  },
+  {
+    "name": "review-no-credentials",
+    "url": "/daily/#/reading/review",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-no-credentials-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 284,
+        "y": 148,
+        "size": "48px"
+      }
+    ]
+  },
+  {
+    "name": "review-error",
+    "url": "/daily/#/reading/review",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-error-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 284,
+        "y": 148,
+        "size": "48px"
+      }
+    ]
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/reading/picker",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-import-preview-1280.png",
+    "fullPage": true,
+    "sections": [
+      {
+        "name": "backup",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-import-preview-backup-1280.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1302,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 284,
+        "y": 290,
+        "size": "80px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 284,
+        "y": 748,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 813,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 999,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 383,
+        "y": -961,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 383,
+        "y": 340,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/reading/picker",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-invalid-import-1280.png",
+    "fullPage": true,
+    "sections": [
+      {
+        "name": "backup",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-invalid-import-backup-1280.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1302,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 284,
+        "y": 290,
+        "size": "80px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 284,
+        "y": 748,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 813,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 999,
+        "size": "18.56px"
+      },
+      {
+        "text": "Settings",
+        "x": 383,
+        "y": -773,
+        "size": "24px"
+      },
+      {
+        "text": "Reader backups",
+        "x": 383,
+        "y": 528,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/reading/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-spanish-settings-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1519,
+    "headings": [
+      {
+        "text": "Ajustes de Reader",
+        "x": 284,
+        "y": 204,
+        "size": "40px"
+      },
+      {
+        "text": "Preferencias de Reader",
+        "x": 284,
+        "y": 272,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-review",
+    "url": "/daily/#/reading/review",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-spanish-review-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1088,
+    "headings": [
+      {
+        "text": "Último repaso disponible",
+        "x": 284,
+        "y": 200,
+        "size": "48px"
+      }
+    ]
+  },
+  {
+    "name": "review-options",
+    "url": "/daily/#/reading/review",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-options-1280.png",
+    "fullPage": false,
+    "sections": [
+      {
+        "name": "feedback",
+        "file": "/workspaces/daily/reports/visual-review/reading/after/state-review-options-feedback-1280.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1134,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 284,
+        "y": -86,
+        "size": "48px"
+      }
+    ]
+  }
+]

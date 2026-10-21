@@ -1,0 +1,581 @@
+[
+  {
+    "page": "plants",
+    "url": "/daily/#/plants",
+    "index": 1,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/01-plants-320.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Plants",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Care needing attention",
+        "x": 20,
+        "y": 233,
+        "size": "18.4px"
+      },
+      {
+        "text": "All plants",
+        "x": 20,
+        "y": 470,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "page": "plants",
+    "url": "/daily/#/plants",
+    "index": 1,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/01-plants-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Plants",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Care needing attention",
+        "x": 20,
+        "y": 233,
+        "size": "18.4px"
+      },
+      {
+        "text": "All plants",
+        "x": 20,
+        "y": 470,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "page": "plants",
+    "url": "/daily/#/plants",
+    "index": 1,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/01-plants-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Plants",
+        "x": 284,
+        "y": 172,
+        "size": "30px"
+      },
+      {
+        "text": "Care needing attention",
+        "x": 284,
+        "y": 237,
+        "size": "18.4px"
+      },
+      {
+        "text": "All plants",
+        "x": 284,
+        "y": 474,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "page": "plantNew",
+    "url": "/daily/#/plants/new",
+    "index": 2,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/02-plantNew-320.png",
+    "overflow": 0,
+    "height": 1557,
+    "headings": [
+      {
+        "text": "Add plant",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Identity",
+        "x": 20,
+        "y": 325,
+        "size": "16px"
+      },
+      {
+        "text": "Care schedule",
+        "x": 20,
+        "y": 897,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "plantNew",
+    "url": "/daily/#/plants/new",
+    "index": 2,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/02-plantNew-390.png",
+    "overflow": 0,
+    "height": 1521,
+    "headings": [
+      {
+        "text": "Add plant",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Identity",
+        "x": 20,
+        "y": 325,
+        "size": "16px"
+      },
+      {
+        "text": "Care schedule",
+        "x": 20,
+        "y": 897,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "plantNew",
+    "url": "/daily/#/plants/new",
+    "index": 2,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/02-plantNew-1280.png",
+    "overflow": 0,
+    "height": 1477,
+    "headings": [
+      {
+        "text": "Add plant",
+        "x": 284,
+        "y": 172,
+        "size": "30px"
+      },
+      {
+        "text": "Identity",
+        "x": 284,
+        "y": 329,
+        "size": "16px"
+      },
+      {
+        "text": "Care schedule",
+        "x": 284,
+        "y": 901,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "plantSettings",
+    "url": "/daily/#/plants/settings",
+    "index": 3,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/03-plantSettings-320.png",
+    "overflow": 0,
+    "height": 1121,
+    "headings": [
+      {
+        "text": "Plant settings",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Stillgreen to Things",
+        "x": 20,
+        "y": 233,
+        "size": "12px"
+      },
+      {
+        "text": "Backups",
+        "x": 20,
+        "y": 586,
+        "size": "12px"
+      }
+    ]
+  },
+  {
+    "page": "plantSettings",
+    "url": "/daily/#/plants/settings",
+    "index": 3,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/03-plantSettings-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Plant settings",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Stillgreen to Things",
+        "x": 20,
+        "y": 233,
+        "size": "12px"
+      },
+      {
+        "text": "Backups",
+        "x": 20,
+        "y": 560,
+        "size": "12px"
+      }
+    ]
+  },
+  {
+    "page": "plantSettings",
+    "url": "/daily/#/plants/settings",
+    "index": 3,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/03-plantSettings-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Plant settings",
+        "x": 284,
+        "y": 172,
+        "size": "30px"
+      },
+      {
+        "text": "Stillgreen to Things",
+        "x": 284,
+        "y": 237,
+        "size": "12px"
+      },
+      {
+        "text": "Backups",
+        "x": 284,
+        "y": 513,
+        "size": "12px"
+      }
+    ]
+  },
+  {
+    "page": "plantEdit",
+    "url": "/daily/#/plants/plant-one/edit",
+    "index": 4,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/04-plantEdit-320.png",
+    "overflow": 0,
+    "height": 1469,
+    "headings": [
+      {
+        "text": "Edit plant",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Identity",
+        "x": 20,
+        "y": 237,
+        "size": "16px"
+      },
+      {
+        "text": "Care schedule",
+        "x": 20,
+        "y": 809,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "plantEdit",
+    "url": "/daily/#/plants/plant-one/edit",
+    "index": 4,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/04-plantEdit-390.png",
+    "overflow": 0,
+    "height": 1433,
+    "headings": [
+      {
+        "text": "Edit plant",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Identity",
+        "x": 20,
+        "y": 237,
+        "size": "16px"
+      },
+      {
+        "text": "Care schedule",
+        "x": 20,
+        "y": 809,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "plantEdit",
+    "url": "/daily/#/plants/plant-one/edit",
+    "index": 4,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/04-plantEdit-1280.png",
+    "overflow": 0,
+    "height": 1389,
+    "headings": [
+      {
+        "text": "Edit plant",
+        "x": 284,
+        "y": 172,
+        "size": "30px"
+      },
+      {
+        "text": "Identity",
+        "x": 284,
+        "y": 241,
+        "size": "16px"
+      },
+      {
+        "text": "Care schedule",
+        "x": 284,
+        "y": 813,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "plant",
+    "url": "/daily/#/plants/plant-one",
+    "index": 5,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/05-plant-320.png",
+    "overflow": 0,
+    "height": 1608,
+    "headings": [
+      {
+        "text": "Monstera 🌿",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Observation",
+        "x": 20,
+        "y": 933,
+        "size": "16px"
+      },
+      {
+        "text": "Care history",
+        "x": 20,
+        "y": 1246,
+        "size": "20.8px"
+      }
+    ]
+  },
+  {
+    "page": "plant",
+    "url": "/daily/#/plants/plant-one",
+    "index": 5,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/05-plant-390.png",
+    "overflow": 0,
+    "height": 1482,
+    "headings": [
+      {
+        "text": "Monstera 🌿",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Observation",
+        "x": 20,
+        "y": 830,
+        "size": "16px"
+      },
+      {
+        "text": "Care history",
+        "x": 20,
+        "y": 1143,
+        "size": "20.8px"
+      }
+    ]
+  },
+  {
+    "page": "plant",
+    "url": "/daily/#/plants/plant-one",
+    "index": 5,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/05-plant-1280.png",
+    "overflow": 0,
+    "height": 1435,
+    "headings": [
+      {
+        "text": "Monstera 🌿",
+        "x": 284,
+        "y": 172,
+        "size": "30px"
+      },
+      {
+        "text": "Observation",
+        "x": 284,
+        "y": 834,
+        "size": "16px"
+      },
+      {
+        "text": "Care history",
+        "x": 284,
+        "y": 1147,
+        "size": "20.8px"
+      }
+    ]
+  },
+  {
+    "page": "plant",
+    "url": "/daily/#/plants/plant-one",
+    "mode": "care",
+    "index": 6,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/06-plant-care-320.png",
+    "overflow": 0,
+    "height": 1922,
+    "headings": [
+      {
+        "text": "Monstera 🌿",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Observation",
+        "x": 20,
+        "y": 1247,
+        "size": "16px"
+      },
+      {
+        "text": "Care history",
+        "x": 20,
+        "y": 1560,
+        "size": "20.8px"
+      }
+    ]
+  },
+  {
+    "page": "plant",
+    "url": "/daily/#/plants/plant-one",
+    "mode": "care",
+    "index": 6,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/06-plant-care-390.png",
+    "overflow": 0,
+    "height": 1796,
+    "headings": [
+      {
+        "text": "Monstera 🌿",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      },
+      {
+        "text": "Observation",
+        "x": 20,
+        "y": 1144,
+        "size": "16px"
+      },
+      {
+        "text": "Care history",
+        "x": 20,
+        "y": 1457,
+        "size": "20.8px"
+      }
+    ]
+  },
+  {
+    "page": "plant",
+    "url": "/daily/#/plants/plant-one",
+    "mode": "care",
+    "index": 6,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/06-plant-care-1280.png",
+    "overflow": 0,
+    "height": 1749,
+    "headings": [
+      {
+        "text": "Monstera 🌿",
+        "x": 284,
+        "y": 172,
+        "size": "30px"
+      },
+      {
+        "text": "Observation",
+        "x": 284,
+        "y": 1148,
+        "size": "16px"
+      },
+      {
+        "text": "Care history",
+        "x": 284,
+        "y": 1461,
+        "size": "20.8px"
+      }
+    ]
+  },
+  {
+    "page": "plants",
+    "url": "/daily/#/plants",
+    "mode": "empty",
+    "index": 7,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/07-plants-empty-320.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Plants",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      }
+    ]
+  },
+  {
+    "page": "plants",
+    "url": "/daily/#/plants",
+    "mode": "empty",
+    "index": 7,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/07-plants-empty-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Plants",
+        "x": 20,
+        "y": 168,
+        "size": "30px"
+      }
+    ]
+  },
+  {
+    "page": "plants",
+    "url": "/daily/#/plants",
+    "mode": "empty",
+    "index": 7,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/after/07-plants-empty-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Plants",
+        "x": 284,
+        "y": 172,
+        "size": "30px"
+      }
+    ]
+  }
+]

@@ -67,6 +67,7 @@ function render(context) {
   const host = context.content;
   host.replaceChildren();
   const status = element('p', 'status', message(snapshot, context.spanish));
+  status.classList.toggle('error', snapshot.status === 'error');
   status.dataset.reviewStatus = '';
   status.setAttribute('role', 'status');
   status.setAttribute('aria-live', 'polite');

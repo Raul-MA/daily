@@ -33,7 +33,7 @@ export function renderStats(data) {
         <span>${copy("Games")}</span>
         <h2>${copy("Game records")}</h2>
       </div>
-      <div class="stats-grid" data-testid="${testIds.gameStatsView}">
+      <div class="stats-grid game-records-grid" data-testid="${testIds.gameStatsView}">
         ${renderGameRecords(data, stats)}
       </div>
     </section>

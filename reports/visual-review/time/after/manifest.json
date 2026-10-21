@@ -1,0 +1,287 @@
+[
+  {
+    "page": "time",
+    "url": "/daily/#/time",
+    "index": 1,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/after/01-time-320.png",
+    "overflow": 0,
+    "height": 1428,
+    "headings": [
+      {
+        "text": "Focus 🌱",
+        "x": 97,
+        "y": 359,
+        "size": "32px"
+      },
+      {
+        "text": "Task queue",
+        "x": 45,
+        "y": 1034,
+        "size": "22px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time",
+    "index": 1,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/after/01-time-390.png",
+    "overflow": 0,
+    "height": 1428,
+    "headings": [
+      {
+        "text": "Focus 🌱",
+        "x": 132,
+        "y": 359,
+        "size": "32px"
+      },
+      {
+        "text": "Task queue",
+        "x": 45,
+        "y": 1034,
+        "size": "22px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time",
+    "index": 1,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/after/01-time-1280.png",
+    "overflow": 0,
+    "height": 1108,
+    "headings": [
+      {
+        "text": "Focus 🌱",
+        "x": 489,
+        "y": 409,
+        "size": "54px"
+      },
+      {
+        "text": "Task queue",
+        "x": 947,
+        "y": 504,
+        "size": "22px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time?section=settings",
+    "mode": "settings",
+    "index": 2,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/after/02-time-settings-320.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Settings",
+        "x": 37,
+        "y": 281,
+        "size": "32px"
+      },
+      {
+        "text": "Backups",
+        "x": 37,
+        "y": 340,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time?section=settings",
+    "mode": "settings",
+    "index": 2,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/after/02-time-settings-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Settings",
+        "x": 37,
+        "y": 281,
+        "size": "32px"
+      },
+      {
+        "text": "Backups",
+        "x": 37,
+        "y": 340,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time?section=settings",
+    "mode": "settings",
+    "index": 2,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/after/02-time-settings-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Settings",
+        "x": 309,
+        "y": 293,
+        "size": "32px"
+      },
+      {
+        "text": "Backups",
+        "x": 309,
+        "y": 352,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time",
+    "mode": "setup",
+    "index": 3,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/after/03-time-setup-320.png",
+    "overflow": 0,
+    "height": 1557,
+    "headings": [
+      {
+        "text": "Make every minute count.",
+        "x": 20,
+        "y": 260,
+        "size": "42px"
+      },
+      {
+        "text": "Choose your finish time",
+        "x": 75,
+        "y": 537,
+        "size": "20px"
+      },
+      {
+        "text": "Build your plan",
+        "x": 75,
+        "y": 787,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time",
+    "mode": "setup",
+    "index": 3,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/after/03-time-setup-390.png",
+    "overflow": 0,
+    "height": 1497,
+    "headings": [
+      {
+        "text": "Make every minute count.",
+        "x": 20,
+        "y": 260,
+        "size": "50.7px"
+      },
+      {
+        "text": "Choose your finish time",
+        "x": 75,
+        "y": 541,
+        "size": "20px"
+      },
+      {
+        "text": "Build your plan",
+        "x": 75,
+        "y": 749,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time",
+    "mode": "setup",
+    "index": 3,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/after/03-time-setup-1280.png",
+    "overflow": 0,
+    "height": 1451,
+    "headings": [
+      {
+        "text": "Make every minute count.",
+        "x": 284,
+        "y": 328,
+        "size": "76px"
+      },
+      {
+        "text": "Choose your finish time",
+        "x": 357,
+        "y": 618,
+        "size": "20px"
+      },
+      {
+        "text": "Build your plan",
+        "x": 357,
+        "y": 845,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time",
+    "mode": "countdowns",
+    "index": 4,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/after/04-time-countdowns-320.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Countdowns",
+        "x": 37,
+        "y": 27,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time",
+    "mode": "countdowns",
+    "index": 4,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/after/04-time-countdowns-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Countdowns",
+        "x": 37,
+        "y": 27,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "page": "time",
+    "url": "/daily/#/time",
+    "mode": "countdowns",
+    "index": 4,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/after/04-time-countdowns-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Countdowns",
+        "x": 309,
+        "y": 91,
+        "size": "24px"
+      }
+    ]
+  }
+]

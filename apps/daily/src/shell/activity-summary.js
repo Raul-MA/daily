@@ -46,8 +46,8 @@ export function refreshActivityTimes(root, state) {
     }
 }
 function message(language, key) {
-    const en = { empty: 'No activities running.', running: 'Running activities', error: 'Saved activities could not be read.' };
-    const es = { empty: 'No hay actividades en marcha.', running: 'Actividades en marcha', error: 'No se pudieron leer las actividades guardadas.' };
+    const en = { empty: 'No activities running.', running: 'Running activities', compact: 'Running', error: 'Saved activities could not be read.' };
+    const es = { empty: 'No hay actividades en marcha.', running: 'Actividades en marcha', compact: 'En marcha', error: 'No se pudieron leer las actividades guardadas.' };
     return (language === 'es' ? es : en)[key];
 }
 function activityEntry(item, context) {
@@ -60,9 +60,28 @@ function activityEntry(item, context) {
 }
 function fillActivities(section, context, compact) {
     const active = createActivities(context.state).list().filter(item => item.status !== 'completed');
+    const list = compact ? runningDisclosure(section, context, active.length) : section;
     for (const item of active)
-        section.append(activityEntry(item, context));
+        list.append(activityEntry(item, context));
     if (!active.length && !compact)
         section.append(element('p', 'widget-note', message(context.language, 'empty')));
     section.hidden = compact && active.length === 0;
+}
+
+function runningDisclosure(section, context, count) {
+    const button = element('button', 'running-toggle');
+    button.type = 'button';
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-controls', 'daily-running-entries');
+    button.append(element('span', '', `${message(context.language, 'compact')} · ${count}`));
+    const chevron = element('span', 'running-chevron', '⌄');
+    chevron.setAttribute('aria-hidden', 'true');
+    button.append(chevron);
+    const list = element('div', 'running-entries');
+    list.id = 'daily-running-entries';
+    button.addEventListener('click', () => {
+        button.setAttribute('aria-expanded', String(button.getAttribute('aria-expanded') !== 'true'));
+    });
+    section.append(button, list);
+    return list;
 }

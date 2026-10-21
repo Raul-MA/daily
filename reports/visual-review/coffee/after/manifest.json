@@ -1,0 +1,863 @@
+[
+  {
+    "page": "coffee",
+    "url": "/daily/#/coffee",
+    "index": 1,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/01-coffee-320.png",
+    "overflow": 0,
+    "height": 3853,
+    "headings": [
+      {
+        "text": "New Drink",
+        "x": 68,
+        "y": 276,
+        "size": "36.8px"
+      },
+      {
+        "text": "Meta",
+        "x": 20,
+        "y": 496,
+        "size": "24.8px"
+      },
+      {
+        "text": "Grind",
+        "x": 20,
+        "y": 1028,
+        "size": "24.8px"
+      },
+      {
+        "text": "Prep",
+        "x": 20,
+        "y": 1321,
+        "size": "24.8px"
+      },
+      {
+        "text": "Brew",
+        "x": 20,
+        "y": 1510,
+        "size": "24.8px"
+      },
+      {
+        "text": "Visual",
+        "x": 20,
+        "y": 1968,
+        "size": "24.8px"
+      },
+      {
+        "text": "Taste",
+        "x": 20,
+        "y": 2257,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffee",
+    "url": "/daily/#/coffee",
+    "index": 1,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/01-coffee-390.png",
+    "overflow": 0,
+    "height": 3793,
+    "headings": [
+      {
+        "text": "New Drink",
+        "x": 68,
+        "y": 255,
+        "size": "36.8px"
+      },
+      {
+        "text": "Meta",
+        "x": 20,
+        "y": 451,
+        "size": "24.8px"
+      },
+      {
+        "text": "Grind",
+        "x": 20,
+        "y": 968,
+        "size": "24.8px"
+      },
+      {
+        "text": "Prep",
+        "x": 20,
+        "y": 1261,
+        "size": "24.8px"
+      },
+      {
+        "text": "Brew",
+        "x": 20,
+        "y": 1450,
+        "size": "24.8px"
+      },
+      {
+        "text": "Visual",
+        "x": 20,
+        "y": 1908,
+        "size": "24.8px"
+      },
+      {
+        "text": "Taste",
+        "x": 20,
+        "y": 2197,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffee",
+    "url": "/daily/#/coffee",
+    "index": 1,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/01-coffee-1280.png",
+    "overflow": 0,
+    "height": 2505,
+    "headings": [
+      {
+        "text": "New Drink",
+        "x": 344,
+        "y": 240,
+        "size": "88px"
+      },
+      {
+        "text": "Meta",
+        "x": 284,
+        "y": 462,
+        "size": "44.8px"
+      },
+      {
+        "text": "Grind",
+        "x": 284,
+        "y": 788,
+        "size": "44.8px"
+      },
+      {
+        "text": "Prep",
+        "x": 284,
+        "y": 954,
+        "size": "44.8px"
+      },
+      {
+        "text": "Brew",
+        "x": 284,
+        "y": 1071,
+        "size": "44.8px"
+      },
+      {
+        "text": "Visual",
+        "x": 284,
+        "y": 1370,
+        "size": "44.8px"
+      },
+      {
+        "text": "Taste",
+        "x": 284,
+        "y": 1532,
+        "size": "44.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeNew",
+    "url": "/daily/#/coffee/new",
+    "index": 2,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/02-coffeeNew-320.png",
+    "overflow": 0,
+    "height": 3853,
+    "headings": [
+      {
+        "text": "New Drink",
+        "x": 68,
+        "y": 276,
+        "size": "36.8px"
+      },
+      {
+        "text": "Meta",
+        "x": 20,
+        "y": 496,
+        "size": "24.8px"
+      },
+      {
+        "text": "Grind",
+        "x": 20,
+        "y": 1028,
+        "size": "24.8px"
+      },
+      {
+        "text": "Prep",
+        "x": 20,
+        "y": 1321,
+        "size": "24.8px"
+      },
+      {
+        "text": "Brew",
+        "x": 20,
+        "y": 1510,
+        "size": "24.8px"
+      },
+      {
+        "text": "Visual",
+        "x": 20,
+        "y": 1968,
+        "size": "24.8px"
+      },
+      {
+        "text": "Taste",
+        "x": 20,
+        "y": 2257,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeNew",
+    "url": "/daily/#/coffee/new",
+    "index": 2,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/02-coffeeNew-390.png",
+    "overflow": 0,
+    "height": 3793,
+    "headings": [
+      {
+        "text": "New Drink",
+        "x": 68,
+        "y": 255,
+        "size": "36.8px"
+      },
+      {
+        "text": "Meta",
+        "x": 20,
+        "y": 451,
+        "size": "24.8px"
+      },
+      {
+        "text": "Grind",
+        "x": 20,
+        "y": 968,
+        "size": "24.8px"
+      },
+      {
+        "text": "Prep",
+        "x": 20,
+        "y": 1261,
+        "size": "24.8px"
+      },
+      {
+        "text": "Brew",
+        "x": 20,
+        "y": 1450,
+        "size": "24.8px"
+      },
+      {
+        "text": "Visual",
+        "x": 20,
+        "y": 1908,
+        "size": "24.8px"
+      },
+      {
+        "text": "Taste",
+        "x": 20,
+        "y": 2197,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeNew",
+    "url": "/daily/#/coffee/new",
+    "index": 2,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/02-coffeeNew-1280.png",
+    "overflow": 0,
+    "height": 2505,
+    "headings": [
+      {
+        "text": "New Drink",
+        "x": 344,
+        "y": 240,
+        "size": "88px"
+      },
+      {
+        "text": "Meta",
+        "x": 284,
+        "y": 462,
+        "size": "44.8px"
+      },
+      {
+        "text": "Grind",
+        "x": 284,
+        "y": 788,
+        "size": "44.8px"
+      },
+      {
+        "text": "Prep",
+        "x": 284,
+        "y": 954,
+        "size": "44.8px"
+      },
+      {
+        "text": "Brew",
+        "x": 284,
+        "y": 1071,
+        "size": "44.8px"
+      },
+      {
+        "text": "Visual",
+        "x": 284,
+        "y": 1370,
+        "size": "44.8px"
+      },
+      {
+        "text": "Taste",
+        "x": 284,
+        "y": 1532,
+        "size": "44.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeHistory",
+    "url": "/daily/#/coffee/history",
+    "index": 3,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/03-coffeeHistory-320.png",
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "History",
+        "x": 68,
+        "y": 172,
+        "size": "36.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeHistory",
+    "url": "/daily/#/coffee/history",
+    "index": 3,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/03-coffeeHistory-390.png",
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "History",
+        "x": 68,
+        "y": 172,
+        "size": "36.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeHistory",
+    "url": "/daily/#/coffee/history",
+    "index": 3,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/03-coffeeHistory-1280.png",
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "History",
+        "x": 344,
+        "y": 172,
+        "size": "88px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeInsights",
+    "url": "/daily/#/coffee/insights",
+    "index": 4,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/04-coffeeInsights-320.png",
+    "overflow": 0,
+    "height": 1116,
+    "headings": [
+      {
+        "text": "Insights",
+        "x": 68,
+        "y": 172,
+        "size": "36.8px"
+      },
+      {
+        "text": "No scored drinks yet",
+        "x": 20,
+        "y": 778,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeInsights",
+    "url": "/daily/#/coffee/insights",
+    "index": 4,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/04-coffeeInsights-390.png",
+    "overflow": 0,
+    "height": 1088,
+    "headings": [
+      {
+        "text": "Insights",
+        "x": 68,
+        "y": 172,
+        "size": "36.8px"
+      },
+      {
+        "text": "No scored drinks yet",
+        "x": 20,
+        "y": 778,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeInsights",
+    "url": "/daily/#/coffee/insights",
+    "index": 4,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/04-coffeeInsights-1280.png",
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Insights",
+        "x": 344,
+        "y": 172,
+        "size": "88px"
+      },
+      {
+        "text": "No scored drinks yet",
+        "x": 284,
+        "y": 552,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeSettings",
+    "url": "/daily/#/coffee/settings",
+    "index": 5,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/05-coffeeSettings-320.png",
+    "overflow": 0,
+    "height": 2117,
+    "headings": [
+      {
+        "text": "Settings",
+        "x": 68,
+        "y": 172,
+        "size": "36.8px"
+      },
+      {
+        "text": "Bean Presets",
+        "x": 20,
+        "y": 392,
+        "size": "24.8px"
+      },
+      {
+        "text": "Preferences",
+        "x": 20,
+        "y": 912,
+        "size": "24.8px"
+      },
+      {
+        "text": "Data",
+        "x": 20,
+        "y": 1607,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeSettings",
+    "url": "/daily/#/coffee/settings",
+    "index": 5,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/05-coffeeSettings-390.png",
+    "overflow": 0,
+    "height": 2037,
+    "headings": [
+      {
+        "text": "Settings",
+        "x": 68,
+        "y": 172,
+        "size": "36.8px"
+      },
+      {
+        "text": "Bean Presets",
+        "x": 20,
+        "y": 368,
+        "size": "24.8px"
+      },
+      {
+        "text": "Preferences",
+        "x": 20,
+        "y": 888,
+        "size": "24.8px"
+      },
+      {
+        "text": "Data",
+        "x": 20,
+        "y": 1583,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeSettings",
+    "url": "/daily/#/coffee/settings",
+    "index": 5,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/05-coffeeSettings-1280.png",
+    "overflow": 0,
+    "height": 1338,
+    "headings": [
+      {
+        "text": "Settings",
+        "x": 344,
+        "y": 172,
+        "size": "88px"
+      },
+      {
+        "text": "Bean Presets",
+        "x": 284,
+        "y": 394,
+        "size": "44.8px"
+      },
+      {
+        "text": "Preferences",
+        "x": 284,
+        "y": 575,
+        "size": "44.8px"
+      },
+      {
+        "text": "Data",
+        "x": 284,
+        "y": 1015,
+        "size": "44.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeEntryEdit",
+    "url": "/daily/#/coffee/entry/c42ac89b-11b5-4f27-b913-45875001eaa4/edit",
+    "index": 6,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/06-coffeeEntryEdit-320.png",
+    "overflow": 0,
+    "height": 3749,
+    "headings": [
+      {
+        "text": "Edit Drink",
+        "x": 68,
+        "y": 172,
+        "size": "36.8px"
+      },
+      {
+        "text": "Meta",
+        "x": 20,
+        "y": 392,
+        "size": "24.8px"
+      },
+      {
+        "text": "Grind",
+        "x": 20,
+        "y": 924,
+        "size": "24.8px"
+      },
+      {
+        "text": "Prep",
+        "x": 20,
+        "y": 1217,
+        "size": "24.8px"
+      },
+      {
+        "text": "Brew",
+        "x": 20,
+        "y": 1406,
+        "size": "24.8px"
+      },
+      {
+        "text": "Visual",
+        "x": 20,
+        "y": 1864,
+        "size": "24.8px"
+      },
+      {
+        "text": "Taste",
+        "x": 20,
+        "y": 2153,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeEntryEdit",
+    "url": "/daily/#/coffee/entry/c42ac89b-11b5-4f27-b913-45875001eaa4/edit",
+    "index": 6,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/06-coffeeEntryEdit-390.png",
+    "overflow": 0,
+    "height": 3710,
+    "headings": [
+      {
+        "text": "Edit Drink",
+        "x": 68,
+        "y": 172,
+        "size": "36.8px"
+      },
+      {
+        "text": "Meta",
+        "x": 20,
+        "y": 368,
+        "size": "24.8px"
+      },
+      {
+        "text": "Grind",
+        "x": 20,
+        "y": 885,
+        "size": "24.8px"
+      },
+      {
+        "text": "Prep",
+        "x": 20,
+        "y": 1178,
+        "size": "24.8px"
+      },
+      {
+        "text": "Brew",
+        "x": 20,
+        "y": 1367,
+        "size": "24.8px"
+      },
+      {
+        "text": "Visual",
+        "x": 20,
+        "y": 1825,
+        "size": "24.8px"
+      },
+      {
+        "text": "Taste",
+        "x": 20,
+        "y": 2114,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeEntryEdit",
+    "url": "/daily/#/coffee/entry/c42ac89b-11b5-4f27-b913-45875001eaa4/edit",
+    "index": 6,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/06-coffeeEntryEdit-1280.png",
+    "overflow": 0,
+    "height": 2437,
+    "headings": [
+      {
+        "text": "Edit Drink",
+        "x": 344,
+        "y": 172,
+        "size": "88px"
+      },
+      {
+        "text": "Meta",
+        "x": 284,
+        "y": 394,
+        "size": "44.8px"
+      },
+      {
+        "text": "Grind",
+        "x": 284,
+        "y": 720,
+        "size": "44.8px"
+      },
+      {
+        "text": "Prep",
+        "x": 284,
+        "y": 886,
+        "size": "44.8px"
+      },
+      {
+        "text": "Brew",
+        "x": 284,
+        "y": 1003,
+        "size": "44.8px"
+      },
+      {
+        "text": "Visual",
+        "x": 284,
+        "y": 1302,
+        "size": "44.8px"
+      },
+      {
+        "text": "Taste",
+        "x": 284,
+        "y": 1464,
+        "size": "44.8px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeEntry",
+    "url": "/daily/#/coffee/entry/c42ac89b-11b5-4f27-b913-45875001eaa4",
+    "index": 7,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/07-coffeeEntry-320.png",
+    "overflow": 0,
+    "height": 3660,
+    "headings": [
+      {
+        "text": "Drink Detail",
+        "x": 68,
+        "y": 172,
+        "size": "36.8px"
+      },
+      {
+        "text": "Meta",
+        "x": 20,
+        "y": 510,
+        "size": "22.4px"
+      },
+      {
+        "text": "Grind",
+        "x": 20,
+        "y": 1209,
+        "size": "22.4px"
+      },
+      {
+        "text": "Prep",
+        "x": 20,
+        "y": 1451,
+        "size": "22.4px"
+      },
+      {
+        "text": "Brew",
+        "x": 20,
+        "y": 1998,
+        "size": "22.4px"
+      },
+      {
+        "text": "Visual",
+        "x": 20,
+        "y": 2393,
+        "size": "22.4px"
+      },
+      {
+        "text": "Taste",
+        "x": 20,
+        "y": 2636,
+        "size": "22.4px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeEntry",
+    "url": "/daily/#/coffee/entry/c42ac89b-11b5-4f27-b913-45875001eaa4",
+    "index": 7,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/07-coffeeEntry-390.png",
+    "overflow": 0,
+    "height": 3653,
+    "headings": [
+      {
+        "text": "Drink Detail",
+        "x": 68,
+        "y": 172,
+        "size": "36.8px"
+      },
+      {
+        "text": "Meta",
+        "x": 20,
+        "y": 503,
+        "size": "22.4px"
+      },
+      {
+        "text": "Grind",
+        "x": 20,
+        "y": 1202,
+        "size": "22.4px"
+      },
+      {
+        "text": "Prep",
+        "x": 20,
+        "y": 1444,
+        "size": "22.4px"
+      },
+      {
+        "text": "Brew",
+        "x": 20,
+        "y": 1991,
+        "size": "22.4px"
+      },
+      {
+        "text": "Visual",
+        "x": 20,
+        "y": 2386,
+        "size": "22.4px"
+      },
+      {
+        "text": "Taste",
+        "x": 20,
+        "y": 2628,
+        "size": "22.4px"
+      }
+    ]
+  },
+  {
+    "page": "coffeeEntry",
+    "url": "/daily/#/coffee/entry/c42ac89b-11b5-4f27-b913-45875001eaa4",
+    "index": 7,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/coffee/after/07-coffeeEntry-1280.png",
+    "overflow": 0,
+    "height": 2160,
+    "headings": [
+      {
+        "text": "Drink Detail",
+        "x": 344,
+        "y": 172,
+        "size": "88px"
+      },
+      {
+        "text": "Meta",
+        "x": 284,
+        "y": 616,
+        "size": "38.4px"
+      },
+      {
+        "text": "Grind",
+        "x": 284,
+        "y": 953,
+        "size": "38.4px"
+      },
+      {
+        "text": "Prep",
+        "x": 284,
+        "y": 1062,
+        "size": "38.4px"
+      },
+      {
+        "text": "Brew",
+        "x": 284,
+        "y": 1323,
+        "size": "38.4px"
+      },
+      {
+        "text": "Visual",
+        "x": 284,
+        "y": 1509,
+        "size": "38.4px"
+      },
+      {
+        "text": "Taste",
+        "x": 284,
+        "y": 1618,
+        "size": "38.4px"
+      }
+    ]
+  }
+]

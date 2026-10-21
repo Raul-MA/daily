@@ -41,3 +41,5 @@ The [imported exercise player](exercise-player.md) is a separate Library destina
 ## App settings
 
 `#/piano/settings` owns new-practice defaults: whole minutes from 3–120 and At the piano. The explicit save uses the existing versioned service and stale/quota protections; opening the page creates no practice. New setup reads these saved values; a running session keeps its own duration and piano choice. EN/ES remounts preserve unsaved fields and their original document revision. Per-exercise tempo, sound, loops and imported-player preferences stay inside their exercises.
+
+Piano owns its settings form styling and shares its green palette, typography and touch-target sizing with practice/player controls. The visual review also aligns desktop gutters with the shell and separates exercise mode controls from the header. These CSS refinements do not change practice defaults, clocks or musical content.

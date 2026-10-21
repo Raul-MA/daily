@@ -146,7 +146,7 @@
   margin: 0 auto;
   max-width: none;
   width: 100%;
-  padding: 1rem 1rem 7.5rem;
+  padding: 24px 20px 40px;
 }
 [data-module="games"] .toast-stack {
   left: 1rem;
@@ -473,8 +473,8 @@
   background: var(--accent-piece-soft);
   border-color: color-mix(in srgb, var(--danger) 35%, var(--line));
   color: var(--danger);
-  min-height: 2rem;
-  padding: 0.25rem 0.65rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.65rem;
 }
 [data-module="games"] .score-grid {
   display: grid;
@@ -744,7 +744,7 @@
   }
 [data-module="games"] .workspace {
     max-width: none;
-    padding: 2rem;
+    padding: 24px 36px 40px;
     width: 100%;
   }
 [data-module="games"] .bottom-nav {
@@ -755,11 +755,38 @@
     font-size: 3.2rem;
   }
 [data-module="games"] .stats-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   }
 }
 
 [data-module="games"] { display: block; min-width: 0; }
 [data-module="games"] .bottom-nav { padding-bottom: env(safe-area-inset-bottom); }
-[data-module="games"] .toast-stack { top: calc(env(safe-area-inset-top) + 88px); pointer-events: none; }
+[data-module="games"] .toast-stack { top: auto; bottom: max(20px, env(safe-area-inset-bottom)); left: calc(var(--sidebar-offset, 0px) + 20px); right: 20px; z-index: 30; pointer-events: none; }
 [data-module="games"] .toast-stack .toast { pointer-events: auto; }
+
+[data-module="games"] .app-shell:has(.toast.backup) { display: flex; flex-direction: column; }
+[data-module="games"] .toast-stack:has(.toast.backup) { position: static; order: -1; margin: 20px 20px 0; inset: auto; z-index: auto; }
+[data-module="games"] .toast.backup { max-width: none; }
+[data-module="games"] .view-header h1, [data-module="games"] .session-top h1 { line-height: 1.1; overflow-wrap: anywhere; }
+[data-module="games"] .notice, [data-module="games"] .list-row p { line-height: 1.5; }
+[data-module="games"] .records-section { margin-block: 24px; }
+[data-module="games"] .resume-block > :first-child { min-width: 0; overflow-wrap: anywhere; }
+[data-module="games"] .session-top > :first-child { flex: 1; min-width: 0; }
+[data-module="games"] .session-top > :last-child { flex-shrink: 0; }
+[data-module="games"] .session-view { min-width: 0; grid-template-columns: minmax(0, 1fr); }
+[data-module="games"] .time-grid > label, [data-module="games"] .time-grid input { min-width: 0; }
+[data-module="games"] .game-detail .session-top { flex-wrap: wrap; }
+[data-module="games"] .game-detail .session-top > :first-child { flex-basis: 140px; }
+[data-module="games"] .session-top .row-actions { display: flex; width: auto; gap: 8px; }
+[data-module="games"] dialog[data-games-import-preview] { box-sizing: border-box; width: min(560px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); margin: auto; padding: 24px; overflow-y: auto; border: 1px solid var(--line); border-radius: 8px; color: var(--text); background: var(--surface); }
+[data-module="games"] dialog[data-games-import-preview] h2 { margin: 0 0 16px; font-size: 22px; line-height: 1.2; }
+[data-module="games"] dialog[data-games-import-preview] p { margin: 0 0 16px; line-height: 1.6; }
+[data-module="games"] dialog[data-games-import-preview] button { max-width: 100%; margin: 8px 8px 0 0; white-space: normal; line-height: 1.4; }
+@media (min-width: 720px) {
+  [data-module="games"] .workspace { padding: 24px 36px 40px; }
+  [data-module="games"] .toast-stack:has(.toast.backup) { margin-inline: 36px; }
+}
+@media (max-width: 500px) { [data-module="games"] .metric-grid.compact { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+[data-module="games"] .app-shell:has(.settings) .toast-stack:has(.toast.backup) { display: none; }
+@media (min-width: 900px) { [data-module="games"] .game-records-grid .stat-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

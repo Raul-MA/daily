@@ -6,6 +6,8 @@ Crois keeps its drink forms, beans, history, insights, preparation tools, theme 
 
 ## How It Works
 
+- Visual review retains the app palette and typography. Native page gutters match the shared shell (20px phone, 36px desktop); root/app-shell padding must not be counted twice. Scoped styles own touch targets, wrapping narrow rows and bounded themed dialogs. Screenshot/checklist evidence lives in `reports/visual-review/coffee/tasks.md`; automated suites remain stopped for this review.
+
 - Source: `coffee-tracker`, commit `8711d56c1330d6ce626662bbf98fb440eb2e10c4`. File hashes and destinations are in `reports/coffee-source-map.json`. Original repositories are unchanged.
 - `src/service.js` binds the retained backend API to `daily:v1.modules.coffee = { version: 1, data }`. Data retains `schemaVersion: 1`, entries, bean presets and normalized settings. `src/validation.js` adds duplicate-ID, referenced-bean and settings checks. Read/navigation never creates a module or starter bean.
 - `src/backend/features/` retains ratio/composition calculations, roast age, explicit skipped taste values, tool ownership, immutable entry identity, filters, sorting and insights. Drink changes clear irrelevant milk/water fields. Used beans cannot be deleted.

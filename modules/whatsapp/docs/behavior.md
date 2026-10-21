@@ -42,3 +42,5 @@ A separate read-only export page and checked patch are prepared in [legacy/expor
 ## App settings
 
 `#/whatsapp/settings` owns the WhatsApp settings destination, accessible from the hub and its app menu. It presents the existing protected draft backup/import controls without displaying the composer. The composer remains mounted but hidden so existing import validation and draft refresh use the same controller; navigation itself never saves or launches. The original composer backup controls remain available for compatibility. Daily settings contains only the full-app backup, not WhatsApp-specific controls.
+
+Visual review aligns composer/settings gutters with the shared shell, separates backup/import controls and preserves the green system dark palette. Date/time remain paired at 390px and stack below 360px so native values fit. The nine-section screenshot inventory and synthetic fallback/import evidence are in [visual tasks](../../../reports/visual-review/whatsapp/tasks.md); visual capture does not replace the paused regression suites or real iPhone handoff acceptance.

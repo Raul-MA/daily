@@ -119,3 +119,8 @@
   margin-bottom: 0;
 }
 
+
+[data-module="plants"] .plant-settings-view .settings-section + .settings-section { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
+[data-module="plants"] .plant-settings-view .settings-section > p { margin-bottom: 16px; line-height: 1.6; max-width: 75ch; }
+[data-module="plants"] .plant-settings-view .settings-section > .btn { margin: 0 8px 8px 0; }
+[data-module="plants"] .plant-settings-view form { margin-top: 16px; }

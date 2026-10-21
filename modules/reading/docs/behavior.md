@@ -55,3 +55,5 @@ These local checks use mocked Readwise responses. Real endpoint requests and fal
 ## App settings
 
 `#/reading/settings` owns the Reader preferences form previously mounted in Daily settings. The hub and Reader menu link here; changing the route does not save preferences. Language remounts preserve unsaved fields, and the picker and this page edit the same validated module settings. Token connection and per-pick overrides remain available in the picker. Daily settings mounts no Reader form.
+
+Visual review retains the picker palette and serif review layout while matching shell gutters, enlarging reorder/checkbox targets, separating backup actions and bounding token dialogs. Secondary review actions share button sizing; feedback links pair on phones and form four columns on desktop. Empty status gaps and redundant viewport minimums are removed. Review errors use the existing error color. The fixed action bar and server-confirmed completion contract remain.

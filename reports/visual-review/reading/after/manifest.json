@@ -1,0 +1,254 @@
+[
+  {
+    "page": "readerSettings",
+    "index": 1,
+    "url": "/daily/#/reading/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/01-readerSettings-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1638,
+    "headings": [
+      {
+        "text": "Reader settings",
+        "x": 20,
+        "y": 152,
+        "size": "32px"
+      },
+      {
+        "text": "Reader preferences",
+        "x": 20,
+        "y": 211,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "page": "readerSettings",
+    "index": 1,
+    "url": "/daily/#/reading/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/01-readerSettings-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1585,
+    "headings": [
+      {
+        "text": "Reader settings",
+        "x": 20,
+        "y": 152,
+        "size": "32px"
+      },
+      {
+        "text": "Reader preferences",
+        "x": 20,
+        "y": 211,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "page": "readerSettings",
+    "index": 1,
+    "url": "/daily/#/reading/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/01-readerSettings-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1467,
+    "headings": [
+      {
+        "text": "Reader settings",
+        "x": 284,
+        "y": 152,
+        "size": "40px"
+      },
+      {
+        "text": "Reader preferences",
+        "x": 284,
+        "y": 220,
+        "size": "24px"
+      }
+    ]
+  },
+  {
+    "page": "reader",
+    "index": 2,
+    "url": "/daily/#/reading/picker",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/02-reader-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1585,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 852,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 915,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1129,
+        "size": "18.56px"
+      }
+    ]
+  },
+  {
+    "page": "reader",
+    "index": 2,
+    "url": "/daily/#/reading/picker",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/02-reader-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1362,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 20,
+        "y": 274,
+        "size": "40px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 20,
+        "y": 764,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 827,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 39,
+        "y": 1009,
+        "size": "18.56px"
+      }
+    ]
+  },
+  {
+    "page": "reader",
+    "index": 2,
+    "url": "/daily/#/reading/picker",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/02-reader-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1302,
+    "headings": [
+      {
+        "text": "Pick something to finish.",
+        "x": 284,
+        "y": 290,
+        "size": "80px"
+      },
+      {
+        "text": "Last opened item",
+        "x": 284,
+        "y": 748,
+        "size": "24px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 813,
+        "size": "18.56px"
+      },
+      {
+        "text": "A saved read",
+        "x": 305,
+        "y": 999,
+        "size": "18.56px"
+      }
+    ]
+  },
+  {
+    "page": "review",
+    "index": 3,
+    "url": "/daily/#/reading/review",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/03-review-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1164,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "page": "review",
+    "index": 3,
+    "url": "/daily/#/reading/review",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/03-review-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1061,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 20,
+        "y": 148,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "page": "review",
+    "index": 3,
+    "url": "/daily/#/reading/review",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/reading/after/03-review-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1036,
+    "headings": [
+      {
+        "text": "Latest available review",
+        "x": 284,
+        "y": 148,
+        "size": "48px"
+      }
+    ]
+  }
+]

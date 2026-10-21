@@ -1,0 +1,332 @@
+[
+  {
+    "name": "templates",
+    "url": "/daily/#/time",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-templates-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1729,
+    "layout": []
+  },
+  {
+    "name": "templates",
+    "url": "/daily/#/time",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-templates-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1819,
+    "layout": []
+  },
+  {
+    "name": "templates",
+    "url": "/daily/#/time",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-templates-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1716,
+    "layout": []
+  },
+  {
+    "name": "active",
+    "url": "/daily/#/time",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-active-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1396,
+    "layout": []
+  },
+  {
+    "name": "active",
+    "url": "/daily/#/time",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-active-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1396,
+    "layout": []
+  },
+  {
+    "name": "active",
+    "url": "/daily/#/time",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-active-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102,
+    "layout": []
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/time?section=settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-import-preview-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098,
+    "layout": []
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/time?section=settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-import-preview-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098,
+    "layout": []
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/time?section=settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-import-preview-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102,
+    "layout": []
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/time?section=settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-invalid-import-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098,
+    "layout": []
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/time?section=settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-invalid-import-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098,
+    "layout": []
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/time?section=settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-invalid-import-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102,
+    "layout": []
+  },
+  {
+    "name": "spanish-setup",
+    "url": "/daily/#/time",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-spanish-setup-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1458,
+    "layout": []
+  },
+  {
+    "name": "spanish-setup",
+    "url": "/daily/#/time",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-spanish-setup-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1487,
+    "layout": []
+  },
+  {
+    "name": "spanish-setup",
+    "url": "/daily/#/time",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-spanish-setup-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1451,
+    "layout": []
+  },
+  {
+    "name": "paused",
+    "url": "/daily/#/time",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-paused-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1396,
+    "layout": []
+  },
+  {
+    "name": "paused",
+    "url": "/daily/#/time",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-paused-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1396,
+    "layout": []
+  },
+  {
+    "name": "paused",
+    "url": "/daily/#/time",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-paused-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102,
+    "layout": []
+  },
+  {
+    "name": "reallocation",
+    "url": "/daily/#/time",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-reallocation-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1396,
+    "layout": []
+  },
+  {
+    "name": "reallocation",
+    "url": "/daily/#/time",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-reallocation-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1422,
+    "layout": []
+  },
+  {
+    "name": "reallocation",
+    "url": "/daily/#/time",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-reallocation-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102,
+    "layout": []
+  },
+  {
+    "name": "queue-edit",
+    "url": "/daily/#/time",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-queue-edit-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1396,
+    "layout": []
+  },
+  {
+    "name": "queue-edit",
+    "url": "/daily/#/time",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-queue-edit-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1396,
+    "layout": []
+  },
+  {
+    "name": "queue-edit",
+    "url": "/daily/#/time",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-queue-edit-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102,
+    "layout": []
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/time?section=settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-spanish-settings-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1116,
+    "layout": []
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/time?section=settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-spanish-settings-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1134,
+    "layout": []
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/time?section=settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-spanish-settings-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1154,
+    "layout": []
+  },
+  {
+    "name": "spanish-long-task",
+    "url": "/daily/#/time",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-spanish-long-task-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1517,
+    "layout": []
+  },
+  {
+    "name": "spanish-long-task",
+    "url": "/daily/#/time",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-spanish-long-task-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1589,
+    "layout": []
+  },
+  {
+    "name": "spanish-long-task",
+    "url": "/daily/#/time",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-spanish-long-task-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1329,
+    "layout": []
+  },
+  {
+    "name": "countdown-states",
+    "url": "/daily/#/time",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-countdown-states-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098,
+    "layout": []
+  },
+  {
+    "name": "countdown-states",
+    "url": "/daily/#/time",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-countdown-states-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098,
+    "layout": []
+  },
+  {
+    "name": "countdown-states",
+    "url": "/daily/#/time",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/time/before/state-countdown-states-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1154,
+    "layout": []
+  }
+]

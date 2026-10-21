@@ -15,6 +15,17 @@ test('running summaries link to their source and derive overdue time without sto
   await expect(page.locator('[data-widget="activities"]')).toContainText('Overdue');
   await expect(page.getByRole('navigation', { name: 'Running activities' }).getByRole('link')).toHaveCount(1);
   await expect(page.locator('#dashboard button')).toHaveCount(0);
+  await page.setViewportSize({ width: 390, height: 844 });
+  const disclosure = page.getByRole('button', { name: 'Running · 1', exact: true });
+  await expect(disclosure).toHaveAttribute('aria-expanded', 'false');
+  await expect(page.locator('.running-indicator .activity-link')).not.toBeVisible();
+  await disclosure.click();
+  await expect(disclosure).toHaveAttribute('aria-expanded', 'true');
+  await expect(page.locator('.running-indicator .activity-link')).toBeVisible();
+  expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe(raw);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await expect(disclosure).not.toBeVisible();
+  await expect(page.locator('.running-indicator .activity-link')).toBeVisible();
   await page.waitForTimeout(1100);
   expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe(raw);
   await page.locator('[data-widget="activities"]').getByRole('link', { name: /Té/ }).click();

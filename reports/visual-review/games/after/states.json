@@ -1,0 +1,548 @@
+[
+  {
+    "name": "empty-play",
+    "url": "/daily/#/games",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-empty-play-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1042
+  },
+  {
+    "name": "empty-play",
+    "url": "/daily/#/games",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-empty-play-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1042
+  },
+  {
+    "name": "empty-play",
+    "url": "/daily/#/games",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-empty-play-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1046
+  },
+  {
+    "name": "new-game-setup",
+    "url": "/daily/#/games/new",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-new-game-setup-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098
+  },
+  {
+    "name": "new-game-setup",
+    "url": "/daily/#/games/new",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-new-game-setup-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098
+  },
+  {
+    "name": "new-game-setup",
+    "url": "/daily/#/games/new",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-new-game-setup-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "add-game",
+    "url": "/daily/#/games/catalog",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-add-game-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1157
+  },
+  {
+    "name": "add-game",
+    "url": "/daily/#/games/catalog",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-add-game-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1176
+  },
+  {
+    "name": "add-game",
+    "url": "/daily/#/games/catalog",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-add-game-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "edit-game",
+    "url": "/daily/#/games/catalog",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-edit-game-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1157
+  },
+  {
+    "name": "edit-game",
+    "url": "/daily/#/games/catalog",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-edit-game-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1176
+  },
+  {
+    "name": "edit-game",
+    "url": "/daily/#/games/catalog",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-edit-game-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "edit-player",
+    "url": "/daily/#/games/players",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-edit-player-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098
+  },
+  {
+    "name": "edit-player",
+    "url": "/daily/#/games/players",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-edit-player-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098
+  },
+  {
+    "name": "edit-player",
+    "url": "/daily/#/games/players",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-edit-player-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "history-filters-empty",
+    "url": "/daily/#/games/history",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-history-filters-empty-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098
+  },
+  {
+    "name": "history-filters-empty",
+    "url": "/daily/#/games/history",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-history-filters-empty-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098
+  },
+  {
+    "name": "history-filters-empty",
+    "url": "/daily/#/games/history",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-history-filters-empty-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/games/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-import-preview-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/games/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-import-preview-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1098
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/games/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-import-preview-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/games/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-spanish-settings-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1116
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/games/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-spanish-settings-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1134
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/games/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-spanish-settings-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1154
+  },
+  {
+    "name": "spanish-long-game",
+    "url": "/daily/#/games/catalog",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-spanish-long-game-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1250
+  },
+  {
+    "name": "spanish-long-game",
+    "url": "/daily/#/games/catalog",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-spanish-long-game-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1324
+  },
+  {
+    "name": "spanish-long-game",
+    "url": "/daily/#/games/catalog",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-spanish-long-game-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "spanish-long-player",
+    "url": "/daily/#/games/players",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-spanish-long-player-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1116
+  },
+  {
+    "name": "spanish-long-player",
+    "url": "/daily/#/games/players",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-spanish-long-player-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1134
+  },
+  {
+    "name": "spanish-long-player",
+    "url": "/daily/#/games/players",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-spanish-long-player-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "expanded-scoring",
+    "url": "/daily/#/games/session",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-expanded-scoring-390.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1272,
+    "layout": [
+      {
+        "name": "workspace",
+        "x": 0,
+        "width": 390,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "session-view",
+        "x": 20,
+        "width": 350,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "session-top",
+        "x": 20,
+        "width": 350,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "",
+        "x": 20,
+        "width": 259.265625,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "primary",
+        "x": 295.265625,
+        "width": 74.734375,
+        "min": "auto",
+        "box": "border-box"
+      }
+    ]
+  },
+  {
+    "name": "expanded-scoring",
+    "url": "/daily/#/games/session",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-expanded-scoring-320.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1419,
+    "layout": [
+      {
+        "name": "workspace",
+        "x": 0,
+        "width": 320,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "session-view",
+        "x": 20,
+        "width": 280,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "session-top",
+        "x": 20,
+        "width": 280,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "",
+        "x": 20,
+        "width": 189.265625,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "primary",
+        "x": 225.265625,
+        "width": 74.734375,
+        "min": "auto",
+        "box": "border-box"
+      }
+    ]
+  },
+  {
+    "name": "expanded-scoring",
+    "url": "/daily/#/games/session",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-expanded-scoring-1280.png",
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1102,
+    "layout": [
+      {
+        "name": "workspace",
+        "x": 248,
+        "width": 1032,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "session-view",
+        "x": 284,
+        "width": 960,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "session-top",
+        "x": 284,
+        "width": 960,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "",
+        "x": 284,
+        "width": 869.265625,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "primary",
+        "x": 1169.265625,
+        "width": 74.734375,
+        "min": "auto",
+        "box": "border-box"
+      }
+    ]
+  },
+  {
+    "name": "finish-confirmation",
+    "url": "/daily/#/games/session",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-finish-confirmation-390.png",
+    "nativeDialog": "Finish this session?",
+    "overflow": 0,
+    "height": 1272,
+    "layout": [
+      {
+        "name": "workspace",
+        "x": 0,
+        "width": 390,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "session-view",
+        "x": 20,
+        "width": 350,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "session-top",
+        "x": 20,
+        "width": 350,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "",
+        "x": 20,
+        "width": 259.265625,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "primary",
+        "x": 295.265625,
+        "width": 74.734375,
+        "min": "auto",
+        "box": "border-box"
+      }
+    ]
+  },
+  {
+    "name": "finish-confirmation",
+    "url": "/daily/#/games/session",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-finish-confirmation-320.png",
+    "nativeDialog": "Finish this session?",
+    "overflow": 0,
+    "height": 1419,
+    "layout": [
+      {
+        "name": "workspace",
+        "x": 0,
+        "width": 320,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "session-view",
+        "x": 20,
+        "width": 280,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "session-top",
+        "x": 20,
+        "width": 280,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "",
+        "x": 20,
+        "width": 189.265625,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "primary",
+        "x": 225.265625,
+        "width": 74.734375,
+        "min": "auto",
+        "box": "border-box"
+      }
+    ]
+  },
+  {
+    "name": "finish-confirmation",
+    "url": "/daily/#/games/session",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/after/state-finish-confirmation-1280.png",
+    "nativeDialog": "Finish this session?",
+    "overflow": 0,
+    "height": 1102,
+    "layout": [
+      {
+        "name": "workspace",
+        "x": 248,
+        "width": 1032,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "session-view",
+        "x": 284,
+        "width": 960,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "session-top",
+        "x": 284,
+        "width": 960,
+        "min": "auto",
+        "box": "border-box"
+      },
+      {
+        "name": "",
+        "x": 284,
+        "width": 869.265625,
+        "min": "0px",
+        "box": "border-box"
+      },
+      {
+        "name": "primary",
+        "x": 1169.265625,
+        "width": 74.734375,
+        "min": "auto",
+        "box": "border-box"
+      }
+    ]
+  }
+]

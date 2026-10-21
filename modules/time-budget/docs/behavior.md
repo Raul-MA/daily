@@ -6,6 +6,8 @@ Preserve the original deadline/task workflow while its state and running clocks 
 
 ## How It Works
 
+- Visual refinements preserve the lime timer identity: matching shell gutters, full-width phone task/template names, larger row controls, separated backup actions and paired countdown controls. Overdue deadline text no longer inherits fixed button dimensions; notices clear shared navigation.
+
 - `src/app.js` composes the original small methods under `src/methods/`. `view.js` mounts the original layout with scoped DOM access and CSS. Delegated allowlisted actions replace inline handlers; no code strings are evaluated. The shared shell owns installation and service workers.
 - The shared menu has three separate panels: Time Budget (setup, running plan and templates), Countdowns, and Settings (backup/import/recovery). `src/sections.js` switches visibility without remounting forms, saving domain data or pausing clocks. Panel selection survives language remounts in UI memory; a full page reload starts at the budget. Hidden budget controls do not receive the Space shortcut.
 - `service.js` stores `{templates, session}` as version 1 of `daily:v1.modules['time-budget']`. A private revision stamp rejects stale module writes. A budget and its shared activity change in one root commit, preserving all unrelated modules and language preferences.

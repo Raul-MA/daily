@@ -1,6 +1,6 @@
 # One daily PWA: research and implementation plan
 
-Status: local implementation and migration tooling have verification evidence in [progress / resume](./progress.md). Use plain HTML/CSS/JavaScript without Vite or TypeScript. Review branches and stacked PR publication are authorized; hosting, deployment, live Readwise/Reader and physical-device/release acceptance remain deferred.
+Status: local implementation and migration tooling have verification evidence in [progress / resume](./progress.md). Use plain HTML/CSS/JavaScript without Vite or TypeScript. Current work is local only; remote publication, hosting, deployment, live Readwise/Reader and physical-device/release acceptance remain deferred.
 
 ## Implementation contract: tests first, ESLint required from day one
 

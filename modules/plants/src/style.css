@@ -4,14 +4,14 @@
 @import './styles/care.css';
 @import './styles/settings.css';
 
-[data-module="plants"] { display: block; background: var(--bg); color: var(--text); border-radius: 16px; padding: 24px; margin-top: 24px; font-family: Inter, system-ui, sans-serif; min-width: 0; box-sizing: border-box; }
+[data-module="plants"] { display: block; background: var(--bg); color: var(--text); border-radius: 16px; padding: 24px 36px; margin-top: 24px; font-family: Inter, system-ui, sans-serif; min-width: 0; box-sizing: border-box; }
 [data-module="plants"] .plant-page-title { font-family: Georgia, serif; color: var(--primary-dark); margin: 20px 0; font-size: 30px; overflow-wrap: anywhere; }
 [data-module="plants"] .plant-navigation { display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
 [data-module="plants"] .plant-navigation a { display: inline-flex; min-height: 44px; align-items: center; }
 [data-module="plants"] .plant-cards-grid, [data-module="plants"] .plant-care-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin: 20px 0; }
 [data-module="plants"] .care-card { background: var(--surface); padding: 18px; border: 1px solid var(--border); border-radius: var(--radius-md); }
 [data-module="plants"] .care-card .btn { margin: 8px 0; display: flex; width: 100%; }
-[data-module="plants"] .plant-dialog { max-width: min(560px, calc(100vw - 48px)); padding: 24px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); color: var(--text); }
+[data-module="plants"] .plant-dialog { width: min(560px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 48px); margin: auto; overflow-y: auto; padding: 24px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); color: var(--text); }
 [data-module="plants"] .plant-dialog::backdrop { background: #0006; }
 [data-module="plants"] .plant-dialog .btn { margin: 10px 5px 0 0; }
 [data-module="plants"] .care-guide { margin: 20px 0; }
@@ -23,14 +23,14 @@
 [data-module="plants"] .plant-import-form { margin: 24px 0; }
 [data-module="plants"] .btn { min-height: 44px; }
 [data-module="plants"] .care-history-scroll { overflow-x: auto; }
-[data-module="plants"] .care-history-table { width: 100%; min-width: 480px; border-collapse: collapse; border: 0; text-align: left; }
-[data-module="plants"] .care-history-table :is(th, td) { border: 0; padding: 8px; vertical-align: top; overflow-wrap: anywhere; }
+[data-module="plants"] .care-history-table { width: 100%; min-width: 0; table-layout: fixed; border-collapse: collapse; border: 0; text-align: left; }
+[data-module="plants"] .care-history-table :is(th, td) { border: 0; padding: 8px 4px; vertical-align: top; overflow-wrap: anywhere; }
 [data-module="plants"] .care-history-table th { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
-[data-module="plants"] .care-history-actions .btn { display: block; padding: 4px 8px; }
+[data-module="plants"] .care-history-actions .btn { display: flex; width: 100%; padding: 4px; white-space: normal; line-height: 1.4; text-align: left; }
 [data-module="plants"] .task-table { margin-bottom: 20px; }
 [data-module="plants"] .plant-message { color: var(--primary-dark); padding: 12px 0; }
 [data-module="plants"] input, [data-module="plants"] textarea, [data-module="plants"] select { min-width: 0; max-width: 100%; }
-@media (max-width: 500px) { [data-module="plants"] { padding: 16px; } [data-module="plants"] .form-actions { flex-wrap: wrap; } }
+@media (max-width: 719px) { [data-module="plants"] { padding: 20px; } [data-module="plants"] .form-actions { flex-wrap: wrap; } }
 
 [data-module="plants"] :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .settings-container) { width: 100%; max-width: none; margin-left: 0; margin-right: 0; }
 .plant-widget-summary .module-link { overflow-wrap: anywhere; }
@@ -45,3 +45,19 @@
 [data-module="plants"] .plant-things-action { min-height: 44px; max-width: 100%; }
 [data-module="plants"] .care-quick-actions { flex-wrap: wrap; }
 [data-module="plants"] .task-row-plant { overflow-wrap: anywhere; }
+
+[data-module="plants"] .plant-dialog h2 { margin-bottom: 12px; font-size: 22px; line-height: 1.3; }
+[data-module="plants"] .plant-dialog p { margin-bottom: 16px; line-height: 1.6; }
+[data-module="plants"] .plant-dialog .btn { white-space: normal; max-width: 100%; line-height: 1.4; }
+[data-module="plants"] :is(.care-log-form, .tl-edit-form) > .btn { margin: 0 8px 8px 0; }
+[data-module="plants"] .care-log-form h3 { margin-bottom: 16px; font-family: Georgia, serif; font-size: 18px; font-weight: 500; }
+[data-module="plants"] .care-label small { line-height: 1.45; }
+[data-module="plants"] .care-guide p { max-width: 75ch; line-height: 1.65; }
+[data-module="plants"] .empty-state-text { margin: 12px 0 20px; }
+@media (max-width: 500px) {
+  [data-module="plants"] .care-history-table { font-size: 14px; }
+  [data-module="plants"] .care-history-table th:first-child { width: 25%; }
+  [data-module="plants"] .care-history-table th:nth-child(2), [data-module="plants"] .care-history-table th:nth-child(3) { width: 20%; }
+  [data-module="plants"] .care-history-table th:last-child { width: 35%; }
+  [data-module="plants"] .care-history-table td:first-child:not([colspan]) { white-space: nowrap; }
+}

@@ -16,7 +16,7 @@ export function renderInsights() {
       ${metric(tr("metricTopScores"), insights.topRatedEntries)}
       ${metric(tr("metricTopRatioAvg"), insights.averageTopRatio ? `1:${insights.averageTopRatio}` : "-")}
     </div>
-    <section class="specimen-section" data-testid="${testIds.bestCup}">
+    <section class="specimen-section insights-best-cup" data-testid="${testIds.bestCup}">
       <header><p>${escapeHtml(tr("bestCup"))}</p><h2>${insights.bestBean ? `${escapeHtml(insights.bestBean.brand)} / ${escapeHtml(insights.bestBean.blend)}` : escapeHtml(tr("emptyNoScoredDrinks"))}</h2></header>
       <div class="section-body">
         <p class="quiet">${insights.bestEntry ? escapeHtml(tr("bestCupSummary", {

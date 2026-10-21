@@ -6,6 +6,8 @@ Retain Stillgreen's care rules, IDs, history and Things handoff inside one PWA w
 
 ## How It Works
 
+- Visual review retains the app palette and typography. Native page gutters match the shared shell (20px phone, 36px desktop); root/app-shell padding must not be counted twice. Scoped styles own touch targets, wrapping narrow rows and bounded themed dialogs. Screenshot/checklist evidence lives in `reports/visual-review/plants/tasks.md`; automated suites remain stopped for this review.
+
 - Routes: `#/plants`, `#/plants/new`, `#/plants/:id`, `#/plants/:id/edit`, `#/plants/settings`. Shared URL helpers encode IDs and apply the configured base.
 - `connectPlants(state)` binds retained store and Things functions to the version-1 `plants` module payload. It contains `plants`, `things`, backup metadata and the persistent-storage request result. It creates no records on navigation and does not inspect/import old installation storage.
 - The compatibility API retains original legacy-array/envelope reads, staged writes, checksums, recovery keys and event names. It is the default outside the bound shell for the copied source tests. Product UI is always bound to the shared document; failed writes retain previous records and emit no shared success.

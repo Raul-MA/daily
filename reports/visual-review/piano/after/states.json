@@ -1,0 +1,1157 @@
+[
+  {
+    "name": "setup-duration",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-setup-duration-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1396,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "name": "practice-prompt",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-prompt-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1462,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      },
+      {
+        "text": "Recall the notes",
+        "x": 41,
+        "y": 566,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "practice-reveal",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-reveal-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2458,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      },
+      {
+        "text": "Recall the notes",
+        "x": 41,
+        "y": 566,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "practice-paused",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-paused-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1535,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      },
+      {
+        "text": "Recall the notes",
+        "x": 41,
+        "y": 639,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "practice-completed",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-completed-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1243,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      },
+      {
+        "text": "Session finished",
+        "x": 20,
+        "y": 384,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "search-results",
+    "url": "/daily/#/piano/library",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-search-results-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3244,
+    "headings": [
+      {
+        "text": "Library",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Your music",
+        "x": 20,
+        "y": 431,
+        "size": "18.4px"
+      },
+      {
+        "text": "Foundations",
+        "x": 20,
+        "y": 614,
+        "size": "18.4px"
+      },
+      {
+        "text": "Chords & harmony",
+        "x": 20,
+        "y": 1279,
+        "size": "18.4px"
+      },
+      {
+        "text": "Movement & voicing",
+        "x": 20,
+        "y": 1906,
+        "size": "18.4px"
+      },
+      {
+        "text": "Reference",
+        "x": 20,
+        "y": 2663,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "exercise-filters-reveal",
+    "url": "/daily/#/piano/exercises/intervals.practice",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-exercise-filters-reveal-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1350,
+    "headings": [
+      {
+        "text": "Intervals",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "name": "empty-player",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-empty-player-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1141,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "name": "player-loaded",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-loaded-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3301,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Loops",
+        "x": 37,
+        "y": 1418,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 37,
+        "y": 2053,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "player-correction-score",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-correction-score-320.png",
+    "sections": [
+      {
+        "name": "correction",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-correction-score-correction-320.png"
+      },
+      {
+        "name": "score",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-correction-score-score-320.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4443,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Loops",
+        "x": 37,
+        "y": 1418,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 37,
+        "y": 2053,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "player-playing",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-playing-320.png",
+    "sections": [
+      {
+        "name": "playback",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-playing-playback-320.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3440,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Loops",
+        "x": 37,
+        "y": 1444,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 37,
+        "y": 2079,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/piano/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-spanish-settings-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Ajustes de Piano",
+        "x": 20,
+        "y": 152,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "name": "player-options",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-options-320.png",
+    "sections": [
+      {
+        "name": "options",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-options-options-320.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 4404,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Loops",
+        "x": 37,
+        "y": 1418,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 37,
+        "y": 2053,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "player-management",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-management-320.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3728,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Loops",
+        "x": 37,
+        "y": 1846,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 37,
+        "y": 2480,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "setup-duration",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-setup-duration-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1344,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      }
+    ]
+  },
+  {
+    "name": "practice-prompt",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-prompt-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1350,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      },
+      {
+        "text": "Recall the notes",
+        "x": 41,
+        "y": 566,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "practice-reveal",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-reveal-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2251,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      },
+      {
+        "text": "Recall the notes",
+        "x": 41,
+        "y": 566,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "practice-paused",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-paused-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1423,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      },
+      {
+        "text": "Recall the notes",
+        "x": 41,
+        "y": 639,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "practice-completed",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-completed-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1138,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 20,
+        "y": 271,
+        "size": "24.8px"
+      },
+      {
+        "text": "Session finished",
+        "x": 20,
+        "y": 384,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "search-results",
+    "url": "/daily/#/piano/library",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-search-results-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3040,
+    "headings": [
+      {
+        "text": "Library",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Your music",
+        "x": 20,
+        "y": 431,
+        "size": "18.4px"
+      },
+      {
+        "text": "Foundations",
+        "x": 20,
+        "y": 591,
+        "size": "18.4px"
+      },
+      {
+        "text": "Chords & harmony",
+        "x": 20,
+        "y": 1206,
+        "size": "18.4px"
+      },
+      {
+        "text": "Movement & voicing",
+        "x": 20,
+        "y": 1779,
+        "size": "18.4px"
+      },
+      {
+        "text": "Reference",
+        "x": 20,
+        "y": 2482,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "exercise-filters-reveal",
+    "url": "/daily/#/piano/exercises/intervals.practice",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-exercise-filters-reveal-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1279,
+    "headings": [
+      {
+        "text": "Intervals",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "name": "empty-player",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-empty-player-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1115,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "name": "player-loaded",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-loaded-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2966,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Loops",
+        "x": 37,
+        "y": 1331,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 37,
+        "y": 1817,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "player-correction-score",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-correction-score-390.png",
+    "sections": [
+      {
+        "name": "correction",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-correction-score-correction-390.png"
+      },
+      {
+        "name": "score",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-correction-score-score-390.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3820,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Loops",
+        "x": 37,
+        "y": 1331,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 37,
+        "y": 1817,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "player-playing",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-playing-390.png",
+    "sections": [
+      {
+        "name": "playback",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-playing-playback-390.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3080,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Loops",
+        "x": 37,
+        "y": 1331,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 37,
+        "y": 1817,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/piano/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-spanish-settings-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Ajustes de Piano",
+        "x": 20,
+        "y": 152,
+        "size": "27.2px"
+      }
+    ]
+  },
+  {
+    "name": "player-options",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-options-390.png",
+    "sections": [
+      {
+        "name": "options",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-options-options-390.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3776,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Loops",
+        "x": 37,
+        "y": 1331,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 37,
+        "y": 1817,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "player-management",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-management-390.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3368,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 20,
+        "y": 271,
+        "size": "27.2px"
+      },
+      {
+        "text": "Loops",
+        "x": 37,
+        "y": 1733,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 37,
+        "y": 2219,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "setup-duration",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-setup-duration-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1166,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      }
+    ]
+  },
+  {
+    "name": "practice-prompt",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-prompt-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1181,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      },
+      {
+        "text": "Recall the notes",
+        "x": 313,
+        "y": 506,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "practice-reveal",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-reveal-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1891,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      },
+      {
+        "text": "Recall the notes",
+        "x": 313,
+        "y": 506,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "practice-paused",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-paused-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1229,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      },
+      {
+        "text": "Recall the notes",
+        "x": 313,
+        "y": 555,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "practice-completed",
+    "url": "/daily/#/piano/learn?lesson=interval-foundations",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-practice-completed-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Find thirds and fifths",
+        "x": 284,
+        "y": 252,
+        "size": "32px"
+      },
+      {
+        "text": "Session finished",
+        "x": 284,
+        "y": 339,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "search-results",
+    "url": "/daily/#/piano/library",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-search-results-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2274,
+    "headings": [
+      {
+        "text": "Library",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Your music",
+        "x": 284,
+        "y": 356,
+        "size": "18.4px"
+      },
+      {
+        "text": "Foundations",
+        "x": 784,
+        "y": 356,
+        "size": "18.4px"
+      },
+      {
+        "text": "Chords & harmony",
+        "x": 284,
+        "y": 1006,
+        "size": "18.4px"
+      },
+      {
+        "text": "Movement & voicing",
+        "x": 784,
+        "y": 1006,
+        "size": "18.4px"
+      },
+      {
+        "text": "Reference",
+        "x": 284,
+        "y": 1721,
+        "size": "18.4px"
+      }
+    ]
+  },
+  {
+    "name": "exercise-filters-reveal",
+    "url": "/daily/#/piano/exercises/intervals.practice",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-exercise-filters-reveal-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1075,
+    "headings": [
+      {
+        "text": "Intervals",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "name": "empty-player",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-empty-player-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 942,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "name": "player-loaded",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-loaded-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2361,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Loops",
+        "x": 301,
+        "y": 909,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 301,
+        "y": 1261,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "player-correction-score",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-correction-score-1280.png",
+    "sections": [
+      {
+        "name": "correction",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-correction-score-correction-1280.png"
+      },
+      {
+        "name": "score",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-correction-score-score-1280.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 3151,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Loops",
+        "x": 301,
+        "y": 909,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 301,
+        "y": 1261,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "player-playing",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-playing-1280.png",
+    "sections": [
+      {
+        "name": "playback",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-playing-playback-1280.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2417,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Loops",
+        "x": 301,
+        "y": 909,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 301,
+        "y": 1261,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/piano/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-spanish-settings-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Ajustes de Piano",
+        "x": 284,
+        "y": 204,
+        "size": "36px"
+      }
+    ]
+  },
+  {
+    "name": "player-options",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-options-1280.png",
+    "sections": [
+      {
+        "name": "options",
+        "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-options-options-1280.png"
+      }
+    ],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2755,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Loops",
+        "x": 301,
+        "y": 909,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 301,
+        "y": 1261,
+        "size": "26.4px"
+      }
+    ]
+  },
+  {
+    "name": "player-management",
+    "url": "/daily/#/piano/reference/exercise-player",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/piano/after/state-player-management-1280.png",
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 2536,
+    "headings": [
+      {
+        "text": "Exercise player",
+        "x": 284,
+        "y": 252,
+        "size": "36px"
+      },
+      {
+        "text": "Loops",
+        "x": 301,
+        "y": 1083,
+        "size": "26.4px"
+      },
+      {
+        "text": "Event timeline",
+        "x": 301,
+        "y": 1436,
+        "size": "26.4px"
+      }
+    ]
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "name": "empty",
+    "url": "/daily/#/whatsapp",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-empty-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1394,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": 220,
+        "size": "29px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 26,
+        "y": 1070,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "valid",
+    "url": "/daily/#/whatsapp",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-valid-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1394,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": 220,
+        "size": "29px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 26,
+        "y": 1070,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "manual-copy",
+    "url": "/daily/#/whatsapp",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-manual-copy-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1566,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": -502,
+        "size": "29px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 26,
+        "y": 521,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-import-preview-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 852,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 20,
+        "y": 160,
+        "size": "29px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 20,
+        "y": 258,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "import-recovery-ready",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-import-recovery-ready-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 852,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 20,
+        "y": 160,
+        "size": "29px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 20,
+        "y": 258,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-invalid-import-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 20,
+        "y": 160,
+        "size": "29px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 20,
+        "y": 258,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-composer",
+    "url": "/daily/#/whatsapp",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-spanish-composer-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1453,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": 220,
+        "size": "29px"
+      },
+      {
+        "text": "Copia del borrador",
+        "x": 26,
+        "y": 1074,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-spanish-settings-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Ajustes de WhatsApp",
+        "x": 20,
+        "y": 160,
+        "size": "29px"
+      },
+      {
+        "text": "Copia del borrador",
+        "x": 20,
+        "y": 258,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "dark-composer",
+    "url": "/daily/#/whatsapp",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-dark-composer-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1394,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": 220,
+        "size": "29px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 26,
+        "y": 1070,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "dark-settings",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-dark-settings-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 20,
+        "y": 160,
+        "size": "29px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 20,
+        "y": 258,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "empty",
+    "url": "/daily/#/whatsapp",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-empty-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1364,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": 207,
+        "size": "31.2px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 26,
+        "y": 1041,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "valid",
+    "url": "/daily/#/whatsapp",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-valid-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1364,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": 207,
+        "size": "31.2px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 26,
+        "y": 1041,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "manual-copy",
+    "url": "/daily/#/whatsapp",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-manual-copy-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1537,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": -486,
+        "size": "31.2px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 26,
+        "y": 520,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-import-preview-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 20,
+        "y": 160,
+        "size": "31.2px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 20,
+        "y": 225,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "import-recovery-ready",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-import-recovery-ready-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 20,
+        "y": 160,
+        "size": "31.2px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 20,
+        "y": 225,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-invalid-import-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 20,
+        "y": 160,
+        "size": "31.2px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 20,
+        "y": 225,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-composer",
+    "url": "/daily/#/whatsapp",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-spanish-composer-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1395,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": 220,
+        "size": "31.2px"
+      },
+      {
+        "text": "Copia del borrador",
+        "x": 26,
+        "y": 1054,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-spanish-settings-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "Ajustes de WhatsApp",
+        "x": 20,
+        "y": 160,
+        "size": "31.2px"
+      },
+      {
+        "text": "Copia del borrador",
+        "x": 20,
+        "y": 225,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "dark-composer",
+    "url": "/daily/#/whatsapp",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-dark-composer-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1364,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": 207,
+        "size": "31.2px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 26,
+        "y": 1041,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "dark-settings",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-dark-settings-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 20,
+        "y": 160,
+        "size": "31.2px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 20,
+        "y": 225,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "empty",
+    "url": "/daily/#/whatsapp",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-empty-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1300,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 274,
+        "y": 207,
+        "size": "36px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 274,
+        "y": 1029,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "valid",
+    "url": "/daily/#/whatsapp",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-valid-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1300,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 274,
+        "y": 207,
+        "size": "36px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 274,
+        "y": 1029,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "manual-copy",
+    "url": "/daily/#/whatsapp",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-manual-copy-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1473,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 274,
+        "y": -366,
+        "size": "36px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 274,
+        "y": 628,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-import-preview-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 268,
+        "y": 160,
+        "size": "36px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 268,
+        "y": 231,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "import-recovery-ready",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-import-recovery-ready-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 268,
+        "y": 160,
+        "size": "36px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 268,
+        "y": 231,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-invalid-import-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 268,
+        "y": 160,
+        "size": "36px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 268,
+        "y": 231,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-composer",
+    "url": "/daily/#/whatsapp",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-spanish-composer-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1352,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 274,
+        "y": 259,
+        "size": "36px"
+      },
+      {
+        "text": "Copia del borrador",
+        "x": 274,
+        "y": 1081,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-spanish-settings-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "Ajustes de WhatsApp",
+        "x": 268,
+        "y": 212,
+        "size": "36px"
+      },
+      {
+        "text": "Copia del borrador",
+        "x": 268,
+        "y": 283,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "dark-composer",
+    "url": "/daily/#/whatsapp",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-dark-composer-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1300,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 274,
+        "y": 207,
+        "size": "36px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 274,
+        "y": 1029,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "name": "dark-settings",
+    "url": "/daily/#/whatsapp/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/state-dark-settings-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 268,
+        "y": 160,
+        "size": "36px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 268,
+        "y": 231,
+        "size": "20px"
+      }
+    ]
+  }
+]

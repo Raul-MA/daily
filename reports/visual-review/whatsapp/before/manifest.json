@@ -1,0 +1,158 @@
+[
+  {
+    "page": "whatsappSettings",
+    "index": 1,
+    "url": "/daily/#/whatsapp/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/01-whatsappSettings-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 20,
+        "y": 160,
+        "size": "29px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 20,
+        "y": 258,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "page": "whatsappSettings",
+    "index": 1,
+    "url": "/daily/#/whatsapp/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/01-whatsappSettings-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 844,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 20,
+        "y": 160,
+        "size": "31.2px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 20,
+        "y": 225,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "page": "whatsappSettings",
+    "index": 1,
+    "url": "/daily/#/whatsapp/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/01-whatsappSettings-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 900,
+    "headings": [
+      {
+        "text": "WhatsApp settings",
+        "x": 268,
+        "y": 160,
+        "size": "36px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 268,
+        "y": 231,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "page": "whatsapp",
+    "index": 2,
+    "url": "/daily/#/whatsapp",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/02-whatsapp-320.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1413,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": 220,
+        "size": "29px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 26,
+        "y": 1090,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "page": "whatsapp",
+    "index": 2,
+    "url": "/daily/#/whatsapp",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/02-whatsapp-390.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1384,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 26,
+        "y": 207,
+        "size": "31.2px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 26,
+        "y": 1060,
+        "size": "20px"
+      }
+    ]
+  },
+  {
+    "page": "whatsapp",
+    "index": 2,
+    "url": "/daily/#/whatsapp",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/whatsapp/before/02-whatsapp-1280.png",
+    "fullPage": true,
+    "sections": [],
+    "nativeDialog": null,
+    "overflow": 0,
+    "height": 1320,
+    "headings": [
+      {
+        "text": "WhatsApp Later",
+        "x": 274,
+        "y": 207,
+        "size": "36px"
+      },
+      {
+        "text": "Draft backup",
+        "x": 274,
+        "y": 1048,
+        "size": "20px"
+      }
+    ]
+  }
+]

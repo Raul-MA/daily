@@ -1,12 +1,12 @@
 {
-  "routes": 87,
+  "routes": 90,
   "widths": [
     1600,
     900,
     390,
     320
   ],
-  "checks": 360,
+  "checks": 372,
   "results": [
     {
       "width": 1600,
@@ -100,24 +100,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-list-view",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -171,24 +171,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-form",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -242,24 +242,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-settings-view",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -313,24 +313,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-form",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -384,24 +384,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "detail-view plant-detail-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -455,12 +455,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -514,12 +514,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -573,12 +573,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -632,12 +632,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -691,12 +691,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -708,7 +708,7 @@
     {
       "width": 1600,
       "page": "coffeeEntryEdit",
-      "url": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e/edit",
+      "url": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175/edit",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -750,24 +750,24 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         }
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e/edit",
+      "route": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175/edit",
       "violations": []
     },
     {
       "width": 1600,
       "page": "coffeeEntry",
-      "url": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e",
+      "url": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -809,18 +809,18 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         }
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e",
+      "route": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175",
       "violations": []
     },
     {
@@ -944,7 +944,7 @@
     {
       "width": 1600,
       "page": "gameSession",
-      "url": "/daily/#/games/session/session-mvhfx0af-jzc5xv",
+      "url": "/daily/#/games/session/session-mvilz2rp-kuytkr",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -997,7 +997,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/session/session-mvhfx0af-jzc5xv",
+      "route": "/daily/#/games/session/session-mvilz2rp-kuytkr",
       "violations": []
     },
     {
@@ -1045,12 +1045,12 @@
           "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -1180,7 +1180,7 @@
     {
       "width": 1600,
       "page": "gameDetail",
-      "url": "/daily/#/games/history/session-mvhfx0a4-sxj45h",
+      "url": "/daily/#/games/history/session-mvilz2r5-j4j1w2",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -1233,7 +1233,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/history/session-mvhfx0a4-sxj45h",
+      "route": "/daily/#/games/history/session-mvilz2r5-j4j1w2",
       "violations": []
     },
     {
@@ -1474,6 +1474,53 @@
     },
     {
       "width": 1600,
+      "page": "pianoSettings",
+      "url": "/daily/#/piano/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 248,
+            "width": 1352
+          },
+          "expected": {
+            "x": 248,
+            "width": 1352
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 248,
+            "width": 1352
+          },
+          "expected": {
+            "x": 248,
+            "width": 1352
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "app-settings-page",
+          "actual": {
+            "x": 248,
+            "width": 1352
+          },
+          "expected": {
+            "x": 248,
+            "width": 1352
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/piano/settings",
+      "violations": []
+    },
+    {
+      "width": 1600,
       "page": "piano",
       "url": "/daily/#/piano",
       "pairs": [
@@ -1517,12 +1564,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "course-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -1576,24 +1623,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "library-grid",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -1648,24 +1695,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -1719,24 +1766,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -1790,18 +1837,112 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
       "overflow": 0,
       "offenders": [],
       "route": "/daily/#/piano/learn",
+      "violations": []
+    },
+    {
+      "width": 1600,
+      "page": "readerSettings",
+      "url": "/daily/#/reading/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 248,
+            "width": 1352
+          },
+          "expected": {
+            "x": 248,
+            "width": 1352
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 248,
+            "width": 1352
+          },
+          "expected": {
+            "x": 248,
+            "width": 1352
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "reader-preferences app-settings-page",
+          "actual": {
+            "x": 248,
+            "width": 1352
+          },
+          "expected": {
+            "x": 248,
+            "width": 1352
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/reading/settings",
+      "violations": []
+    },
+    {
+      "width": 1600,
+      "page": "whatsappSettings",
+      "url": "/daily/#/whatsapp/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 248,
+            "width": 1352
+          },
+          "expected": {
+            "x": 248,
+            "width": 1352
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 248,
+            "width": 1352
+          },
+          "expected": {
+            "x": 248,
+            "width": 1352
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "",
+          "actual": {
+            "x": 248,
+            "width": 1352
+          },
+          "expected": {
+            "x": 248,
+            "width": 1352
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/whatsapp/settings",
       "violations": []
     },
     {
@@ -2061,24 +2202,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2132,24 +2273,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2203,24 +2344,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2274,24 +2415,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2345,24 +2486,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2416,24 +2557,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2487,24 +2628,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2558,24 +2699,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "card-grid",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2629,24 +2770,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2700,24 +2841,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2771,24 +2912,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "card-grid",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2842,24 +2983,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2913,24 +3054,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -2984,24 +3125,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "card-grid",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3055,24 +3196,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3126,24 +3267,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3197,24 +3338,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3268,24 +3409,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3339,24 +3480,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3410,24 +3551,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3481,60 +3622,60 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-controls mb-md",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "progression-area",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-item mt-lg",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3588,24 +3729,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3659,24 +3800,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3730,24 +3871,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3801,24 +3942,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3872,24 +4013,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -3943,24 +4084,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4014,36 +4155,36 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-item mt-lg",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4097,24 +4238,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4168,24 +4309,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4239,24 +4380,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4310,24 +4451,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4381,24 +4522,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4452,24 +4593,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4523,24 +4664,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4594,24 +4735,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4665,24 +4806,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4736,24 +4877,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4807,24 +4948,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4878,24 +5019,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -4949,24 +5090,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5020,24 +5161,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5091,12 +5232,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "player-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5150,12 +5291,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5209,12 +5350,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5268,12 +5409,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5327,12 +5468,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5386,12 +5527,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5445,12 +5586,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5504,12 +5645,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5563,12 +5704,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5622,12 +5763,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5681,12 +5822,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 272,
-            "width": 1304
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5788,24 +5929,24 @@
           "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         },
         {
           "selector": "[data-module=\"time-budget\"] .setup-grid",
           "className": "setup-grid",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5860,12 +6001,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           },
           "expected": {
-            "x": 268,
-            "width": 1312
+            "x": 284,
+            "width": 1280
           }
         }
       ],
@@ -5988,24 +6129,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-list-view",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -6059,24 +6200,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-form",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -6130,24 +6271,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-settings-view",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -6201,24 +6342,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-form",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -6272,24 +6413,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "detail-view plant-detail-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -6343,12 +6484,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -6402,12 +6543,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -6461,12 +6602,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -6520,12 +6661,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -6579,12 +6720,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -6596,7 +6737,7 @@
     {
       "width": 900,
       "page": "coffeeEntryEdit",
-      "url": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e/edit",
+      "url": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175/edit",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -6638,24 +6779,24 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         }
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e/edit",
+      "route": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175/edit",
       "violations": []
     },
     {
       "width": 900,
       "page": "coffeeEntry",
-      "url": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e",
+      "url": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -6697,18 +6838,18 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         }
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e",
+      "route": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175",
       "violations": []
     },
     {
@@ -6832,7 +6973,7 @@
     {
       "width": 900,
       "page": "gameSession",
-      "url": "/daily/#/games/session/session-mvhfx0af-jzc5xv",
+      "url": "/daily/#/games/session/session-mvilz2rp-kuytkr",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -6885,7 +7026,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/session/session-mvhfx0af-jzc5xv",
+      "route": "/daily/#/games/session/session-mvilz2rp-kuytkr",
       "violations": []
     },
     {
@@ -6933,12 +7074,12 @@
           "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -7068,7 +7209,7 @@
     {
       "width": 900,
       "page": "gameDetail",
-      "url": "/daily/#/games/history/session-mvhfx0a4-sxj45h",
+      "url": "/daily/#/games/history/session-mvilz2r5-j4j1w2",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -7121,7 +7262,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/history/session-mvhfx0a4-sxj45h",
+      "route": "/daily/#/games/history/session-mvilz2r5-j4j1w2",
       "violations": []
     },
     {
@@ -7362,6 +7503,53 @@
     },
     {
       "width": 900,
+      "page": "pianoSettings",
+      "url": "/daily/#/piano/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 248,
+            "width": 652
+          },
+          "expected": {
+            "x": 248,
+            "width": 652
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 248,
+            "width": 652
+          },
+          "expected": {
+            "x": 248,
+            "width": 652
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "app-settings-page",
+          "actual": {
+            "x": 248,
+            "width": 652
+          },
+          "expected": {
+            "x": 248,
+            "width": 652
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/piano/settings",
+      "violations": []
+    },
+    {
+      "width": 900,
       "page": "piano",
       "url": "/daily/#/piano",
       "pairs": [
@@ -7405,12 +7593,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "course-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -7464,24 +7652,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "library-grid",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -7536,24 +7724,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -7607,24 +7795,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -7678,18 +7866,112 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
       "overflow": 0,
       "offenders": [],
       "route": "/daily/#/piano/learn",
+      "violations": []
+    },
+    {
+      "width": 900,
+      "page": "readerSettings",
+      "url": "/daily/#/reading/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 248,
+            "width": 652
+          },
+          "expected": {
+            "x": 248,
+            "width": 652
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 248,
+            "width": 652
+          },
+          "expected": {
+            "x": 248,
+            "width": 652
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "reader-preferences app-settings-page",
+          "actual": {
+            "x": 248,
+            "width": 652
+          },
+          "expected": {
+            "x": 248,
+            "width": 652
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/reading/settings",
+      "violations": []
+    },
+    {
+      "width": 900,
+      "page": "whatsappSettings",
+      "url": "/daily/#/whatsapp/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 248,
+            "width": 652
+          },
+          "expected": {
+            "x": 248,
+            "width": 652
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 248,
+            "width": 652
+          },
+          "expected": {
+            "x": 248,
+            "width": 652
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "",
+          "actual": {
+            "x": 248,
+            "width": 652
+          },
+          "expected": {
+            "x": 248,
+            "width": 652
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/whatsapp/settings",
       "violations": []
     },
     {
@@ -7949,24 +8231,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8020,24 +8302,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8091,24 +8373,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8162,24 +8444,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8233,24 +8515,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8304,24 +8586,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8375,24 +8657,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8446,24 +8728,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "card-grid",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8517,24 +8799,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8588,24 +8870,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8659,24 +8941,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "card-grid",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8730,24 +9012,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8801,24 +9083,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8872,24 +9154,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "card-grid",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -8943,24 +9225,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9014,24 +9296,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9085,24 +9367,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9156,24 +9438,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9227,24 +9509,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9298,24 +9580,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9369,60 +9651,60 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-controls mb-md",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "progression-area",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-item mt-lg",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9476,24 +9758,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9547,24 +9829,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9618,24 +9900,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9689,24 +9971,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9760,24 +10042,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9831,24 +10113,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9902,36 +10184,36 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-item mt-lg",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -9985,24 +10267,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10056,24 +10338,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10127,24 +10409,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10198,24 +10480,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10269,24 +10551,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10340,24 +10622,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10411,24 +10693,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10482,24 +10764,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10553,24 +10835,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10624,24 +10906,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10695,24 +10977,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10766,24 +11048,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10837,24 +11119,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "page-header",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "theory-content",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10908,24 +11190,24 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "exercise-shell",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"piano\"] :is(.theory-content, .exercise-card)",
           "className": "exercise-card",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -10979,12 +11261,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "player-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11038,12 +11320,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11097,12 +11379,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11156,12 +11438,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11215,12 +11497,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11274,12 +11556,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11333,12 +11615,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11392,12 +11674,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11451,12 +11733,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11510,12 +11792,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11569,12 +11851,12 @@
           "selector": "[data-module=\"piano\"] #page-content > :is(header, section, article, div, main, form)",
           "className": "practice-page",
           "actual": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 272,
-            "width": 604
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11676,24 +11958,24 @@
           "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         },
         {
           "selector": "[data-module=\"time-budget\"] .setup-grid",
           "className": "setup-grid",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11748,12 +12030,12 @@
           "selector": "[data-module=\"coffee\"] > .app-shell",
           "className": "app-shell",
           "actual": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           },
           "expected": {
-            "x": 268,
-            "width": 612
+            "x": 284,
+            "width": 580
           }
         }
       ],
@@ -11876,24 +12158,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-list-view",
           "actual": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           }
         }
       ],
@@ -11947,24 +12229,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-form",
           "actual": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           }
         }
       ],
@@ -12018,24 +12300,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-settings-view",
           "actual": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           }
         }
       ],
@@ -12089,24 +12371,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-form",
           "actual": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           }
         }
       ],
@@ -12160,24 +12442,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "detail-view plant-detail-content",
           "actual": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 16,
-            "width": 358
+            "x": 20,
+            "width": 350
           }
         }
       ],
@@ -12484,7 +12766,7 @@
     {
       "width": 390,
       "page": "coffeeEntryEdit",
-      "url": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e/edit",
+      "url": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175/edit",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -12537,13 +12819,13 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e/edit",
+      "route": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175/edit",
       "violations": []
     },
     {
       "width": 390,
       "page": "coffeeEntry",
-      "url": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e",
+      "url": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -12596,7 +12878,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e",
+      "route": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175",
       "violations": []
     },
     {
@@ -12720,7 +13002,7 @@
     {
       "width": 390,
       "page": "gameSession",
-      "url": "/daily/#/games/session/session-mvhfx0af-jzc5xv",
+      "url": "/daily/#/games/session/session-mvilz2rp-kuytkr",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -12773,7 +13055,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/session/session-mvhfx0af-jzc5xv",
+      "route": "/daily/#/games/session/session-mvilz2rp-kuytkr",
       "violations": []
     },
     {
@@ -12821,12 +13103,12 @@
           "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
           "className": "app-shell",
           "actual": {
-            "x": 12,
-            "width": 366
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 12,
-            "width": 366
+            "x": 20,
+            "width": 350
           }
         }
       ],
@@ -12956,7 +13238,7 @@
     {
       "width": 390,
       "page": "gameDetail",
-      "url": "/daily/#/games/history/session-mvhfx0a4-sxj45h",
+      "url": "/daily/#/games/history/session-mvilz2r5-j4j1w2",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -13009,7 +13291,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/history/session-mvhfx0a4-sxj45h",
+      "route": "/daily/#/games/history/session-mvilz2r5-j4j1w2",
       "violations": []
     },
     {
@@ -13246,6 +13528,53 @@
       "overflow": 0,
       "offenders": [],
       "route": "/daily/#/games/settings",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "page": "pianoSettings",
+      "url": "/daily/#/piano/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 0,
+            "width": 390
+          },
+          "expected": {
+            "x": 0,
+            "width": 390
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 0,
+            "width": 390
+          },
+          "expected": {
+            "x": 0,
+            "width": 390
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "app-settings-page",
+          "actual": {
+            "x": 0,
+            "width": 390
+          },
+          "expected": {
+            "x": 0,
+            "width": 390
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/piano/settings",
       "violations": []
     },
     {
@@ -13578,6 +13907,100 @@
       "overflow": 0,
       "offenders": [],
       "route": "/daily/#/piano/learn",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "page": "readerSettings",
+      "url": "/daily/#/reading/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 0,
+            "width": 390
+          },
+          "expected": {
+            "x": 0,
+            "width": 390
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 0,
+            "width": 390
+          },
+          "expected": {
+            "x": 0,
+            "width": 390
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "reader-preferences app-settings-page",
+          "actual": {
+            "x": 0,
+            "width": 390
+          },
+          "expected": {
+            "x": 0,
+            "width": 390
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/reading/settings",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "page": "whatsappSettings",
+      "url": "/daily/#/whatsapp/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 0,
+            "width": 390
+          },
+          "expected": {
+            "x": 0,
+            "width": 390
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 0,
+            "width": 390
+          },
+          "expected": {
+            "x": 0,
+            "width": 390
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "",
+          "actual": {
+            "x": 0,
+            "width": 390
+          },
+          "expected": {
+            "x": 0,
+            "width": 390
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/whatsapp/settings",
       "violations": []
     },
     {
@@ -17564,24 +17987,24 @@
           "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
           "className": "app-shell",
           "actual": {
-            "x": 12,
-            "width": 366
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 12,
-            "width": 366
+            "x": 20,
+            "width": 350
           }
         },
         {
           "selector": "[data-module=\"time-budget\"] .setup-grid",
           "className": "setup-grid",
           "actual": {
-            "x": 12,
-            "width": 366
+            "x": 20,
+            "width": 350
           },
           "expected": {
-            "x": 12,
-            "width": 366
+            "x": 20,
+            "width": 350
           }
         }
       ],
@@ -17764,24 +18187,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-list-view",
           "actual": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           }
         }
       ],
@@ -17835,24 +18258,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-form",
           "actual": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           }
         }
       ],
@@ -17906,24 +18329,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-settings-view",
           "actual": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           }
         }
       ],
@@ -17977,24 +18400,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-form",
           "actual": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           }
         }
       ],
@@ -18048,24 +18471,24 @@
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "plant-page-title",
           "actual": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           }
         },
         {
           "selector": "[data-module=\"plants\"] > :is(.plant-page-title, .plant-list-view, .plant-form, .detail-view, .plant-settings-view)",
           "className": "detail-view plant-detail-content",
           "actual": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 16,
-            "width": 288
+            "x": 20,
+            "width": 280
           }
         }
       ],
@@ -18372,7 +18795,7 @@
     {
       "width": 320,
       "page": "coffeeEntryEdit",
-      "url": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e/edit",
+      "url": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175/edit",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -18425,13 +18848,13 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e/edit",
+      "route": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175/edit",
       "violations": []
     },
     {
       "width": 320,
       "page": "coffeeEntry",
-      "url": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e",
+      "url": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -18484,7 +18907,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/coffee/entry/dc60a641-6d88-42ad-9216-8fc9ccf2cd3e",
+      "route": "/daily/#/coffee/entry/8f0f3f3d-d07d-4233-9b8a-d2746827a175",
       "violations": []
     },
     {
@@ -18608,7 +19031,7 @@
     {
       "width": 320,
       "page": "gameSession",
-      "url": "/daily/#/games/session/session-mvhfx0af-jzc5xv",
+      "url": "/daily/#/games/session/session-mvilz2rp-kuytkr",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -18661,7 +19084,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/session/session-mvhfx0af-jzc5xv",
+      "route": "/daily/#/games/session/session-mvilz2rp-kuytkr",
       "violations": []
     },
     {
@@ -18709,12 +19132,12 @@
           "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
           "className": "app-shell",
           "actual": {
-            "x": 12,
-            "width": 296
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 12,
-            "width": 296
+            "x": 20,
+            "width": 280
           }
         }
       ],
@@ -18844,7 +19267,7 @@
     {
       "width": 320,
       "page": "gameDetail",
-      "url": "/daily/#/games/history/session-mvhfx0a4-sxj45h",
+      "url": "/daily/#/games/history/session-mvilz2r5-j4j1w2",
       "pairs": [
         {
           "selector": ".daily-shell",
@@ -18897,7 +19320,7 @@
       ],
       "overflow": 0,
       "offenders": [],
-      "route": "/daily/#/games/history/session-mvhfx0a4-sxj45h",
+      "route": "/daily/#/games/history/session-mvilz2r5-j4j1w2",
       "violations": []
     },
     {
@@ -19134,6 +19557,53 @@
       "overflow": 0,
       "offenders": [],
       "route": "/daily/#/games/settings",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "page": "pianoSettings",
+      "url": "/daily/#/piano/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 0,
+            "width": 320
+          },
+          "expected": {
+            "x": 0,
+            "width": 320
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 0,
+            "width": 320
+          },
+          "expected": {
+            "x": 0,
+            "width": 320
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "app-settings-page",
+          "actual": {
+            "x": 0,
+            "width": 320
+          },
+          "expected": {
+            "x": 0,
+            "width": 320
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/piano/settings",
       "violations": []
     },
     {
@@ -19466,6 +19936,100 @@
       "overflow": 0,
       "offenders": [],
       "route": "/daily/#/piano/learn",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "page": "readerSettings",
+      "url": "/daily/#/reading/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 0,
+            "width": 320
+          },
+          "expected": {
+            "x": 0,
+            "width": 320
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 0,
+            "width": 320
+          },
+          "expected": {
+            "x": 0,
+            "width": 320
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "reader-preferences app-settings-page",
+          "actual": {
+            "x": 0,
+            "width": 320
+          },
+          "expected": {
+            "x": 0,
+            "width": 320
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/reading/settings",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "page": "whatsappSettings",
+      "url": "/daily/#/whatsapp/settings",
+      "pairs": [
+        {
+          "selector": ".daily-shell",
+          "className": "daily-shell",
+          "actual": {
+            "x": 0,
+            "width": 320
+          },
+          "expected": {
+            "x": 0,
+            "width": 320
+          }
+        },
+        {
+          "selector": ".shell-main",
+          "className": "shell-main",
+          "actual": {
+            "x": 0,
+            "width": 320
+          },
+          "expected": {
+            "x": 0,
+            "width": 320
+          }
+        },
+        {
+          "selector": ".shell-main > [data-module]",
+          "className": "",
+          "actual": {
+            "x": 0,
+            "width": 320
+          },
+          "expected": {
+            "x": 0,
+            "width": 320
+          }
+        }
+      ],
+      "overflow": 0,
+      "offenders": [],
+      "route": "/daily/#/whatsapp/settings",
       "violations": []
     },
     {
@@ -23452,24 +24016,24 @@
           "selector": "[data-module=\"time-budget\"] > :is(.app-shell, .time-countdowns, .time-backup)",
           "className": "app-shell",
           "actual": {
-            "x": 12,
-            "width": 296
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 12,
-            "width": 296
+            "x": 20,
+            "width": 280
           }
         },
         {
           "selector": "[data-module=\"time-budget\"] .setup-grid",
           "className": "setup-grid",
           "actual": {
-            "x": 12,
-            "width": 296
+            "x": 20,
+            "width": 280
           },
           "expected": {
-            "x": 12,
-            "width": 296
+            "x": 20,
+            "width": 280
           }
         }
       ],

@@ -1047,7 +1047,7 @@ to { opacity: 1; transform: none; }
 [data-module="time-budget"] .time-countdowns form,
 [data-module="time-budget"] .countdown-card { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
 [data-module="time-budget"] .countdown-card output { font-variant-numeric: tabular-nums; }
-[data-module="time-budget"] .toast { top: calc(88px + env(safe-area-inset-top)); bottom: auto; }
+[data-module="time-budget"] .toast { top: auto; bottom: max(20px, env(safe-area-inset-bottom)); }
 
 [data-module="time-budget"] .time-countdowns label { flex: 1 1 180px; min-width: 0; max-width: 100%; }
 [data-module="time-budget"] .time-backup label { display: block; min-width: 0; }
@@ -1056,3 +1056,48 @@ to { opacity: 1; transform: none; }
 [data-module="time-budget"] .countdown-card strong { min-width: 0; overflow-wrap: anywhere; }
 
 [data-module="time-budget"] [data-menu-panel][hidden] { display: none; }
+
+[data-module="time-budget"] { padding-inline: 20px; }
+[data-module="time-budget"] .time-backup h1 { margin-bottom: 24px; }
+[data-module="time-budget"] .time-backup h2 { margin-bottom: 16px; }
+[data-module="time-budget"] .time-backup form { margin-top: 24px; }
+[data-module="time-budget"] .time-backup label { line-height: 1.5; }
+[data-module="time-budget"] .time-backup input { margin-top: 8px; }
+[data-module="time-budget"] [data-time-import-preview] { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+[data-module="time-budget"] [data-time-import-preview][hidden] { display: none; }
+[data-module="time-budget"] [data-time-import-preview] p { flex-basis: 100%; line-height: 1.6; }
+[data-module="time-budget"] .button { line-height: 1.4; padding-block: 12px; }
+[data-module="time-budget"] .button.compact, [data-module="time-budget"] .text-button { min-height: 44px; }
+[data-module="time-budget"] .time-remaining.danger { display: block; width: auto; height: auto; padding: 0; font-size: clamp(25px, 3vw, 34px); }
+[data-module="time-budget"] .time-display.over { font-size: clamp(30px, 4vw, 42px); }
+[data-module="time-budget"] #currentTaskName { overflow-wrap: anywhere; }
+[data-module="time-budget"] .hero-copy { max-width: 65ch; }
+[data-module="time-budget"] .icon-add-button, [data-module="time-budget"] .icon-btn { width: 44px; height: 44px; }
+[data-module="time-budget"] .realloc-item .task-name { white-space: normal; overflow-wrap: anywhere; }
+[data-module="time-budget"] .realloc-item input { min-height: 44px; font-size: 16px; }
+[data-module="time-budget"] .remaining-task-item .edit-inline { font-size: 16px; min-height: 44px; }
+[data-module="time-budget"] .countdown-card { display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; padding-top: 16px; border-top: 1px solid var(--line); }
+[data-module="time-budget"] .free-time-card .task-name { white-space: normal; overflow-wrap: anywhere; }
+@media (min-width: 720px) { [data-module="time-budget"] { padding-inline: 36px; } }
+@media (max-width: 600px) {
+  [data-module="time-budget"] .template-controls { grid-template-columns: minmax(0, 1fr); }
+  [data-module="time-budget"] .template-io { gap: 8px 20px; }
+  [data-module="time-budget"] .task-list { gap: 16px; }
+  [data-module="time-budget"] .task-item { grid-template-columns: 96px minmax(0, 1fr) 44px; grid-template-areas: "name name name" "move minutes remove"; gap: 8px; }
+  [data-module="time-budget"] .task-item .task-name-input { grid-area: name; }
+  [data-module="time-budget"] .task-item .task-duration-input { grid-area: minutes; }
+  [data-module="time-budget"] .task-item .danger { grid-area: remove; width: 44px; }
+  [data-module="time-budget"] .task-item .move-btns { grid-area: move; display: flex; gap: 8px; }
+  [data-module="time-budget"] .task-column-labels { display: none; }
+  [data-module="time-budget"] .move-btn { width: 44px; height: 44px; }
+  [data-module="time-budget"] .user-task-card { grid-template-columns: minmax(0, 1fr) auto; }
+  [data-module="time-budget"] .user-task-card .move-btns { grid-row: 2; display: flex; margin-left: 0; gap: 8px; }
+  [data-module="time-budget"] .user-task-card .move-btn { width: 44px; height: 44px; }
+  [data-module="time-budget"] .user-task-card .task-actions { grid-column: 2; grid-row: 2; }
+  [data-module="time-budget"] .user-task-card .task-name { white-space: normal; overflow-wrap: anywhere; }
+  [data-module="time-budget"] .user-task-card.editing .task-name-input { grid-column: 1 / -1; }
+  [data-module="time-budget"] .user-task-card.editing .task-duration-input { width: 100%; grid-row: 2; }
+  [data-module="time-budget"] .time-countdowns, [data-module="time-budget"] .time-backup { padding: 20px 16px; }
+  [data-module="time-budget"] .countdown-card { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  [data-module="time-budget"] .countdown-card output { text-align: right; }
+}

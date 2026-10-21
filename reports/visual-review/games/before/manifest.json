@@ -1,0 +1,692 @@
+[
+  {
+    "page": "games",
+    "url": "/daily/#/games",
+    "index": 1,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/before/01-games-320.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Set the table",
+        "x": 16,
+        "y": 165,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "page": "games",
+    "url": "/daily/#/games",
+    "index": 1,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/before/01-games-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Set the table",
+        "x": 16,
+        "y": 165,
+        "size": "31.2px"
+      }
+    ]
+  },
+  {
+    "page": "games",
+    "url": "/daily/#/games",
+    "index": 1,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/before/01-games-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Set the table",
+        "x": 280,
+        "y": 181,
+        "size": "51.2px"
+      }
+    ]
+  },
+  {
+    "page": "gameNew",
+    "url": "/daily/#/games/new",
+    "index": 2,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/before/02-gameNew-320.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Set the table",
+        "x": 16,
+        "y": 165,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "page": "gameNew",
+    "url": "/daily/#/games/new",
+    "index": 2,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/before/02-gameNew-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Set the table",
+        "x": 16,
+        "y": 165,
+        "size": "31.2px"
+      }
+    ]
+  },
+  {
+    "page": "gameNew",
+    "url": "/daily/#/games/new",
+    "index": 2,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/before/02-gameNew-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Set the table",
+        "x": 280,
+        "y": 181,
+        "size": "51.2px"
+      }
+    ]
+  },
+  {
+    "page": "gameSession",
+    "url": "/daily/#/games/session/session-mvi9l8t7-0ssnle",
+    "index": 3,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/before/03-gameSession-320.png",
+    "overflow": 0,
+    "height": 1342,
+    "headings": [
+      {
+        "text": "Azul",
+        "x": 16,
+        "y": 188,
+        "size": "28.8px"
+      },
+      {
+        "text": "Duration not set",
+        "x": 33,
+        "y": 280,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gameSession",
+    "url": "/daily/#/games/session/session-mvi9l8t7-0ssnle",
+    "index": 3,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/before/03-gameSession-390.png",
+    "overflow": 0,
+    "height": 1217,
+    "headings": [
+      {
+        "text": "Azul",
+        "x": 16,
+        "y": 169,
+        "size": "31.2px"
+      },
+      {
+        "text": "Duration not set",
+        "x": 33,
+        "y": 264,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gameSession",
+    "url": "/daily/#/games/session/session-mvi9l8t7-0ssnle",
+    "index": 3,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/before/03-gameSession-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Azul",
+        "x": 280,
+        "y": 185,
+        "size": "51.2px"
+      },
+      {
+        "text": "Duration not set",
+        "x": 297,
+        "y": 300,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gamesSession",
+    "url": "/daily/#/games/session",
+    "index": 4,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/before/04-gamesSession-320.png",
+    "overflow": 0,
+    "height": 1342,
+    "headings": [
+      {
+        "text": "Azul",
+        "x": 16,
+        "y": 188,
+        "size": "28.8px"
+      },
+      {
+        "text": "Duration not set",
+        "x": 33,
+        "y": 280,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gamesSession",
+    "url": "/daily/#/games/session",
+    "index": 4,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/before/04-gamesSession-390.png",
+    "overflow": 0,
+    "height": 1217,
+    "headings": [
+      {
+        "text": "Azul",
+        "x": 16,
+        "y": 169,
+        "size": "31.2px"
+      },
+      {
+        "text": "Duration not set",
+        "x": 33,
+        "y": 264,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gamesSession",
+    "url": "/daily/#/games/session",
+    "index": 4,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/before/04-gamesSession-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Azul",
+        "x": 280,
+        "y": 185,
+        "size": "51.2px"
+      },
+      {
+        "text": "Duration not set",
+        "x": 297,
+        "y": 300,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gamesHistory",
+    "url": "/daily/#/games/history",
+    "index": 5,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/before/05-gamesHistory-320.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Completed games",
+        "x": 16,
+        "y": 165,
+        "size": "28.8px"
+      },
+      {
+        "text": "Azul",
+        "x": 33,
+        "y": 355,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "gamesHistory",
+    "url": "/daily/#/games/history",
+    "index": 5,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/before/05-gamesHistory-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Completed games",
+        "x": 16,
+        "y": 165,
+        "size": "31.2px"
+      },
+      {
+        "text": "Azul",
+        "x": 33,
+        "y": 328,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "gamesHistory",
+    "url": "/daily/#/games/history",
+    "index": 5,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/before/05-gamesHistory-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Completed games",
+        "x": 280,
+        "y": 181,
+        "size": "51.2px"
+      },
+      {
+        "text": "Azul",
+        "x": 297,
+        "y": 325,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "gameDetail",
+    "url": "/daily/#/games/history/session-mvi9l8s9-blt1fd",
+    "index": 6,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/before/06-gameDetail-320.png",
+    "overflow": 0,
+    "height": 1207,
+    "headings": [
+      {
+        "text": "Azul",
+        "x": 16,
+        "y": 188,
+        "size": "28.8px"
+      },
+      {
+        "text": "Winner: Ada 🌱, Grace",
+        "x": 33,
+        "y": 280,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gameDetail",
+    "url": "/daily/#/games/history/session-mvi9l8s9-blt1fd",
+    "index": 6,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/before/06-gameDetail-390.png",
+    "overflow": 0,
+    "height": 1111,
+    "headings": [
+      {
+        "text": "Azul",
+        "x": 16,
+        "y": 188,
+        "size": "31.2px"
+      },
+      {
+        "text": "Winner: Ada 🌱, Grace",
+        "x": 33,
+        "y": 283,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gameDetail",
+    "url": "/daily/#/games/history/session-mvi9l8s9-blt1fd",
+    "index": 6,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/before/06-gameDetail-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Azul",
+        "x": 280,
+        "y": 185,
+        "size": "51.2px"
+      },
+      {
+        "text": "Winner: Ada 🌱, Grace",
+        "x": 297,
+        "y": 300,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gamesCatalog",
+    "url": "/daily/#/games/catalog",
+    "index": 7,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/before/07-gamesCatalog-320.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Scoring rules",
+        "x": 16,
+        "y": 165,
+        "size": "28.8px"
+      },
+      {
+        "text": "Azul",
+        "x": 33,
+        "y": 308,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "gamesCatalog",
+    "url": "/daily/#/games/catalog",
+    "index": 7,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/before/07-gamesCatalog-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Scoring rules",
+        "x": 16,
+        "y": 165,
+        "size": "31.2px"
+      },
+      {
+        "text": "Azul",
+        "x": 33,
+        "y": 310,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "gamesCatalog",
+    "url": "/daily/#/games/catalog",
+    "index": 7,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/before/07-gamesCatalog-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Scoring rules",
+        "x": 280,
+        "y": 181,
+        "size": "51.2px"
+      },
+      {
+        "text": "Azul",
+        "x": 297,
+        "y": 327,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "gamesPlayers",
+    "url": "/daily/#/games/players",
+    "index": 8,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/before/08-gamesPlayers-320.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "People at the table",
+        "x": 16,
+        "y": 165,
+        "size": "28.8px"
+      },
+      {
+        "text": "Ada 🌱",
+        "x": 33,
+        "y": 425,
+        "size": "16px"
+      },
+      {
+        "text": "Grace",
+        "x": 33,
+        "y": 569,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "gamesPlayers",
+    "url": "/daily/#/games/players",
+    "index": 8,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/before/08-gamesPlayers-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "People at the table",
+        "x": 16,
+        "y": 165,
+        "size": "31.2px"
+      },
+      {
+        "text": "Ada 🌱",
+        "x": 33,
+        "y": 399,
+        "size": "16px"
+      },
+      {
+        "text": "Grace",
+        "x": 33,
+        "y": 543,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "gamesPlayers",
+    "url": "/daily/#/games/players",
+    "index": 8,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/before/08-gamesPlayers-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "People at the table",
+        "x": 280,
+        "y": 181,
+        "size": "51.2px"
+      },
+      {
+        "text": "Ada 🌱",
+        "x": 297,
+        "y": 435,
+        "size": "16px"
+      },
+      {
+        "text": "Grace",
+        "x": 297,
+        "y": 525,
+        "size": "16px"
+      }
+    ]
+  },
+  {
+    "page": "gamesStats",
+    "url": "/daily/#/games/stats",
+    "index": 9,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/before/09-gamesStats-320.png",
+    "overflow": 0,
+    "height": 2094,
+    "headings": [
+      {
+        "text": "Records",
+        "x": 16,
+        "y": 165,
+        "size": "28.8px"
+      },
+      {
+        "text": "Head to head",
+        "x": 33,
+        "y": 243,
+        "size": "21.6px"
+      },
+      {
+        "text": "Table records",
+        "x": 16,
+        "y": 554,
+        "size": "21.6px"
+      },
+      {
+        "text": "Game records",
+        "x": 33,
+        "y": 1254,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gamesStats",
+    "url": "/daily/#/games/stats",
+    "index": 9,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/before/09-gamesStats-390.png",
+    "overflow": 0,
+    "height": 2110,
+    "headings": [
+      {
+        "text": "Records",
+        "x": 16,
+        "y": 165,
+        "size": "31.2px"
+      },
+      {
+        "text": "Head to head",
+        "x": 33,
+        "y": 245,
+        "size": "21.6px"
+      },
+      {
+        "text": "Table records",
+        "x": 16,
+        "y": 570,
+        "size": "21.6px"
+      },
+      {
+        "text": "Game records",
+        "x": 33,
+        "y": 1271,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gamesStats",
+    "url": "/daily/#/games/stats",
+    "index": 9,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/before/09-gamesStats-1280.png",
+    "overflow": 0,
+    "height": 1551,
+    "headings": [
+      {
+        "text": "Records",
+        "x": 280,
+        "y": 181,
+        "size": "51.2px"
+      },
+      {
+        "text": "Head to head",
+        "x": 297,
+        "y": 281,
+        "size": "21.6px"
+      },
+      {
+        "text": "Table records",
+        "x": 280,
+        "y": 473,
+        "size": "21.6px"
+      },
+      {
+        "text": "Game records",
+        "x": 297,
+        "y": 851,
+        "size": "21.6px"
+      }
+    ]
+  },
+  {
+    "page": "gamesSettings",
+    "url": "/daily/#/games/settings",
+    "index": 10,
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/games/before/10-gamesSettings-320.png",
+    "overflow": 0,
+    "height": 1099,
+    "headings": [
+      {
+        "text": "Local data",
+        "x": 16,
+        "y": 165,
+        "size": "28.8px"
+      }
+    ]
+  },
+  {
+    "page": "gamesSettings",
+    "url": "/daily/#/games/settings",
+    "index": 10,
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/games/before/10-gamesSettings-390.png",
+    "overflow": 0,
+    "height": 1098,
+    "headings": [
+      {
+        "text": "Local data",
+        "x": 16,
+        "y": 165,
+        "size": "31.2px"
+      }
+    ]
+  },
+  {
+    "page": "gamesSettings",
+    "url": "/daily/#/games/settings",
+    "index": 10,
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/games/before/10-gamesSettings-1280.png",
+    "overflow": 0,
+    "height": 1102,
+    "headings": [
+      {
+        "text": "Local data",
+        "x": 280,
+        "y": 181,
+        "size": "51.2px"
+      }
+    ]
+  }
+]

@@ -22,3 +22,22 @@
 [data-module="piano"] .player-page { min-width: 0; width: 100%; grid-template-columns: minmax(0, 1fr); }
 [data-module="piano"] .player-page label { grid-template-columns: minmax(0, 1fr); }
 [data-module="piano"] .player-page input[type="file"] { width: 100%; min-width: 0; }
+
+[data-module="piano"] .player-page .page-header { margin-bottom: 8px; }
+[data-module="piano"] [data-player-error]:empty { display: none; }
+[data-module="piano"] .player-page :is(input:not([type="checkbox"]), select) { min-height: 44px; }
+[data-module="piano"] .player-page input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--accent); }
+[data-module="piano"] .player-page fieldset { padding: 16px; border: 1px solid var(--border); border-radius: var(--radius); }
+[data-module="piano"] .player-row > fieldset { flex: 1 1 160px; }
+[data-module="piano"] .player-page fieldset + button { margin-top: 12px; }
+[data-module="piano"] .player-page details > label { margin-block: 12px; }
+[data-module="piano"] .player-import label { margin-block: 12px; }
+[data-module="piano"] #player-title { display: grid; gap: 8px; }
+[data-module="piano"] .player-management summary { overflow-wrap: anywhere; }
+[data-module="piano"] .player-management .player-row { align-items: flex-start; }
+[data-module="piano"] .player-management .player-row > button { align-self: flex-end; }
+[data-module="piano"] .player-page p { max-width: 70ch; }
+@media (max-width: 480px) {
+  [data-module="piano"] .player-controls > .player-row:first-child { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  [data-module="piano"] .player-controls > .player-row:first-child button:first-child { grid-column: 1 / -1; }
+}

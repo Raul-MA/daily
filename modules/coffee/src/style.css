@@ -138,7 +138,7 @@
 [data-module="coffee"] .app-shell {
   width: 100%;
   margin: 0 auto;
-  padding: var(--space-6) var(--space-4) var(--space-8);
+  padding: 0;
 }
 [data-module="coffee"] .page-header {
   display: grid;
@@ -194,6 +194,7 @@
   padding: var(--space-6) 0;
 }
 [data-module="coffee"] .specimen-section h2 {
+  line-height: 1.08;
   font-size: clamp(1.55rem, 4vw, 2.8rem);
 }
 [data-module="coffee"] .section-body {
@@ -220,9 +221,9 @@
 [data-module="coffee"] .derived span {
   color: var(--color-muted);
   font-family: var(--font-data);
-  font-size: 0.66rem;
+  font-size: 0.72rem;
   font-style: normal;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.1em;
   line-height: 1.4;
   text-transform: uppercase;
 }
@@ -268,7 +269,7 @@
   display: inline-grid;
   grid-template-columns: 52px;
   width: 52px;
-  height: 28px;
+  height: 44px;
   align-items: center;
   cursor: pointer;
 }
@@ -310,7 +311,7 @@
   border: 1px solid var(--color-rule);
 }
 [data-module="coffee"] .segmented label {
-  min-height: 42px;
+  min-height: 44px;
   display: grid;
   place-items: center;
   border-left: 1px solid var(--color-rule);
@@ -329,7 +330,7 @@
 }
 [data-module="coffee"] .slider-pair {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(44px, 64px) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(56px, 80px) auto;
   gap: var(--space-3);
   align-items: center;
   max-width: 100%;
@@ -350,10 +351,11 @@
 }
 [data-module="coffee"] .slider-pair output {
   text-align: right;
+  white-space: nowrap;
   font-size: 1.65rem;
 }
 [data-module="coffee"] .mini {
-  min-height: 36px;
+  min-height: 44px;
   padding-inline: var(--space-3);
 }
 [data-module="coffee"] .icon-button {
@@ -362,10 +364,11 @@
   padding: 0;
 }
 [data-module="coffee"] .icon-button[data-taste-help] {
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
-  border-radius: 999px;
+  position: relative;
+  width: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
   color: var(--color-muted);
 }
 [data-module="coffee"] .icon-button[data-taste-help] svg {
@@ -461,7 +464,7 @@
   border: 1px solid var(--color-rule);
 }
 [data-module="coffee"] .view-switch button {
-  min-height: 36px;
+  min-height: 44px;
   border: 0;
   border-left: 1px solid var(--color-rule);
   padding: 0 var(--space-3);
@@ -659,7 +662,8 @@
   opacity: 0;
 }
 [data-module="coffee"] .bean-row {
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 8px;
   align-items: center;
 }
 [data-module="coffee"] .bean-row em {
@@ -783,7 +787,7 @@
 
 @media (max-width: 760px) {
 [data-module="coffee"] .app-shell {
-    padding-inline: var(--space-3);
+    padding-inline: 0;
   }
 [data-module="coffee"] .page-header,
 [data-module="coffee"] .specimen-section,
@@ -850,7 +854,22 @@
   }
 }
 
-[data-module="coffee"] { display: block; padding: 20px 20px 84px; overflow-wrap: anywhere; }
+[data-module="coffee"] { display: block; padding: 24px 20px 32px; overflow-wrap: anywhere; }
 [data-module="coffee"] input, [data-module="coffee"] select, [data-module="coffee"] textarea { max-width: 100%; min-width: 0; }
 [data-module="coffee"] .bottom-tabs { grid-template-columns: repeat(4, auto); padding-bottom: env(safe-area-inset-bottom); }
 [data-module="coffee"] .bottom-tabs button { padding-inline: 8px; white-space: nowrap; font-size: 0.7rem; letter-spacing: 0.04em; }
+
+[data-module="coffee"] .icon-button[data-taste-help]::before { content: ''; position: absolute; inset: 8px; border: 1px solid var(--color-rule); border-radius: 50%; pointer-events: none; }
+[data-module="coffee"] .bean-row span { min-width: 0; }
+[data-module="coffee"] .insights-best-cup h2 { font-size: clamp(1.55rem, 2.8vw, 2rem); line-height: 1.15; }
+[data-module="coffee"] dialog[data-coffee-import-preview] { box-sizing: border-box; width: min(560px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); overflow-y: auto; margin: auto; padding: 20px; border: 1px solid var(--color-ink); background: var(--color-paper); color: var(--color-ink); }
+[data-module="coffee"] dialog[data-coffee-import-preview] h2 { margin: 0 0 16px; font-family: var(--font-display); font-size: 26px; line-height: 1.15; }
+[data-module="coffee"] dialog[data-coffee-import-preview] p { margin: 0 0 16px; line-height: 1.6; }
+[data-module="coffee"] dialog[data-coffee-import-preview] button { max-width: 100%; margin: 8px 8px 0 0; padding: 10px 12px; white-space: normal; line-height: 1.4; }
+@media (min-width: 720px) { [data-module="coffee"] { padding: 24px 36px 40px; } }
+@media (max-width: 380px) { [data-module="coffee"] .compact-entry-row .compact-entry-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) {
+  [data-module="coffee"] .bean-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding-block: 16px; }
+  [data-module="coffee"] .bean-row > span { grid-column: 1 / -1; padding-right: 0; }
+}
+[data-module="coffee"] button:disabled { opacity: .45; cursor: default; }

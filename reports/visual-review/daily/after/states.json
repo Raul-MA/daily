@@ -1,0 +1,146 @@
+[
+  {
+    "name": "collapsed-sidebar",
+    "url": "/daily/#/",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-collapsed-sidebar-390.png",
+    "overflow": 0,
+    "height": 2305
+  },
+  {
+    "name": "collapsed-sidebar",
+    "url": "/daily/#/",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-collapsed-sidebar-320.png",
+    "overflow": 0,
+    "height": 2329
+  },
+  {
+    "name": "collapsed-sidebar",
+    "url": "/daily/#/",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-collapsed-sidebar-1280.png",
+    "overflow": 0,
+    "height": 1034
+  },
+  {
+    "name": "recovery",
+    "url": "/daily/#/",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-recovery-390.png",
+    "overflow": 0,
+    "height": 949
+  },
+  {
+    "name": "recovery",
+    "url": "/daily/#/",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-recovery-320.png",
+    "overflow": 0,
+    "height": 968
+  },
+  {
+    "name": "recovery",
+    "url": "/daily/#/",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-recovery-1280.png",
+    "overflow": 0,
+    "height": 959
+  },
+  {
+    "name": "backup-preview",
+    "url": "/daily/#/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-backup-preview-390.png",
+    "overflow": 0,
+    "height": 3149
+  },
+  {
+    "name": "backup-preview",
+    "url": "/daily/#/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-backup-preview-320.png",
+    "overflow": 0,
+    "height": 3363
+  },
+  {
+    "name": "backup-preview",
+    "url": "/daily/#/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-backup-preview-1280.png",
+    "overflow": 0,
+    "height": 2786
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-spanish-settings-390.png",
+    "overflow": 0,
+    "height": 2499
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-spanish-settings-320.png",
+    "overflow": 0,
+    "height": 2723
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-spanish-settings-1280.png",
+    "overflow": 0,
+    "height": 2239
+  },
+  {
+    "name": "running-collapsed",
+    "url": "/daily/#/",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-running-collapsed-390.png",
+    "overflow": 0,
+    "height": 2201
+  },
+  {
+    "name": "running-collapsed",
+    "url": "/daily/#/",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-running-collapsed-320.png",
+    "overflow": 0,
+    "height": 2225
+  },
+  {
+    "name": "running-collapsed",
+    "url": "/daily/#/",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-running-collapsed-1280.png",
+    "overflow": 0,
+    "height": 1034
+  },
+  {
+    "name": "running-expanded",
+    "url": "/daily/#/",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-running-expanded-390.png",
+    "overflow": 0,
+    "height": 2417
+  },
+  {
+    "name": "running-expanded",
+    "url": "/daily/#/",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-running-expanded-320.png",
+    "overflow": 0,
+    "height": 2441
+  },
+  {
+    "name": "running-expanded",
+    "url": "/daily/#/",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/after/state-running-expanded-1280.png",
+    "overflow": 0,
+    "height": 1034
+  }
+]

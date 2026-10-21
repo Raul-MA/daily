@@ -208,3 +208,28 @@
 .daily-shell:has(.review-shell .review-cards [data-review-card]) { padding-bottom:calc(110px + env(safe-area-inset-bottom)); }
 
 [data-module="reading"].reader-preferences form { display: grid; gap: 18px; }
+
+[data-module="reading"], [data-module="reading"].reader-shell, [data-module="reading"] .reader-shell { min-height: 0; }
+[data-module="reading"].reader-preferences { padding: 24px 20px 40px; }
+[data-module="reading"].reader-preferences > h1 { margin-bottom: 24px; font-size: clamp(2rem, 4vw, 2.5rem); line-height: 1.1; letter-spacing: -.04em; }
+[data-module="reading"] .status:empty { display: none; }
+[data-module="reading"] .icon-button, [data-module="reading"] .text-button, [data-module="reading"] .check { min-height: 44px; }
+[data-module="reading"] .check input { margin: 0; flex-shrink: 0; }
+[data-module="reading"] .location-row label { min-width: 0; }
+[data-module="reading"] .location-row button { min-width: 44px; min-height: 44px; }
+[data-module="reading"] .primary-button:not(.review-done), [data-module="reading"] .secondary-button:not(.review-previous) { max-width: 100%; padding: 12px 18px; line-height: 1.4; }
+[data-module="reading"].review-shell > .secondary-button { display: inline-flex; align-items: center; justify-content: center; margin: 0 8px 8px 0; padding-inline: 12px; text-decoration: none; vertical-align: middle; }
+[data-module="reading"] [data-reader-freshness] { margin-top: 16px; }
+[data-module="reading"] .hero .summary { max-width: 65ch; }
+[data-module="reading"] .reader-shell > footer .text-button { padding-inline: 12px; }
+[data-module="reading"] dialog { width: min(560px, calc(100vw - 32px)); max-width: calc(100vw - 32px); max-height: calc(100dvh - 32px); margin: auto; }
+[data-module="reading"] #reader-import { margin-top: 8px; border-top: 1px solid var(--line); }
+[data-module="reading"] #reader-import-preview:not([hidden]) { display: grid; gap: 12px; }
+[data-module="reading"] #reader-import-preview p { margin: 0; line-height: 1.6; }
+[data-module="reading"] #reader-import-status { line-height: 1.6; }
+[data-module="reading"] .review-feedback a { width: calc(50% - 8px); justify-content: center; }
+[data-module="reading"].review-shell:not(:has(.review-cards [data-review-card])) { padding-bottom: 40px; }
+@media (min-width: 720px) {
+  [data-module="reading"].reader-shell, [data-module="reading"] .reader-shell, [data-module="reading"].reader-preferences { padding-inline: 36px; }
+  [data-module="reading"] .review-feedback a { width: calc(25% - 8px); }
+}

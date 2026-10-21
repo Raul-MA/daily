@@ -1,0 +1,266 @@
+[
+  {
+    "name": "reschedule",
+    "url": "/daily/#/plants/plant-one",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-reschedule-390.png",
+    "overflow": 0,
+    "height": 1830
+  },
+  {
+    "name": "reschedule",
+    "url": "/daily/#/plants/plant-one",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-reschedule-320.png",
+    "overflow": 0,
+    "height": 1882
+  },
+  {
+    "name": "reschedule",
+    "url": "/daily/#/plants/plant-one",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-reschedule-1280.png",
+    "overflow": 0,
+    "height": 1690
+  },
+  {
+    "name": "skip",
+    "url": "/daily/#/plants/plant-one",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-skip-390.png",
+    "overflow": 0,
+    "height": 1828
+  },
+  {
+    "name": "skip",
+    "url": "/daily/#/plants/plant-one",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-skip-320.png",
+    "overflow": 0,
+    "height": 1880
+  },
+  {
+    "name": "skip",
+    "url": "/daily/#/plants/plant-one",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-skip-1280.png",
+    "overflow": 0,
+    "height": 1688
+  },
+  {
+    "name": "history-edit",
+    "url": "/daily/#/plants/plant-one",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-history-edit-390.png",
+    "overflow": 0,
+    "height": 1767
+  },
+  {
+    "name": "history-edit",
+    "url": "/daily/#/plants/plant-one",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-history-edit-320.png",
+    "overflow": 0,
+    "height": 1819
+  },
+  {
+    "name": "history-edit",
+    "url": "/daily/#/plants/plant-one",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-history-edit-1280.png",
+    "overflow": 0,
+    "height": 1627
+  },
+  {
+    "name": "care-guide",
+    "url": "/daily/#/plants/plant-one",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-care-guide-390.png",
+    "overflow": 0,
+    "height": 2780
+  },
+  {
+    "name": "care-guide",
+    "url": "/daily/#/plants/plant-one",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-care-guide-320.png",
+    "overflow": 0,
+    "height": 3072
+  },
+  {
+    "name": "care-guide",
+    "url": "/daily/#/plants/plant-one",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-care-guide-1280.png",
+    "overflow": 0,
+    "height": 2184
+  },
+  {
+    "name": "delete-dialog",
+    "url": "/daily/#/plants/plant-one",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-delete-dialog-390.png",
+    "overflow": 0,
+    "height": 1543
+  },
+  {
+    "name": "delete-dialog",
+    "url": "/daily/#/plants/plant-one",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-delete-dialog-320.png",
+    "overflow": 0,
+    "height": 1595
+  },
+  {
+    "name": "delete-dialog",
+    "url": "/daily/#/plants/plant-one",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-delete-dialog-1280.png",
+    "overflow": 0,
+    "height": 1403
+  },
+  {
+    "name": "template",
+    "url": "/daily/#/plants/new",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-template-390.png",
+    "overflow": 0,
+    "height": 1512
+  },
+  {
+    "name": "template",
+    "url": "/daily/#/plants/new",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-template-320.png",
+    "overflow": 0,
+    "height": 1548
+  },
+  {
+    "name": "template",
+    "url": "/daily/#/plants/new",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-template-1280.png",
+    "overflow": 0,
+    "height": 1372
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/plants/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-import-preview-390.png",
+    "overflow": 0,
+    "height": 1202
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/plants/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-import-preview-320.png",
+    "overflow": 0,
+    "height": 1202
+  },
+  {
+    "name": "import-preview",
+    "url": "/daily/#/plants/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-import-preview-1280.png",
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/plants/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-invalid-import-390.png",
+    "overflow": 0,
+    "height": 1235
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/plants/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-invalid-import-320.png",
+    "overflow": 0,
+    "height": 1283
+  },
+  {
+    "name": "invalid-import",
+    "url": "/daily/#/plants/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-invalid-import-1280.png",
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "refresh-dialog",
+    "url": "/daily/#/plants/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-refresh-dialog-390.png",
+    "overflow": 0,
+    "height": 1202
+  },
+  {
+    "name": "refresh-dialog",
+    "url": "/daily/#/plants/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-refresh-dialog-320.png",
+    "overflow": 0,
+    "height": 1202
+  },
+  {
+    "name": "refresh-dialog",
+    "url": "/daily/#/plants/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-refresh-dialog-1280.png",
+    "overflow": 0,
+    "height": 1102
+  },
+  {
+    "name": "spanish-long-name",
+    "url": "/daily/#/plants/plant-one",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-spanish-long-name-390.png",
+    "overflow": 0,
+    "height": 1767
+  },
+  {
+    "name": "spanish-long-name",
+    "url": "/daily/#/plants/plant-one",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-spanish-long-name-320.png",
+    "overflow": 0,
+    "height": 1879
+  },
+  {
+    "name": "spanish-long-name",
+    "url": "/daily/#/plants/plant-one",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-spanish-long-name-1280.png",
+    "overflow": 0,
+    "height": 1500
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/plants/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-spanish-settings-390.png",
+    "overflow": 0,
+    "height": 1220
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/plants/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-spanish-settings-320.png",
+    "overflow": 0,
+    "height": 1290
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/plants/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/plants/before/state-spanish-settings-1280.png",
+    "overflow": 0,
+    "height": 1154
+  }
+]

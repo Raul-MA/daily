@@ -1,0 +1,98 @@
+[
+  {
+    "name": "collapsed-sidebar",
+    "url": "/daily/#/",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-collapsed-sidebar-390.png",
+    "overflow": 0,
+    "height": 2305
+  },
+  {
+    "name": "collapsed-sidebar",
+    "url": "/daily/#/",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-collapsed-sidebar-320.png",
+    "overflow": 0,
+    "height": 2329
+  },
+  {
+    "name": "collapsed-sidebar",
+    "url": "/daily/#/",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-collapsed-sidebar-1280.png",
+    "overflow": 0,
+    "height": 1034
+  },
+  {
+    "name": "recovery",
+    "url": "/daily/#/",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-recovery-390.png",
+    "overflow": 0,
+    "height": 890
+  },
+  {
+    "name": "recovery",
+    "url": "/daily/#/",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-recovery-320.png",
+    "overflow": 0,
+    "height": 928
+  },
+  {
+    "name": "recovery",
+    "url": "/daily/#/",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-recovery-1280.png",
+    "overflow": 0,
+    "height": 919
+  },
+  {
+    "name": "backup-preview",
+    "url": "/daily/#/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-backup-preview-390.png",
+    "overflow": 0,
+    "height": 3057
+  },
+  {
+    "name": "backup-preview",
+    "url": "/daily/#/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-backup-preview-320.png",
+    "overflow": 0,
+    "height": 3264
+  },
+  {
+    "name": "backup-preview",
+    "url": "/daily/#/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-backup-preview-1280.png",
+    "overflow": 0,
+    "height": 2694
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/settings",
+    "width": 390,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-spanish-settings-390.png",
+    "overflow": 0,
+    "height": 2499
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/settings",
+    "width": 320,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-spanish-settings-320.png",
+    "overflow": 0,
+    "height": 2723
+  },
+  {
+    "name": "spanish-settings",
+    "url": "/daily/#/settings",
+    "width": 1280,
+    "file": "/workspaces/daily/reports/visual-review/daily/before/state-spanish-settings-1280.png",
+    "overflow": 0,
+    "height": 2239
+  }
+]
