@@ -1,0 +1,68 @@
+Suite: plants
+✔ care dates use latest matching care and ignore notes skip and reschedule entries (38.878014ms)
+✔ watering seasons preserve wrap-around dry periods and growth intervals (1.220788ms)
+✔ fertilizer pause is preserved while a manual due date still takes precedence (0.636738ms)
+✔ care status distinguishes overdue today soon and future without mutating plants (1.45284ms)
+✔ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (2.638793ms)
+✔ backdated input uses local noon and today retains the actual event time (0.607003ms)
+✔ reminder counts include overdue and today care once and leave records unchanged (0.6484ms)
+✔ urgency ranking places overdue care ahead of future care (1.647574ms)
+✔ legacy plant export retains records care dates Unicode and Things preferences through actual Daily import (10.299025ms)
+✔ legacy plant exporter reads the first valid recovery in original priority without repairing original keys (2.463376ms)
+✔ legacy plant exporter keeps empty storage read-only and refuses invalid settings checksums or blocked storage (1.558468ms)
+✔ original thirteen and three researched plant guides have complete English and Spanish text with unchanged care figures (31.541945ms)
+✔ localized plant templates are detached copies and never rewrite original source notes guides or schedules (8.352603ms)
+✔ connected plant storage writes only the shared document and preserves other modules (3.784153ms)
+✔ connected care and due-date changes remain one root commit with no partial state (2.169427ms)
+✔ Things settings live with plant records and survive a plant update (4.511697ms)
+✔ legacy import previews are read-only and confirmation keeps a root recovery copy (2.774676ms)
+✔ migration export includes Things settings and imports without translating user text (3.059478ms)
+✔ unsupported duplicate and invalid plant imports never mutate shared data (3.785151ms)
+✔ quota failure retains plant history and sends no successful shared change (1.177998ms)
+✔ template care refresh preserves names notes history IDs and manual dates (1.132162ms)
+✔ valid legacy data remains readable when its migration write fails (1.419608ms)
+✔ care log and next-due override are committed in one primary write (0.905359ms)
+✔ validation failures use the storage-error notification path (0.315458ms)
+✔ direct Things URL sends every reminder with its care type, original due date and Unicode plant name (0.629324ms)
+✔ direct Things URL follows interface language and never changes reminder records (0.255587ms)
+✔ direct Things URL does not launch an empty import (0.093374ms)
+✔ builds a stable watering title (0.109905ms)
+✔ shortcut URL carries the exact title, date, and project (0.667565ms)
+✔ enabled integration requires a project (0.19297ms)
+✔ settings round-trip and normalize project whitespace (0.169787ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 191.052123
+[WebServer] (node:16106) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 19 tests using 1 worker
+
+(node:16131) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/plants/e2e/import-selection.spec.js:5:1 › selecting a plant backup opens a read-only preview and allows retry after cancel or invalid JSON (3.1s)
+  ✓   2 modules/plants/e2e/localization.spec.js:5:1 › template defaults follow the selected language while existing form text survives later language changes (2.3s)
+  ✓   3 modules/plants/e2e/localization.spec.js:33:1 › authored plant guides switch language offline without translating saved records or changing care timing (4.4s)
+  ✓   4 modules/plants/e2e/plants.spec.js:47:1 › plant creation edit and deletion use canonical routes and retain other storage (2.1s)
+  ✓   5 modules/plants/e2e/plants.spec.js:65:1 › care logging skip and manual dates keep one history and support editing and deleting entries (2.7s)
+  ✓   6 modules/plants/e2e/plants.spec.js:94:1 › dashboard reminders open the stable plant without completing care or changing legacy keys (2.7s)
+  ✓   7 modules/plants/e2e/plants.spec.js:110:1 › plant import previews can be canceled and replacement requires a recovery download (1.7s)
+  ✓   8 modules/plants/e2e/plants.spec.js:129:1 › Plants configure the Things shortcut without automatic handoffs and preserve export compatibility (3.4s)
+  ✓   9 modules/plants/e2e/plants.spec.js:163:1 › failed care saves retain the visible form and previous stored history (1.6s)
+  ✓  10 modules/plants/e2e/plants.spec.js:181:1 › plant interfaces follow shared Spanish without translating saved names and observations (1.7s)
+  ✓  11 modules/plants/e2e/plants.spec.js:194:1 › plant styles stay scoped and invalid imports leave the current plants intact (3.1s)
+  ✓  12 modules/plants/e2e/plants.spec.js:216:1 › a plant changed in another tab keeps the current draft and refuses a stale edit (3.4s)
+  ✓  13 modules/plants/e2e/plants.spec.js:231:1 › switching language preserves draft plant fields and an open care note (1.9s)
+  ✓  14 modules/plants/e2e/plants.spec.js:245:1 › plant details care logging and settings work after an offline reload (5.0s)
+  ✓  15 modules/plants/e2e/plants.spec.js:262:1 › Things project setup validates, preserves language drafts and survives reload without changing plant care (3.4s)
+  ✓  16 modules/plants/e2e/presentation.spec.js:15:1 › dashboard and Plants group reminders by care type with urgency retained and navigation only (1.3s)
+  ✓  17 modules/plants/e2e/presentation.spec.js:38:1 › care history uses a borderless table and retains inline editing on narrow screens (1.3s)
+  ✓  18 modules/plants/e2e/presentation.spec.js:54:1 › plant detail Things buttons send each future planned date and stay enabled after use (1.6s)
+  ✓  19 modules/plants/e2e/presentation.spec.js:94:1 › today, overdue and paused care have no future Things action on plant details (1.2s)
+
+  19 passed (50.7s)

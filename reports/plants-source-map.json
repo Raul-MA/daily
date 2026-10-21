@@ -84,12 +84,20 @@
   "native_acceptance": {
     "import": "modules/plants/e2e/import-selection.spec.js",
     "presentation": "modules/plants/e2e/presentation.spec.js",
-    "browser_contracts": 18,
+    "browser_contracts": 19,
     "import_recovery": "Replace initiates a recovery download; the separate recovery link avoids a duplicate download.",
     "reminders": "Dashboard and Plants group watering, soil and fertilizer with urgency ordering; rows contain plant name and shared status pill, without repeated care type.",
     "history": "Borderless semantic table; inline edit/delete retained; contained horizontal scrolling on narrow screens.",
-    "things": "Plant-detail buttons for each future planned care type open one direct things:///json task with the unchanged planned date; buttons remain enabled after use. No actions on reminder lists, bulk send, shortcut or automatic handoff. Legacy compatibility retained.",
-    "direct_things_unit_contracts": 3
+    "things": "Plant-detail buttons for each future care type run the existing Stillgreen to Things shortcut with version/title/date/project, preserving the planned date and repeat-enabled buttons. Plant settings configures the project; imported values are reused. No automatic handoff or reminder-list actions. Original shortcut and unused direct-builder tests retained.",
+    "direct_things_unit_contracts": 3,
+    "shortcut_restoration": {
+      "date": "2026-10-21",
+      "acceptance": "modules/plants/e2e/presentation.spec.js",
+      "settings_acceptance": "modules/plants/e2e/plants.spec.js",
+      "red": "reports/plants-shortcut-red.txt",
+      "verification": "reports/plants-shortcut-verification.txt",
+      "device_acceptance": "pending"
+    }
   },
   "researched_additions": {
     "date": "2026-10-20",

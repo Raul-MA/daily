@@ -8,7 +8,7 @@ async function seed(page, overridePlants = null) {
       careLog: [{ id: `care-${index}`, type: 'watering', date: '2020-01-01', note: 'Watered carefully 🌱' }],
     }));
     plants.push({ id: 'future-fern', name: 'Future fern', dateAdded: '2099-01-01', schedule: { wateringIntervalDays: 7, soilIntervalMonths: 12, fertilizerIntervalWeeks: 4, nextDueOverrides: { watering: '2099-02-03', soil: '2099-05-06', fertilizer: '2099-03-04' } }, careLog: [] });
-    localStorage.setItem('daily:v1', JSON.stringify({ version: 1, preferences: { language: 'en', widgets: ['plants'], quickActions: [] }, modules: { plants: { version: 1, data: { plants: overridePlants ?? plants, things: { enabled: false, project: '' }, backup: { lastExportAt: null, changesSinceExport: 0, lastReminderAt: null }, storage: { persistenceRequested: false, persistent: false, checkedAt: null } } } } }));
+    localStorage.setItem('daily:v1', JSON.stringify({ version: 1, preferences: { language: 'en', widgets: ['plants'], quickActions: [] }, modules: { plants: { version: 1, data: { plants: overridePlants ?? plants, things: { enabled: true, project: 'Casa 🏡' }, backup: { lastExportAt: null, changesSinceExport: 0, lastReminderAt: null }, storage: { persistenceRequested: false, persistent: false, checkedAt: null } } } } }));
   }, overridePlants);
 }
 
@@ -56,7 +56,7 @@ test('plant detail Things buttons send each future planned date and stay enabled
   await page.addInitScript(() => {
     window.plantThingsURLs = [];
     window.navigation.addEventListener('navigate', event => {
-      if (!event.destination.url.startsWith('things:')) return;
+      if (!/^(things|shortcuts):/.test(event.destination.url)) return;
       event.preventDefault();
       window.plantThingsURLs.push(event.destination.url);
     });
@@ -79,9 +79,11 @@ test('plant detail Things buttons send each future planned date and stay enabled
       const urls = await page.evaluate(() => window.plantThingsURLs);
       expect(urls).toHaveLength(1);
       const url = new URL(urls[0]);
-      expect(url.protocol).toBe('things:');
-      expect(url.pathname).toBe('/json');
-      expect(JSON.parse(url.searchParams.get('data'))).toEqual([{ type: 'to-do', attributes: { title: `${title} — Future fern`, when: date } }]);
+      expect(url.protocol).toBe('shortcuts:');
+      expect(url.hostname).toBe('run-shortcut');
+      expect(url.searchParams.get('name')).toBe('Stillgreen to Things');
+      expect(url.searchParams.get('input')).toBe('text');
+      expect(JSON.parse(url.searchParams.get('text'))).toEqual({ version: 1, title: `${title} — Future fern`, date, project: 'Casa 🏡' });
     }
   }
   expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe(before);

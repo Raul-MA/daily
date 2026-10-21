@@ -126,7 +126,7 @@ test('plant import previews can be canceled and replacement requires a recovery 
   expect(await page.evaluate(() => localStorage.getItem('plantTracker_plants'))).toBe('legacy storage must stay untouched');
 });
 
-test('Plants remove Things controls and handoffs while preserving legacy settings and export compatibility', async ({ page }) => {
+test('Plants configure the Things shortcut without automatic handoffs and preserve export compatibility', async ({ page }) => {
   await seed(page);
   await settings(page);
   await page.evaluate(() => {
@@ -135,9 +135,10 @@ test('Plants remove Things controls and handoffs while preserving legacy setting
     localStorage.setItem('daily:v1', JSON.stringify(root));
   });
   await page.reload();
-  await expect(page.getByText('Stillgreen to Things', { exact: true })).toHaveCount(0);
+  await expect(page.getByText('Stillgreen to Things', { exact: true })).toBeVisible();
   await expect(page.getByLabel('Create reminders after watering', { exact: true })).toHaveCount(0);
-  await expect(page.getByRole('button', { name: 'Save Things settings', exact: true })).toHaveCount(0);
+  await expect(page.getByLabel('Things project', { exact: true })).toHaveValue('Casa 🏡');
+  await expect(page.getByRole('button', { name: 'Save Things settings', exact: true })).toBeVisible();
   await detail(page);
   await expect(page.getByRole('link', { name: 'Add to Things 3', exact: true })).toHaveCount(0);
   const navigations = [];
@@ -255,4 +256,29 @@ test('plant details care logging and settings work after an offline reload', asy
   await page.getByRole('link', { name: 'Plant settings', exact: true }).click();
   await page.reload();
   await expect(page.getByRole('button', { name: 'Export plants and settings', exact: true })).toBeVisible();
+});
+
+
+test('Things project setup validates, preserves language drafts and survives reload without changing plant care', async ({ page }) => {
+  await seed(page, [{ ...plant, schedule: { ...plant.schedule, nextDueOverrides: { watering: '2099-02-03' } } }]);
+  await detail(page);
+  const before = (await saved(page)).plants;
+  await page.getByRole('button', { name: 'Add to Things 3: Watering — Helecho 🌱', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('Enter your Things project');
+  await settings(page);
+  await page.setViewportSize({ width: 320, height: 900 });
+  await page.getByLabel('Things project', { exact: true }).fill('   ');
+  await page.getByRole('button', { name: 'Save Things settings', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('Enter your Things project');
+  expect((await saved(page)).things).toEqual({ enabled: false, project: '' });
+  await page.getByLabel('Things project', { exact: true }).fill('  Plantas 🏡  ');
+  await page.getByRole('button', { name: 'Español', exact: true }).click();
+  await expect(page.getByLabel('Proyecto de Things', { exact: true })).toHaveValue('  Plantas 🏡  ');
+  await page.getByRole('button', { name: 'Guardar ajustes de Things', exact: true }).click();
+  await expect(page.locator('[data-module="plants"]').getByRole('status')).toContainText('Guardado');
+  await page.reload();
+  await expect(page.getByLabel('Proyecto de Things', { exact: true })).toHaveValue('Plantas 🏡');
+  expect((await saved(page)).things).toEqual({ enabled: true, project: 'Plantas 🏡' });
+  expect((await saved(page)).plants).toEqual(before);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
