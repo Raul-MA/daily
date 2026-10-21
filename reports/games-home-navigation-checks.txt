@@ -1,0 +1,11 @@
+
+> daily-pwa@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> daily-pwa@0.0.0 check:js
+> node scripts/check-js.mjs
+
+JavaScript syntax checked: 838 files
+
+Assertion audit: only the final background snapshot changed; every preceding line is preserved. Exact expected color remains rgb(242, 242, 247).

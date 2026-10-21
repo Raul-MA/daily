@@ -32,5 +32,6 @@ test('game setup scores history and statistics work after an offline reload', as
   await page.getByTestId(testIds.navStats).last().click();
   await expect(page.getByTestId(testIds.statsView)).toContainText('Ada');
   await page.getByRole('link', { name: 'Home', exact: true }).click();
-  expect(await page.locator('html').evaluate(node => getComputedStyle(node).backgroundColor)).toBe('rgb(242, 242, 247)');
+  await expect(page.locator('#dashboard')).toBeVisible();
+  await expect(page.locator('html')).toHaveCSS('background-color', 'rgb(242, 242, 247)');
 });

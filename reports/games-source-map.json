@@ -229,5 +229,17 @@
     "browserContracts": "modules/games/e2e/localization.spec.js",
     "unitContract": "modules/games/test/localization-service.test.mjs",
     "preserved": "Original scoring/domain values and every source assertion; no stored user text is translated."
+  },
+  "ciNavigationAssertion": {
+    "test": "modules/games/e2e/offline.spec.js",
+    "failureEvidence": "reports/pages-deployment.md#actions-run-39485706681-diagnosis-2026-10-20",
+    "change": "Wait for #dashboard visibility after Home and retry the exact rgb(242, 242, 247) background assertion with toHaveCSS. All earlier assertions, test counts and default timeouts remain.",
+    "verification": [
+      "reports/games-home-navigation-verification.txt",
+      "reports/games-home-navigation-general.txt",
+      "reports/games-home-navigation-checks.txt",
+      "reports/games-home-navigation-full-verification.txt"
+    ],
+    "result": "npm run verify exits 0: all 329 unit / 217 native browser cases, both retained Piano smoke scripts, strict lint, 838-file syntax and 716-asset build. Games 17/34 and General 85/40 pass. No test/application changes during the full run; future CI remains pending."
   }
 }

@@ -1,0 +1,69 @@
+Suite: games
+✔ game sessions snapshot names and configuration and allow only one active session (154.547298ms)
+✔ round scores preserve negatives and shared ties while invalid fractions do not save (4.985045ms)
+✔ removing the final round retains an editable zero round and sequential numbering (1.897715ms)
+✔ first to points always favors the higher score while lowest-score games retain their rule (1.442054ms)
+✔ competitive outcomes require every result and retain separate wins ties and losses (4.706813ms)
+✔ collaborative solo outcomes have no individual winners or competitive head to head (2.004815ms)
+✔ history archives referenced records and duration overrides control derived statistics (2.422266ms)
+✔ full game backups reject broken references duplicates and future major versions without mutation (3.609534ms)
+✔ games translations preserve interpolation and user names while covering scoring and errors (6.321779ms)
+✔ games read without writes and preserve other modules while sharing explicit language changes (59.01539ms)
+✔ starting a game atomically registers its timestamp activity and retains unrelated countdowns (3.036123ms)
+✔ scores never restart game timing and finishing atomically completes the shared activity (3.386877ms)
+✔ game quota failures leave both the sessions and shared activities unchanged (2.112436ms)
+✔ game stale domain saves reject instead of overwriting a newer module state (2.392156ms)
+✔ game replacement previews preserve shared language and restore active timing with recovery (2.181378ms)
+✔ game future modules and stale import previews remain untouched (2.86949ms)
+✔ game backup previews reject duplicate nested round result and winner identities without replacing records (3.257936ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 395.203639
+[WebServer] (node:10051) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 34 tests using 1 worker
+
+(node:10087) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/games/e2e/gameplay-2.spec.js:4:1 › keeps history filters collapsed and summarizes active filters (8.1s)
+  ✓   2 modules/games/e2e/gameplay-2.spec.js:19:1 › starts enters edits and finishes a score session (4.7s)
+  ✓   3 modules/games/e2e/gameplay-2.spec.js:66:1 › opens completed game details without editing first (3.6s)
+  ✓   4 modules/games/e2e/gameplay-3.spec.js:7:1 › tracks session duration and game duration analytics (2.6s)
+  ✓   5 modules/games/e2e/gameplay-3.spec.js:34:1 › shows player average scores by game instead of blending scoring systems (2.5s)
+  ✓   6 modules/games/e2e/gameplay-4.spec.js:7:1 › first to points ranks the highest live total as leader (2.0s)
+  ✓   7 modules/games/e2e/gameplay-4.spec.js:19:1 › shows first to points target reached as a toast (7.2s)
+  ✓   8 modules/games/e2e/gameplay-4.spec.js:40:1 › records win loss tie results (3.5s)
+  ✓   9 modules/games/e2e/gameplay-4.spec.js:56:1 › preserves scoring settings while collaborative mode is enabled (2.6s)
+  ✓  10 modules/games/e2e/gameplay-4.spec.js:72:1 › records one team result and keeps collaborative stats separate (3.7s)
+  ✓  11 modules/games/e2e/gameplay.spec.js:3:1 › creates edits and archives a player (2.8s)
+  ✓  12 modules/games/e2e/gameplay.spec.js:15:1 › creates edits and archives a game definition (2.3s)
+  ✓  13 modules/games/e2e/gameplay.spec.js:27:1 › shows only scoring fields required by selected game mode (2.5s)
+  ✓  14 modules/games/e2e/gameplay.spec.js:39:1 › hides game form while a session is active (3.0s)
+  ✓  15 modules/games/e2e/gameplay.spec.js:50:1 › hides play setup form while a session is active (3.4s)
+  ✓  16 modules/games/e2e/gameplay.spec.js:60:1 › excludes archived players from new play setup without deleting history (3.9s)
+  ✓  17 modules/games/e2e/gameplay.spec.js:88:1 › shows app messages as dismissible fixed toasts (2.8s)
+  ✓  18 modules/games/e2e/import-export.spec.js:5:1 › exports full JSON and replace-import restores data (5.5s)
+  ✓  19 modules/games/e2e/import-export.spec.js:33:1 › rejects malformed nested backup data without replacing local data (2.4s)
+  ✓  20 modules/games/e2e/localization.spec.js:8:1 › games Spanish management history statistics and backup screens reopen offline without data writes (10.3s)
+  ✓  21 modules/games/e2e/localization.spec.js:35:1 › games Spanish scores finish and history retain literal English user names and notes (5.3s)
+  ✓  22 modules/games/e2e/localization.spec.js:65:1 › games notifications and validation translate on remount without renewing expiry (3.3s)
+  ✓  23 modules/games/e2e/localization.spec.js:82:1 › games failed-write errors translate after remount while retaining the unsaved draft (2.7s)
+  ✓  24 modules/games/e2e/offline.spec.js:7:1 › game setup scores history and statistics work after an offline reload (7.5s)
+  ✓  25 modules/games/e2e/settings.spec.js:4:1 › persists theme and language settings (2.8s)
+  ✓  26 modules/games/e2e/settings.spec.js:15:1 › shows backup reminder before a successful export (1.5s)
+  ✓  27 modules/games/e2e/settings.spec.js:24:1 › shows backup reminder age when the last export is stale (2.8s)
+  ✓  28 modules/games/e2e/shared.spec.js:6:1 › game activity survives Home reload and elapsed time without creating another session (3.6s)
+  ✓  29 modules/games/e2e/shared.spec.js:25:1 › game form drafts survive shared language changes and notification expiry (1.7s)
+  ✓  30 modules/games/e2e/shared.spec.js:44:1 › game player edits retain drafts and refuse to overwrite another tab (3.0s)
+  ✓  31 modules/games/e2e/shared.spec.js:62:1 › game import cancellation and stable history detail links leave saved records intact (4.3s)
+  ✓  32 modules/games/e2e/shared.spec.js:80:1 › an obsolete game session link never opens a different active session (2.0s)
+  ✓  33 modules/games/e2e/smoke.spec.js:3:1 › loads mobile-first primary navigation (1.3s)
+  ✓  34 modules/games/e2e/smoke.spec.js:10:1 › registers service worker path over http (1.5s)
+
+  34 passed (2.4m)

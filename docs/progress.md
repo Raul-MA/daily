@@ -1,8 +1,22 @@
 # Implementation progress
 
-Updated: 2026-10-20. Repo: `/workspaces/daily`, branch `main`.
+Updated: 2026-10-21. Repo: `/workspaces/daily`, branch `main`.
 
 ## Current status and resume
+
+**Full verification after Games repair passes (2026-10-20):** the user requested all suites. `npm run verify` exits 0 on the completed local assertion fix and Reader layout: strict lint, 838-file JavaScript syntax, all 329 unit / 217 native browser cases, both retained Piano broad smoke scripts, and the final 716-asset `/daily/` build. [Complete transcript](../reports/games-home-navigation-full-verification.txt) records General 85/40, Plants 31/18, Coffee 20/34, Games 17/34, Time Budget 23/25, Piano 84/25, Reading 57/32 and WhatsApp 12/9 (unit/browser). Games’ corrected offline/Home assertion passes within the full run; no application/test changes were made during verification. The 360-check route-width audit was regenerated with synthetic IDs. Cache ID remains `daily-pwa-d09ba81ff45a93b6` because the repair changes tests only.
+
+**Exact next step after the full gate:** local verification is complete. The user requested a local commit of the Games test repair and verification evidence on 2026-10-21. Inspect CI after a later authorized push; no push, remote rerun or deployment was performed. Future CI and physical-device/authenticated API acceptance remain unverified. Personal backup files and the reference screenshot remain untouched and untracked.
+
+**Games Home assertion repaired locally (2026-10-20):** the user approved fixing the repeated CI failure while preserving the complete offline gameplay test. After Home, `modules/games/e2e/offline.spec.js` now waits for `#dashboard`, then uses retrying `toHaveCSS` with the original `rgb(242, 242, 247)` expected background. All earlier assertions, test counts and default timeouts remain; application code and cache assets are unchanged. The two prior remote failures provide pre-fix red evidence in [Pages diagnosis](../reports/pages-deployment.md#actions-run-39485706681-diagnosis-2026-10-20).
+
+**Repair verification:** sequential [Games](../reports/games-home-navigation-verification.txt) passes 17 unit / 34 browser cases, including the corrected offline test; [General](../reports/games-home-navigation-general.txt) passes 85 unit / 40 browser cases, including the 360-check route-width audit, theme, offline and updates. [Strict lint and 838-file syntax](../reports/games-home-navigation-checks.txt) pass. Both browser harnesses prepare the unchanged 716-asset app; original assertions, counts and default timeouts are preserved.
+
+**Exact next step for the repair:** review or commit the completed local change when requested; the full local gate now passes as recorded above, and CI inspection follows a later authorized push. No commit, push, remote rerun or deployment was performed. The future CI result remains unverified.
+
+**Latest Actions failure inspected (2026-10-20):** [run 39485706681 / build job](https://github.com/Raul-MA/daily/actions/runs/39485706681/job/118845435910) ran Reader commit `30473e0`. Its sole native browser failure repeats the existing Games offline/Home background snapshot at `modules/games/e2e/offline.spec.js:35`: expected dashboard `rgb(242, 242, 247)`, received Games `rgb(248, 247, 243)`. All 329 unit cases and 216/217 native browser cases passed, including all 32 Reader cases, strict lint and syntax. [Diagnosis and evidence](../reports/pages-deployment.md#actions-run-39485706681-diagnosis-2026-10-20) records the exact failure and the likely navigation/theme timing race. Pages configuration, upload and deployment were skipped.
+
+**Exact next step for this Actions failure:** wait for the dashboard after Home and replace the one-shot Games background snapshot with a retrying `toHaveCSS` assertion using the same exact color, then validate Games/General and the full release gate before any publication. Diagnosis is complete; no source/test/workflow fix, commit, push, remote rerun or deployment was performed. Live API/device acceptance remains deferred.
 
 **Reader review layout complete locally (2026-10-20):** the screenshot interview accepts Reader’s existing light theme with a large single highlight, source metadata above it, progress, and a fixed Discard/Master/Frequency/Done bar. The first three actions open the Readwise review without applying changes. Done advances locally; the final Done uses the existing preflight/server-confirmed completion. Existing timing links remain under Readwise options; all original assertions remain. The compact Previous/progress row and direct link below the card leave more space for reading. Fixed placement applies only when review cards exist, and page-bottom space keeps the shared footer reachable.
 

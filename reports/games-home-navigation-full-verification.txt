@@ -1,0 +1,932 @@
+
+> daily-pwa@0.0.0 verify
+> npm run lint && npm run check:js && npm run test:all && npm run build
+
+
+> daily-pwa@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> daily-pwa@0.0.0 check:js
+> node scripts/check-js.mjs
+
+JavaScript syntax checked: 838 files
+
+> daily-pwa@0.0.0 test:all
+> node scripts/test.mjs all
+
+Suite: general
+✔ time is derived from timestamps without tick writes or automatic completion (6.104917ms)
+✔ reload and process reconstruction preserve elapsed time and Unicode references (0.739041ms)
+✔ explicit pause excludes background time and resume continues the same activity (1.076661ms)
+✔ countdowns are independent and singleton budgets games and piano resume existing activities (0.910561ms)
+✔ widget removal language changes and navigation do not pause or reset activities (0.708376ms)
+✔ completion is explicit and terminal while a new budget may start afterwards (1.07555ms)
+✔ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (0.601975ms)
+✔ invalid starts duplicate identifiers and unknown transitions never mutate activities (1.726936ms)
+✔ failed activity changes keep the previous status and publish no success (0.677286ms)
+✔ combined backup exports every module layout language and original running timestamps without credentials or caches (47.711563ms)
+✔ combined preview validates every module and shows counts without changing records (14.244919ms)
+✔ combined restore rejects unknown identities future schemas unknown modules and future module versions (12.594301ms)
+✔ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (11.098494ms)
+✔ combined restore rejects orphan missing and inconsistent active activity mirrors (9.600385ms)
+✔ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (10.359724ms)
+✔ combined failed primary or recovery writes retain records and do not reset credentials (9.879676ms)
+✔ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (10.03126ms)
+✔ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (14.703127ms)
+✔ calendar refreshes at local midnight without repeated changes on the same day (1.524488ms)
+✔ foreground resumes recalculate date after suspension and cleanup removes callbacks (0.378347ms)
+✔ calendar deadlines follow daylight-saving local days rather than a fixed 24 hours (0.624887ms)
+✔ missing modules fail when exercised rather than preventing test discovery (0.334925ms)
+✔ new browser tests target the Pages path and module hash (0.352589ms)
+✔ legacy budget patch packages a working export link without modifying originals and refuses changed source HTML (111.34539ms)
+✔ legacy plants patch packages a working export link without modifying originals and refuses changed source HTML (134.4272ms)
+✔ legacy Reader patch packages a working export link without modifying originals and refuses changed source HTML (145.30533ms)
+✔ legacy WhatsApp patch packages a working export link without modifying originals and refuses changed source HTML (104.345966ms)
+✔ plants worker removes only its old caches (6.916578ms)
+✔ coffee worker removes only its old caches (1.463557ms)
+✔ games worker removes only its old caches (1.581414ms)
+✔ Time Budget worker removes only its old caches (1.344752ms)
+✔ piano worker removes only its old caches (1.340515ms)
+✔ module defaults never write and saved payloads preserve unrelated preferences and records (0.645255ms)
+✔ module reads validate domain shapes and reject future versions without overwriting (0.54577ms)
+✔ module saves re-read current state and publish only committed updates (0.573802ms)
+✔ failed module commits retain previous readable data without success notifications (0.423121ms)
+✔ activity schemas reject unrenderable finite clocks and durations before creating the root (0.500745ms)
+✔ durable storage is requested where available and refusal or failure never claims retention (0.930889ms)
+✔ fresh dashboard defaults put plants and activities first without writing data (0.479045ms)
+✔ language and dashboard order persist across a new state instance (0.526114ms)
+✔ removing a widget preserves module records and their active sessions (0.393074ms)
+✔ invalid language, duplicate widgets and unknown actions never overwrite settings (0.498932ms)
+✔ failed saves publish no committed change and retain the previous preferences (0.372826ms)
+✔ committed preference changes notify subscribers and support cleanup (0.534959ms)
+✔ diagnostic rejects empty credentials without making requests (1.104433ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (40.94049ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (1.88414ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.55181ms)
+✔ hung requests time out and remaining endpoint checks still execute (17.112501ms)
+✔ local diagnostics do not claim Pages-origin verification (0.571989ms)
+✔ hash routes cover all seven modules and their canonical deep links (2.450799ms)
+✔ href builder encodes stable IDs and supports configurable local base paths (0.409825ms)
+✔ query parameters and repeated values survive routing without changing settings (0.238035ms)
+✔ unknown and malformed routes fail safely instead of executing external URLs (0.541983ms)
+✔ browser hash listener supports navigation and removes itself on cleanup (0.451283ms)
+✔ static preparation preserves native modules byte-for-byte and resolves every relative import (638.580891ms)
+✔ static preparation uses the configured base for HTML manifest and worker without shipping tests (644.11222ms)
+✔ invalid static bases fail before replacing any previously prepared files (205.320049ms)
+✔ shared install assets provide PNG sizes maskable identity and a subpath-safe Apple touch icon (662.40953ms)
+✔ attention-screen raw recovery preserves only the three owned root snapshots without scanning storage (2.58514ms)
+✔ attention-screen restore validates full backups and replaces only the primary after a successful write (10.26204ms)
+✔ attention-screen restore rejects stale or tampered previews and future stored root versions (9.795319ms)
+✔ attention-screen recovery propagates blocked reads and reports cleanup failure only after replacement (7.862158ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (0.949564ms)
+✔ replacement keeps the previous validated document as recovery (0.334065ms)
+✔ invalid and future documents are rejected without any storage mutation (0.553123ms)
+✔ primary quota failure retains the readable document and reports failure (0.412851ms)
+✔ recovery quota failure prevents a primary replacement (0.372937ms)
+✔ corrupt primary data is preserved and recovery is explicit (0.450431ms)
+✔ unrecoverable corruption never produces an empty collection (0.420355ms)
+✔ missing primary data can recover from an existing valid recovery document (0.244426ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (3.986146ms)
+✔ lossy serialization is validated before touching existing records (0.358519ms)
+✔ a future primary schema is rejected without recovery or mutation (0.354262ms)
+✔ failure to preserve corrupt data reports failure without replacing it (0.25162ms)
+✔ update activation is held for any unfinished activity or unsaved form (0.601985ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (2.751661ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (3.201801ms)
+✔ offline navigation and built assets use only this app cache (2.591942ms)
+✔ updates wait until explicitly requested and reject unrelated messages (2.274399ms)
+✔ online navigation stays on the cached version until an update is accepted (1.576485ms)
+✔ any blocked tab prevents update activation (1.316439ms)
+✔ unresponsive tabs and malformed state replies keep updates waiting (25.307939ms)
+✔ every same-app tab must explicitly report safe before an update activates (2.429058ms)
+✔ updates from unknown clients are ignored (1.278086ms)
+ℹ tests 85
+ℹ suites 0
+ℹ pass 85
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3124.759984
+[WebServer] (node:31648) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 40 tests using 1 worker
+
+(node:31716) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/activities.spec.js:10:1 › running summaries link to their source and derive overdue time without storage writes (2.8s)
+  ✓   2 tests/e2e/activities.spec.js:25:1 › removing the activity widget keeps the shared indicator and running state (1.7s)
+  ✓   3 tests/e2e/activities.spec.js:35:1 › activity failure is isolated from the rest of the dashboard (1.3s)
+  ✓   4 tests/e2e/backup.spec.js:32:1 › full backup downloads all saved modules and layout without credentials or unsaved settings (2.0s)
+  ✓   5 tests/e2e/backup.spec.js:46:1 › full backup restores every app into a separate browser profile with original overdue clocks and token reentry (3.8s)
+  ✓   6 tests/e2e/backup.spec.js:69:1 › full import invalid cancel stale and quota paths preserve current records and retained credentials (2.3s)
+  ✓   7 tests/e2e/backup.spec.js:99:1 › full import reports restored records honestly when credential cleanup fails after the root commit (2.2s)
+  ✓   8 tests/e2e/backup.spec.js:113:1 › full restore discards setup drafts retained by another app before importing (2.1s)
+  ✓   9 tests/e2e/calendar.spec.js:5:1 › dashboard care reminders refresh at midnight without changing records (1.4s)
+  ✓  10 tests/e2e/diagnostics.spec.js:5:1 › connection checks require submission and preserve unrelated storage (274ms)
+  ✓  11 tests/e2e/diagnostics.spec.js:28:1 › a missing review and a Reader network failure do not hide other outcomes (284ms)
+  ✓  12 tests/e2e/diagnostics.spec.js:43:1 › diagnostic controls and outcomes support Spanish (324ms)
+  ✓  13 tests/e2e/legacy-budget.spec.js:35:1 › legacy Time Budget exporter previews and downloads original active timing without changing source storage (354ms)
+  ✓  14 tests/e2e/legacy-plants.spec.js:37:1 › legacy plant exporter preserves plant records and Things preferences through phone preview and Daily import (320ms)
+  ✓  15 tests/e2e/legacy-reader.spec.js:36:1 › legacy Reader export previews optional remembered metadata and imports preferences without credentials or cached bodies (312ms)
+  ✓  16 tests/e2e/legacy-whatsapp.spec.js:34:1 › legacy WhatsApp export preserves expired reminder fields and safe literal message text without handoff or storage changes (367ms)
+  ✓  17 tests/e2e/offline.spec.js:10:1 › install identity and worker scope use the configured application base (3.5s)
+  ✓  18 tests/e2e/offline.spec.js:46:1 › home settings and connection checks reopen offline without losing saved settings (6.5s)
+  ✓  19 tests/e2e/offline.spec.js:61:1 › offline cache contains generated assets and excludes API responses and credentials (4.3s)
+  ✓  20 tests/e2e/page-width.spec.js:17:1 › every registered screen and Piano destination fills its available container (33.5s)
+  ✓  21 tests/e2e/platform.spec.js:38:1 › dashboard keeps the accepted three, two and one column layouts (1.9s)
+  ✓  22 tests/e2e/platform.spec.js:51:1 › all modules stay reachable and dashboard navigation creates no records (2.5s)
+  ✓  23 tests/e2e/platform.spec.js:77:1 › app backgrounds fill the viewport when switching apps (5.3s)
+  ✓  24 tests/e2e/platform.spec.js:111:1 › shared header and footer follow app theme changes and system dark mode (2.1s)
+  ✓  25 tests/e2e/platform.spec.js:130:1 › shared language setting persists and leaves module user text unchanged (2.4s)
+  ✓  26 tests/e2e/platform.spec.js:146:1 › widget visibility and order persist without removing apps or module state (2.3s)
+  ✓  27 tests/e2e/platform.spec.js:160:1 › quick-action visibility persists while its app remains in the menu (2.8s)
+  ✓  28 tests/e2e/platform.spec.js:172:1 › stable deep links reload and unknown routes provide an accessible way home (2.4s)
+  ✓  29 tests/e2e/platform.spec.js:184:1 › failed preference saves report failure and retain the previous language (1.5s)
+  ✓  30 tests/e2e/platform.spec.js:200:1 › unrecoverable storage is retained and never shown as an empty dashboard (1.3s)
+  ✓  31 tests/e2e/review-fixes.spec.js:3:1 › the focused desktop skip link is above the fixed sidebar and activates main content (1.2s)
+  ✓  32 tests/e2e/review-fixes.spec.js:12:1 › storage recovery releases an open phone drawer so all recovery controls can scroll into view (1.5s)
+  ✓  33 tests/e2e/review-fixes.spec.js:22:1 › same-route sidebar links preserve modified and nonprimary browser clicks (1.4s)
+  ✓  34 tests/e2e/sidebar.spec.js:3:1 › shared sidebar separates app sections from app switching and keeps app colors (3.3s)
+  ✓  35 tests/e2e/sidebar.spec.js:62:1 › desktop sidebar collapses without remounting the app or losing a draft (1.5s)
+  ✓  36 tests/e2e/sidebar.spec.js:74:1 › phone drawer traps focus closes with escape and navigates without overflow (1.8s)
+  ✓  37 tests/e2e/storage-recovery.spec.js:31:1 › unreadable storage can be preserved and restored through a validated recovery-first preview at 320px (1.8s)
+  ✓  38 tests/e2e/storage-recovery.spec.js:54:1 › future stored root versions remain exportable and are never downgraded by the recovery screen (1.7s)
+  ✓  39 tests/e2e/storage-recovery.spec.js:67:1 › recovery quota and stale-preview failures preserve unreadable records and allow cancellation (1.8s)
+  ✓  40 tests/e2e/updates.spec.js:23:1 › updates wait for unsaved work in another tab and then preserve settings across activation (11.9s)
+
+  40 passed (2.1m)
+Suite: plants
+✔ care dates use latest matching care and ignore notes skip and reschedule entries (418.5736ms)
+✔ watering seasons preserve wrap-around dry periods and growth intervals (0.751504ms)
+✔ fertilizer pause is preserved while a manual due date still takes precedence (0.416688ms)
+✔ care status distinguishes overdue today soon and future without mutating plants (1.13506ms)
+✔ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (1.39694ms)
+✔ backdated input uses local noon and today retains the actual event time (0.448838ms)
+✔ reminder counts include overdue and today care once and leave records unchanged (0.438649ms)
+✔ urgency ranking places overdue care ahead of future care (0.564073ms)
+✔ legacy plant export retains records care dates Unicode and Things preferences through actual Daily import (6.48271ms)
+✔ legacy plant exporter reads the first valid recovery in original priority without repairing original keys (2.06586ms)
+✔ legacy plant exporter keeps empty storage read-only and refuses invalid settings checksums or blocked storage (1.47711ms)
+✔ original thirteen and three researched plant guides have complete English and Spanish text with unchanged care figures (12.84155ms)
+✔ localized plant templates are detached copies and never rewrite original source notes guides or schedules (2.068294ms)
+✔ connected plant storage writes only the shared document and preserves other modules (1.454237ms)
+✔ connected care and due-date changes remain one root commit with no partial state (1.156571ms)
+✔ Things settings live with plant records and survive a plant update (1.537592ms)
+✔ legacy import previews are read-only and confirmation keeps a root recovery copy (1.392361ms)
+✔ migration export includes Things settings and imports without translating user text (2.661249ms)
+✔ unsupported duplicate and invalid plant imports never mutate shared data (2.294469ms)
+✔ quota failure retains plant history and sends no successful shared change (1.904325ms)
+✔ template care refresh preserves names notes history IDs and manual dates (1.583037ms)
+✔ valid legacy data remains readable when its migration write fails (0.6157ms)
+✔ care log and next-due override are committed in one primary write (1.625397ms)
+✔ validation failures use the storage-error notification path (0.322062ms)
+✔ direct Things URL sends every reminder with its care type, original due date and Unicode plant name (1.051404ms)
+✔ direct Things URL follows interface language and never changes reminder records (0.360704ms)
+✔ direct Things URL does not launch an empty import (0.126436ms)
+✔ builds a stable watering title (0.141254ms)
+✔ shortcut URL carries the exact title, date, and project (0.865637ms)
+✔ enabled integration requires a project (0.212778ms)
+✔ settings round-trip and normalize project whitespace (0.177382ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 530.645635
+[WebServer] (node:35198) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 18 tests using 1 worker
+
+(node:35210) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/plants/e2e/import-selection.spec.js:5:1 › selecting a plant backup opens a read-only preview and allows retry after cancel or invalid JSON (3.4s)
+  ✓   2 modules/plants/e2e/localization.spec.js:5:1 › template defaults follow the selected language while existing form text survives later language changes (2.4s)
+  ✓   3 modules/plants/e2e/localization.spec.js:33:1 › authored plant guides switch language offline without translating saved records or changing care timing (6.2s)
+  ✓   4 modules/plants/e2e/plants.spec.js:47:1 › plant creation edit and deletion use canonical routes and retain other storage (2.5s)
+  ✓   5 modules/plants/e2e/plants.spec.js:65:1 › care logging skip and manual dates keep one history and support editing and deleting entries (3.3s)
+  ✓   6 modules/plants/e2e/plants.spec.js:94:1 › dashboard reminders open the stable plant without completing care or changing legacy keys (3.1s)
+  ✓   7 modules/plants/e2e/plants.spec.js:110:1 › plant import previews can be canceled and replacement requires a recovery download (1.9s)
+  ✓   8 modules/plants/e2e/plants.spec.js:129:1 › Plants remove Things controls and handoffs while preserving legacy settings and export compatibility (3.0s)
+  ✓   9 modules/plants/e2e/plants.spec.js:162:1 › failed care saves retain the visible form and previous stored history (1.9s)
+  ✓  10 modules/plants/e2e/plants.spec.js:180:1 › plant interfaces follow shared Spanish without translating saved names and observations (2.2s)
+  ✓  11 modules/plants/e2e/plants.spec.js:193:1 › plant styles stay scoped and invalid imports leave the current plants intact (3.3s)
+  ✓  12 modules/plants/e2e/plants.spec.js:215:1 › a plant changed in another tab keeps the current draft and refuses a stale edit (3.9s)
+  ✓  13 modules/plants/e2e/plants.spec.js:230:1 › switching language preserves draft plant fields and an open care note (2.4s)
+  ✓  14 modules/plants/e2e/plants.spec.js:244:1 › plant details care logging and settings work after an offline reload (6.6s)
+  ✓  15 modules/plants/e2e/presentation.spec.js:15:1 › dashboard and Plants group reminders by care type with urgency retained and navigation only (1.8s)
+  ✓  16 modules/plants/e2e/presentation.spec.js:38:1 › care history uses a borderless table and retains inline editing on narrow screens (1.5s)
+  ✓  17 modules/plants/e2e/presentation.spec.js:54:1 › plant detail Things buttons send each future planned date and stay enabled after use (2.0s)
+  ✓  18 modules/plants/e2e/presentation.spec.js:92:1 › today, overdue and paused care have no future Things action on plant details (1.2s)
+
+  18 passed (55.6s)
+Suite: coffee
+✔ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (9.935724ms)
+✔ drink type changes calculate composition and clear irrelevant water and milk fields (1.837393ms)
+✔ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (1.621539ms)
+✔ beans referenced by drinks cannot be deleted while unused beans can be removed (2.106815ms)
+✔ coffee filters and insights retain scored and unscored drink semantics (3.069845ms)
+✔ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (2.640763ms)
+✔ legacy replacement resets setup and normalizes absent drink composition fields (3.989443ms)
+✔ unsupported coffee backups and invalid bean input leave existing records unchanged (2.443592ms)
+✔ coffee dictionaries cover shared errors and preserve user text in either language (1.96281ms)
+✔ coffee reads create no records and saves preserve unrelated shared modules (7.498829ms)
+✔ explicit coffee language changes commit with global language atomically (1.209188ms)
+✔ coffee imports preserve shared language and validate merged bean references (3.979054ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (2.399062ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (2.816188ms)
+✔ coffee rejects a future module payload without silently replacing it (0.686943ms)
+✔ coffee import previews are read-only and cancel leaves the current root intact (1.487759ms)
+✔ coffee import confirmation rejects stale previews and retains recovery on replacement (0.929516ms)
+✔ coffee malformed nested records and invalid settings fail before any shared write (1.710856ms)
+✔ coffee first tools setup saves its starter bean and settings in one root commit (1.646235ms)
+✔ coffee first tools setup quota failure leaves no starter bean or configured flag (0.493031ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 90.536756
+[WebServer] (node:36855) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 34 tests using 1 worker
+
+(node:36888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/coffee/e2e/backup.spec.js:4:1 › legacy imports keep merge tools and trigger setup after replace (3.5s)
+  ✓   2 modules/coffee/e2e/backup.spec.js:60:1 › exports data and imports merge, replace, and invalid backups (3.4s)
+  ✓   3 modules/coffee/e2e/final-audit.spec.js:35:1 › coffee restored history filters refresh the translated status and actual list (2.7s)
+  ✓   4 modules/coffee/e2e/final-audit.spec.js:48:1 › coffee failed first tools Save retains setup and retries with one root replacement (2.8s)
+  ✓   5 modules/coffee/e2e/final-audit.spec.js:52:1 › coffee failed first tools Skip retains setup and retries with one root replacement (2.7s)
+  ✓   6 modules/coffee/e2e/final-audit.spec.js:56:1 › coffee notifications translate and expire at the original deadline through remounts (2.9s)
+  ✓   7 modules/coffee/e2e/final-audit.spec.js:72:1 › coffee Spanish import preview translates its merge mode without altering bean names (2.8s)
+  ✓   8 modules/coffee/e2e/final-audit.spec.js:82:1 › coffee history view deletion and export report quota failures without false success (3.0s)
+  ✓   9 modules/coffee/e2e/history-detail.spec.js:3:1 › sorts, filters, opens, edits, cancels, and deletes history entries (3.4s)
+  ✓  10 modules/coffee/e2e/history-detail.spec.js:57:1 › switches history between compact and detailed views and remembers the choice (4.0s)
+  ✓  11 modules/coffee/e2e/history-detail.spec.js:81:1 › compact history rows fit on mobile (2.9s)
+  ✓  12 modules/coffee/e2e/history-detail.spec.js:95:1 › new entries created through the UI are listed in history (3.5s)
+  ✓  13 modules/coffee/e2e/insights.spec.js:3:1 › shows empty insights and updates metrics from stored drinks (3.9s)
+  ✓  14 modules/coffee/e2e/new-shot.spec.js:3:1 › creates a complete espresso drink, previews ratio, and persists it (4.7s)
+  ✓  15 modules/coffee/e2e/new-shot.spec.js:26:1 › creates an americano with water to coffee ratio (3.3s)
+  ✓  16 modules/coffee/e2e/new-shot.spec.js:40:1 › creates a milk drink and clears hidden composition fields after type switch (3.5s)
+  ✓  17 modules/coffee/e2e/new-shot.spec.js:61:1 › manage button routes to settings and invalid drink shows validation toast (3.0s)
+  ✓  18 modules/coffee/e2e/new-shot.spec.js:73:1 › clear button empties the selected bean (2.5s)
+  ✓  19 modules/coffee/e2e/new-shot.spec.js:83:1 › score slider can be set after skipping (3.3s)
+  ✓  20 modules/coffee/e2e/new-shot.spec.js:95:1 › taste info buttons explain the rating fields (2.7s)
+  ✓  21 modules/coffee/e2e/offline.spec.js:6:1 › coffee forms history insights and beans remain available offline (6.6s)
+  ✓  22 modules/coffee/e2e/settings-data.spec.js:4:1 › creates, edits, deletes beans, and blocks deleting a used bean (2.9s)
+  ✓  23 modules/coffee/e2e/settings-data.spec.js:32:1 › saves settings and persists theme (3.8s)
+  ✓  24 modules/coffee/e2e/settings-data.spec.js:53:1 › switches to Spanish and persists translated UI (3.8s)
+  ✓  25 modules/coffee/e2e/settings-data.spec.js:72:1 › reminds when data has not been exported recently and records exports (2.6s)
+  ✓  26 modules/coffee/e2e/settings-data.spec.js:88:1 › shows the backup reminder on New and routes it to settings export (2.7s)
+  ✓  27 modules/coffee/e2e/settings-data.spec.js:101:1 › asks for tools once and hides unavailable prep controls (1.4s)
+  ✓  28 modules/coffee/e2e/settings-data.spec.js:119:1 › skip tools setup saves no optional tools and entries keep explicit prep values (2.0s)
+  ✓  29 modules/coffee/e2e/shared.spec.js:4:1 › coffee detail and edit links reload without changing records (5.1s)
+  ✓  30 modules/coffee/e2e/shared.spec.js:23:1 › coffee language changes preserve unsaved values and derived previews (2.7s)
+  ✓  31 modules/coffee/e2e/shared.spec.js:39:1 › coffee stale drink edits retain their draft and preserve the other tab change (4.2s)
+  ✓  32 modules/coffee/e2e/shared.spec.js:58:1 › coffee import cancellation and future backups leave existing data intact (2.6s)
+  ✓  33 modules/coffee/e2e/shared.spec.js:71:1 › coffee failed preference saves keep the draft and previous persisted settings (2.7s)
+  ✓  34 modules/coffee/e2e/shared.spec.js:89:1 › coffee exporting preserves unsaved settings and stale settings cannot overwrite another tab (3.8s)
+
+  34 passed (1.9m)
+Suite: games
+✔ game sessions snapshot names and configuration and allow only one active session (26.399007ms)
+✔ round scores preserve negatives and shared ties while invalid fractions do not save (3.237308ms)
+✔ removing the final round retains an editable zero round and sequential numbering (2.914024ms)
+✔ first to points always favors the higher score while lowest-score games retain their rule (1.460919ms)
+✔ competitive outcomes require every result and retain separate wins ties and losses (2.654189ms)
+✔ collaborative solo outcomes have no individual winners or competitive head to head (2.555261ms)
+✔ history archives referenced records and duration overrides control derived statistics (3.576421ms)
+✔ full game backups reject broken references duplicates and future major versions without mutation (3.746709ms)
+✔ games translations preserve interpolation and user names while covering scoring and errors (20.435878ms)
+✔ games read without writes and preserve other modules while sharing explicit language changes (17.034505ms)
+✔ starting a game atomically registers its timestamp activity and retains unrelated countdowns (31.115729ms)
+✔ scores never restart game timing and finishing atomically completes the shared activity (26.160902ms)
+✔ game quota failures leave both the sessions and shared activities unchanged (4.629328ms)
+✔ game stale domain saves reject instead of overwriting a newer module state (14.051821ms)
+✔ game replacement previews preserve shared language and restore active timing with recovery (8.155376ms)
+✔ game future modules and stale import previews remain untouched (2.101663ms)
+✔ game backup previews reject duplicate nested round result and winner identities without replacing records (2.536348ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 224.722816
+[WebServer] (node:39920) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 34 tests using 1 worker
+
+(node:39963) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/games/e2e/gameplay-2.spec.js:4:1 › keeps history filters collapsed and summarizes active filters (2.5s)
+  ✓   2 modules/games/e2e/gameplay-2.spec.js:19:1 › starts enters edits and finishes a score session (2.7s)
+  ✓   3 modules/games/e2e/gameplay-2.spec.js:66:1 › opens completed game details without editing first (2.5s)
+  ✓   4 modules/games/e2e/gameplay-3.spec.js:7:1 › tracks session duration and game duration analytics (1.6s)
+  ✓   5 modules/games/e2e/gameplay-3.spec.js:34:1 › shows player average scores by game instead of blending scoring systems (1.4s)
+  ✓   6 modules/games/e2e/gameplay-4.spec.js:7:1 › first to points ranks the highest live total as leader (1.5s)
+  ✓   7 modules/games/e2e/gameplay-4.spec.js:19:1 › shows first to points target reached as a toast (6.3s)
+  ✓   8 modules/games/e2e/gameplay-4.spec.js:40:1 › records win loss tie results (2.0s)
+  ✓   9 modules/games/e2e/gameplay-4.spec.js:56:1 › preserves scoring settings while collaborative mode is enabled (1.7s)
+  ✓  10 modules/games/e2e/gameplay-4.spec.js:72:1 › records one team result and keeps collaborative stats separate (2.5s)
+  ✓  11 modules/games/e2e/gameplay.spec.js:3:1 › creates edits and archives a player (1.4s)
+  ✓  12 modules/games/e2e/gameplay.spec.js:15:1 › creates edits and archives a game definition (1.6s)
+  ✓  13 modules/games/e2e/gameplay.spec.js:27:1 › shows only scoring fields required by selected game mode (1.5s)
+  ✓  14 modules/games/e2e/gameplay.spec.js:39:1 › hides game form while a session is active (2.0s)
+  ✓  15 modules/games/e2e/gameplay.spec.js:50:1 › hides play setup form while a session is active (2.1s)
+  ✓  16 modules/games/e2e/gameplay.spec.js:60:1 › excludes archived players from new play setup without deleting history (2.6s)
+  ✓  17 modules/games/e2e/gameplay.spec.js:88:1 › shows app messages as dismissible fixed toasts (1.9s)
+  ✓  18 modules/games/e2e/import-export.spec.js:5:1 › exports full JSON and replace-import restores data (3.2s)
+  ✓  19 modules/games/e2e/import-export.spec.js:33:1 › rejects malformed nested backup data without replacing local data (1.7s)
+  ✓  20 modules/games/e2e/localization.spec.js:8:1 › games Spanish management history statistics and backup screens reopen offline without data writes (6.6s)
+  ✓  21 modules/games/e2e/localization.spec.js:35:1 › games Spanish scores finish and history retain literal English user names and notes (3.7s)
+  ✓  22 modules/games/e2e/localization.spec.js:65:1 › games notifications and validation translate on remount without renewing expiry (2.1s)
+  ✓  23 modules/games/e2e/localization.spec.js:82:1 › games failed-write errors translate after remount while retaining the unsaved draft (2.2s)
+  ✓  24 modules/games/e2e/offline.spec.js:7:1 › game setup scores history and statistics work after an offline reload (6.6s)
+  ✓  25 modules/games/e2e/settings.spec.js:4:1 › persists theme and language settings (2.4s)
+  ✓  26 modules/games/e2e/settings.spec.js:15:1 › shows backup reminder before a successful export (1.4s)
+  ✓  27 modules/games/e2e/settings.spec.js:24:1 › shows backup reminder age when the last export is stale (2.6s)
+  ✓  28 modules/games/e2e/shared.spec.js:6:1 › game activity survives Home reload and elapsed time without creating another session (3.5s)
+  ✓  29 modules/games/e2e/shared.spec.js:25:1 › game form drafts survive shared language changes and notification expiry (1.8s)
+  ✓  30 modules/games/e2e/shared.spec.js:44:1 › game player edits retain drafts and refuse to overwrite another tab (2.4s)
+  ✓  31 modules/games/e2e/shared.spec.js:62:1 › game import cancellation and stable history detail links leave saved records intact (3.5s)
+  ✓  32 modules/games/e2e/shared.spec.js:80:1 › an obsolete game session link never opens a different active session (1.8s)
+  ✓  33 modules/games/e2e/smoke.spec.js:3:1 › loads mobile-first primary navigation (1.4s)
+  ✓  34 modules/games/e2e/smoke.spec.js:10:1 › registers service worker path over http (1.3s)
+
+  34 passed (1.5m)
+Suite: time-budget
+✔ time input is strict local HH:MM and invalid deadlines are rejected (7.1516ms)
+✔ a deadline at or before the reference rolls to the next local day (0.640496ms)
+✔ session deadlines stay anchored to the original start after midnight and overdue (1.394765ms)
+✔ pending budgets include unfinished current minutes and every later task once (1.264452ms)
+✔ paused task timers resume from elapsed time and pause without losing elapsed time (0.937902ms)
+✔ completing an overrun records exact actual minutes and offers reallocation (0.51929ms)
+✔ early completion advances explicitly and queue reorder never moves the current task (2.063695ms)
+✔ template collections retain Unicode and bounded whole-minute tasks (0.498381ms)
+✔ legacy budget export preserves original running and paused clocks and imports through Daily without credentials (5.720283ms)
+✔ legacy budget export assigns a stable session identity without initializing absent storage (0.803681ms)
+✔ legacy budget malformed records or blocked storage fail without resetting any original data (1.328553ms)
+✔ time budget dictionaries retain interpolation and literal task names (1.710535ms)
+✔ time budget reads its shared language without initializing or changing a session (0.44939ms)
+✔ time budget reads are write-free and writes preserve shared language and other modules (1.258501ms)
+✔ time budget start and its paused activity commit atomically beside independent countdowns (1.348148ms)
+✔ running task timestamps reconstruct overtime without writes and explicit completion ends the activity (0.982155ms)
+✔ failed budget writes do not change tasks timestamps activities or the primary root (1.117751ms)
+✔ stale budget views cannot overwrite later task changes (3.025308ms)
+✔ legacy template previews merge only on confirmation while migration exports include active timing (1.062635ms)
+✔ migration imports retain active timestamps and reject stale or changed previews (0.868372ms)
+✔ budget validation rejects future schemas duplicate tasks invalid timers and future root modules without changes (0.803992ms)
+✔ full Time Budget backups restore independent countdowns atomically beside the plan (2.212032ms)
+✔ time budget rejects unrenderable saved timestamps and counters before any root write (0.807098ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 135.577185
+[WebServer] (node:42436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 25 tests using 1 worker
+
+(node:42455) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/time-budget/e2e/localization.spec.js:10:1 › time budget Spanish setup countdowns and backup controls work offline without rewriting draft text (5.8s)
+  ✓   2 modules/time-budget/e2e/localization.spec.js:47:1 › time budget running clocks queue drafts and overtime controls translate without changing saved timing (11.2s)
+  ✓   3 modules/time-budget/e2e/localization.spec.js:73:1 › time budget notifications translate through remounts and keep their original expiry (2.5s)
+  ✓   4 modules/time-budget/e2e/localization.spec.js:86:1 › time budget ignores a slow previous backup after a newer file selection or cancel (2.3s)
+  ✓   5 modules/time-budget/e2e/permission-lifecycle.spec.js:18:1 › leaving a plan during notification permission never starts an off-screen budget (2.0s)
+  ✓   6 modules/time-budget/e2e/permission-lifecycle.spec.js:29:1 › changing language during notification permission keeps the setup draft without starting the disposed plan (2.0s)
+  ✓   7 modules/time-budget/e2e/recovery.spec.js:4:1 › negative and fractional reallocation never enable confirmation (11.4s)
+  ✓   8 modules/time-budget/e2e/recovery.spec.js:23:1 › queue drafts survive language changes and stale edits cannot overwrite another view (2.7s)
+  ✓   9 modules/time-budget/e2e/recovery.spec.js:45:1 › confirmed legacy imports preserve active sessions and create a full recovery backup (2.2s)
+  ✓  10 modules/time-budget/e2e/review-fixes.spec.js:6:1 › original template imports reveal the recovery-gated preview without saving (1.8s)
+  ✓  11 modules/time-budget/e2e/review-fixes.spec.js:20:1 › returning to a running plan focuses its visible heading outside the closed drawer (1.7s)
+  ✓  12 modules/time-budget/e2e/shell.spec.js:10:1 › focus starts persist immediately and Home navigation never changes its saved timestamps (3.3s)
+  ✓  13 modules/time-budget/e2e/shell.spec.js:24:1 › two named countdowns pause independently and remain overdue until explicit completion (5.2s)
+  ✓  14 modules/time-budget/e2e/shell.spec.js:53:1 › language changes retain added setup rows names minutes goal and template drafts (2.4s)
+  ✓  15 modules/time-budget/e2e/shell.spec.js:71:1 › pending overtime survives reload and canceled imports preserve the active plan (13.6s)
+  ✓  16 modules/time-budget/e2e/shell.spec.js:92:1 › quota failures retain the setup draft and create no successful-looking plan (2.1s)
+  ✓  17 modules/time-budget/e2e/shell.spec.js:103:1 › phone layout and offline reopening preserve the running budget (6.7s)
+  ✓  18 modules/time-budget/e2e/time-budget.spec.js:5:1 › setup is read-only and shows available and assigned minutes (1.5s)
+  ✓  19 modules/time-budget/e2e/time-budget.spec.js:12:1 › overallocated plans remain editable and do not start (1.8s)
+  ✓  20 modules/time-budget/e2e/time-budget.spec.js:21:1 › task order is editable and a plan starts with a paused first task (1.8s)
+  ✓  21 modules/time-budget/e2e/time-budget.spec.js:31:1 › running focus restores timestamp elapsed after reload and paused focus stays paused (7.7s)
+  ✓  22 modules/time-budget/e2e/time-budget.spec.js:46:1 › overtime stays active until explicit completion and accepts exact rounded reallocation (11.2s)
+  ✓  23 modules/time-budget/e2e/time-budget.spec.js:64:1 › keeping budgets advances and editing the plan retains task names and allocations (10.7s)
+  ✓  24 modules/time-budget/e2e/time-budget.spec.js:77:1 › templates save load and export the original name-to-task format (2.0s)
+  ✓  25 modules/time-budget/e2e/time-budget.spec.js:94:1 › task completion advances once and finishing returns to the retained setup (2.3s)
+
+  25 passed (2.0m)
+Suite: piano
+Prepared 716 HTML/CSS/JavaScript/assets at /daily/
+✔ audio catalog is chromatic, complete, and backed by actual recordings (5.724144ms)
+✔ recordings, named interval, and exact keyboard keys agree for every interval (25.88277ms)
+✔ fitted keyboards start one white key before the lowest note across octave boundaries (0.845881ms)
+✔ explicit ranges override whole octaves and respect MIDI boundaries (0.457815ms)
+✔ exact notes select C4 and C5 independently; pitch classes repeat (0.571567ms)
+✔ enharmonic spellings cross the scientific-octave boundary correctly (0.419093ms)
+✔ compound intervals retain their distance across the C boundary (0.344383ms)
+✔ every extended chord preserves supplied compound intervals (4.60904ms)
+✔ bass-first inversion stays ascending and retains role metadata (0.528337ms)
+✔ explicit registers take precedence over inferred ascending placement (0.467774ms)
+✔ invalid ranges, notes, labels and out-of-range exact notes are rejected (0.779005ms)
+✔ arbitrary role and display text are preserved with HTML escaping (0.583931ms)
+✔ label settings control rendered labels while retaining accessible descriptions (0.391732ms)
+✔ voicing, rendering and compatibility adapter never mutate their input (0.4657ms)
+✔ exercise keyboards are absent until reveal, including all answer text (0.269935ms)
+✔ guide-tone keyboards preserve each voice’s nearest motion across every root (4.577955ms)
+✔ guide-tone motion crosses B to C without dropping an octave (0.190936ms)
+✔ guided ninth recall and application retain the compound interval (0.882258ms)
+✔ curriculum covers every stage with a continuous prerequisite chain and usable modes (3.834073ms)
+✔ all lesson recall variants produce revealable answers with valid pitch classes (42.462377ms)
+✔ major guide-tone questions follow F, F, E and explain the resolution (0.795746ms)
+✔ transfer prompts change keys only after a complete progression (0.734563ms)
+✔ blues follows the complete twelve-bar form and wraps (0.56713ms)
+✔ minor and modal lessons preserve characteristic spellings (0.328754ms)
+✔ piano Spanish copy covers the authored corpus and preserves interpolation and notation (6.358829ms)
+✔ all ten localized piano lessons retain their musical and structural data without mutating source (3.656621ms)
+✔ piano prompt presentation translates its text without changing saved prompts or keyboard notes (5.880646ms)
+✔ modal parent-key direction descriptions agree with their C-major examples (0.244026ms)
+✔ piano Markdown retains heading emphasis code links and Unicode teaching text (0.965764ms)
+✔ piano Markdown preserves tables blockquotes and escaped code fences (0.556369ms)
+✔ piano Markdown keeps paragraph list and rule boundaries without dropping ordinary pipes (0.318586ms)
+✔ piano Markdown handles blank input and detects an unconsumed malformed heading (0.197819ms)
+✔ spells intervals by letter in both directions and preserves chromatic transpose (0.186128ms)
+✔ recognizes enharmonics and double accidentals (0.129181ms)
+✔ chord tones and tensions retain theoretical spelling (0.179996ms)
+✔ every chord tone remains on its intended pitch for all standard roots (3.154744ms)
+✔ question root pools and numeric degree filters constrain practice (0.689608ms)
+✔ keyboard maps enharmonic pitches and retains an accessible escaped legend (0.332692ms)
+✔ every catalog destination has exactly one existing page loader (2.21751ms)
+✔ library links and search aliases use canonical destinations (0.652639ms)
+✔ player schema generated documentation and transcription contract match the application source (1.064268ms)
+✔ player library persists through Daily service reload and failed storage writes preserve musical content (12.844305ms)
+✔ player validates event identifiers score references pedals maps meter boundaries and incomplete bounds (2.560554ms)
+✔ player reschedules speed changes without duplicate voices and retriggers pedal-held notes on seek (2.525938ms)
+✔ player loop excludes events on the end boundary and preserves explicit swung onset times (0.789405ms)
+✔ short loops schedule every repetition through the lookahead before each pump (1.861728ms)
+✔ click grids restrict work to the selected range and skip subdivisions in beats mode (1.140741ms)
+✔ long metronome passages schedule only the horizon and extend it once without duplicate clicks (0.887949ms)
+✔ count-in clicks advance through the same horizon without repeats when metronome is off (0.608527ms)
+✔ an excessive subdivision density fails explicitly before constructing thousands of audio clicks (0.402622ms)
+✔ current file validation errors propagate instead of being mistaken for stale read failures (0.573371ms)
+✔ user timing fragment imports with all thirteen complete supplied note events and preserved silences (0.751274ms)
+✔ user timing exercise schedules exact chord octave triplet and final-release times at fifty percent (0.828718ms)
+✔ exercise contract accepts complete documentation and defaults TPQ without importing examples (0.60483ms)
+✔ exercise contract rejects malformed shape references maps bounds and duplicate IDs with field errors (2.861616ms)
+✔ exercise contract supports explicit pickups and incomplete measures (0.335126ms)
+✔ timing integrates written tempo changes and practice speed with exact inverse mapping (0.245238ms)
+✔ sounding timeline preserves chords octaves rests trailing silence and independent hands (0.328634ms)
+✔ explicit sixteenths triplets and swing preserve integer timing without inferred swing (0.183803ms)
+✔ pedal extends releases through pedal-up and clips crossings at half-open loop bounds (0.25182ms)
+✔ compound meter click groups and imported triplet subdivisions use separate timing units (0.257441ms)
+✔ acceleration changes at boundaries by percentage points and never exceeds target (0.10149ms)
+✔ transport schedules by audio clock pauses seeks resumes and cancels voices (0.450963ms)
+✔ transport applies imported velocity track mute volume and zero accent emphasis (0.405858ms)
+✔ loop gaps count-ins repetition and acceleration share clock and clear pedal at boundaries (0.589531ms)
+✔ library import failure preserves selection content preferences and musical export roundtrip (1.220881ms)
+✔ ten-minute sessions reserve time for explanation, recall, application, and review (0.13901ms)
+✔ every supported session duration preserves the budget and includes all four blocks (0.443649ms)
+✔ invalid or unsupported durations cannot produce an unusable session (0.306022ms)
+✔ rootless keyboards preserve exact formula offsets and hand labels for every root and type (12.15629ms)
+✔ half-diminished B keeps its crossing voices instead of ascending them an extra octave (1.730943ms)
+✔ ii–V–I chooses minimum total voice motion while preserving whole chord formulas (16.182141ms)
+✔ G major rootless cadence resolves C down to B across the octave boundary (0.284772ms)
+✔ precache requests are unique and backed by repository assets (5.512598ms)
+✔ piano reads and random selection never create a practice record and explicit exercise opening persists the last ID (1.035073ms)
+✔ piano start saves its practice and timestamp activity atomically and offers the existing unfinished session (3.945201ms)
+✔ piano elapsed and current block reconstruct after suspension without writes or automatic completion (1.195394ms)
+✔ piano explicit pause freezes clocks and block changes preserve already practiced time (2.141731ms)
+✔ piano snapshots keep prompt and reveal stable until a presentation transition explicitly advances (4.826927ms)
+✔ piano explicit finish records practice once and atomically completes its activity (1.736935ms)
+✔ piano failed saves retain the previous practice history and activity without partial commits (2.517313ms)
+✔ piano future data and invalid lessons pacing or blocks reject without changing stored records (1.508728ms)
+✔ suspensions resolve to the target chord while retaining extensions in every key (7.52039ms)
+✔ piano restore rejects malformed keyboard payloads and out-of-range timestamps while retaining saved wording (4.457427ms)
+ℹ tests 84
+ℹ suites 0
+ℹ pass 84
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 458.370875
+[WebServer] (node:45611) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 25 tests using 1 worker
+
+(node:45634) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/piano/e2e/continuation.spec.js:15:1 › piano sessions continue across Home and reload with stable blocks prompts answers and timestamps (4.8s)
+  ✓   2 modules/piano/e2e/continuation.spec.js:34:1 › hiding piano never pauses elapsed time while explicit Pause survives background and reload (7.4s)
+  ✓   3 modules/piano/e2e/continuation.spec.js:54:1 › soft practice budgets preserve the active session until explicit finish and save one history record (20.3s)
+  ✓   4 modules/piano/e2e/continuation.spec.js:75:1 › opening another lesson offers the persisted practice and never overwrites it (2.0s)
+  ✓   5 modules/piano/e2e/continuation.spec.js:87:1 › random and last exercise links use stable IDs and opening an exercise creates no practice (2.1s)
+  ✓   6 modules/piano/e2e/continuation.spec.js:102:1 › piano practice and keyboard answers resume offline under the shared worker (7.3s)
+  ✓   7 modules/piano/e2e/continuation.spec.js:119:1 › running piano links resume the correct lesson and obsolete activity IDs preserve a newer practice (2.4s)
+  ✓   8 modules/piano/e2e/continuation.spec.js:140:1 › automatic prompts freeze while hidden and away while elapsed practice continues (6.5s)
+  ✓   9 modules/piano/e2e/drafts.spec.js:3:1 › piano language remounts retain setup and pacing drafts with their derived controls (1.9s)
+  ✓  10 modules/piano/e2e/drafts.spec.js:25:1 › piano failed pause or pacing saves preserve the running record and truthful controls (1.7s)
+  ✓  11 modules/piano/e2e/localization.spec.js:9:1 › piano Spanish lessons and running prompts preserve canonical English records and timestamps (5.6s)
+  ✓  12 modules/piano/e2e/localization.spec.js:36:1 › piano Spanish library and every destination open offline at 320px (7.1s)
+  ✓  13 modules/piano/e2e/localization.spec.js:74:1 › piano Spanish search finds translated lessons and reference topics (1.8s)
+  ✓  14 modules/piano/e2e/localization.spec.js:84:1 › piano language remounts preserve the ordinary exercise question answer and filters (3.2s)
+  ✓  15 modules/piano/e2e/player-review.spec.js:9:1 › player import rename and correction drafts survive language remounts and clear after save (2.0s)
+  ✓  16 modules/piano/e2e/player-review.spec.js:25:1 › changing the corrected note keeps its editor open and keyboard focus on the selector (1.7s)
+  ✓  17 modules/piano/e2e/player-review.spec.js:33:1 › Spanish player validation explains file shape reference and syntax failures without changing paths (1.8s)
+  ✓  18 modules/piano/e2e/player-review.spec.js:46:1 › importing from the bottom reveals and focuses the player heading in document scroll (1.7s)
+  ✓  19 modules/piano/e2e/player-review.spec.js:54:1 › late file reads cannot overwrite newer imports or save after leaving the player (1.5s)
+  ✓  20 modules/piano/e2e/player-review.spec.js:67:1 › switching exercises cannot apply another exercise title or correction draft (1.9s)
+  ✓  21 modules/piano/e2e/player.spec.js:17:1 › player starts empty and accepts paste file and drop while failed imports preserve selection (2.9s)
+  ✓  22 modules/piano/e2e/player.spec.js:45:1 › player reuses real audio samples and keyboard and supports seek pause resume mute speed and stop (2.7s)
+  ✓  23 modules/piano/e2e/player.spec.js:76:1 › player corrects notes stores preferences separately and exports importable musical JSON (3.2s)
+  ✓  24 modules/piano/e2e/player.spec.js:94:1 › player supports measure and exact beat loops score attachments and phone layout (4.6s)
+  ✓  25 modules/piano/e2e/player.spec.js:123:1 › the supplied timing exercise imports and plays its leading rest chord octave and triplet passage (3.1s)
+
+  25 passed (1.7m)
+Daily: http://127.0.0.1:8766/daily/
+PASS: all ten lessons in piano and away modes, reveal, sequence, recap, repeat, next lesson
+PASS: custom duration, manual/automatic pacing, pause remainder, soft budgets, visibility, route cleanup, standalone keyboard reveal
+Checking library route: /exercise-player
+Checking library route: /intervals/theory
+Checking library route: /intervals/exercises
+Checking library route: /scales/theory
+Checking library route: /scales/exercises
+Checking library route: /pentatonic/theory
+Checking library route: /modes/theory
+Checking library route: /modes/exercises
+Checking library route: /modal-characteristics/exercises
+Checking library route: /ear-training/exercises
+Checking library route: /bebop/theory
+Checking library route: /bebop/exercises
+Checking library route: /melodic-minor/theory
+Checking library route: /melodic-minor/exercises
+Checking library route: /tensions/theory
+Checking library route: /tensions/exercises
+Checking library route: /available-tensions/theory
+Checking library route: /available-tensions/exercises
+Checking library route: /extended-chords/theory
+Checking library route: /extended-chords/exercises
+Checking library route: /suspended-chords/theory
+Checking library route: /suspended-chords/exercises
+Checking library route: /superimpositions/theory
+Checking library route: /superimpositions/exercises
+Checking library route: /harmonic-function/exercises
+Checking library route: /modal-interchange/exercises
+Checking library route: /chord-progressions/theory
+Checking library route: /chord-progressions/exercises
+Checking library route: /iivi/exercises
+Checking library route: /secondary-dominants/exercises
+Checking library route: /tritone-sub/exercises
+Checking library route: /chord-inversions/exercises
+Checking library route: /shell-chords/theory
+Checking library route: /shell-chords/exercises
+Checking library route: /rootless-voicings/theory
+Checking library route: /rootless-voicings/exercises
+Checking library route: /voice-leading/exercises
+Checking library route: /modulations/theory
+Checking library route: /modulations/exercises
+Checking library route: /key-signatures/exercises
+Checking library route: /key-signatures/cards
+Checking library route: /circle/cards
+Checking library route: /chord-substitution/theory
+Checking library route: /tensions/cards
+Checking library route: /available-tensions/cards
+PASS: 45 library routes, every exercise reveals exact-octave keyboards and hides them on next prompt
+Touch 320px: /exercise-player
+Touch 320px: /intervals/theory
+Touch 320px: /intervals/exercises
+Touch 320px: /scales/theory
+Touch 320px: /scales/exercises
+Touch 320px: /pentatonic/theory
+Touch 320px: /modes/theory
+Touch 320px: /modes/exercises
+Touch 320px: /modal-characteristics/exercises
+Touch 320px: /ear-training/exercises
+Touch 320px: /bebop/theory
+Touch 320px: /bebop/exercises
+Touch 320px: /melodic-minor/theory
+Touch 320px: /melodic-minor/exercises
+Touch 320px: /tensions/theory
+Touch 320px: /tensions/exercises
+Touch 320px: /available-tensions/theory
+Touch 320px: /available-tensions/exercises
+Touch 320px: /extended-chords/theory
+Touch 320px: /extended-chords/exercises
+Touch 320px: /suspended-chords/theory
+Touch 320px: /suspended-chords/exercises
+Touch 320px: /superimpositions/theory
+Touch 320px: /superimpositions/exercises
+Touch 320px: /harmonic-function/exercises
+Touch 320px: /modal-interchange/exercises
+Touch 320px: /chord-progressions/theory
+Touch 320px: /chord-progressions/exercises
+Touch 320px: /iivi/exercises
+Touch 320px: /secondary-dominants/exercises
+Touch 320px: /tritone-sub/exercises
+Touch 320px: /chord-inversions/exercises
+Touch 320px: /shell-chords/theory
+Touch 320px: /shell-chords/exercises
+Touch 320px: /rootless-voicings/theory
+Touch 320px: /rootless-voicings/exercises
+Touch 320px: /voice-leading/exercises
+Touch 320px: /modulations/theory
+Touch 320px: /modulations/exercises
+Touch 320px: /key-signatures/exercises
+Touch 320px: /key-signatures/cards
+Touch 320px: /circle/cards
+Touch 320px: /chord-substitution/theory
+Touch 320px: /tensions/cards
+Touch 320px: /available-tensions/cards
+Touch 320px lesson: interval-foundations
+Touch 320px lesson: seventh-intervals
+Touch 320px lesson: chord-tone-fluency
+Touch 320px lesson: rhythm-and-motif
+Touch 320px lesson: major-changes
+Touch 320px lesson: passing-notes-and-ninths
+Touch 320px lesson: transfer-to-new-keys
+Touch 320px lesson: blues-form
+Touch 320px lesson: minor-changes
+Touch 320px lesson: dorian-color
+Touch 360px: /exercise-player
+Touch 360px: /intervals/theory
+Touch 360px: /intervals/exercises
+Touch 360px: /scales/theory
+Touch 360px: /scales/exercises
+Touch 360px: /pentatonic/theory
+Touch 360px: /modes/theory
+Touch 360px: /modes/exercises
+Touch 360px: /modal-characteristics/exercises
+Touch 360px: /ear-training/exercises
+Touch 360px: /bebop/theory
+Touch 360px: /bebop/exercises
+Touch 360px: /melodic-minor/theory
+Touch 360px: /melodic-minor/exercises
+Touch 360px: /tensions/theory
+Touch 360px: /tensions/exercises
+Touch 360px: /available-tensions/theory
+Touch 360px: /available-tensions/exercises
+Touch 360px: /extended-chords/theory
+Touch 360px: /extended-chords/exercises
+Touch 360px: /suspended-chords/theory
+Touch 360px: /suspended-chords/exercises
+Touch 360px: /superimpositions/theory
+Touch 360px: /superimpositions/exercises
+Touch 360px: /harmonic-function/exercises
+Touch 360px: /modal-interchange/exercises
+Touch 360px: /chord-progressions/theory
+Touch 360px: /chord-progressions/exercises
+Touch 360px: /iivi/exercises
+Touch 360px: /secondary-dominants/exercises
+Touch 360px: /tritone-sub/exercises
+Touch 360px: /chord-inversions/exercises
+Touch 360px: /shell-chords/theory
+Touch 360px: /shell-chords/exercises
+Touch 360px: /rootless-voicings/theory
+Touch 360px: /rootless-voicings/exercises
+Touch 360px: /voice-leading/exercises
+Touch 360px: /modulations/theory
+Touch 360px: /modulations/exercises
+Touch 360px: /key-signatures/exercises
+Touch 360px: /key-signatures/cards
+Touch 360px: /circle/cards
+Touch 360px: /chord-substitution/theory
+Touch 360px: /tensions/cards
+Touch 360px: /available-tensions/cards
+Touch 360px lesson: interval-foundations
+Touch 360px lesson: seventh-intervals
+Touch 360px lesson: chord-tone-fluency
+Touch 360px lesson: rhythm-and-motif
+Touch 360px lesson: major-changes
+Touch 360px lesson: passing-notes-and-ninths
+Touch 360px lesson: transfer-to-new-keys
+Touch 360px lesson: blues-form
+Touch 360px lesson: minor-changes
+Touch 360px lesson: dorian-color
+PASS: 360px piano responds to native touch swipe; ear audio completes and cancels on next/route leave
+Touch 390px: /exercise-player
+Touch 390px: /intervals/theory
+Touch 390px: /intervals/exercises
+Touch 390px: /scales/theory
+Touch 390px: /scales/exercises
+Touch 390px: /pentatonic/theory
+Touch 390px: /modes/theory
+Touch 390px: /modes/exercises
+Touch 390px: /modal-characteristics/exercises
+Touch 390px: /ear-training/exercises
+Touch 390px: /bebop/theory
+Touch 390px: /bebop/exercises
+Touch 390px: /melodic-minor/theory
+Touch 390px: /melodic-minor/exercises
+Touch 390px: /tensions/theory
+Touch 390px: /tensions/exercises
+Touch 390px: /available-tensions/theory
+Touch 390px: /available-tensions/exercises
+Touch 390px: /extended-chords/theory
+Touch 390px: /extended-chords/exercises
+Touch 390px: /suspended-chords/theory
+Touch 390px: /suspended-chords/exercises
+Touch 390px: /superimpositions/theory
+Touch 390px: /superimpositions/exercises
+Touch 390px: /harmonic-function/exercises
+Touch 390px: /modal-interchange/exercises
+Touch 390px: /chord-progressions/theory
+Touch 390px: /chord-progressions/exercises
+Touch 390px: /iivi/exercises
+Touch 390px: /secondary-dominants/exercises
+Touch 390px: /tritone-sub/exercises
+Touch 390px: /chord-inversions/exercises
+Touch 390px: /shell-chords/theory
+Touch 390px: /shell-chords/exercises
+Touch 390px: /rootless-voicings/theory
+Touch 390px: /rootless-voicings/exercises
+Touch 390px: /voice-leading/exercises
+Touch 390px: /modulations/theory
+Touch 390px: /modulations/exercises
+Touch 390px: /key-signatures/exercises
+Touch 390px: /key-signatures/cards
+Touch 390px: /circle/cards
+Touch 390px: /chord-substitution/theory
+Touch 390px: /tensions/cards
+Touch 390px: /available-tensions/cards
+Touch 390px lesson: interval-foundations
+Touch 390px lesson: seventh-intervals
+Touch 390px lesson: chord-tone-fluency
+Touch 390px lesson: rhythm-and-motif
+Touch 390px lesson: major-changes
+Touch 390px lesson: passing-notes-and-ninths
+Touch 390px lesson: transfer-to-new-keys
+Touch 390px lesson: blues-form
+Touch 390px lesson: minor-changes
+Touch 390px lesson: dorian-color
+Service worker activated (daily-pwa-d09ba81ff45a93b6); offline reload and guided reveal passed
+Suite: reading
+✔ Reader exports versioned settings and current picks without credentials or disposable pools (23.321989ms)
+✔ Reader legacy migration preview normalizes aliases and discards credentials without changing saved data (3.476708ms)
+✔ Reader replacement previews reject tampering and stale roots before mutation (2.980077ms)
+✔ Reader confirmed restore preserves other modules and language while requiring token reentry (4.791027ms)
+✔ failed Reader restore retains previous primary records and credentials (1.451933ms)
+✔ Reader duration parsing preserves numeric text and word-count estimates (0.543796ms)
+✔ Reader progress is bounded and remaining time rounds upward with a one-minute floor (0.307865ms)
+✔ Reader eligibility deduplicates IDs and applies progress remaining-time and safe-link filters (0.60477ms)
+✔ Reader selection prioritizes started items then configured location order without duplicates (0.594601ms)
+✔ Reader links accept only HTTPS Reader hosts and metadata minimization excludes content and tokens (0.52458ms)
+✔ Reader URL configuration preserves aliases location priority and supported shortcut controls (0.591405ms)
+✔ Reader invalid URL preferences retain defaults and advanced limits remain bounded (0.247923ms)
+✔ Reader generated shortcut URLs preserve picking controls and exclude tokens (0.435073ms)
+✔ legacy Reader export whitelists preferences and remembered metadata through Daily import without tokens or bodies (4.976868ms)
+✔ legacy Reader export initializes no keys and does not read an opted-out remembered item or obsolete settings (0.498521ms)
+✔ legacy Reader invalid preferences remembered URLs JSON and blocked storage fail without deletion or fallback reset (1.140331ms)
+✔ Reader Spanish authored failures and destructive confirmation retain specific meaning (1.645073ms)
+✔ Reader rejects unrenderable pick timestamps before saving and keeps valid original timestamps (1.474575ms)
+✔ Reader discards unrenderable and future disposable cache timestamps without replacing saved records (0.59954ms)
+✔ Reader paginates locations sequentially using cursor and token headers and excludes children (0.846612ms)
+✔ Reader scan cap bounds returned documents and stops requesting further pages (0.577239ms)
+✔ Reader authorization throttling and service errors reject without successful results (1.295781ms)
+✔ Reader session cache contains minimized metadata and invalidates changed scan configuration (0.300641ms)
+✔ Reader disposable metadata cache survives a new instance but never crosses account identities (0.609759ms)
+✔ scheduled-review cache is separate from backups and reopens as cached data until a successful refresh (1.050673ms)
+✔ Reader scan summary preserves truncation across locations and a fresh cached pool retains its fetch timestamp (3.668684ms)
+✔ Reader startup is read-only and preference saves preserve other modules and global language (1.005808ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (1.002263ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (0.448087ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (2.057284ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (1.152776ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (1.452373ms)
+✔ Reader revalidates a remembered item by ID and removes archived completed or missing items (2.835475ms)
+✔ Reader remembered-item validation updates progress and keeps the previous item on request failure (1.141733ms)
+✔ Reader picks distinguish selection time from metadata fetch time when picking again from cache (1.980621ms)
+✔ Reader forgetting credentials succeeds even when clearing canonical cached picks hits quota (0.902846ms)
+✔ Reader account changes in another tab reject late picks and require the old tab to reconnect (1.1831ms)
+✔ Reader cannot revive an obsolete session token by reopening a tab after another account was selected (0.84022ms)
+✔ scheduled review without credentials retains its direct fallback and makes no request (0.547583ms)
+✔ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (0.601043ms)
+✔ absent review is empty while network and authorization failures preserve a previously cached review (0.523709ms)
+✔ review completion is explicit server-confirmed and idempotent with a latest-review preflight (0.605832ms)
+✔ changed latest review or failed completion never reports the displayed review complete (0.784105ms)
+✔ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.538098ms)
+✔ a late review response cannot replace the state after its account changes (0.489765ms)
+✔ Q&A requires explicit structured capability hides answers initially and resets on card changes (0.917264ms)
+✔ review widgets reuse fresh results refresh after fifteen minutes and do not automatically loop after errors (0.874133ms)
+✔ Reader custom counts support two through twenty and uniform sampling can choose unread before started (0.396972ms)
+✔ Reader finite budgets exclude unknown duration unless enabled and always reject archived completed and child records (0.440002ms)
+✔ Reader scan limits count fetched child records and expose truncation instead of scanning forever (0.642009ms)
+✔ Reader repeating cursors and malformed response shapes fail rather than return misleading complete data (0.817267ms)
+✔ Reader caches are account-specific without serializing tokens or full document content (0.341698ms)
+✔ Reader links reject embedded credentials and cache freshness expires using the configured clock (0.369831ms)
+✔ Reader pagination requests only the remaining scan allowance (0.787972ms)
+✔ Reader enforces a local twenty-request rolling limit without automatically retrying (6.360072ms)
+✔ Reader throttling honors Retry-After and rejects retries until the cooldown expires (41.023749ms)
+✔ Reader request deadlines still abort when the caller supplies its own signal (10.327551ms)
+ℹ tests 57
+ℹ suites 0
+ℹ pass 57
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 191.211469
+[WebServer] (node:56824) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 32 tests using 1 worker
+
+(node:56848) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 modules/reading/e2e/backup.spec.js:15:1 › Reader exports persisted preferences without credentials or unsaved token drafts (2.6s)
+  ✓   2 modules/reading/e2e/backup.spec.js:30:1 › Reader import previews cancel safely and require recovery before confirmation and token reentry (2.5s)
+  ✓   3 modules/reading/e2e/backup.spec.js:57:1 › Reader invalid import can be canceled after language changes while keeping unsaved token and preference drafts (2.7s)
+  ✓   4 modules/reading/e2e/final-audit.spec.js:4:1 › Spanish Reader and Home report failed item saves and recovery downloads without leaving or replacing data (2.6s)
+  ✓   5 modules/reading/e2e/localization.spec.js:4:1 › Reader dialog drafts including an unsaved token survive close reopen and a language change (1.9s)
+  ✓   6 modules/reading/e2e/localization.spec.js:20:1 › Reader Spanish controls and metadata preserve fetched article titles and saved picks (1.6s)
+  ✓   7 modules/reading/e2e/offline.spec.js:12:1 › Reader saved picks reopen offline and failed refresh retains the previous selection (4.8s)
+  ✓   8 modules/reading/e2e/offline.spec.js:28:1 › scheduled review metadata reopens offline with a cached label while API responses stay out of worker caches (4.7s)
+  ✓   9 modules/reading/e2e/reader.spec.js:4:1 › Reader retains original time and count controls across reload (3.6s)
+  ✓  10 modules/reading/e2e/reader.spec.js:19:1 › Reader returns distinct started-first picks fitting estimated remaining time (1.8s)
+  ✓  11 modules/reading/e2e/reader.spec.js:31:1 › Reader saves progress location cache and shortcut behavior without leaking tokens into URLs (2.2s)
+  ✓  12 modules/reading/e2e/reader.spec.js:53:1 › Reader pick again reuses fresh metadata rather than making additional requests (1.9s)
+  ✓  13 modules/reading/e2e/reader.spec.js:64:1 › Reader distinguishes rejected tokens and throttled document requests (2.0s)
+  ✓  14 modules/reading/e2e/reader.spec.js:79:1 › Reader remembers opened items and revalidates them before offering unfinished continuation (5.4s)
+  ✓  15 modules/reading/e2e/recovery.spec.js:4:1 › invalid Reader custom-control drafts survive a language change without changing saved preferences (1.7s)
+  ✓  16 modules/reading/e2e/recovery.spec.js:17:1 › Reader stale preference drafts cannot overwrite another tab and quota failures remain visible (4.5s)
+  ✓  17 modules/reading/e2e/request-lifecycle.spec.js:10:1 › a shortcut waiting for token entry retains its launch filters without saving them as defaults (3.2s)
+  ✓  18 modules/reading/e2e/request-lifecycle.spec.js:28:1 › an authentication response cannot validate a replacement token draft (1.8s)
+  ✓  19 modules/reading/e2e/request-lifecycle.spec.js:51:1 › changing language during review completion preserves the pending confirmation (1.6s)
+  ✓  20 modules/reading/e2e/request-lifecycle.spec.js:74:1 › a shortcut resumed after token entry does not reshuffle when the language changes (1.8s)
+  ✓  21 modules/reading/e2e/review.spec.js:17:1 › review without credentials offers a direct handoff without issuing requests (1.6s)
+  ✓  22 modules/reading/e2e/review.spec.js:26:1 › latest review shows ordinary highlights and explicit Readwise feedback handoffs without marking completion (1.5s)
+  ✓  23 modules/reading/e2e/review.spec.js:37:1 › explicit review completion waits for server confirmation and then disables repeated completion (1.8s)
+  ✓  24 modules/reading/e2e/review.spec.js:46:1 › failed completion keeps the review unfinished and reports the server failure (1.7s)
+  ✓  25 modules/reading/e2e/review.spec.js:54:1 › missing review and API failure retain the direct fallback and leave local apps usable (1.8s)
+  ✓  26 modules/reading/e2e/review.spec.js:63:1 › capability-gated Q&A component reveals answers accessibly and resets on the next card (1.7s)
+  ✓  27 modules/reading/e2e/review.spec.js:83:1 › review action bar advances locally and completes only on the final Done (2.1s)
+  ✓  28 modules/reading/e2e/shared.spec.js:6:1 › Reader shortcut launch overrides do not replace saved preferences (1.5s)
+  ✓  29 modules/reading/e2e/shared.spec.js:15:1 › Reader custom count time policy and unknown-duration settings persist (3.3s)
+  ✓  30 modules/reading/e2e/shared.spec.js:34:1 › Reader saved picks survive Home and reload without reshuffling or new API calls (2.7s)
+  ✓  31 modules/reading/e2e/shared.spec.js:54:1 › Reader forget removes account picks and credential storage while preserving preferences and other modules (1.8s)
+  ✓  32 modules/reading/e2e/shared.spec.js:74:1 › central Reader preferences and the app edit the same settings and retain language drafts (1.6s)
+
+  32 passed (1.4m)
+Suite: whatsapp
+Prepared 716 HTML/CSS/JavaScript/assets at /daily/
+Passed: encoding, validation, local time in four zones, DST, manifest, icons, and asset paths.
+Passed: submit clears form/storage, preserves handoff and copy fallback, and keeps invalid drafts.
+✔ legacy WhatsApp export imports expired and incomplete Unicode drafts without rescheduling or changing originals (5.501869ms)
+✔ legacy WhatsApp empty or null saved drafts stay absent and unknown properties are excluded (0.433651ms)
+✔ legacy WhatsApp malformed JSON invalid dates clocks and missing fields fail without clearing original storage (0.95848ms)
+✔ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (0.977455ms)
+✔ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (1.439471ms)
+✔ WhatsApp failed draft saves and clears preserve the previous primary document (0.977617ms)
+✔ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (1.4824ms)
+✔ WhatsApp restore rejects changed stale invalid and future previews before replacing records (1.18298ms)
+✔ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (1.261243ms)
+✔ encoding, validation, local time, DST, manifest, icons and asset paths (20.428286ms)
+✔ worker install, cache ownership, offline shell and external bypass (76.069356ms)
+✔ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (4.211608ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 144.657018
+[WebServer] (node:59174) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:59186) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 modules/whatsapp/e2e/source.spec.js:4:1 › WhatsApp retains its original composer appearance and local reminder controls on phones (1.8s)
+  ✓  2 modules/whatsapp/e2e/whatsapp.spec.js:10:1 › WhatsApp draft autosaves and survives Home reload and language changes without translating user text (2.5s)
+  ✓  3 modules/whatsapp/e2e/whatsapp.spec.js:25:1 › WhatsApp Things handoff clears the saved draft before navigation and preserves the exact copy fallback (1.4s)
+  ✓  4 modules/whatsapp/e2e/whatsapp.spec.js:53:1 › WhatsApp expired drafts remain visible and clipboard denial exposes a selectable manual link (2.4s)
+  ✓  5 modules/whatsapp/e2e/whatsapp.spec.js:69:1 › WhatsApp stale edits and storage failures retain the visible draft and prevent a destructive handoff (3.6s)
+  ✓  6 modules/whatsapp/e2e/whatsapp.spec.js:88:1 › WhatsApp import is read-only until recovery confirmation and cancel keeps current records (1.4s)
+  ✓  7 modules/whatsapp/e2e/whatsapp.spec.js:110:1 › WhatsApp composer and saved draft reopen under the shared worker offline at narrow phone widths (4.2s)
+  ✓  8 modules/whatsapp/e2e/whatsapp.spec.js:128:1 › WhatsApp autosaved drafts release the update hold while failed saves remain protected through language changes (1.3s)
+  ✓  9 modules/whatsapp/e2e/whatsapp.spec.js:153:1 › WhatsApp invalid import can be canceled and releases the dirty form without replacing its saved draft (1.4s)
+
+  9 passed (22.2s)
+
+> daily-pwa@0.0.0 build
+> node scripts/build.mjs
+
+Prepared 716 HTML/CSS/JavaScript/assets at /daily/
