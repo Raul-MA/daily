@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { buildThingsShortcutURL } from '../src/integrations/things.js';
+import { buildThingsProjectURL } from '../src/integrations/things.js';
 
 test.use({ serviceWorkers: 'allow' });
 
@@ -126,7 +126,7 @@ test('plant import previews can be canceled and replacement requires a recovery 
   expect(await page.evaluate(() => localStorage.getItem('plantTracker_plants'))).toBe('legacy storage must stay untouched');
 });
 
-test('Plants configure the Things shortcut without automatic handoffs and preserve export compatibility', async ({ page }) => {
+test('Plants configure direct Things links without automatic handoffs and preserve export compatibility', async ({ page }) => {
   await seed(page);
   await settings(page);
   await page.evaluate(() => {
@@ -135,7 +135,9 @@ test('Plants configure the Things shortcut without automatic handoffs and preser
     localStorage.setItem('daily:v1', JSON.stringify(root));
   });
   await page.reload();
-  await expect(page.getByText('Stillgreen to Things', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Things 3', exact: true })).toBeVisible();
+  await expect(page.getByText(/Stillgreen to Things/)).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Create project', exact: true })).toBeVisible();
   await expect(page.getByLabel('Create reminders after watering', { exact: true })).toHaveCount(0);
   await expect(page.getByLabel('Things project', { exact: true })).toHaveValue('Casa 🏡');
   await expect(page.getByRole('button', { name: 'Save Things settings', exact: true })).toBeVisible();
@@ -149,10 +151,10 @@ test('Plants configure the Things shortcut without automatic handoffs and preser
   await page.getByRole('button', { name: 'Save care', exact: true }).click();
   expect((await saved(page)).plants[0].careLog[0].type).toBe('watering');
   expect(navigations.filter(url => url.startsWith('shortcuts:'))).toEqual([]);
-  const shortcut = buildThingsShortcutURL({ title: 'Legacy reminder', date: '2026-10-20', project: 'Casa 🏡' });
-  const url = new URL(shortcut);
-  expect(url.protocol).toBe('shortcuts:');
-  expect(JSON.parse(url.searchParams.get('text')).project).toBe('Casa 🏡');
+  expect(navigations.filter(url => url.startsWith('things:'))).toEqual([]);
+  const url = new URL(buildThingsProjectURL('Casa 🏡'));
+  expect(url.protocol).toBe('things:');
+  expect(url.searchParams.get('title')).toBe('Casa 🏡');
   await settings(page);
   const download = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Export plants and settings', exact: true }).click();
@@ -263,10 +265,22 @@ test('Things project setup validates, preserves language drafts and survives rel
   await seed(page, [{ ...plant, schedule: { ...plant.schedule, nextDueOverrides: { watering: '2099-02-03' } } }]);
   await detail(page);
   const before = (await saved(page)).plants;
-  await page.getByRole('button', { name: 'Add to Things 3: Watering — Helecho 🌱', exact: true }).click();
-  await expect(page.getByRole('alert')).toContainText('Enter your Things project');
   await settings(page);
   await page.setViewportSize({ width: 320, height: 900 });
+  await expect(page.getByLabel('Things project', { exact: true })).toHaveValue('Plantas');
+  await page.evaluate(() => {
+    window.plantThingsURLs = [];
+    window.navigation.addEventListener('navigate', event => {
+      if (!/^(things|shortcuts):/.test(event.destination.url)) return;
+      event.preventDefault();
+      window.plantThingsURLs.push(event.destination.url);
+    });
+  });
+  await page.getByRole('button', { name: 'Create project', exact: true }).click();
+  const urls = await page.evaluate(() => window.plantThingsURLs);
+  expect(urls).toHaveLength(1);
+  expect(new URL(urls[0]).pathname).toBe('/add-project');
+  expect(new URL(urls[0]).searchParams.get('title')).toBe('Plantas');
   await page.getByLabel('Things project', { exact: true }).fill('   ');
   await page.getByRole('button', { name: 'Save Things settings', exact: true }).click();
   await expect(page.getByRole('alert')).toContainText('Enter your Things project');

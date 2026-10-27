@@ -88,7 +88,7 @@
     "import_recovery": "Replace initiates a recovery download; the separate recovery link avoids a duplicate download.",
     "reminders": "Dashboard and Plants group watering, soil and fertilizer with urgency ordering; rows contain plant name and shared status pill, without repeated care type.",
     "history": "Borderless semantic table; inline edit/delete retained; contained horizontal scrolling on narrow screens.",
-    "things": "Plant-detail buttons for each future care type run the existing Stillgreen to Things shortcut with version/title/date/project, preserving the planned date and repeat-enabled buttons. Plant settings configures the project; imported values are reused. No automatic handoff or reminder-list actions. Original shortcut and unused direct-builder tests retained.",
+    "things": "Future care-card buttons open things:///add with localized title, exact displayed date, plant notes and the saved project (default Plantas). Settings creates a project via things:///add-project. Apple Shortcut runtime removed at user request; settings/import/export compatibility and navigation-only lists retained. No duplicate detection or completion sync.",
     "direct_things_unit_contracts": 3,
     "shortcut_restoration": {
       "date": "2026-10-21",
@@ -98,6 +98,18 @@
       "verification": "reports/plants-shortcut-verification.txt",
       "device_acceptance": "pending",
       "full_verification": "reports/plants-shortcut-full-verification.txt"
+    },
+    "direct_link_replacement": {
+      "date": "2026-10-27",
+      "acceptance": [
+        "modules/plants/test/things.test.mjs",
+        "modules/plants/e2e/plants.spec.js",
+        "modules/plants/e2e/presentation.spec.js"
+      ],
+      "red": "reports/plants-things-links-red.txt",
+      "verification": "reports/plants-things-links-verification.txt",
+      "device_acceptance": "pending",
+      "full_verification": "reports/plants-things-links-full-verification.txt"
     }
   },
   "researched_additions": {

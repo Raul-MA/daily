@@ -10,22 +10,26 @@ class MemoryStorage {
 test('builds a stable watering title', () => {
     assert.equal(things.wateringReminderTitle(' Monstera '), 'Revisar riego — Monstera');
 });
-test('shortcut URL carries the exact title, date, and project', () => {
-    const url = things.buildThingsShortcutURL({
-        title: 'Revisar riego — Monstera',
-        date: '2026-08-18',
-        project: 'Plantas de casa',
-    });
+test('direct URL carries the exact title, date, and project', () => {
+    const plant = { name: 'Monstera', species: 'Monstera deliciosa', location: 'Casa', notes: 'Check soil 🌱' };
+    const url = things.buildThingsTodoURL({ plant, type: 'watering', date: '2026-08-18', project: 'Plantas de casa', copy: { watering: 'Revisar riego', next: 'Próximo', thingsCheck: 'Comprueba la planta', species: 'Especie', location: 'Ubicación', notes: 'Notas' } });
     const parsed = new URL(url);
-    assert.equal(parsed.protocol, 'shortcuts:');
-    assert.equal(parsed.searchParams.get('name'), things.THINGS_SHORTCUT_NAME);
-    assert.equal(parsed.searchParams.get('input'), 'text');
-    assert.deepEqual(JSON.parse(parsed.searchParams.get('text')), {
-        version: 1,
-        title: 'Revisar riego — Monstera',
-        date: '2026-08-18',
-        project: 'Plantas de casa',
-    });
+    assert.equal(parsed.protocol, 'things:');
+    assert.equal(parsed.pathname, '/add');
+    assert.equal(parsed.searchParams.get('title'), 'Revisar riego — Monstera');
+    assert.equal(parsed.searchParams.get('when'), '2026-08-18');
+    assert.equal(parsed.searchParams.get('list'), 'Plantas de casa');
+    assert.equal(parsed.searchParams.get('reveal'), 'true');
+    assert.match(parsed.searchParams.get('notes'), /Monstera deliciosa/);
+    assert.match(parsed.searchParams.get('notes'), /Check soil 🌱/);
+    assert.match(parsed.searchParams.get('notes'), /Comprueba la planta/);
+    const defaults = { plant, type: 'watering', date: '2026-08-18', copy: { watering: 'Watering' } };
+    assert.equal(new URL(things.buildThingsTodoURL(defaults)).searchParams.get('list'), 'Plantas');
+    assert.equal(things.buildThingsTodoURL({ ...defaults, date: null }), null);
+    const project = new URL(things.buildThingsProjectURL());
+    assert.equal(project.pathname, '/add-project');
+    assert.equal(project.searchParams.get('title'), 'Plantas');
+    assert.equal(new URL(things.buildThingsProjectURL('Casa 🏡')).searchParams.get('title'), 'Casa 🏡');
 });
 test('enabled integration requires a project', () => {
     globalThis.localStorage = new MemoryStorage();

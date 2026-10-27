@@ -1,8 +1,8 @@
 import { getStatus, getEffectiveFertilizerInterval, getEffectiveWateringInterval } from '../care/care.js';
-import { el, button, announce } from './elements.js';
+import { el, button } from './elements.js';
 import { openCareForm } from './care-form.js';
 import { statusText } from './list.js';
-import { buildThingsShortcutURL, getThingsSettings } from '../integrations/things.js';
+import { buildThingsTodoURL, getThingsSettings, THINGS_PROJECT_NAME } from '../integrations/things.js';
 
 function intervalLabel(plant, type, copy) {
   if (type === 'watering') return `${copy.every} ${getEffectiveWateringInterval(plant)} ${copy.days}`;
@@ -24,8 +24,7 @@ function quickActions(context, type) {
 function thingsAction(context, plant, type, info) {
   const action = button(context.copy.thingsAdd, () => {
     const { project } = getThingsSettings();
-    if (!project) return announce(context, context.copy.thingsMissing, true);
-    location.assign(buildThingsShortcutURL({ title: `${context.copy[type]} — ${plant.name}`, date: info.nextDue, project }));
+    location.assign(buildThingsTodoURL({ plant, type, date: info.nextDue, project: project || THINGS_PROJECT_NAME, copy: context.copy }));
   }, 'btn btn-ghost btn-sm plant-things-action');
   action.setAttribute('aria-label', `${context.copy.thingsAdd}: ${context.copy[type]} — ${plant.name}`);
   return action;

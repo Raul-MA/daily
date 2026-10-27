@@ -1,0 +1,3 @@
+2026-10-27: Replacement acceptance recorded before application edits.
+node --test modules/plants/test/things.test.mjs exited 1 because buildThingsTodoURL was not implemented.
+Approved change: replace shortcuts URL/payload assertions with direct Things /add title/when/list assertions; retain settings, title, dates, export, navigation-only and care preservation contracts. Browser acceptance now checks /add-project and removal of shortcut setup text.

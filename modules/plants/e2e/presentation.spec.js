@@ -79,11 +79,13 @@ test('plant detail Things buttons send each future planned date and stay enabled
       const urls = await page.evaluate(() => window.plantThingsURLs);
       expect(urls).toHaveLength(1);
       const url = new URL(urls[0]);
-      expect(url.protocol).toBe('shortcuts:');
-      expect(url.hostname).toBe('run-shortcut');
-      expect(url.searchParams.get('name')).toBe('Stillgreen to Things');
-      expect(url.searchParams.get('input')).toBe('text');
-      expect(JSON.parse(url.searchParams.get('text'))).toEqual({ version: 1, title: `${title} — Future fern`, date, project: 'Casa 🏡' });
+      expect(url.protocol).toBe('things:');
+      expect(url.pathname).toBe('/add');
+      expect(url.searchParams.get('title')).toBe(`${title} — Future fern`);
+      expect(url.searchParams.get('when')).toBe(date);
+      expect(url.searchParams.get('list')).toBe('Casa 🏡');
+      expect(url.searchParams.get('reveal')).toBe('true');
+      expect(url.searchParams.get('notes')).toContain(date);
     }
   }
   expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe(before);

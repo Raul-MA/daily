@@ -1,7 +1,7 @@
 import { getPlantBinding } from '../store/binding.js';
 const SETTINGS_KEY = 'stillgreen_things_settings';
 
-export const THINGS_SHORTCUT_NAME = 'Stillgreen to Things';
+export const THINGS_PROJECT_NAME = 'Plantas';
 
 const DEFAULT_SETTINGS = Object.freeze({
   enabled: false,
@@ -41,33 +41,21 @@ export function wateringReminderTitle(plantName) {
   return `Revisar riego — ${String(plantName).trim()}`;
 }
 
-export function buildThingsShortcutURL({ title, date, project }) {
-  if (!title || !/^\d{4}-\d{2}-\d{2}$/.test(date) || !project) {
-    throw new Error('Recordatorio de Things inválido');
-  }
-
-  const payload = JSON.stringify({
-    version: 1,
-    title,
-    date,
-    project,
-  });
-
-  return `shortcuts://run-shortcut?name=${encodeURIComponent(THINGS_SHORTCUT_NAME)}`
-    + `&input=text&text=${encodeURIComponent(payload)}`;
+export function buildThingsTodoURL({ plant, type, date, project = THINGS_PROJECT_NAME, copy }) {
+  if (!copy[type] || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
+  const notes = [
+    plant.species ? `${copy.species}: ${plant.species}` : '',
+    plant.location ? `${copy.location}: ${plant.location}` : '',
+    `${copy.next}: ${date}`,
+    copy.thingsCheck,
+    plant.notes ? `${copy.notes}:\n${plant.notes}` : '',
+  ].filter(Boolean).join('\n\n');
+  const params = new URLSearchParams({ title: `${copy[type]} — ${plant.name}`, notes, when: date, list: project, reveal: 'true' });
+  return `things:///add?${params}`;
 }
 
-export function openWateringReminderInThings(plantName, date) {
-  const settings = getThingsSettings();
-  if (!settings.enabled) return false;
-
-  const url = buildThingsShortcutURL({
-    title: wateringReminderTitle(plantName),
-    date,
-    project: settings.project,
-  });
-  window.location.href = url;
-  return true;
+export function buildThingsProjectURL(project = THINGS_PROJECT_NAME) {
+  return `things:///add-project?${new URLSearchParams({ title: project, reveal: 'true' })}`;
 }
 
 export function buildThingsRemindersURL(reminders, copy) {

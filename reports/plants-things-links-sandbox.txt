@@ -1,0 +1,61 @@
+Suite: plants
+✔ care dates use latest matching care and ignore notes skip and reschedule entries (411.341216ms)
+✔ watering seasons preserve wrap-around dry periods and growth intervals (0.720787ms)
+✔ fertilizer pause is preserved while a manual due date still takes precedence (0.432939ms)
+✔ care status distinguishes overdue today soon and future without mutating plants (1.0274ms)
+✔ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (32.395406ms)
+✔ backdated input uses local noon and today retains the actual event time (0.459158ms)
+✔ reminder counts include overdue and today care once and leave records unchanged (0.441324ms)
+✔ urgency ranking places overdue care ahead of future care (0.534018ms)
+✔ legacy plant export retains records care dates Unicode and Things preferences through actual Daily import (6.900464ms)
+✔ legacy plant exporter reads the first valid recovery in original priority without repairing original keys (1.377053ms)
+✔ legacy plant exporter keeps empty storage read-only and refuses invalid settings checksums or blocked storage (1.194212ms)
+✔ original thirteen and three researched plant guides have complete English and Spanish text with unchanged care figures (12.407315ms)
+✔ localized plant templates are detached copies and never rewrite original source notes guides or schedules (3.508476ms)
+✔ connected plant storage writes only the shared document and preserves other modules (1.500745ms)
+✔ connected care and due-date changes remain one root commit with no partial state (1.896072ms)
+✔ Things settings live with plant records and survive a plant update (1.793642ms)
+✔ legacy import previews are read-only and confirmation keeps a root recovery copy (7.276406ms)
+✔ migration export includes Things settings and imports without translating user text (2.173662ms)
+✔ unsupported duplicate and invalid plant imports never mutate shared data (1.874332ms)
+✔ quota failure retains plant history and sends no successful shared change (1.318755ms)
+✔ template care refresh preserves names notes history IDs and manual dates (1.282466ms)
+✔ valid legacy data remains readable when its migration write fails (0.538096ms)
+✔ care log and next-due override are committed in one primary write (0.956537ms)
+✔ validation failures use the storage-error notification path (0.371104ms)
+✔ direct Things URL sends every reminder with its care type, original due date and Unicode plant name (0.563503ms)
+✔ direct Things URL follows interface language and never changes reminder records (0.355284ms)
+✔ direct Things URL does not launch an empty import (0.115276ms)
+✔ builds a stable watering title (0.135263ms)
+✔ direct URL carries the exact title, date, and project (0.846021ms)
+✔ enabled integration requires a project (0.215633ms)
+✔ settings round-trip and normalize project whitespace (0.227646ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 553.887436
+[WebServer] node:events:486
+[WebServer]       throw er; // Unhandled 'error' event
+[WebServer]       ^
+[WebServer]
+[WebServer] Error: listen EPERM: operation not permitted 127.0.0.1:8766
+[WebServer]     at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+[WebServer]     at listenInCluster (node:net:2005:12)
+[WebServer]     at node:net:2214:7
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[WebServer] Emitted 'error' event on Server instance at:
+[WebServer]     at emitErrorNT (node:net:1984:8)
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[WebServer]   code: 'EPERM',
+[WebServer]   errno: -1,
+[WebServer]   syscall: 'listen',
+[WebServer]   address: '127.0.0.1',
+[WebServer]   port: 8766
+[WebServer] }
+[WebServer]
+[WebServer] Node.js v24.14.0
+Error: Process from config.webServer was not able to start. Exit code: 1
