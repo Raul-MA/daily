@@ -1,0 +1,6 @@
+Production assets checked: 724
+Test/fixture/report paths in asset list: 0
+Bundled synthetic review markers or fixture credentials: 0
+Development-preview footer label and EN/ES strings: removed
+Review content is loaded from the Readwise API or account-scoped cache; fresh review state has no value.
+The user confirmed real-token Reader picks, Readwise review display and completion on 2026-10-27. No credentials, responses or personal records were collected. Exact origin/device details were not supplied; remaining physical-device and migration acceptance is separate.

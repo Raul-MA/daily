@@ -2,6 +2,7 @@ import { createReviewCache } from './cache.js';
 import { createRateLimit } from '../rate-limit.js';
 import { createReaderRequest } from '../request.js';
 import { emptyReview, normalizeReview, DIRECT_REVIEW } from './model.js';
+import { createReviewNavigation } from './navigation.js';
 
 const REVIEW_URL = 'https://readwise.io/api/v2/review/';
 const COMPLETE_URL = 'https://readwise.io/api/v2/review/complete/';
@@ -32,6 +33,7 @@ export function createReviewService(options) {
   const request = createReaderRequest({ fetch: options.fetch ?? globalThis.fetch.bind(globalThis), now, timeoutMs: options.timeoutMs }, limiter);
   const emit = options.emit ?? (() => undefined);
   const cache = createReviewCache(options);
+  const navigation = createReviewNavigation(options);
   let state = cache.read();
   let pending = null;
   function accept(value) { state = { status: 'ready', value, url: value.url, fetchedAt: now(), cached: false, error: null }; cache.write(state); emit(); return value; }
@@ -75,10 +77,10 @@ export function createReviewService(options) {
     if (!['never', 'soon', 'later', 'someday'].includes(action)) throw new Error('Unknown review feedback.');
     return { supported: false, url: state.value?.url ?? DIRECT_REVIEW };
   }
-  function clear() { pending?.controller.abort(); pending = null; limiter.reset(); cache.clear(); state = emptyReview(); emit(); }
+  function clear() { pending?.controller.abort(); pending = null; limiter.reset(); cache.clear(); navigation.clear(); state = emptyReview(); emit(); }
   function ensure() {
     if (state.status === 'idle' || state.status === 'ready' && now() - state.fetchedAt >= 15 * 60000) return refresh();
     return Promise.resolve(state.value);
   }
-  return { refresh, complete, feedback, clear, ensure, snapshot: () => structuredClone(state), stop: () => pending?.controller.abort() };
+  return { refresh, complete, feedback, clear, ensure, navigation, snapshot: () => structuredClone(state), stop: () => pending?.controller.abort() };
 }

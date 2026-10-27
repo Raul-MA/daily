@@ -8,6 +8,7 @@ import { createReaderDomain } from './domain.js';
 import { createCredentials } from './credentials.js';
 import { initialReading, validReadingData } from './validation.js';
 import { readingActions } from './service-actions.js';
+import { createDailyPicks } from './daily.js';
 
 const revision = Symbol('Reader revision');
 function fingerprint(root) { return JSON.stringify(root.modules.reading ?? null); }
@@ -37,9 +38,11 @@ export function connectReading(state, options = {}) {
   const account = readingCredentials({ read, save, cancel, domain, review, credentials, emit });
   function begin(kind = 'pick') { pending.get(kind)?.abort(); const controller = new AbortController(); pending.set(kind, controller); return controller; }
   const core = { read, save, domain, credentials, emit, begin, now: options.now ?? (() => Date.now()) };
+  const actions = readingActions(core);
+  const daily = createDailyPicks({ read, token: credentials.token, accountId: credentials.accountId, now: core.now, emit, pick: actions.pick });
   return {
     read, save, ...account, ...readingImports(state, { read, save, releaseCredentials: account.releaseCredentials }), token: credentials.token, credentialMode: credentials.mode,
-    domain, review, ...readingActions(core), stop: () => { cancel(); review.stop(); },
+    domain, review, daily, ...actions, stop: () => { cancel(); review.stop(); },
     subscribe: listener => { listeners.add(listener); return () => listeners.delete(listener); },
   };
 }

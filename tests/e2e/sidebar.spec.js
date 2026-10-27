@@ -1,5 +1,14 @@
 import { test, expect } from '@playwright/test';
 
+async function footerAlignment(page) {
+  await expect(page.locator('.footer-local')).toHaveCount(0);
+  await expect(page.locator('.shell-footer')).not.toContainText(/Local development preview|Vista previa local/);
+  await page.getByRole('button', { name: 'English', exact: true }).click();
+  const saved = await page.locator('.shell-footer .save-status').boundingBox();
+  const system = await page.locator('.shell-footer .daily-system').boundingBox();
+  expect(Math.abs(saved.y - system.y)).toBeLessThan(8);
+}
+
 test('shared sidebar separates app sections from app switching and keeps app colors', async ({ page }, testInfo) => {
   await page.goto('/daily/#/');
   const sidebar = page.locator('.shell-sidebar');
@@ -14,9 +23,7 @@ test('shared sidebar separates app sections from app switching and keeps app col
   const switcher = await sidebar.locator('[data-app-switcher]').boundingBox();
   expect(switcher.y).toBeLessThan(130);
   await expect(sidebar.getByRole('navigation', { name: 'Apps', exact: true }).getByRole('link')).toHaveCount(7);
-  const local = await page.locator('.footer-local').boundingBox();
-  const system = await page.locator('.shell-footer .daily-system').boundingBox();
-  expect(Math.abs(local.y - system.y)).toBeLessThan(8);
+  await footerAlignment(page);
   for (const route of ['plants', 'coffee', 'coffee/history', 'games', 'games/stats', 'time', 'piano', 'reading/picker', 'reading/review', 'whatsapp']) {
     await page.goto(`/daily/#/${route}`);
     if (route === 'reading/picker') await page.getByRole('button', { name: 'Close settings', exact: true }).click();

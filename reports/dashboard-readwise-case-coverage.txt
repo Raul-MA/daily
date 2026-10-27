@@ -1,0 +1,2 @@
+All 40 discovered Reading browser cases passed across the interrupted primary run and the four-case continuation.
+Primary process exit: 143 after 36 browser passes; continuation: exit 0, 4 browser passes.

@@ -13,6 +13,7 @@
 ## Key Files
 
 - `src/service.js`, `src/service-actions.js`, `src/validation.js`: versioned settings/picks and stale/failed-write protection.
+- `src/daily.js`, `src/widget.js`, `src/widget-ui.js`: once-per-local-day selection, explicit retry and dashboard reading hierarchy.
 - `src/metadata.js`, `src/selection.js`, `src/config.js`: duration, sampling and shortcut rules.
 - `src/client.js`, `src/request.js`, `src/rate-limit.js`, `src/cache.js`, `src/credentials.js`, `src/account-epoch.js`: real requests, disposable metadata and account isolation.
 - `src/timestamps.js`, `src/ui/errors.js`: bounded persisted/cache timestamps and exact authored error translations.
@@ -24,6 +25,7 @@
 
 ## Non-Obvious Patterns
 
-- Token and settings changes invalidate pending results. Merely rendering widgets/pages must not pick, save preferences or leave Daily automatically.
+- Token and settings changes invalidate pending results. Home explicitly ensures one saved Reader selection per local day/settings; repeated renders reuse it. Rendering never saves preferences or leaves Daily automatically.
+- Dashboard Review shows the latest available review with a date-unverified note, explicitly approved after the API date limitation was explained. `src/review/widget-cards.js` and `navigation.js` provide persisted Previous/Next/completion/revisit controls; completion always requires server confirmation.
 - Unknown durations are excluded under finite budgets unless enabled. Truncation bounds the pool, so whole-library randomness is never promised.
-- Authenticated connectivity, Q&A data availability and scheduling feedback are unverified; retain the documented direct-review fallback.
+- Real Reader/review/completion behavior is user-confirmed; exact origin/device diagnostics, Q&A data availability and scheduling feedback remain unverified. Retain the documented direct-review fallback.
