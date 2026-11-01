@@ -6,6 +6,6 @@ export function shellFooter(context, copy) {
     status.setAttribute('role', 'status');
     const system = element('div', 'footer-system');
     system.dataset.footerSystem = '';
-    footer.append(element('span', 'footer-local', copy.local), status, system);
+    footer.append(status, system);
     return footer;
 }

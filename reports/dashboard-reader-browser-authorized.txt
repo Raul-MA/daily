@@ -1,0 +1,42 @@
+[WebServer] (node:11184) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:11222) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 modules/reading/e2e/dashboard.spec.js:15:1 › dashboard Reader chooses configured reads once per local day and exposes Pick again without opening an app (8.6s)
+  ✘  2 modules/reading/e2e/dashboard.spec.js:37:1 › dashboard Reader failures keep saved reads and offer explicit retry without a request loop (10.3s)
+(node:12039) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 modules/reading/e2e/dashboard.spec.js:53:1 › dashboard reading hierarchy wraps at phone and desktop widths with clear title and detail sizes (7.2s)
+
+
+  1) modules/reading/e2e/dashboard.spec.js:37:1 › dashboard Reader failures keep saved reads and offer explicit retry without a request loop
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-reading-reader]').getByRole('alert')
+    Expected substring: "500"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-reading-reader]').getByRole('alert')
+
+
+      45 |   await page.reload();
+      46 |   const widget = page.locator('[data-reading-reader]');
+    > 47 |   await expect(widget.getByRole('alert')).toContainText('500');
+         |                                           ^
+      48 |   await expect(widget.locator('.daily-read')).toHaveCount(3);
+      49 |   await expect(widget.getByRole('heading', { name: 'Previous reads' })).toBeVisible();
+      50 |   await expect(widget.getByRole('button', { name: 'Pick again', exact: true })).toBeEnabled();
+        at /workspaces/daily/modules/reading/e2e/dashboard.spec.js:47:43
+
+    Error Context: test-results/dashboard-dashboard-Reader-52ffc-etry-without-a-request-loop/error-context.md
+
+  1 failed
+    modules/reading/e2e/dashboard.spec.js:37:1 › dashboard Reader failures keep saved reads and offer explicit retry without a request loop
+  2 passed (40.9s)

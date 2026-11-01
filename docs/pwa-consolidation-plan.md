@@ -33,16 +33,16 @@ The dashboard and all app interfaces support English and Spanish. A shared langu
 
 Plants and running activities occupy the top of the initial layout. Widgets can be added, removed, and reordered; this configuration persists. Removing a widget neither removes its app nor stops its activities. A compact shared running-activity indicator remains available outside the dashboard.
 
-Use the accepted iOS dashboard design: three columns on desktop (1100px and wider), two on tablet, one on phones. Cards show summaries and navigation links only for now. Logging, timer controls, plant care, review interaction, and picker controls belong in their corresponding modules; settings own widget customization.
+Use the accepted iOS dashboard design: three columns on desktop (1100px and wider), two on tablet, one on phones. The 2026-10-27 interview authorizes daily automatic Reader picks, explicit Pick again and inline review navigation/completion with saved position. Other cards retain summary/navigation behavior; settings own widget customization. Use bold titles, larger highlight text and smaller details, preserving Daily's palette and grid.
 
 All apps are also reachable through a shared app menu, including WhatsApp Later and the full Reader picker. Quick actions have configurable visibility, but every function remains reachable inside its app.
 
 ### Defaults chosen where the interview left detail open
 
 - Support both the existing Time Budget workflow and simple named countdowns. Allow multiple independent countdowns, while preserving one active time budget and the board-game app's one-active-session rule.
-- The requested reading content is the current scheduled Daily Review, never recently reviewed or recently created highlights. The API returns the latest available review; if its day cannot be established, label it honestly and offer the Daily Review link rather than calling it today's review.
+- The requested reading content is the scheduled Daily Review, never recently reviewed or recently created highlights. After learning that the public API does not supply the review date, the user explicitly approved showing its latest review on Home with Latest available review and a date-unverified note. Present one highlight with persisted Previous/Next, progress and explicit final completion; show Review complete with Revisit highlights afterward. A missing review retains Refresh and the direct review link.
 - Persist both the last opened piano exercise and completed practice records. A running guided session has separate resumable state.
-- Keep Reader picks stable when navigating away and back. Provide Pick again; replace invalid/finished picks after refreshed metadata. Do not reshuffle on every dashboard render.
+- Keep Reader picks stable during each local day, including empty selections and reloads. Automatically choose using saved settings on the first Home visit that day or after saved settings change; provide explicit Pick again. Failed attempts preserve previous reads and require explicit retry for the same day/settings/account. Do not reshuffle on every dashboard render.
 - Preserve the picker's existing default maximum of ten remaining minutes until the user changes it; offer Any length explicitly. Three is the default count, not a permanent dashboard constraint.
 
 ## 2. Repository findings
@@ -133,7 +133,7 @@ The shell owns navigation, language, installation, service-worker updates, and o
 
 ### Preserve each app's appearance
 
-The accepted iOS demo is a historical sibling-workspace reference, outside this repository. Preserve its three desktop columns and navigation-only cards through the maintained [dashboard](../tests/e2e/platform.spec.js) and [route/layout](../tests/e2e/page-width.spec.js) acceptance tests. Do not ship the alternative design experiments. Mount each app under a module wrapper with scoped styles and module-specific CSS variables, preserving its current appearance. Adapt global `html`, `body`, and `:root` rules to the module boundary and audit overlays, dialogs, focus, and safe areas. Scope selectors to the mount container. Keep the common Home/App menu small and visually neutral.
+The accepted iOS demo is a historical sibling-workspace reference, outside this repository. Preserve its three desktop columns and navigation-only non-reading cards through the maintained [dashboard](../tests/e2e/platform.spec.js) and [route/layout](../tests/e2e/page-width.spec.js) acceptance tests; the authorized reading controls add module acceptance. Do not ship the alternative design experiments. Mount each app under a module wrapper with scoped styles and module-specific CSS variables, preserving its current appearance. Adapt global `html`, `body`, and `:root` rules to the module boundary and audit overlays, dialogs, focus, and safe areas. Scope selectors to the mount container. Keep the common Home/App menu small and visually neutral.
 
 Use before/after screenshots of existing flows to verify visual preservation. An iframe-based launcher would reduce initial CSS work but complicate routing, timers, accessibility, and data updates; it is not the recommended final architecture.
 

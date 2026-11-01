@@ -1,0 +1,28 @@
+.daily-shell .dashboard-grid { align-items: start; }
+.daily-shell .dashboard-card { min-height: 0; }
+.dashboard-card .widget-title { font-size: 16px; font-weight: 750; }
+.dashboard-card > .card-heading { margin-bottom: 12px; }
+.dashboard-card > .module-link { margin-top: 16px; border-top: 1px solid #eeeef0; padding-top: 8px; }
+.reading-dashboard { min-width: 0; overflow-wrap: anywhere; }
+.reading-section-title { margin: 0 0 6px; font-size: 13px; font-weight: 600; color: #68686e; }
+.daily-reads { list-style: none; padding: 0; margin: 0; }
+.daily-read { padding: 16px 0 8px; }
+.daily-read + .daily-read { border-top: 1px solid #eeeef0; }
+.daily-read-title, .daily-review-source { margin: 0 0 6px; font-size: 17px; font-weight: 750; line-height: 1.4; letter-spacing: -.2px; }
+.reading-detail { margin: 3px 0; color: #68686e; font-size: 12px; line-height: 1.6; }
+.daily-read-open { display: inline-flex; align-items: center; min-height: 44px; color: #0067d8; font-size: 13px; font-weight: 650; }
+.reading-widget-button { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; min-height: 44px; max-width: 100%; padding: 10px 14px; border: 1px solid #d1d1d6; border-radius: 10px; background: #fff; color: #0067d8; font: inherit; font-size: 14px; font-weight: 650; cursor: pointer; }
+.reading-widget-button:disabled { opacity: .5; cursor: default; }
+.reading-widget-primary { background: #0067d8; color: #fff; border-color: #0067d8; }
+.reading-widget-status { margin: 10px 0 16px; color: #68686e; font-size: 14px; line-height: 1.65; }
+.reading-widget-error { color: #913000; }
+.reading-freshness { margin: 4px 0 12px; color: #68686e; font-size: 12px; }
+.reading-freshness summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; }
+.reading-freshness summary::before { content: '+'; margin-right: 8px; }
+.reading-freshness[open] summary::before { content: '−'; }
+.daily-review-quote { margin: 20px 0 24px; font-family: Georgia, 'Times New Roman', serif; font-size: 22px; line-height: 1.6; white-space: pre-wrap; }
+.reading-review-progress { margin: 0 0 10px; color: #68686e; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.reading-review-controls { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-bottom: 12px; }
+.reading-complete { margin: 8px 0 16px; font-size: 23px; font-weight: 750; letter-spacing: -.5px; }
+.reading-widget-refresh { margin-top: 8px; border-color: transparent; padding-left: 0; padding-right: 0; font-size: 13px; font-weight: 500; }
+@media (max-width: 390px) { .daily-review-quote { font-size: 21px; } }

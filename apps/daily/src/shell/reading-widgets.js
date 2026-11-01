@@ -4,8 +4,10 @@ import { reviewWidget } from '../../../../modules/reading/src/review/widget.js';
 export function refreshReadingWidgets(context) {
   if (context.route.page !== 'home' || document.hidden) return;
   const language = context.state.read().value.preferences.language;
+  const focus = document.activeElement?.dataset.focus;
   const reader = context.root.querySelector('[data-reading-reader]');
   const review = context.root.querySelector('[data-reading-review]');
   reader?.replaceWith(readerWidget(context.reading, language));
   review?.replaceWith(reviewWidget(context.reading, language));
+  if (focus) context.root.querySelector(`[data-focus="${CSS.escape(focus)}"]`)?.focus({ preventScroll: true });
 }

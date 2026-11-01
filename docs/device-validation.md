@@ -51,9 +51,9 @@ These are instructions for the later device session, not a request to deploy now
 | Phone / installed-app inventory | Pending user | Model, iOS, installation names |
 | Existing export / restore | User confirms export and restore work | Most backups contain fewer than 50 entries; reported backup size approximately 20 KB. Combined Daily migration has synthetic local acceptance tests; physical migration remains deferred |
 | Old Time Budget background / restart | User confirms success | Lock, background and closing/reopening preserve the active budget with correct timing; Daily acceptance remains deferred |
-| Existing Reader | User confirms it works | Reader works on the iPhone; Daily API integration still needs separate verification |
-| New Daily Review | Not previously available; unverified | Diagnostic/integration and direct-review fallback are implemented locally; verify on the actual installation |
-| Authenticated API calls from the actual test origin | Diagnostic implemented; user token testing deferred without blocking local implementation | Three endpoint outcomes, no token/payload |
+| Existing Reader | User confirms original and Daily Reader work | Original Reader works on the iPhone; on 2026-10-27 the user separately confirmed Daily loads real Reader picks with their token, without supplying exact Daily origin/device details |
+| New Daily Review | User confirms real integration, 2026-10-27 | User confirmed Daily loads real Reader picks/reviews with their token and completion works in Readwise; exact origin/device and installed-app details were not supplied |
+| Authenticated API calls from the actual test origin | User confirms functional Reader/review/completion; exact origin/status ledger remains incomplete | Retain only endpoint statuses and origin if diagnostics are recorded later, never token/payload |
 | Largest combined backup / storage | User reports small record counts and approximately 20 KB; 12 recovery tests pass with synthetic data; aggregate/device measurement pending | Aggregate byte size and recovery results |
 | Legacy worker coexistence | Five tested patches prepared; application/release pending | Cache ownership and coexistence results |
 | Daily timer / piano process restore | Implemented locally; physical acceptance deferred | Physical device results against Daily |

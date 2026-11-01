@@ -1,0 +1,41 @@
+[WebServer] (node:43722) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:43756) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/reading/e2e/dashboard-review.spec.js:27:1 › dashboard displays the undated latest review with honest labeling and Refresh without completing it (7.3s)
+
+
+  1) modules/reading/e2e/dashboard-review.spec.js:27:1 › dashboard displays the undated latest review with honest labeling and Refresh without completing it
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[data-reading-review]')
+    Expected substring: "Latest available review"
+    Received string:    "Today’s review isn’t available yet.Readwise does not provide this review’s date.Refresh"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[data-reading-review]')
+        - locator resolved to <div data-reading-review="" class="reading-review-widget reading-dashboard">…</div>
+        - unexpected value "Loading your review…Refresh"
+        13 × locator resolved to <div data-reading-review="" class="reading-review-widget reading-dashboard">…</div>
+           - unexpected value "Today’s review isn’t available yet.Readwise does not provide this review’s date.Refresh"
+
+
+      29 |   await page.getByRole('link', { name: 'Home', exact: true }).click();
+      30 |   const review = page.locator('[data-reading-review]');
+    > 31 |   await expect(review).toContainText('Latest available review');
+         |                        ^
+      32 |   await expect(review).toContainText('Date unverified');
+      33 |   await expect(review).toContainText('Readwise does not provide this review’s date.');
+      34 |   await expect(review.locator('[data-review-card]')).toContainText(latest.highlights[0].text);
+        at /workspaces/daily/modules/reading/e2e/dashboard-review.spec.js:31:24
+
+    Error Context: test-results/dashboard-review-dashboard-f8802-fresh-without-completing-it/error-context.md
+
+  1 failed
+    modules/reading/e2e/dashboard-review.spec.js:27:1 › dashboard displays the undated latest review with honest labeling and Refresh without completing it
