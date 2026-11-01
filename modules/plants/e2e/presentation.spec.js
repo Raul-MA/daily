@@ -63,7 +63,7 @@ test('plant detail Things buttons send each future planned date and stay enabled
   });
   for (const route of ['/', '/plants']) {
     await page.goto(`/daily/#${route}`);
-    await expect(page.getByRole('button', { name: /Things 3/ })).toHaveCount(0);
+    await expect(page.getByRole('button', { name: 'Add to Things 3', exact: true })).toHaveCount(0);
   }
   await page.goto('/daily/#/plants/future-fern');
   await page.setViewportSize({ width: 320, height: 900 });
@@ -102,4 +102,42 @@ test('today, overdue and paused care have no future Things action on plant detai
   await expect(page.locator('[data-type="soil"]')).toContainText('Overdue');
   await expect(page.locator('[data-type="fertilizer"]')).toContainText('Paused');
   await expect(page.getByRole('button', { name: /Things 3/ })).toHaveCount(0);
+});
+
+test('Plants bulk Things button sends all dated care including future reminders without saving or automatic handoff', async ({ page }) => {
+  await seed(page);
+  await page.addInitScript(() => {
+    window.plantThingsURLs = [];
+    window.navigation.addEventListener('navigate', event => {
+      if (!event.destination.url.startsWith('things:')) return;
+      event.preventDefault();
+      window.plantThingsURLs.push(event.destination.url);
+    });
+  });
+  await page.setViewportSize({ width: 320, height: 900 });
+  await page.goto('/daily/#/plants');
+  const before = await page.evaluate(() => localStorage.getItem('daily:v1'));
+  expect(await page.evaluate(() => window.plantThingsURLs)).toEqual([]);
+  const action = page.getByRole('button', { name: 'Add all reminders to Things 3', exact: true });
+  await action.click();
+  const urls = await page.evaluate(() => window.plantThingsURLs);
+  expect(urls).toHaveLength(1);
+  const url = new URL(urls[0]);
+  expect(url.pathname).toBe('/json');
+  const items = JSON.parse(url.searchParams.get('data'));
+  expect(items).toHaveLength(9);
+  expect(items.every(item => item.attributes.list === 'Casa 🏡')).toBe(true);
+  expect(items.find(item => item.attributes.title === 'Watering — Future fern').attributes.when).toBe('2099-02-03');
+  expect(items.every(item => item.attributes.notes.includes('Check the plant'))).toBe(true);
+  expect(await page.evaluate(() => localStorage.getItem('daily:v1'))).toBe(before);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.getByRole('button', { name: 'Español', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Añadir todos los recordatorios a Things 3', exact: true })).toBeVisible();
+});
+
+test('Plants with no records offer no bulk Things handoff', async ({ page }) => {
+  await seed(page, []);
+  await page.goto('/daily/#/plants');
+  await expect(page.getByText('No plants registered yet.', { exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Add all reminders to Things 3', exact: true })).toHaveCount(0);
 });

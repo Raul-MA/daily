@@ -41,26 +41,34 @@ export function wateringReminderTitle(plantName) {
   return `Revisar riego — ${String(plantName).trim()}`;
 }
 
-export function buildThingsTodoURL({ plant, type, date, project = THINGS_PROJECT_NAME, copy }) {
-  if (!copy[type] || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
-  const notes = [
+function thingsNotes(plant, date, copy) {
+  return [
     plant.species ? `${copy.species}: ${plant.species}` : '',
     plant.location ? `${copy.location}: ${plant.location}` : '',
     `${copy.next}: ${date}`,
     copy.thingsCheck,
     plant.notes ? `${copy.notes}:\n${plant.notes}` : '',
   ].filter(Boolean).join('\n\n');
-  const params = new URLSearchParams({ title: `${copy[type]} — ${plant.name}`, notes, when: date, list: project, reveal: 'true' });
+}
+
+function thingsQuery(values) {
+  return new URLSearchParams(values).toString().replaceAll('+', '%20');
+}
+
+export function buildThingsTodoURL({ plant, type, date, project = THINGS_PROJECT_NAME, copy }) {
+  if (!copy[type] || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
+  const notes = thingsNotes(plant, date, copy);
+  const params = thingsQuery({ title: `${copy[type]} — ${plant.name}`, notes, when: date, list: project, reveal: 'true' });
   return `things:///add?${params}`;
 }
 
 export function buildThingsProjectURL(project = THINGS_PROJECT_NAME) {
-  return `things:///add-project?${new URLSearchParams({ title: project, reveal: 'true' })}`;
+  return `things:///add-project?${thingsQuery({ title: project, reveal: 'true' })}`;
 }
 
-export function buildThingsRemindersURL(reminders, copy) {
+export function buildThingsRemindersURL(reminders, copy, project = THINGS_PROJECT_NAME) {
   if (!reminders.length) return null;
   const items = ['watering', 'soil', 'fertilizer'].flatMap(type => reminders.filter(item => item.type === type))
-    .map(({ plant, type, info }) => ({ type: 'to-do', attributes: { title: `${copy[type]} — ${plant.name}`, when: info.nextDue } }));
+    .map(({ plant, type, info }) => ({ type: 'to-do', attributes: { title: `${copy[type]} — ${plant.name}`, when: info.nextDue, notes: thingsNotes(plant, info.nextDue, copy), list: project } }));
   return `things:///json?data=${encodeURIComponent(JSON.stringify(items))}`;
 }

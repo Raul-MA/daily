@@ -1,0 +1,626 @@
+
+> daily-pwa@0.0.0 verify
+> npm run lint && npm run check:js && npm run test:all && npm run build
+
+
+> daily-pwa@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> daily-pwa@0.0.0 check:js
+> node scripts/check-js.mjs
+
+JavaScript syntax checked: 850 files
+
+> daily-pwa@0.0.0 test:all
+> node scripts/test.mjs all
+
+Suite: general
+✔ time is derived from timestamps without tick writes or automatic completion (5.052833ms)
+✔ reload and process reconstruction preserve elapsed time and Unicode references (0.408211ms)
+✔ explicit pause excludes background time and resume continues the same activity (0.68111ms)
+✔ countdowns are independent and singleton budgets games and piano resume existing activities (0.857559ms)
+✔ widget removal language changes and navigation do not pause or reset activities (0.536701ms)
+✔ completion is explicit and terminal while a new budget may start afterwards (0.830559ms)
+✔ duration adjustment preserves elapsed time and backward clock changes never create negative elapsed time (0.371503ms)
+✔ invalid starts duplicate identifiers and unknown transitions never mutate activities (0.671743ms)
+✔ failed activity changes keep the previous status and publish no success (0.650383ms)
+✔ combined backup exports every module layout language and original running timestamps without credentials or caches (39.37784ms)
+✔ combined preview validates every module and shows counts without changing records (13.248562ms)
+✔ combined restore rejects unknown identities future schemas unknown modules and future module versions (10.659885ms)
+✔ combined restore rejects broken coffee references duplicate nested game rounds and invalid plant history (10.219935ms)
+✔ combined restore rejects orphan missing and inconsistent active activity mirrors (9.442796ms)
+✔ combined confirm performs one root replacement preserving overdue timers IDs layout and all records (10.543549ms)
+✔ combined failed primary or recovery writes retain records and do not reset credentials (10.090111ms)
+✔ combined preview rejects tampering and newer edits and can import validated prior root recovery documents (9.169065ms)
+✔ combined restore reports post-commit credential cleanup failures honestly and supports empty fresh roots (11.764106ms)
+✔ calendar refreshes at local midnight without repeated changes on the same day (1.334468ms)
+✔ foreground resumes recalculate date after suspension and cleanup removes callbacks (0.555453ms)
+✔ calendar deadlines follow daylight-saving local days rather than a fixed 24 hours (0.786507ms)
+✔ missing modules fail when exercised rather than preventing test discovery (0.431785ms)
+✔ new browser tests target the Pages path and module hash (0.389707ms)
+✔ legacy budget patch packages a working export link without modifying originals and refuses changed source HTML (106.056195ms)
+✔ legacy plants patch packages a working export link without modifying originals and refuses changed source HTML (88.369105ms)
+✔ legacy Reader patch packages a working export link without modifying originals and refuses changed source HTML (92.226307ms)
+✔ legacy WhatsApp patch packages a working export link without modifying originals and refuses changed source HTML (89.580191ms)
+✔ plants worker removes only its old caches (5.099648ms)
+✔ coffee worker removes only its old caches (1.711281ms)
+✔ games worker removes only its old caches (1.485703ms)
+✔ Time Budget worker removes only its old caches (1.241415ms)
+✔ piano worker removes only its old caches (1.548438ms)
+✔ module defaults never write and saved payloads preserve unrelated preferences and records (0.711607ms)
+✔ module reads validate domain shapes and reject future versions without overwriting (0.646205ms)
+✔ module saves re-read current state and publish only committed updates (0.581965ms)
+✔ failed module commits retain previous readable data without success notifications (0.432046ms)
+✔ activity schemas reject unrenderable finite clocks and durations before creating the root (0.420334ms)
+✔ durable storage is requested where available and refusal or failure never claims retention (0.646195ms)
+✔ fresh dashboard defaults put plants and activities first without writing data (0.340825ms)
+✔ language and dashboard order persist across a new state instance (0.299208ms)
+✔ removing a widget preserves module records and their active sessions (0.298257ms)
+✔ invalid language, duplicate widgets and unknown actions never overwrite settings (0.473534ms)
+✔ failed saves publish no committed change and retain the previous preferences (0.320828ms)
+✔ committed preference changes notify subscribers and support cleanup (0.332921ms)
+✔ diagnostic rejects empty credentials without making requests (1.400841ms)
+✔ diagnostic checks only three GET endpoints sequentially without exposing content (28.339369ms)
+✔ review absence, unauthorized, throttling and server errors stay distinct (1.536705ms)
+✔ network failures stay isolated and raw errors never reach diagnostic results (0.534367ms)
+✔ hung requests time out and remaining endpoint checks still execute (20.171768ms)
+✔ local diagnostics do not claim Pages-origin verification (0.506645ms)
+✔ hash routes cover all seven modules and their canonical deep links (2.23686ms)
+✔ href builder encodes stable IDs and supports configurable local base paths (0.312173ms)
+✔ query parameters and repeated values survive routing without changing settings (0.220161ms)
+✔ unknown and malformed routes fail safely instead of executing external URLs (0.496165ms)
+✔ browser hash listener supports navigation and removes itself on cleanup (0.437616ms)
+✔ static preparation preserves native modules byte-for-byte and resolves every relative import (690.605985ms)
+✔ static preparation uses the configured base for HTML manifest and worker without shipping tests (613.752178ms)
+✔ invalid static bases fail before replacing any previously prepared files (158.247434ms)
+✔ shared install assets provide PNG sizes maskable identity and a subpath-safe Apple touch icon (621.974407ms)
+✔ attention-screen raw recovery preserves only the three owned root snapshots without scanning storage (2.271876ms)
+✔ attention-screen restore validates full backups and replaces only the primary after a successful write (11.48142ms)
+✔ attention-screen restore rejects stale or tampered previews and future stored root versions (8.777776ms)
+✔ attention-screen recovery propagates blocked reads and reports cleanup failure only after replacement (6.503496ms)
+✔ empty storage loads a fresh value without writing and saved documents round-trip (0.711296ms)
+✔ replacement keeps the previous validated document as recovery (0.306041ms)
+✔ invalid and future documents are rejected without any storage mutation (0.464065ms)
+✔ primary quota failure retains the readable document and reports failure (0.301262ms)
+✔ recovery quota failure prevents a primary replacement (0.816773ms)
+✔ corrupt primary data is preserved and recovery is explicit (0.346396ms)
+✔ unrecoverable corruption never produces an empty collection (0.252751ms)
+✔ missing primary data can recover from an existing valid recovery document (0.200383ms)
+✔ storage preserves Unicode and a synthetic document larger than reported backups (3.090943ms)
+✔ lossy serialization is validated before touching existing records (0.312353ms)
+✔ a future primary schema is rejected without recovery or mutation (0.316651ms)
+✔ failure to preserve corrupt data reports failure without replacing it (0.325086ms)
+✔ update activation is held for any unfinished activity or unsaved form (0.690046ms)
+✔ new worker installs owned assets and activation never deletes sibling caches (3.124074ms)
+✔ worker does not intercept authenticated external non-GET or unknown requests (3.126066ms)
+✔ offline navigation and built assets use only this app cache (2.25795ms)
+✔ updates wait until explicitly requested and reject unrelated messages (2.939974ms)
+✔ online navigation stays on the cached version until an update is accepted (1.606555ms)
+✔ any blocked tab prevents update activation (1.25499ms)
+✔ unresponsive tabs and malformed state replies keep updates waiting (24.012662ms)
+✔ every same-app tab must explicitly report safe before an update activates (1.242296ms)
+✔ updates from unknown clients are ignored (1.133183ms)
+ℹ tests 85
+ℹ suites 0
+ℹ pass 85
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2872.168152
+[WebServer] node:events:486
+[WebServer]       throw er; // Unhandled 'error' event
+[WebServer]       ^
+[WebServer]
+[WebServer] Error: listen EPERM: operation not permitted 127.0.0.1:8766
+[WebServer]     at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+[WebServer]     at listenInCluster (node:net:2005:12)
+[WebServer]     at node:net:2214:7
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[WebServer] Emitted 'error' event on Server instance at:
+[WebServer]     at emitErrorNT (node:net:1984:8)
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[WebServer]   code: 'EPERM',
+[WebServer]   errno: -1,
+[WebServer]   syscall: 'listen',
+[WebServer]   address: '127.0.0.1',
+[WebServer]   port: 8766
+[WebServer] }
+[WebServer]
+[WebServer] Node.js v24.14.0
+Error: Process from config.webServer was not able to start. Exit code: 1
+
+Suite: plants
+✔ care dates use latest matching care and ignore notes skip and reschedule entries (21.620642ms)
+✔ watering seasons preserve wrap-around dry periods and growth intervals (0.737265ms)
+✔ fertilizer pause is preserved while a manual due date still takes precedence (0.435582ms)
+✔ care status distinguishes overdue today soon and future without mutating plants (1.317597ms)
+✔ date arithmetic preserves local calendar behavior across daylight saving and legacy month overflow (1.045409ms)
+✔ backdated input uses local noon and today retains the actual event time (0.479795ms)
+✔ reminder counts include overdue and today care once and leave records unchanged (0.435442ms)
+✔ urgency ranking places overdue care ahead of future care (0.650663ms)
+✔ legacy plant export retains records care dates Unicode and Things preferences through actual Daily import (5.498865ms)
+✔ legacy plant exporter reads the first valid recovery in original priority without repairing original keys (2.059089ms)
+✔ legacy plant exporter keeps empty storage read-only and refuses invalid settings checksums or blocked storage (1.169561ms)
+✔ original thirteen and three researched plant guides have complete English and Spanish text with unchanged care figures (14.704033ms)
+✔ localized plant templates are detached copies and never rewrite original source notes guides or schedules (2.189994ms)
+✔ connected plant storage writes only the shared document and preserves other modules (1.278364ms)
+✔ connected care and due-date changes remain one root commit with no partial state (1.464941ms)
+✔ Things settings live with plant records and survive a plant update (1.196972ms)
+✔ legacy import previews are read-only and confirmation keeps a root recovery copy (1.615713ms)
+✔ migration export includes Things settings and imports without translating user text (2.633189ms)
+✔ unsupported duplicate and invalid plant imports never mutate shared data (0.825549ms)
+✔ quota failure retains plant history and sends no successful shared change (1.171535ms)
+✔ template care refresh preserves names notes history IDs and manual dates (1.073612ms)
+✔ valid legacy data remains readable when its migration write fails (0.488821ms)
+✔ care log and next-due override are committed in one primary write (0.720543ms)
+✔ validation failures use the storage-error notification path (0.281676ms)
+✔ direct Things URL sends every reminder with its care type, original due date and Unicode plant name (0.519237ms)
+✔ direct Things URL follows interface language and never changes reminder records (0.260296ms)
+✔ direct Things URL does not launch an empty import (0.124582ms)
+✔ bulk Things import includes full notes, exact dates and saved project without form encoding (0.273279ms)
+✔ builds a stable watering title (0.164256ms)
+✔ direct URL carries the exact title, date, and project (0.699083ms)
+✔ enabled integration requires a project (0.182129ms)
+✔ settings round-trip and normalize project whitespace (0.133218ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124.316577
+[WebServer] node:events:486
+[WebServer]       throw er; // Unhandled 'error' event
+[WebServer]       ^
+[WebServer]
+[WebServer] Error: listen EPERM: operation not permitted 127.0.0.1:8766
+[WebServer]     at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+[WebServer]     at listenInCluster (node:net:2005:12)
+[WebServer]     at node:net:2214:7
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[WebServer] Emitted 'error' event on Server instance at:
+[WebServer]     at emitErrorNT (node:net:1984:8)
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[WebServer]   code: 'EPERM',
+[WebServer]   errno: -1,
+[WebServer]   syscall: 'listen',
+[WebServer]   address: '127.0.0.1',
+[WebServer]   port: 8766
+[WebServer] }
+[WebServer]
+[WebServer] Node.js v24.14.0
+Error: Process from config.webServer was not able to start. Exit code: 1
+
+Suite: coffee
+✔ coffee entries preserve numeric ratios roast age and Unicode through a storage reload (16.861419ms)
+✔ drink type changes calculate composition and clear irrelevant water and milk fields (2.603737ms)
+✔ partial drink edits preserve identity while explicit skipped tastes and false tools remain explicit (2.064266ms)
+✔ beans referenced by drinks cannot be deleted while unused beans can be removed (2.301521ms)
+✔ coffee filters and insights retain scored and unscored drink semantics (3.546903ms)
+✔ legacy coffee merge imports retain tool setup and combine explicitly provided tool settings (4.102351ms)
+✔ legacy replacement resets setup and normalizes absent drink composition fields (2.851667ms)
+✔ unsupported coffee backups and invalid bean input leave existing records unchanged (3.158409ms)
+✔ coffee dictionaries cover shared errors and preserve user text in either language (7.114836ms)
+✔ coffee reads create no records and saves preserve unrelated shared modules (12.325541ms)
+✔ explicit coffee language changes commit with global language atomically (0.933641ms)
+✔ coffee imports preserve shared language and validate merged bean references (2.694314ms)
+✔ coffee duplicate ids broken references and future versions fail without mutation (1.279656ms)
+✔ coffee quota failures retain the previous drink and emit no successful change (1.221928ms)
+✔ coffee rejects a future module payload without silently replacing it (0.540077ms)
+✔ coffee import previews are read-only and cancel leaves the current root intact (0.818316ms)
+✔ coffee import confirmation rejects stale previews and retains recovery on replacement (1.378751ms)
+✔ coffee malformed nested records and invalid settings fail before any shared write (2.144088ms)
+✔ coffee first tools setup saves its starter bean and settings in one root commit (1.323548ms)
+✔ coffee first tools setup quota failure leaves no starter bean or configured flag (0.482339ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 132.068183
+[WebServer] node:events:486
+[WebServer]       throw er; // Unhandled 'error' event
+[WebServer]       ^
+[WebServer]
+[WebServer] Error: listen EPERM: operation not permitted 127.0.0.1:8766
+[WebServer]     at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+[WebServer]     at listenInCluster (node:net:2005:12)
+[WebServer]     at node:net:2214:7
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[WebServer] Emitted 'error' event on Server instance at:
+[WebServer]     at emitErrorNT (node:net:1984:8)
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[WebServer]   code: 'EPERM',
+[WebServer]   errno: -1,
+[WebServer]   syscall: 'listen',
+[WebServer]   address: '127.0.0.1',
+[WebServer]   port: 8766
+[WebServer] }
+[WebServer]
+[WebServer] Node.js v24.14.0
+Error: Process from config.webServer was not able to start. Exit code: 1
+
+Suite: games
+✔ game sessions snapshot names and configuration and allow only one active session (24.59657ms)
+✔ round scores preserve negatives and shared ties while invalid fractions do not save (2.05973ms)
+✔ removing the final round retains an editable zero round and sequential numbering (1.499877ms)
+✔ first to points always favors the higher score while lowest-score games retain their rule (1.06196ms)
+✔ competitive outcomes require every result and retain separate wins ties and losses (1.66771ms)
+✔ collaborative solo outcomes have no individual winners or competitive head to head (1.430858ms)
+✔ history archives referenced records and duration overrides control derived statistics (1.640168ms)
+✔ full game backups reject broken references duplicates and future major versions without mutation (3.080724ms)
+✔ games translations preserve interpolation and user names while covering scoring and errors (4.733816ms)
+✔ games read without writes and preserve other modules while sharing explicit language changes (8.356841ms)
+✔ starting a game atomically registers its timestamp activity and retains unrelated countdowns (3.114227ms)
+✔ scores never restart game timing and finishing atomically completes the shared activity (3.192222ms)
+✔ game quota failures leave both the sessions and shared activities unchanged (1.367149ms)
+✔ game stale domain saves reject instead of overwriting a newer module state (1.59777ms)
+✔ game replacement previews preserve shared language and restore active timing with recovery (1.902367ms)
+✔ game future modules and stale import previews remain untouched (1.622565ms)
+✔ game backup previews reject duplicate nested round result and winner identities without replacing records (2.264242ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 114.54376
+[WebServer] node:events:486
+[WebServer]       throw er; // Unhandled 'error' event
+[WebServer]       ^
+[WebServer]
+[WebServer] Error: listen EPERM: operation not permitted 127.0.0.1:8766
+[WebServer]     at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+[WebServer]     at listenInCluster (node:net:2005:12)
+[WebServer]     at node:net:2214:7
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[WebServer] Emitted 'error' event on Server instance at:
+[WebServer]     at emitErrorNT (node:net:1984:8)
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[WebServer]   code: 'EPERM',
+[WebServer]   errno: -1,
+[WebServer]   syscall: 'listen',
+[WebServer]   address: '127.0.0.1',
+[WebServer]   port: 8766
+[WebServer] }
+[WebServer]
+[WebServer] Node.js v24.14.0
+Error: Process from config.webServer was not able to start. Exit code: 1
+
+Suite: time-budget
+✔ time input is strict local HH:MM and invalid deadlines are rejected (3.446123ms)
+✔ a deadline at or before the reference rolls to the next local day (0.693342ms)
+✔ session deadlines stay anchored to the original start after midnight and overdue (1.89887ms)
+✔ pending budgets include unfinished current minutes and every later task once (3.052251ms)
+✔ paused task timers resume from elapsed time and pause without losing elapsed time (0.758755ms)
+✔ completing an overrun records exact actual minutes and offers reallocation (2.733156ms)
+✔ early completion advances explicitly and queue reorder never moves the current task (1.691102ms)
+✔ template collections retain Unicode and bounded whole-minute tasks (0.755529ms)
+✔ legacy budget export preserves original running and paused clocks and imports through Daily without credentials (7.770088ms)
+✔ legacy budget export assigns a stable session identity without initializing absent storage (0.648059ms)
+✔ legacy budget malformed records or blocked storage fail without resetting any original data (1.320111ms)
+✔ time budget dictionaries retain interpolation and literal task names (2.088955ms)
+✔ time budget reads its shared language without initializing or changing a session (0.532453ms)
+✔ time budget reads are write-free and writes preserve shared language and other modules (1.213853ms)
+✔ time budget start and its paused activity commit atomically beside independent countdowns (1.565549ms)
+✔ running task timestamps reconstruct overtime without writes and explicit completion ends the activity (2.510401ms)
+✔ failed budget writes do not change tasks timestamps activities or the primary root (1.224563ms)
+✔ stale budget views cannot overwrite later task changes (1.889704ms)
+✔ legacy template previews merge only on confirmation while migration exports include active timing (1.004683ms)
+✔ migration imports retain active timestamps and reject stale or changed previews (0.821312ms)
+✔ budget validation rejects future schemas duplicate tasks invalid timers and future root modules without changes (0.764335ms)
+✔ full Time Budget backups restore independent countdowns atomically beside the plan (1.769859ms)
+✔ time budget rejects unrenderable saved timestamps and counters before any root write (0.669598ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 140.696197
+[WebServer] node:events:486
+[WebServer]       throw er; // Unhandled 'error' event
+[WebServer]       ^
+[WebServer]
+[WebServer] Error: listen EPERM: operation not permitted 127.0.0.1:8766
+[WebServer]     at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+[WebServer]     at listenInCluster (node:net:2005:12)
+[WebServer]     at node:net:2214:7
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[WebServer] Emitted 'error' event on Server instance at:
+[WebServer]     at emitErrorNT (node:net:1984:8)
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[WebServer]   code: 'EPERM',
+[WebServer]   errno: -1,
+[WebServer]   syscall: 'listen',
+[WebServer]   address: '127.0.0.1',
+[WebServer]   port: 8766
+[WebServer] }
+[WebServer]
+[WebServer] Node.js v24.14.0
+Error: Process from config.webServer was not able to start. Exit code: 1
+
+Suite: piano
+Prepared 724 HTML/CSS/JavaScript/assets at /daily/
+✔ audio catalog is chromatic, complete, and backed by actual recordings (6.846575ms)
+✔ recordings, named interval, and exact keyboard keys agree for every interval (50.249931ms)
+✔ fitted keyboards start one white key before the lowest note across octave boundaries (1.077068ms)
+✔ explicit ranges override whole octaves and respect MIDI boundaries (0.74553ms)
+✔ exact notes select C4 and C5 independently; pitch classes repeat (0.660993ms)
+✔ enharmonic spellings cross the scientific-octave boundary correctly (0.492218ms)
+✔ compound intervals retain their distance across the C boundary (0.567338ms)
+✔ every extended chord preserves supplied compound intervals (9.11204ms)
+✔ bass-first inversion stays ascending and retains role metadata (0.469476ms)
+✔ explicit registers take precedence over inferred ascending placement (2.159626ms)
+✔ invalid ranges, notes, labels and out-of-range exact notes are rejected (1.636421ms)
+✔ arbitrary role and display text are preserved with HTML escaping (1.537647ms)
+✔ label settings control rendered labels while retaining accessible descriptions (0.486167ms)
+✔ voicing, rendering and compatibility adapter never mutate their input (0.625266ms)
+✔ exercise keyboards are absent until reveal, including all answer text (0.411998ms)
+✔ guide-tone keyboards preserve each voice’s nearest motion across every root (7.613465ms)
+✔ guide-tone motion crosses B to C without dropping an octave (0.249225ms)
+✔ guided ninth recall and application retain the compound interval (2.92278ms)
+✔ curriculum covers every stage with a continuous prerequisite chain and usable modes (6.814426ms)
+✔ all lesson recall variants produce revealable answers with valid pitch classes (47.616855ms)
+✔ major guide-tone questions follow F, F, E and explain the resolution (0.704433ms)
+✔ transfer prompts change keys only after a complete progression (0.722096ms)
+✔ blues follows the complete twelve-bar form and wraps (0.393183ms)
+✔ minor and modal lessons preserve characteristic spellings (0.33784ms)
+✔ piano Spanish copy covers the authored corpus and preserves interpolation and notation (5.419384ms)
+✔ all ten localized piano lessons retain their musical and structural data without mutating source (4.936061ms)
+✔ piano prompt presentation translates its text without changing saved prompts or keyboard notes (4.465335ms)
+✔ modal parent-key direction descriptions agree with their C-major examples (0.217356ms)
+✔ piano Markdown retains heading emphasis code links and Unicode teaching text (0.88468ms)
+✔ piano Markdown preserves tables blockquotes and escaped code fences (0.505923ms)
+✔ piano Markdown keeps paragraph list and rule boundaries without dropping ordinary pipes (0.36436ms)
+✔ piano Markdown handles blank input and detects an unconsumed malformed heading (0.280664ms)
+✔ spells intervals by letter in both directions and preserves chromatic transpose (0.253703ms)
+✔ recognizes enharmonics and double accidentals (0.176699ms)
+✔ chord tones and tensions retain theoretical spelling (0.194513ms)
+✔ every chord tone remains on its intended pitch for all standard roots (2.82653ms)
+✔ question root pools and numeric degree filters constrain practice (0.248413ms)
+✔ keyboard maps enharmonic pitches and retains an accessible escaped legend (0.215021ms)
+✔ every catalog destination has exactly one existing page loader (1.55538ms)
+✔ library links and search aliases use canonical destinations (1.935639ms)
+✔ player schema generated documentation and transcription contract match the application source (0.691339ms)
+✔ player library persists through Daily service reload and failed storage writes preserve musical content (12.694339ms)
+✔ player validates event identifiers score references pedals maps meter boundaries and incomplete bounds (2.636135ms)
+✔ player reschedules speed changes without duplicate voices and retriggers pedal-held notes on seek (2.048099ms)
+✔ player loop excludes events on the end boundary and preserves explicit swung onset times (0.562589ms)
+✔ short loops schedule every repetition through the lookahead before each pump (1.569226ms)
+✔ click grids restrict work to the selected range and skip subdivisions in beats mode (0.731143ms)
+✔ long metronome passages schedule only the horizon and extend it once without duplicate clicks (1.496099ms)
+✔ count-in clicks advance through the same horizon without repeats when metronome is off (0.45605ms)
+✔ an excessive subdivision density fails explicitly before constructing thousands of audio clicks (0.315458ms)
+✔ current file validation errors propagate instead of being mistaken for stale read failures (0.543082ms)
+✔ user timing fragment imports with all thirteen complete supplied note events and preserved silences (0.487399ms)
+✔ user timing exercise schedules exact chord octave triplet and final-release times at fifty percent (0.818296ms)
+✔ exercise contract accepts complete documentation and defaults TPQ without importing examples (0.611369ms)
+✔ exercise contract rejects malformed shape references maps bounds and duplicate IDs with field errors (2.619454ms)
+✔ exercise contract supports explicit pickups and incomplete measures (0.322962ms)
+✔ timing integrates written tempo changes and practice speed with exact inverse mapping (0.189453ms)
+✔ sounding timeline preserves chords octaves rests trailing silence and independent hands (0.330436ms)
+✔ explicit sixteenths triplets and swing preserve integer timing without inferred swing (0.218157ms)
+✔ pedal extends releases through pedal-up and clips crossings at half-open loop bounds (0.206475ms)
+✔ compound meter click groups and imported triplet subdivisions use separate timing units (0.237443ms)
+✔ acceleration changes at boundaries by percentage points and never exceeds target (0.097481ms)
+✔ transport schedules by audio clock pauses seeks resumes and cancels voices (0.466019ms)
+✔ transport applies imported velocity track mute volume and zero accent emphasis (0.360432ms)
+✔ loop gaps count-ins repetition and acceleration share clock and clear pedal at boundaries (0.589178ms)
+✔ library import failure preserves selection content preferences and musical export roundtrip (1.178247ms)
+✔ ten-minute sessions reserve time for explanation, recall, application, and review (0.127658ms)
+✔ every supported session duration preserves the budget and includes all four blocks (0.4341ms)
+✔ invalid or unsupported durations cannot produce an unusable session (0.25765ms)
+✔ rootless keyboards preserve exact formula offsets and hand labels for every root and type (16.505738ms)
+✔ half-diminished B keeps its crossing voices instead of ascending them an extra octave (0.295321ms)
+✔ ii–V–I chooses minimum total voice motion while preserving whole chord formulas (16.029144ms)
+✔ G major rootless cadence resolves C down to B across the octave boundary (0.274261ms)
+✔ precache requests are unique and backed by repository assets (5.433171ms)
+✔ piano reads and random selection never create a practice record and explicit exercise opening persists the last ID (1.004182ms)
+✔ piano start saves its practice and timestamp activity atomically and offers the existing unfinished session (6.019484ms)
+✔ piano elapsed and current block reconstruct after suspension without writes or automatic completion (1.561914ms)
+✔ piano explicit pause freezes clocks and block changes preserve already practiced time (2.762458ms)
+✔ piano snapshots keep prompt and reveal stable until a presentation transition explicitly advances (4.087922ms)
+✔ piano explicit finish records practice once and atomically completes its activity (1.499866ms)
+✔ piano failed saves retain the previous practice history and activity without partial commits (1.31352ms)
+✔ piano future data and invalid lessons pacing or blocks reject without changing stored records (0.940954ms)
+✔ suspensions resolve to the target chord while retaining extensions in every key (4.767571ms)
+✔ piano restore rejects malformed keyboard payloads and out-of-range timestamps while retaining saved wording (3.044163ms)
+ℹ tests 84
+ℹ suites 0
+ℹ pass 84
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 542.498024
+[WebServer] node:events:486
+[WebServer]       throw er; // Unhandled 'error' event
+[WebServer]       ^
+[WebServer]
+[WebServer] Error: listen EPERM: operation not permitted 127.0.0.1:8766
+[WebServer]     at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+[WebServer]     at listenInCluster (node:net:2005:12)
+[WebServer]     at node:net:2214:7
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[WebServer] Emitted 'error' event on Server instance at:
+[WebServer]     at emitErrorNT (node:net:1984:8)
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[WebServer]   code: 'EPERM',
+[WebServer]   errno: -1,
+[WebServer]   syscall: 'listen',
+[WebServer]   address: '127.0.0.1',
+[WebServer]   port: 8766
+[WebServer] }
+[WebServer]
+[WebServer] Node.js v24.14.0
+Error: Process from config.webServer was not able to start. Exit code: 1
+
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EPERM: operation not permitted 127.0.0.1:8766
+    at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+    at listenInCluster (node:net:2005:12)
+    at node:net:2214:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1984:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '127.0.0.1',
+  port: 8766
+}
+
+Node.js v24.14.0
+Error: Test server exited before readiness
+    at ready (file:///workspaces/daily/scripts/browser-server.mjs:16:41)
+    at async withBrowserServer (file:///workspaces/daily/scripts/browser-server.mjs:7:5)
+    at async runBrowser (file:///workspaces/daily/scripts/test.mjs:41:18)
+    at async file:///workspaces/daily/scripts/test.mjs:56:21
+Suite: reading
+✔ Reader exports versioned settings and current picks without credentials or disposable pools (13.641966ms)
+✔ Reader legacy migration preview normalizes aliases and discards credentials without changing saved data (2.996907ms)
+✔ Reader replacement previews reject tampering and stale roots before mutation (3.273143ms)
+✔ Reader confirmed restore preserves other modules and language while requiring token reentry (3.621613ms)
+✔ failed Reader restore retains previous primary records and credentials (1.383149ms)
+✔ daily Reader reuses even empty picks until the next local day or saved settings change (0.856006ms)
+✔ daily Reader retains old picks on failure and retries only explicitly for the same day and settings (0.444068ms)
+✔ review navigation survives recreation but resets for a different review or account and rejects corrupt indices (0.414124ms)
+✔ Reader duration parsing preserves numeric text and word-count estimates (0.596832ms)
+✔ Reader progress is bounded and remaining time rounds upward with a one-minute floor (0.403522ms)
+✔ Reader eligibility deduplicates IDs and applies progress remaining-time and safe-link filters (0.391029ms)
+✔ Reader selection prioritizes started items then configured location order without duplicates (0.482219ms)
+✔ Reader links accept only HTTPS Reader hosts and metadata minimization excludes content and tokens (0.321569ms)
+✔ Reader URL configuration preserves aliases location priority and supported shortcut controls (0.582967ms)
+✔ Reader invalid URL preferences retain defaults and advanced limits remain bounded (0.25758ms)
+✔ Reader generated shortcut URLs preserve picking controls and exclude tokens (0.519669ms)
+✔ legacy Reader export whitelists preferences and remembered metadata through Daily import without tokens or bodies (5.34747ms)
+✔ legacy Reader export initializes no keys and does not read an opted-out remembered item or obsolete settings (0.413158ms)
+✔ legacy Reader invalid preferences remembered URLs JSON and blocked storage fail without deletion or fallback reset (0.938159ms)
+✔ Reader Spanish authored failures and destructive confirmation retain specific meaning (0.636998ms)
+✔ Reader rejects unrenderable pick timestamps before saving and keeps valid original timestamps (0.965801ms)
+✔ Reader discards unrenderable and future disposable cache timestamps without replacing saved records (0.89547ms)
+✔ Reader paginates locations sequentially using cursor and token headers and excludes children (0.93295ms)
+✔ Reader scan cap bounds returned documents and stops requesting further pages (0.597895ms)
+✔ Reader authorization throttling and service errors reject without successful results (2.591271ms)
+✔ Reader session cache contains minimized metadata and invalidates changed scan configuration (0.380159ms)
+✔ Reader disposable metadata cache survives a new instance but never crosses account identities (0.653047ms)
+✔ scheduled-review cache is separate from backups and reopens as cached data until a successful refresh (1.434344ms)
+✔ Reader scan summary preserves truncation across locations and a fresh cached pool retains its fetch timestamp (2.720683ms)
+✔ Reader startup is read-only and preference saves preserve other modules and global language (1.516878ms)
+✔ Reader invalid settings future data stale edits and failed writes retain the previous root (1.173307ms)
+✔ Reader credentials are memory-only by default and optional remembered tokens stay outside root backups (0.599949ms)
+✔ Reader current picks persist separately from preferences and forget clears account data while retaining settings (2.67079ms)
+✔ Reader token changes cancel obsolete requests and prevent previous-account results from committing (1.083019ms)
+✔ Reader settings changes discard pending picks rather than committing results for obsolete filters (0.819428ms)
+✔ Reader revalidates a remembered item by ID and removes archived completed or missing items (3.284053ms)
+✔ Reader remembered-item validation updates progress and keeps the previous item on request failure (1.265931ms)
+✔ Reader picks distinguish selection time from metadata fetch time when picking again from cache (1.41112ms)
+✔ Reader forgetting credentials succeeds even when clearing canonical cached picks hits quota (0.770927ms)
+✔ Reader account changes in another tab reject late picks and require the old tab to reconnect (1.392677ms)
+✔ Reader cannot revive an obsolete session token by reopening a tab after another account was selected (0.817023ms)
+✔ scheduled review without credentials retains its direct fallback and makes no request (0.494301ms)
+✔ scheduled review uses the actual latest-review endpoint and ordinary highlights never become fabricated questions (0.3915ms)
+✔ absent review is empty while network and authorization failures preserve a previously cached review (0.524087ms)
+✔ review completion is explicit server-confirmed and idempotent with a latest-review preflight (0.642758ms)
+✔ changed latest review or failed completion never reports the displayed review complete (0.794191ms)
+✔ Never Soon Later and Someday hand off to Readwise without deleting or inventing scheduling (0.419652ms)
+✔ a late review response cannot replace the state after its account changes (0.400867ms)
+✔ Q&A requires explicit structured capability hides answers initially and resets on card changes (0.566928ms)
+✔ review widgets reuse fresh results refresh after fifteen minutes and do not automatically loop after errors (0.563631ms)
+✔ Reader custom counts support two through twenty and uniform sampling can choose unread before started (0.266216ms)
+✔ Reader finite budgets exclude unknown duration unless enabled and always reject archived completed and child records (0.286364ms)
+✔ Reader scan limits count fetched child records and expose truncation instead of scanning forever (0.350002ms)
+✔ Reader repeating cursors and malformed response shapes fail rather than return misleading complete data (0.532403ms)
+✔ Reader caches are account-specific without serializing tokens or full document content (0.263131ms)
+✔ Reader links reject embedded credentials and cache freshness expires using the configured clock (0.244326ms)
+✔ Reader pagination requests only the remaining scan allowance (0.406037ms)
+✔ Reader enforces a local twenty-request rolling limit without automatically retrying (2.814689ms)
+✔ Reader throttling honors Retry-After and rejects retries until the cooldown expires (29.856027ms)
+✔ Reader request deadlines still abort when the caller supplies its own signal (9.850316ms)
+ℹ tests 60
+ℹ suites 0
+ℹ pass 60
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 167.68061
+[WebServer] node:events:486
+[WebServer]       throw er; // Unhandled 'error' event
+[WebServer]       ^
+[WebServer]
+[WebServer] Error: listen EPERM: operation not permitted 127.0.0.1:8766
+[WebServer]     at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+[WebServer]     at listenInCluster (node:net:2005:12)
+[WebServer]     at node:net:2214:7
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[WebServer] Emitted 'error' event on Server instance at:
+[WebServer]     at emitErrorNT (node:net:1984:8)
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[WebServer]   code: 'EPERM',
+[WebServer]   errno: -1,
+[WebServer]   syscall: 'listen',
+[WebServer]   address: '127.0.0.1',
+[WebServer]   port: 8766
+[WebServer] }
+[WebServer]
+[WebServer] Node.js v24.14.0
+Error: Process from config.webServer was not able to start. Exit code: 1
+
+Suite: whatsapp
+Prepared 724 HTML/CSS/JavaScript/assets at /daily/
+Passed: encoding, validation, local time in four zones, DST, manifest, icons, and asset paths.
+Passed: submit clears form/storage, preserves handoff and copy fallback, and keeps invalid drafts.
+✔ legacy WhatsApp export imports expired and incomplete Unicode drafts without rescheduling or changing originals (5.854746ms)
+✔ legacy WhatsApp empty or null saved drafts stay absent and unknown properties are excluded (0.410686ms)
+✔ legacy WhatsApp malformed JSON invalid dates clocks and missing fields fail without clearing original storage (0.958377ms)
+✔ WhatsApp startup is read-only and drafts preserve Unicode expired times and unrelated modules (1.05098ms)
+✔ WhatsApp saves incomplete drafts but rejects malformed future modules and stale edits without mutation (1.161485ms)
+✔ WhatsApp failed draft saves and clears preserve the previous primary document (1.014843ms)
+✔ WhatsApp legacy and native imports preview without writes and preserve expired local reminder times (0.424742ms)
+✔ WhatsApp restore rejects changed stale invalid and future previews before replacing records (0.786136ms)
+✔ WhatsApp replacement keeps other apps and recovery while failed imports retain the current draft (0.979226ms)
+✔ encoding, validation, local time, DST, manifest, icons and asset paths (34.144536ms)
+✔ worker install, cache ownership, offline shell and external bypass (96.32677ms)
+✔ handoff clears valid drafts, preserves copy fallback and retains invalid drafts (4.434288ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 184.084876
+[WebServer] node:events:486
+[WebServer]       throw er; // Unhandled 'error' event
+[WebServer]       ^
+[WebServer]
+[WebServer] Error: listen EPERM: operation not permitted 127.0.0.1:8766
+[WebServer]     at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+[WebServer]     at listenInCluster (node:net:2005:12)
+[WebServer]     at node:net:2214:7
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[WebServer] Emitted 'error' event on Server instance at:
+[WebServer]     at emitErrorNT (node:net:1984:8)
+[WebServer]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[WebServer]   code: 'EPERM',
+[WebServer]   errno: -1,
+[WebServer]   syscall: 'listen',
+[WebServer]   address: '127.0.0.1',
+[WebServer]   port: 8766
+[WebServer] }
+[WebServer]
+[WebServer] Node.js v24.14.0
+Error: Process from config.webServer was not able to start. Exit code: 1

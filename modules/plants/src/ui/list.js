@@ -1,7 +1,8 @@
 import { getPlants } from '../store/store.js';
 import { getStatus, getUrgencyScore } from '../care/care.js';
 import { href } from '../../../../packages/platform/src/router.js';
-import { el, anchor } from './elements.js';
+import { buildThingsRemindersURL, getThingsSettings, THINGS_PROJECT_NAME } from '../integrations/things.js';
+import { el, anchor, button } from './elements.js';
 
 export const careTypes = ['watering', 'soil', 'fertilizer'];
 
@@ -38,6 +39,20 @@ export function careGroups(context, tasks, linkClass = 'task-row') {
   return list;
 }
 
+function allRemindersAction(context, plants) {
+  const reminders = plants.flatMap(plant => careTypes.map(type => ({ plant, type, info: getStatus(plant, type) })))
+    .filter(item => item.info.nextDue);
+  const section = el('section', 'plant-things-bulk');
+  const action = button(context.copy.thingsAll, () => {
+    const project = getThingsSettings().project || THINGS_PROJECT_NAME;
+    const url = buildThingsRemindersURL(reminders, context.copy, project);
+    if (url) location.assign(url);
+  });
+  action.disabled = !reminders.length;
+  section.append(action, el('p', '', context.copy.thingsAllHelp));
+  return section;
+}
+
 export function plantList(context) {
   const view = el('div', 'plant-list-view');
   const plants = getPlants().sort((a, b) => getUrgencyScore(b) - getUrgencyScore(a));
@@ -45,7 +60,7 @@ export function plantList(context) {
     view.append(el('p', 'empty-state-text', context.copy.empty), anchor(context.copy.add, href({ page: 'plantNew' }, context.base), 'btn btn-primary'));
     return view;
   }
-  view.append(el('h2', 'task-section-title', context.copy.due));
+  view.append(allRemindersAction(context, plants), el('h2', 'task-section-title', context.copy.due));
   const tasks = pendingCare(plants);
   view.append(careGroups(context, tasks));
   if (!tasks.length) view.append(el('p', 'task-caught-up', context.copy.caughtUp));

@@ -84,12 +84,12 @@
   "native_acceptance": {
     "import": "modules/plants/e2e/import-selection.spec.js",
     "presentation": "modules/plants/e2e/presentation.spec.js",
-    "browser_contracts": 19,
+    "browser_contracts": 21,
     "import_recovery": "Replace initiates a recovery download; the separate recovery link avoids a duplicate download.",
     "reminders": "Dashboard and Plants group watering, soil and fertilizer with urgency ordering; rows contain plant name and shared status pill, without repeated care type.",
     "history": "Borderless semantic table; inline edit/delete retained; contained horizontal scrolling on narrow screens.",
-    "things": "Future care-card buttons open things:///add with localized title, exact displayed date, plant notes and the saved project (default Plantas). Settings creates a project via things:///add-project. Apple Shortcut runtime removed at user request; settings/import/export compatibility and navigation-only lists retained. No duplicate detection or completion sync.",
-    "direct_things_unit_contracts": 3,
+    "things": "Plants page explicitly sends all dated care in one Things JSON URL with notes, original dates and saved project. Future care-card tasks and settings project creation use percent-encoded spaces. Home and reminder rows remain navigation-only. No automatic handoff, duplicate detection or completion sync.",
+    "direct_things_unit_contracts": 4,
     "shortcut_restoration": {
       "date": "2026-10-21",
       "acceptance": "modules/plants/e2e/presentation.spec.js",
@@ -110,6 +110,18 @@
       "verification": "reports/plants-things-links-verification.txt",
       "device_acceptance": "pending",
       "full_verification": "reports/plants-things-links-full-verification.txt"
+    },
+    "bulk_things": {
+      "date": "2026-11-01",
+      "acceptance": [
+        "modules/plants/test/things-direct.test.mjs",
+        "modules/plants/test/things.test.mjs",
+        "modules/plants/e2e/presentation.spec.js"
+      ],
+      "red": "reports/plants-things-bulk-acceptance-red.txt",
+      "verification": "reports/plants-things-bulk-verification.txt",
+      "device_acceptance": "pending",
+      "full_verification": "reports/plants-things-bulk-full-verification.txt"
     }
   },
   "researched_additions": {

@@ -13,6 +13,8 @@ test('builds a stable watering title', () => {
 test('direct URL carries the exact title, date, and project', () => {
     const plant = { name: 'Monstera', species: 'Monstera deliciosa', location: 'Casa', notes: 'Check soil 🌱' };
     const url = things.buildThingsTodoURL({ plant, type: 'watering', date: '2026-08-18', project: 'Plantas de casa', copy: { watering: 'Revisar riego', next: 'Próximo', thingsCheck: 'Comprueba la planta', species: 'Especie', location: 'Ubicación', notes: 'Notas' } });
+    assert.equal(url.includes('+'), false);
+    assert.match(decodeURIComponent(url), /Scientific|Especie: Monstera deliciosa/);
     const parsed = new URL(url);
     assert.equal(parsed.protocol, 'things:');
     assert.equal(parsed.pathname, '/add');

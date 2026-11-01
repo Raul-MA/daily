@@ -241,3 +241,7 @@
   margin-top: 8px;
 }
 
+
+[data-module="plants"] .plant-things-bulk { margin-bottom: 24px; }
+[data-module="plants"] .plant-things-bulk .btn { max-width: 100%; white-space: normal; }
+[data-module="plants"] .plant-things-bulk p { color: var(--text-muted); font-size: 0.85rem; margin-top: 8px; }
