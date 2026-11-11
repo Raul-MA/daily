@@ -4,13 +4,14 @@ import { visibleItems } from './visibleItems.js';
 import { getActiveSession } from '../../backend/features/sessions.js';
 import { renderGameEditor } from './renderGameEditor.js';
 import { renderGameCatalog } from './renderGameCatalog.js';
+import { scoringModeChoice } from '../../backend/features/games.js';
 
 export function renderGames(data) {
   const current = data.games.find((game) => game.id === gameUI.ui.editingGameId);
   const games = visibleItems(data.games, data.settings.showArchived);
   const active = getActiveSession(data);
   const draft = gameUI.ui.gameFormDraft || {};
-  const mode = gameUI.ui.gameFormMode || current?.scoringMode || "highest_score_after_rounds";
+  const mode = gameUI.ui.gameFormMode || scoringModeChoice(current);
   const isCollaborative =
     draft.isCollaborative !== undefined ? ["on", "true"].includes(draft.isCollaborative) : Boolean(current?.isCollaborative);
   return `

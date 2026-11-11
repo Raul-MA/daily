@@ -4,7 +4,7 @@ import { testIds } from './testIds.js';
 import { escapeHtml } from '../components/components.js';
 
 export function renderGameScoringFields(game, settings, mode, draft = {}) {
-  if (mode === "highest_score_after_rounds") {
+  if (["highest_score_after_rounds", "lowest_score_after_rounds"].includes(mode)) {
     return `
       <label>
         ${copy("Rounds")}

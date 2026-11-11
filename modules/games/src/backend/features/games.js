@@ -5,8 +5,14 @@ import { validateGame } from "../core/validation.js";
 export const scoringLabels = {
   win_loss_tie: "Win / loss / tie",
   highest_score_after_rounds: "Highest score after rounds",
+  lowest_score_after_rounds: "Lowest score after rounds",
   first_to_points: "First to points"
 };
+
+export function scoringModeChoice(game) {
+  const mode = game?.scoringMode || "highest_score_after_rounds";
+  return mode === "highest_score_after_rounds" && game?.higherScoreWins === false ? "lowest_score_after_rounds" : mode;
+}
 
 export function createGame(data, input) {
   const now = new Date().toISOString();

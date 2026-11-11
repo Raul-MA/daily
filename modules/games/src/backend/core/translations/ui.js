@@ -177,6 +177,7 @@ export default {
   "{count} players": "{count} jugadores",
   "{name} leads with {score} - round total {total}": "{name} lidera con {score} - total de la ronda {total}",
   "Highest score after rounds": "Mayor puntuación tras las rondas",
+  "Lowest score after rounds": "Menor puntuación tras las rondas",
   "First to points": "Primero en alcanzar puntos",
   "Win / loss / tie": "Victoria / derrota / empate",
   "New player name": "Nombre del nuevo jugador",

@@ -3,7 +3,7 @@ import { playerDisplayName } from './playerDisplayName.js';
 import { formatOutcome } from './formatOutcome.js';
 import { testIds } from './testIds.js';
 import { escapeHtml } from '../components/components.js';
-import { scoringLabels } from '../../backend/features/games.js';
+import { scoringLabels, scoringModeChoice } from '../../backend/features/games.js';
 import { formatDate } from './formatDate.js';
 import { formatDuration } from './formatDuration.js';
 import { getDurationMinutes } from '../../backend/features/sessions.js';
@@ -28,7 +28,7 @@ export function renderGameDetail(data, sessionId) {
     <section class="session-view game-detail" data-testid="${testIds.gameDetail}" data-id="${escapeHtml(session.id)}">
       <header class="session-top">
         <div>
-          <p>${escapeHtml(session.isCollaborative ? copy("Collaborative") : copy(scoringLabels[session.scoringMode]) || copy("Game details"))}</p>
+          <p>${escapeHtml(session.isCollaborative ? copy("Collaborative") : copy(scoringLabels[scoringModeChoice(session)]) || copy("Game details"))}</p>
           <h1>${escapeHtml(session.gameNameSnapshot)}</h1>
         </div>
         <div class="row-actions">

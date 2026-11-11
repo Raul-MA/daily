@@ -2,7 +2,7 @@ import { copy } from './copy.js';
 import { getActiveSession } from '../../backend/features/sessions.js';
 import { testIds } from './testIds.js';
 import { escapeHtml } from '../components/components.js';
-import { scoringLabels } from '../../backend/features/games.js';
+import { scoringLabels, scoringModeChoice } from '../../backend/features/games.js';
 import { t } from '../../backend/core/i18n.js';
 import { renderSessionTiming } from './renderSessionTiming.js';
 import { renderSessionBody } from './renderSessionBody.js';
@@ -22,7 +22,7 @@ export function renderActiveSession(data) {
     <section class="session-view" data-testid="${testIds.activeSession}">
       <header class="session-top">
         <div>
-          <p>${escapeHtml(session.isCollaborative ? copy("Collaborative") : copy(scoringLabels[session.scoringMode]) || copy("Session"))}</p>
+          <p>${escapeHtml(session.isCollaborative ? copy("Collaborative") : copy(scoringLabels[scoringModeChoice(session)]) || copy("Session"))}</p>
           <h1>${escapeHtml(session.gameNameSnapshot)}</h1>
         </div>
         <button class="primary" data-testid="${testIds.finishSession}" type="button">${escapeHtml(t(data.settings.language, "finish"))}</button>

@@ -19,6 +19,7 @@
 ## Non-Obvious Patterns
 
 - One active game; scores never restart its shared timestamp clock.
+- The editor offers highest/lowest score after rounds; lowest stores the existing rounds mode with `higherScoreWins: false` and displays labels from the saved direction.
 - Reopening preserves historical timing for explicit correction. Unused records delete; referenced records archive.
 - Bound reads propagate errors before the legacy fallback. Internal revision symbols never enter exports.
 - JSON import replaces Games after preview/recovery confirmation; it never merges or changes shared language.

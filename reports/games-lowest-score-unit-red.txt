@@ -1,0 +1,54 @@
+✖ lowest score creation uses the existing backup scoring contract and round fields (140.262822ms)
+✖ editing lowest score games can explicitly switch back to highest score (0.734451ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 210.770437
+
+✖ failing tests:
+
+test at modules/games/test/lowest-score.test.mjs:7:1
+✖ lowest score creation uses the existing backup scoring contract and round fields (140.262822ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + 'lowest_score_after_rounds'
+  - 'highest_score_after_rounds'
+
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/lowest-score.test.mjs:14:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'lowest_score_after_rounds',
+    expected: 'highest_score_after_rounds',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at modules/games/test/lowest-score.test.mjs:20:1
+✖ editing lowest score games can explicitly switch back to highest score (0.734451ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  false !== true
+
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/lowest-score.test.mjs:25:10)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

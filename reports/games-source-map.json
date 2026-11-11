@@ -230,6 +230,15 @@
     "unitContract": "modules/games/test/localization-service.test.mjs",
     "preserved": "Original scoring/domain values and every source assertion; no stored user text is translated."
   },
+  "lowestScoreAcceptance": {
+    "date": "2026-11-11",
+    "unit": "modules/games/test/lowest-score.test.mjs",
+    "browser": "modules/games/e2e/lowest-score.spec.js",
+    "contract": "Two new unit and two new EN/ES browser cases cover creating and editing lowest-score games using the original rounds-mode/direction backup contract, ranking, negative multi-round totals, reload, persisted winners and historical direction snapshots. All original source assertions remain unchanged; no tests moved.",
+    "discovery": "Games requires 19 unit and 36 browser cases.",
+    "red": ["reports/games-lowest-score-unit-red.txt", "reports/games-lowest-score-red.txt"],
+    "verification": "reports/games-lowest-score-verification.txt"
+  },
   "ciNavigationAssertion": {
     "test": "modules/games/e2e/offline.spec.js",
     "failureEvidence": "reports/pages-deployment.md#actions-run-39485706681-diagnosis-2026-10-20",
