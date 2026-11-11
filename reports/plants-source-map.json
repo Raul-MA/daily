@@ -75,7 +75,7 @@
   "localization": {
     "lookup": "modules/plants/src/plants/localized.js",
     "englishText": "modules/plants/src/plants/translations/",
-    "templates": 16,
+    "templates": 17,
     "sourceSpanishModified": false,
     "savedUserTextTranslated": false,
     "unitContracts": 2,
@@ -84,7 +84,7 @@
   "native_acceptance": {
     "import": "modules/plants/e2e/import-selection.spec.js",
     "presentation": "modules/plants/e2e/presentation.spec.js",
-    "browser_contracts": 21,
+    "browser_contracts": 25,
     "import_recovery": "Replace initiates a recovery download; the separate recovery link avoids a duplicate download.",
     "reminders": "Dashboard and Plants group watering, soil and fertilizer with urgency ordering; rows contain plant name and shared status pill, without repeated care type.",
     "history": "Borderless semantic table; inline edit/delete retained; contained horizontal scrolling on narrow screens.",
@@ -122,6 +122,15 @@
       "verification": "reports/plants-things-bulk-verification.txt",
       "device_acceptance": "pending",
       "full_verification": "reports/plants-things-bulk-full-verification.txt"
+    },
+    "things_prompt": {
+      "date": "2026-11-11",
+      "acceptance": "modules/plants/e2e/things-prompt.spec.js",
+      "browser_contracts": 4,
+      "red": "reports/plants-things-prompt-red.txt",
+      "verification": "reports/plants-things-prompt-verification.txt",
+      "behavior": "After a successful new care/skip/manual-date entry, enabled Things settings offer the next dated care task. Explicit confirmation only; dismissal keeps care saved. No prompt for failed saves, observations or paused care.",
+      "device_acceptance": "pending"
     }
   },
   "researched_additions": {
@@ -150,6 +159,23 @@
       "browser_acceptance": "modules/plants/e2e/localization.spec.js",
       "red": "reports/plants-puebla-guidance-red.txt",
       "verification": "reports/plants-puebla-guidance-verification.txt"
+    },
+    "peperomia_verde": {
+      "date": "2026-11-11",
+      "template": "peperomia-verde",
+      "identification": "Peperomia obtusifolia, provisional; no label or photo supplied",
+      "research": "modules/plants/docs/care-research.md",
+      "watering_check_days": {
+        "mar_sep": 7,
+        "oct_feb": 10
+      },
+      "watering_frequency_validated": false,
+      "saved_records_modified": false,
+      "acceptance": "modules/plants/test/localization-service.test.mjs",
+      "browser_acceptance": "modules/plants/e2e/localization.spec.js",
+      "red": "reports/plants-peperomia-red.txt",
+      "seasonal_red": "reports/plants-peperomia-seasonal-red.txt",
+      "verification": "reports/plants-peperomia-verification.txt"
     }
   }
 }

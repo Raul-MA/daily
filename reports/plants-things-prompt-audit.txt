@@ -1,0 +1,2 @@
+All 16 prior plant templates are byte-identical to HEAD.
+Plants source map parses and records 17 templates / 25 browser contracts.

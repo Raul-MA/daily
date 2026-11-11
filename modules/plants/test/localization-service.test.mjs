@@ -5,13 +5,14 @@ import { PLANT_TEMPLATES } from '../src/plants/plant-templates.js';
 async function templates(language) { return (await import('../src/plants/localized.js')).plantTemplates(language); }
 function numbers(text) { return text.match(/\d+/g) ?? []; }
 
-test('original thirteen and three researched plant guides have complete English and Spanish text with unchanged care figures', async () => {
+test('original thirteen and four researched plant guides have complete English and Spanish text with unchanged care figures', async () => {
   const english = await templates('en');
   const spanish = await templates('es');
-  const additions = ['maranta', 'calathea-lutea', 'fiddle-leaf-fig'];
+  const additions = ['maranta', 'calathea-lutea', 'fiddle-leaf-fig', 'peperomia-verde'];
   assert.equal(english.filter(item => !additions.includes(item.id)).length, 13);
-  assert.equal(english.length, 16);
-  assert.deepEqual(english.filter(item => additions.includes(item.id)).map(item => item.species), ['Maranta leuconeura', 'Calathea lutea', 'Ficus lyrata']);
+  assert.equal(english.filter(item => item.id !== 'peperomia-verde').length, 16);
+  assert.equal(english.length, 17);
+  assert.deepEqual(english.filter(item => additions.includes(item.id)).map(item => item.species), ['Maranta leuconeura', 'Calathea lutea', 'Ficus lyrata', 'Peperomia obtusifolia']);
   for (const [id, days] of [['maranta', 3], ['calathea-lutea', 3], ['fiddle-leaf-fig', 7]]) {
     const item = english.find(template => template.id === id);
     assert.equal(item.schedule.wateringIntervalDays, days);
@@ -19,6 +20,11 @@ test('original thirteen and three researched plant guides have complete English 
     assert.match(item.guide.water, /check|Check/);
     assert.match(item.guide.water, /2–3/);
   }
+  const peperomia = english.find(item => item.id === 'peperomia-verde');
+  assert.deepEqual(peperomia.schedule.wateringSeasons, [{ startMonth: 10, endMonth: 2, intervalDays: 10 }, { startMonth: 3, endMonth: 9, intervalDays: 7 }]);
+  assert.match(peperomia.guide.water, /Puebla/);
+  assert.match(peperomia.guide.water, /Oct–Feb.*10.*Mar–Sep.*7/);
+  assert.match(peperomia.guide.water, /rain|cloud/);
   assert.deepEqual(english.map(item => item.id), PLANT_TEMPLATES.map(item => item.id));
   assert.equal(spanish.find(item => item.id === 'lucky-bamboo').label, 'Bambú de la suerte (en tierra)');
   assert.equal(english.find(item => item.id === 'lucky-bamboo').label, 'Lucky Bamboo (in soil)');

@@ -1,0 +1,65 @@
+[WebServer] (node:30275) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:30287) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/plants/e2e/things-prompt.spec.js:29:1 › successful care prompts for the recalculated reminder and opens Things only on explicit confirmation (6.6s)
+(node:30472) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 modules/plants/e2e/things-prompt.spec.js:59:1 › Spanish prompts follow skipped and manually rescheduled care and dismiss without undoing saved care (6.6s)
+(node:30668) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 modules/plants/e2e/things-prompt.spec.js:89:1 › disabled Things integration saves care without prompting or launching Things (1.6s)
+  ✓  4 modules/plants/e2e/things-prompt.spec.js:97:1 › observations paused fertilizer and failed saves do not offer a Things reminder (1.6s)
+
+
+  1) modules/plants/e2e/things-prompt.spec.js:29:1 › successful care prompts for the recalculated reminder and opens Things only on explicit confirmation
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('dialog', { name: 'Add next reminder to Things 3?', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('dialog', { name: 'Add next reminder to Things 3?', exact: true })
+
+
+      33 |     await record(page, `Record ${name.toLowerCase()}`);
+      34 |     const dialog = page.getByRole('dialog', { name: 'Add next reminder to Things 3?', exact: true });
+    > 35 |     await expect(dialog).toBeVisible();
+         |                          ^
+      36 |     await expect(dialog).toContainText(`Helecho 🌱`);
+      37 |     await expect(dialog).toContainText(name);
+      38 |     await expect(dialog).toContainText(date);
+        at /workspaces/daily/modules/plants/e2e/things-prompt.spec.js:35:26
+
+    Error Context: test-results/things-prompt-successful-c-0ee2d-ly-on-explicit-confirmation/error-context.md
+
+  2) modules/plants/e2e/things-prompt.spec.js:59:1 › Spanish prompts follow skipped and manually rescheduled care and dismiss without undoing saved care
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Omitir riego', exact: true })
+
+
+      23 |
+      24 | async function record(page, name, save = 'Save care') {
+    > 25 |   await page.getByRole('button', { name, exact: true }).click();
+         |                                                         ^
+      26 |   await page.getByRole('button', { name: save, exact: true }).click();
+      27 | }
+      28 |
+        at record (/workspaces/daily/modules/plants/e2e/things-prompt.spec.js:25:57)
+        at /workspaces/daily/modules/plants/e2e/things-prompt.spec.js:62:9
+
+    Error Context: test-results/things-prompt-Spanish-prom-2c844--without-undoing-saved-care/error-context.md
+
+  2 failed
+    modules/plants/e2e/things-prompt.spec.js:29:1 › successful care prompts for the recalculated reminder and opens Things only on explicit confirmation
+    modules/plants/e2e/things-prompt.spec.js:59:1 › Spanish prompts follow skipped and manually rescheduled care and dismiss without undoing saved care
+  2 passed (20.4s)

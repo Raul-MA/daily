@@ -15,9 +15,10 @@ import xanadu from './translations/xanadu.js';
 import maranta from './translations/maranta.js';
 import calatheaLutea from './translations/calathea-lutea.js';
 import fiddleLeafFig from './translations/fiddle-leaf-fig.js';
+import peperomiaVerde from './translations/peperomia-verde.js';
 
-const english = { sabila, 'cast-iron': castIron, 'zz-plant': zz, 'snake-plant': snake, pothos, 'chinese-evergreen': evergreen, dracaena, 'palo-de-brasil': brasil, 'rubber-plant': rubber, 'lucky-bamboo': bamboo, monstera, 'peace-lily': peace, xanadu, maranta, 'calathea-lutea': calatheaLutea, 'fiddle-leaf-fig': fiddleLeafFig };
-const spanish = { sabila: 'Sábila / Aloe vera', 'cast-iron': 'Aspidistra', 'zz-plant': 'Planta ZZ', 'snake-plant': 'Lengua de suegra', pothos: 'Pothos', 'chinese-evergreen': 'Aglaonema', dracaena: 'Drácena', 'palo-de-brasil': 'Palo de Brasil', 'rubber-plant': 'Árbol del caucho', 'lucky-bamboo': 'Bambú de la suerte (en tierra)', monstera: 'Monstera', 'peace-lily': 'Lirio de la paz', xanadu: 'Xanadu', maranta: 'Maranta / Planta de la oración', 'calathea-lutea': 'Calatea lutea / Bijao', 'fiddle-leaf-fig': 'Ficus lyrata / Higuera de hoja de violín' };
+const english = { sabila, 'cast-iron': castIron, 'zz-plant': zz, 'snake-plant': snake, pothos, 'chinese-evergreen': evergreen, dracaena, 'palo-de-brasil': brasil, 'rubber-plant': rubber, 'lucky-bamboo': bamboo, monstera, 'peace-lily': peace, xanadu, maranta, 'calathea-lutea': calatheaLutea, 'fiddle-leaf-fig': fiddleLeafFig, 'peperomia-verde': peperomiaVerde };
+const spanish = { sabila: 'Sábila / Aloe vera', 'cast-iron': 'Aspidistra', 'zz-plant': 'Planta ZZ', 'snake-plant': 'Lengua de suegra', pothos: 'Pothos', 'chinese-evergreen': 'Aglaonema', dracaena: 'Drácena', 'palo-de-brasil': 'Palo de Brasil', 'rubber-plant': 'Árbol del caucho', 'lucky-bamboo': 'Bambú de la suerte (en tierra)', monstera: 'Monstera', 'peace-lily': 'Lirio de la paz', xanadu: 'Xanadu', maranta: 'Maranta / Planta de la oración', 'calathea-lutea': 'Calatea lutea / Bijao', 'fiddle-leaf-fig': 'Ficus lyrata / Higuera de hoja de violín', 'peperomia-verde': 'Peperomia verde / Obtusifolia' };
 export function plantTemplates(language = 'es') {
   return PLANT_TEMPLATES.map(template => {
     const content = language === 'en' ? english[template.id] : { label: spanish[template.id] };

@@ -2,6 +2,7 @@ import { DataConflictError } from '../../../../packages/data/src/errors.js';
 import { getPlant, addCareLog, addCareLogAndSetNextDue } from '../store/store.js';
 import { generateId, nowUTC, today, dateInputToUTC, addDays } from '../utils/utils.js';
 import { el, field, submit, button, save } from './elements.js';
+import { promptNextReminder } from './things-prompt.js';
 
 function careEntry(context, form, type, action) {
   const data = new FormData(form);
@@ -51,7 +52,10 @@ export function openCareForm(context, type, action = 'record') {
     form.append(control);
   } else form.append(field('date', context.copy.careDate, today(), 'date'));
   form.append(field('note', context.copy.careNote, '', 'textarea'), button(context.copy.cancel, () => { context.ui.care = null; form.closest('.care-action-wrap').classList.remove('is-open'); form.closest('.care-action-wrap').querySelector('.care-action-btn').setAttribute('aria-expanded', 'false'); form.remove(); }), submit(context.copy.saveCare));
-  form.onsubmit = event => { event.preventDefault(); save(context, form, () => commitCare(context, form, type, action)); };
+  form.onsubmit = event => {
+    event.preventDefault();
+    if (save(context, form, () => commitCare(context, form, type, action))) promptNextReminder(context, type);
+  };
   const card = context.host.querySelector(`.care-action-wrap[data-type="${type}"]`);
   card.classList.add('is-open');
   const actionButton = card.querySelector('.care-action-btn');
