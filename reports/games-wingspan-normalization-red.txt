@@ -1,0 +1,33 @@
+✖ Wingspan starts from the Games catalog with fixed multiplayer bounds and no rounds (39.611221ms)
+✔ Wingspan derives totals, preserves timing and feeds generic statistics and historical snapshots (73.072617ms)
+✔ Wingspan requires explicit category zeros and unused food only for tied leaders (22.851948ms)
+✔ Wingspan rejects invalid edits and preserves storage, drafts and unrelated scoring boundaries (26.600175ms)
+✔ Wingspan backup validation preserves category data and rejects malformed payloads atomically (25.54304ms)
+✔ Wingspan combined backups restore scorecards and reject unknown scorecard versions before writes (43.613797ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 328.984158
+
+✖ failing tests:
+
+test at modules/games/test/wingspan.test.mjs:12:1
+✖ Wingspan starts from the Games catalog with fixed multiplayer bounds and no rounds (39.611221ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  0 !== null
+
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/wingspan.test.mjs:17:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,11 @@
+✔ Wingspan reports compare per-game averages, pooled point shares and unequal sample sizes (102.549361ms)
+✔ Wingspan reports preserve tied categories, zero totals, archived names and filter scope (89.095547ms)
+✔ Wingspan reports recompute after corrections and exclude reopened or incomplete scorecards (27.425048ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 363.3098

@@ -2,6 +2,8 @@ import { createId } from "../core/id.js";
 import { saveData } from "../core/storage.js";
 import { validateSession } from "../core/validation.js";
 
+import { isWingspan, createScorecard, wingspanTotals, wingspanWinners, setCategory, scoreSelectionErrors, completionErrors } from '../../scoring/wingspan/index.js';
+
 export function startSession(data, input) {
   const game = data.games.find((item) => item.id === input.gameId);
   if (!game) return { data, errors: ["Choose a game."] };
@@ -29,6 +31,7 @@ export function startSession(data, input) {
       sessionOption(game, input, 'targetScore', 'first_to_points'),
     higherScoreWins: game.higherScoreWins,
     rounds: initialRounds(game, selectedPlayers),
+    ...(isWingspan(game) ? { scorecard: createScorecard(selectedPlayers) } : {}),
     results:
       initialResults(game, selectedPlayers),
     winnerPlayerIds: [],
@@ -39,6 +42,14 @@ export function startSession(data, input) {
   const errors = validateSession(session, data);
   if (errors.length) return { data, errors };
   return touchAndSave({ ...data, sessions: [session, ...data.sessions] });
+}
+
+export function updateWingspanScore(data, selection, value) {
+  const current = data.sessions.find(session => session.id === selection.sessionId);
+  const normalized = value === '' || value === null ? null : Number(value);
+  const errors = scoreSelectionErrors(current, selection, normalized);
+  if (errors.length) return { data, errors };
+  return updateSession(data, selection.sessionId, session => ({ ...session, scorecard: setCategory(session.scorecard, selection, normalized) }));
 }
 
 export function updateScore(data, selection, value) {
@@ -68,6 +79,7 @@ export function removeRound(data, sessionId, roundId) {
 }
 
 export function updateOutcome(data, sessionId, playerId, outcome) {
+  if (isWingspan(data.sessions.find(session => session.id === sessionId))) return { data, errors: ['Wingspan uses categories, not rounds or outcomes.'] };
   return updateSession(data, sessionId, (session) => ({
     ...session,
     results: session.results.map((result) => (result.playerId === playerId ? { ...result, outcome } : result))
@@ -91,6 +103,8 @@ export function finishSessionWithTiming(data, sessionId, timing = {}) {
 
 function completeSession(data, sessionId, timing) {
   const current = data.sessions.find((session) => session.id === sessionId);
+  const errors = sessionCompletionErrors(current);
+  if (errors.length) return { data, errors };
   if (current?.isCollaborative && !["win", "loss"].includes(current.collaborativeOutcome)) {
     return { data, errors: ["Choose a team result."] };
   }
@@ -140,6 +154,7 @@ export function getActiveSession(data) {
 }
 
 export function getTotals(session) {
+  if (isWingspan(session)) return wingspanTotals(session);
   const totals = Object.fromEntries(session.participants.map((participant) => [participant.playerId, 0]));
   session.rounds.forEach((round) => {
     Object.entries(round.scores || {}).forEach(([playerId, score]) => {
@@ -150,11 +165,12 @@ export function getTotals(session) {
 }
 
 export function higherScoreLeads(session) {
-  return session.scoringMode === "first_to_points" ? true : Boolean(session.higherScoreWins);
+  return session.scoringMode === "first_to_points" || isWingspan(session) ? true : Boolean(session.higherScoreWins);
 }
 
 export function getWinnerPlayerIds(session) {
   if (session.isCollaborative) return [];
+  if (isWingspan(session)) return wingspanWinners(session);
   if (session.scoringMode === "win_loss_tie") {
     return session.results.filter((result) => result.outcome === "win" || result.outcome === "tie").map((result) => result.playerId);
   }
@@ -219,6 +235,10 @@ function coerceDurationOverride(value, fallback = null) {
 }
 
 function sessionOption(game, input, field, mode) { return !game.isCollaborative && game.scoringMode === mode ? Number(input[field] || game[field]) : null; }
-function initialRounds(game, players) { return game.isCollaborative || game.scoringMode === 'win_loss_tie' ? [] : [createEmptyRound(players, 1)]; }
+function initialRounds(game, players) { return game.isCollaborative || isWingspan(game) || game.scoringMode === 'win_loss_tie' ? [] : [createEmptyRound(players, 1)]; }
 function initialResults(game, players) { return !game.isCollaborative && game.scoringMode === 'win_loss_tie' ? players.map(player => ({ playerId: player.id, outcome: '' })) : []; }
 function sessionDate(session, field) { return new Date(session?.[field] || ''); }
+
+function sessionCompletionErrors(session) {
+  return isWingspan(session) ? completionErrors(session) : [];
+}

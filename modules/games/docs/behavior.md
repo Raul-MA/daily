@@ -20,6 +20,8 @@ The shared-device score tracker retains its original ledger interface and portab
 - `frontend/app/drafts.js` gives source forms stable IDs and wraps setup/session controls for draft tracking. Language changes and notification expiry retain inputs. Revision stamps retain stale player/game/session drafts instead of overwriting another tab. Successful actions clear saved drafts; failed storage writes remain visible without discarding them.
 - Backup filenames and full original JSON format remain. Import is **replace-only**. Preview validates identities, versions, IDs, participants, rounds, scores, results and winner references before any write. Confirmation requires a recovery download, rejects stale previews and atomically replaces Games plus its activity state. Cancellation leaves all records intact. The previous root remains in `daily:v1:recovery`.
 
+- Wingspan base uses the same setup with 2–5 players and an explicit `wingspan_base` profile. Its versioned scorecard has no round rows; scoring, validation and category reports live in [the Wingspan feature](wingspan-plan.md). Existing totals/winners feed shared history and statistics. Older sessions without categories are excluded from category averages and shown in coverage.
+
 ## Gotchas
 
 - There is only one active session. The guard exists both when starting and in validation. New setup offers the existing session instead of silently replacing it.

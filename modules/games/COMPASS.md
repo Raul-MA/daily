@@ -5,6 +5,7 @@
 - [Root rules](../../AGENTS.md).
 - [Migration inventory](../../reports/migration-test-inventory.md).
 - [Data and session lifecycle](docs/behavior.md): scoring, cooperative results, archival, activities, drafts and replace-only recovery.
+- [Wingspan scoring and reports](docs/wingspan-plan.md): separate base-game scorer, 2–5 players, scorecard persistence and player category reports.
 
 ## Commands
 
@@ -14,6 +15,7 @@
 
 - `src/service.js`, `src/activity-sync.js`, `src/imports.js`: atomic module/activity storage and preview/recovery.
 - `src/backend/`: retained domain API; `src/frontend/app/`: split original screens; `src/view.js`: shell mount.
+- `src/scoring/wingspan/`: base-game categories, validation, winners, score sheet and reports; `index.js` exposes pure domain functions.
 - `test/` and `e2e/`: source data characterization, service/localization contracts and mounted workflows; the migration inventory owns assertion provenance.
 
 ## Non-Obvious Patterns

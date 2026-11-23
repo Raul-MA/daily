@@ -1,0 +1,15 @@
+[WebServer] (node:37401) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:37440) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 modules/games/e2e/wingspan-recovery.spec.js:30:1 › Wingspan corrections recompute reports and category JSON exports restore the original breakdown (6.0s)
+  ✓  2 modules/games/e2e/wingspan-recovery.spec.js:56:1 › Wingspan scoring and reports survive offline reload and language remount without losing drafts (8.3s)
+  ✓  3 modules/games/e2e/wingspan.spec.js:35:1 › Wingspan uses existing setup, saves categories through reload and history, and reports player averages (8.1s)
+  ✓  4 modules/games/e2e/wingspan.spec.js:63:1 › Wingspan shows its five-player limit and blocks a sixth participant before starting (4.4s)
+  ✓  5 modules/games/e2e/wingspan.spec.js:72:1 › Wingspan Spanish phone flow requires completed categories and resolves ties with unused food (4.5s)
+  ✓  6 modules/games/e2e/wingspan.spec.js:94:1 › Wingspan category edits retain unsaved values after a storage failure (3.7s)
+
+  6 passed (38.9s)

@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-23",
+  "status": "all-scopes-passed-in-completed-sequential-runs",
+  "unitTotal": 344,
+  "browserTotal": 243,
+  "scopes": {
+    "general": {
+      "status": "pass",
+      "unit": 85,
+      "browser": 43,
+      "evidence": "reports/games-wingspan-full-verification.txt"
+    },
+    "plants": {
+      "status": "pass",
+      "unit": 32,
+      "browser": 25,
+      "evidence": "reports/games-wingspan-full-verification.txt"
+    },
+    "coffee": {
+      "status": "pass",
+      "unit": 20,
+      "browser": 34,
+      "evidence": "reports/games-wingspan-full-verification.txt"
+    },
+    "games": {
+      "status": "pass",
+      "unit": 28,
+      "browser": 42,
+      "evidence": "reports/games-wingspan-final-verification.txt",
+      "additionalFinalUnitEvidence": "reports/games-wingspan-unit-verification.txt"
+    },
+    "time-budget": {
+      "status": "pass",
+      "unit": 23,
+      "browser": 25,
+      "evidence": "reports/games-wingspan-time-budget-verification.txt"
+    },
+    "piano": {
+      "status": "pass",
+      "unit": 84,
+      "browser": 25,
+      "evidence": "reports/games-wingspan-piano-verification.txt"
+    },
+    "reading": {
+      "status": "pass",
+      "unit": 60,
+      "browser": 40,
+      "evidence": "reports/games-wingspan-reading-verification.txt"
+    },
+    "whatsapp": {
+      "status": "pass",
+      "unit": 12,
+      "browser": 9,
+      "evidence": "reports/games-wingspan-whatsapp-verification.txt"
+    }
+  },
+  "retainedPianoSmokeScripts": "both passed",
+  "lint": {
+    "status": "pass",
+    "evidence": "reports/games-wingspan-final-lint.txt"
+  },
+  "syntax": {
+    "status": "pass",
+    "files": 872,
+    "evidence": "reports/games-wingspan-final-syntax.txt"
+  },
+  "build": {
+    "status": "pass",
+    "assets": 739,
+    "evidence": "reports/games-wingspan-build.txt"
+  },
+  "interruptedCombinedCommand": {
+    "command": "npm run verify",
+    "exitCode": 143,
+    "status": "interrupted during Time Budget; not a passing full command",
+    "completedScopes": [
+      "general",
+      "plants",
+      "coffee",
+      "games"
+    ],
+    "evidence": "reports/games-wingspan-full-verification.txt",
+    "recovery": "Known orphaned preview processes stopped; Games and remaining scopes completed separately."
+  },
+  "sourceAudit": "reports/games-wingspan-content-audit.json",
+  "physicalDeviceAcceptance": "pending",
+  "remoteActions": "none",
+  "commit": "not requested"
+}

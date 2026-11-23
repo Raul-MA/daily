@@ -1,4 +1,5 @@
 import { isPlainObject, recordIdErrors, participantIdErrors, nonEmptyString, getSessionParticipants, competitiveOutcome } from './common.js';
+import { isWingspan } from '../../../scoring/wingspan/index.js';
 import { validateSession } from './session.js';
 
 export function validateBackupSessions(backup) {
@@ -51,7 +52,7 @@ export function validateBackupRounds(session, label) {
   if ((session.isCollaborative || session.scoringMode === "win_loss_tie") && session.rounds.length) {
     errors.push(`${label} outcome sessions cannot contain rounds.`);
   }
-  if (!session.isCollaborative && session.scoringMode !== "win_loss_tie" && !session.rounds.length) {
+  if (requiresRounds(session) && !session.rounds.length) {
     errors.push(`${label} score sessions must contain at least one round.`);
   }
   const participantIds = new Set(getSessionParticipants(session).map((participant) => participant.playerId));
@@ -137,4 +138,8 @@ export function collaborativeWinnerErrors(session, label) {
     }
   }
  return errors;
+}
+
+function requiresRounds(session) {
+  return !session.isCollaborative && !isWingspan(session) && session.scoringMode !== 'win_loss_tie';
 }

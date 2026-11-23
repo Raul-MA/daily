@@ -1,3 +1,4 @@
+import { wingspanGameErrors } from '../../../scoring/wingspan/index.js';
 import { positiveInteger } from './common.js';
 
 export function validatePlayer(player, players = []) {
@@ -17,8 +18,8 @@ export function validateGame(game) {
  const name = String(value.name || '').trim();
  if (!name) errors.push('Game name is required.');
  if (name.length > 80) errors.push('Game name must be 80 characters or fewer.');
- if (!['win_loss_tie', 'highest_score_after_rounds', 'first_to_points'].includes(value.scoringMode)) errors.push('Choose a valid scoring mode.');
- return [...errors, ...gameScoringErrors(value), ...gamePlayerErrors(value)];
+ if (!['win_loss_tie', 'highest_score_after_rounds', 'first_to_points', 'wingspan_base'].includes(value.scoringMode)) errors.push('Choose a valid scoring mode.');
+ return [...errors, ...gameScoringErrors(value), ...gamePlayerErrors(value), ...wingspanGameErrors(value)];
 }
 
 export function duplicateName(player, players, name) {

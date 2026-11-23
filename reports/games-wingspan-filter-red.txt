@@ -1,0 +1,40 @@
+✔ Wingspan reports compare per-game averages, pooled point shares and unequal sample sizes (174.291411ms)
+✖ Wingspan reports preserve tied categories, zero totals, archived names and filter scope (65.44225ms)
+✔ Wingspan reports recompute after corrections and exclude reopened or incomplete scorecards (69.351458ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 456.813173
+
+✖ failing tests:
+
+test at modules/games/test/wingspan-reports.test.mjs:35:1
+✖ Wingspan reports preserve tied categories, zero totals, archived names and filter scope (65.44225ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Player 1/. Input:
+
+  '<section class="ledger-block wingspan-reports" data-testid="wingspan-reports">\n' +
+    '    <h2>Wingspan category reports</h2>\n' +
+    '    <p class="subtle">Averages compare points per completed game. Bird points are not bird counts.</p>\n' +
+    '    <div class="wingspan-report-filters">\n' +
+    '      <label>Game<select data-testid="wingspan-report-game-filter"><option value="" >All Wingspan games</option><option value="game-mwtivxco-2apea6" >Wingspan</option></select></label>\n' +
+    '      <label>Player<select data-testid="wingspan-report-player-filter"><option value="" >All players</option></select></label>\n' +
+    '    </div>\n' +
+    '    <p>Scored games: 0</p>\n' +
+    '    <p class="subtle">Older games without category data: 0</p>\n' +
+    '    <div class="wingspan-report-grid"><p class="empty">Complete a Wingspan game to compare category scores here.</p></div>\n' +
+    '  </section>'
+
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/wingspan-reports.test.mjs:48:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '<section class="ledger-block wingspan-reports" data-testid="wingspan-reports">\n    <h2>Wingspan category reports</h2>\n    <p class="subtle">Averages compare points per completed game. Bird points are not bird counts.</p>\n    <div class="wingspan-report-filters">\n      <label>Game<select data-testid="wingspan-report-game-filter"><option value="" >All Wingspan games</option><option value="game-mwtivxco-2apea6" >Wingspan</option></select></label>\n      <label>Player<select data-testid="wingspan-report-player-filter"><option value="" >All players</option></select></label>\n    </div>\n    <p>Scored games: 0</p>\n    <p class="subtle">Older games without category data: 0</p>\n    <div class="wingspan-report-grid"><p class="empty">Complete a Wingspan game to compare category scores here.</p></div>\n...',
+    expected: /Player 1/,
+    operator: 'match',
+    diff: 'simple'
+  }

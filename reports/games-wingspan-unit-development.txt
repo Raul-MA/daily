@@ -1,0 +1,16 @@
+✔ Wingspan reports compare per-game averages, pooled point shares and unequal sample sizes (32.006033ms)
+✔ Wingspan reports preserve tied categories, zero totals, archived names and filter scope (7.942963ms)
+✔ Wingspan reports recompute after corrections and exclude reopened or incomplete scorecards (11.040721ms)
+✔ Wingspan starts from the Games catalog with fixed multiplayer bounds and no rounds (5.256017ms)
+✔ Wingspan derives totals, preserves timing and feeds generic statistics and historical snapshots (10.001911ms)
+✔ Wingspan requires explicit category zeros and unused food only for tied leaders (11.396108ms)
+✔ Wingspan rejects invalid edits and preserves storage, drafts and unrelated scoring boundaries (2.90952ms)
+✔ Wingspan backup validation preserves category data and rejects malformed payloads atomically (10.700156ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 137.436199
