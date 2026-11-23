@@ -1,0 +1,11 @@
+[WebServer] (node:57730) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:57778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 modules/games/e2e/wingspan-drafts.spec.js:26:1 › Wingspan totals include every visible draft category and survive a language remount (2.7s)
+  ✓  2 modules/games/e2e/wingspan-drafts.spec.js:37:1 › Wingspan finish saves all visible draft scores before calculating history and reports (5.0s)
+
+  2 passed (11.2s)

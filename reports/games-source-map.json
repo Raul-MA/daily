@@ -236,7 +236,10 @@
     "browser": "modules/games/e2e/lowest-score.spec.js",
     "contract": "Two new unit and two new EN/ES browser cases cover creating and editing lowest-score games using the original rounds-mode/direction backup contract, ranking, negative multi-round totals, reload, persisted winners and historical direction snapshots. All original source assertions remain unchanged; no tests moved.",
     "discovery": "Games requires 19 unit and 36 browser cases.",
-    "red": ["reports/games-lowest-score-unit-red.txt", "reports/games-lowest-score-red.txt"],
+    "red": [
+      "reports/games-lowest-score-unit-red.txt",
+      "reports/games-lowest-score-red.txt"
+    ],
     "verification": "reports/games-lowest-score-verification.txt"
   },
   "ciNavigationAssertion": {
@@ -250,5 +253,72 @@
       "reports/games-home-navigation-full-verification.txt"
     ],
     "result": "npm run verify exits 0: all 329 unit / 217 native browser cases, both retained Piano smoke scripts, strict lint, 838-file syntax and 716-asset build. Games 17/34 and General 85/40 pass. No test/application changes during the full run; future CI remains pending."
+  },
+  "wingspanAcceptance": {
+    "date": "2026-11-23",
+    "module": "modules/games/src/scoring/wingspan/",
+    "uiAdapter": "modules/games/src/frontend/app/bindWingspan.js",
+    "unit": [
+      "modules/games/test/wingspan.test.mjs",
+      "modules/games/test/wingspan-reports.test.mjs"
+    ],
+    "browser": [
+      "modules/games/e2e/wingspan.spec.js",
+      "modules/games/e2e/wingspan-recovery.spec.js"
+    ],
+    "contract": "Nine new unit and six browser cases cover explicit base profile, 2–5 participants, six-category totals, blanks/zeros, unused-food ties, validation and safe sums, atomic persistence, module/combined recovery, offline/language drafts, history/corrections, and per-player category metrics with unequal game counts. Original source assertions and paths are unchanged. Removed import filter IDs fall back to available data, and feature validation errors have Spanish translations.",
+    "discovery": "Games requires 28 unit and 42 browser cases.",
+    "red": [
+      "reports/games-wingspan-unit-red.txt",
+      "reports/games-wingspan-browser-red-authorized.txt",
+      "reports/games-wingspan-filter-red.txt",
+      "reports/games-wingspan-normalization-red.txt"
+    ],
+    "initialAttempts": [
+      "reports/games-wingspan-browser-red.txt",
+      "reports/games-wingspan-browser-development.txt"
+    ],
+    "verification": "reports/games-wingspan-verification.json",
+    "interruptedFullRun": "reports/games-wingspan-full-verification.txt",
+    "finalModuleVerification": "reports/games-wingspan-final-verification.txt",
+    "additionalUnitVerification": "reports/games-wingspan-unit-verification.txt",
+    "sourceAudit": "reports/games-wingspan-content-audit.json"
+  },
+  "scoringInputReuseAcceptance": {
+    "date": "2026-11-23",
+    "rule": "AGENTS.md requires inspecting and reusing working score components, arithmetic parsing, validation and session saving before new scoring views.",
+    "guide": "modules/games/docs/behavior.md#reuse-for-new-scoring-views",
+    "component": "modules/games/src/frontend/components/score-input.js",
+    "consumers": [
+      "modules/games/src/frontend/app/renderRoundScores.js",
+      "modules/games/src/scoring/wingspan/scorecard-view.js"
+    ],
+    "parser": "modules/games/src/frontend/app/evaluateScoreExpression.js",
+    "preview": "modules/games/src/frontend/app/updateScorePreview.js",
+    "unit": "modules/games/test/wingspan-drafts.test.mjs",
+    "browser": "modules/games/e2e/wingspan-drafts.spec.js",
+    "newCases": {
+      "unit": 3,
+      "browser": 4
+    },
+    "currentDiscovery": {
+      "unit": 31,
+      "browser": 46
+    },
+    "contract": "Every visible draft contributes to live category totals; restored drafts refresh previews; pending scores save atomically before Finish. Shared arithmetic fields support + - * /, normal whole-result truncation, Enter normalization and invalid-input previews. Wingspan retains blank-versus-zero and nonnegative safe-integer validation. All existing assertions and test paths remain unchanged.",
+    "red": [
+      "reports/games-wingspan-drafts-unit-red.txt",
+      "reports/games-wingspan-drafts-browser-red.txt",
+      "reports/games-wingspan-arithmetic-unit-red.txt",
+      "reports/games-wingspan-arithmetic-browser-red.txt"
+    ],
+    "verification": [
+      "reports/games-wingspan-arithmetic-games-verification.txt",
+      "reports/games-wingspan-arithmetic-general-verification.txt",
+      "reports/games-wingspan-arithmetic-lint.txt",
+      "reports/games-wingspan-arithmetic-syntax.txt",
+      "reports/games-wingspan-arithmetic-build.txt"
+    ],
+    "summary": "reports/games-wingspan-scoring-reuse-verification.json"
   }
 }

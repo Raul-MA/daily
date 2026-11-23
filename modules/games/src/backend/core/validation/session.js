@@ -1,3 +1,4 @@
+import { wingspanSessionErrors } from '../../../scoring/wingspan/index.js';
 import { isPlainObject } from './common.js';
 
 export function validateSession(session, data) {
@@ -6,7 +7,7 @@ export function validateSession(session, data) {
  if (!session || typeof session !== 'object') errors.push('Session is required.');
  if (!hasSessionGame(value, data)) errors.push('Session game is missing.');
  errors.push(...sessionPlayerErrors(value), ...sessionStatusErrors(value, data), ...sessionTimingErrors(value));
- errors.push(...scoreErrors(value.rounds));
+ errors.push(...scoreErrors(value.rounds), ...wingspanSessionErrors(value));
  return [...new Set(errors)];
 }
 

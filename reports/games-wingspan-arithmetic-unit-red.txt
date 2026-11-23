@@ -1,0 +1,44 @@
+✔ Wingspan draft categories save together in one atomic storage commit (21.224922ms)
+✔ Wingspan invalid draft batches and storage failures preserve every saved category (6.900848ms)
+✖ Wingspan fields share normal score arithmetic while preserving missing values (4.949985ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 78.181851
+
+✖ failing tests:
+
+test at modules/games/test/wingspan-drafts.test.mjs:39:1
+✖ Wingspan fields share normal score arithmetic while preserving missing values (4.949985ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [
+  +   NaN,
+  +   NaN,
+  +   NaN,
+  +   NaN,
+  +   NaN,
+  +   NaN
+  -   5,
+  -   4,
+  -   10,
+  -   5,
+  -   4,
+  -   2
+    ]
+
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/wingspan-drafts.test.mjs:44:10)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [Array],
+    expected: [Array],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

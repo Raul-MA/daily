@@ -1,3 +1,4 @@
+import { renderScoreInput } from '../components/score-input.js';
 import { copy } from './copy.js';
 import { testIds } from './testIds.js';
 import { escapeHtml } from '../components/components.js';
@@ -14,8 +15,7 @@ export function renderRoundScores(session, round, readOnly) {
                     </div>`
                   : `<label>
                       ${escapeHtml(participant.nameSnapshot)}
-                      <input data-testid="${testIds.scoreInput}" data-round-id="${escapeHtml(round.id)}" data-player-id="${escapeHtml(participant.playerId)}" type="text" inputmode="text" enterkeyhint="done" autocomplete="off" value="${escapeHtml(round.scores[participant.playerId] ?? 0)}">
-                      <span class="score-preview" data-testid="${testIds.scorePreview}">${copy("Total: {value}", { value: escapeHtml(round.scores[participant.playerId] ?? 0) })}</span>
+                      ${renderScoreInput({ value: round.scores[participant.playerId] ?? 0, attributes: { 'data-testid': testIds.scoreInput, 'data-round-id': round.id, 'data-player-id': participant.playerId }, preview: copy('Total: {value}', { value: round.scores[participant.playerId] ?? 0 }) })}
                     </label>`
               }
             `

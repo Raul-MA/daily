@@ -1,3 +1,5 @@
+import { renderWingspanReports } from '../../scoring/wingspan/reports-view.js';
+import { currentLanguage } from './copy.js';
 import { copy } from './copy.js';
 import { renderHeadToHead } from './renderHeadToHead.js';
 import { buildStats } from '../../backend/features/stats.js';
@@ -18,6 +20,7 @@ export function renderStats(data) {
       <p>${copy("Stats")}</p>
       <h1>${copy("Records")}</h1>
     </section>
+    ${renderWingspanReports(data, { filters: { gameId: gameUI.ui.wingspanReportGame || '', playerId: gameUI.ui.wingspanReportPlayer || '' }, language: currentLanguage() })}
     ${renderHeadToHead(data, playerA, playerB, h2h)}
     <section class="records-section">
       <div class="section-heading">

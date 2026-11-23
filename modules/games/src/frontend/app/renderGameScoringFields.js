@@ -4,6 +4,7 @@ import { testIds } from './testIds.js';
 import { escapeHtml } from '../components/components.js';
 
 export function renderGameScoringFields(game, settings, mode, draft = {}) {
+  if (mode === 'wingspan_base') return `<p class="subtle">${copy('2–5 players. Six scoring categories; highest total wins.')}</p>`;
   if (["highest_score_after_rounds", "lowest_score_after_rounds"].includes(mode)) {
     return `
       <label>

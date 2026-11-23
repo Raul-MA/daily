@@ -1,0 +1,26 @@
+✖ Wingspan draft categories save together in one atomic storage commit (24.392345ms)
+✖ Wingspan invalid draft batches and storage failures preserve every saved category (2.635843ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 106.643317
+
+✖ failing tests:
+
+test at modules/games/test/wingspan-drafts.test.mjs:11:1
+✖ Wingspan draft categories save together in one atomic storage commit (24.392345ms)
+  TypeError: sessions.updateWingspanScores is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/wingspan-drafts.test.mjs:18:27)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+
+test at modules/games/test/wingspan-drafts.test.mjs:25:1
+✖ Wingspan invalid draft batches and storage failures preserve every saved category (2.635843ms)
+  TypeError: sessions.updateWingspanScores is not a function
+      at TestContext.<anonymous> (file:///workspaces/daily/modules/games/test/wingspan-drafts.test.mjs:31:27)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:787:7)

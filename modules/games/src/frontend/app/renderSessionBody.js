@@ -1,5 +1,8 @@
+import { isWingspan } from '../../scoring/wingspan/index.js';
+import { renderWingspanSheet } from '../../scoring/wingspan/scorecard-view.js';
+import { currentLanguage } from './copy.js';
 import { renderCollaborativeOutcome } from './renderCollaborativeOutcome.js';
 import { renderOutcomeSession } from './renderOutcomeSession.js';
 import { renderScoreSession } from './renderScoreSession.js';
 
-export function renderSessionBody(session, readOnly) { if (session.isCollaborative) return renderCollaborativeOutcome(session, { readOnly }); if (session.scoringMode === 'win_loss_tie') return renderOutcomeSession(session, { readOnly }); return renderScoreSession(session, { readOnly }); }
+export function renderSessionBody(session, readOnly) { if (isWingspan(session)) return renderWingspanSheet(session, { readOnly, language: currentLanguage() }); if (session.isCollaborative) return renderCollaborativeOutcome(session, { readOnly }); if (session.scoringMode === 'win_loss_tie') return renderOutcomeSession(session, { readOnly }); return renderScoreSession(session, { readOnly }); }

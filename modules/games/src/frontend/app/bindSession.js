@@ -1,3 +1,5 @@
+import { bindWingspan } from './bindWingspan.js';
+import { isWingspan } from '../../scoring/wingspan/index.js';
 import { copy } from './copy.js';
 import { getState } from './state.js';
 import { getActiveSession, addRound, removeRound, updateOutcome, updateCollaborativeOutcome, updateSessionTiming, finishSessionWithTiming } from '../../backend/features/sessions.js';
@@ -15,6 +17,7 @@ export function bindSession() {
   const data = getState();
   const session = getActiveSession(data);
   if (!session) return;
+  const commitWingspan = isWingspan(session) ? bindWingspan(session) : () => true;
   gameUI.app.querySelectorAll(`[data-testid="${testIds.scoreInput}"]`).forEach((input) => {
     input.addEventListener("focus", guard(() => input.select()));
     input.addEventListener("click", guard(() => input.select()));
@@ -47,6 +50,7 @@ export function bindSession() {
   });
   listen(`[data-testid="${testIds.finishSession}"]`, "click", () => {
     if (data.settings.confirmBeforeFinishingSession && !window.confirm(copy("Finish this session?"))) return;
+    if (!commitWingspan()) return;
     applyResult(finishSessionWithTiming(getState(), session.id, readTimingInputs({ useNowForMissingEnd: true })), "Session finished.");
     if (!getActiveSession(getState())) navigate("history");
   });

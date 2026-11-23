@@ -1,0 +1,132 @@
+[WebServer] (node:32160) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:32208) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/games/e2e/wingspan.spec.js:35:1 › Wingspan uses existing setup, saves categories through reload and history, and reports player averages (9.4s)
+(node:32510) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 modules/games/e2e/wingspan.spec.js:58:1 › Wingspan shows its five-player limit and blocks a sixth participant before starting (7.3s)
+(node:32671) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 modules/games/e2e/wingspan.spec.js:67:1 › Wingspan Spanish phone flow requires completed categories and resolves ties with unused food (6.3s)
+(node:32840) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 modules/games/e2e/wingspan.spec.js:88:1 › Wingspan category edits retain unsaved values after a storage failure (7.1s)
+
+
+  1) modules/games/e2e/wingspan.spec.js:35:1 › Wingspan uses existing setup, saves categories through reload and history, and reports player averages
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('wingspan-sheet')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('wingspan-sheet')
+
+
+      16 |   await page.getByTestId(testIds.playPlayerToggle).nth(1).check();
+      17 |   await page.getByTestId(testIds.playStart).click();
+    > 18 |   await expect(page.getByTestId('wingspan-sheet')).toBeVisible();
+         |                                                    ^
+      19 |   await expect(page.getByTestId(testIds.addRound)).toHaveCount(0);
+      20 | }
+      21 |
+        at start (/workspaces/daily/modules/games/e2e/wingspan.spec.js:18:52)
+        at /workspaces/daily/modules/games/e2e/wingspan.spec.js:37:3
+
+    Error Context: test-results/wingspan-Wingspan-uses-exi-1891a-and-reports-player-averages/error-context.md
+
+  2) modules/games/e2e/wingspan.spec.js:58:1 › Wingspan shows its five-player limit and blocks a sixth participant before starting
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('wingspan-player-limit')
+    Expected substring: "2–5"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('wingspan-player-limit')
+
+
+      58 | test('Wingspan shows its five-player limit and blocks a sixth participant before starting', async ({ page }) => {
+      59 |   await setup(page, 'en', 6);
+    > 60 |   await expect(page.getByTestId('wingspan-player-limit')).toContainText('2–5');
+         |                                                           ^
+      61 |   for (let index = 0; index < 5; index += 1) await page.getByTestId(testIds.playPlayerToggle).nth(index).check();
+      62 |   await expect(page.getByTestId(testIds.playPlayerToggle).nth(5)).toBeDisabled();
+      63 |   await page.getByTestId(testIds.playStart).click();
+        at /workspaces/daily/modules/games/e2e/wingspan.spec.js:60:59
+
+    Error Context: test-results/wingspan-Wingspan-shows-it-2e2f0-participant-before-starting/error-context.md
+
+  3) modules/games/e2e/wingspan.spec.js:67:1 › Wingspan Spanish phone flow requires completed categories and resolves ties with unused food
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  getByTestId('nav-play').first()
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('nav-play').first()
+        14 × locator resolved to <a aria-current="page" href="/daily/#/games" data-testid="nav-play" class="sidebar-item nav-link active">…</a>
+           - unexpected value "hidden"
+
+
+       at helpers.js:67
+
+      65 |     await page.evaluate(() => localStorage.clear());
+      66 |     await page.goto(appURL("games"));
+    > 67 |     await expect(page.getByTestId(testIds.navPlay).first()).toBeVisible();
+         |                                                             ^
+      68 | }
+      69 | export async function createPlayer(page, name) {
+      70 |     await page.getByTestId(testIds.navPlayers).first().click();
+        at openApp (/workspaces/daily/modules/games/e2e/helpers.js:67:61)
+        at setup (/workspaces/daily/modules/games/e2e/wingspan.spec.js:6:3)
+        at /workspaces/daily/modules/games/e2e/wingspan.spec.js:69:3
+
+    Error Context: test-results/wingspan-Wingspan-Spanish--995dc-olves-ties-with-unused-food/error-context.md
+
+  4) modules/games/e2e/wingspan.spec.js:88:1 › Wingspan category edits retain unsaved values after a storage failure
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('wingspan-sheet')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('wingspan-sheet')
+
+
+      16 |   await page.getByTestId(testIds.playPlayerToggle).nth(1).check();
+      17 |   await page.getByTestId(testIds.playStart).click();
+    > 18 |   await expect(page.getByTestId('wingspan-sheet')).toBeVisible();
+         |                                                    ^
+      19 |   await expect(page.getByTestId(testIds.addRound)).toHaveCount(0);
+      20 | }
+      21 |
+        at start (/workspaces/daily/modules/games/e2e/wingspan.spec.js:18:52)
+        at /workspaces/daily/modules/games/e2e/wingspan.spec.js:90:3
+
+    Error Context: test-results/wingspan-Wingspan-category-6ba12-ues-after-a-storage-failure/error-context.md
+
+  4 failed
+    modules/games/e2e/wingspan.spec.js:35:1 › Wingspan uses existing setup, saves categories through reload and history, and reports player averages
+    modules/games/e2e/wingspan.spec.js:58:1 › Wingspan shows its five-player limit and blocks a sixth participant before starting
+    modules/games/e2e/wingspan.spec.js:67:1 › Wingspan Spanish phone flow requires completed categories and resolves ties with unused food
+    modules/games/e2e/wingspan.spec.js:88:1 › Wingspan category edits retain unsaved values after a storage failure

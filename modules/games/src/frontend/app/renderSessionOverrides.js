@@ -3,6 +3,7 @@ import { escapeHtml } from '../components/components.js';
 
 export function renderSessionOverrides(game) {
   if (!game) return "";
+  if (game.scoringMode === 'wingspan_base') return `<p class="subtle" data-testid="wingspan-player-limit">${copy('2–5 players. Six scoring categories; highest total wins.')}</p>`;
   if (game.isCollaborative) {
     return `<p class="subtle">${copy("This game records one shared Win or Loss for the whole table.")}</p>`;
   }

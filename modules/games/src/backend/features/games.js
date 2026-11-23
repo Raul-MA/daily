@@ -2,7 +2,10 @@ import { createId } from "../core/id.js";
 import { saveData } from "../core/storage.js";
 import { validateGame } from "../core/validation.js";
 
+import { isWingspan, WINGSPAN_MAX_PLAYERS } from '../../scoring/wingspan/index.js';
+
 export const scoringLabels = {
+  wingspan_base: 'Wingspan — base game',
   win_loss_tie: "Win / loss / tie",
   highest_score_after_rounds: "Highest score after rounds",
   lowest_score_after_rounds: "Lowest score after rounds",
@@ -58,11 +61,7 @@ export function normalizeGame(game) {
     name: String(game.name || "").trim(),
     isCollaborative: Boolean(game.isCollaborative),
     scoringMode,
-    roundCount: optionalNumber(game.roundCount),
-    targetScore: optionalNumber(game.targetScore),
-    higherScoreWins: scoreDirection(game.higherScoreWins),
-    minPlayers: game.minPlayers ? Number(game.minPlayers) : null,
-    maxPlayers: game.maxPlayers ? Number(game.maxPlayers) : null,
+    ...scoringConfiguration(game),
     notes: String(game.notes || "").trim(),
     archived: Boolean(game.archived),
     createdAt: game.createdAt || new Date().toISOString(),
@@ -80,3 +79,11 @@ function touchAndSave(data) {
 
 function optionalNumber(value) { return value === "" || value == null ? null : Number(value); }
 function scoreDirection(value) { return value === undefined ? true : Boolean(value); }
+
+function scoringConfiguration(game) {
+  if (isWingspan(game)) return { roundCount: null, targetScore: null, higherScoreWins: true, minPlayers: 2, maxPlayers: WINGSPAN_MAX_PLAYERS };
+  return {
+    roundCount: optionalNumber(game.roundCount), targetScore: optionalNumber(game.targetScore),
+    higherScoreWins: scoreDirection(game.higherScoreWins), minPlayers: game.minPlayers ? Number(game.minPlayers) : null, maxPlayers: game.maxPlayers ? Number(game.maxPlayers) : null
+  };
+}

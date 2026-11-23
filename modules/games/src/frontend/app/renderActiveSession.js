@@ -1,3 +1,4 @@
+import { isWingspan } from '../../scoring/wingspan/index.js';
 import { copy } from './copy.js';
 import { getActiveSession } from '../../backend/features/sessions.js';
 import { testIds } from './testIds.js';
@@ -19,7 +20,7 @@ export function renderActiveSession(data) {
     `;
   }
   return `
-    <section class="session-view" data-testid="${testIds.activeSession}">
+    <section class="session-view ${isWingspan(session) ? 'wingspan-session' : ''}" data-testid="${testIds.activeSession}">
       <header class="session-top">
         <div>
           <p>${escapeHtml(session.isCollaborative ? copy("Collaborative") : copy(scoringLabels[scoringModeChoice(session)]) || copy("Session"))}</p>
@@ -27,10 +28,7 @@ export function renderActiveSession(data) {
         </div>
         <button class="primary" data-testid="${testIds.finishSession}" type="button">${escapeHtml(t(data.settings.language, "finish"))}</button>
       </header>
-      ${renderSessionTiming(session)}
-      ${
-        renderSessionBody(session, false)
-      }
+      ${isWingspan(session) ? renderSessionBody(session, false) + renderSessionTiming(session) : renderSessionTiming(session) + renderSessionBody(session, false)}
     </section>
   `;
 }

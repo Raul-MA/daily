@@ -1,0 +1,23 @@
+{
+  "preservedExistingTrackedTests": true,
+  "changedExistingTests": [],
+  "newUnitCases": 9,
+  "newBrowserCases": 6,
+  "requiredDiscovery": {
+    "unit": 28,
+    "browser": 42
+  },
+  "featureFiles": [
+    "modules/games/src/scoring/wingspan/bindings.js",
+    "modules/games/src/scoring/wingspan/categories.js",
+    "modules/games/src/scoring/wingspan/copy.js",
+    "modules/games/src/scoring/wingspan/index.js",
+    "modules/games/src/scoring/wingspan/reports-view.js",
+    "modules/games/src/scoring/wingspan/scorecard-view.js",
+    "modules/games/src/scoring/wingspan/scorecard.js",
+    "modules/games/src/scoring/wingspan/statistics.js",
+    "modules/games/src/scoring/wingspan/style.css",
+    "modules/games/src/scoring/wingspan/validation.js",
+    "modules/games/src/scoring/wingspan/winners.js"
+  ]
+}
