@@ -44,7 +44,13 @@
   ],
   "correctTotal": 20,
   "fullAllModuleGate": "not rerun for this scoped fix; prior implementation evidence remains separate",
-  "publication": "user authorized commit and push of feat/wingspan-scoring-reports; pending remote confirmation",
+  "publication": {
+    "codeCommit": "250afa0",
+    "branch": "feat/wingspan-scoring-reports",
+    "pushStatus": "blocked",
+    "pushError": "HTTP 403: Permission to Raul-MA/daily.git denied to Raul-MA",
+    "nextStep": "User runs git push origin feat/wingspan-scoring-reports from an authorized terminal"
+  },
   "screenshotCleanup": {
     "suppliedFilesDeleted": 3,
     "types": [
