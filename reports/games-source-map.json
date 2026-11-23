@@ -283,5 +283,42 @@
     "finalModuleVerification": "reports/games-wingspan-final-verification.txt",
     "additionalUnitVerification": "reports/games-wingspan-unit-verification.txt",
     "sourceAudit": "reports/games-wingspan-content-audit.json"
+  },
+  "scoringInputReuseAcceptance": {
+    "date": "2026-11-23",
+    "rule": "AGENTS.md requires inspecting and reusing working score components, arithmetic parsing, validation and session saving before new scoring views.",
+    "guide": "modules/games/docs/behavior.md#reuse-for-new-scoring-views",
+    "component": "modules/games/src/frontend/components/score-input.js",
+    "consumers": [
+      "modules/games/src/frontend/app/renderRoundScores.js",
+      "modules/games/src/scoring/wingspan/scorecard-view.js"
+    ],
+    "parser": "modules/games/src/frontend/app/evaluateScoreExpression.js",
+    "preview": "modules/games/src/frontend/app/updateScorePreview.js",
+    "unit": "modules/games/test/wingspan-drafts.test.mjs",
+    "browser": "modules/games/e2e/wingspan-drafts.spec.js",
+    "newCases": {
+      "unit": 3,
+      "browser": 4
+    },
+    "currentDiscovery": {
+      "unit": 31,
+      "browser": 46
+    },
+    "contract": "Every visible draft contributes to live category totals; restored drafts refresh previews; pending scores save atomically before Finish. Shared arithmetic fields support + - * /, normal whole-result truncation, Enter normalization and invalid-input previews. Wingspan retains blank-versus-zero and nonnegative safe-integer validation. All existing assertions and test paths remain unchanged.",
+    "red": [
+      "reports/games-wingspan-drafts-unit-red.txt",
+      "reports/games-wingspan-drafts-browser-red.txt",
+      "reports/games-wingspan-arithmetic-unit-red.txt",
+      "reports/games-wingspan-arithmetic-browser-red.txt"
+    ],
+    "verification": [
+      "reports/games-wingspan-arithmetic-games-verification.txt",
+      "reports/games-wingspan-arithmetic-general-verification.txt",
+      "reports/games-wingspan-arithmetic-lint.txt",
+      "reports/games-wingspan-arithmetic-syntax.txt",
+      "reports/games-wingspan-arithmetic-build.txt"
+    ],
+    "summary": "reports/games-wingspan-scoring-reuse-verification.json"
   }
 }

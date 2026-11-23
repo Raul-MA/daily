@@ -794,3 +794,5 @@
 
 [data-module="games"] .app-shell:has(.settings) .toast-stack:has(.toast.backup) { display: none; }
 @media (min-width: 900px) { [data-module="games"] .game-records-grid .stat-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+[data-module="games"] .score-entry { display: grid; gap: 4px; min-width: 0; }

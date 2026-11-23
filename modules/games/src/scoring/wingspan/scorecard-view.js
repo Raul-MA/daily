@@ -1,3 +1,4 @@
+import { renderScoreInput } from '../../frontend/components/score-input.js';
 import { categories } from './categories.js';
 import { categoryTotal, completeCategories } from './scorecard.js';
 import { wingspanCopy } from './copy.js';
@@ -21,17 +22,18 @@ function renderPlayer(session, participant, options) {
     <h3>${name}</h3>
     <div class="wingspan-total-row"><span data-wingspan-total-label>${copy(completeCategories(session) ? 'Total' : 'Provisional total')}</span>
       <output data-testid="wingspan-total" aria-label="${copy('Total')} · ${name}" aria-live="polite">${categoryTotal(player)}</output></div>
-    <div class="wingspan-fields">${categories.map(category => renderField({ participant, category: category.id, label: copy(category.label), value: player.categories[category.id], readOnly: options.readOnly })).join('')}</div>
-    <div class="wingspan-tiebreak">${renderField({ participant, category: 'unusedFood', label: copy('Unused food'), value: player.unusedFood, readOnly: options.readOnly })}
+    <div class="wingspan-fields">${categories.map(category => renderField({ participant, category: category.id, label: copy(category.label), value: player.categories[category.id], readOnly: options.readOnly, language: options.language })).join('')}</div>
+    <div class="wingspan-tiebreak">${renderField({ participant, category: 'unusedFood', label: copy('Unused food'), value: player.unusedFood, readOnly: options.readOnly, language: options.language })}
       <small>${copy('Only breaks tied totals; no points.')}</small></div>
   </article>`;
 }
 
-function renderField({ participant, category, label, value, readOnly }) {
+function renderField({ participant, category, label, value, readOnly, language }) {
   if (readOnly) return `<div class="wingspan-field"><span>${label}</span><strong>${value ?? '—'}</strong></div>`;
   const id = `wingspan-${participant.playerId}-${category}`;
   const testId = category === 'unusedFood' ? 'wingspan-unused-food' : 'wingspan-category';
+  const attributes = { 'data-testid': testId, 'data-player-id': participant.playerId, 'data-category': category, 'aria-label': `${participant.nameSnapshot} · ${label}` };
+  const preview = `${wingspanCopy(language, 'Total')}: ${value ?? '—'}`;
   return `<label class="wingspan-field" for="${escapeHtml(id)}"><span>${label}</span>
-    <input id="${escapeHtml(id)}" name="${escapeHtml(id)}" data-testid="${testId}" data-player-id="${escapeHtml(participant.playerId)}" data-category="${category}"
-      aria-label="${escapeHtml(participant.nameSnapshot)} · ${label}" type="number" inputmode="numeric" min="0" max="9007199254740991" step="1" value="${value ?? ''}"></label>`;
+    ${renderScoreInput({ id, name: id, value: value ?? '', attributes, preview })}</label>`;
 }

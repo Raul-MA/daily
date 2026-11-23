@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-23",
+  "scope": "Visible Wingspan totals, shared arithmetic inputs and documented reuse rule",
+  "status": "pass",
+  "games": {
+    "unit": 31,
+    "browser": 46,
+    "evidence": "reports/games-wingspan-arithmetic-games-verification.txt"
+  },
+  "general": {
+    "unit": 85,
+    "browser": 43,
+    "evidence": "reports/games-wingspan-arithmetic-general-verification.txt"
+  },
+  "lint": "reports/games-wingspan-arithmetic-lint.txt",
+  "syntax": {
+    "files": 875,
+    "evidence": "reports/games-wingspan-arithmetic-syntax.txt"
+  },
+  "build": "reports/games-wingspan-arithmetic-build.txt",
+  "sourceAssertionsPreserved": true,
+  "newCases": {
+    "unit": 3,
+    "browser": 4
+  },
+  "sharedComponent": "modules/games/src/frontend/components/score-input.js",
+  "consumers": [
+    "modules/games/src/frontend/app/renderRoundScores.js",
+    "modules/games/src/scoring/wingspan/scorecard-view.js"
+  ],
+  "parser": "modules/games/src/frontend/app/evaluateScoreExpression.js",
+  "preview": "modules/games/src/frontend/app/updateScorePreview.js",
+  "guidance": [
+    "AGENTS.md",
+    "modules/games/docs/behavior.md#reuse-for-new-scoring-views"
+  ],
+  "screenshotNumbers": [
+    2,
+    3,
+    4,
+    5,
+    2,
+    4
+  ],
+  "correctTotal": 20,
+  "fullAllModuleGate": "not rerun for this scoped fix; prior implementation evidence remains separate",
+  "publication": "user authorized commit and push of feat/wingspan-scoring-reports; pending remote confirmation",
+  "screenshotCleanup": {
+    "suppliedFilesDeleted": 3,
+    "types": [
+      "png",
+      "jpeg",
+      "jpeg"
+    ],
+    "personalBackups": "unchanged",
+    "generatedVerificationImages": "retained",
+    "rebuiltAssets": 740
+  }
+}

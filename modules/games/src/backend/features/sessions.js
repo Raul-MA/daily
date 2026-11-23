@@ -45,11 +45,16 @@ export function startSession(data, input) {
 }
 
 export function updateWingspanScore(data, selection, value) {
-  const current = data.sessions.find(session => session.id === selection.sessionId);
-  const normalized = value === '' || value === null ? null : Number(value);
-  const errors = scoreSelectionErrors(current, selection, normalized);
+  return updateWingspanScores(data, selection.sessionId, [{ ...selection, value }]);
+}
+
+export function updateWingspanScores(data, sessionId, entries) {
+  const current = data.sessions.find(session => session.id === sessionId);
+  if (!isWingspan(current) || current.status !== 'active') return { data, errors: ['Choose an active Wingspan session.'] };
+  const normalized = entries.map(entry => ({ ...entry, value: entry.value === '' || entry.value === null ? null : Number(entry.value) }));
+  const errors = normalized.flatMap(entry => scoreSelectionErrors(current, entry, entry.value));
   if (errors.length) return { data, errors };
-  return updateSession(data, selection.sessionId, session => ({ ...session, scorecard: setCategory(session.scorecard, selection, normalized) }));
+  return updateSession(data, sessionId, session => ({ ...session, scorecard: normalized.reduce((card, entry) => setCategory(card, entry, entry.value), session.scorecard) }));
 }
 
 export function updateScore(data, selection, value) {

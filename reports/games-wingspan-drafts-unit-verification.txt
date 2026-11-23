@@ -1,0 +1,38 @@
+✔ game sessions snapshot names and configuration and allow only one active session (14.334873ms)
+✔ round scores preserve negatives and shared ties while invalid fractions do not save (1.69217ms)
+✔ removing the final round retains an editable zero round and sequential numbering (1.377422ms)
+✔ first to points always favors the higher score while lowest-score games retain their rule (1.024564ms)
+✔ competitive outcomes require every result and retain separate wins ties and losses (2.317679ms)
+✔ collaborative solo outcomes have no individual winners or competitive head to head (1.120663ms)
+✔ history archives referenced records and duration overrides control derived statistics (2.579217ms)
+✔ full game backups reject broken references duplicates and future major versions without mutation (3.282168ms)
+✔ games translations preserve interpolation and user names while covering scoring and errors (3.39349ms)
+✔ lowest score creation uses the existing backup scoring contract and round fields (30.989367ms)
+✔ editing lowest score games can explicitly switch back to highest score (0.286435ms)
+✔ games read without writes and preserve other modules while sharing explicit language changes (4.526447ms)
+✔ starting a game atomically registers its timestamp activity and retains unrelated countdowns (4.287839ms)
+✔ scores never restart game timing and finishing atomically completes the shared activity (4.266658ms)
+✔ game quota failures leave both the sessions and shared activities unchanged (1.675128ms)
+✔ game stale domain saves reject instead of overwriting a newer module state (5.951846ms)
+✔ game replacement previews preserve shared language and restore active timing with recovery (4.172012ms)
+✔ game future modules and stale import previews remain untouched (3.001346ms)
+✔ game backup previews reject duplicate nested round result and winner identities without replacing records (6.408557ms)
+✔ Wingspan draft categories save together in one atomic storage commit (4.273863ms)
+✔ Wingspan invalid draft batches and storage failures preserve every saved category (2.133077ms)
+✔ Wingspan reports compare per-game averages, pooled point shares and unequal sample sizes (13.438908ms)
+✔ Wingspan reports preserve tied categories, zero totals, archived names and filter scope (432.820376ms)
+✔ Wingspan reports recompute after corrections and exclude reopened or incomplete scorecards (6.824746ms)
+✔ Wingspan starts from the Games catalog with fixed multiplayer bounds and no rounds (2.625344ms)
+✔ Wingspan derives totals, preserves timing and feeds generic statistics and historical snapshots (7.595834ms)
+✔ Wingspan requires explicit category zeros and unused food only for tied leaders (7.440267ms)
+✔ Wingspan rejects invalid edits and preserves storage, drafts and unrelated scoring boundaries (1.718339ms)
+✔ Wingspan backup validation preserves category data and rejects malformed payloads atomically (11.948068ms)
+✔ Wingspan combined backups restore scorecards and reject unknown scorecard versions before writes (28.305326ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 705.966716

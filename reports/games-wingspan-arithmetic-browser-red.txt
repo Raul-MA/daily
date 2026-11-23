@@ -1,0 +1,65 @@
+[WebServer] (node:63277) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:63308) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 modules/games/e2e/wingspan-drafts.spec.js:56:1 › Wingspan reuses arithmetic text inputs for live previews, Enter saves and completed totals (7.5s)
+(node:63531) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 modules/games/e2e/wingspan-drafts.spec.js:82:1 › Wingspan arithmetic rejects invalid or negative results without replacing saved scores (2.5s)
+
+
+  1) modules/games/e2e/wingspan-drafts.spec.js:56:1 › Wingspan reuses arithmetic text inputs for live previews, Enter saves and completed totals
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  getByTestId('wingspan-player').first().getByTestId('wingspan-category').first()
+    Expected: "text"
+    Received: "number"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for getByTestId('wingspan-player').first().getByTestId('wingspan-category').first()
+        14 × locator resolved to <input min="0" step="1" value="" type="number" inputmode="numeric" data-category="birds" max="9007199254740991" aria-label="Ada · Bird points" data-testid="wingspan-category" data-player-id="player-mwtndt7r-4a589a" id="wingspan-player-mwtndt7r-4a589a-birds" name="wingspan-player-mwtndt7r-4a589a-birds"/>
+           - unexpected value "number"
+
+
+      57 |   await setup(page);
+      58 |   const inputs = page.getByTestId('wingspan-player').first().getByTestId('wingspan-category');
+    > 59 |   await expect(inputs.first()).toHaveAttribute('type', 'text');
+         |                                ^
+      60 |   await inputs.first().fill('2+3');
+      61 |   await expect(page.getByTestId('wingspan-total').first()).toHaveText('5');
+      62 |   await expect(page.getByTestId('wingspan-player').first().getByTestId('score-preview').first()).toHaveText('Total: 5');
+        at /workspaces/daily/modules/games/e2e/wingspan-drafts.spec.js:59:32
+
+    Error Context: test-results/wingspan-drafts-Wingspan-r-3d95f--saves-and-completed-totals/error-context.md
+
+  2) modules/games/e2e/wingspan-drafts.spec.js:82:1 › Wingspan arithmetic rejects invalid or negative results without replacing saved scores
+
+    Error: locator.fill: Error: Cannot type text into input[type=number]
+    Call log:
+      - waiting for getByTestId('wingspan-category').first()
+        - locator resolved to <input min="0" step="1" value="" type="number" inputmode="numeric" data-category="birds" max="9007199254740991" aria-label="Ada · Bird points" data-testid="wingspan-category" data-player-id="player-mwtndzzx-9fq9vo" id="wingspan-player-mwtndzzx-9fq9vo-birds" name="wingspan-player-mwtndzzx-9fq9vo-birds"/>
+        - fill("1/0")
+      - attempting fill action
+        - waiting for element to be visible, enabled and editable
+
+
+      84 |   const input = page.getByTestId('wingspan-category').first();
+      85 |   for (const expression of ['1/0', '2+', '-3']) {
+    > 86 |     await input.fill(expression);
+         |                 ^
+      87 |     await expect(input).toHaveAttribute('aria-invalid', 'true');
+      88 |     await input.press('Enter');
+      89 |     await expect(page.getByTestId(testIds.appToast)).toBeVisible();
+        at /workspaces/daily/modules/games/e2e/wingspan-drafts.spec.js:86:17
+
+    Error Context: test-results/wingspan-drafts-Wingspan-a-eb7e0-hout-replacing-saved-scores/error-context.md
+
+  2 failed
+    modules/games/e2e/wingspan-drafts.spec.js:56:1 › Wingspan reuses arithmetic text inputs for live previews, Enter saves and completed totals
+    modules/games/e2e/wingspan-drafts.spec.js:82:1 › Wingspan arithmetic rejects invalid or negative results without replacing saved scores

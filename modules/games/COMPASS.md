@@ -13,6 +13,8 @@
 
 ## Key Files
 
+- `src/frontend/components/score-input.js`: shared arithmetic text field and preview for rounds and categories; [reuse guidance](docs/behavior.md#reuse-for-new-scoring-views) is required before creating scoring views.
+
 - `src/service.js`, `src/activity-sync.js`, `src/imports.js`: atomic module/activity storage and preview/recovery.
 - `src/backend/`: retained domain API; `src/frontend/app/`: split original screens; `src/view.js`: shell mount.
 - `src/scoring/wingspan/`: base-game categories, validation, winners, score sheet and reports; `index.js` exposes pure domain functions.

@@ -4,6 +4,7 @@
 - Use plain HTML, CSS and JavaScript modules. No Vite, TypeScript or application framework. Node scripts may prepare static assets and run local checks.
 - Work sequentially, one stage and one app at a time. Do not delegate or implement apps in parallel.
 - Work locally only until the user explicitly resumes remote work. Do not add GitHub Actions workflows, push, configure hosting or deploy. Keep documented Readwise/Reader requests available for the user's later token test; unverified live API access does not block local implementation.
+- Before creating a scoring view, inspect and reuse existing working score components, arithmetic parsing, validation and session-saving logic. Follow [scoring-view reuse guidance](./modules/games/docs/behavior.md#reuse-for-new-scoring-views); extend shared components before adding parallel implementations.
 - Tests were copied before application logic. Preserve every source assertion; record replacement acceptance tests before deliberate behavior changes.
 - Apply [shared ESLint policy](./docs/pwa-eslint-policy.md) to all authored/imported code and tests. No exclusions for legacy code, inline disables, skipped tests or weakened limits.
 - Run general and affected module suites for shared changes; full verification before release. Expected red suites still fail.

@@ -39,6 +39,8 @@
 
 ## Non-Obvious Patterns
 
+- New scoring views must start with [existing score components and save logic](modules/games/docs/behavior.md#reuse-for-new-scoring-views). Reuse before creating another input/parser/persistence path.
+
 - The test-only absent-module loader permits discovery and throws when missing behavior is exercised; it never supplies fake successful behavior.
 - Baseline runs target original code in isolated contexts. They do not prove the new PWA works.
 - Source mappings preserve characterization and intentional adaptations. Use [progress](docs/progress.md) for current verification; physical/release acceptance remains deferred.

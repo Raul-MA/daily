@@ -1,3 +1,5 @@
+import { refreshWingspanPreview } from '../../scoring/wingspan/bindings.js';
+import { currentLanguage } from './copy.js';
 import { copy } from './copy.js';
 import { gameUI } from './context.js';
 import { getRoute } from './router.js';
@@ -56,6 +58,7 @@ function mutatesSession(event) {
   return event.type === 'click' && Boolean(event.target.closest('button'));
 }
 export function restored() {
+  refreshWingspanPreview(gameUI.host, currentLanguage());
   for (const input of gameUI.host.querySelectorAll('[data-testid=score-input]')) updateScorePreview(input);
 }
 export function conflict() {
